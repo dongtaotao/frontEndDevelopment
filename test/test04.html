@@ -1,0 +1,65 @@
+<html>
+<style>
+  body{
+    background-color: gray;
+  }
+  div{
+    color: blue;
+    width: 100px;
+    background-color: pink;
+    border: 10px solid;
+    padding: 20px;
+  }
+</style>
+<body>
+  <div>11111</div>
+  
+  <input type="color" id="color" value="#ffc600" onchange="colorchange()">
+  <script>
+
+    window.onload = function() {
+      // alert(9)
+    }
+window.onbeforeunload = function() {
+  // alert(8)
+}
+function colorchange(){
+            //alert("fff");在选择完颜色之后，点击了确认按钮后才出发change事件。
+            var Color=document.querySelector("#color");
+            var Artical=document.querySelector(".artical");
+           console.log(Color.value)
+}
+  </script>
+
+
+<script>
+function arrange(source) {
+  var t;
+  var ta;
+  var r = [];
+
+  for(var j=0;j<source.length;j++){
+      var v=source[j];
+      if(v!=null){
+        console.log(t, v);   // 跟踪调试用
+        if (t === v) {
+            ta.push(t);
+            t++;
+            continue;
+        }
+        ta = [v];
+        t = v + 1;
+        r.push(ta);
+    }
+  }
+
+  return r;
+}
+
+var arr = [3, 4, 13, 14, 15, 17, 20, 22];
+      console.log(JSON.stringify(arrange(arr)));
+
+      //[[3,4],[13,14,15],[17],[20],[22]]
+</script>
+</body>
+</html>

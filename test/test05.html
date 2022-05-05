@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+const list = [
+    {
+    id: '1',
+    name: 'test1',
+    children: [
+        {
+            id: '11',
+            name: 'test11',
+            children: [
+                {
+                    id: '111',
+                    name: 'test111'
+                },
+                {
+                    id: '112',
+                    name: 'test112'
+                }
+            ]
+
+        },
+        {
+            id: '12',
+            name: 'test12',
+            children: [
+                {
+                    id: '121',
+                    name: 'test121'
+                },
+                {
+                    id: '122',
+                    name: 'test122'
+                }
+            ]
+        }
+    ]
+}];
+// const id = '112'
+// const fn = (value) => {
+// ...
+// }
+// fn(id, list) // 输出 [1， 11， 112]
+
+function getId(value, id) {
+  
+    let arr = []
+    try {
+        function getValue(value) {
+            arr.push(value.id);
+            if(value.id === id) {
+                throw('');
+                return;
+            }
+
+            if(value.children && value.children.length > 0) {
+                value.children.forEach((item, index) => {
+                    getValue(item, id)
+                })
+                arr.pop()
+            } else {
+                arr.pop()
+            }
+        }
+        getValue(value)
+    } catch(e) {
+        console.log(arr)
+        return arr;
+    }
+}
+getId(list.shift(), '112')
+
+function getPathById(cityData, id){
+        //定义变量保存当前结果路径
+        let temppath = [];
+        try {
+          function getNodePath(node) {
+            temppath.push(node.name);
+            console.log('==========',temppath)
+            //找到符合条件的节点，通过throw终止掉递归
+            if (node.id === id) {
+              throw ('GOT IT!');
+              return;
+            }
+            if (node.children && node.children.length > 0) {
+              for (let i = 0; i < node.children.length; i++) {
+                getNodePath(node.children[i]);
+              }
+              console.log('===111=======',temppath)
+              //当前节点的子节点遍历完依旧没找到，则删除路径中的该节点
+              temppath.pop();
+            } else {
+              //找到叶子节点时，删除路径当中的该叶子节点
+              console.log('===111---',temppath)
+              temppath.pop();
+            }
+          }
+          getNodePath(cityData);
+        } catch (e) {
+          console.log(temppath)
+          return temppath;
+        }
+      }
+
+    //   getPathById(cityData.shift(), 'sdsd11')
+
+</script>
+</html>

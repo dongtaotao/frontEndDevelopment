@@ -1,0 +1,98 @@
+<!--
+ * @Description: 兼容demo
+ * @Author: wangfengxiang
+ * @Date: 2022-03-11 11:16:47
+ * @LastEditTime: 2022-03-11 11:21:44
+ * @LastEditors: wangfengxiang
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: #f00;
+    }
+</style>
+<body>
+    <div style="width: 3rem; height: 1rem;background: #f00;"></div>
+    <script>
+        const baseSize = 200
+        // 设置 rem 函数
+        function setRem() {
+            // 当前页面宽度相对于 750 宽的缩放比例，可根据自己需要修改。
+            const scale = document.documentElement.clientWidth / 750
+            // 设置页面根节点字体大小
+            document.documentElement.style.fontSize = (baseSize * scale) + 'px'
+        }
+        // 初始化
+        setRem()
+        // 改变窗口大小时重新设置 rem
+        window.onresize = function () {
+            setRem()
+        }
+    </script>
+
+    <script>
+
+
+// // 搜索部门
+// interface TreeNode {
+//     title: string;
+//     id: string;
+//     ....;
+//     children: Array<TreeNode>;
+// }
+
+const company = {
+    title: '蔚来汽车',
+    id: '1',
+    children: [{
+        title: '自动驾驶事业部',
+        id: '001',
+        children: [{
+            title: '数据标定',
+            id: '0001',
+            children: []
+        }]
+    }, {
+        title: '数字发展部',
+        id: '002',
+        children: []
+    }]
+}
+function searchDepartment(title){
+   let result = {};
+   const dfs = (company) => {
+       if(company.title === title) {
+           result = company   
+           return;
+       }
+       for(let i =0 ; i< company.children.length;i++) {
+          dfs(company.children[i])
+       }
+   }
+   
+   dfs(company);
+   console.log(result)
+   return result;
+}
+searchDepartment('数据标定') // => // { id: '', title: '', ...}
+
+window.onbeforeunload = function() {
+    alert(0)
+}
+window.onunload = function() {
+    alert(0)
+}
+    </script>
+</body>
+
+</html>

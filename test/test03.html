@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dom2json</title>
+  <style>
+    .div1{
+      width: 100px;
+      height: 100px;
+      background-color: aquamarine;
+      padding: 20px;
+      border: 10px solid red;
+    }
+    .div2{
+      margin-top: 10px;
+      box-sizing: border-box;
+      width: 100px;
+      height: 100px;
+      background-color: aquamarine;
+      padding: 10px;
+      border: 10px solid red;
+    }
+    .div3{
+      width: 100px;
+      height: 100px;
+      background-color: aquamarine;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="div1"></div>
+
+    <div class="div2">222</div>
+    <div class="div3"></div>
+    <p class="p">hello world</p>
+    <div class="person">
+      <span class="name">前端胖头鱼</span>
+      <span class="age">100</span>
+    </div>
+  </div>
+  <script>
+    // 接收domain1的数据
+    window.addEventListener('message', function(e) {
+        alert('data from domain1 ---> ' + e.data);
+        var data = JSON.parse(e.data);
+        if (data) {
+            data.number = 16;
+            // 处理后再发回domain1
+            window.parent.postMessage(JSON.stringify(data), 'http://www.domain1.com');
+        }
+    }, false);
+  </script>
+  <script>
+// 请实现 DOM2JSON 一个函数，可以把一个 DOM 节点输出 JSON 的格式
+// https://juejin.cn/post/7020562888657993741
+      
+    const dom2json = (rootDom) => {
+      if (!rootDom) {
+        return 
+      }
+
+      let rootObj = {
+        tagName: rootDom.tagName,
+        children: []
+      }
+
+      const children = rootDom.children
+
+      if (children && children.length) {
+        Array.from(children).forEach((ele, i) => {
+          rootObj.children[ i ] = dom2json(ele)
+        })
+      }
+
+      return rootObj
+    }
+
+    const json = dom2json(document.querySelector('.box'))
+
+    console.log(json)
+
+
+
+var merge = function (intervals) {
+  if (intervals.length < 2) {
+    return intervals;
+  }
+  intervals.sort(function (a, b) {
+    return a[0] - b[0];
+  });
+
+  let curr = intervals[0];
+  let result = [];
+
+  for (let interval of intervals) {
+    if (curr[1] >= interval[0]) {
+      curr[1] = Math.max(curr[1], interval[1]);
+    } else {
+      result.push(curr);
+      curr = interval;
+    }
+  }
+
+  if (curr.length !== 0) {
+    result.push(curr);
+  }
+
+  return result;
+};
+
+merge([[1,3],[2,5]])
+
+  </script>
+  <script>
+    const a = { b:3}
+
+function foo(obj) {
+  obj.b = 5
+
+  return obj
+}
+
+const aa = foo(a)
+
+console.log(a.b)
+
+console.log(aa.b)
+
+  </script>
+</body>
+</html>
+
