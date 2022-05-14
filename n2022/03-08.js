@@ -14,7 +14,7 @@ let fibonacci: NumberArray = [1, 1, 2, 3, 5];
 最全的手写JS面试题
 26 请实现 DOM2JSON 一个函数，可以把一个 DOM 节点输出 JSON 的格式
 30 分片思想解决大数据量渲染问题
-题目描述:渲染百万条结构简单的大数据时 怎么使用分片思想优化渲染
+题目描述:渲染百万条结构简单的大数据时 怎么使用分片思想优化渲染  
 https://juejin.cn/post/6968713283884974088#heading-24
 
 两者不同点：
@@ -26,7 +26,6 @@ https://mp.weixin.qq.com/s/Jb7Gycf_J5_Zjqe1Kiky5w
 
 useEffect执行顺序: 组件更新挂载完成 -> 浏览器 dom 绘制完成 -> 执行 useEffect 回调。
 useLayoutEffect 执行顺序: 组件更新挂载完成 ->  执行 useLayoutEffect 回调-> 浏览器dom绘制完成。
-
 链接：https://juejin.cn/post/6950063294270930980
 
 交叉类型 同时拥有所有类型的全部成员
@@ -41,7 +40,6 @@ let d: IA & IB = {
   age: 1
 };
 
-  
 联合类型  只能是所有类型之一
 function printSth(input: string | number) {
   return input;
@@ -95,4 +93,4 @@ https://segmentfault.com/a/1190000019586579
 
 ES数据库Elasticsearch和MongoDB/Redis/Memcache一样，是非关系型数据库。
 https://baijiahao.baidu.com/s?id=1663918132504029781&wfr=spider&for=pc
-Elasticsearch是一种分布式的海量数据搜索与分析的技术  
+Elasticsearch是一种分布式的海量数据搜索与分析的技术   

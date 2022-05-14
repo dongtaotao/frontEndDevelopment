@@ -22,6 +22,9 @@ https://blog.csdn.net/sinat_17775997/article/details/121241280
 前端工程化质量保障篇之什么是 CICD
 https://juejin.cn/post/7031482488027349028
 
+基于 Docker ( Gitlab、Gitlab Runner ) 搭建一整套自动化CI、CD流程，完成从代码提交到自动打包编译到自动部署运行
+https://juejin.cn/post/7054453030506201118
+
 macOS 平台有哪些好用的 SSH 客户端？
 把项目代码传到服务器有好几个方法：
 使用github，在本地把代码上传到github，在服务器端拉取github上的代码
@@ -76,6 +79,12 @@ https://mp.weixin.qq.com/s/MbeW8UNZ1fPekWcaNqmsCQ
 
 centos+jenkins+nginx+gitlab前端自动化部署全记录 https://fe.ecool.fun/articles/technology?pageNumber=1
 https://mp.weixin.qq.com/s?__biz=Mzk0NTI2NDgxNQ==&mid=2247483730&idx=1&sn=5298f4841241767ca427bef4137b1680&chksm=c3194092f46ec9841051f2c5ea52688db07a50def205e997a6a6b0c1cf1b3c8517267857a156#rd
+
+
+
+前端开发者应该知道的 Centos/Docker/Nginx/Node/Jenkins 操作(🍡 长文)
+https://juejin.cn/post/6951684431597797389
+
 
 
 下载：从Github下载代码，然后本地npm install

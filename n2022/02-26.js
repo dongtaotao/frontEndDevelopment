@@ -7,7 +7,7 @@ https://juejin.cn/post/7065218958663614500?utm_source=gold_browser_extension
 写了 200 多篇文章后，我总结的写作心得 
 https://juejin.cn/post/6900682578840256525   绘图工具
 
-15.装饰器模式一般会在什么场合使用？
+15.装饰器模式一般会在什么场合使用？ 
 答： 装饰器模式一般是指允许动态地向一个现有的对象添加新的功能，同时又不改变其结构，相当于对现有的对象进行了一个包装。
 
 什么是 Data URL
@@ -16,16 +16,17 @@ Data URL 是将图片转换为 base64 直接嵌入到了网页中，使用<img s
 base64 编码后的图片会比原来的体积大三分之一左右。
 Data URL 形式的图片不会缓存下来，每次访问页面都要被下载一次。可以将 Data URL 写入到 CSS 文件中随着 CSS 被缓存下来。x
 
+
 packagelock.json/yarn.lock 用以锁定版本号，保证开发环境与生产环境的一致性，避免出现不兼容 API 导致生产环境报错
 总结
 package.json文件：该文件用来保存项目的依赖，并不能指定到某一个具体的依赖。yarn 和 npm 均使用该文件去安装依赖。
 package-lock.json 文件：npm 安装项目依赖时记录实际依赖版本信息，下次可以通过该文件去下载依赖，保证项目每次下载的依赖版本完全一致。
 yarn.lock 文件：yarn 安装项目依赖时记录实际依赖版本信息，下次可以通过该文件去下载依赖，保证项目每次下载的依赖版本完全一致。
 
-图片防盗链原理是什么
+图片防盗链原理是什么==============================================
 请求头中的 refer 来判断是否屏蔽图片
 
-peerDependency 是为了解决什么问题:避免重复安装
+peerDependency 是为了解决什么问题:避免重复安装=============================
 
 如何处理白屏错误页的监控的？
 排查兼容性。大部分原因是因为低端机型/浏览器低版本 polyfill 的问题导致报错
@@ -38,7 +39,6 @@ Error Boundry 避免整页崩溃。限制在组件级别
 eslint，对代码不仅有风格的校验，更有可读性、安全性、健壮性的校验。
 
 Service Worker
-
 Service Worker 是运行在浏览器背后的独立线程，一般可以用来实现缓存功能。
 使用 Service Worker的话，传输协议必须为 HTTPS。因为 Service Worker 中涉及到请求拦截，所以必须使用 HTTPS 协议来保障安全
 Service Worker 实现缓存功能一般分为三个步骤：首先需要先注册 Service Worker，然后监听到 install 事件以后就可以缓存需要的文件，
@@ -73,44 +73,44 @@ var a = {
 };
 console.log(a == 1 && a == 2);//true
 
-  function myPromise(constructor){
-    let self=this;
-    self.status="pending" //定义状态改变前的初始状态
-    self.value=undefined;//定义状态为resolved的时候的状态
-    self.reason=undefined;//定义状态为rejected的时候的状态
-    function resolve(value){
-        //两个==="pending"，保证了状态的改变是不可逆的
-       if(self.status==="pending"){
-          self.value=value;
-          self.status="resolved";
-       }
-    }
-    function reject(reason){
-        //两个==="pending"，保证了状态的改变是不可逆的
-       if(self.status==="pending"){
-          self.reason=reason;
-          self.status="rejected";
-       }
-    }
-    //捕获构造异常
-    try{
-       constructor(resolve,reject);
-    }catch(e){
-       reject(e);
-    }
+function myPromise(constructor){
+  let self=this;
+  self.status="pending" //定义状态改变前的初始状态
+  self.value=undefined;//定义状态为resolved的时候的状态
+  self.reason=undefined;//定义状态为rejected的时候的状态
+  function resolve(value){
+      //两个==="pending"，保证了状态的改变是不可逆的
+      if(self.status==="pending"){
+        self.value=value;
+        self.status="resolved";
+      }
+  }
+  function reject(reason){
+      //两个==="pending"，保证了状态的改变是不可逆的
+      if(self.status==="pending"){
+        self.reason=reason;
+        self.status="rejected";
+      }
+  }
+  //捕获构造异常
+  try{
+      constructor(resolve,reject);
+  }catch(e){
+      reject(e);
+  }
 }
 // 定义链式调用的then方法
 myPromise.prototype.then=function(onFullfilled,onRejected){
-   let self=this;
-   switch(self.status){
-      case "resolved":
-        onFullfilled(self.value);
-        break;
-      case "rejected":
-        onRejected(self.reason);
-        break;
-      default:       
-   }
+  let self=this;
+  switch(self.status){
+    case "resolved":
+      onFullfilled(self.value);
+      break;
+    case "rejected":
+      onRejected(self.reason);
+      break;
+    default:       
+  }
 }
 
 4、原型链和作用域链的区别
@@ -169,12 +169,12 @@ https://juejin.cn/post/7071877982574346277?utm_source=gold_browser_extension
 Decorator 装饰器
 使用@符号,用来扩展，修改类的行为
 使用的时候需要引入第三方库 如： core-decorators
- const name = (target) => {
-     target.name = "domesy"
- }
- @name
- class Test{}
- 
+const name = (target) => {
+  target.name = "domesy"
+}
+@name
+class Test{}
+
 console.log(Test.name) //domesy
 链接：https://juejin.cn/post/7068935394191998990
 
@@ -195,12 +195,13 @@ https://juejin.cn/post/7071979844115890206#heading-0
 //========================
 手写-将虚拟 Dom 转化为真实 Dom
 
-peerDependencies作用
+peerDependencies作用 peerDependency 是为了解决什么问题:避免重复安装
 
 虚拟dom转为真实dom
 将DOM转化成树结构对象
 
 字符串模板
+
 模拟实现一个 Promise.finally
 Promise.prototype.finally = function (callback) {
   let P = this.constructor;

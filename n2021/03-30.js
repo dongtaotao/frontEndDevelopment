@@ -270,7 +270,7 @@ console.log(myFun.myBind(obj, 33)(11, 22))
 https://blog.csdn.net/badanjia8818/article/details/101912501/
 
 总结：
-1.css加载不会阻塞DOM树的解析
+1.css加载不会阻塞DOM树的解析 
 2.css加载会阻塞DOM树（render树）的渲染
 3.css加载会阻塞后面js语句的执行
 

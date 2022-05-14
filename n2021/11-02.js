@@ -37,7 +37,6 @@ function debounce(fn) {
   let timer = null;
   return function() {
     clearTimeout(timer);
-
     timer = setTimeout(() => {
       fn.call(this.arguments);
     }, 1000);
@@ -114,20 +113,20 @@ app.listen(8080);
 CORS
 CORS 跨域的原理。
 跨域资源共享（CORS）是一种机制，是 W3C 标准。它允许浏览器向跨源服务器，发出 XMLHttpRequest 或
-Fetch 请求。并且整个 CORS 通信过程都是浏览器自动完成的，不需要用户参与。
-而使用这种跨域资源共享的前提是，浏览器必须支持这个功能，并且服务器端也必须同意这种 "跨域"
-请求。因此实现 CORS 的关键是服务器需要服务器。
-浏览器会自动进行 CORS 通信，实现 CORS 通信的关键是后端。只要后端实现了 CORS，就实现了跨域。
-服务端设置 Access-Control-Allow-Origin 就可以开启 CORS。
-该属性表示哪些域名可以访问资源，如果设置通配符则表示所有网站都可以访问资源。
-CORS 的请求分为两种：
-简单请求
-复杂请求
-一个简单请求大致如下。
-HTTP 方法是下列之一：
-HEAD
-GET
-POST
+  Fetch 请求。并且整个 CORS 通信过程都是浏览器自动完成的，不需要用户参与。
+  而使用这种跨域资源共享的前提是，浏览器必须支持这个功能，并且服务器端也必须同意这种 "跨域"
+  请求。因此实现 CORS 的关键是服务器需要服务器。
+  浏览器会自动进行 CORS 通信，实现 CORS 通信的关键是后端。只要后端实现了 CORS，就实现了跨域。
+  服务端设置 Access-Control-Allow-Origin 就可以开启 CORS。
+  该属性表示哪些域名可以访问资源，如果设置通配符则表示所有网站都可以访问资源。
+  CORS 的请求分为两种：
+  简单请求
+  复杂请求
+  一个简单请求大致如下。
+  HTTP 方法是下列之一：
+  HEAD
+  GET
+  POST
 
 HTTP 头信息不超过以下几种字段
 Accept

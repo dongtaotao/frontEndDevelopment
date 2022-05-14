@@ -9,6 +9,9 @@
 <script>
 	//通过Image对象进行错误上报
     (new Image()).src = 'http://blog.com/myPath?badjs=msg';   // myPath表示上报的路径（我要上报到哪里去）。后面的内容是自己加的参数。
+    const a = sessionStorage.getItem('11') || ''
+    alert(a)
+    sessionStorage.setItem('11', '2222')
 </script>
 </body>
 </html>

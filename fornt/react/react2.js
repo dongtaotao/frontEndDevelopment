@@ -1,5 +1,5 @@
 JSX语法糖本质
-JSX是语法糖，通过babel转成React.createElement函数，在babel官网上可以在线把JSX转成React的JS语法
+JSX是语法糖，通过babel转成React.createElement函数，在babel官网上可以在线把JSX转成React的JS语法 
 
 二、react中循环要用key的原理
 　　原理在于优化diff算法。
@@ -368,7 +368,6 @@ Context.Provider：生产者，数据提供方；通过value属性来定义需�
 Context.Consumer：消费者，数据获取方；根据是函数组件还是class组件，有不同的使用形式；class组件可以指定contextType来确定要使用哪一个context对象
 的值，函数组件需要使用回调函数的形式来获取context的值；需要显示的指定context对象；
 ————————————————
-版权声明：本文为CSDN博主「前端小歌谣」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/weixin_43392489/article/details/121208158
 
 注意事项:

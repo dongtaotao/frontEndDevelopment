@@ -45,7 +45,7 @@ var longestCommonPrefix = function(strs) {
 
   for(let i=0; i< strs[0].length; i++) {
       for(let j=1; j< strs.length; j++) {
-          if(strs[0][i] !== strs[j][i]) {
+          if(strs[0][i] !== strs[j][i]) {  
               return re
           }
       }
@@ -58,9 +58,9 @@ var longestCommonPrefix = function(strs) {
 ====编程题：求最大公共路径前缀，['aa/bb/sd', 'aa/bb/wwewer', 'aa/bb/ddfff'] => 'aa/bb'
 ====git merge和git rebase之间有什么区别？
   当需要保留详细的合并信息的时候建议使用git merge，
-  特别是需要将分支合并进入master分支时；当发现自己修改某个功能时，
-  频繁进行了git commit提交时，发现其实过多的提交信息没有必要时，
+  特别是需要将分支合并进入master分支时；当发现自己修改某个功能时，频繁进行了git commit提交时，发现其实过多的提交信息没有必要时，
   可以尝试git rebase。
+
 ====实现一个redux【编程】
 ====diff算法、key作用，不要key会怎样【描述】
 ====react的usememo原理【描述】
@@ -150,7 +150,6 @@ var flatten = (data, key) => {
 };
 flatten(input);
 console.log(result)
-
 
 
 10.promiseAll和allSeleted
@@ -375,6 +374,7 @@ redux-saga 和 mobx 的比较
   使代码可读性高，结构清晰。action 也不是 action creator 而是 pure action，
   在 Generator 函数中通过 call 或者 put 方法直接声明式调用，并自带一些方法，
   如 takeEvery，takeLast，race等，控制多个异步操作，让多个异步更简单。
+  
   mobx 是更简单更方便更灵活的处理数据。 Store 是包含了 state 和 action。state
   包装成一个可被观察的对象， action 可以直接修改 state，
   之后通过 Computed values 将依赖 state 的计算属性更新 ，
@@ -403,7 +403,8 @@ git rebase什么作用【描述】
 当需要保留详细的合并信息的时候建议使用git merge，特别是需要将分支合并进入master分支时；
 当发现自己修改某个功能时，频繁进行了git commit提交时，发现其实过多的提交信息没有必要时，
 可以尝试git rebase。
-react的usememo原理【描述】
+
+react的usememo原理【描述】 https://cloud.tencent.com/developer/article/1784501
 
 说一下 react-fiber
 

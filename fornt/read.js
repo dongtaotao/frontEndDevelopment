@@ -64,14 +64,11 @@ https://blog.poetries.top/FE-Interview-Questions/excellent-docs/6-React.html#_32
 
 diff算法的作用
   计算出Virtual DOM中真正变化的部分，并只针对该部分进行原生DOM操作，而非重新渲染整个页面。
-
 React的diff算法
 （1）什么是调和？
 将Virtual DOM树转换成actual DOM树的最少操作的过程 称为 调和 。
-
 （2）什么是React diff算法？
 diff算法是调和的具体实现。
-
 diff策略
 React用 三大策略 将O(n^3)复杂度 转化为 O(n)复杂度
 
@@ -125,6 +122,16 @@ hooks 为什么不能放在条件判断里
   个方法在前端中使用频率低，比较不会出现冲突
   WebView URL Scheme 跳转拦截
 链接：https://juejin.cn/post/6896810576778166280
+
+拦截 URL SCHEME
+URL SCHEME是一种类似于url的链接，是为了方便app直接互相调用设计的，形式和普通的 url 近似，主要区别是 protocol 和 host 一般是自定义的，
+例如: qunarhy://hy/url?url=ymfe.tech，protocol 是 qunarhy，host 则是 hy。
+拦截 URL SCHEME 的主要流程是：Web 端通过某种方式（例如 iframe.src）发送 URL Scheme 请求，之后 Native 拦截到请求并根据 URL SCHEME（
+包括所带的参数）进行相关操作。
+在实践过程中，这种方式有一定的缺陷：
+使用 iframe.src 发送 URL SCHEME 会有 url 长度的隐患。
+创建请求，需要一定的耗时，比注入 API 的方式调用同样的功能，耗时会较长。
+
 
 webpack的基本功能和工作原理？
   1、代码转换：TypeScript 编译成 JavaScript、SCSS 编译成 CSS 等等

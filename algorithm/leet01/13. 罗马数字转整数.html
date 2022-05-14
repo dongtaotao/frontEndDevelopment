@@ -84,11 +84,10 @@ var romanToInt = function(s) {
   }
   let num = 0;
   for(let i=0;i< s.length;i++) {
-    let left = s[i],
-      right = s[i+1],
-      newNum = obj[left]<obj[right]? 0 - obj[left]: obj[left];
+    let left = s[i];
+    let right = s[i+1];
+    let newNum = obj[left] < obj[right] ? 0 - obj[left]: obj[left];
     num += newNum;
-
   }
   return num;
 }

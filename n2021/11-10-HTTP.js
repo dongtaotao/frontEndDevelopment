@@ -85,7 +85,6 @@ HTTP的应用场景中通常端与端之间存在大量的交互，非对称加�
 服务器用私钥解密获得假秘钥。
 服务器用加秘钥加密传输信息
 防范方法：
-
 服务端在发送浏览器的公钥中加入CA证书，浏览器可以验证CA证书的有效性
 
 6.20 http/https 协议总结
@@ -172,6 +171,7 @@ UDP 用户数据报协议 无连接 不可靠传输，不使用流量控制和�
   6.GET参数暴露在地址栏不安全，POST放在报文内部更安全
   7.GET一般用于查询信息，POST一般用于提交某种信息进行某些修改操作
   8.GET产生一个TCP数据包；POST产生两个TCP数据包
+
 //================================================================
   XSS(Cross-Site Scripting，跨站脚本攻击)是一种代码注入攻击。攻击者在目标网站上注入恶意代码，当被攻击者登陆网站时
   就会执行这些恶意代码，这些脚本可以读取 cookie，session tokens，或者其它敏感的网站信息，对用户进行钓鱼欺诈，甚至发起蠕虫攻击等。
@@ -204,36 +204,19 @@ UDP 用户数据报协议 无连接 不可靠传输，不使用流量控制和�
   实现比较简单，服务端库如 socket.io、ws，可以很好的帮助入门。客户端也只需要参照 api 实现即可
 
 //===============================================================
-  JSBridge通信原理
-  Native调用JS
-  webview 作为 H5 的宿主，Native 可以通过 webview 的 API直接执行 Js 代码，例如：
-  ios可以通过webview的evaluateJavaScript:completionHandler方法来运行js的代码
-  android可以通过webview的loadUrl()去调用js代码，也可以使用evaluateJavascript()来调用js代码
-  JS调用Native，有3种常见的方案：
-  1.WebView URL Scheme 跳转拦截
+JSBridge通信原理
+Native调用JS
+webview 作为 H5 的宿主，Native 可以通过 webview 的 API直接执行 Js 代码，例如：
+ios可以通过webview的evaluateJavaScript:completionHandler方法来运行js的代码
+android可以通过webview的loadUrl()去调用js代码，也可以使用evaluateJavascript()来调用js代码
+JS调用Native，有3种常见的方案：
+1.WebView URL Scheme 跳转拦截
   URL SCHEME 是一种类似于url的链接，是为了方便app直接互相调用设计的，形式和普通的 url 近似，主要区别是 protocol 和 host 一般是自定义的。
   拦截 URL SCHEME 的主要流程是：Web 端通过某种方式（例如 iframe.src）发送 URL Scheme 请求，之后 Native 拦截到请求并根据 URL SCHEME
   （包括所带的参数）进行相关操作。
-  2.WebView中的prompt/console/alert拦截
-  通常使用prompt，因为这个方法在前端中使用频率低，比较不会出现冲突
-  3.WebView API注入
+2.WebView中的prompt/console/alert拦截
+  ，因为这个方法在前端中使用频率低，比较不会出现冲突
+3.WebView API注入
   通过 WebView 提供的接口，向 JavaScript 的 Context（window）中注入对象或者方法，让 JavaScript 调用时，直接执行相应的
   Native 代码逻辑，达到 JavaScript 调用 Native 的目的
-  链接：https://www.jianshu.com/p/4bdd0294ae46
-  来源：简书
-  著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
-HTTPS中间人攻击
-https协议由 http + ssl 协议构成，具体的链接过程可参考SSL或TLS握手的概述
-
-中间人攻击过程如下：
-服务器向客户端发送公钥。
-攻击者截获公钥，保留在自己手上。
-然后攻击者自己生成一个【伪造的】公钥，发给客户端。
-客户端收到伪造的公钥后，生成加密hash值发给服务器。
-攻击者获得加密hash值，用自己的私钥解密获得真秘钥。
-同时生成假的加密hash值，发给服务器。
-服务器用私钥解密获得假秘钥。
-服务器用加秘钥加密传输信息
-防范方法：
-服务端在发送浏览器的公钥中加入CA证书，浏览器可以验证CA证书的有效性   
+链接：https://www.jianshu.com/p/4bdd0294ae46

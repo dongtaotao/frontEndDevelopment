@@ -1,12 +1,12 @@
- vue RN Flutter 小程序 taro vite webpack http
+vue RN Flutter 小程序 taro vite webpack http
 
- dux-persist是把redux中的数据在localstorage中存起来，起到持久化的效果
- https://www.jianshu.com/p/d627e8428e56
+redux-persist是把redux中的数据在localstorage中存起来，起到持久化的效果
+https://www.jianshu.com/p/d627e8428e56
 
- 从0到1，打造小团队前端工程化服务（1/3）
- https://juejin.cn/post/6870371104335069192
+从0到1，打造小团队前端工程化服务（1/3）
+https://juejin.cn/post/6870371104335069192
 
-给前端的docker 10分钟真 · 快速入门指南
+给前端的docker 10分钟真 · 快速入门指南 🔥
 https://juejin.cn/post/7050304120082661407
 
 
@@ -27,7 +27,7 @@ https://www.ujcms.com/knowledge/543.html
 Flutter 大厂面试真题（含答案）
 https://juejin.cn/post/6940510893901873166
 
-ElasticSearch优点
+ElasticSearch优点---------
 
 服务端渲染，========同构===================
 服务器端运行React代码渲染出html

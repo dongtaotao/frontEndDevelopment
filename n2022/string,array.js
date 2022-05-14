@@ -27,7 +27,7 @@ function isObjArr(variable){
     }else if(Object.prototype.toString.call(value)==='[object Object]'){//这个方法兼容性好一点
         console.log('value是对象');
     }else{
-        console.log('value不是数组也不是对象')
+        console.log('value不是数组也不是对象') 
     }
 }
  

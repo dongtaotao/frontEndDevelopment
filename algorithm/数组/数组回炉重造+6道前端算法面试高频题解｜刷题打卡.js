@@ -10,7 +10,7 @@ arr['1'] // 1
 其实，JavaScript 中的数组是一种比较特殊的对象，因为在 JavaScript 中，对象的属性名必须是字符串，这些数字索引就被转化成了字符串类型。
 创建数组
 // 1. 使用 Array 构造函数
-let webCanteen = new Array()
+let webCanteen = new Array() 
 // 初始为 20 的数组
 let webCanteen = new Array(20)
 // 传入要保存的元素

@@ -97,7 +97,7 @@ HTTP 2： 可以一瞬间加载出来很多资源，因为，HTTP2 支持多路�
 XSS怎么防御
 xss: 跨站脚本攻击, 攻击方式是构造可执行的代码，
 // 页面内容
-<input type="text" value="<%= getParameter("keyword") %>">
+{/* <input type="text" value="<%= getParameter("keyword") %>"> */}
 <button>搜索</button>
 <div>
   您搜索的关键词是：<%= getParameter("keyword") %>
@@ -142,4 +142,4 @@ cookie是发送时自动带上的，而不会主动带上Token，可以在每次
 XSS系列一：什么是XSS攻击
 https://juejin.cn/post/6864111478904111111
 XSS系列二：基于vue搭建的网站如何防范XSS攻击
-https://juejin.cn/post/6867071794222727176
+https://juejin.cn/post/6867071794222727176  

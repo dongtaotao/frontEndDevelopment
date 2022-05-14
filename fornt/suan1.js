@@ -897,7 +897,7 @@ export const shuffle = (arr) => {
       result.push(arr[random])
       arr.splice(random, 1)
   }
-  return result;
+  return result; 
 }
 
 

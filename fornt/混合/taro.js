@@ -1,11 +1,11 @@
 Taro 是什么？
 Taro 是由京东 - 凹凸实验室打造的一套遵循 React 语法规范的多端统一开发框架。
-使用 Taro，我们可以只书写一套代码，通过 Taro 的编译工具，将源代码分别编译出可以在不同端 
+使用 Taro，我们可以只书写一套代码，通过 Taro 的编译工具，将源代码分别编译出可以在不同端  
 （微信小程序、H5、App、快应用等）运行的代码。 
 
 React写多端应用
 设计思想
-1代码转换
+1代码转换  编译
 使代码可以在不同平台上运行
 2.运行时适配
 使代码在不同平台上有相同的表现
@@ -51,7 +51,7 @@ Web -> Native
 web调用Native端主要有两种方式
 #1. 拦截WebView请求的URL Schema
 URL Schema是类似URL的一种请求格式:
-<protocol>://<host>/<path>?<qeury>#fragment
+{/* <protocol>://<host>/<path>?<qeury>#fragment */}
 我们可以自定义JSBridge的URL Schema, 比如: jsbridge://showToast?text=hello
 
 Native加载Webview之后, web发送的所有请求都会经过webview组件, 所以native可以重写webview里的方法, 拦截web发起的请求, 我们对请求的格式进行判断:
@@ -106,7 +106,7 @@ iOS的WKWebView提供了WKScriptMessageHandler
 
 以安卓, 在web端实现带有回调的jsb为例:
 // Web端代码：
-<body>
+{/* <body>
   <div>
     <button id="showBtn">获取Native输入，以Web弹窗展现</button>
   </div>
@@ -139,7 +139,7 @@ iOS的WKWebView提供了WKScriptMessageHandler
     // 通过JSSDK调用，将回调函数传入
     window.JSSDK.getNativeEditTextValue(value => window.alert('Natvie输入值：' + value));
   });
-</script>
+</script> */}
 然后在安卓端:
 
 // Android端代码

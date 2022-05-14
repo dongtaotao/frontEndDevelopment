@@ -478,7 +478,6 @@ var validPalindrome = function(s){
       if(s[left] !== s[right]){
           const result = isPalindrome(left+1,right) || isPalindrome(left ,right-1)
           return result;
-
       }
       left ++;
       right --;

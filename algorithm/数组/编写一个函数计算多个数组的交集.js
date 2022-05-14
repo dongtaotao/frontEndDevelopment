@@ -17,7 +17,7 @@ function getIntersect(...arrs) {
 }
 
 var intersection = function(...args) {
-    if (args.length === 0) {
+  if (args.length === 0) {
     return []
   }
   if (args.length === 1) {

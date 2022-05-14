@@ -49,7 +49,7 @@ splitChunks抽离公共文件
 sourceMap优化
 用户体验
 
-骨架屏
+骨架屏 draw-page-structure
 PWA
 还可以使用缓存(客户端缓存、服务端缓存)优化、服务端开启gzip压缩等。
 
@@ -220,4 +220,4 @@ Vue3的新特性，如下：
 
 
 vue长列表优化-虚拟滚动
-https://juejin.cn/post/7063898544008069127
+https://juejin.cn/post/7063898544008069127 

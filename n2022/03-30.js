@@ -53,7 +53,7 @@ Webpack的分包配置
 any、unknown、never 的区别
 
 从零开始构建一个webpack项目
-https://juejin.cn/post/6844904005286494215
+https://juejin.cn/post/6844904005286494215  
 
 
 洗牌算法的实现，random - 0.5 的弊端（伪随机，大数据量下每个数出现的位置，分布不均匀）
@@ -65,5 +65,30 @@ https://juejin.cn/post/7073345968015409166
 
 如果图片加载失败，如何做统一处理及优化？
 https://www.jianshu.com/p/3640705a770c
+通过在全局监听的方式，来对异常图片做降级处理
+window.addEventListener('error',function(e){
+    // 当前异常是由图片加载异常引起的
+    if( e.target.tagName.toUpperCase() === 'IMG' ){
+        e.target.src = '//xxx/default.jpg';
+    }
+},true)
+最后，我们在思考一个问题，当网络出现异常的时候，必然会出现什么网络图片都无法加载的情况，这样就会导致我们监听的 error 事件。被无限触发，所以我们可以设定一个计数器，当达到期望的错误次数时停止对图片赋予默认图片的操作，改为提供一个Base64的图片。
+window.addEventListener('error',function(e){
+    let target = e.target, // 当前dom节点
+        tagName = target.tagName,
+        count = Number(target.dataset.count ) || 0, // 以失败的次数，默认为0
+        max= 3; // 总失败次数，此时设定为3
+    // 当前异常是由图片加载异常引起的
+    if( tagName.toUpperCase() === 'IMG' ){
+        if(count >= max){
+            target.src = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD//AK3/ALYH+5hX6FV5N4Y/5GHwx/vyf+iJa9ZrysPhoYVShDZu/potDmwWFhhIzhT2bv6aLQ//Z';
+        }else{
+            target.dataset.count = count + 1;
+            target.src = '//xxx/default.jpg';
+        }
+    }
+},true)
+链接：https://www.jianshu.com/p/3640705a770c
+
 
 监听error事件处理常规js错误 监听unhandledrejection事件处理当Promise 被 reject 且没有 reject 处理器的时候 ajax请求处理接口异常

@@ -1,7 +1,7 @@
 前端应该会的23个linux常用命令********** 
 https://juejin.cn/post/6844904034243969038
 菜鸟教程
-https://www.runoob.com/linux/linux-tutorial.html 
+https://www.runoob.com/linux/linux-tutorial.html   
 
 
 脚手架工具搭建
@@ -27,4 +27,12 @@ bin/index
 
 
 作为前端，你还不会搭建npm私库吗？
-https://www.bilibili.com/video/BV15g411M7oJ?spm_id_from=333.999.0.0
+https://www.bilibili.com/video/BV15g411M7oJ?spm_id_from=333.999.0.0 
+
+
+webpack5 手动搭建前端项目（react+antd + ts）
+https://juejin.cn/post/7096802032782147592
+
+都 2022 年了，手动搭建 React 开发环境很难吗？ 🔥🔥=====================
+https://juejin.cn/post/7087811040591675428
+

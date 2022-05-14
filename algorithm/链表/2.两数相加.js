@@ -24,7 +24,7 @@ var addTwoNumbers = function (l1, l2){
 };
 
 //无重复最长子串
-var lengthOfLongSubstring = function(s) {
+var lengthOfLongSubstring = function(s) { 
   let l = 0;
   let res = 0;
   const map = new Map();

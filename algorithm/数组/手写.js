@@ -109,7 +109,7 @@ const debounce = (fn, delay) => {
   let timer = null;
   return (...args) => {
     timer && clearTimeout(timer);
-    setTimeout(() => {
+    timer = setTimeout(() => {
       fn.apply(this, args)
     }, delay)
   }
@@ -206,5 +206,4 @@ class EventEmitter {
 
     this.on(name, onceF)
   }
-
 }

@@ -5,7 +5,7 @@ React Native之原理浅析 http://blog.poetries.top/2019/10/02/rn-yuanli/
 React Native 框架内部已提供了很多的内置组件，如图 3-1 所示。如 View、Text 等基本组件，
 用于一些功能布局的 Button、Picker 等，用于列表展示的各种 List 组件和对应 iOS 平台与 Android 
 平台的特定组件、API 等。
-同时也提供了供编写与原生平台交互的接口，在后续的章节我们会进行与原生平台的混合实战开发实战。
+同时也提供了供编写与原生平台交互的接口，在后续的章节我们会进行与原生平台的混合实战开发实战。 
 
 React Native 工作原理
 图 3-2 React Native 渲染 在 React 框架中，JSX 源码通过 React 

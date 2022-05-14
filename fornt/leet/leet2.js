@@ -89,7 +89,7 @@ var levelOrder = function(root) {
  * @param {number} targetSum
  * @return {boolean}
  */
- var hasPathSum = function(root, targetSum) {
+var hasPathSum = function(root, targetSum) {
     if(!root)return false
     let res=false;
     const dfs=(n,s)=>{
@@ -431,6 +431,6 @@ var isValidBST = function(root) {
     if (root.right && root.right.val < root.val) {
       return false
     }
-    return isValidBST(root.left) && isValidBST(root.right) 
+    return isValidBST(root.left) && isValidBST(root.right)  
   };
   

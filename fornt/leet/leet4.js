@@ -257,5 +257,220 @@ var runningSum = function(nums) {
     for (let i = 1; i < n; i++) {
         nums[i] += nums[i - 1];
     }
-    return nums;
+    return nums; 
 }
+
+1502. 判断能否形成等差数列 https://github.com/pwstrick/daily/issues/1026
+/**
+ * @param {number[]} arr
+ * @return {boolean}
+ */
+ var canMakeArithmeticProgression = function(arr) {
+    arr.sort((a, b) => a-b);
+    const bench = arr[1] - arr[0];
+    for(let i=1, len=arr.length; i<len; i++) {
+        if(arr[i] - arr[i-1] != bench) {
+            return false;
+        }
+    }
+    return true;
+};
+
+1491. 去掉最低工资和最高工资后的工资平均值
+/**
+ * @param {number[]} salary
+ * @return {number}
+ */
+ var average = function(salary) {
+    salary.sort((a, b) => a-b);
+    salary.pop();
+    salary.shift();
+    const sum = salary.reduce((acc, cur) => acc+=cur);
+    return sum / salary.length;
+};
+
+旋转图像 https://juejin.cn/post/6992775762491211783 ****************************************
+输入： matrix = [[1,2,3],[4,5,6],[7,8,9]]
+输出： [[7,4,1],[8,5,2],[9,6,3]]
+思路
+
+首先输入
+
+1 2 3
+4 5 6
+7 8 9
+复制代码
+通过交换matrix[i][j], matrix[j][i] 得到
+1 4 7
+2 5 8
+3 6 9
+复制代码
+最后将得到每组数组倒序排列即可
+7 4 1
+8 5 2
+9 6 3
+var rotate = function(matrix) {
+  for(let i = 0; i < matrix.length; i++){
+      for(let j = i; j < matrix.length; j++){
+          [matrix[i][j], matrix[j][i]] = [matrix[j][i], matrix[i][j]]
+      }
+  }
+  return matrix.map(item => item.reverse());
+};
+
+49. 字母异位词分组
+输入: strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
+输出: [["bat"],["nat","tan"],["ate","eat","tea"]]
+
+var groupAnagrams = function(strs) {
+    const recordMap = {};
+    const result = [];
+    for(let str of strs){
+        const sortStr = str.split('').sort().join('');
+        if(recordMap[sortStr]){
+            recordMap[sortStr].push(str);
+        } else {
+            recordMap[sortStr] = [str];
+        }
+    }
+    for(let key in recordMap){
+        result.push(recordMap[key])
+    }
+    return result;
+  };
+
+172. 阶乘中的零 https://juejin.cn/post/6989031479753834504
+var trailingZeroes = function (n) {
+    let r = 0;
+    while (n > 1) {
+        n = Math.floor(n / 5);
+        r += n;
+    }
+    return r;
+};
+
+2.9 平衡二叉树
+var isBalanced = function (root) {
+    if (!root) return true
+    function getHeight(tree) {
+        if (!tree) return 0
+        return Math.max(getHeight(tree.left), getHeight(tree.right)) + 1
+    }
+    if (Math.abs(getHeight(root.left) - getHeight(root.right)) > 1) {
+        return false
+    }
+    return isBalanced(root.left) && isBalanced(root.right)
+};
+
+链接：https://juejin.cn/post/7080174781508616206
+2.10 二叉树的镜像
+var mirrorTree = function (root) {
+    if (!root) return null;
+    let left = mirrorTree(root.right);
+    let right = mirrorTree(root.left);
+    root.left = left;
+    root.right = right;
+    return root;
+}
+
+前端面试准备的50道算法题下https://juejin.cn/post/7084600366813151240
+2.43 买卖股票的最佳时机 https://juejin.cn/post/7084600366813151240
+var maxProfit = function (prices) {
+    let minPrices = prices[0]
+    let res = 0
+    for (const v of prices) {
+        if (minPrices > v) {
+            minPrices = v
+        } else {
+            res = Math.max(res, v - minPrices)
+        }
+    }
+    return res
+}
+
+var maxProfit = function (prices) {
+    let res = 0
+    for (let i = 1; i < prices.length; i++) {
+        if (prices[i] > prices[i - 1]) {
+            res += prices[i] - prices[i - 1] // 可以简化为 res += Math.max(prices[i] - prices[i - 1],0)
+        }
+    }
+    return res
+}
+
+198. 打家劫舍  https://juejin.cn/post/6977663197360685093
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+ var rob = function(nums) {
+    if(nums.length === 0) { return 0;}
+    const dp = [0 ,nums[0]];
+    for(let i = 2; i <= nums.length; i++) {
+        dp[i] = Math.max(dp[i - 2] + nums[i -1], dp[i - 1])
+    }
+    return dp[nums.length]
+};
+
+
+二叉树最近公共祖先 https://juejin.cn/post/6844904175562653710
+（1）深度优先查找，查到两节点任意一个返回
+（2）当两个节点都找到时返回root，否则返回null
+var lowestCommonAncestor = function(root, p, q) {
+    if(!root) return null;
+    if(root === p || root === q) return root;
+    let left = lowestCommonAncestor(root.left,p,q);
+    let right = lowestCommonAncestor(root.right,p,q);
+    if(!left) return right;
+    if(!right) return left;
+    if(left && right) return root;  
+    return null;
+};
+
+合并二叉树
+var mergeTrees = function(t1, t2) {
+    if(t1 && t2){
+        t1.val += t2.val;
+        t1.left = mergeTrees(t1.left,t2.left);
+        t1.right = mergeTrees(t1.right,t2.right);
+    }
+    return t1 || t2;
+};
+二叉树的镜像
+
+function Mirror(root)
+{
+    if(root === null) return root;
+    [root.left,root.right] = [root.right,root.left];
+    Mirror(root.left);
+    Mirror(root.right);
+    return root;
+}
+
+二叉树根节点到叶子节点的所有路径和 https://blog.nowcoder.net/n/08dbb5d39ecb4776889e7d8a7f31f736
+输入：
+{1,2,3}
+复制
+返回值：
+25
+这颗二叉树一共有两条路径，
+根节点到叶子节点的路径 1\to 21→2 用数字\ 12 12 代替
+根节点到叶子节点的路径 1\to 31→3 用数字\ 13 13 代替
+所以答案为\ 12+13=25 12+13=25
+
+export function sumNumbers(root: TreeNode | null): number {
+    return dfs(root, 0)
+}
+function dfs(root: TreeNode | null, prevSum: number): number {
+    if (root === null) return 0
+ 
+    const sum = prevSum * 10 + root.val
+ 
+    if (root.left === null && root.right === null) {
+        return sum
+    } else {
+        return dfs(root.left, sum) + dfs(root.right, sum)
+    }
+ 
+}
+ 

@@ -149,7 +149,7 @@ class Promise {
     });
   }
 
-  trace(promises) {
+  race(promises) {
     return new Promise((resolve, reject) => {
       promises.forEach((p) => {
         const promise = Promise.resolve(p);
@@ -221,4 +221,46 @@ static reject(err) {
         });
     }
 }
-/**
+
+Promise.all = function(promises) {
+    const values = []
+    let count = 0
+    return new Promise((resolve, reject) => {
+        promises.forEach((promise, index) => {
+            Promise.resolve(promise).then(res => {
+                count++
+                values[index] = res
+                if (count === promises.length) {
+                    resolve(values)
+                }
+            }, err => {
+                reject(err)
+            })
+        })
+    })
+}
+
+Promise.allSettled = function(promises) {
+    let count = 0
+    let result = []
+    return new Promise((resolve, reject) => {
+        promises.forEach((promise, index) => {
+            Promise.resolve(promise).then(res => {
+                result[index] = {
+                    value: res,
+                    reason: null,
+                }
+            }, err => {
+                result[index] = {
+                    value: null,
+                    reason: err,
+                }
+            }).finally(() => {
+                count++
+                if (count === promises.length) {
+                    resolve(result)
+                }
+            })
+        })
+    })
+}

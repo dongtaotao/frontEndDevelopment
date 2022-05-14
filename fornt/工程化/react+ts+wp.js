@@ -46,7 +46,7 @@ Babel 配置
 最后
 参考文档
 
-「超详细React项目搭建教程三」集成 CSS/Less/Sass/Antd
+「超详细React项目搭建教程三」集成 CSS/Less/Sass/Antd  
 https://juejin.cn/post/6947875008840466463
 在代码中引入 CSS
 为开发环境配置 CSS
@@ -94,3 +94,7 @@ Store
 
 TypeScript面试题及答案收录[不断更新] 
 https://juejin.cn/post/6999985372440559624   
+
+
+2021 年前端开发者需要知道的 JS/React 规范
+https://juejin.cn/post/6950690579286065182

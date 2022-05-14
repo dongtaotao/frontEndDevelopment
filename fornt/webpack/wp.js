@@ -31,4 +31,4 @@ class MyPlugin {
         // do something...
     })
   }
-}
+} 

@@ -47,6 +47,8 @@ JSONP 的原理很简单，就是利用 <script>标签没有跨域限制的漏�
 	}
 </script>
 
+// https://www.imooc.com/learn/1289   🔥🔥🔥实战
+
 function jsonp(url, jsonpCallback, success) {
     let script = document.createElement("script");
     script.src = url;
@@ -212,4 +214,4 @@ window.addEventListener(‘unhandledrejection’)
 
 数据上报
 XMLHttpRequest 
-Image  
+Image   

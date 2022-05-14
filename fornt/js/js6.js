@@ -1,4 +1,4 @@
-单例模式
+单例模式 
 const Single = function (name, password) {  
     this.name = name;
     this.password = password;
@@ -113,17 +113,11 @@ https://leetcode-cn.com/problems/permutations/solution/javascript-hui-su-xiang-j
 回溯算法
 
 1. CSRF 攻击，解释一下 Cookie 的 SameSite
-
 2. HTTPS 协议之所以是安全的是因为 HTTPS 协议会对传输的数据进行加密，
-而加密过程是使用了非对称加密实现。
-但其实：HTTPS 在内容传输的加密上使用的是对称加密，
-非对称加密只作用在证书验证阶段。
-
+而加密过程是使用了非对称加密实现。但其实：HTTPS 在内容传输的加密上使用的是对称加密，非对称加密只作用在证书验证阶段。
 3. JSBridge 原理
-
 4. React 16 中 Diff 算法的变化
 浅析React Diff 与 Fiber https://zhuanlan.zhihu.com/p/58863799
-
 5. 什么是Base64
    Base64是网络上最常见的用于传输8Bit字节码的编码方式之一，
    Base64就是一种基于64个可打印字符来表示二进制数据的方法
@@ -137,26 +131,20 @@ https://leetcode-cn.com/problems/permutations/solution/javascript-hui-su-xiang-j
 （1）base64格式的文本内容较多，存储在数据库中增大了数据库服务器的压力；
 （2）网页加载图片虽然不用访问服务器了，但因为base64格式的内容太多，所以加载网页的速度会降低，可能会影响用户的体验。
 （3）base64无法缓存，要缓存只能缓存包含base64的文件，比如js或者css，这比直接缓存图片要差很多，而且一般HTML改动比较频繁，所以等同于得不到缓存效益
-
 6. Cookie 的 SameSite 属性
    Chrome 51 开始，浏览器的 Cookie 新增加了一个SameSite属性，
    用来防止 CSRF 攻击和用户追踪。
-
 7. css加载不会阻塞DOM树的解析
   css加载会阻塞DOM树的渲染
   css加载会阻塞后面js语句的执行、
-
 8. react16的diff算法相比于react15有什么改动 
 https://www.zhihu.com/question/266800762
-
 9. Tree-shaking 原理
 https://juejin.im/post/5a4dc842518825698e7279a9
 https://juejin.im/post/5bb8ef58f265da0a972e3434
-
 10. sticky 的使用场景
 使用 position:sticky 实现粘性布局
  https://juejin.im/entry/58a69c335c497d005fafb8f4
-
 11. cookie 的属性有哪些
   name: cookie名称
   value: cookie值
@@ -164,10 +152,8 @@ https://juejin.im/post/5bb8ef58f265da0a972e3434
   path: 可访问此cookie的页面路径
   expires/Max-Age: cookie超时时间, 默认为Session
   Size: cookie大小
-  http: 即httponly属性, true时只有http请求头会带有此信息, 
-  而不能通过document.cookie来访问
+  http: 即httponly属性, true时只有http请求头会带有此信息, 而不能通过document.cookie来访问
   secure: 设置是否只可通过https来传递此条cookie
-
 12. 说几个 HTTP Content-Type
   application/x-www-form-urlencoded
   multipart/form-data    此种方式多用于文件上传，表单数据都保存在http的正文部分，各个表单项之间用boundary分开。
@@ -179,7 +165,7 @@ https://juejin.im/post/5bb8ef58f265da0a972e3434
   text/xml
 
 13. Webpack中的HMR原理 https://juejin.im/post/5d4d3e5ce51d4561f64a07d1
-Hot Module Replacement（以下简称 HMR）是 webpack 发展至今引入的最令人兴奋的特性之一 ，
+Hot Module Replacement（以下简称 HMR）
 当你对代码进行修改并保存后，webpack 将对代码重新打包，并将新的模块发送到浏览器端，浏览器
 通过新的模块替换老的模块，这样在不刷新浏览器的前提下就能够对应用进行更新。
 基本实现原理大致这样的，构建 bundle 的时候，加入一段 HMR runtime 的 js 和一段和服务沟
@@ -212,11 +198,8 @@ Element Diff:如果新旧 DOM 树中的组件类型相同,会继续比较这两
 
 17. Typescript中的interface和type到底有什么区别 
 https://juejin.im/post/5c2723635188252d1d34dc7d
-
 18. CI/CD怎么做的
-
 19. HTTPS 原理 https://juejin.im/post/5ca6a109e51d4544e27e3048
-
 20. webpack中的hash、chunkhash、contenthash区别 https://juejin.im/post/5d898d1df265da03b1208ca5
 共同点：这三种hash都是用来控制缓存的，hash一般是结合CDN缓存来使用，
 通过webpack构建之后，生成对应文件名自动带上对应的MD5值。如果文件内容改变的话，
@@ -231,9 +214,7 @@ contenthash是针对文件内容级别的，只有你自己模块的内容变了
 所以我们可以通过contenthash解决上诉问题
 
 21. 扫码登录的实现逻辑
-
 22. 性能监控 http://www.alloyteam.com/2020/01/14184/
-
 23. git rebase 和 git merge 的区别
 
 渲染几万条数据不卡住页面
@@ -263,7 +244,6 @@ setTimeout(() => {
   }
   loop();
 }, 0)
-
 链接：https://juejin.cn/post/7070020478701666318
 
 32. 大数运算
@@ -289,7 +269,6 @@ function add(a, b) {
   }
   return sum;
 }
-
 链接：https://juejin.cn/post/7070020478701666318
 
 iterator：不使用Generator函数创建迭代器 https://juejin.cn/post/6844903887502082061#heading-22

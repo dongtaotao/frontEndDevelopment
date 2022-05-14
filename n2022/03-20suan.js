@@ -65,20 +65,19 @@ Event Loop的六个阶段
 循环体会不断运行以检测是否存在没有调用的回调函数，事件循环机制会按照先进先出的方式执行他们直到队列为空
 
 
-timers 阶段：这个阶段执行timer（setTimeout、setInterval）的回调
-I/O callbacks 阶段：处理一些上一轮循环中的少数未执行的 I/O 回调
-idle, prepare 阶段：仅node内部使用
-poll 阶段：获取新的I/O事件, 适当的条件下node将阻塞在这里
-check 阶段：执行 setImmediate() 的回调
-close callbacks 阶段：执行 socket 的 close 事件回调
-链接：https://juejin.cn/post/6844903761949753352
+Node的Event loop一共分为6个阶段，每个细节具体如下：
+timers: 执行setTimeout和setInterval中到期的callback。
+pending callback: 上一轮循环中少数的callback会放在这一阶段执行。
+idle, prepare: 仅在内部使用。
+poll: 最重要的阶段，执行pending callback，在适当的情况下回阻塞在这个阶段。
+check: 执行setImmediate的callback。
+close callbacks: 执行close事件的callback，例如socket.on('close'[,fn])或者http.server.on('close, fn)。
+链接：https://juejin.cn/post/6913368493035356167
 
 
+process.nextTick(() => {}) // 同步之后，异步执行前调用
 
-process.nextTick(() => {}) // 同步之后，异步执行千调用
-
-
-
+-------------------------------------------------------------------------------------
 一次事件循环
 1.同步
 2.process.nextTick
@@ -102,6 +101,58 @@ setTimeout(() => {console.log(6)},0)
 console.log(7)
 
 3 7 2 4 6 1 5
+
+setImmediat(() => {
+    console.log(1)
+})
+process.nextTick(() => {
+    console.log(2)
+})
+console.log(3)
+setTimeout(() => {console.log(4)},0)
+setTimeout(() => {console.log(5)},1000)
+setTimeout(() => {console.log(6)},10)
+console.log(7)
+
+3 7 2 4 1 6 5
+
+
+setTimeout(() => {
+    console.log(1);
+}, 0)
+
+setImmediate(() => {
+    console.log(2);
+})
+
+new Promise(resolve => {
+    console.log(3);
+    resolve()
+    console.log(4);
+})
+.then(() => {
+    console.log(5);
+})
+
+console.log(6);
+
+process.nextTick(() => {
+    console.log(7);
+})
+
+console.log(8);
+
+/* 打印结果：
+			3
+			4
+			6
+			8
+			7
+			5
+			1
+			2
+*/
+
 
 
 JavaScript中对象属性的描述，可枚举，可配置
@@ -243,7 +294,7 @@ link或者src添加rel属性，设置prefetch或preload可预加载资源。（�
 如果使用了UI组件库，采用按需加载（减小资源大小）
 SPA项目，通过import或者require做路由按需（减小资源大小）
 服务端渲染SSR，加快首屏渲染，利于SEO
-页面使用骨架屏，提高首页加载速度（提高加载速度）
+页面使用骨架屏，提高首页加载速度（提高加载速度） draw-page-structure
 使用 JPEG 2000, JPEG XR, and WebP 的图片格式来代替现有的jpeg和png，当页面图片较多时，这点作用非常明显
 使用图片懒加载-lazyload
 

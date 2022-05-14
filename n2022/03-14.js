@@ -18,7 +18,7 @@ Electron 基于 Chromium 和 Node.js, 让你可以使用 HTML, CSS 和 JavaScrip
 
 开发electron
 需要html，js， css基础
-深入浅出node。js
+深入浅出node.js
 浏览器工作原理
 electron Api应用
 

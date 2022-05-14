@@ -214,6 +214,7 @@ var maxDepth = function(root) {
 };
 
 二叉树最近公共祖先 https://juejin.cn/post/6844904175562653710
+https://leetcode.cn/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/
 （1）深度优先查找，查到两节点任意一个返回
 （2）当两个节点都找到时返回root，否则返回null
 var lowestCommonAncestor = function(root, p, q) {
@@ -235,4 +236,4 @@ var mergeTrees = function(t1, t2) {
       t1.right = mergeTrees(t1.right,t2.right);
   }
   return t1 || t2;
-};
+}; 

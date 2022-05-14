@@ -31,7 +31,7 @@ var fib = function(N) {
 };
 链接：https://leetcode-cn.com/problems/fibonacci-number/solution/di-gui-huan-cun-di-gui-die-dai-by-lxhgua-4u8u/
 
-//================================================================
+//================================================================   
 合并两个排序的链表
 输入：1->2->4, 1->3->4
 输出：1->1->2->3->4->4
@@ -104,6 +104,33 @@ function numFormat(num){
   })
   return res;
 }
+
+将数字转为字符串、分割转为数组，反转拼接
+/**
+ * @method thousandSeparator1
+ * @description 千位分割数 - split、reverse、reduce
+ * @param n number
+ * @returns string
+ */
+ function thousandSeparator1(n: number): string {
+  // 1. 将数值n转为字符串
+  const s = n.toString();
+
+  // 2. 使用split分割字符串，转为数组；使用reverse反转数组
+  const arr = s.split('').reverse();
+
+  // 3. 使用reduce，依次拼接每个数组单元
+  return arr.reduce((prev, val, index) => {
+    // 千分位，每隔三位拼接一个符号
+    // 同时要注意index为0时，第一个符号不
+    if (index % 3 === 0 && index !== 0) {
+      return val + '.' + prev;
+    } else {
+      return val + prev;
+    }
+  }, '');
+}
+
 
 var a=1234567894532;
 var b=673439.4542;

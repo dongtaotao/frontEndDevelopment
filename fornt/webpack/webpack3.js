@@ -183,3 +183,31 @@ https://juejin.cn/post/6844903821408206855
 
 webpack5全套教程，全网最完整的webpack教程（基础+高级）
 https://www.bilibili.com/video/BV1YU4y1g745?spm_id_from=333.337.search-card.all.click
+
+
+Webpack原理-编写Plugin
+https://segmentfault.com/a/1190000012840742
+Compiler 和 Compilation 的区别在于：Compiler 代表了整个 Webpack 从启动到关闭的生命周期，而 Compilation 只是代表了一次新的编译。
+
+Webpack 的事件流机制应用了观察者模式，和 Node.js 中的 EventEmitter 非常相似。
+Compiler 和 Compilation 都继承自 Tapable，可以直接在 Compiler 和 Compilation 对象上广播和监听事件，方法如下：
+
+/**
+* 广播出事件
+* event-name 为事件名称，注意不要和现有的事件重名
+* params 为附带的参数
+*/
+compiler.apply('event-name',params);
+
+/**
+* 监听名称为 event-name 的事件，当 event-name 事件发生时，函数就会被执行。
+* 同时函数中的 params 参数为广播事件时附带的参数。
+*/
+compiler.plugin('event-name',function(params) {
+  
+});
+同理，compilation.apply 和 compilation.plugin 使用方法和上面一致。
+
+
+包看包会的《webpack-loader该怎么写》
+https://juejin.cn/post/7013350090945331237

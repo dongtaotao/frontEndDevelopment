@@ -1,4 +1,4 @@
-2020年中大厂前端面试总结 https://juejin.cn/post/6865525477465931783#heading-8
+2020年中大厂前端面试总结 https://juejin.cn/post/6865525477465931783#heading-8   
 
 前端常见问题和技术解决方案 *************************************************************
 https://juejin.cn/post/7088144745788080142
@@ -80,7 +80,6 @@ yarn list | grep xxx
 
 如何处理白屏错误页的监控的？ https://q.shanyue.tech/fe/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/739.html
 用户反馈白屏了，你怎么处理？
-
 排查兼容性。大部分原因是因为低端机型/浏览器低版本 polyfill 的问题导致报错
 排查网络。js 是否下载成功 cdn 是否生效
 做 js 错误上报。分析是否存在代码缺陷
@@ -200,7 +199,8 @@ AcceptAccept-LanguageContent-LanguageContent-Type: 只限于三个值：applicat
 非简单请求是那种对服务器有特殊要求的请求，比如请求方法是PUT或DELETE，或者Content-Type字段的类型是application/json。
 非简单请求的CORS请求，会在正式通信之前，增加一次HTTP查询请求，称为"预检"请求（preflight）。
 预检请求：
-预检"请求用的请求方法是OPTIONS，表示这个请求是用来询问的。请求头信息里面，关键字段是Origin，表示请求来自哪个源。除了Origin字段，"预检"请求的头信息包括两个特殊字段。
+预检"请求用的请求方法是OPTIONS，表示这个请求是用来询问的。请求头信息里面，关键字段是Origin，表示请求来自哪个源。除了Origin字段，
+"预检"请求的头信息包括两个特殊字段。
 
 链接：https://juejin.cn/post/6844904137197371399
 
@@ -341,7 +341,7 @@ class LoginForm {
   console.log('login_1===login_2', login_1===login_2);
   
 
-JavaScript 中queue队列相关算法 *************** 电子书下载网站1 电子书下载网站2 JavaScript学习网站
+JavaScript 中queue队列相关算法 *************** JavaScript学习网站
   https://juejin.cn/post/7075962070139125791
 链接：https://juejin.cn/post/7075963597758660615
 
@@ -393,7 +393,7 @@ https://juejin.cn/post/6989041778221383717
 11、ajax查询。
 
 
-图片的懒加载和预加载 https://www.cnblogs.com/psxiao/p/11542930.html
+图片的懒加载和预加载 https://www.cnblogs.com/psxiao/p/11542930.html  🔥
 预加载：提前加载图片，当用户需要查看时可直接从本地缓存中渲染。
 懒加载：懒加载的主要目的是作为服务器前端的优化，减少请求数或延迟请求数。
 两种技术的本质：两者的行为是相反的，一个是提前加载，一个是迟缓甚至不加载。

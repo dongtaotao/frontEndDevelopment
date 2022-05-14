@@ -14,12 +14,12 @@ var kthToLast = function (head, k) {
   return pre.val;
 }
 
-var kthToLast = function(head, k) {
-    if(!head) return []
-    var valArr = []
-    while(head){
-        valArr.unshift(head.val)
-        head = head.next
-    }
-    return valArr[k-1]
+var kthToLast = function(head, k) {
+  if(!head) return []
+  var valArr = []
+  while(head){
+    valArr.unshift(head.val)
+    head =head.next
+  }
+  return valArr[k-1] 
 }

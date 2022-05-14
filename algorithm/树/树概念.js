@@ -16,7 +16,7 @@ var isBalanced = function (root) {
   if (!root) return true
   function getHeight(tree) {
       if (!tree) return 0
-      return Math.max(getHeight(tree.left), getHeight(tree.right)) + 1
+      return Math.max(getHeight(tree.left), getHeight(tree.right)) + 1 
   }
   if (Math.abs(getHeight(root.left) - getHeight(root.right)) > 1) {
       return false

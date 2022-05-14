@@ -52,7 +52,6 @@ class MySDK {
     }
 }
 
-
 webpack工作的原理是什么？工作流程是什么？ https://www.lingtiku.com/#/quiz/detail?quizID=14
 解析：
 webpack读取配置，根据入口开始遍历文件，解析依赖，使用loader处理各模块，然后将文件打包成bundle后输出到output指定的目录中。
@@ -88,13 +87,10 @@ https://mp.weixin.qq.com/s?__biz=Mzk0NTI2NDgxNQ==&mid=2247484713&idx=1&sn=6fba00
 (7) window.open + window.postMessage
 (8) Websocket
 
-作者：小维FE
 链接：https://juejin.cn/post/6844903986210816013
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
-
-如何实现一个插件 https://juejin.cn/post/6844903682455109640#heading-1
+webpack如何实现一个插件 https://juejin.cn/post/6844903682455109640#heading-1
+定义一个类，在类的原型上定义一个apply方法
 调用插件 apply 函数传入 compiler 对象
 通过 compiler 对象监听事件
 比如你想实现一个编译结束退出命令的插件
@@ -119,8 +115,8 @@ class BuildEndPlugin {
 token和JWT的区别
 【网络】Cookie、Session与Token、JWT及CSRF攻击
 相同： 都是访问资源的令牌， 都可以记录用户信息，都是只有验证成功后
-区别：服务端验证客户端发来的token信息要进行数据的查询操作；JWT验证客户端发来的token信息就不用， 在服务端使用密钥校验就可以，不用数据库的查询。
-
+区别：服务端验证客户端发来的token信息要进行数据的查询操作；
+JWT验证客户端发来的token信息就不用， 在服务端使用密钥校验就可以，不用数据库的查询。
 链接：https://juejin.cn/post/7065234358616997924
 
 webpack构建：
@@ -135,10 +131,9 @@ webpack构建：
 构建其实是工程化、自动化思想在前端开发中的体现，把一系列流程用代码去实现，让代码自动化地执行这一系列复杂的流程。 构建给前端开发注入了更大的活力，解放了我们的生产力,更加方便了我们的开发。
 链接：https://juejin.cn/post/6844903821408206855
 
-
 崩溃和卡顿 https://blog.csdn.net/sinat_17775997/article/details/115215082?spm=1001.2014.3001.5502
-卡顿也就是网页暂时响应比较慢， JS可能无法及时执行。但崩溃就不一样了，网页都崩溃了，JS都不运行了，还有什么办法可以监控网页的崩溃，并将网页崩溃上报呢？
-
+卡顿也就是网页暂时响应比较慢， JS可能无法及时执行。但崩溃就不一样了，网页都崩溃了，JS都不运行了，
+还有什么办法可以监控网页的崩溃，并将网页崩溃上报呢？
 1.利用 window 对象的 load 和 beforeunload 事件实现了网页崩溃的监控。
 不错的文章，推荐阅读：Logging Information on Browser Crashes。
 复制
@@ -161,11 +156,11 @@ window.addEventListener('load', function () {
     alert('Hey, welcome back from your crash, looks like you crashed on: ' + sessionStorage.getItem('time_before_crash'));
   }
 2.基于以下原因，我们可以使用 Service Worker 来实现网页崩溃的监控：
-
 Service Worker 有自己独立的工作线程，与网页区分开，网页崩溃了，Service Worker一般情况下不会崩溃
 Service Worker 生命周期一般要比网页还要长，可以用来监控网页的状态
 网页可以通过 navigator.serviceWorker.controller.postMessage API 向掌管自己的 SW 发送消息
 
+js异常
 总结 https://blog.csdn.net/sinat_17775997/article/details/115215082?spm=1001.2014.3001.5502
 可疑区域增加 try...catch
 全局监控JS异常： window.onerror
@@ -173,7 +168,7 @@ Service Worker 生命周期一般要比网页还要长，可以用来监控网�
 全局捕获没有 catch 的 promise 异常：unhandledrejection
 iframe 异常：window.error
 VUE errorHandler 和 React componentDidCatch
-监控网页崩溃：window 对象的 load 和 beforeunload
+监控网页崩溃：window 对象的 load 和 beforeunload ，或者Service Worker 
 Script Error跨域 crossOrigin 解决
 
 http缓存总结及前后端测试
@@ -188,14 +183,12 @@ tsconfig.json 文件是用于描述将 TypeScript 转为 JavaScript 代码的配
     .then(({export1, export2}) => {
       // ...•
     });
-复制代码
   上面代码中，export1和export2都是myModule.js的输出接口，可以解构获得。
 如果模块有default输出接口，可以用参数直接获得。
     import('./myModule.js')
     .then(myModule => {
       console.log(myModule.default);
     });
-复制代码
   上面的代码也可以使用具名输入的形式。
     import('./myModule.js')
     .then(({default: theDefault}) => {
@@ -214,11 +207,10 @@ tsconfig.json 文件是用于描述将 TypeScript 转为 JavaScript 代码的配
 首先，斐波那契数列从第0个开始，分别是
 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233……
 
-
 spy-debugger调试、抓包工具
 一站式页面调试、抓包工具。远程调试任何手机浏览器页面，任何手机移动端webview（如：微信，HybridApp等）。支持HTTP/HTTPS，无需USB连接设备。  
 
-ajax一种传统的技术 fatch 一个原生api  Axios一个第三方库
+ajax一种传统的技术，fatch 一个原生api，  Axios一个第三方库
 
 不适合箭头函数的场景
 1.对象方法
@@ -233,7 +225,7 @@ offsetHeight offsetWidth: border + padding + content;
 clientHeight clientWidth: border + content;
 scrollHeight scrollWidth: padding + 实际内容尺寸
 
-如何检测内存泄漏
+如何检测内存泄漏 ============================
 1.chrome  控制台  performance  里面的 Memory
 
 宏任务： 如 setTimeout, setInterval 网络请求
@@ -241,7 +233,7 @@ scrollHeight scrollWidth: padding + 实际内容尺寸
 
 微任务在下一轮DOM渲染之前执行，宏任务在之后执行
 
-[5.12]--5-14-nodejs如何开启多进程，进程如何通讯-使用chil
+nodejs如何开启多进程，进程如何通讯-使用chil
 开启子进程child_process.fork和cluster.fork
 使用send和on传递消息
 
@@ -255,7 +247,7 @@ prefetch 资源在未来页面使用，空闲时加载
 prefetch是资源预获取（和preload相关）
 dns-prefetch 是DNS预查询（和preconnect相关）
 
-[6.20]--6-22【连环问】如何实现网页和iframe之间的通讯【全网最全资源+mnbvcxz001199】
+【连环问】如何实现网页和iframe之间的通讯
 使用postMessage通讯
 注意跨域的限制和判断
 

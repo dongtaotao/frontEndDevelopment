@@ -370,7 +370,7 @@ const p12 = Promise.myAllSettled([ p1, p2, p4 ])
 // 3. 有两个Promise失败了
 const p13 = Promise.myAllSettled([ p1, p4, p5 ])
 	.then((res) => console.log(JSON.stringify(res, null,  2)))
-        
+         
 // 输出 
 /*
 [

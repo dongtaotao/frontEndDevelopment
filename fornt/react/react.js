@@ -27,7 +27,7 @@ React并不是将click事件绑定到了div的真实DOM上，而是在document�
 便于下次复用事件对象。
 
 Render props 官方解释∶
-"render prop"是指一种在 React 组件之间使用一个值为函数的 prop 共享代码的简单技术
+"render prop"是指一种在 React 组件之间使用一个值为函数的 prop 共享代码的简单技术  
 // DataProvider组件内部的渲染逻辑如下
 class DataProvider extends React.Components {
   state = {

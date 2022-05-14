@@ -1,4 +1,4 @@
-npm和yarn的区别 
+npm和yarn的区别  
 Yarn和npm命令对比
 npm	yarn
 npm install	yarn
@@ -47,8 +47,6 @@ git revert是用一次新的commit来回滚之前的commit，git reset是直接�
 这些被回滚的commit应该还会被引入。
 git reset 是把HEAD向后移动了一下，而git revert是HEAD继续前进，只是新的commit的内容和要revert的内容正好相反，能够抵消要被revert的内容。
 #
- 
-  
 
 
 Git提交规范保护
@@ -63,5 +61,5 @@ Git commit message 规范
 https://mp.weixin.qq.com/s?__biz=Mzk0NTI2NDgxNQ==&mid=2247484342&idx=2&sn=12f331dbd4b03baef771f75c9a426f07&chksm=c3194276f46ecb603b1c5b863ef2b683adf618d1ae1b231743e003fd0386387004e913a3ab8d#rd
 
 
-git操作与分支管理规范
+git操作与分支管理规范  
 https://juejin.cn/post/6892671601175691272

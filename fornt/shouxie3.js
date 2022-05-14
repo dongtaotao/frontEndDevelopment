@@ -1,6 +1,6 @@
 2021前端岗面试整理 https://juejin.cn/post/6991724298197008421#heading-83
 将有同样元素的数组进行合并 https://juejin.cn/post/6991724298197008421#heading-83
-// 例如：
+// 例如： 
 const arr = [
     ['a', 'b', 'c'],
     ['a', 'd'],
@@ -200,3 +200,213 @@ function getAllHTMLTags() {
       }
   }, '')
 }
+
+
+铜三铁四还不抓紧手撕代码!!!
+https://juejin.cn/post/7087451381304393764#heading-9
+console.log(add(1,2, 3))  //  打印6
+console.log(add(1)(2,3))  //  打印6
+console.log(add(1)(3)(2)) //  打印6
+console.log(add(1,2)(3))  //  打印6
+
+function add() {
+  let res = [...arguments];
+  function resultFn() {
+    res = res.concat([...arguments]);
+    return resultFn;
+  }
+  resultFn.valueOf = function() {
+    return res.reduce((a,b) =>a+b);
+  }
+  return resultFn;
+}
+console.log(5+add(1,2)(3)(4))
+// 输出15 
+
+
+作者：邹小邹
+链接：https://juejin.cn/post/7087451381304393764
+来源：稀土掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+
+多层嵌套的对象转换成一级对象 https://juejin.cn/post/7089816646277136421
+/*
+// 输入：
+{
+  a: {
+    b: {
+      c: {
+        d: 1,
+      },
+      e: 2,
+    },
+    f: [1, 2],
+  },
+  g: 2,
+}
+// 输出：
+{
+  "a.b.c.d": 1,
+  "a.b.e": 2,
+  "a.f": [1, 2],
+  g: 2,
+}
+*/ 
+function flattenObj(obj) {
+  // ...
+}
+参考答案，用递归
+function flattenObj(obj) {
+  const result = {};
+  function dfs(obj, arr) {
+    if (Object.prototype.toString.call(obj) !== "[object Object]") {
+      result[arr.join(".")] = obj;
+    } else {
+      for (let p in obj) {
+        dfs(obj[p], [...arr, p]);
+      }
+    }
+  }
+  dfs(obj, []);
+  return result;
+}
+
+
+一级对象转换成多层嵌套对象 https://juejin.cn/post/7089816646277136421
+/*
+// 输入：
+{
+  "a.b.c.d": 1,
+  "a.b.e": 2,
+  "a.f": [1, 2],
+  g: 2,
+}
+// 输出：
+{
+  a: {
+    b: {
+      c: {
+        d: 1,
+      },
+      e: 2,
+    },
+    f: [1, 2],
+  },
+  g: 2,
+}
+*/ 
+function nestedObj(obj) {
+  // ...
+}
+
+// 将一级对象转换成多层嵌套对象
+function nestedObj(obj) {
+  const result = {};
+  for (let p in obj) {
+    const paths = p.split(".");
+    let tmp = result;
+    for (let i = 0; i < paths.length; i++) {
+      let path = paths[i];
+      if (i == paths.length - 1) {
+        tmp[path] = obj[p];
+        continue;
+      }
+      if (!tmp.hasOwnProperty(path)) {
+        tmp[path] = {};
+      }
+      tmp = tmp[path];
+    }
+  }
+  return result;
+}
+
+
+汇总区间(双指针) https://juejin.cn/post/7074511045720539173
+一、题目描述：
+给定一个无重复元素的有序数组，返回恰好覆盖数组中所有数字的最小有序区间范围列表。
+输入： [0,1,2,4,5,7]
+输出： ["0->2","4->5","7"]
+function summaryRanges (nums) {
+  let ans = []
+  if (nums.length === 0) {
+    return ans
+  }
+  nums.push(2 ** 32)
+  let begin = nums[0]
+  let end = nums[0]
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[i] - nums[i - 1] === 1) {
+      end = nums[i]
+      continue
+    }
+    if (begin !== end) {
+      ans.push(begin + '->' + end)
+    } else {
+      ans.push(begin)
+    }
+    begin = nums[i]
+    end = nums[i]
+  }
+  return ans
+}
+
+
+一句话算法
+https://github.com/pwstrick/daily/blob/master/article/one/one.md
+
+12. 实现一个函数sum函数 https://juejin.cn/post/7020562888657993741
+实现一个函数sum函数满足以下规律
+sum(1, 2, 3).valueOf() // 6 
+sum(2, 3)(2).valueOf() // 7 
+sum(1)(2)(3)(4).valueOf() // 10
+sum(2)(4, 1)(2).valueOf() // 9
+
+
+const sum = (...args) => {
+  // 声明add函数，其实主要是缓存参数的作用
+  // 注意add调用完成还是会返回add函数本身，使其可以链式调用
+  const add = (...args2) => {
+    args = [ ...args, ...args2 ]
+    return add
+  }
+  // 求和计算
+  add.valueOf = () => args.reduce((ret, num) => ret + num, 0)
+
+  return add
+}
+
+// 测试
+console.log(sum(1, 2, 3).valueOf()) // 6
+console.log(sum(2, 3)(2).valueOf()) // 7
+console.log(sum(1)(2)(3)(4).valueOf()) // 10
+console.log(sum(2)(4, 1)(2).valueOf()) // 9
+
+js连续最多的字符 https://segmentfault.com/a/1190000040827579
+JavaScript获取字符串中连续出现次数最多的字符
+var str = 'aaaabcc4aa4ddcfceeeeeeeggg';
+function getStrMaxCount1(str){
+    var resultStr = '';
+    var resultCount = 0;
+    var i = 0;
+    var j = 0;
+    while(i < str.length){
+        let strStart = str[i];
+        // 不相等则说明 strStart 不再连续了
+        if(strStart != str[++j]){
+            let count = j - i;
+            console.log(`字符：${strStart}出现了：${count}次！`);
+            if(count > resultCount){
+                resultCount = count;
+                resultStr = strStart;
+            }
+            i = j;
+        }
+    }
+    return {
+        count: resultCount,
+        str: resultStr
+    };
+}
+// {count: 7, str: 'e'}
+console.log(getStrMaxCount1(str));

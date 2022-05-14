@@ -1,5 +1,5 @@
 手写源码
-https://juejin.cn/post/6860882844533653517
+https://juejin.cn/post/6860882844533653517 
 
 【腾讯精选50题】刷题打卡计划
 https://juejin.cn/post/7070483145883287588
@@ -221,7 +221,6 @@ function Parent(name) {
 Parent.prototype.eat = function () {
   console.log(this.name + ' is eating')
 }
-
 function Child(name, age) {
   Parent.call(this, name)
   this.age = age
@@ -543,13 +542,11 @@ console.log( Jack === Tom ); // true
 7 8 9
 复制代码
 通过交换matrix[i][j], matrix[j][i] 得到
-
 1 4 7
 2 5 8
 3 6 9
 复制代码
 最后将得到每组数组倒序排列即可
-
 7 4 1
 8 5 2
 9 6 3
@@ -584,12 +581,10 @@ var groupAnagrams = function(strs) {
 
 172. 阶乘中的零  https://juejin.cn/post/6989031479753834504
 示例 1:
-
 输入: 3
 输出: 0
 解释: 3! = 6, 尾数中没有零。
 示例 2:
-
 输入: 5
 输出: 1
 解释: 5! = 120, 尾数中有 1 个零.
@@ -641,11 +636,7 @@ Array.prototype.findSum = function (target) {
 }
 
 nums.findSum(4) // [ [ 1, 3 ], [ 2, 2 ], [ -2, 6 ] ]
-
-作者：MurphyChen
 链接：https://juejin.cn/post/7083520664442929166
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 三数之和
 https://101.zoo.team/shu-zu/shu-zu-part-4-zi-mi-fen-zu-san-shu-zhi-he-wu-zhong-fu-zi-fu-de-zui-chang-zi-chuan-ju-zhen-zhi-ling-h
@@ -701,18 +692,10 @@ let data = {
 }
 render(template, data); // 我是姓名，年龄18，性别undefined
 
-
 function render(template, data) {
   let computed = template.replace(/\{\{(\w+)\}\}/g, function (match, key) {
     return data[key];
   });
-  return computed;
-}
-
-function render1(template, data) {
-  let computed = template.replace(/\{\{(\w+)\}\}/g, function(match, key) {
-    return data[key]
-  })
   return computed;
 }
 

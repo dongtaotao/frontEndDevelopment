@@ -80,4 +80,15 @@ https://juejin.cn/post/7073121416605876237?utm_source=gold_browser_extension
 •分包加载
 
 小程序可以嵌套
-<web-view src="{{url}}"></web-view>
+<web-view src="{{url}}"></web-view> 
+
+
+从零开始搞监控系统（5）——小程序监控
+https://juejin.cn/post/7090746709147402276
+
+小程序异常监控收集
+https://developers.weixin.qq.com/community/develop/doc/000e46078b015804f6d6c2dc156006
+详解：如何监控小程序异常及处理错误？
+https://cloud.tencent.com/developer/article/1683396
+小程序错误异常监控方案
+https://www.wxapp-union.com/article-6184-1.html

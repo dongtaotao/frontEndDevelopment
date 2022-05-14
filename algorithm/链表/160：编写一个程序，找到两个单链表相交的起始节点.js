@@ -14,5 +14,5 @@ const getIntersectionNode = function(headA, headB) {
         if (headB.flag) return headB
         headB = headB.next
     }
-    return null
+    return null 
 };

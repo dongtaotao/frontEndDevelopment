@@ -135,7 +135,7 @@ pubSub.publish('SMS', 'I published `SMS` event');
 观察者模式
 class Subject {
    constructor() {
-       this.observers = [];
+       this.observers = [];   
    }
    add(observer) {
        this.observers.push(observer);

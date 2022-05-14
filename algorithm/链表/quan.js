@@ -101,7 +101,7 @@ var getKthFromEnd = function(head, k) {
   return slow
 };
 
-（3）反转链表
+（3）反转链表 
 var reverseList = function(head) {
   // 设置指针指向前驱节点和当前节点
   let pre = null
@@ -284,3 +284,4 @@ var reverseKGroup = function(head, k) {
   head.next = reverseKGroup(cur, k);
   return pre;
 };
+ 

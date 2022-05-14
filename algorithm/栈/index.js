@@ -41,11 +41,11 @@ push(5), pop() -> 5, pop() -> 3, pop() -> 2, pop() -> 1
   var stack = [];
   var j=0;//索引
   for (let cur of pushed) {
-      stack.push(cur); //存
-      while (stack[stack.length - 1] === popped[j] && stack.length > 0) { //匹配弹出
-          stack.pop();
-          j++;
-      }
+    stack.push(cur); //存
+    while (stack[stack.length - 1] === popped[j] && stack.length > 0) { //匹配弹出
+        stack.pop();
+        j++;
+    }
   }
   return !stack.length;
 };
@@ -120,13 +120,7 @@ function is_leagl_brackets(string){
 console.log(is_leagl_brackets('sdf(ds(ew(we)re)rwqw)qwrwq')) // true
 console.log(is_leagl_brackets('(sd(qwqe)sd(sd))')) // true
 console.log(is_leagl_brackets('()()sd()(sd()dw))(')) // false
-
-
-作者：十九万里
 链接：https://juejin.cn/post/7017693789942726670
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 
 栈的总结
 栈是一个后进先出的数据结构

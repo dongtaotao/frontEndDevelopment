@@ -23,7 +23,7 @@ function pop() {
   // write code here
   if (!outStack.length) {
     while (inStack.length) {
-      outStack.push(inStack.pop());
+      outStack.push(inStack.pop());  
     }
   }
   return outStack.pop();

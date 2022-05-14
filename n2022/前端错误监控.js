@@ -302,7 +302,7 @@ subresource可以用来指定资源是最高优先级的。当前页面需要，
 // </body>
 // </html>
 
-白屏时间 = firstPaint - pageStartTime
+白屏时间 = firstPaint - pageStartTime  
 
 
 
@@ -352,3 +352,94 @@ window.onerror = function(errorMessage, scriptURI, lineNo, columnNo, error) {
 };
 
 console.log(a);
+
+
+
+js异常
+总结 https://blog.csdn.net/sinat_17775997/article/details/115215082?spm=1001.2014.3001.5502
+可疑区域增加 try...catch
+全局监控JS异常： window.onerror
+全局监控静态资源异常： window.addEventListener
+全局捕获没有 catch 的 promise 异常：unhandledrejection
+iframe 异常：window.error
+VUE errorHandler 和 React componentDidCatch
+监控网页崩溃：window 对象的 load 和 beforeunload ，或者Service Worker 
+Script Error跨域 crossOrigin 解决
+
+一般情况，如果出现 Script error 这样的错误，基本上可以确定是出现了跨域问题。这时候，是不会有其他太多辅助信息的，但是解决思路无非如下：
+跨源资源共享机制( CORS )：我们为 script 标签添加 crossOrigin 属性。
+<script src="http://jartto.wang/main.js" crossorigin></script>
+或者动态去添加 js 脚本：
+
+const script = document.createElement('script');
+script.crossOrigin = 'anonymous';
+script.src = url;
+document.body.appendChild(script);
+
+
+十二、错误上报  http://jartto.wang/2018/11/20/js-exception-handling/
+1.通过 Ajax 发送数据
+因为 Ajax 请求本身也有可能会发生异常，而且有可能会引发跨域问题，一般情况下更推荐使用动态创建 img 标签的形式进行上报。
+
+2.动态创建 img 标签的形式
+function report(error) {
+  let reportUrl = 'http://jartto.wang/report';
+  new Image().src = `${reportUrl}?logs=${error}`;
+}
+
+十三、总结
+回到我们开头提出的那个问题，如何优雅的处理异常呢？
+
+1.可疑区域增加 Try-Catch
+2.全局监控 JS 异常 window.onerror
+3.全局监控静态资源异常 window.addEventListener
+4.捕获没有 Catch 的 Promise 异常：unhandledrejection
+5.VUE errorHandler 和 React componentDidCatch
+6.监控网页崩溃：window 对象的 load 和 beforeunload
+7.跨域 crossOrigin 解决 <script src="http://jartto.wang/main.js" crossorigin></script>
+
+一般情况，如果出现 Script error 这样的错误，基本上可以确定是出现了跨域问题。这时候，是不会有其他太多辅助信息的，但是解决思路无非如下：
+跨源资源共享机制( CORS )：我们为 script 标签添加 crossOrigin 属性。
+或者动态去添加 js 脚本：
+const script = document.createElement('script');
+script.crossOrigin = 'anonymous';
+script.src = url;
+document.body.appendChild(script);
+
+iframe 异常 也是用window.onerror
+
+十一、崩溃和卡顿
+1.利用 window 对象的 load 和 beforeunload 事件实现了网页崩溃的监控。不错的文章，推荐阅读：Logging Information on Browser Crashes。
+2.基于以下原因，我们可以使用 Service Worker 来实现网页崩溃的监控：
+
+Service Worker 有自己独立的工作线程，与网页区分开，网页崩溃了，Service Worker 一般情况下不会崩溃；Service Worker 
+生命周期一般要比网页还要长，可以用来监控网页的状态；网页可以通过 navigator.serviceWorker.controller.postMessage API
+ 向掌管自己的 SW 发送消息。
+
+很不错🔥🔥🐯 如何优雅处理前端异常？(史上最全前端异常处理方案) https://mp.weixin.qq.com/s/prf-mXexBh1Ie-ctq9FnzA  *******************************
+
+一文带你了解如何排查内存泄漏导致的页面卡顿现象 https://juejin.cn/post/6947841638118998029 🔥🔥
+
+
+前端搞监控|Allan - 如何实现一套多端错误监控平台 好
+https://zhuanlan.zhihu.com/p/158079491  好文章
+
+面试必问：前端性能监控Performance https://juejin.cn/post/7031572366341701663?utm_source=gold_browser_extension 🔥好文章
+
+
+前端监控  珠峰架构
+https://www.bilibili.com/video/BV19a411A72Y?p=1
+
+万字前端效率大提速系列 🚀 ：十、前端错误监控、数据监控专题
+https://juejin.cn/post/7086378709560590343
+
+一篇讲透自研的前端错误监控
+https://juejin.cn/post/6987681953424080926
+
+来，跟我一起 ，自研多端错误监控平台（完整版） 🔥 es查询数据
+https://juejin.cn/post/6844904202917904391
+SDK 小结
+我们用一句话对 SDK 进行小结:
+监听 / 劫持 原始方法，获取需要上报的数据，在错误发生时 触发 函数使用 gif 上报。
+为了方便记忆，提炼 3 个关键词：劫持、原始方法、gif！（如果你还记不住，那也别打我）
+从 ES 中获取数据非常简单，ES 底层是基于 Lucene 的搜索服务器的，它提供了一个分布式多用户能力的全文搜索引擎，基于 RESTful web 接口。所以我们前端开发只需要想平时开发业务调用接口一样去调用就可以了。

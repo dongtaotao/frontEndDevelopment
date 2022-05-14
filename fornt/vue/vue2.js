@@ -9,6 +9,9 @@ max 指定最多可缓存组件的数量,超过数量删除第一个。参数格
 
 keep-alive实例会缓存对应组件的VNode,如果命中缓存，直接从缓存对象返回对应VNode
 
+2021 Vue.js 面试题汇总及答案
+https://jackniu81.github.io/2021/04/12/Vue-js-Interview-Questions-and-Answers-2021/
+
 LRU（Least recently used） 算法根据数据的历史访问记录来进行淘汰数据，其核心思想是“如果数据最近被访问过，那么将来被访问的几率也更高”。
 (墨菲定律：越担心的事情越会发生)
 https://leetcode-cn.com/problems/lru-cache/%EF%BC%8C%E8%80%83keep-alive%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%B6%E5%80%99%E5%96%9C%E6%AC%A2%E9%97%AE/
@@ -47,16 +50,16 @@ Vue 如何清除浏览器缓存？
 在 html 文件中加入 meta 标签，content属性设置为no-cache; 在后端服务器中进行禁止缓存设置。
 
 50 说一下v-model的原理
-v-model本质就是一个语法糖，可以看成是value + input方法的语法糖。 可以通过model属性的prop和event属性来进行自定义。原生的v-model，会根据标签的
-不同生成不同的事件和属性
+v-model本质就是一个语法糖，可以看成是value + input方法的语法糖。 可以通过model属性的prop和event属性来进行自定义。原生的v-model，
+会根据标签的不同生成不同的事件和属性
 
-<input v-model='searchData'>
+{/* <input v-model='searchData'> */}
 等价于
 
-<input 
+{/* <input 
 	v-bind:value = 'searchData'
 	v-on:input = 'searchData = $event.target.value' 
->
+> */}
 当在input元素中使用v-model实现双数据绑定，其实就是在输入的时候触发元素的input事件，通过这个语法糖，实现了数据的双向绑定
 
 
@@ -81,11 +84,99 @@ React是pull的方式侦测变化,当React知道发生变化后,会使用Virtual
 Vue是pull+push的方式侦测变化的,在一开始就知道那个组件发生了变化,因此在push的阶段并不需要手动控制diff,
 而组件内部采用的diff方式实际上是可以引入类似于shouldComponentUpdate相关生命周期的,但是通常合理大小的组件不会有过量的diff,
 手动优化的价值有限,因此目前Vue并没有考虑引入shouldComponentUpdate这种手动优化的生命周期
-
-作者：奶油小泡芙
 链接：https://juejin.cn/post/7083444395747311630
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 Vue2（3）全家桶+TS
 https://juejin.cn/column/7054086173311893512
+
+watch可以监听computed中的属性
+
+vue的nextTick原理
+
+nextTick理解
+因为vue更新dom是一个异步操作，并不是数据变化会马上更新，会进入一个异步队列，等全部数据变化之后才渲染页面。因此要基于新的DOM操作时，需要用到这个函数。
+
+10插槽
+让父组件给子组件指定位置插入html结构，子组件利用solt决定位置。
+
+36. Vue的性能优化有哪些
+（1）编码阶段
+
+尽量减少data中的数据，data中的数据都会增加getter和setter，会收集对应的watcher
+v-if和v-for不能连用
+如果需要使用v-for给每项元素绑定事件时使用事件代理
+SPA 页面采用keep-alive缓存组件
+在更多的情况下，使用v-if替代v-show
+key保证唯一
+使用路由懒加载、异步组件
+防抖、节流
+第三方模块按需导入
+长列表滚动到可视区域动态加载
+图片懒加载
+
+（2）SEO优化
+
+预渲染
+服务端渲染SSR
+
+（3）打包优化
+
+压缩代码
+Tree Shaking/Scope Hoisting
+使用cdn加载第三方模块
+多线程打包happypack
+splitChunks抽离公共文件
+sourceMap优化
+
+（4）用户体验
+
+骨架屏
+PWA
+还可以使用缓存(客户端缓存、服务端缓存)优化、服务端开启gzip压缩等。
+
+作者：CUGGZ
+链接：https://juejin.cn/post/6919373017218809864
+来源：稀土掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+
+https://jackniu81.github.io/2021/04/12/Vue-js-Interview-Questions-and-Answers-2021/
+
+Vue.js 双向绑定的原理
+Vue.js 2.0 采用数据劫持（Proxy 模式）结合发布者-订阅者模式（PubSub 模式）的方式，通过 Object.defineProperty()来劫持各个属性的 setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。
+每个组件实例都有相应的watcher程序实例，它会在组件渲染的过程中把属性记录为依赖，
+之后当依赖项的setter被调用时，会通知watcher重新计算，从而致使它关联的组件得以更新。
+Vue.js 3.0, 放弃了Object.defineProperty ，使用更快的ES6原生 Proxy (访问对象拦截器, 也称代理器)
+步骤：
+
+需要observe的数据对象进行递归遍历，包括子属性对象的属性，都加上setter和getter这样的话，
+  给这个对象的某个值赋值，就会触发setter，那么就能监听到了数据变化
+compile解析模板指令，将模板中的变量替换成数据，然后初始化渲染页面视图，
+  并将每个指令对应的节点绑定更新函数，添加监听数据的订阅者，一旦数据有变动，收到通知，更新视图
+Watcher订阅者是Observer和Compile之间通信的桥梁，主要做的事情是: 
+  ①在自身实例化时往属性订阅器(dep)里面添加自己 ②自身必须有一个update()方法 
+  ③待属性变动dep.notice()通知时，能调用自身的update()方法，并触发Compile中绑定的回调，则功成身退。
+MVVM作为数据绑定的入口，整合Observer、Compile和Watcher三者，通过Observer来监听自己的model数据变化，
+通过Compile来解析编译模板指令，最终利用Watcher搭起Observer和Compile之间的通信桥梁，
+达到数据变化 -> 视图更新；视图交互变化(input) -> 数据model变更的双向绑定效果。
+
+Vue data 中某一个属性的值发生改变后，视图会立即同步执行重新渲染吗？
+不会立即同步执行重新渲染。
+Vue 实现响应式并不是数据发生变化之后 DOM 立即变化，而是按一定的策略进行 DOM 的更新。
+Vue 在更新 DOM 时是异步执行的。只要侦听到数据变化， Vue 将开启一个队列，并缓冲在同一事件循环中发生的所有数据变更。
+如果同一个watcher被多次触发，只会被推入到队列中一次。这种在缓冲时去除重复数据对于避免不必要的计算和 DOM 操作是非常重要的。
+然后，在下一个的事件循环”tick”中，Vue 刷新队列并执行实际（已去重的）工作。
+
+
+批量异步更新策略
+Vue 在修改数据后，视图不会立刻更新，而是等同一事件循环中的所有数据变化完成之后，再统一进行视图更新。
+换句话说，只要观察到数据变化，就会自动开启一个队列，并缓冲在同一个事件循环中发生的所有数据改变。在缓冲时会去除重复数据，从而避免不必要的计算和 DOM 操作。
+
+vue 的 nextTick 方法的实现原理
+vue 用异步队列的方式来控制 DOM 更新和 nextTick 回调先后执行
+microtask 因为其高优先级特性，能确保队列中的微任务在一次事件循环前被执行完毕
+
+vue-router有哪几种导航钩子？
+全局导航钩子：router.beforeEach(to,from,next)
+组件内的钩子beforeRouteEnter (to, from, next) beforeRouteUpdate (to, from, next) beforeRouteLeave (to, from, next)
+单独路由独享组件 beforeEnter: (to, from, next)

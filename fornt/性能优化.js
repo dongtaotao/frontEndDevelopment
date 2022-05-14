@@ -1,7 +1,7 @@
 
 RN性能优化 https://juejin.cn/post/6844904041290432525
 
-「react进阶」年终送给react开发者的八条优化建议(篇幅较长，占用20-30分钟)
+「react进阶」年终送给react开发者的八条优化建议(篇幅较长，占用20-30分钟) 
 https://juejin.cn/post/6908895801116721160
 
 21 个 React 性能优化技巧
@@ -24,10 +24,9 @@ react性能优化思路
 
 1.路由懒加载  react-loadable 避免首页加载很多页面导致包提及变大，使首页加快渲染
 2.组件异步加载 延迟加载不是立即需要的组件 React.Lazy和React.Suspense
-3.shouldComponentUpdate ,PureComponent 和 React.memo , React.useMemo,  React.useCallback， immetable.js 助力性能调优 以避免不必要的
-   render 调用
+3.shouldComponentUpdate ,PureComponent 和 React.memo , React.useMemo,  React.useCallback， immetable.js以避免不必要的render 调用
    使用React.Memo来缓存组件 使用useMemo缓存大量的计算
-4. 学会使用的批量更新 合并state 合并状态更新 避免重复渲染 避免频繁地去setState，多个setState合并成一个
+4.学会使用的批量更新 合并state 合并状态更新 避免重复渲染 避免频繁地去setState，多个setState合并成一个
 5.虚拟列表 长列表优化  虚拟化长列表：只加载可视范围内的数据。当网站需要加载大批量数据（成千上万）时，会加载特别慢。
   这个时候我们可以使用“虚拟滚动”技术（react-window或者react-virtualized），只渲染当前屏幕范围内的数据。
   虚拟列表
@@ -37,6 +36,8 @@ react性能优化思路
     可以关注下放两个比较常用的类库来进行深入了解
     react-virtualized
     react-window
+    「前端进阶」高性能渲染十万条数据(虚拟列表)
+    https://juejin.cn/post/6844903982742110216
 6.如果页面图片比较多，使用react-lazyload插件 图片懒加载, 图片上云 cdn
 7.学会使用redux数据共享。mobx。避免重复请求相同的数据，跨组建间共享数据
 8.不可变数据-immutable
@@ -49,7 +50,7 @@ react性能优化思路
    2. React Devtools的Profiler工具分析；
    通过React.Profiler组件包裹需要分析渲染时间的组件（不适合生产环境）。
 14.key优化 防止用index做key 用唯一id作为key
-// 15.减少组件嵌套 有很多种方式来代替高阶组件/RenderProps，例如优先使用 props、React Hooks.
+// 15.减少组件嵌套 有很多种方式来代替，高阶组件/RenderProps，例如优先使用 props、React Hooks.
 16.合理使用Context Context 提供了一个无需为每层组件手动添加 props，就能在组件树间进行数据传递的方法。正是因为其这个特点它是可以穿透
     React.memo或者shouldComponentUpdate的比对的，也就是说，一旦 Context 的 Value 变动，所有依赖该 Context 的组件会全部
 17.尽量少用不可控的refs、DOM操作。
@@ -118,7 +119,7 @@ Webpack 打包的结果体积太大  优化产出代码—产品性能
 //   2.1 babel-loader  以 babel-loader 为例，可以通过 include 和 exclude 帮助我们避免 node_modules 这类庞大文件夹。
   2.3 可视化分析 speed-measure-webpack-plugin：测量出在构建过程中，每一个 Loader 和 Plugin 的执行时长。
       webpack-bundle-analyzer：通过矩阵树图的方式将包内各个模块的大小和依赖关系呈现出来。
-  2.4 缓存  (开启缓存，明确范围)
+  2.4 缓存  (开启缓存，明确范围) 提升二次构建速度
   cache-loader 在 babel-loader 开启 cache 后，将 loader 的编译结果写进硬盘缓存，再次构建如果文件没有发生变化则会直接拉取缓存。
 3. 多进程编译文件 HappyPack(不维护了)thread-loader
    Happypack 可以将任务分解成多个子进程去并发执行，大大提升打包效率。
@@ -247,7 +248,7 @@ Tree Shaking/Scope Hoisting
 splitChunks抽离公共文件
 sourceMap优化
 用户体验
-骨架屏
+骨架屏 draw-page-structure
 PWA
 还可以使用缓存(客户端缓存、服务端缓存)优化、服务端开启gzip压缩等。
 链接：https://juejin.cn/post/6989422484722286600
@@ -275,3 +276,9 @@ SPA项目，通过import或者require做路由按需（减小资源大小）
 
 作者：河畔一角
 链接：https://juejin.cn/post/6844904142289256461
+
+服务端渲染与客户端渲染 优缺点
+https://www.csdn.net/tags/NtzakgwsODExOTMtYmxvZwO0O0OO0O0O.html
+
+Vue项目性能优化
+https://blog.csdn.net/sinat_17775997/article/details/107492421

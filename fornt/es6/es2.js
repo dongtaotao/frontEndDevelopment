@@ -393,8 +393,8 @@ async function fn(){
 
 ES6 Reflect 对象 上ES6位了操作对象而提供的心API https://www.bilibili.com/video/BV1Su411979o?p=1
 1.把object对象的一些方法放到Reflect对象上面
-2修改某些object方法的返回结果，让其变得更合理
-3Reflect一共有十三个静态方法
+2.修改某些object方法的返回结果，让其变得更合理
+3.Reflect一共有十三个静态方法
 
 了解学习 Proxy 的好朋友 - Reflect，为什么需要 Reflect
 https://juejin.cn/post/6970893008778559495

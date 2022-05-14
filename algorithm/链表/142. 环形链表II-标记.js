@@ -48,7 +48,7 @@ var detectCycle = function(head) {
       head = head.next
     }
   }
-  return null;
+  return null; 
 }
 
 var detectCycle = function(head) {

@@ -57,4 +57,4 @@ JsBridge基本原理与封装
 https://www.cnblogs.com/zhangnan35/p/14620825.html
 
 JsBridge的异步不执行的处理--promise异步变同步
-https://www.cnblogs.com/leiting/p/9897759.html
+https://www.cnblogs.com/leiting/p/9897759.html  

@@ -15,7 +15,7 @@ https://cloud.tencent.com/developer/article/1431882
 请求签名，防止参数被篡改
 身份确认机制，每次请求都要验证是否合法
 APP中使用ssl pinning防止抓包操作
-对所有请求和响应都进行加解密操作
+对所有请求和响应都进行加解密操作 
 
 
 前端sign签名 **************************************************************
@@ -35,7 +35,6 @@ let results = await Promise.all(arr.map(async (item) => {
     // 等待异步操作完成，返回执行结果
     return await asyncWorker(item);
 }));
- 
 js在数组map时使用异步 https://blog.csdn.net/kuilaurence/article/details/117931829
 
 
@@ -82,7 +81,8 @@ Token和Jwt存在什么区别 https://www.jianshu.com/p/7598a5e9220e https://www
 token需要查库验证token 是否有效，而JWT不用查库或者少查库，直接在服务端进行校验，并且不用查库
 
 Token和Jwt的区别 https://www.csdn.net/tags/MtTaYg5sMzUyNjktYmxvZwO0O0OO0O0O.html
-Token需要查库验证token 是否有效，而JWT不用查库，直接在服务端进行校验,因为用户的信息及加密信息,和过期时间,都在JWT里，只要在服务端进行校验就行，并且校验也是JWT自己实现的。
+Token需要查库验证token 是否有效，而JWT不用查库，直接在服务端进行校验,因为用户的信息及加密信息,和过期时间,
+都在JWT里，只要在服务端进行校验就行，并且校验也是JWT自己实现的。
 
 https://juejin.cn/post/6896810576778166280
 节流表示的是不一直触发，一定时间触发一次，常用在滑动滚动或者视窗大小变化的控制
@@ -214,6 +214,8 @@ google 有哪些监控网页卡顿的方法 ************************************
 如何监控网页的卡顿？ https://zhuanlan.zhihu.com/p/39292837
 如何监控网页崩溃？https://zhuanlan.zhihu.com/p/40273861
 如何监控网页卡顿和崩溃？ https://www.daimajiaoliu.com/daima/56a0465aad5b801
+前端崩溃监控  https://www.jackpu.com/web-qian-duan-crash-jian-kong-you-hua-li-cheng/
+https://blog.csdn.net/sinat_17775997/article/details/124649834?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22124649834%22%2C%22source%22%3A%22sinat_17775997%22%7D&ctrtid=NLHCH
 5.如何监控网页崩溃？
 基于 Service Worker 的崩溃统计方案
 随着 PWA 概念的流行，大家对 Service Worker 也逐渐熟悉起来。基于以下原因，我们可以使用 Service Worker 来实现网页崩溃的监控：
@@ -228,6 +230,9 @@ p2：网页在beforeunload时，通过postMessageAPI 告知自己已经正常关
 p3：如果网页在运行的过程中 crash 了，sw 中的running状态将不会被清除，更新时间停留在奔溃前的最后一次心跳；
 sw：Service Worker 每10s查看一遍登记中的网页，发现登记时间已经超出了一定时间（比如 15s）即可判定该网页 crash 了。
 链接：https://juejin.cn/post/6844904129031045128
+
+简单地说就是一种心跳检测机制，在页面的脚本中创建Service Worker工作线程，然后定时地向该线程发送消息，即使网页奔溃了，线程还能存活。 https://juejin.cn/post/7090747729965498381
+
 
 2. 有哪些监控网页卡顿的方法？
 https://juejin.cn/post/6844904034411741191

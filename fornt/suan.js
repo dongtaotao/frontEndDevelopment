@@ -84,7 +84,7 @@ var reverseList = function(head) {
       p2 = p1
       p1 = temp
   }
-  return p2
+  return p2 
 };
 
 3. 两数相加
@@ -854,15 +854,15 @@ const containsDuplicate = function (nums) {
   let result = list
   let arr = []//用来存放所有的节点值
   while (head) {
-      arr.push(head.val)
-      head = head.next
+    arr.push(head.val)
+    head = head.next
   }
   arr.sort(function (a, b) {
-      return a - b
+    return a - b
   })
   for (let i = 0; i < arr.length; i++) {
-      result.next.val = arr[i]
-      result = result.next
+    result.next.val = arr[i]
+    result = result.next
   }
   return list.next
 };

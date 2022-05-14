@@ -43,5 +43,5 @@ var a = function(nums) {
         max = Math.max(sum, max)
     }
 
-    return max
+    return max 
 }

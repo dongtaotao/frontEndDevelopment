@@ -109,8 +109,207 @@ InfoQ：请您展开说说相比于 React Native 框架，Flutter 的优势是�
 React.memo React.PureComponent React.useMemo 和 React.useCallback
 React Fragments
 FlatList：使用 VirtualizedList，
-useNativeDrive: true 开启原生动画驱动。
+useNativeDrive: true 开启原生动画驱动。  
 
 react-devtools 
 
 
+【React Native】深入理解Native与RN通信原理 https://blog.csdn.net/weixin_36185028/article/details/121579850
+
+https://cloud.tencent.com/developer/article/1113848
+
+NativeModules
+native调用js  js调用naitve
+
+
+RN系列：Android原生与RN如何交互通信
+https://www.jianshu.com/p/79edec250158 🔥🔥🔥🔥🔥🔥🔥
+
+方法调用
+RN通信原理简单地讲就是，一方native（java）将其部分方法注册成一个映射表，另一方（js）再在这个映射表中查找并调用相应的方法，而Bridge担当两者间桥接的角色。
+其实方法调用大致分为2种情况：
+
+Android主动向JS端传递事件、数据
+JS端主动向Android询问获取事件、数据
+RN调用Android需要module名和方法名相同，而Android调用RN只需要方法名相同。
+（1）RCTDeviceEventEmitter 事件方式
+​ 优点：可任意时刻传递，Native主导控制。
+（2）Callback 回调方式
+​ 优点：JS调用，Native返回。
+​ 缺点：CallBack为异步操作，返回时机不确定
+（3）Promise
+​ 优点：JS调用，Native返回。
+​ 缺点：每次使用需要JS调用一次
+（4）直传常量数据（原生向RN）
+​ 跨域传值，只能从原生端向RN端传递。RN端可通过 NativeModules.[module名].[参数名] 的方式获取。
+
+1.原生调用RN
+下面是RCTDeviceEventEmitter事件的简单事例，稍后封装下更方便与原生的通信交互。
+public class EventEmitter {
+  private static final String TAG = "EventEmitter";
+// 在ReactPackage中的createNativeModules()初始化,RNEventEmitter.setReactContext(reactContext);
+  private static ReactApplicationContext mReactContext;
+
+  public static void setReactContext(ReactApplicationContext mReactContext) {
+      RNEventEmitter.mReactContext = mReactContext;
+  }
+  /**
+   * 显示RN中loading
+   * @param data show:显示，false:隐藏
+ */
+public static void showLoading(boolean show) {
+    sendEventToRn("showloading", show);
+}
+public static void sendEventToRn(String eventName, Object msg) {
+    if (mReactContext == null) {
+        Log.e(TAG, "ReactContext is null");
+        return;
+    }
+    mReactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+          .emit(eventName,msg);
+  }
+}
+RN中接收原生消息：
+ /**
+  * 接收原生调用
+  */
+  componentDidMount() {
+    DeviceEventEmitter.addListener('showLoading',(msg)=>{
+         ToastAndroid.show("发送成功"+msg, ToastAndroid.SHORT);
+    })
+    //通过DeviceEventEmitter注册监听，类似于Android中的监听事件。第一个参数标识名称，要与Module中emit的Event Name相同。第二个参数即为处理回调时间。
+  }
+
+
+
+  RN调用原生
+  'use strict';
+
+  import React, { Component } from 'react';
+  import {
+    AppRegistry,
+    StyleSheet,
+    Text,
+    NativeModules,
+    View,
+    ToastAndroid,
+    DeviceEventEmitter
+  } from 'react-native';
+  
+  let title = 'React Native界面';
+  
+  class reactNative extends Component {
+  
+      /**加载完成*/
+      componentWillMount() {
+        let result = NativeModules.MyNativeModule.Constant;
+        console.log('原生端返回的常量值为：' + result);
+      }
+  
+     /**
+      * 原生调用RN
+      */
+     componentDidMount() {
+         DeviceEventEmitter.addListener('nativeCallRn',(msg)=>{
+              title = "React Native界面,收到数据：" + msg;
+              ToastAndroid.show("发送成功", ToastAndroid.SHORT);
+         })
+     }
+  
+    /**
+     * RN调用Native且通过Callback回调 通信方式
+     */
+     callbackComm(msg) {
+         NativeModules.MyNativeModule.rnCallNativeFromCallback(msg,(result) => {
+         ToastAndroid.show("CallBack收到消息:" + result, ToastAndroid.SHORT);
+      })
+     }
+  
+     /**
+      * RN调用Native且通过Promise回调 通信方式
+      */
+     promiseComm(msg) {
+         NativeModules.MyNativeModule.rnCallNativeFromPromise(msg).then(
+          (result) =>{
+              ToastAndroid.show("Promise收到消息:" + result, ToastAndroid.SHORT)
+          }
+      ).catch((error) =>{console.log(error)});
+  }
+  
+    /**
+     * 调用原生代码
+     */
+     call_button(){
+            NativeModules.MyNativeModule.rnCallNative('调用原生方法操作');
+     }
+  
+    callNative(){
+         NativeModules.MyNativeModule.startActivityRN('com.liujc.rnappdemo.MyRNActivity','test');
+    }
+  
+   render() {
+        return ( 
+      <View style={styles.container}>
+            <Text style={styles.welcome} >
+             {title}
+            </Text>
+  
+            <Text style={styles.welcome}
+            onPress={this.call_button.bind(this)}
+            >
+              React Native 调用原生方法操作!
+            </Text>
+  
+           <Text style={styles.welcome}
+                  //给此处的文字绑定一个事件，其中callNative为要调用的方法名。
+                    onPress={this.callNative.bind(this)}>
+                    跳转MyRNActivity!
+            </Text>
+  
+           <Text style={styles.welcome} onPress={this.callbackComm.bind(this,'callback发送啦')}>
+              Callback通信方式
+           </Text>
+           <Text style={styles.welcome} onPress={this.promiseComm.bind(this,'promise发送啦')}>
+              Promise通信方式
+           </Text>
+       </View>
+      );
+     }
+  }
+  
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#F5FCFF',
+    },
+    welcome: {
+      fontSize: 20,
+      textAlign: 'center',
+      margin: 10,
+    },
+    instructions: {
+      textAlign: 'center',
+      color: '#333333',
+      marginBottom: 5,
+    },
+  });
+  
+  AppRegistry.registerComponent('reactNative', () => reactNative);
+  
+
+
+React Native 与原生平台的通信原理
+• React Native 平台调用原生平台基于 NativeModules， 调用的方法是 NativeModules.
+模块名称.接口名称。
+· 原生平台返回数据到 React Native 平台基于回调 ， 回调的原型定义是 RCTResponse
+SenderBlock (iOS平台)和 com.facebook.react.bridge.Callback (Android平台)。
+
+React Native 平台调用原生页面
+RN调用react UI requireNativeComponent
+
+
+原生平台调用React Native组件
+RN需要注册根组件  native运行注册过的根组件
+https://blog.csdn.net/kangguang/article/details/78307342

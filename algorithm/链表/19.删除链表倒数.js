@@ -16,7 +16,7 @@ const removeNthFromEnd = function(head, n){
   return dummy.next
 }
 
-奇偶链表
+奇偶链表 
 输入: 1->2->3->4->5->NULL
 输出: 1->3->5->2->4->NULL
 var oddEvenList = function(head) {

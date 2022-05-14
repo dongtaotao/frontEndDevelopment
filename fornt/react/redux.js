@@ -24,15 +24,11 @@ createStore(reducer, applyMiddleware(
 如果注册多个中间件，中间件的执行顺序就是注册顺序：
 // 先执行logger中间件，再执行test中间件
 createStore(reducer, applyMiddleware(
-    logger,
-    test
-  ))
+  logger,
+  test
+))
   
-
-作者：云牧
 链接：https://juejin.cn/post/7063073677520142366
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 
 30张图全面剖析React Hooks

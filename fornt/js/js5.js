@@ -12,12 +12,12 @@ function json(src) {
 // 接口返回的数据格式
 handleRes({a: 1, b: 2});
 
-2）JSONP
+2）JSONP  // https://www.imooc.com/learn/1289   🔥🔥🔥实战
 jsonp的原理就是利用<script>标签没有跨域限制，通过<script>标签src属性，
   发送带有callback参数的GET请求，服务端将接口返回数据拼凑到callback函数中，
   返回给浏览器，浏览器解析执行，从而前端拿到callback函数返回的数据。
 1）原生JS实现：
-<script>
+{/* <script> */}
     var script = document.createElement('script');
     script.type = 'text/javascript';
     // 传参一个回调函数名给后端，方便后端返回时执行这个在前端定义的回调函数
@@ -27,7 +27,7 @@ jsonp的原理就是利用<script>标签没有跨域限制，通过<script>标�
     function handleCallback(res) {
         alert(JSON.stringify(res));
     }
- </script>
+ {/* </script> */}
 复制代码
 服务端返回如下（返回时即执行全局函数）：
 handleCallback({"success": true, "user": "admin"})
@@ -114,18 +114,15 @@ dbs(tree)
 const createStore = (initState) => {
 	let state = initState;
 	let listeners = [];
-
 	// 订阅函数
 	function subscribe(fn) {
 		listeners.push(fn)
 	}
-
 	function dispatch() {
 		for(let i =0; i< listeners.length; i++) {
 			listeners[i]()
 		}
 	}
-
 	function getState() {
 		return state;
 	}
@@ -455,7 +452,8 @@ Vue.config.errorHandler = function (err) {
   // 逻辑处理
 };
 
-Node 的 Event Loop: 6个阶段
+Node事件循环
+Node的 Event Loop: 6个阶段
 1.timer 阶段: 执行到期的setTimeout / setInterval队列回调
 2.I/O 阶段: 执行上轮循环残流的callback
 3.idle, prepare
@@ -475,7 +473,7 @@ js中不同进制怎么转换
 其他进制转成10进制：Number.parseInt("1101110",[2,8,10,16])
 其他进制互转：先将其他进制转成 10 进制，在把 10 进制转成其他进制 
 链接：https://juejin.cn/post/6844904070579240974
- 
+
 观察者模式  发布-订阅模式 的区别
 两者都是订阅-通知的模式，区别在于：
 观察者模式：观察者和订阅者是互相知道彼此的，是一个紧耦合的设计

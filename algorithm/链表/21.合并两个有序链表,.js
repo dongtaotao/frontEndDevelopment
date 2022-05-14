@@ -5,7 +5,7 @@
 示例：
 
 输入：1->2->4, 1->3->4
-输出：1->1->2->3->4->4
+输出：1->1->2->3->4->4 
 复制代码
 
 function mergeTwoLists(l1, l2) {
@@ -51,8 +51,6 @@ function a (l1, l2) {
 
 作者：前端瓶子君
 链接：https://juejin.im/post/6844904122496319495
-来源：掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 
 合并K个升序链表
@@ -86,7 +84,7 @@ var mergeTwoLists = function(list1, list2) {
 var mergeKLists = function(lists) {
    let result = null
    for(let i = 0;i < lists.length ; i++){
-       result = mergeTwoLists(result , lists[i])
+      result = mergeTwoLists(result , lists[i])
    }
    return result
 };

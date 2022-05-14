@@ -77,7 +77,7 @@ borderer-box：当改变padding或者border，整个盒子的大小不会变，�
 选着这个属性
 inherit: 会继承父类的box-sizing属性
 //============================================================================
-event.currentTarget( ) 会返回当前触发事件的元素；而event.target( ) 会返回触发事件触发的源头元素。
+event.currentTarget( ) 会返回当前触发事件的元素绑定元素；而event.target( ) 会返回触发事件触发的源头元素。
 
 //===========================================================================
 const curry = (fn, ...args) =>
@@ -199,7 +199,7 @@ BigInt是一种新的数据类型，用于当整数值大于Number数据类型�
 这导致JS中的Number无法精确表示非常大的整数，它会将非常大的整数四舍五入，确切地说，JS中的
 Number类型只能安全地表示-9007199254740991(-(2^53-1))和9007199254740991（(2^53-1)），任何超出此范围的整数值都可能失去精度。
 console.log(999999999999999); //=>10000000000000000
-复制代码
+
 同时也会有一定的安全性问题:
 9007199254740992 === 900719925
 如何创建并使用BigInt？
@@ -214,7 +214,7 @@ typeof '1' // 'string'
 typeof undefined // 'undefined'
 typeof true // 'boolean'
 typeof Symbol() // 'symbol'
-复制代码
+
 但对于引用数据类型，除了函数之外，都会显示"object"。
 typeof [] // 'object'
 typeof {} // 'object'
@@ -243,7 +243,6 @@ const trim = (str) => {
 
 新数组 = 原数组.slice(开始位置的索引, 结束位置的索引); 
 //注意：包含开始索引，不包含结束索引，即[a,b)
-复制代码
 举例：
 const arr = ['a', 'b', 'c', 'd', 'e', 'f'];
 arr.slice(); // 无参数时，截取所有的元素。
@@ -298,5 +297,6 @@ IndexedDB是HTML5规范里新出现的浏览器里内置的数据库。对于在
 includes可以检测NaN，indexOf不能检测NaN，includes内部使用了Number.isNaN对NaN进行了匹配
 
 Vue 如何清除浏览器缓存？
-项目打包的时候给每个打包文件加上 hash 值，一般是在文件后面加上时间戳； 在 html 文件中加入 meta 标签，content 
-属性设置为no-cache; 在后端服务器中进行禁止缓存设置。 
+项目打包的时候给每个打包文件加上 hash 值，一般是在文件后面加上时间戳；
+在 html 文件中加入 meta 标签，content 属性设置为no-cache;
+在后端服务器中进行禁止缓存设置。 

@@ -62,7 +62,7 @@ No.4 反转链表
 输入: 1->2->3->4->5->NULL
 输出: 5->4->3->2->1->NULL
 
-var reverseList = function(head) {
+var reverseList = function(head) { 
   let prev = null,cur = head,temp
   while(cur){
     temp = cur.next; // 修改前先保存下一个节点

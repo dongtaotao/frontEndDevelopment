@@ -11,17 +11,16 @@ window.postMessage这个方法可以实现跨域：就是将该窗口的访问�
 //================================================================
 单例模式
 class Person {
-     constructor(name) {
-       this.name = name;
-       this.p = null
-     }
-​
-     static instance(name) {
-       if (!this.p) {
-         this.p = new Person(name)
-       }
-       return this.p
-     }
+  constructor(name) {
+    this.name = name;
+    this.p = null
+  }
+  static instance(name) {
+    if (!this.p) {
+      this.p = new Person(name)
+    }
+    return this.p
+  }
 }
 //=================================================================
 7.聊聊 redux-thunk 是如何实现异步 action 的？
@@ -93,16 +92,16 @@ Array.slice() 与 Array.splice() 的区别？
 slice
 “读取”数组指定的元素，不会对原数组进行修改
 
-语法：arr.slice(start, end)
-start 指定选取开始位置（含）
-end 指定选取结束位置（不含）
-splice
+  语法：arr.slice(start, end)
+  start 指定选取开始位置（含）
+  end 指定选取结束位置（不含）
+  splice
 
 “操作”数组指定的元素，会修改原数组，返回被删除的元素
-语法：arr.splice(index, count, [insert Elements])
-index 是操作的起始位置
-count = 0 插入元素，count > 0 删除元素
-[insert Elements] 向数组新插入的元素
+  语法：arr.splice(index, count, [insert Elements])
+  index 是操作的起始位置
+  count = 0 插入元素，count > 0 删除元素
+  [insert Elements] 向数组新插入的元素
 
 //================================================================
 标记清除

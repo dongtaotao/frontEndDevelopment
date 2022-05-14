@@ -14,7 +14,7 @@ https://juejin.cn/post/6996841019094335519#heading-39
 创建一个新的空对象 obj
 将新对象的的原型指向当前函数的原型
 新创建的对象绑定到当前this上
-如果没有返回其他对象，就返回 obj，否则返回其他对象
+如果没有返回其他对象，就返回 obj，否则返回其他对象 
 function _new(constructor, ...arg) {
     // ① 创建一个新的空对象 obj
     const obj = {};
@@ -93,10 +93,10 @@ class Promise {
     switch (this.state) {
       case 'fulfilled':
         onFulfilled(this.value)
-        break
+        break;
       case 'rejected':
         onRejected(this.reason)
-        break
+        break;
       default:
     }
   }
@@ -318,7 +318,7 @@ Array.myIsArray = function(o) {
 };
 console.log(Array.myIsArray([])); // true
 
-function jsonp(url, jsonpCallback, success) {
+function jsonp(url, Callback, success) {
   const script = document.createElement('script')
   script.src = url
   script.async = true
@@ -677,19 +677,19 @@ render(template, person); // 我是布兰，年龄12，性别undefined
 算法题：将对象的属性全部提升到第一层。 https://juejin.cn/post/7017655711291146253
 function transfor(obj,stack,result) {
   for(let key in obj) {
-      if(parseInt(key).toString() == 'NaN') {
-          stack.push(key);
-      } else {  
-          stack.push(`[${key}]`);
-      }
-      if(typeof obj[key] == 'object' && obj[key] !== null) {
-          transfor(obj[key],stack,result);
-      } else {
-          let stackStr = stack.join('.');
-          console.log(result)
-          result[stackStr] = obj[key];
-          stack.pop();
-      }
+    if(parseInt(key).toString() == 'NaN') {
+        stack.push(key);
+    } else {  
+        stack.push(`[${key}]`);
+    }
+    if(typeof obj[key] == 'object' && obj[key] !== null) {
+        transfor(obj[key],stack,result);
+    } else {
+        let stackStr = stack.join('.');
+        console.log(result)
+        result[stackStr] = obj[key];
+        stack.pop();
+    }
   }
   return result;
 }

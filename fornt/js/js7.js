@@ -182,7 +182,7 @@ requestAnimationFrame会在每次屏幕刷新的时候被调用，
 总结
 从单线程模型和任务队列出发理解 setTimeout(fn, 0)，并不是立即执行。
 JS 动画, 用requestAnimationFrame 会比 setInterval 效果更好
-requestIdleCallback()常用来切割长任务，利用空闲时间执行，避免主线程长时间阻塞。
+requestIdleCallback()常用来切割长任务，利用空闲时间执行，避免主线程长时间阻塞。 
 #
 
 总结

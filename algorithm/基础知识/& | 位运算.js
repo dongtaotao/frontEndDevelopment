@@ -5,7 +5,7 @@ https://juejin.cn/post/7025063432156086286
 // 处理输入，可以用.map，需要注意其所有参数
 // 此外其他迭代方法也需要掌握。
 let line = readline().split(' ');
-line = line.map((e) => parseInt(e, 10));
+line = line.map((e) => parseInt(e, 10));  
 
 // 去重
 arr = [...new Set(arr)];
