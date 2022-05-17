@@ -83,7 +83,6 @@
 
 https://juejin.cn/book/6844733750048210957/section/6844733750119514126  图片懒加载
 
-
 为什么npm run dev就能启动一个项目？
 https://www.bilibili.com/video/BV1L34y1i7Ei?spm_id_from=333.999.0.0
 
@@ -94,7 +93,6 @@ https://juejin.cn/column/7004269262806188069
 https://juejin.cn/post/7093142333201317901
 聊天输入框如何实现回车发送、粘贴文本和图片？
 https://juejin.cn/post/7089428335700377613
-
 
 postcss-px2rem，插件
 
@@ -144,7 +142,7 @@ const v = window.getVersion()
 
 const iframe1 = document.getElementById('iframe1')
 iframe1.onload = () => {
-    console.log(iframe1.contentWindow.document.body.innerHTML)
+  console.log(iframe1.contentWindow.document.body.innerHTML)
 }
 iframe1.src = 'http://127.0.0.1:8881/size-unit.html'
 上述 url 使用的是标准的 http 协议，如果要改成 'my-app-name://api/getVersion' 呢？—— 默认会报错，'my-app-name' 是一个未识别的协议名称。
@@ -156,6 +154,7 @@ iframe1.onload = () => {
 }
 iframe1.src = 'my-app-name://api/getVersion'
 这种自定义协议的方式，就叫做“url scheme”。微信的 scheme 以 'weixin://' 开头，可搜索“微信 scheme”。
+
 chrome 也有自己的 scheme
 chrome://version 查看版本信息
 chrome://dino 恐龙小游戏
@@ -164,30 +163,30 @@ chrome://dino 恐龙小游戏
 封装 sdk
 scheme 的调用方式非常复杂，不能每个 API 都写重复的代码，所以一般要封装 sdk ，就像微信提供的 jssdk 。
 const sdk = {
-    invoke(url, data, success, err) {
-        const iframe = document.createElement('iframe')
-        iframe.style.display = 'none'
-        document.body.appendChild(iframe)
+  invoke(url, data, success, err) {
+      const iframe = document.createElement('iframe')
+      iframe.style.display = 'none'
+      document.body.appendChild(iframe)
 
-        iframe.onload = () => {
-            const content = iframe.contentWindow.document.body.innerHTML
-            success(JSON.parse(content))
-            iframe.remove()
-        }
-        iframe.onerror = () => {
-            err()
-            iframe.remove()
-        }
-        iframe.src = `my-app-name://${url}?data=${JSON.string(data)}`
-    }
+      iframe.onload = () => {
+          const content = iframe.contentWindow.document.body.innerHTML
+          success(JSON.parse(content))
+          iframe.remove()
+      }
+      iframe.onerror = () => {
+          err()
+          iframe.remove()
+      }
+      iframe.src = `my-app-name://${url}?data=${JSON.string(data)}`
+  }
 
-    fn1(data, success, err) {
-        invoke('api/fn1', data, success, err)
-    }
+  fn1(data, success, err) {
+    invoke('api/fn1', data, success, err)
+  }
 
-    fn2(data, success, err) {
-        invoke('api/fn2', data, success, err)
-    }
+  fn2(data, success, err) {
+    invoke('api/fn2', data, success, err)
+  }
 }
 
 // 使用
@@ -202,7 +201,6 @@ sdk.fn1(
 url 长度不够怎么办？—— 可以扩展 ajax post 方式。 
 
 
-
 JavaScript 事件循环(EventLoop) —— 浏览器 & Node
 异步执行的运行机制（同步执行也是如此，因为它可以被视为没有异步任务的异步执行）
 （1）所有同步任务都在 主线程 上执行，形成一个 执行栈（execution context stack）。
@@ -211,15 +209,13 @@ JavaScript 事件循环(EventLoop) —— 浏览器 & Node
 （4）主线程不断重复上面的第三步。
 主线程 "任务队列" 中读取事件，这个过程是循环不断的，所以整个的运行机制又被称为 事件循环(Event Loop)
 
-六个阶段
-
+Node六个阶段
 timers (定时器)：本阶段执行已经被 setTimeout() 和 setInterval() 的调度回调函数。
 pending callbacks (待定回调)：执行延迟到下一个循环迭代的 I/O 回调。
 idle, prepare：仅系统内部使用。
 poll (轮询)：检索新的 I/O 事件;执行与 I/O 相关的回调（几乎所有情况下，除了关闭的回调函数，那些由计时器和 setImmediate() 调度的之外），其余情况 node 将在适当的时候在此阻塞。
 check (检测)：setImmediate() 回调函数在这里执行。
 close callback (关闭的回调函数)：一些关闭的回调函数，如：socket.on('close', ...)。
-
 链接：https://juejin.cn/post/7029988970574561294
 
 为什么Proxy一定要配合Reflect使用？https://juejin.cn/post/7080916820353351688#heading-5
@@ -251,7 +247,6 @@ https://zhuanlan.zhihu.com/p/158079491  好文章
 4、不会阻塞页面加载，影响用户的体验，只需 new Image 对象
 5、相比于 BMP/PNG 体积最小，可以节约 41% / 35% 的网络资源小
 
-
 但要注意，这个图片不是用来展示的，我们的目的是去「传递数据」，只是借助img标签的的src属性，在其url后面拼接上参数，服务端收到再去解析。
 class StatisticSDK {
     constructor(productID){
@@ -271,15 +266,11 @@ class StatisticSDK {
 如果返回204，会走到img的onerror事件，并抛出一个全局错误；如果返回200和一个空对象会有一个CORB的告警；
   
 链接：https://juejin.cn/post/7085679511290773534
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 页面的性能数据可以通过performance.timing这个API获取到，获取的数据是单位为毫秒的时间戳。
 
-
 换肤相关技术
 https://juejin.cn/post/7044759800055332878
-
 
 vue移动端适配（postcss-pxtorem和amfe-flexible） amfe-flexible 库
 https://juejin.cn/post/6893166229226258439
@@ -304,7 +295,6 @@ preconnet:DNS 的预连接;
 <link ref="preconnet" href="https://www.baidu.com" corssorigin> */}
 
 
-
 短链接你真的了解吗？ https://juejin.cn/post/7056635909986320397 🔥🔥🔥
 发送短信的时候里面有个链接看到没？这就是短链接，然后我们把短链接复制到浏览器打开，发现跳转之后立马就换了个地址，而且链接还很长很长。先暂停一下，思考背后的原理是什么？
 // 原地址
@@ -318,12 +308,7 @@ https://u.10010.cn/qAPZU
 2根据参数 qAPZU 去查找数据库，找到对应的活动的真实链接。
 3后端返回了 302 重定向，并且指定了目标地址。
 4浏览器跳转到目标地址。
-
-作者：前端精髓
 链接：https://juejin.cn/post/7056635909986320397
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 
 将数组转成树结构 (动态路由权限)(后端下发数据转换成动态路由) 🔥🔥🔥
 https://juejin.cn/post/7057288955145748494
@@ -380,7 +365,6 @@ websocket+心跳包+重接+轮询
 后端一次给你10万条数据，如何优雅展示，到底考察我什么?
 https://juejin.cn/post/7031923575044964389
 
-
 url****到页面显示的过程，还有页面显示出来的时候发生了什么
 1、⾸先，在浏览器地址栏中输⼊url
 2、浏览器先查看浏览器缓存-系统缓存-路由器缓存，如果缓存中有，会直接在屏幕中显⽰页⾯内容。若没有，则跳到第三步操作。
@@ -393,9 +377,7 @@ url****到页面显示的过程，还有页面显示出来的时候发生了什�
 9、⽣成Dom树、解析css样式、js交互
 10、客户端和服务器交互
 11、ajax查询
-
 链接：https://juejin.cn/post/7094047869795041311
-
 
 火山引擎推出基于全新视角的 Web 端性能监控方案 https://juejin.cn/post/7094824734445010980
 
@@ -404,7 +386,6 @@ https://juejin.cn/post/7013953652578582558
 
 前端技术专家面试都问什么？（大家感受一下）  🔥不错
 https://juejin.cn/post/7089672110716485639
-
 
 偏函数： https://blog.csdn.net/qq_42129063/article/details/81874314
 所谓偏函数，就是固定一个函数的一个或者多个参数，返回一个新的函数，这个函数用于接受剩余的参数
@@ -424,15 +405,13 @@ console.log(parAdd(4,8));
 【🐯初/中级前端面经】中小型公司面试时都会问些什么?
 https://juejin.cn/post/7064740689178787871#heading-5
 
-
 draw-page-structure 骨架屏
 
-今天扒一扒浏览器中的缓存策略（看过不后悔系列
+今天扒一扒浏览器中的缓存策略（看过不后悔系列)
 https://juejin.cn/post/6987937972100268046
 
 前端两年经验，历时一个月的面经和总结
 https://juejin.cn/post/7013953652578582558
-
 
 栅格化系统的原理以及实现 https://zhuanlan.zhihu.com/p/61401978
 通俗点来说，就是人为的把网页中的一行，等比例划分,比如将一行划分为 12 等分。然后在每个格子里进行页面开发，这就栅格化。
@@ -450,16 +429,17 @@ sessionStorage 的数据会在同一网站的多个标签页之间共享吗？�
 通过点击链接（或者用了 window.open）打开的新标签页之间是属于同一个 session 的，但新开一个标签页总是会初始化一个新的 session，即使网站是一样的，它们也不属于同一个 session。
 
 关于http首部字段cache-control中的no-cache与no-store区别
-no-cache 代表不缓冲过期的资源，缓存会向源服务器进行有效确认（可以在客户端存储资源，每次都必须去服务端做新鲜度校验，来决定从服务端获取新的资源（200）还是使用客户端缓存（304）。也就是所谓的协商缓存。）
+no-cache 代表不缓冲过期的资源，缓存会向源服务器进行有效确认（可以在客户端存储资源，每次都必须去服务端做新鲜度校验，来决定从服务端获取新的资源（200）
+  还是使用客户端缓存（304）。也就是所谓的协商缓存。）
 no-store 则是不进行任何数据的缓存
 
 react context的实现原理 ***************
 
-
 一文带你了解如何排查内存泄漏导致的页面卡顿现象 https://juejin.cn/post/6947841638118998029
 
 Babel 是一个 JavaScript 编译器
-pageage.JSON
+
+pageage.json文件
 {
   "name": "es6demo",
   "version": "1.0.0",
@@ -501,7 +481,7 @@ window.addEventListener('scroll', lazyload);
 
 🔥🔥🔥前端常见问题以及解决方案（ https://juejin.cn/post/7090926280127807501#heading-9
 一、跨域
-二、 轮播图实现
+二、轮播图实现
 三、图片懒加载
 四、单点登录（SSO）实现
 五、前端水印
@@ -589,13 +569,11 @@ function _render(vnode) {
   return dom;
 }
 
-
 async和defer的作用是什么？有什么区别?
 https://juejin.cn/post/7088183352343134221
 async需要注意的是，这种方式加载的 JavaScript 依然会阻塞 load 事件
 
 promise构造函数是同步执行的，then方法是异步执行的
-
 
 短链系统 短链顾名思义是一种很短的地址，应用广泛  短链接 长链接
 https://juejin.cn/post/7090735092011794446
@@ -618,7 +596,6 @@ https://juejin.cn/column/7090542280624472077
 从零开始搞监控系统（6）——较长的白屏时间
 从零开始搞监控系统（7）——监控页面奔溃 https://juejin.cn/post/7090747729965498381
 
-
 前端搞监控|Allan - 如何实现一套多端错误监控平台 🔥🔥🔥
 https://zhuanlan.zhihu.com/p/158079491
 
@@ -626,7 +603,6 @@ https://zhuanlan.zhihu.com/p/158079491
 https://cloud.tencent.com/developer/article/1784501
 
 react的usememo原理 https://www.1024sou.com/article/645783.html
-
 
 
 前端图片canvas，file，blob，DataURL等格式转换
@@ -641,7 +617,6 @@ https://juejin.cn/post/7077545184807878692
 
 react因为先天的不足——无法精确更新，所以需要react fiber把组件渲染工作切片；而vue基于数据劫持，更新粒度很小，没有这个压力；
 react fiber这种数据结构使得节点可以回溯到其父节点，只要保留下中断的节点索引，就可以恢复之前的工作进度；
-
 链接：https://juejin.cn/post/7077545184807878692
 
 跨域chrome 插件 Allow CORS: Access-Control-Allow-Origin
@@ -652,4 +627,4 @@ https://mybrowseraddon.com/access-control-allow-origin.html?v=0.1.7&type=install
 https://github.com/dwqs/blog/issues/70
 
 「前端进阶」高性能渲染十万条数据(虚拟列表)
-    https://juejin.cn/post/6844903982742110216
+https://juejin.cn/post/6844903982742110216

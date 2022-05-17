@@ -82,7 +82,8 @@ https://juejin.cn/post/7084161722960838693
 
 Tree Shaking 指基于 ES Module 进行静态分析，通过 AST 将用不到的函数进行移除，从而减小打包体积。
 
-core-js (opens new window)是关于 ES 标准最出名的 polyfill，polyfill 意指当浏览器不支持某一最新 API 时，它将帮你实现，中文叫做垫片。你也许每天都与它打交道，但你毫不知情。
+core-js (opens new window)是关于 ES 标准最出名的 polyfill，polyfill 意指当浏览器不支持某一最新 API 时，它将帮你实现，中文叫做垫片。
+你也许每天都与它打交道，但你毫不知情。
 
 Browserslist 用于配置项目适用的目标浏览器
 
@@ -91,13 +92,10 @@ Browserslist 用于配置项目适用的目标浏览器
 
 
 基本概念
-
 webpack是一个静态资源模块化打包工具
-
 静态资源指css|js|imgs(jpg|png|gif|webp...)|medio(fonts|mp4|mp3...)
 模块化指webpack会将每个入口引入的资源作为单独的模块进行打包
 打包指将我们本地开发环境的各种资源通过webpack的各种loader处理转换成浏览器可识别的资源，当然绝大部分我们还需要很多webpack的plugin参与进来
-
 
 webpack总体分为四个模块
 entry
@@ -113,12 +111,7 @@ plugins
 用于拓展webpack打包过程中的其他功能，比如集成,压缩,优化等
 综上，我们得知了webpack其实就是一个大的node包，这个node包做了什么事情呢？
 他将我们在开发过程中引入的各种小包（包括我们自己的工具包、资源包，也包括我们又引入的其他node包）通过构建编译成一个浏览器可以正常识别的资源包
-
-作者：我是小阵不悲催
 链接：https://juejin.cn/post/7085961358507769869
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 
 webpack的异步加载原理及分包策略 **********************************************************************
 https://juejin.cn/post/6895546761255845901
@@ -137,7 +130,6 @@ https://juejin.cn/post/6844903891180453901
 
 css-loader只是帮我们解析了css文件里面的css代码，想要应用样式我们要把解析完的css代码拿出来加入到style标签中。
 style-loader就是帮我们直接将css-loader解析后的内容挂载到html页面当中
-
 
 我用webpack把公司的老项目做了下优化
 https://juejin.cn/post/7072012773730811941

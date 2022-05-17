@@ -259,27 +259,6 @@ var plusOne = function (digits) {
 既可以解决传输效率问题也能保证两端数据的安全传输。
 除此之外，为了能够证明服务器是可靠的，引入了数字证书，让浏览器验证证书的可靠性。
 https://juejin.im/post/5e78d298f265da576a57a6bc
-//================================================================
-2. function deepClone(obj) {
-  // 过滤一些特殊情况
-  if(obj === null) return null;
-  if(typeof obj !== "object") return obj;
-  if(obj instanceof RegExp) { // 正则
-    return new RegExp(obj);
-  }
-  if(obj instanceof Date) { // 日期
-    return new Date(obj);
-  }
-  // let newObj = {}
-  // let newObj = new Object()
-  let newObj = new obj.constructor(); // 不直接创建空对象的目的：克隆的结果和之前保持所属类  =》 即能克隆普通对象，又能克隆某个实例对象
-  for(let key in obj) {
-      if(obj.hasOwnProperty(key)) {
-           newObj[key] = deepClone(obj[key]);
-      }
-  }
-  return newObj;
-}
 
 //：https://juejin.im/post/5e77888ff265da57187c7278
 //================================================================
@@ -504,7 +483,7 @@ source = [{
           }]
       }
   }]
-  var source = [{
+var source = [{
     id: 1,
     pid: 0,
     name: 'body'
@@ -531,26 +510,26 @@ source = [{
 }]
 
 function toTree(data) {
-    let result = []
-    if(!Array.isArray(data)) {
-        return result
-    }
-    data.forEach(item => {
-        delete item.children;
-    });
-    let map = {};
-    data.forEach(item => {
-        map[item.id] = item;
-    });
-    data.forEach(item => {
-        let parent = map[item.pid];
-        if(parent) {
-            (parent.children || (parent.children = [])).push(item);
-        } else {
-            result.push(item);
-        }
-    });
-    return result;
+  let result = []
+  if(!Array.isArray(data)) {
+      return result
+  }
+  data.forEach(item => {
+      delete item.children;
+  });
+  let map = {};
+  data.forEach(item => {
+      map[item.id] = item;
+  });
+  data.forEach(item => {
+      let parent = map[item.pid];
+      if(parent) {
+        (parent.children || (parent.children = [])).push(item);
+      } else {
+        result.push(item);
+      }
+  });
+  return result;
 }
 console.log(toTree(source))
 
@@ -600,50 +579,50 @@ https://segmentfault.com/a/1190000020805789
 //EventEmitter
 // 手写发布订阅模式 EventEmitter
 class EventEmitter {
-    constructor() {
-      this.events = {};
-    }
-    // 实现订阅
-    on(type, callBack) {
-      if (!this.events) this.events = Object.create(null);
-  
-      if (!this.events[type]) {
-        this.events[type] = [callBack];
-      } else {
-        this.events[type].push(callBack);
-      }
-    }
-    // 删除订阅
-    off(type, callBack) {
-      if (!this.events[type]) return;
-      this.events[type] = this.events[type].filter(item => {
-        return item !== callBack;
-      });
-    }
-    // 只执行一次订阅事件
-    once(type, callBack) {
-      function fn() {
-        callBack();
-        this.off(type, fn);
-      }
-      this.on(type, fn);
-    }
-    // 触发事件
-    emit(type, ...rest) {
-      this.events[type] && this.events[type].forEach(fn => fn.apply(this, rest));
+  constructor() {
+    this.events = {};
+  }
+  // 实现订阅
+  on(type, callBack) {
+    if (!this.events) this.events = Object.create(null);
+
+    if (!this.events[type]) {
+      this.events[type] = [callBack];
+    } else {
+      this.events[type].push(callBack);
     }
   }
-  // 使用如下
-  const event = new EventEmitter();
-  const handle = (...rest) => {
-    console.log(rest);
-  };
-  event.on("click", handle);
-  event.emit("click", 1, 2, 3, 4);
-  event.off("click", handle);
-  event.emit("click", 1, 2);
-  event.once("dbClick", () => {
-    console.log(123456);
-  });
-  event.emit("dbClick"); 
-  event.emit("dbClick");    
+  // 删除订阅
+  off(type, callBack) {
+    if (!this.events[type]) return;
+    this.events[type] = this.events[type].filter(item => {
+      return item !== callBack;
+    });
+  }
+  // 只执行一次订阅事件
+  once(type, callBack) {
+    function fn() {
+      callBack();
+      this.off(type, fn);
+    }
+    this.on(type, fn);
+  }
+  // 触发事件
+  emit(type, ...rest) {
+    this.events[type] && this.events[type].forEach(fn => fn.apply(this, rest));
+  }
+}
+// 使用如下
+const event = new EventEmitter();
+const handle = (...rest) => {
+  console.log(rest);
+};
+event.on("click", handle);
+event.emit("click", 1, 2, 3, 4);
+event.off("click", handle);
+event.emit("click", 1, 2);
+event.once("dbClick", () => {
+  console.log(123456);
+});
+event.emit("dbClick"); 
+event.emit("dbClick");    

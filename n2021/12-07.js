@@ -7,7 +7,7 @@ https://juejin.cn/post/6873819320494948360
 微信客户端发现用户长按<img>时，会截屏并启动二维码识别，二维码识别的不是<img>而是截屏。这样做的好处是不用下载图片，坏处是识别的图片更复杂了。
 
 不使用框架如何实现组件按需加载以及原理
-babel-plugin-import就可以实现。
+babel-plugin-import就可以实现。 
 
 实现一个正方形宽高
 <!DOCTYPE html>
@@ -58,7 +58,7 @@ for...of	遍历键值	否	          否	                  是
 GraphQL 是 Facebook 开发的一种 API 的查询语言
 https://juejin.cn/post/7038491089656872974 
 
-前端换肤方案 **************
+前端换肤方案 ****************************
 https://www.cnblogs.com/Happymoney/p/14881815.html
 
 霖呆呆的近期面试128题汇总(含超详细答案) | 掘金技术征文
@@ -68,4 +68,4 @@ https://juejin.cn/post/6844904151369908232
 https://juejin.cn/post/6905913905152065544
 
 上海莉莉丝、米哈游、B站、小红书、得物等互联网公司前端面试总结
-https://juejin.cn/post/6896810576778166280  
+https://juejin.cn/post/6896810576778166280

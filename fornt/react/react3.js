@@ -280,7 +280,6 @@ https://blog.csdn.net/sinat_17775997/article/details/106794133
 当 Webpack 解析到该 import() 语法时，会自动进行代码分割。
 简单来说，React利用 React.lazy 与 import() 实现了渲染时的动态加载 ，并利用 Suspense 来处理异步加载资源时页面应该如何显示的问题。
 
-
 5. 组件更新和渲染(fiber)
 
 setState(newState) -> dirtyComponents（可能有子组件）
@@ -352,6 +351,6 @@ MyComponent.jsexport default class MyComponent extends React.Component {
 }
 这里我们用到了webpack的动态import，动态import会返回一个promise，组件加载完成后会resolve模块，使用ESM模块规范，
 resolve的模块的default属性就是组件MyComponent本身。
-
+ 
 Link 的本质也是a 标签。只不过在Link 中禁用了 a 标签的默认事件，改用了history对象提供的方法进行跳转。
 https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/135 

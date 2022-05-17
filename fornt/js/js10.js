@@ -33,17 +33,13 @@ class MySDK {
     //发送数据
     private send(url, params: any = {}) {
         params.product = this.currentProduct;
-
         const paramsArr = [];
         for (let key in params) {
             const val = params[key];
             paramsArr.push(`${key}-${val}`);
         }
-
         const newVal=`${url}?${paramsArr.join("&")}`;
-
         const img=document.createElement('img');
-
         img.src=newVal;
     }
     //内部事件
@@ -63,7 +59,6 @@ webpack的工作流程是
 5、从入口文件开始，解析模块为AST，分析模块依赖，形成依赖关系树。
 6、递归依赖树，将每个模块交给对应的 Loader 处理。
 7、合并 Loader 处理完的结果，将打包结果输出到 dist 目录。
-
 
 装箱拆箱 https://www.lingtiku.com/#/quiz/detail?quizID=5
 讲一下js中的包装类型
@@ -110,7 +105,7 @@ class BuildEndPlugin {
   module.exports = BuildEndPlugin
 
 2022新年奖励自己一辆特斯拉😎（React Hooks + Redux 入门级全栈实战项目） ******************
- https://juejin.cn/post/7063088278576037901
+https://juejin.cn/post/7063088278576037901
 
 token和JWT的区别
 【网络】Cookie、Session与Token、JWT及CSRF攻击
@@ -128,7 +123,8 @@ webpack构建：
 5.自动刷新：监听本地源代码的变化，自动重新构建、刷新浏览器,nodemon。
 6.代码校验：在代码被提交到仓库前需要校验代码是否符合规范，以及单元测试是否通过。
 7.自动发布：更新完代码后，自动构建出线上发布代码并传输给发布系统。
-构建其实是工程化、自动化思想在前端开发中的体现，把一系列流程用代码去实现，让代码自动化地执行这一系列复杂的流程。 构建给前端开发注入了更大的活力，解放了我们的生产力,更加方便了我们的开发。
+构建其实是工程化、自动化思想在前端开发中的体现，把一系列流程用代码去实现，让代码自动化地执行这一系列复杂的流程。 
+构建给前端开发注入了更大的活力，解放了我们的生产力,更加方便了我们的开发。
 链接：https://juejin.cn/post/6844903821408206855
 
 崩溃和卡顿 https://blog.csdn.net/sinat_17775997/article/details/115215082?spm=1001.2014.3001.5502
@@ -297,6 +293,7 @@ https://blog.csdn.net/qq_41475058/article/details/105656375
 https://juejin.cn/post/7074573053979525151
 14.使用history模式后访问内容页，刷新会404
 需要后端重定向配置服务器。
+
 13.解决vuex持久化
 情景时列表页跳转到详情页，详情页是新窗口，2个窗口都用到vuex state,
 比如共享同一个id数组，修改state数据之后，详情页不能实时更新state数据，只能用缓存解决，比如localStorage，
@@ -304,7 +301,6 @@ https://juejin.cn/post/7074573053979525151
 
 hash 默认会在 url 后面拼接#
 history 则不会，不过 history 需要服务器配合
-
 
 onbeforeunload事件 https://blog.csdn.net/u014259536/article/details/89888573
 onbeforeunload 事件在即将离开当前页面（刷新或关闭）时触发。
@@ -335,7 +331,6 @@ https://juejin.cn/post/7065483941305647112#heading-90
 执行过程无阻塞
 相比XMLHttpRequest，性能更好
 gif体积小
-
 
 使用create-react-app加持typescript打造自己的组件库
 https://juejin.cn/post/7083508488759934989

@@ -31,7 +31,7 @@ function selectionSort(arr) {
   }
   return arr;
 }
-插入
+插入 
 function insertionSort(arr) {
     const len = arr.length;
     let preIndex;
@@ -55,7 +55,7 @@ function quickSort(arr) {
   if(arr.length == 1) {
     return arr
   }
-  const temp = arr[0];
+  const temp = arr[0]; 
   const left = [];
   const right = [];
   for(let i = 1; i < arr.length; i++) {

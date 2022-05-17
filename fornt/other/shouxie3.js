@@ -409,4 +409,4 @@ function getStrMaxCount1(str){
     };
 }
 // {count: 7, str: 'e'}
-console.log(getStrMaxCount1(str));
+console.log(getStrMaxCount1(str)); 

@@ -1,4 +1,4 @@
-谈谈react hooks的优缺点 **************************************
+谈谈react hooks的优缺点 **************************************=
 https://www.cnblogs.com/ranyonsue/p/14700528.html
 
 手写ReactHook核心原理，再也不怕面试官问我ReactHook原理
@@ -77,6 +77,12 @@ https://www.cnblogs.com/crazycode2/p/13596807.html
 浅析redux-persist
 https://www.jianshu.com/p/0b04218817de
 
+React 中保存页面状态/在react中实现vue的keep-alive/React Activation
+https://blog.csdn.net/weixin_38649188/article/details/118578867
+
+使用react-activation实现keepAlive，支持返回传参
+https://juejin.cn/post/7098602213102059527
+
 
 🔥 解决页面刷新redux数据丢失问题 https://blog.csdn.net/z591102/article/details/108096754 *******************
 1.何时存只要用户刷新或者关闭页面时，都会默默记下当前的state状态。
@@ -88,12 +94,11 @@ window.onbeforeunload = (e) => {
 2.何时清空
 解决就是，state需要有个版本管理，当和代码的版本不一致时，至少进行个清空操作。
 
-
 使用create-react-app加持typescript打造自己的组件库 🔥🔥
 https://juejin.cn/post/7083508488759934989
 
 
-REact 单元测试
+React 单元测试
 https://www.cnblogs.com/testopsfeng/p/14265218.html
 
 中间件原理
@@ -161,7 +166,6 @@ http://codesohigh.com/subject/react/chapter4.html#_3%E3%80%81useeffect
     useContext用于调用上下文
 */
 import {useState, createContext, useContext} from 'react'
-
 // 1、创建上下文
 const NumContext = createContext();
 // 子组件
@@ -197,7 +201,6 @@ https://blog.csdn.net/aminwangaa/article/details/107379851?spm=1001.2101.3001.66
 React hooks useState如何拿到更新后的值
 https://mp.csdn.net/mp_blog/creation/editor/123753653
 
-
 在class中,如果 我们想要拿到setState 最新的值,去调用api,直接通过this.setState的回调函数就可以了
 https://blog.csdn.net/hzxOnlineOk/article/details/109103135?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.pc_relevant_default&spm=1001.2101.3001.4242.1&utm_relevant_index=3
 this.setState({
@@ -216,7 +219,6 @@ useEffect(()=>{
  
 function statusHandleChange(val) {
         setModelStatus(val);
-        
         // **设置一个延迟 0毫秒,这个 很重要**
         setTimeout(search, 0);
     }
@@ -266,14 +268,12 @@ React-你有完全了解 Hooks 吗
 https://juejin.cn/post/7064345263061598222 
 
 Hooks优点:
-
 没有破坏性改动：完全可选的。 你无需重写任何已有代码就可以在一些组件中尝试 Hook。100% 向后兼容的。 Hook 不包含任何破坏性改动。
 更容易复用代码：它通过自定义hooks来复用状态，从而解决了类组件逻辑难以复用的问题
 函数式编程风格：函数式组件、状态保存在运行环境、每个功能都包裹在函数中，整体风格更清爽、优雅
 代码量少，复用性高
 更容易拆分
 Hooks缺点(Hoosk有哪些坑):
-
 hooks 是 React 16.8 的新增特性、以前版本的就别想了
 状态不同步（闭包带来的坑）:函数的运行是独立的，每个函数都有一份独立的闭包作用域。当我们处理复杂逻辑的时候，经常会碰到“引用不是最新”的问题
 使用useState时候，使用push，pop，splice等直接更改数组对象的坑，demo中使用push直接更改数组无法获取到新值，
@@ -473,8 +473,6 @@ https://www.bilibili.com/video/BV1sS4y1m7MC?spm_id_from=333.337.search-card.all.
 React 依赖于 Hook 的调用顺序，如果能确保 Hook 在每一次渲染中都按照同样的顺序被调用。
 那么React 能够在多次的 useState 和 useEffect 调用之间保持 hook 状态的正确性
 
-
-
 // 简单实现hooks https://github.com/lgwebdream/FE-Interview/issues/906
 
 // 一、实现useState
@@ -571,7 +569,6 @@ https://fe.ecool.fun/topic/559aab33-1ef2-4fb1-bdba-2233423fb845?orderBy=updateTi
 
 React中，能否直接将 props 的值复制给 state  可以  百度 https://zhuanlan.zhihu.com/p/83623692
 https://www.baidu.com/s?wd=React%E4%B8%AD%2C%E8%83%BD%E5%90%A6%E7%9B%B4%E6%8E%A5%E5%B0%86%20props%20%E7%9A%84%E5%80%BC%E5%A4%8D%E5%88%B6%E7%BB%99%20state&rsv_spt=1&rsv_iqid=0xeb74bea10008174b&issp=1&f=8&rsv_bp=1&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_dl=tb&rsv_sug3=1&rsv_sug1=1&rsv_sug7=100&rsv_sug2=0&rsv_btype=i&prefixsug=React%25E4%25B8%25AD%25EF%25BC%258C%25E8%2583%25BD%25E5%2590%25A6%25E7%259B%25B4%25E6%258E%25A5%25E5%25B0%2586%2520props%2520%25E7%259A%2584%25E5%2580%25BC%25E5%25A4%258D%25E5%2588%25B6%25E7%25BB%2599%2520state&rsp=6&inputT=508&rsv_sug4=508
-
 
 https://fe.ecool.fun/topic/e246ac60-73f0-4e33-b0f9-b0d1e6c15af8?orderBy=updateTime&order=desc&tagId=13
 为什么不能直接使用 this.state 改变数据？

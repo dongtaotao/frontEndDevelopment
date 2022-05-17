@@ -154,3 +154,7 @@ CD-持续交付、持续部署
 
 快来看看如何手动搭建自动化部署系统
 https://www.bilibili.com/video/BV1Qy4y1L7Nj?spm_id_from=333.999.0.0
+
+
+dockerfile  dockerfile是用来定制镜像的
+docker-compose 构建容器 是一个管理多个容器的工具，比如可以解决容器之间的依赖关系，当在宿主机启动较多的容器时候，

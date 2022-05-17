@@ -305,7 +305,6 @@ subresource可以用来指定资源是最高优先级的。当前页面需要，
 白屏时间 = firstPaint - pageStartTime  
 
 
-
 http://www.alloyteam.com/2020/01/14184/   ************************如何进行 web 性能监控？
 
 
@@ -332,7 +331,6 @@ window.frames[0].onerror
 前端监控和埋点能做什么   https://www.cnblogs.com/ygunoil/p/12099319.html
 前端埋点
 前端埋点主要是为了服务运营人员采集用户行为数据，进行后续的数据分析工作。
-
 
 
 前端错误监控和异常捕获问题 **************************
@@ -443,3 +441,9 @@ SDK 小结
 监听 / 劫持 原始方法，获取需要上报的数据，在错误发生时 触发 函数使用 gif 上报。
 为了方便记忆，提炼 3 个关键词：劫持、原始方法、gif！（如果你还记不住，那也别打我）
 从 ES 中获取数据非常简单，ES 底层是基于 Lucene 的搜索服务器的，它提供了一个分布式多用户能力的全文搜索引擎，基于 RESTful web 接口。所以我们前端开发只需要想平时开发业务调用接口一样去调用就可以了。
+
+
+前端监控SDK开发分享
+https://mp.weixin.qq.com/s/1RNw1W2AgAylcd7Gindm4w
+https://www.cnblogs.com/1wen/p/14417475.html
+

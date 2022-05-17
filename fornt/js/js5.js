@@ -1,14 +1,14 @@
 //================================================================
 function json(src) {
-        const script = document.createElement('script');  
-        script.src = src;
-        script.type = 'text/javascript';
-        document.body.appendChild(script)
-    }
-    addScript("http://xxx.xxx.com/xxx.js?callback=handleRes");
-    function handleRes(res) {
-        console.log('tag', res)
-    }
+    const script = document.createElement('script');  
+    script.src = src;
+    script.type = 'text/javascript';
+    document.body.appendChild(script)
+}
+addScript("http://xxx.xxx.com/xxx.js?callback=handleRes");
+function handleRes(res) {
+    console.log('tag', res)
+}
 // 接口返回的数据格式
 handleRes({a: 1, b: 2});
 
@@ -25,7 +25,7 @@ jsonp的原理就是利用<script>标签没有跨域限制，通过<script>标�
     document.head.appendChild(script);
     // 回调执行函数
     function handleCallback(res) {
-        alert(JSON.stringify(res));
+       alert(JSON.stringify(res));
     }
  {/* </script> */}
 复制代码

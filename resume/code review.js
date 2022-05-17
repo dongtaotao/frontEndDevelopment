@@ -1,4 +1,4 @@
-Code Review – 开发前
+Code Review – 开发前 
 
 需求评审后，在Gitlab上创建issue，用于关联该需求的方案、提交和review记录。
 当需求影响范围较大、复杂性较高、或实现方案有争议时，需要进行方案review。

@@ -45,7 +45,7 @@ var isValid = (s) => {
         }
     }
 
-    return stack.length ===0
+    return stack.length ===0 
 }
 
 3的幂
@@ -551,7 +551,6 @@ var mergeTrees = function (root1, root2) {
     return pre(root1, root2)
 };
 
-
 平方数之和 https://juejin.cn/post/6970481350159630350#heading-4
 给定一个非负整数 c ，你要判断是否存在两个整数 a 和 b，使得 a2 + b2 = c 。
 示例 1：
@@ -654,4 +653,4 @@ let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 arr.sort(function () {
     return Math.random() - 0.5
 })
-console.log(arr);  // [6, 4, 8, 5, 1, 9, 2, 7, 10, 3] 
+console.log(arr);  // [6, 4, 8, 5, 1, 9, 2, 7, 10, 3]  

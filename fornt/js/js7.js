@@ -4,6 +4,7 @@ https://mp.weixin.qq.com/s/EG5HCgz_M1S2Xbky0lgDxg
 从输入url到页面展示发生了什么
 http://www.zhuguannan.cn/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/%E4%BB%8E%E8%BE%93%E5%85%A5URL%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%B1%95%E7%A4%BA%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88.html
 总体来说分为以下几个过程：
+查看缓存
 DNS解析
 TCP连接
 发送HTTP请求
@@ -272,7 +273,7 @@ console.log('%s', arr4)
 10 NAN, NAN
 主要考察拆解函数；parseInt()的第二个参数，进制转换（接收两个参数），parseInt方法还可以接受第二个参数（2到36之间），
 表示被解析的值的进制，返回该值对应的十进制数。默认情况下，parseInt的第二个参数为10，即默认是十进制转十进制。详细请看该博文：blog.csdn.net/josavion/ar…
- 
+
 requestIdleCallback  
 
 e.target
@@ -295,7 +296,7 @@ console.log(str.padEnd(15, '-')) // ssssssssss-----
 
 https://mp.weixin.qq.com/s/EG5HCgz_M1S2Xbky0lgDxg
 组件库如何做按需加载
-我常用的是babel-plugin-import
+我常用的是babel-plugin-import  babel-pligin-component
 
 webpack 如何实现动态加载
 讲道理 webpack 动态加载就两种方式：import()和 require.ensure，不过他们实现原理是相同的。

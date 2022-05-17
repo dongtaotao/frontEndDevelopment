@@ -350,5 +350,5 @@ function render(template, data) {
     return data[key];
   });
   return computed;  
-}
+} 
 

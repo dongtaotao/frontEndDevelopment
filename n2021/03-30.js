@@ -36,7 +36,7 @@ window.requestAnimationFrame() 告诉浏览器——你希望执行一个动画�
 下次重绘之前调用指定的回调函数更新动画。
 该方法需要传入一个回调函数作为参数，该回调函数会在浏览器下一次重绘之前执行
 所以，requestAnimationFrame的回调时机也是在当前的tick中，所以不属于宏任务，
-但也不是微任务，排在微任务之后。
+但也不是微任务，排在微任务之后。 
 
 function debounce(func, wait) {
   let timeout = null
@@ -173,7 +173,7 @@ console.log(obj1)           // {name:CXK,password:123}
 console.log(obj2)           // 输出的依然是{name:CXK,password:123}
 
 装饰器模式
-装饰器模式，可以理解为对类的一个包装，动态地拓展类的功能，
+装饰器模式，可以理解为对类的一个包装，动态地拓展类的功能， 
 ES7的装饰器语法以及React中的高阶组件（HoC）都是这一模式的实现。
 react-redux的connect()也运用了装饰器模式，这里以ES7的装饰器为例：
 function info(target) {

@@ -51,7 +51,7 @@ http://interview.poetries.top/docs/simply.html#_14-%E5%AE%9A%E6%97%B6%E5%99%A8%E
 总结
 从单线程模型和任务队列，出发理解 setTimeout(fn, 0)，并不是立即执行。
 JS 动画, 用requestAnimationFrame 会比 setInterval 效果更好
-requestIdleCallback()常用来切割长任务，利用空闲时间执行，避免主线程长时间阻塞
+requestIdleCallback()常用来切割长任务，利用空闲时间执行，避免主线程长时间阻塞 
 
 发布订阅模式和观察者模式
 http://interview.poetries.top/docs/simply.html#_2-%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F%E5%92%8C%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F

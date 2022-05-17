@@ -197,7 +197,6 @@ F、Flutter packages和Dart packages上第三方sdk繁杂，适配性差，不�
 G、目前几乎没有第三方开发者平台开发Flutter能力的SDK，需要原生去集成；
 H、打包后，apk/ipa要大很多。
 
-作者：buhuiming
 链接：https://www.jianshu.com/p/b7f457e492c3
 
 Flutter原理与实践
@@ -225,7 +224,8 @@ Flutter数据驱动模式参考React实现
 为什么要用flutter
 1，跨平台自绘引擎：
 Flutter既不使用WebView，也不使用操作系统的原生控件(rn)，Flutter使用Skia作为其2D渲染引擎（相对而言耗费内存）。
-针对 Android 与 iOS 的风格设计了两套设计语言的控件实现（Material & Cupertino）。这样不但能够节约人力成本，而且在用户体验上更好的适配 App 运行的平台。
+针对 Android 与 iOS 的风格设计了两套设计语言的控件实现（Material & Cupertino）。这样不但能够节约人力成本，而且在用户
+体验上更好的适配 App 运行的平台。
 
 2，重写了一套跨平台的 UI 框架，渲染引擎是依靠 Skia 图形库实现：
 Flutter 中的控件树直接由渲染引擎和高性能本地 ARM 代码直接绘制，不需要通过中间对象（Web 应用中的虚拟 DOM 和真实 DOM，原生 App 中的虚拟控件和平台控件）来绘制，
@@ -259,11 +259,10 @@ final和const
  const 变量是一个编译时常量（编译时直接替换为常量值），final变量在第一次使用时被初始化
 
 
- 变量声明•final和const•常量声明。
+变量声明•final和const•常量声明。
  一个final变量只能被设置一次，二者区别在于：
- const变量是一个编译时常量，final变量再第一次使用时被初始化。被final或const修饰的变量，变量类型可以省略
-
- 用Dart语言开发，而不是JavaScript，它在release模式下是编译后运行，而不是像JS一样在JavaScriptCore里解释运行，因此暂时不支持热更新
+const变量是一个编译时常量，final变量再第一次使用时被初始化。被final或const修饰的变量，变量类型可以省略
+用Dart语言开发，而不是JavaScript，它在release模式下是编译后运行，而不是像JS一样在JavaScriptCore里解释运行，因此暂时不支持热更新
 
 
 Flutter ： Native调用flutter方法 https://blog.csdn.net/BunnyCoffer/article/details/114014126
@@ -356,14 +355,10 @@ channel.invokeMethod("native-invoke-flutter", "这是native 主动调用 flutter
 
 
 整个过程分为四个阶段：
-
 初始化阶段，包括两个生命周期函数 createState 和 initState；
-
 组件创建阶段，也可以称组件出生阶段，包括 didChangeDependencies 和 build；
-
 触发组件多次 build ，这个阶段有可能是因为 didChangeDependencies、setState 或者 didUpdateWidget 而引发的组件重新 build ，
 在组件运行过程中会多次被触发，这也是优化过程中需要着重需要注意的点；
-
 最后是组件销毁阶段，deactivate 和 dispose。
 
 在 Flutter 中存在三棵树，分别是 Widget 、Element 和 RenderObject。
@@ -374,7 +369,6 @@ RenderObject，则是实际上需要渲染的树，渲染引擎会根据 RenderO
 Flutter UI 界面是自渲染的，而 ReactNative 则是通过通信的方式告知原生平台，然后原生平台再绘制出界面。
 
 Flutter Web 中所有的文字不可以选择  但是text可以换成selectabletext 可以选择 canvas 
-
 而flutterWeb打包也有两种模式可以选择：html模式和CanvasKit模式
 
 当我们采用html渲染模式时，flutter会采用HTML的custom element，CSS，Canvas和SVG来渲染UI元素
@@ -388,11 +382,7 @@ flutter build web --web-renderer canvaskit
   以及降低不同浏览器渲染效果不一致的风险。但是应用的大小会增加大约 2MB。
 优点是：跨端一致性受保障，渲染性能更好
 缺点是：体积比较大，load页面时间会更久
-
-作者：Mr_凌宇
 链接：https://juejin.cn/post/7040061394313543710
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 
 // domain/pages/viewpage.action?pageId=955748069
@@ -414,7 +404,9 @@ flutter for web的包远大于正常h5的包。
 官方目前不建议使用在生产环境 （目前还没有大厂在生产环境上面使用）
 
 总结
-Flutter Web具有优秀的设计。它基于dart:js和dart:html这些成熟的框架，通过将与Native相关的dart:ui库重写的方式，很好地解决了Flutter扩展到Web平台上的问题。对于上层开发者而言，完全不用去做任何修改，即可产生一套符合Web标准的代码，显示和行为也同原始设计保持一致。虽然目前Flutter Web还不够成熟，存在一些诸如包大小性能开发调试等问题，希望未来Flutter Web越来越完善
+Flutter Web具有优秀的设计。它基于dart:js和dart:html这些成熟的框架，通过将与Native相关的dart:ui库重写的方式，很好地解决了Flutter扩展到Web平台上的问题。
+对于上层开发者而言，完全不用去做任何修改，即可产生一套符合Web标准的代码，显示和行为也同原始设计保持一致。虽然目前Flutter Web还不够成熟，存在一些诸如包大小性能
+开发调试等问题，希望未来Flutter Web越来越完善
 
 Flutter-for-Web新特性
 Flutter Web完成从beta过渡到 stable

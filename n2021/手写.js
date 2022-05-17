@@ -31,7 +31,7 @@ function flatten(arr) {
 }
 
 let arr = [1, [2, [3, 4]]];
-function flatten(arr) {
+function flatten(arr) { 
     while (arr.some(item => Array.isArray(item))) {
         arr = [].concat(...arr);
     }
@@ -497,5 +497,5 @@ function flatten(obj) {
 }
 
 // 测试
-console.log(flatten(obj))
+console.log(flatten(obj)) 
 

@@ -120,7 +120,7 @@ hooks 为什么不能放在条件判断里
   并直接在上面挂载对象或者方法，使 js 可以直接调用，Android 与 IOS 分别拥有对应的挂载方式
   WebView 中的 prompt/console/alert 拦截，通常使用 prompt，因为这
   个方法在前端中使用频率低，比较不会出现冲突
-  WebView URL Scheme 跳转拦截
+  WebView URL Scheme 跳转拦截 
 链接：https://juejin.cn/post/6896810576778166280
 
 拦截 URL SCHEME
@@ -131,7 +131,6 @@ URL SCHEME是一种类似于url的链接，是为了方便app直接互相调用�
 在实践过程中，这种方式有一定的缺陷：
 使用 iframe.src 发送 URL SCHEME 会有 url 长度的隐患。
 创建请求，需要一定的耗时，比注入 API 的方式调用同样的功能，耗时会较长。
-
 
 webpack的基本功能和工作原理？
   1、代码转换：TypeScript 编译成 JavaScript、SCSS 编译成 CSS 等等
@@ -290,7 +289,6 @@ redux 管理的是 (STORE -> VIEW -> ACTION) 的整个闭环，而 mobx 只关�
 https://blog.poetries.top/FE-Interview-Questions/principle-docs/react/03-MobX%E6%80%BB%E7%BB%93.html#%E4%B8%80%E3%80%81%E8%AE%A4%E8%AF%86mobx
 
 1.2 redux-thunk源码
-
 在redux中，thunk是redux作者给出的中间件，实现极为简单，10多行代码
 function createThunkMiddleware(extraArgument) {
   return ({ dispatch, getState }) => next => action => {

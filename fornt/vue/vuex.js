@@ -1,9 +1,6 @@
 
-Vuex从使用到原理解析 https://zhuanlan.zhihu.com/p/78981485
+Vuex从使用到原理解析 https://zhuanlan.zhihu.com/p/78981485 
 Vuex是通过全局注入store对象，来实现组件间的状态共享。
-在大型复杂的项目中（多级组件嵌套），需要实现一个组件更改某个数据，
-多个组件自动获取更改后的数据进行业务逻辑处理，这时候使用vuex比较合适。
-假如只是多个组件间传递数据，使用vuex未免有点大材小用，其实只用使用组件间常用的通信方法即可。
 
 nextTick 使用场景和原理
 nextTick 中的回调是在下次 DOM 更新循环结束之后执行的延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。
@@ -99,7 +96,7 @@ export default {
       this.$store.commit('change');
   }
 }
-复制代码
+
 可以看到，在Vue中使用Vuex，主要有3个关键步骤：
 
 使用Vuex创建store，再将store注入Vue中。Vue组件中就可以通过this.$store来访问到store。
@@ -127,7 +124,7 @@ Vue.mixin({
         }
     }
 });
-复制代码
+
 3. Vuex响应式原理
 Vuex使用vue中的reactive方法将state设置为响应式，原理和Vue组件的data设置为响应式是一样的。
 // vuex/src/store-util.js
@@ -136,14 +133,11 @@ import {reactive} from 'vue';
 store._state = reactive({
     data: state
 });
-复制代码
+
 4. 总结
 Vuex是个状态管理器。
 它Vuex通过createStore创建了一个数据中心，然后通过发布-订阅模式来让订阅者监听到数据改变。
 Vuex的store注入 vue的实例组件的方式，是通过vue的 mixin机制，借助vue组件的生命周期钩子beforeCreate 完成的。这样Vue组件就能通过this.$store获取到store了。
 Vuex使用vue中的reactive方法将state设置为响应式，这样组件就可以通过computed来监听状态的改变了。
-
 作者：刷题刷到手抽筋
 链接：https://juejin.cn/post/7094778902815440903
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

@@ -58,7 +58,6 @@ yarn list | grep xxx
 
 如何为一个项目指定 node 版本号  https://q.shanyue.tech/fe/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/533.html
 如果对于版本不匹配将会报错(yarn)或警告(npm)，那我们需要在 package.json 中的 engines 字段中指定 Node 版本号
-
 更多质量工程问题，见 如何保障项目质量(opens new window)
 {
   "engines": {
@@ -73,7 +72,6 @@ yarn list | grep xxx
 
 如何压缩前端项目中 JS 的体积 https://q.shanyue.tech/fe/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/644.html
 压缩的具体操作
-
 去除多余字符，eg：空格，换行、注释
 压缩变量名，函数名、属性名
 使用更简单的表达，eg：合并声明、布尔值简化
@@ -90,7 +88,6 @@ Error Boundry 避免整页崩溃。限制在组件级别
 npm audit
 
 eslint，对代码不仅有风格的校验，更有可读性、安全性、健壮性的校验。
-
 
 ==实现模糊搜索结果的关键词高亮显示 https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/141
 我的大概思路是，用正则替换掉关键词。

@@ -55,12 +55,9 @@ type User = Name & {
 }
 不同点
 type 可以而 interface 不行
-
 type 可以声明基本类型别名，联合类型，元组等类型
-
 // 基本类型别名
 type Name = string
-
 // 联合类型
 interface Dog {
     wong();
@@ -68,7 +65,6 @@ interface Dog {
 interface Cat {
     miao();
 }
-
 type Pet = Dog | Cat
 
 // 具体定义数组每个位置的类型
@@ -95,11 +91,9 @@ interface User {
     name: string
     age: number
 }
-
 interface User {
     sex: string
 }
-
 /*
 User 接口为 {
     name: string
@@ -122,7 +116,6 @@ type可以类型推导
 接口通过继承的方式进行拓展、类型别名通过&进行拓展
 
 12. TypeScript 中 type 和 interface 的区别?
-
 相同点：
 1. 都可以描述 '对象' 或者 '函数' 
 2. 都允许拓展(extends)
@@ -133,7 +126,6 @@ type可以类型推导
 使用 interface 描述‘数据结构’，使用 type 描述‘类型关系’
 
 23. declare，declare global是什么？
-
 declare 是用来定义全局变量、全局函数、全局命名空间、js modules、class等 
 declare global 为全局对象 window 增加新的属性
 declare global { 
@@ -141,17 +133,12 @@ declare global {
         csrf: string; 
    }
 }
-
 链接：https://juejin.cn/post/6999985372440559624
 
 interface 和 type的区别
 interface 只能定义对象类型。type声明可以声明任何类型。
-
 interface 能够声明合并，两个相同接口会合并。Type声明合并会报错
-
 type可以类型推导
-
-
 
 「面试题」TypeScript
 https://juejin.cn/post/6988763249982308382
@@ -176,7 +163,6 @@ void 类型
 never 类型
 object 对象类型
 
-
 declare，declare global是什么？
 
 declare 是用来定义全局变量、全局函数、全局命名空间、js modules、class等
@@ -191,7 +177,6 @@ declare global {
 
 选择安装 ts 版本，npm install @types/包名 --save；
 对于没有类型的 js 库，需要编写同名的.d.ts文件
-
 链接：https://juejin.cn/post/6999985372440559624
 
 第三方声明文件 ******** 
@@ -212,10 +197,8 @@ https://juejin.cn/post/7058868160706904078
 
 https://juejin.cn/post/7088304364078497800
 unknow会对值进行检测，而类型any不会做检测操作，说白了，any类型可以赋值给任何类型，但unknow只能赋值给unknow类型和any类型
-
 unknown 类型只能被赋值给 any 类型和 unknown 类型本身 https://juejin.cn/post/6872111128135073806
-
-unknown 和 any 的主要区别是 unknown 类型会更加严格：在对 unknown 类型的值执行大多数操作之前，我们必须进行某种形式的检查。而在对 any 类型的值执行操作之前，我们不必进行任何检查。
-
+unknown 和 any 的主要区别是 unknown 类型会更加严格：在对 unknown 类型的值执行大多数操作之前，我们必须进行某种形式的检查。
+而在对 any 类型的值执行操作之前，我们不必进行任何检查。
 
 tsconfig.json 文件是用于描述将 TypeScript 转为 JavaScript 代码的配置文件。

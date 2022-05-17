@@ -102,7 +102,6 @@ JSON 传输大数据非常慢, 内存不能共享, 所有的传输都是新的�
 无法同步更新 UI, 比方在渲染列表的时候, 滑动大量加载数据, 屏幕可能会发生卡顿或闪烁
 RN 代码仓库很大, 库比较重, 所以修复 Bug 和开源社区贡献代码的效率也相应更慢
 因此解决 Bridge 的缺点主要遵从三个原则
-
   JS 和 Native 不用通信, 或者直接不走 Bridge
   JS 和 Native 减少通信, 在两端无法避免的情况下, 避免通信减少次数, 多个请求可以合成一个
   减少 JSON 的大小
@@ -230,8 +229,6 @@ https://juejin.cn/post/6951572207940141093
 babel-plugin-import 的使用
 其实社区还有一个非常实用的 babel 插件：babel-plugin-import，基本上它可以解决所有按需引用的问题。
 
-JSBundle 分包加载
-
 React Native 原理与实践
 https://juejin.cn/post/6916452544956858382
 
@@ -285,3 +282,12 @@ Native UI Component
 加载bundle文件
 •loadScriptFromAssets 
 •loadScriptFromFile
+
+JSBundle 分包加载
+React Native JSBundle拆包之原理篇
+http://www.javashuo.com/article/p-cwdjwivv-cs.html
+基于splitChunk的React-Native的分包与加载
+https://www.jianshu.com/p/ee8c0aa0e232
+
+最好的RN分包方案仍是facebook官方提供的metro bundle，
+使用metro bundle进行差分包进行热更新。

@@ -8,7 +8,6 @@ vite简介、原理及简单实现 https://blog.csdn.net/qq_34425377/article/det
 Vite工作原理和手写实现「基本完结」*******************
 https://www.bilibili.com/video/BV1dh411S7Vz?p=1
 
-
 1-2 什么是 Vite
 https://www.bilibili.com/video/BV1DS4y137xT/?spm_id_from=333.788
 
@@ -41,10 +40,9 @@ Vite 的特点
 
 Vite 到底是什么。主要原因可能是它主要包括两个部分，一个基于 ESM 的利用 esbuild 的开发服务器，另一个部分是基于 Rollup 的配置化的打包器。
 
-有点
+优点
 1.不需要打包， type = Module 
-2.按需加在
-
+2.按需加载
 
 Vite和webpack有什么区别⭐⭐⭐⭐
 
@@ -59,14 +57,12 @@ Webpack 会先打包，然后启动开发服务器，请求服务器时直接给
 Vite 将开发环境下的模块文件，就作为浏览器要执行的文件，而不是像 Webpack 那样进行打包合并。
 由于 Vite 在启动的时候是通过esbuild方式进行EsModel原生引入浏览器且按需更新。也就意味着不需要分析模块的依赖、不需要编译。因此启动速度非常快。
 当浏览器请求某个模块时，再根据需要对模块内容进行编译。
-
 链接：https://juejin.cn/post/6991724298197008421
 
-
-Vite 的使用限制
 Vite 的使用限制如下：
 
-面向支持 ES6 的现代浏览器，在生产环境下，编译目标参数 esBuildTarget 的默认值为 es2019，最低支持版本为 es2015（因为内部会使用 esbuild 处理编译压缩，用来获得最快的构建速度）。
+面向支持 ES6 的现代浏览器，在生产环境下，编译目标参数 esBuildTarget 的默认值为 es2019，最低支持版本为 es2015（因为内部会使用 esbuild 处理编译压缩，
+用来获得最快的构建速度）。
 对 Vue 框架的支持目前仅限于最新的 Vue 3 版本，不兼容更低版本。
 
 

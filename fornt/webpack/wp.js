@@ -9,7 +9,6 @@ https://www.webpackjs.com/contribute/writing-a-plugin/#%E5%88%9B%E5%BB%BA%E6%8F%
 怎样实现一个 webpack plugin *************************************
 https://www.bilibili.com/video/BV1Xh411z7Y7?spm_id_from=333.999.0.0 
 
-
 实现 loader | 手摸手带你实现打包器 仅需 80 行代码理解 webpack 的核心
 https://www.bilibili.com/video/BV1d5411d7kH/?spm_id_from=autoNext
 
@@ -31,4 +30,4 @@ class MyPlugin {
         // do something...
     })
   }
-} 
+}  

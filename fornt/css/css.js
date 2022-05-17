@@ -188,3 +188,9 @@ b.两个正值，取较大；一正一负相加；两个负值，取绝对值较
 
 即 calc( ) 函数，主要用于指定元素的长度，支持所有 CSS 长度单位，运算符前后都需要保留一个空格。
 比如： width: calc(100% - 50px);
+
+
+box-sizing： content-box， border-box https://blog.csdn.net/m0_37585915/article/details/78501760
+标准盒模型content-box, border = 20, padding = 10, width = 100
+总宽 = border + padding + width = 130
+border-box. border = 20, padding = 10, width = 100

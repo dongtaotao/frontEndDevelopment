@@ -356,7 +356,7 @@ ES5 中新增了一个 Object.getPrototypeOf() 方法，我们可以通过这个
 作者：TianTianUp
 链接：https://juejin.cn/post/6864398060702760968
 
-//===========================================================================
+//============================================================================
 function quickSort(arr) {
   if(arr.length <=1) return arr;
   let left = [];
@@ -375,22 +375,6 @@ function quickSort(arr) {
 }
 
 //===========================================================================
-function deepClone(obj, hash = new WeakMap()) {
-  if (obj instanceof RegExp) return new RegExp(obj)
-  if (obj instanceof Date) return new Date(obj)
-  if (obj === null || typeof obj !== 'object') return obj
-  if (hash.has(obj)) return obj
-
-  let res = new obj.constructor();
-  hash.set(obj, res)
-  for (let key in obj) {
-      if (obj.hasOwnProperty(key)) {
-          res[key] = deepClone(obj[key],hash)
-      }
-  }
-  return res
-}
-
 function currying(fn, ...args) {
   if (fn.length > args.length) {
       return (...newArgs) => currying(fn, ...args, ...newArgs)
@@ -474,19 +458,13 @@ function test(arr) {
     return res;
 }
 console.log(test([0, 0, 0,1, 1, 0,1, 0, 0]));
-作者：立里哩哩
 链接：https://juejin.cn/post/7017655711291146253
-
-来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/contiguous-array
-
-作者：LeetCode-Solution
 链接：https://leetcode-cn.com/problems/maximum-subarray/solution/zui-da-zi-xu-he-by-leetcode-solution/
 
 //===========================================================================
 手写 redux-thunk源码
 redux-thunk 可以利用 redux 中间件让 redux 支持异步的 action
-
 // 如果 action 是个函数，就调用这个函数
 // 如果 action 不是函数，就传给下一个中间件
 // 发现 action 是函数就调用
@@ -520,7 +498,6 @@ class EventEmitter {
       }
     }
   }
-
   emit(name) {
     if (this.cache[name]) {
       // 创建副本，如果回调函数内继续注册相同事件，会造成死循环
@@ -557,7 +534,6 @@ setTimeout(() => {
 
 JS算法之深度优先遍历(DFS)和广度优先遍历(BFS)
 https://segmentfault.com/a/1190000018706578
-
 const tree = {
     name: 'root',
     children: [
@@ -620,7 +596,7 @@ function deepFirstSearch(node) {
 }
 
 //===========================================================================
-类的所有属性默认都是 public，当然也可以直接申明出来
+1.类的所有属性默认都是 public，当然也可以直接申明出来
 2. 私有成员-private
 私有成员只能被类本身调用，而不能被类的实例调用，有不能被子类调用
 3. 受保护成员-protect
@@ -711,6 +687,7 @@ console.log(b.next()); // >  { value: undefined, done: true }
 async函数可以理解为内置自动执行器的Generator函数语法糖，它配合ES6的Promise近乎完美的实现了异
 步编程解决方案
 //===========================================================================
+
 ES6的class类必须用new命令操作，而ES5的构造函数不用new也可以执行。
 ES6的class类不存在变量提升，必须先定义class之后才能实例化，不像ES5中可以将构造函数写在实例化之后。
 ES5 的继承，实质是先创造子类的实例对象this，然后再将父类的方法添加到this上面。ES6 的继
@@ -822,8 +799,7 @@ ES6 Module 引入进行静态分析，故而编译的时候正确判断到底加
 静态分析程序流，判断那些模块和变量未被使用或者引用，进而删除对应代码
 //===========================================================================l/，
 7 介绍一下 webpack scope hosting
-作用域提升，将分散的模块划分到同一个作用域中，避免了代码的重复引入，
-有效减少打包后的代码体积和运行时的内存损耗；
+作用域提升，将分散的模块划分到同一个作用域中，避免了代码的重复引入，有效减少打包后的代码体积和运行时的内存损耗；
 https://blog.poetries.top/FE-Interview-Questions/docs/simply.html#_6-%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%B8%8B-tree-shaking
 
 //===========================================================================l/，

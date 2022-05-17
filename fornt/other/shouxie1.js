@@ -63,6 +63,7 @@ function Child(name, age) {
 // 核心代码②
 Child.prototype = Object.create(Parent.prototype);
 Child.prototype.constructor = Child;
+
 class Promise {
   constructor (fn) {
     // 三个状态
@@ -575,8 +576,7 @@ function dom2tree(dom) {
     return obj
 }
 
-15、将树结构转换为DOM
-
+15、将树结构转换为DOM  虚拟dom转真实dom
 题目描述：
 {
     tag: 'DIV',

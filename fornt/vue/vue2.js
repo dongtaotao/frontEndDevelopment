@@ -6,7 +6,6 @@ include 指定需要缓存的组件name集合，参数格式支持String, RegExp
 exclude 指定不需要缓存的组件name集合，参数格式和include一样。
 max 指定最多可缓存组件的数量,超过数量删除第一个。参数格式支持String、Number。
 原理
-
 keep-alive实例会缓存对应组件的VNode,如果命中缓存，直接从缓存对象返回对应VNode
 
 2021 Vue.js 面试题汇总及答案
@@ -18,10 +17,11 @@ https://leetcode-cn.com/problems/lru-cache/%EF%BC%8C%E8%80%83keep-alive%E7%AE%97
 实现 LRUCache 类：
 LRUCache(int capacity) 以 正整数 作为容量 capacity 初始化 LRU 缓存
 int get(int key) 如果关键字 key 存在于缓存中，则返回关键字的值，否则返回 -1 。
-void put(int key, int value) 如果关键字 key 已经存在，则变更其数据值 value ；如果不存在，则向缓存中插入该组 key-value 。如果插入操作导致关键字数量超过 capacity ，则应该 逐出 最久未使用的关键字。
+void put(int key, int value) 如果关键字 key 已经存在，则变更其数据值 value ；
+如果不存在，则向缓存中插入该组 key-value 。如果插入操作导致关键字数量超过 capacity ，则应该 逐出 最久未使用的关键字。
 
 class LRU {
-    constructor(k) {
+    constructor(max) {
         this.max = max
         this.cache = new Map()
     }
@@ -47,12 +47,12 @@ class LRU {
 
 Vue 如何清除浏览器缓存？
 项目打包的时候给每个打包文件加上 hash 值，一般是在文件后面加上时间戳； 
-在 html 文件中加入 meta 标签，content属性设置为no-cache; 在后端服务器中进行禁止缓存设置。
+在 html 文件中加入 meta 标签，content属性设置为no-cache; 
+在后端服务器中进行禁止缓存设置。
 
 50 说一下v-model的原理
 v-model本质就是一个语法糖，可以看成是value + input方法的语法糖。 可以通过model属性的prop和event属性来进行自定义。原生的v-model，
 会根据标签的不同生成不同的事件和属性
-
 {/* <input v-model='searchData'> */}
 等价于
 
@@ -62,15 +62,13 @@ v-model本质就是一个语法糖，可以看成是value + input方法的语法
 > */}
 当在input元素中使用v-model实现双数据绑定，其实就是在输入的时候触发元素的input事件，通过这个语法糖，实现了数据的双向绑定
 
-
 47. 为什么Vuex要分为Action和Mutation，Mutation为啥只能是同步的？
 区分 actions 和 mutations 并不是为了解决竞态问题，而是为了能用 devtools 追踪状态变化。
 vuex 真正限制你的只有 mutation 必须是同步的，同步的意义在于这样每一个 mutation 执行完成后都可以对应到一个新的状态，这样 devtools 就可
 以打个 snapshot 存下来，然后就可以随便 time-travel 了。
 链接：https://juejin.cn/post/6905913905152065544 
 
-
-Vue 如何清除浏览器缓存？
+Vue 如何清除浏览器缓存？=====================
 在HTTP协议中，只有后端返回 expires 或 Cache-Control:max-age=XXX， 前端才缓存。但在浏览器中，默认会对 html css js 等静态文件、以及重定向进行缓存，
 最常用的方法就是，在打包的时候给每个打包文件加上hash 值，一般是在文件后面加上时间戳或者随机数
 在脚本加载时加入一个时间戳，修改 webpack.prod.conf.js 文件。(未使用过该方法，需要实践)
@@ -92,7 +90,6 @@ https://juejin.cn/column/7054086173311893512
 watch可以监听computed中的属性
 
 vue的nextTick原理
-
 nextTick理解
 因为vue更新dom是一个异步操作，并不是数据变化会马上更新，会进入一个异步队列，等全部数据变化之后才渲染页面。因此要基于新的DOM操作时，需要用到这个函数。
 
@@ -101,7 +98,6 @@ nextTick理解
 
 36. Vue的性能优化有哪些
 （1）编码阶段
-
 尽量减少data中的数据，data中的数据都会增加getter和setter，会收集对应的watcher
 v-if和v-for不能连用
 如果需要使用v-for给每项元素绑定事件时使用事件代理
@@ -115,12 +111,10 @@ key保证唯一
 图片懒加载
 
 （2）SEO优化
-
 预渲染
 服务端渲染SSR
 
 （3）打包优化
-
 压缩代码
 Tree Shaking/Scope Hoisting
 使用cdn加载第三方模块
@@ -133,17 +127,13 @@ sourceMap优化
 骨架屏
 PWA
 还可以使用缓存(客户端缓存、服务端缓存)优化、服务端开启gzip压缩等。
-
-作者：CUGGZ
 链接：https://juejin.cn/post/6919373017218809864
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 
 https://jackniu81.github.io/2021/04/12/Vue-js-Interview-Questions-and-Answers-2021/
 
 Vue.js 双向绑定的原理
-Vue.js 2.0 采用数据劫持（Proxy 模式）结合发布者-订阅者模式（PubSub 模式）的方式，通过 Object.defineProperty()来劫持各个属性的 setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。
+Vue.js 2.0 采用数据劫持（Proxy 模式）结合发布者-订阅者模式（PubSub 模式）的方式，通过 Object.defineProperty()来劫持各个属性的 setter，getter，
+在数据变动时发布消息给订阅者，触发相应的监听回调。
 每个组件实例都有相应的watcher程序实例，它会在组件渲染的过程中把属性记录为依赖，
 之后当依赖项的setter被调用时，会通知watcher重新计算，从而致使它关联的组件得以更新。
 Vue.js 3.0, 放弃了Object.defineProperty ，使用更快的ES6原生 Proxy (访问对象拦截器, 也称代理器)
@@ -180,3 +170,7 @@ vue-router有哪几种导航钩子？
 全局导航钩子：router.beforeEach(to,from,next)
 组件内的钩子beforeRouteEnter (to, from, next) beforeRouteUpdate (to, from, next) beforeRouteLeave (to, from, next)
 单独路由独享组件 beforeEnter: (to, from, next)
+
+
+什么是动态组件？动态组件的钩子如何执行？ https://juejin.cn/post/7064368176846340132#heading-95
+让多个组件使用同一个挂载点，并动态切换，这就是动态组件

@@ -63,12 +63,12 @@ vue3：改用 proxy ，可直接监听对象数组的变化
 
 mapState, mapGetters, mapActions, mapMutations
 
-既然 Vue 通过数据劫持可以精准探测数据变化,为什么还需要虚拟 DOM 进行 diff 检测差异?
+既然 Vue 通过数据劫持可以精准探测数据变化,为什么还需要虚拟 DOM 进行 diff 检测差异? 
 考点: Vue 的变化侦测原理
 前置知识: 依赖收集、虚拟 DOM、响应式系统
 现代前端框架有两种方式侦测变化，一种是pull，一种是push
 pull: 其代表为React，我们可以回忆一下React是如何侦测到变化的,我们通常会用setStateAPI显式更新，然后React会进行一层层的Virtual Dom
-Diff操作找出差异，
+  Diff操作找出差异，
   然后Patch到DOM上，React从一开始就不知道到底是哪发生了变化，只是知道「有变化了」，然后再进行比较暴力的Diff操作查找「哪发生变化了」，
   另外一个代表就是Angular的脏检查操作。
 push: Vue的响应式系统则是push的代表，当Vue程序初始化的时候就会对数据data进行依赖的收集，一但数据发生变化,响应式系统就会立刻得知。
@@ -76,6 +76,7 @@ push: Vue的响应式系统则是push的代表，当Vue程序初始化的时候�
   一但我们的绑定细粒度过高就会产生大量的Watcher，这会带来内存以及依赖追踪的开销，而细粒度过低会无法精准侦测变化,因此Vue的设计是选择中等细粒度的
   方案,在组件级别进行push侦测的方式,也就是那套响应式系统,通常我们会第一时间侦测到发生变化的组件,然后在组件内部进行Virtual Dom Diff获取更
   加具体的差异，而Virtual Dom Diff则是pull操作，Vue是push+pull结合的方式进行变化侦测的。
+
 Vue和React的视图更新机制对比
 https://www.cnblogs.com/chenwenhao/p/11258895.html
 
@@ -86,7 +87,6 @@ methods是一个方法，它可以接受参数，而computed 不能，computed �
 件的 data。
 
 vuejs与angularjs以及react的区别？
-
 与AngularJS的区别
 相同点：
 都支持指令：内置指令和自定义指令。
@@ -164,7 +164,6 @@ ssr 不支持 beforeMount 、mounted 钩子函数，所以放在 created 中有�
 当你修改数组的长度时，例如：vm.items.length = newLength
 
 为了解决第一个问题，Vue 提供了以下操作方法：
-
 // Vue.set
 Vue.set(vm.items, indexOfItem, newValue)
 // vm.$set，Vue.set的一个别名
@@ -173,7 +172,6 @@ vm.$set(vm.items, indexOfItem, newValue)
 vm.items.splice(indexOfItem, 1, newValue)
 
 为了解决第二个问题，Vue 提供了以下操作方法：
-
 // Array.prototype.splice
 vm.items.splice(newLength)
 链接：https://juejin.cn/post/7002886646840426527
@@ -189,7 +187,6 @@ select 字段将 value 作为 prop 并将 change 作为事件。
 以 input 表单元素为例：
 <input v-model='something'>
 相当于
-
 <input v-bind:value="something" v-on:input="something = $event.target.value">
 复制代码
 如果在自定义组件中，v-model 默认会利用名为 value 的 prop 和名为 input 的事件，如下所示：
@@ -207,7 +204,6 @@ methods: {
      this.$emit('input', '小红')
   },
 }
-
 链接：https://juejin.cn/post/7002886646840426527
 
 https://vue3js.cn/interview/vue/vue3_vue2.html#%E5%93%AA%E4%BA%9B%E5%8F%98%E5%8C%96 
@@ -217,7 +213,6 @@ Vue3的新特性，如下：
 更易维护
 更接近原生
 更易使用
-
 
 vue长列表优化-虚拟滚动
 https://juejin.cn/post/7063898544008069127 

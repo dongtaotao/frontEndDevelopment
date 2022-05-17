@@ -12,7 +12,7 @@ RN页面跳转原生
 
 Android主动向JS端传递事件、数据
 JS端主动向Android询问获取事件、数据
-RN调用Android需要module名和方法名相同，而Android调用RN只需要方法名相同。
+RN调用Android需要module名和方法名相同，而Android调用RN只需要方法名相同。 
 （1）RCTDeviceEventEmitter 事件方式
 ​ 优点：可任意时刻传递，Native主导控制。
 （2）Callback 回调方式
@@ -113,14 +113,12 @@ useNativeDrive: true 开启原生动画驱动。
 
 react-devtools 
 
-
 【React Native】深入理解Native与RN通信原理 https://blog.csdn.net/weixin_36185028/article/details/121579850
 
 https://cloud.tencent.com/developer/article/1113848
 
 NativeModules
 native调用js  js调用naitve
-
 
 RN系列：Android原生与RN如何交互通信
 https://www.jianshu.com/p/79edec250158 🔥🔥🔥🔥🔥🔥🔥
@@ -181,8 +179,7 @@ RN中接收原生消息：
   }
 
 
-
-  RN调用原生
+RN调用原生
   'use strict';
 
   import React, { Component } from 'react';
@@ -199,13 +196,11 @@ RN中接收原生消息：
   let title = 'React Native界面';
   
   class reactNative extends Component {
-  
       /**加载完成*/
       componentWillMount() {
         let result = NativeModules.MyNativeModule.Constant;
         console.log('原生端返回的常量值为：' + result);
       }
-  
      /**
       * 原生调用RN
       */

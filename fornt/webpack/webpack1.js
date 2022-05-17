@@ -135,8 +135,8 @@ webpack性能优化-产出代码
 什么是tree-shaking
 
 Es6module 和 commonjs区别
-Es6module静态引入， 编译时映入
-commonjs动态引入，执行时映入
+Es6module静态引入， 编译时引入
+commonjs动态引入，执行时引入
 只有es6module才可以静态分析，实现tree-shaking
 
 scope Hosting
@@ -254,8 +254,8 @@ less-loader / sass-loader: css预处理器，在 css 中新增了许多语法，
 链式调用: Webpack 会按顺序链式调用每个 Loader；
 统一原则: 遵循 Webpack 制定的设计规则和结构，输入与输出均为字符串，各个 Loader 完全独立，即插即用；
 3. Plugin
-插件系统是 Webpack 成功的一个关键性因素。在编译的整个生命周期中，Webpack 会触发许多事件钩子
-，Plugin 可以监听这些事件，根据需求在相应的时间点对打包内容进行定向的修改。
+插件系统是 Webpack 成功的一个关键性因素。在编译的整个生命周期中，Webpack 会触发许多事件钩子，
+Plugin 可以监听这些事件，根据需求在相应的时间点对打包内容进行定向的修改。
 一个最简单的 plugin 是这样的:
 class Plugin{
   	// 注册插件时，会调用 apply 方法

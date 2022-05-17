@@ -1,5 +1,5 @@
 如何实现扫码登录功能？  
-https://juejin.cn/post/7021515145335554079 
+https://juejin.cn/post/7021515145335554079  
 访问PC端二维码生成页面，PC端请求服务端获取二维码ID
 服务端生成相应的二维码ID，设置二维码的过期时间，状态等。 
 PC获取二维码ID，生成相应的二维码。
@@ -299,6 +299,7 @@ will-change
 注意:用 history.pushState()或者 history.replaceState()不会触发 popstate 事件
 popstate 事件会在点击后退、前进按钮(或调用 history.back()、history.forward()、history.go()方法)
 时触发
+
 //================================================================
 1、CommonJS 模块输出的是一个值的拷贝，ES6 模块输出的是值的引用。
 2、CommonJS 模块是运行时加载，ES6 模块是编译时输出接口（静态编译）。

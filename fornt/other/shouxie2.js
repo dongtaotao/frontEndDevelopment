@@ -34,12 +34,12 @@ https://www.pzijun.cn/algorithms/list/8.html#%E8%A7%A3%E6%B3%95%EF%BC%9A%E6%8E%9
 二叉树的最近公共祖先
 
 const lowestCommonAncestor = function(root, p, q) {
-    if(root == null || root == p || root == q) return root
-    const left = lowestCommonAncestor(root.left, p, q)
-    const right = lowestCommonAncestor(root.right, p, q)
-    if(left === null) return right
-    if(right === null) return left
-    return root
+  if(root == null || root == p || root == q) return root
+  const left = lowestCommonAncestor(root.left, p, q)
+  const right = lowestCommonAncestor(root.right, p, q)
+  if(left === null) return right
+  if(right === null) return left
+  return root
 };
 
 平衡二叉树
@@ -405,7 +405,6 @@ function ifMatch(left:string, right:string): boolean{
   return res;
 };
 
-
 增量元素之间的最大差值
 给你一个下标从 0 开始的整数数组 nums ，该数组的大小为 n ，请你计算 nums[j] - nums[i] 能求得的 最大差值 ，其中 0 <= i < j < n 且 nums[i] < nums[j] 。
 
@@ -514,7 +513,6 @@ class SingleClass {
 
   static getInstance(name) {
     if (this.instance) return this.instance
-
     this.instance = new SingleClass(name)
     return this.instance
   }
@@ -536,7 +534,6 @@ console.log( Jack === Tom ); // true
 思路
 
 首先输入
-
 1 2 3
 4 5 6
 7 8 9
@@ -603,7 +600,6 @@ var trailingZeroes = function (n) {
 https://juejin.cn/post/6844904161830502407
 
 剑指 Offer 61. 扑克牌中的顺子 https://leetcode-cn.com/problems/bu-ke-pai-zhong-de-shun-zi-lcof/
-
 
 两数之和
 题目描述：在数组上定义一个方法 findSum(target)，要求找出数组中的两个不同位置的数，使得其和为 target。例如：

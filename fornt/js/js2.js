@@ -47,7 +47,7 @@ JSONP 的原理很简单，就是利用 <script>标签没有跨域限制的漏�
 	}
 </script>
 
-// https://www.imooc.com/learn/1289   🔥🔥🔥实战
+// https://www.imooc.com/learn/1289   🔥🔥🔥实战 JSON跨域
 
 function jsonp(url, jsonpCallback, success) {
     let script = document.createElement("script");
@@ -157,7 +157,7 @@ function Parent (name, actions) {
   this.actions = actions;
 }
 Parent.prototype.play = function () {
-console.log(`${this.name} is playing`)
+  console.log(`${this.name} is playing`)
 }
 
 function Child () {

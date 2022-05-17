@@ -11,7 +11,7 @@ https://www.infoq.cn/article/kve8xtrs-upphptq5luz
 https://blog.gaogangsever.cn/javascript/performance/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E5%AE%9E%E8%B7%B5.html#%E4%B8%80%E3%80%81%E4%BB%A3%E7%A0%81%E5%B1%82%E9%9D%A2%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96
 
 //==============================================================================================
-react性能优化---------
+react性能优化----------
 定义 Render 过程
 本文为了叙述方便， 将调和阶段中「计算目标虚拟 DOM 结构」过程称为 Render 过程 。触发 React 组件的 Render 过程目前有三种方式，
 分别为 forceUpdate、State 更新、父组件 Render 触发子组件 Render 过程。
@@ -278,7 +278,7 @@ SPA项目，通过import或者require做路由按需（减小资源大小）
 链接：https://juejin.cn/post/6844904142289256461
 
 服务端渲染与客户端渲染 优缺点
-https://www.csdn.net/tags/NtzakgwsODExOTMtYmxvZwO0O0OO0O0O.html
+https://www.csdn.net/tags/NtzakgwsODExOTMtYmxvZwO0O0OO0O0O.html 
 
 Vue项目性能优化
 https://blog.csdn.net/sinat_17775997/article/details/107492421
