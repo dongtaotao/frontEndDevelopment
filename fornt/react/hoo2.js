@@ -13,6 +13,9 @@ https://juejin.cn/post/6844903955923746830
 react-content-loader分析骨架屏svg动画的实现 🔥🔥  骨架屏
 https://juejin.cn/post/7094558405959876644
 
+immutable.js教程
+https://www.bilibili.com/video/BV1EE411e7kL?p=11&spm_id_from=pageDriver
+
 React 开发性能监测插件-Why Did You Render http://www.javashuo.com/article/p-unzhjpqa-nw.html
 
 推荐几个 React 性能优化工具

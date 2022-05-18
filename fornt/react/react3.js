@@ -353,4 +353,4 @@ MyComponent.jsexport default class MyComponent extends React.Component {
 resolve的模块的default属性就是组件MyComponent本身。
  
 Link 的本质也是a 标签。只不过在Link 中禁用了 a 标签的默认事件，改用了history对象提供的方法进行跳转。
-https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/135 
+https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/135  

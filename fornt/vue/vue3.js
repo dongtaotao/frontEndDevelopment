@@ -268,3 +268,13 @@ Vue事件绑定原理说一下
 
 52 Vue模版编译原理知道吗，能简单说一下吗？
 https://interview2.poetries.top/excellent-docs/7-Vue.html#_51-vue%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A%E5%8E%9F%E7%90%86%E8%AF%B4%E4%B8%80%E4%B8%8B
+
+
+十一、Keep-alive的实现原理
+原理：
+Vue.js内部将DOM节点抽象成了一个个的VNode节点，keep-alive组件的缓存也是基于VNode节点的而不是直接存储DOM结构。它将满足条件（pruneCache与pruneCache）的组件在cache对象中缓存起来，在需要重新渲染的时候再将vnode节点从cache对象中取出并渲染。
+
+常用的两个属性 include/exclude，允许组件有条件的进行缓存。
+两个生命周期 activated/deactivated，用来得知当前组件是否处于活跃状态。
+keep-alive的中还运用了 LRU(最近最少使用) 算法，选择最近最久未使用的组件予以淘汰
+链接：https://juejin.cn/post/7088305435370848263
