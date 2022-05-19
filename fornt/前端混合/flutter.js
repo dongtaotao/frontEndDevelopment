@@ -180,7 +180,7 @@ Flutter 技术调研 https://fengs.online/2019/02/flutter-research/
 参考资料
 
 1、Flutter优点
-A、混合开发中，最接近原生开发的框架；
+A、混合开发中，最接近原生开发的框架； 
 B、性能强大，流畅；
 C、优秀的路由设计；
 D、优秀的动画设计；

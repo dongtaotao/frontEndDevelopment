@@ -131,7 +131,7 @@ Vuex使用vue中的reactive方法将state设置为响应式，原理和Vue组件
 import {reactive} from 'vue';
 
 store._state = reactive({
-    data: state
+    data: state 
 });
 
 4. 总结

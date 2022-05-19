@@ -78,7 +78,7 @@ Node 的 Event Loop: 6个阶段
 4.poll: 等待回调
   执行回调
   执行定时器
-  如有到期的setTimeout / setInterval， 则返回 timer 阶段
+  如有到期的setTimeout / setInterval， 则返回 timer 阶段 
   如有setImmediate，则前往 check 阶段
 5.check
   执行setImmediate

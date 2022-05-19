@@ -410,3 +410,26 @@ function getStrMaxCount1(str){
 }
 // {count: 7, str: 'e'}
 console.log(getStrMaxCount1(str)); 
+
+
+多维数组的全排列问题
+https://juejin.cn/post/7087760448434470926
+[[a,b],[1,2]]=== [a1,a2,b1,b2]
+const permutate = (arr) => {
+  // res为第一个数组
+  let res = arr[0].slice();
+
+  // 从第二个数组开始遍历
+  for (let i = 1; i < arr.length; i++) {
+      const pre = res.slice();
+      res = [];
+      pre.forEach(item => {
+          arr[i].forEach(item2 => {
+              res.push(item + item2);
+          })
+      })
+  }
+  return res
+}
+
+permutate([['A','B'], ['a','b'], [1, 2]])

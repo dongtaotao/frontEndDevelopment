@@ -132,7 +132,7 @@ JavaScriptCore 是 JavaScript 引擎，通常会被叫做虚拟机，专门设�
 JS Engine
 React Native 需要一个 JS 的运行环境，因为 React Native 会把应用的 JS 代码编译成一个 JS
 文件（x x.bundle），React Native 框架的目标就是解释运行这个 JS 脚本文件，如果是 Native
- 拓展的 API，则直接通过 bridge 调用 Native 方法，最基础的比如绘制 UI 界面，映射
+ 拓展的 API，则直接通过 bridge 调用 Native 方法，最基础的比如绘制 UI 界面，映射 
   Virtual DOM 到真实的 UI 组件中。
 
 (在 React Native 里所有 Native 和 JS 互调都是通过 Bridge 层的几个最基础的方法衔接的)

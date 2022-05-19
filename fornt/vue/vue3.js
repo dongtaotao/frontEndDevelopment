@@ -11,6 +11,9 @@ https://juejin.cn/post/7075130658820980772
 完美回答之实现VUE数据绑定的原理
 https://www.bilibili.com/video/BV1tL4y1z7Ws?spm_id_from=333.337.search-card.all.click
 
+Vue 开发必须知道的 36 个技巧【近1W字】
+https://juejin.cn/post/6844903959266590728
+
 Composition API 是什么
 
 setup 函数是一个新的Vue组件， 是Composition API 入口
@@ -123,7 +126,7 @@ nextTick主要使用了宏任务和微任务。
 vm.$set 的实现原理是：
 如果目标是数组，直接使用数组的 splice 方法触发相应式；
 如果目标是对象，会先判读属性是否存在、对象是否是响应式，最终如果要对属性进行响应式处理，
-则是通过调用 defineReactive 方法进行响应式处理（ defineReactive 方法就是 Vue 在初始化对象时，
+则是通过调用 defineReactive 方法进行响应式处理（ defineReactive 方法就是 Vue 在初始化对象时 ，
 给对象属性采用 Object.defineProperty 动态添加 getter 和 setter 的功能所调用的方法）
 
 Vue事件绑定原理是什么？=============
@@ -190,9 +193,6 @@ Watcher订阅者是Observer和Compile之间通信的桥梁，主要做的事情�
 MVVM作为数据绑定的入口，整合Observer、Compile和Watcher三者，通过Observer来监听自己的model数据变化，
 通过Compile来解析编译模板指令，最终利用Watcher搭起Observer和Compile之间的通信桥梁，
 达到数据变化 -> 视图更新；视图交互变化(input) -> 数据model变更的双向绑定效果
-
-Vue 开发必须知道的 36 个技巧【近1W字】
-https://juejin.cn/post/6844903959266590728
 
 Vue的路由模式,实现方式？
 
@@ -272,7 +272,8 @@ https://interview2.poetries.top/excellent-docs/7-Vue.html#_51-vue%E4%BA%8B%E4%BB
 
 十一、Keep-alive的实现原理
 原理：
-Vue.js内部将DOM节点抽象成了一个个的VNode节点，keep-alive组件的缓存也是基于VNode节点的而不是直接存储DOM结构。它将满足条件（pruneCache与pruneCache）的组件在cache对象中缓存起来，在需要重新渲染的时候再将vnode节点从cache对象中取出并渲染。
+Vue.js内部将DOM节点抽象成了一个个的VNode节点，keep-alive组件的缓存也是基于VNode节点的而不是直接存储DOM结构。
+它将满足条件（pruneCache与pruneCache）的组件在cache对象中缓存起来，在需要重新渲染的时候再将vnode节点从cache对象中取出并渲染。
 
 常用的两个属性 include/exclude，允许组件有条件的进行缓存。
 两个生命周期 activated/deactivated，用来得知当前组件是否处于活跃状态。
