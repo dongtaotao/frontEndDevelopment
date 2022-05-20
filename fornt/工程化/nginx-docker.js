@@ -1,3 +1,5 @@
+import { config } from "process"
+
 给前端的docker 10分钟真 · 快速入门指南 ----------------------------------------------------- *******🔥🔥🔥重要
 https://juejin.cn/post/7050304120082661407
 实战：部署vue2和vue3项目
@@ -214,3 +216,19 @@ docker-compose.yml
 https://mp.weixin.qq.com/s/u-XbBwGxHrhJGiMiiqz26w
 谁说前端不需要懂-Nginx反向代理与负载均衡
 https://mp.weixin.qq.com/s/o2Us4Zj6DO2NHGQVaHIa1A
+
+前端Nginx那些事
+https://juejin.cn/post/6844904102447546382
+功能：
+1.负载均衡
+2.反向代理
+3.https配置
+
+常见配置
+1.IP白名单
+2.移动端PC端识别
+3.配置跨域请求
+4.配置gzip
+
+如何使用
+配置nginx.config

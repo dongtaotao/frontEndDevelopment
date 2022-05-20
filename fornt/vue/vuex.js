@@ -4,7 +4,7 @@ Vuex是通过全局注入store对象，来实现组件间的状态共享。
 
 nextTick 使用场景和原理
 nextTick 中的回调是在下次 DOM 更新循环结束之后执行的延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。
-主要思路就是采用微任务优先的方式调用异步方法去执行 nextTick 包装的方法。
+主要思路就是采用微任务优先的方式调用异步方法去执行 nextTick 包装的方法。 
 
 Vuex的设计思想 https://www.cnblogs.com/lguow/p/13753900.html
   Vuex的设计思想，借鉴了Flux、Redux，将数据存放到全局的store，再将store挂载到每个vue实例组件中，利用Vue.js的细粒度数据响应机制来进行高效的状态更新。
@@ -101,7 +101,7 @@ export default {
 
 使用Vuex创建store，再将store注入Vue中。Vue组件中就可以通过this.$store来访问到store。
 Vue使用computed获取$store中的状态。
-Vue通过store.commit和store.commit和store.commit和store.action来修改状态。
+Vue通过store.commit和store.action来修改状态。
 
 那么我们需要问两个问题：
 

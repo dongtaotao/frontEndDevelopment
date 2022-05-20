@@ -473,4 +473,70 @@ function dfs(root: TreeNode | null, prevSum: number): number {
     }
  
 }
- 
+
+合并二叉树
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root1
+ * @param {TreeNode} root2
+ * @return {TreeNode}
+ */
+ var mergeTrees = function(root1, root2) {
+    // 递归一定要有结束条件
+    // 根据题目中不为 null 的节点将直接作为新二叉树的节点可以写出
+    if(!root1){
+        return root2;
+    }
+    if(!root2){
+        return root1;
+    }
+    let result = new TreeNode(); 
+    result.val = root1.val+root2.val;
+    result.left = mergeTrees(root1.left,root2.left);
+    result.right = mergeTrees(root1.right,root2.right);
+    // 返回一个新节点
+    return result;
+};
+
+
+剑指Offer——圆圈中最后剩下的数字 https://juejin.cn/post/6948663620267933709
+var lastRemaining = function(n, m) {
+    let arr = []
+    for (let i = 0;i < n;i++) {
+        arr.push(i);
+    }
+    let flag = 0;
+    while (arr.length !== 1) {
+        flag = (flag + m - 1) % arr.length;
+        arr.splice(flag,1);
+    }
+    
+    return arr[0];
+};
+
+
+二叉树的最近公共祖先
+var lowestCommonAncestor = function(root, p, q) {
+    // 如果节点为空 返回null
+    if (!root ) return null;
+
+    if (root === p) return p;
+
+    if (root === q) return q;
+
+    let x = lowestCommonAncestor(root.left,p,q);
+    let y = lowestCommonAncestor(root.right,p,q);
+
+    if (x && y) {
+        return root;
+    } else {
+        return x || y;
+    }
+};

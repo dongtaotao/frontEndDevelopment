@@ -279,3 +279,98 @@ Vue.js内部将DOM节点抽象成了一个个的VNode节点，keep-alive组件�
 两个生命周期 activated/deactivated，用来得知当前组件是否处于活跃状态。
 keep-alive的中还运用了 LRU(最近最少使用) 算法，选择最近最久未使用的组件予以淘汰
 链接：https://juejin.cn/post/7088305435370848263
+
+
+一、$nextTick有什么用？
+
+Vue是异步渲染的框架。
+data改变之后，DOM不会立刻渲染。
+$nextTick会在DOM渲染之后被触发，以获取最新的DOM节点。
+连续多次的异步渲染，$nextTick只会执行最后一次渲染后的结果。
+
+二、$nextTick的原理
+
+$nextTick主要通过事件循环中的任务队列的方式异步执行传入的回调函数，
+首先会判断当前的执行环境是否支持Promise，MutationObserver，setImmediate，setTimeout。
+如果支持则创建对应的异步方法，这里的MutationObserver并不是监听DOM，而是利用其微任务特性。
+需要注意的是更新DOM的方法也是通过nextTick进行调用的，因此就可以实现传入$.nextTick的回调函数在DOM渲染完成之后执行这些微任务。
+
+三、循环调用的话nextTick里面有容错机制吗？
+
+多次调用 nextTick 会将方法存入队列 callbacks 中，通过这个异步方法清空当前队列。
+链接：https://juejin.cn/post/7084431185358618631
+
+
+
+Vue的CSS隔离
+使用：在<style> 标签加上scoped就可以实现样式隔离，只会作用在当前组件
+原理：chrome上观察可以看见，后面多了个属性类似：[data-v-02asd93]，后面的一串字符是hash值，作为唯一标识
+实现：处理vue文件同时需要vue-loader和VueLoaderPlugin插件，缺一不可，通过hash-sum模块计算出源文件对应的唯一的cacheKey
+链接：https://juejin.cn/post/7088305435370848263
+
+Keep-alive的实现原理
+原理：
+Vue.js内部将DOM节点抽象成了一个个的VNode节点，keep-alive组件的缓存也是基于VNode节点的而不是直接存储DOM结构。
+它将满足条件（pruneCache与pruneCache）的组件在cache对象中缓存起来，在需要重新渲染的时候再将vnode节点从cache对象中取出并渲染。
+
+常用的两个属性 include/exclude，允许组件有条件的进行缓存。
+两个生命周期 activated/deactivated，用来得知当前组件是否处于活跃状态。
+keep-alive的中还运用了 LRU(最近最少使用) 算法，选择最近最久未使用的组件予以淘汰
+链接：https://juejin.cn/post/7088305435370848263
+
+生命周期钩子是如何实现的
+Vue 的生命周期钩子核心实现是利用发布订阅模式先把用户传入的的生命周期钩子订阅好（内部采用数组的方式存储）然后在创建组件实例的过程中会依次执行对应的钩子方法（发布）
+export function callHook(vm, hook) {
+    // 依次执行生命周期对应的方法
+    const handlers = vm.$options[hook];
+    if (handlers) {
+      for (let i = 0; i < handlers.length; i++) {
+        handlers[i].call(vm); //生命周期里面的this指向当前实例
+      }
+    }
+  }
+  
+  // 调用的时候
+  Vue.prototype._init = function (options) {
+    const vm = this;
+    vm.$options = mergeOptions(vm.constructor.options, options);
+    callHook(vm, "beforeCreate"); //初始化数据之前
+    // 初始化状态
+    initState(vm);
+    callHook(vm, "created"); //初始化数据之后
+    if (vm.$options.el) {
+      vm.$mount(vm.$options.el);
+    }
+  };
+
+Vue 模板编译原理
+Vue 的编译过程就是将 template 转化为 render 函数的过程 分为以下三步
+第一步是将 模板字符串 转换成 element ASTs（解析器）
+第二步是对 AST 进行静态节点标记，主要用来做虚拟DOM的渲染优化（优化器）
+第三步是 使用 element ASTs 生成 render 函数代码字符串（代码生成器）
+
+https://vue3js.cn/interview/vue3/goal.html#%E4%B8%89%E3%80%81%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88
+vue3在兼顾vue2的options API的同时还推出了composition API，大大增加了代码的逻辑组织和代码复用能力
+这里当然说的就是composition API，其两大显著的优化：
+优化逻辑组织
+优化逻辑复用
+#
+相同功能的代码编写在一块，而不像options API那样，各个功能的代码混成一块
+
+逻辑复用
+在vue2中，我们是通过mixin实现功能混合，如果多个mixin混合，会存在两个非常明显的问题：命名冲突和数据来源不清晰
+
+Composition API 可以说是Vue3的最大特点，那么为什么要推出Composition Api，解决了什么问题？
+
+通常使用Vue2开发的项目，普遍会存在以下问题：
+代码的可读性随着组件变大而变差
+每一种代码复用的方式，都存在缺点
+TypeScript支持有限
+
+https://vue3js.cn/interview/vue3/composition.html#%E6%AD%A3%E6%96%87
+小结
+在逻辑组织和逻辑复用方面，Composition API是优于Options API
+因为Composition API几乎是函数，会有更好的类型推断。
+Composition API对 tree-shaking 友好，代码也更容易压缩
+Composition API中见不到this的使用，减少了this指向不明的情况
+如果是小型组件，可以继续使用Options API，也是十分友好的

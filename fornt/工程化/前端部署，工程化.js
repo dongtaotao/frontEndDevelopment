@@ -1,3 +1,22 @@
+GitHub Actions自动化部署前端项目指南  视频  🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+https://zhuanlan.zhihu.com/p/433426848
+https://www.bilibili.com/video/BV1BP4y1G7NR?spm_id_from=333.337.search-card.all.click
+
+前端Vue项目打包部署实战教程 ========== 🔥🔥🔥🔥🔥🔥
+https://zhuanlan.zhihu.com/p/431796992
+https://www.bilibili.com/video/BV1eU4y1M7D7?spm_id_from=333.999.0.0
+小猪课堂 https://space.bilibili.com/493520625/video?tid=0&page=1&keyword=&order=pubdate
+解决刷新路由404问题
+当我们切换路由后，然后在刷新页面，会出现404的情况。
+这是因为我们vue项目采用了history的路由方式，至于原因主要是vue是单页面应用，细节部分大家可自行下来了解。
+解决问题的办法：
+（1）将路由模式改为hash
+（2）修改nginx配置：
+location / {
+  try_files $uri $uri/ /index.html; ---解决页面刷新404问题
+}　
+
+
 1.React从开始搭建到项目部署到服务器
 https://blog.csdn.net/qq_21895821/article/details/90447437?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.no_search_link&spm=1001.2101.3001.4242.1
 
@@ -47,6 +66,9 @@ https://juejin.cn/post/6995588010934796302#heading-0
 前端自动化：Node 命令行前端自动构建发布系统
 https://juejin.cn/post/6844903609440665607
 
+前端工程化之CICD那点破事
+https://juejin.cn/post/6870325047324573710
+
 //=======================================================
 
 前端CI/CD,从零开始,彻底弄懂前端自动化构建和部署(CD篇)
@@ -81,11 +103,11 @@ centos+jenkins+nginx+gitlab前端自动化部署全记录 https://fe.ecool.fun/a
 https://mp.weixin.qq.com/s?__biz=Mzk0NTI2NDgxNQ==&mid=2247483730&idx=1&sn=5298f4841241767ca427bef4137b1680&chksm=c3194092f46ec9841051f2c5ea52688db07a50def205e997a6a6b0c1cf1b3c8517267857a156#rd
 
 
-
 前端开发者应该知道的 Centos/Docker/Nginx/Node/Jenkins 操作(🍡 长文)
 https://juejin.cn/post/6951684431597797389
 
-
+Jenkins+github 前端自动化部署
+https://segmentfault.com/a/1190000010200161
 
 下载：从Github下载代码，然后本地npm install
 开发：npm run dev本地修改代码，测试

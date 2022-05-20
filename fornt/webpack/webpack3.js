@@ -7,6 +7,13 @@ https://juejin.cn/post/7060688758370205733
 webpack源码分析
 https://juejin.cn/column/7004269262806188069
 
+babel-plugin-import 使用
+https://juejin.cn/post/7051206427402043423
+
+组件库的按需加载 https://juejin.cn/post/6844904166586843149
+那怎么去通过按需加载去使用组件库，答案是通过babel插件：babel-plugin-component（element 通过fork ant-design库的 ）
+在babel转码的时候，把整个库element-ui的引用，变为element-ui/lib/button具体模块的引用。这样webpack收集依赖module就不是整个element-ui，而是里面的button
+
 
 当面试官问Webpack的时候他想知道什么 ************************
 https://juejin.cn/post/6943468761575849992?utm_source=gold_browser_extension 
@@ -203,3 +210,20 @@ compiler.plugin('event-name',function(params) {
 
 包看包会的《webpack-loader该怎么写》
 https://juejin.cn/post/7013350090945331237
+
+记录一次 Webpack 优化    babel-plugin-import
+https://juejin.cn/post/7056324070186418184
+
+实现一个简单的webpack
+https://juejin.cn/post/7098326031911616520
+
+多图详解，一次性搞懂Webpack Loader
+https://juejin.cn/post/6992754161221632030
+ 
+手写一个webpack，看看AST怎么用 🔥
+https://juejin.cn/post/6930877602840182791
+https://segmentfault.com/a/1190000039231950
+
+组件库的按需加载 https://juejin.cn/post/6844904166586843149
+那怎么去通过按需加载去使用组件库，答案是通过babel插件：babel-plugin-component（element 通过fork ant-design库的 ）
+在babel转码的时候，把整个库element-ui的引用，变为element-ui/lib/button具体模块的引用。这样webpack收集依赖module就不是整个element-ui，而是里面的button

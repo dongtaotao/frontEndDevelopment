@@ -4,6 +4,9 @@ https://juejin.cn/post/7081909025159249956
 React核心用法系统梳理
 https://juejin.cn/post/7099028351511167013
 
+Redux 技术分享
+https://juejin.cn/post/6978111642970259487
+
 
 开发 Redux 中间件
 开发中间件的模板代码：

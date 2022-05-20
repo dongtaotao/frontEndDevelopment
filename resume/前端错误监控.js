@@ -451,3 +451,13 @@ https://www.cnblogs.com/1wen/p/14417475.html
 
 使用 Chrome 开发者工具的 Memory 标签页分析内存泄漏问题
 https://juejin.cn/post/7098674170044612622
+
+
+一文摸清前端监控实践要点（二）行为监控
+https://juejin.cn/post/7098656658649251877
+
+一文摸清前端监控实践要点（一）性能监控
+https://juejin.cn/post/7097157902862909471
+
+前端异常的捕获与处理
+https://segmentfault.com/a/1190000039264963

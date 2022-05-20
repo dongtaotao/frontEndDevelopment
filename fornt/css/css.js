@@ -194,3 +194,32 @@ box-sizing： content-box， border-box https://blog.csdn.net/m0_37585915/articl
 标准盒模型content-box, border = 20, padding = 10, width = 100
 总宽 = border + padding + width = 130
 border-box. border = 20, padding = 10, width = 100
+
+
+如何实现一个自适应的正方形 https://juejin.cn/post/7098689890933538853
+.square {
+  width: 10vw;
+  height: 10vw;
+  background: red;
+ }
+
+ .square {
+  width: 10%;
+  padding-bottom: 10%; 
+  height: 0; // 防止内容撑开多余的高度
+  background: red;
+ }
+
+ CSS3 新增东西众多，这里列举出一些关键的新增内容：
+选择器
+盒子模型属性：border-radius、box-shadow、border-image
+背景：background-size、background-origin、background-clip
+文本效果：text-shadow、word-wrap
+颜色：新增 RGBA，HSLA 模式
+渐变：线性渐变、径向渐变
+字体：@font-face
+2D/3D转换：transform、transform-origin
+过渡与动画：transition、@keyframes、animation
+多列布局
+媒体查询
+链接：https://juejin.cn/post/7098689890933538853

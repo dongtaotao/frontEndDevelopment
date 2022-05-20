@@ -1,3 +1,9 @@
+《前端那些事》聊聊前端的按需加载 好文章
+https://juejin.cn/post/6844904166586843149
+
+聊聊前端开发日常的协作工具（全）
+https://juejin.cn/post/6844904176330375181
+
 
 面试官：vue项目本地开发完成后部署到服务器后报404是什么原因呢？
 https://vue3js.cn/interview/vue/404.html#%E4%B8%80%E3%80%81%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2
@@ -28,3 +34,112 @@ https://juejin.cn/post/7089575174537740296
 
 如何做Antd Upload单个图片的校验和上传？
 https://juejin.cn/post/6977266040803852301#heading-7
+
+VUE+NodeJS 实现大文件上传
+https://juejin.cn/post/7098749140548452365
+
+node+koa+axios实现一个简单的图片上传和回显功能
+https://juejin.cn/post/7098716021048999972
+
+大文件上传 Vue完整代码（切片上传、秒传、断点续传）
+https://juejin.cn/post/7099362510532247589
+
+前端大文件上传，即以流的方式上传
+https://juejin.cn/post/7099098828187385886
+
+一个简单打包器打包实现
+https://juejin.cn/post/7098704112803381256
+
+抛弃 npm/yarn，拥抱 pnpm
+https://juejin.cn/post/7098637533646422024
+
+低代码漫谈
+https://juejin.cn/column/7096011804651831333
+
+LowCode 低代码
+https://juejin.cn/column/7087083299885023239
+
+React - 优化长列表
+手写
+https://juejin.cn/post/6972172870164152333
+
+Redux 技术分享
+https://juejin.cn/post/6978111642970259487
+
+
+babel-plugin-import 使用
+https://juejin.cn/post/7051206427402043423
+
+移动 H5 唤起 APP
+https://juejin.cn/post/7077520049963008013
+
+观察者模式和发布订阅者模式
+https://juejin.cn/post/7087346429311598622
+
+Koa的洋葱模型到底是什么？
+https://juejin.cn/post/7086243900775464996
+
+6.什么是函数式编程
+函数式编程是声明式编程的一部分。javascript中的函数是第一类公民，这意味着函数是数据，你可以像保存变量一样在应用程序中保存、检索和传递这些函数。
+函数式编程有些核心的概念，如下：
+不可变性(Immutability)
+纯函数(Pure Functions)
+数据转换(Data Transformations)
+高阶函数 (Higher-Order Functions)
+递归
+组合
+链接：https://juejin.cn/post/7083050992471638052
+
+
+compression-webpack-plugin
+可以配置gizp压缩
+
+
+rem文件的导入问题：
+我们在做手机端时，适配是必须要处理的一个问题。例如，我们处理适配的方案就是通过写一个rem.js，原理很简单，就是根据网页尺寸计算html的font-size大小，
+基本上小伙伴们都知道，这里直接附上代码，不多做介绍。;
+(function(c,d){var e=document.documentElement||document.body,a="orientationchange" in window?"orientationchange":"resize",b=function(){var f=e.clientWidth;e.style.fontSize=(f>=750)?"100px":100*(f/750)+"px"};b();c.addEventListener(a,b,false)})(window);
+这里说下怎么引入的问题，很简单。在main.js中，直接import './config/rem'导入即可。import的路径根据你的文件路径去填写。
+
+作者：愣锤
+链接：https://juejin.cn/post/6844903632815521799
+
+
+前端进阶必读文章
+https://juejin.cn/post/6993628735354191909
+
+常用的网络命令
+https://mp.weixin.qq.com/s/N-_jsA6eoM0f_7LCM-il5A
+
+《前端那些事》从0到1开发工具库
+https://juejin.cn/post/6844904127923765256
+
+前端测试之Jest深入浅出
+https://juejin.cn/post/6844904196244766728#heading-36
+
+组件库的按需加载  https://juejin.cn/post/6844904166586843149
+那怎么去通过按需加载去使用组件库，答案是通过babel插件：babel-plugin-component（element 通过fork ant-design库的 ）
+在babel转码的时候，把整个库element-ui的引用，变为element-ui/lib/button具体模块的引用。这样webpack收集依赖module就不是整个element-ui，而是里面的button
+
+两个node程序之间怎样交互?https://juejin.cn/post/6844904177466867726
+答案是：通过fork，原理是子程序用process.on来监听父程序的消息，
+用 process.send给子程序发消息，父程序里用child.on,child.send进行交互，来实现父进程和子进程互相发送消息
+
+
+Babel配置傻傻看不懂？
+https://juejin.cn/post/6863705400773083149
+Babel工作原理本质上就是三个步骤：解析、转换、输出，
+
+浅谈前端模块化
+https://juejin.cn/post/6893376571978022926
+
+不同角度看跨域那些事
+https://juejin.cn/post/6906078670210007053
+cors-anywhere
+
+规划&记录，有她就够了！  
+https://juejin.cn/post/6991366537961537567  记事本
+
+聊聊开发日常的效率提升工具（全）
+https://juejin.cn/post/7019183422320934948
+
