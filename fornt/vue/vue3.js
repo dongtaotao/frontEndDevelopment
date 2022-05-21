@@ -374,3 +374,96 @@ https://vue3js.cn/interview/vue3/composition.html#%E6%AD%A3%E6%96%87
 Composition API对 tree-shaking 友好，代码也更容易压缩
 Composition API中见不到this的使用，减少了this指向不明的情况
 如果是小型组件，可以继续使用Options API，也是十分友好的
+
+
+Vue.set方法的原理？ https://juejin.cn/post/6984210440276410399
+function set(target, key, val) {
+  // 判断是否是数组
+  if (Array.isArray(target)) {
+      // 判断谁大谁小
+      target.length = Math.max(target.length, key)
+      // 执行splice
+      target.splice(key, 1, val)
+      return val
+  }
+
+  const ob = target.__ob__
+
+  // 如果此对象没有不是响应式对象，直接设置并返回
+  if (key in target && !(key in target.prototype) || !ob) {
+      target[key] = val
+      return val
+  }
+
+  // 否则，新增属性，并响应式处理
+  defineReactive(target, key, val)
+  return val
+}
+33. Vue.delete方法的原理？
+function del (target, key) {
+  // 判断是否为数组
+  if (Array.isArray(target)) {
+      // 执行splice
+      target.splice(key, 1)
+      return
+  }
+
+  const ob = target.__ob__
+
+  // 对象本身就没有这个属性，直接返回
+  if (!(key in target)) return
+
+
+  // 否则，删除这个属性
+  delete target[key]
+
+  // 判断是否是响应式对象，不是的话，直接返回
+  if (!ob) return
+  // 是的话，删除后要通知视图更新
+  ob.dep.notify()
+}
+
+36. 如果子组件改变props里的数据会发生什么
+\如果修改的是基本类型，则会报错
+改变的props数据是引用类型
+props: {
+  item: {
+    default: () => ({}),
+  }
+}
+created() {
+  // 不报错，并且父级数据会跟着变
+  this.item.name = 'sanxin';
+  
+  // 会报错，跟基础类型报错一样
+  this.item = 'sss'
+},
+watch的immediate属性有什么用？
+使用immediate完全可以这么写，当它为true时，会初始执行一次
+
+41. computed如何实现传参？
+// html
+<div>{{ total(3) }}
+
+// js
+computed: {
+  total() {
+    return function(n) {
+        return n * this.num
+        }
+  },
+}
+
+07-Vue要做权限管理该怎么做？控制到按钮级别的权限怎么做？
+https://juejin.cn/post/7097067108663558151
+
+首先判断两个节点是否为相同同类节点，不同则删除重新创建
+如果双方都是文本则更新文本内容
+如果双方都是元素节点则递归更新子元素，同时更新元素属性
+更新子节点时又分了几种情况：
+
+新的子节点是文本，老的子节点是数组则清空，并设置文本；
+新的子节点是文本，老的子节点是文本则直接更新文本；
+新的子节点是数组，老的子节点是文本则清空文本，并创建新子节点数组中的子元素；
+新的子节点是数组，老的子节点也是数组，那么比较两组子节点，更新细节blabla
+链接：https://juejin.cn/post/7097067108663558151

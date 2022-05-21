@@ -282,3 +282,9 @@ https://www.csdn.net/tags/NtzakgwsODExOTMtYmxvZwO0O0OO0O0O.html
 
 Vue项目性能优化
 https://blog.csdn.net/sinat_17775997/article/details/107492421
+
+资源预加载 prefetch/preload
+https://interview2.poetries.top/excellent-docs/1-HTML%E6%A8%A1%E5%9D%97.html#_8-%E8%AF%B4%E4%B8%80%E4%B8%8B-web-worker
+prefetch：其利用浏览器空闲时间来下载或预取用户在不久的将来可能访问的文档。<link href="/js/xx.js" rel="prefetch">
+preload : 可以指明哪些资源是在页面加载完成后即刻需要的，浏览器在主渲染机制介入前就进行预加载，这一机制使得资源可以更早的得到加载并可用，
+且更不易阻塞页面的初步渲染，进而提升性能。 <link href="/js/xxx.js" rel="preload" as="script">需要 as 指定资源类型目前可用的属性类型有如下：
