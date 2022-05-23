@@ -7,7 +7,6 @@ RxJS 是专门处理异步逻辑的
 
 rx.js 响应式异步编程库，在vue中需引入vue-rx    
 
-
 组件中内置指令
     NgClass
     NgStyle
@@ -82,7 +81,7 @@ export class GoodsListService {
 使用HttpClient
 
 什么是RxJS
-首先RxJS是一个库，是针对异步异步数据流编程工具，当然Angular引入RxJS就是让异步更加简单，
+首先RxJS是一个库，是针对异步数据流编程工具，当然Angular引入RxJS就是让异步更加简单，
 更加可控，在开始RxJS之前，我们先来了解一下Reactive Programming，其本质就是使用流（stream）\color{#0abb3c}{流（stream）}流（stream）的一种编程方式。
 
 

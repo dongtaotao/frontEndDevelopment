@@ -86,7 +86,7 @@ function EntryNodeOfLoop(pHead)
                 slow = slow.next;
                 fast = fast.next;
             }
-            return slow;
+            return slow; 
         }
     }
     return null;
@@ -848,7 +848,6 @@ var removeDuplicates = function (nums) {
 };
 链接：https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array
 
-
 两个数组的交集 II
 输入：nums1 = [1,2,2,1], nums2 = [2,2]
 输出：[2,2]
@@ -911,7 +910,4 @@ var removeDuplicates = function (nums) {
   let max = Math.max(...candies);
   return candies.map(item => item + extraCandies >= max);
 };
-
-来源：力扣（LeetCode）
-链接：https://leetcode-cn.com/problems/kids-with-the-greatest-number-of-candies 
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。   
+链接：https://leetcode-cn.com/problems/kids-with-the-greatest-number-of-candies   

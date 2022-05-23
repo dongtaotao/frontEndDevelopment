@@ -1,5 +1,9 @@
-1.5万字概括ES6全部特性(已更新ES2020)
+1.5万字概括ES6全部特性(已更新ES2020) 
 https://juejin.cn/post/6844903959283367950 
+
+🔥花一个小时，迅速了解ES6~ES12的全部特性
+https://juejin.cn/post/7068935394191998990?utm_source=gold_browser_extension
+
 
 async/await优点：
 它做到真正的串行的同步写法，代码阅读更简单

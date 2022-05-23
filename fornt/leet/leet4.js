@@ -247,7 +247,6 @@ JS Leetcode 263. 丑数 https://www.cnblogs.com/echolun/p/14647570.html
   return n === 1;
 };
 
-
 一维数组的动态和 https://juejin.cn/post/7001500051725877256
 输入：nums = [1,2,3,4]
 输出：[1,3,6,10]
@@ -526,14 +525,10 @@ var lastRemaining = function(n, m) {
 var lowestCommonAncestor = function(root, p, q) {
     // 如果节点为空 返回null
     if (!root ) return null;
-
     if (root === p) return p;
-
     if (root === q) return q;
-
     let x = lowestCommonAncestor(root.left,p,q);
     let y = lowestCommonAncestor(root.right,p,q);
-
     if (x && y) {
         return root;
     } else {

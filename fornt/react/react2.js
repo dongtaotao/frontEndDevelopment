@@ -1,5 +1,5 @@
 JSX语法糖本质
-JSX是语法糖，通过babel转成React.createElement函数，在babel官网上可以在线把JSX转成React的JS语法 
+JSX是语法糖，通过babel转成React.createElement函数，在babel官网上可以在线把JSX转成React的JS语法  
 
 二、react中循环要用key的原理
 　　原理在于优化diff算法。

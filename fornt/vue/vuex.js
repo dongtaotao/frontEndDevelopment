@@ -141,3 +141,4 @@ Vuex的store注入 vue的实例组件的方式，是通过vue的 mixin机制，�
 Vuex使用vue中的reactive方法将state设置为响应式，这样组件就可以通过computed来监听状态的改变了。
 作者：刷题刷到手抽筋
 链接：https://juejin.cn/post/7094778902815440903
+ 

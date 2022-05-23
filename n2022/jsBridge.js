@@ -47,7 +47,7 @@ Native 调用 JavaScript，其实就是执行拼接 JavaScript 字符串，从�
 
 
 聊一聊桥接（JSBridge）的原理 回调用
-https://www.cnblogs.com/songyao666/p/14540073.html
+https://www.cnblogs.com/songyao666/p/14540073.html 
 
 
 初探JSBridge

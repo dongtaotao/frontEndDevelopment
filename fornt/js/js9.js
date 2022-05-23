@@ -16,7 +16,6 @@ https://cloud.tencent.com/developer/article/1431882
 APP中使用ssl pinning防止抓包操作
 对所有请求和响应都进行加解密操作 
 
-
 前端sign签名 **************************************************************
 https://www.jianshu.com/p/a47477e8126a
 前端 crypto-js aes 加解密
@@ -65,7 +64,6 @@ Parse(解析)：将源代码转换成更加抽象的表示方法（例如抽象�
 Transform(转换)：对（抽象语法树）做一些特殊处理，让它符合编译器的期望
 Generate(代码生成)：将第二步经过转换过的（抽象语法树）生成新的代码
 
-
 js之初始化二维数组 https://juejin.cn/post/7043324738780790791
 const arr = new Array(2);
 for (let i = 0; i < arr.length; i++) {
@@ -74,7 +72,6 @@ for (let i = 0; i < arr.length; i++) {
 arr[0][0] = 1;  // 正确 [ [ 1, 0 ], [ 1, 0 ] ]
 
 Xss js-xss  https://interview2.poetries.top/docs/excellent.html#_22-1-xss  *************** 跨站脚本攻击 
-
 
 Token和Jwt存在什么区别 https://www.jianshu.com/p/7598a5e9220e https://www.cnblogs.com/zxdeblog/p/15175710.html
 token需要查库验证token 是否有效，而JWT不用查库或者少查库，直接在服务端进行校验，并且不用查库
@@ -113,7 +110,6 @@ function debounce(fn, delay) {
       }, delay)
   }
 }
-
 
 class LRU {
   constructor(max) {
@@ -271,7 +267,6 @@ V8 对这两块使用了不同的回收器：
 进程是资源分配的最小单位，线程是CPU调度的最小单位
 做个简单的比喻：进程=火车，线程=车厢
 
-
 说一下单点登录实现原理 ******************
 https://juejin.cn/post/6933111691215372302
 
@@ -320,7 +315,6 @@ https://zhuanlan.zhihu.com/p/25736931
 http://jartto.wang/2018/11/20/js-exception-handling/
 十三、总结
 回到我们开头提出的那个问题，如何优雅的处理异常呢？
-
 可疑区域增加 Try-Catch
 全局监控 JS 异常 window.onerror
 全局监控静态资源异常 window.addEventListener

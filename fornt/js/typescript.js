@@ -1,6 +1,6 @@
 https://juejin.cn/post/7025626414066073608
 相同点
-都可以描述一个对象或者函数  
+都可以描述一个对象或者函数   
 interface
 https://www.jb51.net/article/163299.htm
 ts的type和interface什么区别

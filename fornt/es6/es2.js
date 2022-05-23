@@ -1,5 +1,5 @@
 http://interview.poetries.top/docs/handwritten.html#_34-%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8F%8C%E5%90%9
-1%E7%BB%91%E5%AE%9A
+1%E7%BB%91%E5%AE%9A 
 function myPromise(constructor) {
   let self = this;
   self.status = 'pending';
@@ -327,7 +327,6 @@ class A {}
 class A {}
 A = decorator(A) || A;
 装饰器函数的第一个参数，就是所要装饰的目标类。
-
 注意，装饰器对类的行为的改变，是代码编译时发生的，而不是在运行时。这意味着，装饰器能在编译阶段运行代码。也就是说，装饰器本质就是编译时执行的函数。
 
 添加实例属性
@@ -373,7 +372,6 @@ it.next()
 
 
 10. async/await对比Promise的优势
-
 代码读起来更加同步，Promise虽然摆脱了回调地狱，但是then的链式调⽤也会带来额外的阅读负担
 Promise传递中间值⾮常麻烦，⽽async/await⼏乎是同步的写法，⾮常优雅
 错误处理友好，async/await可以⽤成熟的try/catch，Promise的错误捕获⾮常冗余
@@ -382,11 +380,11 @@ Promise传递中间值⾮常麻烦，⽽async/await⼏乎是同步的写法，�
 
 11. async/await 如何捕获异常
 async function fn(){
-    try{
-        let a = await Promise.reject('error')
-    }catch(error){
-        console.log(error)
-    }
+  try{
+      let a = await Promise.reject('error')
+  }catch(error){
+    console.log(error)
+  }
 }
 链接：https://juejin.cn/post/6941194115392634888
 

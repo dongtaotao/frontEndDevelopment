@@ -1,4 +1,4 @@
-91、首屏、白屏时间如何计算  https://juejin.cn/post/7065483941305647112
+91、首屏、白屏时间如何计算  https://juejin.cn/post/7065483941305647112 
 白屏时间(First Paint)：
 是指浏览器从响应用户输入网址地址，到浏览器开始显示内容的时间。中间过程包括DNS查询、建立TCP链接、发送首个HTTP请求、返回HTML文档、
 HTML文档head解析完毕。
@@ -49,7 +49,6 @@ https://blog.51cto.com/u_15485864/4905983
 前端性能优化 — 首屏时间和白屏时间 https://blog.csdn.net/qq_41914185/article/details/123715706
 
 
-
 白屏时间
 window.performence.timing.domLoading - window.performence.timing.fetchStart
 
@@ -66,3 +65,17 @@ DNS 预解析
 使用 link 标签 
 <link rel="dns-prefetch" href="https://www.baidu.com" />
 使用 HTTP2
+
+
+
+首屏时间指标采集具体办法
+https://kaiwu.lagou.com/course/courseInfo.htm?courseId=638#/detail/pc?id=6568
+
+我们以 Vue 为例，记录首屏各个组件 mounted 的时间，最终在 onload 时，统计出最后一个组件 mounted 的时间，做为首屏时间
+
+1.如果一个首屏页面的内容没有被组件化，那么首屏时间无法被统计到，除非各个业务都定一套组件标准，首屏内容必须封装成组件。
+2.前面也提过 onload 的时间并非最终时间，可能 onload 时，首屏还没加载完。
+3.没有考虑首屏是张图片的情况，在这种情况，首屏虽然加载完成了，可是图片是异步的，图片并没有加载，试想你会在看不到商品图片的情况下，直接下单吗？
+
+当时我们就想，如果能在首屏渲染过程中，把各个资源的加载时间记录到日志中，后续再通过分析，确定某一个资源加载完的时间，
+就是首屏时间。而 MutationObserver 恰恰可以做到这些。

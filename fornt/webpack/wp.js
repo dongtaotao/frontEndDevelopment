@@ -1,4 +1,4 @@
-怎样实现 webpack loader **********************************
+怎样实现 webpack loader ********************************** 
 https://github.com/Codingxiaoshi/webpack-code/blob/main/my-loader/webpack.config.js
 
 https://www.bilibili.com/video/BV1FL411n7AH?spm_id_from=333.337.search-card.all.click

@@ -13,7 +13,7 @@ const debounce = (fn, delay) => {
 }
 
 3. 统计网页中出现的标签
-new Set([...document.querySelectorAll('*')].map(ele => ele.tagName)).size
+new Set([...document.querySelectorAll('*')].map(ele => ele.tagName)).size 
 
 4.
 const throttle = (fn, delay = 500) => {
@@ -84,7 +84,6 @@ const quickSort = (arr) => {
       right.push(arr[i])
     }
   }
-
   return quickSort(left).concat([midItem], quickSort(right))
 }
 
@@ -137,19 +136,18 @@ curry
 实现
 判断当前函数传入的参数是否大于或等于fn需要参数的数量，如果是，直接执行fn
 如果传入参数数量不够，返回一个闭包，暂存传入的参数，并重新返回currying函数
-    function currying(fn, ...args) {
-      if (args.length >= fn.length) {
-        return fn(...args);
-      } else {
-        return (...args2) => currying(fn, ...args, ...args2);
-      }
+  function currying(fn, ...args) {
+    if (args.length >= fn.length) {
+      return fn(...args);
+    } else {
+      return (...args2) => currying(fn, ...args, ...args2);
     }
+  }
 我们来一个简单的实例验证一下：
-
-    const curryingFun = currying(fun)
-    curryingFun(1)(2)(3);  // 1 2 3 
-    curryingFun(1, 2)(3);  // 1 2 3 
-    curryingFun(1, 2, 3);  // 1 2 3 
+const curryingFun = currying(fun)
+curryingFun(1)(2)(3);  // 1 2 3 
+curryingFun(1, 2)(3);  // 1 2 3 
+curryingFun(1, 2, 3);  // 1 2 3 
 
 //================================================================
 function MyPromise(executor) {
@@ -217,10 +215,10 @@ Singleton.prototype.getName = function() {
 Singleton.getInstance = (function(name) {
     var instance;
     return function(name){
-        if (!instance) {
-            instance = new Singleton(name);
-        }
-        return instance;
+      if (!instance) {
+        instance = new Singleton(name);
+      }
+      return instance;
     }
 })();
 

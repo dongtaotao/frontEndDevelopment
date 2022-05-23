@@ -1,4 +1,4 @@
-斐波那契数
+斐波那契数 
 var fib = function(N) {
   if(N ===1 || N ===2) {
     return 1;
@@ -350,5 +350,5 @@ function render(template, data) {
     return data[key];
   });
   return computed;  
-} 
+}  
 

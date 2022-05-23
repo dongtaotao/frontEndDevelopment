@@ -1,5 +1,5 @@
 
-Flutter 生命周期
+Flutter 生命周期 
 https://juejin.cn/post/7056646298073563166
 StatefulWidget 生命周期
 
@@ -21,7 +21,6 @@ dispose：永久移除组件，并释放组件资源。调用完 dispose 后，m
   在组件运行过程中会多次触发，这也是优化过程中需要着重注意的点；
 最后是组件销毁阶段，deactivate 和 dispose。
 链接：https://juejin.cn/post/7056646298073563166
-
 
 https://book.flutterchina.club/chapter1/mobile_development_intro.html#_1-1-5-flutter%E5%87%BA%E4%B8%96
 总结

@@ -289,7 +289,7 @@ Promise.any = function (promises) {
               errs.push(err);
               if (len === errs.length) {
                   reject(errs);
-                  // reject(new AggregateError(errs));
+                  // reject(new AggregateError(errs)); 
               }
           });
       });

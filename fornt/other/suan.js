@@ -1,6 +1,6 @@
 
 前端算法渣的救赎之路 ******************************************
-https://juejin.cn/post/6844904175562653710
+https://juejin.cn/post/6844904175562653710 
 
 前端学数据结构与算法（一）：不会复杂度分析，算法等于白学
 https://juejin.cn/post/6858488577131708423
@@ -1053,4 +1053,4 @@ const event = new EventEmitter()
       p2 = p2 === null ? headA : p2.next 
   }
   return p1
-}; 
+};  

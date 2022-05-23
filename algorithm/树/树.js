@@ -228,7 +228,7 @@ var lowestCommonAncestor = function(root, p, q) {
     return null;
 };
 
-合并二叉树 https://juejin.cn/post/6844904175562653710
+合并二叉树 https://juejin.cn/post/6844904175562653710 
 var mergeTrees = function(t1, t2) {
   if(t1 && t2){
       t1.val += t2.val;

@@ -213,12 +213,16 @@ scope hoisting: 作用域提升，将分散的模块划分到同一个作用域�
     使用CDN服务提供的URL。
 
 
-// ===========网络优化
+// ===========网络优化=========================
 静态资源使用 CDN
 Gzip资源
 小图片base64编码   减少网络请求
 配置hash值
-http缓存
+开启http2
+第三方资源使用cdn
+设置http缓存（强缓存和协商缓存，提高加载速度）
+设置服务端渲染ssr
+DNS 预解析
 
 
 https://juejin.cn/post/6903295387302526990
@@ -288,3 +292,4 @@ https://interview2.poetries.top/excellent-docs/1-HTML%E6%A8%A1%E5%9D%97.html#_8-
 prefetch：其利用浏览器空闲时间来下载或预取用户在不久的将来可能访问的文档。<link href="/js/xx.js" rel="prefetch">
 preload : 可以指明哪些资源是在页面加载完成后即刻需要的，浏览器在主渲染机制介入前就进行预加载，这一机制使得资源可以更早的得到加载并可用，
 且更不易阻塞页面的初步渲染，进而提升性能。 <link href="/js/xxx.js" rel="preload" as="script">需要 as 指定资源类型目前可用的属性类型有如下：
+

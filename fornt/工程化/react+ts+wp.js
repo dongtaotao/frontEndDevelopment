@@ -1,5 +1,4 @@
-都 2022 年了，手动搭建 React 开发环境很难吗？ https://juejin.cn/post/7087811040591675428
-
+都 2022 年了，手动搭建 React 开发环境很难吗？ https://juejin.cn/post/7087811040591675428 
 
 「超详细React项目搭建教程一」企业级前端开发规范如何搭建🛠 
 「超详细React项目搭建教程二」集成 Webpack5/React17

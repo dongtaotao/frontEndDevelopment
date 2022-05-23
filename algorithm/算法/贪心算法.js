@@ -22,7 +22,7 @@ function getMinCoin(coins,amount) {
   }
   
   // 测试
-  getMinCoin([2,1,5,10],35)
+  getMinCoin([2,1,5,10],35) 
   
   // 返回
   // [10, 10, 10, 5]

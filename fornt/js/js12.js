@@ -45,7 +45,6 @@ includes
 generator 函数
 对于上面的这些 API，Babel 是不会转译的，需要引入 polyfill 来解决。
 
-
 Vue nextTick实现原理  https://www.cnblogs.com/leiting/p/13174545.html
 
 宏任务和微任务#
@@ -58,7 +57,6 @@ https://juejin.cn/post/6844903601416978439
 
 表单可以跨域吗 https://www.jianshu.com/p/ada677070320
 可以 
-综上:
 1、form表单不会出现跨域问题，因为页面进行了跳转，并且form表单页没有读取其他页面信息
 2、ajax请求造成跨域是因为 要读取接口地址的信息 并且在不同源的情况下
 
@@ -158,9 +156,9 @@ function MyComponent() {
 
 vue 中使用了哪些设计模式？
 1、工厂模式 - 传入参数即可创建实例
-虚拟 DOM 根据参数的不同返回基础标签的 Vnode 和组件 Vnode。
+  虚拟 DOM 根据参数的不同返回基础标签的 Vnode 和组件 Vnode。
 2、单例模式 - 整个程序有且仅有一个实例
-vuex 和 vue-router 的插件注册方法 install 判断如果系统存在实例就直接返回掉。
+  vuex 和 vue-router 的插件注册方法 install 判断如果系统存在实例就直接返回掉。
 3、发布-订阅模式。（vue 事件机制）
 4、观察者模式。（响应式数据原理）
 5、装饰器模式（@装饰器的用法）
@@ -264,7 +262,6 @@ FALLBACK:
 装饰类Foo
 @frozen 
 class Foo {
-	
   //装饰method方法
   @configurable(false)
   method() {}
@@ -272,7 +269,6 @@ class Foo {
  //装饰yy方法
   @throttle(500)
   yy() {}
-  
 }
 
 
@@ -375,7 +371,6 @@ link.href = url;
 
 前端对当前页面进行绘图，并下载。 https://juejin.cn/post/7097041366748200991
 npm install --save html2canvas
-
 
 CDN静态库
 BootCDN : BootCDN - Bootstrap 中文网开源项目免费 CDN 加速服务

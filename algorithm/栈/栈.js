@@ -373,7 +373,7 @@ var minWindow = function(s, t) {
       }
       r += 1;
   }
-  return res;
+  return res; 
 }; 
 
 

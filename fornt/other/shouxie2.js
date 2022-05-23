@@ -396,7 +396,7 @@ function ifMatch(left:string, right:string): boolean{
  * @param {number} n
  * @return {number}
  */
- var trailingZeroes = function(n) {
+var trailingZeroes = function(n) {
   let res = 0;
   while (n !== 0) {
       n = Math.floor(n / 5);
@@ -719,7 +719,6 @@ const dom2json = (rootDom) => {
   return rootObj
 }
 
-
 函数节流(throttle)  
 使用时间戳
 function throttle(fn, wait)  {
@@ -816,7 +815,6 @@ function Conver(number, base = 2) {
   return res;
 }
 
-
 js实现36进制 https://blog.csdn.net/weixin_44283432/article/details/108091780
 function getNums36() {
   var nums36 = [];
@@ -896,8 +894,7 @@ function arrange(source) {
 }
 
 var arr = [3, 4, 13, 14, 15, 17, 20, 22];
-      console.log(JSON.stringify(arrange(arr)));
-
+console.log(JSON.stringify(arrange(arr)));
       //[[3,4],[13,14,15],[17],[20],[22]]
 
 16、判断一个对象有环引用
@@ -1107,4 +1104,4 @@ function transfrom(list, level) {
   }
 }
 
-transfrom(entries, level);
+transfrom(entries, level); 

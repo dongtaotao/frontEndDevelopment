@@ -125,4 +125,4 @@ console.log(is_leagl_brackets('()()sd()(sd()dw))(')) // false
 栈的总结
 栈是一个后进先出的数据结构
 JavaScript中没有栈，但可以用Array的所有功能。 
-栈常用的操作：push(进栈)、pop出栈、stack[stack.length-1]
+栈常用的操作：push(进栈)、pop出栈、stack[stack.length-1] 

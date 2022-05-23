@@ -1,5 +1,5 @@
 「React」Hooks入门介绍篇(一)
-https://juejin.cn/post/7046641639523090469
+https://juejin.cn/post/7046641639523090469 
 
 「React」Hooks入门介绍篇(二)
 https://juejin.cn/post/7046643385939001351
@@ -197,7 +197,6 @@ Redux 的原理就是一个发布订阅器，帮我们用一个变量存储所�
 而 React-Redux 的作用就是订阅 Store 里数据的更新，他包含两个重要元素，Provider 和 connect 方法 +10
 Provider 的作用就是通过 Context API 把 Store 对象注入到 React 组件上去 +20
 而 connect 方法就是一个高阶组件，在高阶组件里通过订阅 Store 中数据的更新，从而通过调用 setState 方法来触发组件更新 +20
-
 
 React hook 底层是基于链表实现，调用的条件是每次组件被render的时候都会顺序执行所有的hooks。
 

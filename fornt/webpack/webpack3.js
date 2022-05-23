@@ -29,8 +29,8 @@ https://juejin.cn/post/6844904071736852487
 https://juejin.cn/post/6844904032587382797
 
 4. 说一下 Webpack 的热更新原理(必会)
-​	webpack 的热更新又称热替换（Hot Module Replacement），缩写为 HMR。这个机制可以做到不用刷新浏览器而将新变更的模块替换掉旧的模块。
-​    HMR的核心就是客户端从服务端拉去更新后的文件，准确的说是 chunk diff (chunk 需要更新的部分)，
+webpack 的热更新又称热替换（Hot Module Replacement），缩写为 HMR。这个机制可以做到不用刷新浏览器而将新变更的模块替换掉旧的模块。
+​HMR的核心就是客户端从服务端拉去更新后的文件，准确的说是 chunk diff (chunk 需要更新的部分)，
 实际上 WDS 与浏览器之间维护了一个 Websocket，当本地资源发生变化时，
 WDS 会向浏览器推送更新，并带上构建时的 hash，让客户端与上一次资源进行对比。
 客户端对比出差异后会向 WDS 发起 Ajax 请求来获取更改内容(文件列表、hash)，
@@ -40,7 +40,6 @@ WDS 会向浏览器推送更新，并带上构建时的 hash，让客户端与�
 
 总结几个webpack打包优化的方法
 https://juejin.cn/post/6844904004825120782
-
 
 一份不可多得的 Webpack 学习指南（1万字长文带你入门 Webpack 并掌握常用的进阶配置） ******************
 https://juejin.cn/post/7068256695620730910#heading-20
@@ -96,7 +95,6 @@ Browserslist 用于配置项目适用的目标浏览器
 
 301应用场景: 域名到期不想继续用这个,换了地址
 302应用场景: 做活动时候,从首页跳到活动页面,
-
 
 基本概念
 webpack是一个静态资源模块化打包工具

@@ -238,7 +238,6 @@ HTTP 请求响应时间
 DNS 解析时间
 TCP 连接时间
 性能数据采集需要使用 window.performance API ，   JS库 web-vitals ： import {getLCP} from 'web-vitals' ;
-
     // 重定向耗时
     redirect: timing.redirectEnd - timing.redirectStart,
     // DOM 渲染耗时
@@ -304,9 +303,7 @@ subresource可以用来指定资源是最高优先级的。当前页面需要，
 
 白屏时间 = firstPaint - pageStartTime  
 
-
 http://www.alloyteam.com/2020/01/14184/   ************************如何进行 web 性能监控？
-
 
 http://www.alloyteam.com/2020/01/14184/</meta> 
 3. 异常上报
@@ -459,5 +456,5 @@ https://juejin.cn/post/7098656658649251877
 一文摸清前端监控实践要点（一）性能监控
 https://juejin.cn/post/7097157902862909471
 
-前端异常的捕获与处理
+前端异常的捕获与处理 
 https://segmentfault.com/a/1190000039264963

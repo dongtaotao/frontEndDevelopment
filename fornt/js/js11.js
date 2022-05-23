@@ -1,4 +1,4 @@
-跳槽面试技巧记录 很好的文章 https://juejin.cn/post/7090733245590929421 🔥🔥🔥🔥
+跳槽面试技巧记录 很好的文章 https://juejin.cn/post/7090733245590929421 🔥🔥🔥🔥 
 
 // <!DOCTYPE html>
 // <html lang="en">
@@ -97,7 +97,7 @@ https://juejin.cn/post/7089428335700377613
 postcss-px2rem，插件
 
 移动端1px解决方案 https://juejin.cn/post/7093300285765845028#heading-7
-使用伪元素 transform scal
+使用伪元素 transform scale
 .line5 {
     margin-top: 50px;
     position: relative;
@@ -229,7 +229,6 @@ https://zhuanlan.zhihu.com/p/158079491  好文章
 
 数据发送
 数据发送是一个最基础的api，后面的功能都要基于此进行。通常这种前后端分离的场景会使用AJAX的方式发送数据，但是这里使用图片的src属性。原因有两点：
-
 1.没有跨域的限制，像srcipt标签、img标签都可以直接发送跨域的GET请求，不用做特殊处理；
 2.兼容性好，一些静态页面可能禁用了脚本，这时script标签就不能使用了；
 
@@ -614,7 +613,6 @@ https://juejin.cn/post/6844903620404592653
 
 阿里三面：灵魂拷问——有react fiber，为什么不需要vue fiber呢？
 https://juejin.cn/post/7077545184807878692
-
 react因为先天的不足——无法精确更新，所以需要react fiber把组件渲染工作切片；而vue基于数据劫持，更新粒度很小，没有这个压力；
 react fiber这种数据结构使得节点可以回溯到其父节点，只要保留下中断的节点索引，就可以恢复之前的工作进度；
 链接：https://juejin.cn/post/7077545184807878692

@@ -81,7 +81,6 @@ https://mp.weixin.qq.com/s?__biz=Mzk0NTI2NDgxNQ==&mid=2247484713&idx=1&sn=6fba00
 (6) cookie + 定时器轮询(setInterval)
 (7) window.open + window.postMessage
 (8) Websocket
-
 链接：https://juejin.cn/post/6844903986210816013
 
 webpack如何实现一个插件 https://juejin.cn/post/6844903682455109640#heading-1
@@ -104,7 +103,7 @@ class BuildEndPlugin {
   
   module.exports = BuildEndPlugin
 
-2022新年奖励自己一辆特斯拉😎（React Hooks + Redux 入门级全栈实战项目） ******************
+2022新年奖励自己一辆特斯拉😎（React Hooks + Redux 入门级全栈实战项目） ******************不错
 https://juejin.cn/post/7063088278576037901
 
 token和JWT的区别
@@ -132,7 +131,6 @@ webpack构建：
 还有什么办法可以监控网页的崩溃，并将网页崩溃上报呢？
 1.利用 window 对象的 load 和 beforeunload 事件实现了网页崩溃的监控。
 不错的文章，推荐阅读：Logging Information on Browser Crashes。
-复制
 window.addEventListener('load', function () {
     sessionStorage.setItem('good_exit', 'pending');
     setInterval(function () {
@@ -190,7 +188,6 @@ tsconfig.json 文件是用于描述将 TypeScript 转为 JavaScript 代码的配
     .then(({default: theDefault}) => {
       console.log(theDefault);
     });
-
 链接：https://juejin.cn/post/6844903818128261134
 
 8 module的加载实现
@@ -225,7 +222,7 @@ scrollHeight scrollWidth: padding + 实际内容尺寸
 1.chrome  控制台  performance  里面的 Memory
 
 宏任务： 如 setTimeout, setInterval 网络请求
-微任务: promise async/await  MutationObserver 监听DOM树的变化   微任务
+微任务: promise async/await  MutationObserver 监听DOM树的变化  微任务
 
 微任务在下一轮DOM渲染之前执行，宏任务在之后执行
 
@@ -246,7 +243,6 @@ dns-prefetch 是DNS预查询（和preconnect相关）
 【连环问】如何实现网页和iframe之间的通讯
 使用postMessage通讯
 注意跨域的限制和判断
-
 {/* <p>
         index page
         <button id="btn1">发送消息</button>
@@ -309,7 +305,7 @@ onbeforeunload事件在onunload事件之前触发。
 
 解决页面刷新redux数据丢失问题 https://blog.csdn.net/z591102/article/details/108096754 *******************
 ****************************************************   redux-persist react-router-redux的作用 https://juejin.cn/post/6844903951515533326
-解决页面刷新导致状态丢失，不如全局选择框
+解决页面刷新导致状态丢失，例如全局选择框的状态值
 1.redux-persist管理redux, 解决刷新react-redux数据丢失！ 。redux-persist会将redux的store中的数据缓存到浏览器的localStorage中。
 2.存放在连接hash连接里面，保护，每次属性页面从url里面获取，然后在存储在redux里面。 设置 url 上的 hash query react-router-redux
 ## 举例

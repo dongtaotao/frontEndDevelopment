@@ -12,6 +12,7 @@ css清除浮动有几种方法？
   clear: both;
 }
 四：父类添加高度
+
 19 文字单超出显示省略号
 div {
 	width: 200px;
@@ -140,8 +141,8 @@ DOM样式发生了变化，但没有影响DOM的几何属性时，会触发重�
 5. 什么是GPU加速，如何使用GPU加速，GPU加速的缺点 ********* https://juejin.cn/post/6844904116552990727
 优点：使用transform、opacity、filters等属性时，会直接在GPU中完成处理，这些属性的变化不会引起回流重绘
 缺点：GPU渲染字体会导致字体模糊，过多的GPU处理会导致内存问题
-6. 如何减少回流
 
+6. 如何减少回流
 使用class替代style，减少style的使用
 使用resize、scroll时进行防抖和节流处理，这两者会直接导致回流
 使用visibility替换display: none，因为前者只会引起重绘，后者会引发回流
@@ -168,22 +169,19 @@ margin重叠问题 https://juejin.cn/post/6905539198107942919
 如果是一正一负，就会正值减去负值的绝对值
 两个都是负值时，用0减去两个中绝对值大的那个
 
-
 19.形成BFC的条件
 a.float不是none
 b.position 是absolute或fixed
 c.overflow 不是visible
 d.display 是flex inline-block等
-复制代码
+
 20.BFC的作用
 a.清除浮动
 b.避免margin重叠
-复制代码
+
 21.Margin重叠值的计算
 a.水平边距永远不会重叠
 b.两个正值，取较大；一正一负相加；两个负值，取绝对值较大，再加负号
-
-作者：小洋芋
 链接：https://juejin.cn/post/7086346372001038350
 
 即 calc( ) 函数，主要用于指定元素的长度，支持所有 CSS 长度单位，运算符前后都需要保留一个空格。
@@ -192,7 +190,7 @@ b.两个正值，取较大；一正一负相加；两个负值，取绝对值较
 
 box-sizing： content-box， border-box https://blog.csdn.net/m0_37585915/article/details/78501760
 标准盒模型content-box, border = 20, padding = 10, width = 100
-总宽 = border + padding + width = 130
+总宽 = border + padding + width = 150
 border-box. border = 20, padding = 10, width = 100
 
 
@@ -222,4 +220,4 @@ border-box. border = 20, padding = 10, width = 100
 过渡与动画：transition、@keyframes、animation
 多列布局
 媒体查询
-链接：https://juejin.cn/post/7098689890933538853
+链接：https://juejin.cn/post/7098689890933538853 

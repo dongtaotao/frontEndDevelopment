@@ -191,7 +191,7 @@ const maxArea = function(height) {
 
 算法正确性证明
 
-const maxArea = function(height) {
+const maxArea = function(height) {  
     let max = 0 // 最大容纳水量
     let left = 0 // 左指针
     let right = height.length - 1 // 右指针

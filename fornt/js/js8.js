@@ -65,7 +65,6 @@ yarn list | grep xxx
   }
 }
 
-
 ~1.2.3 与 ^1.2.3 的版本号范围是多少https://q.shanyue.tech/fe/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/534.html#%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93
 对于 ~1.2.3 而言，它的版本号范围是 >=1.2.3 <1.3.0
 对于 ^1.2.3 而言，它的版本号范围是 >=1.2.3 <2.0.0
@@ -91,7 +90,6 @@ eslint，对代码不仅有风格的校验，更有可读性、安全性、健�
 
 ==实现模糊搜索结果的关键词高亮显示 https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/141
 我的大概思路是，用正则替换掉关键词。
-
 let panter = new RegExp(关键词, 'g')
 该行字符串.replace(panter, '<b style="color: #2D7BFF">' + 关键词 + '</b>')
 ps:如果是vue项目，直接与v-html结合使用更爽哦~
@@ -247,9 +245,9 @@ https://segmentfault.com/a/1190000023425946
 解决经典问题for循环和setTimeout
 使用闭包需要注意什么
 闭包有三个特性：
-函数嵌套函数；
-内部函数使用外部函数的参数和变量；
-参数和变量不会被垃圾回收机制回收。
+  函数嵌套函数；
+  内部函数使用外部函数的参数和变量；
+  参数和变量不会被垃圾回收机制回收。
 
 所以可以看到它的缺点：https://interview2.poetries.top/interview-exp/%E5%89%8D%E7%AB%AF%E9%9D%A2%E7%BB%8F%E6%B1%87%E6%80%BB.html#%E9%97%AD%E5%8C%85%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF
 常驻内存，增加内存使用量；

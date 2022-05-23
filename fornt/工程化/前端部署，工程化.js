@@ -107,7 +107,7 @@ https://mp.weixin.qq.com/s?__biz=Mzk0NTI2NDgxNQ==&mid=2247483730&idx=1&sn=5298f4
 https://juejin.cn/post/6951684431597797389
 
 Jenkins+github 前端自动化部署
-https://segmentfault.com/a/1190000010200161
+https://segmentfault.com/a/1190000010200161 
 
 下载：从Github下载代码，然后本地npm install
 开发：npm run dev本地修改代码，测试
@@ -168,11 +168,7 @@ CD-持续交付、持续部署
 
 持续部署的前提是能自动化完成测试，构建，部署等步骤
 
-作者：小蝉儿
 链接：https://juejin.cn/post/7083508488759934989
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 
 快来看看如何手动搭建自动化部署系统
 https://www.bilibili.com/video/BV1Qy4y1L7Nj?spm_id_from=333.999.0.0
@@ -180,3 +176,6 @@ https://www.bilibili.com/video/BV1Qy4y1L7Nj?spm_id_from=333.999.0.0
 
 dockerfile  dockerfile是用来定制镜像的
 docker-compose 构建容器 是一个管理多个容器的工具，比如可以解决容器之间的依赖关系，当在宿主机启动较多的容器时候，
+
+【前端部署第零篇】你们公司有可能就是这样部署前端的，暨前端部署专栏大纲介绍
+https://www.bilibili.com/video/BV1AY4y1671e?spm_id_from=333.999.0.0

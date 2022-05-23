@@ -70,4 +70,4 @@ var maxProfit = (prices) => {
     }
   }
   return profit; 
-}
+} 

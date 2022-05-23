@@ -15,6 +15,9 @@ https://juejin.cn/post/6940454764421316644
 Vue 项目里戳中你痛点的问题及解决办法（更新） 🔥
 https://juejin.cn/post/6844903632815521799#heading-2
 
+打造开箱即用的 Vue 移动端框架
+https://juejin.cn/post/7092030410242129951
+
 vue3新特性 https://juejin.cn/post/6940454764421316644
 Composition Api
 自定义hooks
@@ -401,4 +404,4 @@ const w2 = new Watcher(() => {
 const dep = new Dep();
 dep.addSub(w1);
 dep.addSub(w2);
-dep.notify()
+dep.notify() 

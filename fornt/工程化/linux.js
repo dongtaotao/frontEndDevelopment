@@ -1,4 +1,4 @@
-前端应该会的23个linux常用命令********** 
+前端应该会的23个linux常用命令**********  
 https://juejin.cn/post/6844904034243969038
 菜鸟教程
 https://www.runoob.com/linux/linux-tutorial.html   
@@ -26,7 +26,7 @@ bin/index
 使用npm link软连接 将命令链接到全局
 
 
-作为前端，你还不会搭建npm私库吗？
+作为前端，你还不会搭建npm私库吗？---------------
 https://www.bilibili.com/video/BV15g411M7oJ?spm_id_from=333.999.0.0 
 
 

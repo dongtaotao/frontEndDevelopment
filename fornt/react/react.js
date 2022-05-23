@@ -50,7 +50,7 @@ class DataProvider extends React.Components {
 )}/>
 
 9.1 调用 setState 之后发生了什么？
-简单来说：
+简单来说： 
 合并参数对象，触发调和过程
 计算新树和老树差异（Diff）
 根据差异进行最小化重新渲染
@@ -204,7 +204,6 @@ useLayoutEffect:
 DOM更新同步钩子。用法与useEffect类似，只是区别于执行时间点的不同。
 useEffect属于异步执行，并不会等待 DOM 真正渲染后执行，而useLayoutEffect则会真正渲染后才触发；
 可以获取更新后的 state；
-作者：郭东东
 链接：https://juejin.cn/post/6844903801153945608
 
 错误边界

@@ -12,7 +12,7 @@ var twoSum = function(nums, target) {
     if(map.has(n2)) {
       return [map.get(n2), i]
     } else {
-      map.set(n, i)
+      map.set(n, i) 
     }
   }
 }

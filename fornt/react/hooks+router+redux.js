@@ -338,11 +338,9 @@ function CommentList(props) {
 总结∶
 Hoc、render props和hook都是为了解决代码复用的问题，但是hoc和render props都有特定的使用场景和明显的缺点。hook是react16.8更新
 的新的API，让组件逻辑复用更简洁明了，同时也解决了hoc和render props的一些缺点。
-
 链接：https://juejin.cn/post/6941546135827775525
 
 1）HOC的优缺点
-
 优点∶ 逻辑服用、不影响被包裹组件的内部逻辑。
 缺点∶hoc传递给被包裹组件的props容易和被包裹后的组件重名，进而被覆盖,  无法获取原始 class 组件的静态方法  无法获取原始组件的 ref
 2）适用场景

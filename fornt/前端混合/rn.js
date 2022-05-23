@@ -237,14 +237,12 @@ https://juejin.cn/post/6844904041290432525
 
 3.React Native工作原理与生命周期
 3.1.框架工作原理
-
 JSX源码通过React Native框架编译后，通过对应平台的Bridge实现了与原生框架的通信
 UI层变更就映射为虚拟DOM后调用diff算法计算出变动后的JSON映射文件，最终由Native层将此JSON文件映射渲染到原生App的页面元素上，
 实现了项目中只需控制state以及props的变更来引起IOS与Android平台的UI变更
 
 3.2.与原生平台通信
-
-与原生框架通信中，采用了JavaScriptCore作为JS VM，中间通过JSON文件与Bridge进行通信
+与原生框架通信中，采用了JavaScriptCore作为JS VM，中间通过JSON文件与Bridge进行通信 
 Chrome浏览器进行调试，那么所有的JavaScript代码都将运行在Chrome的V8引擎中，与原生代码通过WebSocket进行通信
 链接：https://juejin.cn/post/6844904134252969992
 

@@ -302,10 +302,9 @@ https://mp.weixin.qq.com/s/EG5HCgz_M1S2Xbky0lgDxg
 那怎么去通过按需加载去使用组件库，答案是通过babel插件：babel-plugin-component（element 通过fork ant-design库的 ）
 在babel转码的时候，把整个库element-ui的引用，变为element-ui/lib/button具体模块的引用。这样webpack收集依赖module就不是整个element-ui，而是里面的button
 
-
 webpack 如何实现动态加载
 讲道理 webpack 动态加载就两种方式：import()和 require.ensure，不过他们实现原理是相同的。
-我觉得这道题的重点在于动态的创建 script 标签，以及通过 jsonp 去请求 chunk，推荐的文章是：webpack 是如何实现动态导入的[5]
+我觉得这道题的重点在于动态的创建 script 标签，以及通过 jsonp 去请求 chunk，推荐的文章是：webpack 是如何实现动态导入的
 
 require 引入的模块 webpack 能做 Tree Shaking 吗？
 不能，Tree Shaking 需要静态分析，只有 ES6 的模块才支持。

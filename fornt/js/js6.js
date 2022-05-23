@@ -64,7 +64,6 @@ http://interview.poetries.top/docs/simply.html#_2-%E5%8F%91%E5%B8%83%E8%AE%A2%E9
 从而知道什么时候自己可以开始执 行。这就叫做"发布/订阅模式"(publish-subscribe pattern)
 
 . 观察者模式
-
 观察者(订阅者) -- Watcher
 update():当事件发生时，具体要做的事情
 目标(发布者) -- Dep
@@ -114,10 +113,10 @@ https://leetcode-cn.com/problems/permutations/solution/javascript-hui-su-xiang-j
 
 1. CSRF 攻击，解释一下 Cookie 的 SameSite
 2. HTTPS 协议之所以是安全的是因为 HTTPS 协议会对传输的数据进行加密，
-而加密过程是使用了非对称加密实现。但其实：HTTPS 在内容传输的加密上使用的是对称加密，非对称加密只作用在证书验证阶段。
+  而加密过程是使用了非对称加密实现。但其实：HTTPS 在内容传输的加密上使用的是对称加密，非对称加密只作用在证书验证阶段。
 3. JSBridge 原理
 4. React 16 中 Diff 算法的变化
-浅析React Diff 与 Fiber https://zhuanlan.zhihu.com/p/58863799
+  浅析React Diff 与 Fiber https://zhuanlan.zhihu.com/p/58863799
 5. 什么是Base64
    Base64是网络上最常见的用于传输8Bit字节码的编码方式之一，
    Base64就是一种基于64个可打印字符来表示二进制数据的方法

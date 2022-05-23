@@ -4,7 +4,7 @@ https://blog.csdn.net/u014465934/article/details/90726911?spm=1001.2101.3001.665
 https://www.cnblogs.com/wuguanglin/p/code-interview.html
 
 https://blog.csdn.net/weixin_42235173/article/details/90897252
-剑指offer-javascript版本（66道题全集，内容特别特别长）
+剑指offer-javascript版本（66道题全集，内容特别特别长） 
 
 https://blog.csdn.net/Damp_XUN/article/details/98502147
 剑指offer JavaScript版
@@ -774,6 +774,4 @@ function LastRemaining_Solution(n, m)
     }
     return result;
 }
-———————————————
-版权声明：本文为CSDN博主「violet_seven」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/violet_seven/article/details/107042191  

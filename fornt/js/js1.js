@@ -48,7 +48,7 @@ reconciliation中的生命周期函数在一次更新渲染循环中被 多次�
 
 //===========================================================================
 Mobx和Redux区别浅析 https://juejin.cn/post/6924572729886638088
-编程思维方式的不同 Redux更多的是遵循函数式编程（Functional Programming, FP）
+编程思维方式的不同 Redux更多的是遵循函数式编程（Functional Programming, FP） 
 思想，而Mobx则更多从面相对象角度考虑问题。Mobx是一个透明函数响应式编程
 （Transparently Functional Reactive Programming，TFRP）的状态管理库，它
 使得状态管理简单可伸缩
@@ -248,14 +248,14 @@ function deepClone(obj, map = new WeakMap()) {
 
   if (obj == null || typeof obj != 'object') return obj;
   if (map.has(obj)) {
-      return map.get(obj);
+    return map.get(obj);
   }
   let t = new obj.constructor();
   map.set(obj, t);
   for (let key in obj) {
-      if (obj.hasOwnProperty(key)) {
-          t[key] = deepClone(obj[key], map);
-      }
+    if (obj.hasOwnProperty(key)) {
+      t[key] = deepClone(obj[key], map);
+    }
   }
   return t;
 }

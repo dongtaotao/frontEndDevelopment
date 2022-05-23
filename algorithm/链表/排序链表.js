@@ -29,4 +29,4 @@
     result = result.next
   }
   return list.next
-}; 
+};  

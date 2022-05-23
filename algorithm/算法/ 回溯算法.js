@@ -60,7 +60,7 @@ var permute = function (nums) {
     }
     _helper(0, [])
     return ret
-  };
+  }; 
   
   
   来源：力扣（LeetCode） 

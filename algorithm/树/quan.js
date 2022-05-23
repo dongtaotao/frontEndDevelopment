@@ -11,7 +11,7 @@ var invertree = (root) => {
     val: root.val,
     left: invertree(root.right),
     right: invertree(root.left)
-  }
+  } 
 }
 //================================================================
 源二叉树 

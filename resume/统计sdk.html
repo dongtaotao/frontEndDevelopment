@@ -87,7 +87,7 @@
 
     </script>
 </body>
-</html>
+</html> 
 
 
 前端搞监控|Jimmy - 如何针对 APP 自建前端监控体系
@@ -106,7 +106,7 @@ https://zhuanlan.zhihu.com/p/159115081
 从零开始搞监控系统（3）——性能监控 https://juejin.cn/post/7090743747041820686
 
 performance.timing
-行性能监控  页面时间，白屏时间等 https://juejin.cn/post/7090743747041820686
+性能监控  页面时间，白屏时间等 https://juejin.cn/post/7090743747041820686
 
 从零开始搞监控系统（3）——性能监控
 首屏时间 https://juejin.cn/post/7090743747041820686#heading-2
@@ -164,12 +164,11 @@ window.frames[0].onerror
 6）window.console.error
 
 
-
 5 分钟撸一个前端性能监控工具
 https://juejin.cn/post/6844903662020460552
 10分钟彻底搞懂前端页面性能监控https://zhuanlan.zhihu.com/p/82981365
 
- 
+
 来，跟我一起 ，自研多端错误监控平台（完整版） 🔥 es查询数据
 https://juejin.cn/post/6844904202917904391
 SDK 小结
@@ -179,3 +178,59 @@ SDK 小结
 
 从 ES 中获取数据非常简单，ES 底层是基于 Lucene 的搜索服务器的，它提供了一个分布式多用户能力的全文搜索引擎，
 基于 RESTful web 接口。所以我们前端开发只需要想平时开发业务调用接口一样去调用就可以了。 
+
+
+
+、、const PV_URL_SET = new Set()
+
+class MyStatistic {
+    constructor(productId) {
+        this.productId = productId
+        this.initPerformance() // 性能统计
+        this.initError() // 错误监控
+    }
+    // 发送统计数据
+    send(url, params = {}) {
+        params.productId = productId
+        const paramArr = []
+        for (let key in params) {
+            const val = params[key]
+            paramArr.push(`${key}=${value}`)
+        }
+        const newUrl = `${url}?${paramArr.join('&')}` // url?a=10&b=20
+        // 用 <img> 发送：1. 可跨域；2. 兼容性非常好
+        const img = document.createElement('img')
+        img.src = newUrl // get
+    }
+    // 初始化性能统计
+    initPerformance() {
+        const url = 'yyy'
+        this.send(url, performance.timing) // 给最原始的、完整的结果，原始数据
+    }
+    // 初始化错误监控
+    initError() {
+        window.addEventListener('error', event => {
+            const { error, lineno, colno } = event
+            this.error(error, { lineno, colno })
+        })
+        // Promise 未 catch 住的报错
+        window.addEventListener('unhandledrejection', event => {
+            this.error(new Error(event.reason), { type: 'unhandledrejection' })
+        })
+    }
+    pv() {
+        const href = location.href
+        if (PV_URL_SET.get(href)) return // 不重复发送 pv
+        this.event('pv')
+        PV_URL_SET.add(href)
+    }
+    event(key, val) {
+        const url = 'xxx' // 自定义事件统计 server API
+        this.send(url, {key, val})
+    }
+    error(err, info = {}) {
+        const url = 'zzz'
+        const { message, stack } = err
+        this.send(url, { message, stack, ...info  })
+    }
+}

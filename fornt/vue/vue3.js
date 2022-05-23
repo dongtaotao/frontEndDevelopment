@@ -282,24 +282,20 @@ keep-alive的中还运用了 LRU(最近最少使用) 算法，选择最近最久
 
 
 一、$nextTick有什么用？
-
 Vue是异步渲染的框架。
 data改变之后，DOM不会立刻渲染。
 $nextTick会在DOM渲染之后被触发，以获取最新的DOM节点。
 连续多次的异步渲染，$nextTick只会执行最后一次渲染后的结果。
 
 二、$nextTick的原理
-
 $nextTick主要通过事件循环中的任务队列的方式异步执行传入的回调函数，
 首先会判断当前的执行环境是否支持Promise，MutationObserver，setImmediate，setTimeout。
 如果支持则创建对应的异步方法，这里的MutationObserver并不是监听DOM，而是利用其微任务特性。
 需要注意的是更新DOM的方法也是通过nextTick进行调用的，因此就可以实现传入$.nextTick的回调函数在DOM渲染完成之后执行这些微任务。
 
 三、循环调用的话nextTick里面有容错机制吗？
-
 多次调用 nextTick 会将方法存入队列 callbacks 中，通过这个异步方法清空当前队列。
 链接：https://juejin.cn/post/7084431185358618631
-
 
 
 Vue的CSS隔离
@@ -349,7 +345,7 @@ Vue 的编译过程就是将 template 转化为 render 函数的过程 分为以
 第二步是对 AST 进行静态节点标记，主要用来做虚拟DOM的渲染优化（优化器）
 第三步是 使用 element ASTs 生成 render 函数代码字符串（代码生成器）
 
-https://vue3js.cn/interview/vue3/goal.html#%E4%B8%89%E3%80%81%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88
+https://vue3js.cn/interview/vue3/goal.html#%E4%B8%89%E3%80%81%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88  🔥
 vue3在兼顾vue2的options API的同时还推出了composition API，大大增加了代码的逻辑组织和代码复用能力
 这里当然说的就是composition API，其两大显著的优化：
 优化逻辑组织

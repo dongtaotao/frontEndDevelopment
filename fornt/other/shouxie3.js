@@ -1,5 +1,5 @@
 2021前端岗面试整理 https://juejin.cn/post/6991724298197008421#heading-83
-将有同样元素的数组进行合并 https://juejin.cn/post/6991724298197008421#heading-83
+将有同样元素的数组进行合并 https://juejin.cn/post/6991724298197008421#heading-83 
 // 例如： 
 const arr = [
     ['a', 'b', 'c'],
@@ -146,26 +146,26 @@ function getId(value, id) {
   
   let arr = []
   try {
-      function getValue(value) {
-          arr.push(value.id);
-          if(value.id === id) {
-              throw('');
-              return;
-          }
-
-          if(value.children && value.children.length > 0) {
-              value.children.forEach((item, index) => {
-                  getValue(item, id)
-              })
-              arr.pop()
-          } else {
-              arr.pop()
-          }
+    function getValue(value) {
+      arr.push(value.id);
+      if(value.id === id) {
+          throw('');
+          return;
       }
-      getValue(value)
+
+      if(value.children && value.children.length > 0) {
+          value.children.forEach((item, index) => {
+              getValue(item, id)
+          })
+          arr.pop()
+      } else {
+          arr.pop()
+      }
+    }
+    getValue(value)
   } catch(e) {
-      console.log(arr)
-      return arr;
+    console.log(arr)
+    return arr;
   }
 }
 getId(list.shift(), '112')

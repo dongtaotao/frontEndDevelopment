@@ -10,6 +10,8 @@ https://juejin.cn/post/6860129883398668296#heading-3
 [2.7w字]我是这样搭建 React+Typescript项目环境的(下)
 https://juejin.cn/post/6860134655568871437
 
+React移动端适配解决方案
+https://zhuanlan.zhihu.com/p/148529375
 
 webpack5 手动搭建前端项目（react+antd + ts）
 https://juejin.cn/post/7096802032782147592
@@ -360,4 +362,4 @@ MyComponent.jsexport default class MyComponent extends React.Component {
 resolve的模块的default属性就是组件MyComponent本身。
  
 Link 的本质也是a 标签。只不过在Link 中禁用了 a 标签的默认事件，改用了history对象提供的方法进行跳转。
-https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/135  
+https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/135   

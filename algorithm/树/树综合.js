@@ -251,7 +251,7 @@ function Mirror(root) {
 按结点数值大小顺序第三小结点的值为4。
 
   //递归实现
-  function KthNode(pRoot, k) {
+  function KthNode(pRoot, k) { 
     const arr = [];
     loopThrough(pRoot, arr);
     if (k > 0 && k <= arr.length) {

@@ -92,15 +92,15 @@ var levelOrder = function(root) {
 var hasPathSum = function(root, targetSum) {
     if(!root)return false
     let res=false;
-    const dfs=(n,s)=>{
-        if(!n)return 
-        console.log(n.val,s)
-        if(!n.left&&!n.right&&s===targetSum){res=true}
-        if(n.left)dfs(n.left,s+n.left.val)
-        if(n.right)dfs(n.right,s+n.right.val)
-}
-dfs(root,root.val)
-return res
+        const dfs=(n,s)=>{
+            if(!n)return 
+            console.log(n.val,s)
+            if(!n.left&&!n.right&&s===targetSum){res=true}
+            if(n.left)dfs(n.left,s+n.left.val)
+            if(n.right)dfs(n.right,s+n.right.val)
+    }
+    dfs(root,root.val)
+    return res
 };
 
 //============================================================================
@@ -432,5 +432,5 @@ var isValidBST = function(root) {
       return false
     }
     return isValidBST(root.left) && isValidBST(root.right)  
-  };
-  
+};
+

@@ -4,7 +4,6 @@ https://juejin.cn/post/6844904166586843149
 聊聊前端开发日常的协作工具（全）
 https://juejin.cn/post/6844904176330375181
 
-
 面试官：vue项目本地开发完成后部署到服务器后报404是什么原因呢？
 https://vue3js.cn/interview/vue/404.html#%E4%B8%80%E3%80%81%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2
 为什么hash模式下没有问题
@@ -12,7 +11,6 @@ router hash 模式我们都知道是用符号#表示的，如 website.com/#/logi
 它的特点在于：hash 虽然出现在 URL 中，但不会被包括在 HTTP 请求中，对服务端完全没有影响，因此改变 hash 不会重新加载页面
 hash 模式下，仅 hash 符号之前的内容会被包含在请求中，如 website.com/#/login 只有 website.com 会被包含在请求中 ，因此对于服务端来说，
 即使没有配置location，也不会返回404错误
-
 
 H5如何实现唤起APP
 URL Scheme（通用）
@@ -66,7 +64,6 @@ https://juejin.cn/post/6972172870164152333
 Redux 技术分享
 https://juejin.cn/post/6978111642970259487
 
-
 babel-plugin-import 使用
 https://juejin.cn/post/7051206427402043423
 
@@ -90,20 +87,15 @@ https://juejin.cn/post/7086243900775464996
 组合
 链接：https://juejin.cn/post/7083050992471638052
 
-
 compression-webpack-plugin
 可以配置gizp压缩
-
 
 rem文件的导入问题：
 我们在做手机端时，适配是必须要处理的一个问题。例如，我们处理适配的方案就是通过写一个rem.js，原理很简单，就是根据网页尺寸计算html的font-size大小，
 基本上小伙伴们都知道，这里直接附上代码，不多做介绍。;
 (function(c,d){var e=document.documentElement||document.body,a="orientationchange" in window?"orientationchange":"resize",b=function(){var f=e.clientWidth;e.style.fontSize=(f>=750)?"100px":100*(f/750)+"px"};b();c.addEventListener(a,b,false)})(window);
 这里说下怎么引入的问题，很简单。在main.js中，直接import './config/rem'导入即可。import的路径根据你的文件路径去填写。
-
-作者：愣锤
 链接：https://juejin.cn/post/6844903632815521799
-
 
 前端进阶必读文章
 https://juejin.cn/post/6993628735354191909
@@ -143,3 +135,35 @@ https://juejin.cn/post/6991366537961537567  记事本
 聊聊开发日常的效率提升工具（全）
 https://juejin.cn/post/7019183422320934948
 
+
+内存泄露 https://interview2.poetries.top/excellent-docs/5-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9D%97.html#_6-7-cookie%E5%92%8Clocalsrorage%E3%80%81session%E3%80%81indexdb-%E7%9A%84%E5%8C%BA%E5%88%AB
+意外的全局变量: 无法被回收
+定时器: 未被正确关闭，导致所引用的外部变量无法被释放
+事件监听: 没有正确销毁 (低版本浏览器可能出现)
+闭包: 会导致父级中的变量无法被释放
+dom 引用: dom 元素被删除时，内存中的引用未被正确清空
+可用 chrome 中的 timeline 进行内存标记，可视化查看内存的变化情况，找出异常点。
+
+大文件处理（上传，下载）思考
+https://juejin.cn/post/7100086067264487432
+
+网站性能优化实战之—— gzip （webpack, vite 开启gzip 部署）
+https://juejin.cn/post/6983486365740564511#heading-9
+
+双10期|基本对象Error及8种错误类型
+https://juejin.cn/post/7100160801528365070
+
+https://www.pzijun.cn/blog/1/1.5.html#a-%E9%A1%B5%E9%9D%A2%E6%89%93%E5%BC%80-b-%E9%A1%B5%E9%9D%A2%EF%BC%8Ca%E3%80%81b-%E9%A1%B5%E9%9D%A2%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F
+B 页面正常关闭，如何通知 A 页面
+页面正常关闭时，会先执行 window.onbeforeunload ，然后执行 window.onunload ，我们可以在这两个方法里向 A 页面通信
+#B 页面意外崩溃，又该如何通知 A 页面
+页面正常关闭，我们有相关的 API，崩溃就不一样了，页面看不见了，JS 都不运行了，那还有什么办法可以获取B页面的崩溃？
+
+全网搜索了一下，发现我们可以利用 window 对象的 load 和 beforeunload 事件，通过心跳监控来获取 B 页面的崩溃
+
+
+vs code画流程图---draw.io integration
+https://www.bilibili.com/video/av586758774/
+
+前端八股文
+https://juejin.cn/column/7067422830543470599

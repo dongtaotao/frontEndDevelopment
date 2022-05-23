@@ -174,3 +174,9 @@ vue-router有哪几种导航钩子？
 
 什么是动态组件？动态组件的钩子如何执行？ https://juejin.cn/post/7064368176846340132#heading-95
 让多个组件使用同一个挂载点，并动态切换，这就是动态组件 
+
+vue2、vue3 diff 算法源码解析
+https://juejin.cn/post/7100092670566989861
+vue2——双端diff算法
+具体来说就是新旧 VNode 节点的左右头尾两侧都有一个指针，用来遍历对比新旧 VNode 列表。
+vue3——快速diff算法

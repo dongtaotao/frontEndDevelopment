@@ -114,20 +114,15 @@ const isPalindrome = (x) => {
   
     return flag;
   }
-来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/palindrome-number
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 将两个升序链表合并为一个新的升序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 
 
 示例：
-
 输入：1->2->4, 1->3->4
 输出：1->1->2->3->4->4
 
-来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/merge-two-sorted-lists
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</div>
 /**
      * Definition for singly-linked list.
      * function ListNode(val, next) {
@@ -306,10 +301,3 @@ function searchRange(nums: number[], target: number): number[] {
   return [arr[0], arr[arr.length - 1]];
 } 
 
-https://www.pzijun.cn/blog/1/1.5.html#a-%E9%A1%B5%E9%9D%A2%E6%89%93%E5%BC%80-b-%E9%A1%B5%E9%9D%A2%EF%BC%8Ca%E3%80%81b-%E9%A1%B5%E9%9D%A2%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F
-B 页面正常关闭，如何通知 A 页面
-页面正常关闭时，会先执行 window.onbeforeunload ，然后执行 window.onunload ，我们可以在这两个方法里向 A 页面通信
-#B 页面意外崩溃，又该如何通知 A 页面
-页面正常关闭，我们有相关的 API，崩溃就不一样了，页面看不见了，JS 都不运行了，那还有什么办法可以获取B页面的崩溃？
-
-全网搜索了一下，发现我们可以利用 window 对象的 load 和 beforeunload 事件，通过心跳监控来获取 B 页面的崩溃
