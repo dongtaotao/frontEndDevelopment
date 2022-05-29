@@ -206,7 +206,6 @@ const agent = new Proxy(idol, {
     }
   }
 })
-
 agent.phone        //经纪人电话:10010
 agent.price = 100  //Uncaught Error: 报价过低
 

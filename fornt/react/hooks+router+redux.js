@@ -1,6 +1,6 @@
 区别于useState 
 Reducer注重状态变化的过程
-Sate关注状态
+useState关注状态
 useReducer是useState的替换方案，useReducer更适合管理包含多个值的state对象 
 const initialState = {count:0};
 
@@ -131,17 +131,14 @@ const Demo2 = () => {
   // useRef 返回的是同一个对象，类似 {current:''}
   const countRef = useRef();
   countRef.current = count;
-
   const addCount = () => {
     setCount(count + 1);
   };
-
   const alertCount = () => {
     setTimeout(() => {
       alert(countRef.current);
     }, 3000);
   };
-
   return (
     <div>
       <button onClick={addCount}>add Count</button>
@@ -150,7 +147,6 @@ const Demo2 = () => {
     </div>
   );
 };
-
 export default Demo2;
 
 //================================================================
@@ -159,7 +155,6 @@ react-router等前端路由的原理大致相同，可以实现无刷新的条�
 
 react-router里的<Link>标签和<a>标签有什么区别
 对比<a>,Link组件避免了不必要的重渲染
-
 //================================================================
 react-redux将组件分成：
 容器组件：存在逻辑处理
@@ -312,7 +307,6 @@ class DataProvider extends React.Components {
 （3）Hooks
 官方解释∶
 Hook是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。通过自定义hook，可以复用代码逻辑。
-
 // 自定义一个获取订阅数据的hook
 function useSubscription() {
   const data = DataSource.getComments();
@@ -344,7 +338,6 @@ Hoc、render props和hook都是为了解决代码复用的问题，但是hoc和r
 优点∶ 逻辑服用、不影响被包裹组件的内部逻辑。
 缺点∶hoc传递给被包裹组件的props容易和被包裹后的组件重名，进而被覆盖,  无法获取原始 class 组件的静态方法  无法获取原始组件的 ref
 2）适用场景
-
 代码复用，逻辑抽象
 渲染劫持
 State 抽象和更改
@@ -363,7 +356,6 @@ Route
 Link、NavLink
 switch
 redirect 
-#
 
 hook的使用限制
 上面简介中我们说了，不可以在循环、条件或嵌套函数中调用 Hook，这是为什么呢？

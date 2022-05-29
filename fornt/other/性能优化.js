@@ -56,10 +56,6 @@ react性能优化思路
 17.尽量少用不可控的refs、DOM操作。
 18.使用return null而不是CSS的display:none来控制节点的显示隐藏。保证同一时间页面的DOM节点尽可能的少。props和state的数据尽可能简单明了，扁平化
 19.合理的组件分类，UI组件和容器组件
-    展示类组件（没有任何交互，只是纯展示数据）
-    交互类组件（页面交互操作比较频繁）
-    数据类组件（比如dva，redux，基本在搭建框架时已模块化）
-    高阶组件（对原有组件的保护，更利于后续的迭代开发）
 20.组件封装具有可复用性
 21.在合适的时机使用防抖节流debounce、throttle 优化频繁触发的回调
 22.在 Web 服务器上启用 gzip 压缩
@@ -71,7 +67,7 @@ react性能优化思路
 
 webpack----------------------------------------
 ① include 或 exclude 限制 loader 范围。
-② happypack多进程编译
+② happypack多线程编译
 ③缓存babel编译过的文件 babel-loader
 ④tree Shaking 删除冗余代码
 ⑤按需加载，按需引入。 
@@ -219,10 +215,27 @@ Gzip资源
 小图片base64编码   减少网络请求
 配置hash值
 开启http2
-第三方资源使用cdn
+第三方资源使用cdn--------------
 设置http缓存（强缓存和协商缓存，提高加载速度）
 设置服务端渲染ssr
+
 DNS 预解析
+    DNS 解析也是需要时间的，可以通过预解析的方式来预先获得域名所对应的 IP https://interview2.poetries.top/excellent-docs/13-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%A8%A1%E5%9D%97.html#_1-2-%E7%BC%93%E5%AD%98
+    //<link rel="dns-prefetch" href="//blog.poetries.top">
+预加载 //<link rel="preload" href="http://example.com">
+预渲染 //<link rel="prerender" href="http://poetries.com">
+使用 HTTP / 2.0
+
+开启gzip
+使用浏览器缓存
+服务端渲染
+
+预渲染
+可以通过预渲染将下载的文件预先在后台渲染，可以使用以下代码开启预渲染
+{/* <link rel="prerender" href="http://blog.poetries.top"> */}
+
+
+性能监测篇：Performance、LightHouse 与性能 API
 
 
 https://juejin.cn/post/6903295387302526990
@@ -277,8 +290,6 @@ link或者src添加rel属性，设置prefetch或preload可预加载资源。（�
 SPA项目，通过import或者require做路由按需（减小资源大小）
 服务端渲染SSR，加快首屏渲染，利于SEO页面使用骨架屏，提高首页加载速度（提高加载速度）
 使用 JPEG 2000, JPEG XR, and WebP 的图片格式来代替现有的jpeg和png，当页面图片较多时，这点作用非常明显使用图片懒加载-lazyload
-
-作者：河畔一角
 链接：https://juejin.cn/post/6844904142289256461
 
 服务端渲染与客户端渲染 优缺点
@@ -293,3 +304,7 @@ prefetch：其利用浏览器空闲时间来下载或预取用户在不久的将
 preload : 可以指明哪些资源是在页面加载完成后即刻需要的，浏览器在主渲染机制介入前就进行预加载，这一机制使得资源可以更早的得到加载并可用，
 且更不易阻塞页面的初步渲染，进而提升性能。 <link href="/js/xxx.js" rel="preload" as="script">需要 as 指定资源类型目前可用的属性类型有如下：
 
+
+
+🐢11s到⚡1s，性能优化之首屏加载🚀
+https://juejin.cn/post/6949896020788690958

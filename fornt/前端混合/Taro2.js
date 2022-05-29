@@ -53,7 +53,6 @@ Taro 3 则可以大致理解为运行时或解释型架构（相对于 Taro 1/2 
 https://www.csdn.net/tags/MtTakg1sODExMjQtYmxvZwO0O0OO0O0O.html
 
 
-
 整体架构，它分为两个部分，第⼀部分是编译时，第⼆部分是运⾏时。编译时会先对⽤户的 React 代码进⾏编译，转换成各个端上的⼩程序都可以运⾏的代码，
 然后再在各个⼩程序端上⾯都配上⼀个对应的运⾏时框架进⾏适配，最终让这份代码运⾏在各个⼩程序端上⾯
 
@@ -61,13 +60,12 @@ https://www.csdn.net/tags/MtTakg1sODExMjQtYmxvZwO0O0OO0O0O.html
 对抽象语法树进行一系列修改、转换操作，最后再通过 babel-generate 生成对应的目标代码。
 
 🔥🔥🔥
-aro 3 则可以大致理解为解释型架构（相对于 Taro 1/2 而言），主要通过在小程序端模拟实现 DOM、BOM API 来让前端框架直接运行在小程序环境中，
+Taro 3 则可以大致理解为解释型架构（相对于 Taro 1/2 而言），主要通过在小程序端模拟实现 DOM、BOM API 来让前端框架直接运行在小程序环境中，
 从而达到小程序和 H5 统一的目的，而对于生命周期、组件库、API、路由等差异，依然可以通过定义统一标准，各端负责各自实现的方式来进行抹平。
 而正因为 Taro 3 的原理，在 Taro 3 中同时支持 React、Vue 等框架，甚至还支持了 jQuery，还能支持让开发者自定义地去拓展其他框架的支持，
 比如 Angular，Taro 3 整体架构如下：
 
 链接：https://juejin.cn/post/6989968343163731981
-
 
 Taro3跨端跨框架原理初探
 https://juejin.cn/post/6989968343163731981

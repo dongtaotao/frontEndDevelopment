@@ -125,7 +125,6 @@ class MyTestableClass {
 function testable(target) {
   target.isTestable = true;
 }
-
 MyTestableClass.isTestable // t
 
 //============================================================================
@@ -372,4 +371,4 @@ includes可以检测NaN，indexOf不能检测NaN，includes内部使用了Number
 Vue 如何清除浏览器缓存？
 项目打包的时候给每个打包文件加上 hash 值，一般是在文件后面加上时间戳；
 在 html 文件中加入 meta 标签，content 属性设置为no-cache;
-在后端服务器中进行禁止缓存设置。  
+在后端服务器中进行禁止缓存设置。   

@@ -863,8 +863,6 @@ XSS与CSRF对比区别
 XSS是向页面注入JS运行，JS函数体做事情
 CSRF是利用本身漏洞帮我执行接口
 方式不一样，CSRF依赖用户登陆网站
-
-作者：Terrence Lu
 链接：https://juejin.cn/post/6844903862646603789
 
 

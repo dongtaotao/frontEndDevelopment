@@ -13,7 +13,6 @@ https://www.bilibili.com/video/BV1DS4y137xT/?spm_id_from=333.788
 
 
 介绍一下 vite
-
 为什么 Vite 启动这么快
 Webpack 会 先打包 ，然后启动开发服务器，请求服务器时直接给予打包结果。
 而 Vite 是 直接启动 开发服务器，请求哪个模块再对该模块进行 实时编译 。
@@ -22,13 +21,11 @@ Vite 将开发环境下的模块文件，就作为浏览器要执行的文件，
 再根据需要对模块内容进行编译
 
 Vite是什么？
-Vite(读音类似于[weɪt]，法语，快的意思) 是一个由原生 ES Module 驱动的
-Web 开发构建工具。在开发环境下基于浏览器原生 ES imports 开发，
+Vite是一个由原生ES Module 驱动的Web开发构建工具。在开发环境下基于浏览器原生 ES imports 开发，
 在生产环境下基于 Rollup 打包。
 
 Vite概念及设计思想 https://www.imooc.com/video/23528 
 Vite 快速的， 是一种新型前端构建工具，能够显著提升前端开发体验。 下一代前端开发与构建工具 
-
 Vite由两个部分组成
 1.一套开发服务，服务预开发环境，ESM+HMR;
 2.一套构建指令，服务于生产环境，用Rollup打包

@@ -227,7 +227,6 @@ sw：Service Worker 每10s查看一遍登记中的网页，发现登记时间已
 
 简单地说就是一种心跳检测机制，在页面的脚本中创建Service Worker工作线程，然后定时地向该线程发送消息，即使网页奔溃了，线程还能存活。 https://juejin.cn/post/7090747729965498381
 
-
 2. 有哪些监控网页卡顿的方法？
 https://juejin.cn/post/6844904034411741191
 
@@ -324,7 +323,7 @@ VUE errorHandler 和 React componentDidCatch
 跨域 crossOrigin 解决
 
 
-JS代码是如何被压缩的 
+JS代码是如何被压缩的
 代码压缩原理 https://www.h5w3.com/19480.html
 了解了AST之后，我们再分析一下JS的代码压缩原理。简单的说，就是
 1. 将code转换成AST
@@ -345,7 +344,6 @@ https://mp.weixin.qq.com/s/aMYp6Y5n26r9vdQIom4g0w
 https://mp.weixin.qq.com/s/sHtZhRTNOihmxap5sDD6xQ
 Web 安全总结(面试必备良药)
 https://mp.weixin.qq.com/s/rU32rVM6Q-ele01ZB3RFzg
-
 
 进程间和线程间的通信方式
 
@@ -376,7 +374,6 @@ Prettier 可以认为是帮助代码格式化的工具(代码格式化的工具)
 
 axios 超时重试 https://juejin.cn/post/6999515520932249608
 安装 axios-retry
-
 
 IntersectionObserver应用 https://zhuanlan.zhihu.com/p/293581400
 Intersection Observer API提供了一种异步观察目标元素与祖先元素或顶级文档viewport的交集中的变化的方法。

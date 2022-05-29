@@ -8,7 +8,8 @@ React Native 框架内部已提供了很多的内置组件，如图 3-1 所示�
 同时也提供了供编写与原生平台交互的接口，在后续的章节我们会进行与原生平台的混合实战开发实战。 
 
 React Native 工作原理
-图 3-2 React Native 渲染 在 React 框架中，JSX 源码通过 React 
+图 3-2 React Native 渲染 
+在 React 框架中，JSX 源码通过 React 
 框架最终渲染到了浏览器的真实 DOM 中，而在 React Native 框架中，
 JSX 源码通过 React Native 框架编译后，通过对应平台的 Bridge
 实现了与原生框架的通信。如果我们在程序中调用了 React Native 提供的 API，
@@ -24,7 +25,7 @@ JSX 源码通过 React Native 框架编译后，通过对应平台的 Bridge
 
 
 3.3 React Native 与原生平台通信
-在与原生框架通信中，如图 3-3 所示，React Native 
+在与原生框架通信中，React Native 
 采用了 JavaScriptCore 作为 JS VM，中间通过 JSON 文件与 
 Bridge 进行通信。而如果在使用 Chrome 浏览器进行调试时，
 那么所有的 JavaScript 代码都将运行在 Chrome 的 V8 引擎中，

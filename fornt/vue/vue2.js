@@ -1,25 +1,27 @@
+【面试题解】vue-router有几种钩子函数？具体是什么及执行流程是怎样的？
+https://juejin.cn/post/6987267852575195143#heading-11
+全局守卫、路由守卫、组件守卫。
+
 15 说一说keep-alive实现原理
 http://interview.poetries.top/docs/simply.html#_14-vue-%E6%B8%B2%E6%9F%93%E8%BF%87%E7%A8%8B
 keep-alive组件接受三个属性参数：include、exclude、max
-
-include 指定需要缓存的组件name集合，参数格式支持String, RegExp, Array。当为字符串的时候，多个组件名称以逗号隔开。
-exclude 指定不需要缓存的组件name集合，参数格式和include一样。
-max 指定最多可缓存组件的数量,超过数量删除第一个。参数格式支持String、Number。
-原理
+include 指定需要缓存的组件name集合
+exclude
 keep-alive实例会缓存对应组件的VNode,如果命中缓存，直接从缓存对象返回对应VNode
 
 2021 Vue.js 面试题汇总及答案
 https://jackniu81.github.io/2021/04/12/Vue-js-Interview-Questions-and-Answers-2021/
 
+【前端面试】使用过Vue的自定义指令吗？ https://www.bilibili.com/video/BV1FR4y1c7bt?spm_id_from=333.337.search-card.all.click
+https://zhuanlan.zhihu.com/p/484670867
+
 LRU（Least recently used） 算法根据数据的历史访问记录来进行淘汰数据，其核心思想是“如果数据最近被访问过，那么将来被访问的几率也更高”。
 (墨菲定律：越担心的事情越会发生)
 https://leetcode-cn.com/problems/lru-cache/%EF%BC%8C%E8%80%83keep-alive%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%B6%E5%80%99%E5%96%9C%E6%AC%A2%E9%97%AE/
 实现 LRUCache 类：
-LRUCache(int capacity) 以 正整数 作为容量 capacity 初始化 LRU 缓存
-int get(int key) 如果关键字 key 存在于缓存中，则返回关键字的值，否则返回 -1 。
-void put(int key, int value) 如果关键字 key 已经存在，则变更其数据值 value ；
+ get(int key) 如果关键字 key 存在于缓存中，则返回关键字的值，否则返回 -1 。
+v put(int key, int value) 如果关键字 key 已经存在，则变更其数据值 value ；
 如果不存在，则向缓存中插入该组 key-value 。如果插入操作导致关键字数量超过 capacity ，则应该 逐出 最久未使用的关键字。
-
 class LRU {
     constructor(max) {
         this.max = max
@@ -55,7 +57,6 @@ v-model本质就是一个语法糖，可以看成是value + input方法的语法
 会根据标签的不同生成不同的事件和属性
 {/* <input v-model='searchData'> */}
 等价于
-
 {/* <input 
 	v-bind:value = 'searchData'
 	v-on:input = 'searchData = $event.target.value' 
@@ -93,41 +94,8 @@ vue的nextTick原理
 nextTick理解
 因为vue更新dom是一个异步操作，并不是数据变化会马上更新，会进入一个异步队列，等全部数据变化之后才渲染页面。因此要基于新的DOM操作时，需要用到这个函数。
 
-10插槽
+插槽
 让父组件给子组件指定位置插入html结构，子组件利用solt决定位置。
-
-36. Vue的性能优化有哪些
-（1）编码阶段
-尽量减少data中的数据，data中的数据都会增加getter和setter，会收集对应的watcher
-v-if和v-for不能连用
-如果需要使用v-for给每项元素绑定事件时使用事件代理
-SPA 页面采用keep-alive缓存组件
-在更多的情况下，使用v-if替代v-show
-key保证唯一
-使用路由懒加载、异步组件
-防抖、节流
-第三方模块按需导入
-长列表滚动到可视区域动态加载
-图片懒加载
-
-（2）SEO优化
-预渲染
-服务端渲染SSR
-
-（3）打包优化
-压缩代码
-Tree Shaking/Scope Hoisting
-使用cdn加载第三方模块
-多线程打包happypack
-splitChunks抽离公共文件
-sourceMap优化
-
-（4）用户体验
-
-骨架屏
-PWA
-还可以使用缓存(客户端缓存、服务端缓存)优化、服务端开启gzip压缩等。
-链接：https://juejin.cn/post/6919373017218809864
 
 https://jackniu81.github.io/2021/04/12/Vue-js-Interview-Questions-and-Answers-2021/
 
@@ -157,20 +125,14 @@ Vue 在更新 DOM 时是异步执行的。只要侦听到数据变化， Vue 将
 如果同一个watcher被多次触发，只会被推入到队列中一次。这种在缓冲时去除重复数据对于避免不必要的计算和 DOM 操作是非常重要的。
 然后，在下一个的事件循环”tick”中，Vue 刷新队列并执行实际（已去重的）工作。
 
-
 批量异步更新策略
 Vue 在修改数据后，视图不会立刻更新，而是等同一事件循环中的所有数据变化完成之后，再统一进行视图更新。
 换句话说，只要观察到数据变化，就会自动开启一个队列，并缓冲在同一个事件循环中发生的所有数据改变。在缓冲时会去除重复数据，从而避免不必要的计算和 DOM 操作。
-
-vue 的 nextTick 方法的实现原理
-vue 用异步队列的方式来控制 DOM 更新和 nextTick 回调先后执行
-microtask 因为其高优先级特性，能确保队列中的微任务在一次事件循环前被执行完毕
 
 vue-router有哪几种导航钩子？
 全局导航钩子：router.beforeEach(to,from,next)
 组件内的钩子beforeRouteEnter (to, from, next) beforeRouteUpdate (to, from, next) beforeRouteLeave (to, from, next)
 单独路由独享组件 beforeEnter: (to, from, next)
-
 
 什么是动态组件？动态组件的钩子如何执行？ https://juejin.cn/post/7064368176846340132#heading-95
 让多个组件使用同一个挂载点，并动态切换，这就是动态组件 
@@ -180,3 +142,46 @@ https://juejin.cn/post/7100092670566989861
 vue2——双端diff算法
 具体来说就是新旧 VNode 节点的左右头尾两侧都有一个指针，用来遍历对比新旧 VNode 列表。
 vue3——快速diff算法
+
+
+vue和react区别
+数据流：
+react主张函数式编程，所以推崇纯组件，数据不可变，单向数据流，
+vue的思想是响应式的，也就是基于是数据可变的，通过对每一个属性建立Watcher来监听，当属性变化的时候，响应式的更新对应的虚拟dom。
+
+监听数据变化实现原理：
+Vue 通过 getter/setter 以及一些函数的劫持，能精确知道数据变化，不需要特别的优化就能达到很好的性能
+React 默认是通过比较引用的方式进行的，如果不优化(PureComponent/shouldComponentUpdate)可能导致大量不必要的VDOM的重新渲染。
+组件通信的区别：jsx和.vue模板。
+HoC和Mixins(在Vue中我们组合不同功能的方式是通过Mixin，而在React中我们通过HoC(高阶组件))。
+
+性能优化
+React: shouldComponentUpdate
+Vue:内部实现shouldComponentUpdate的优化，由于依赖追踪系统存在，通过watcher判断是否需要重新渲染(当一个页面数据量较大时，
+  Vue的性能较差，造成页面卡顿，所以一般数据比较大的项目倾向使用React)。
+链接：https://juejin.cn/post/7099053655411654664 前端面试自用总结--vue
+
+Vue2.x和Vue3.x渲染器的diff算法分别说一下
+同级比较，再比较子节点
+先判断一方有子节点一方没有子节点的情况(如果新的children没有子节点，将旧的子节点移除)
+比较都有子节点的情况(核心diff)
+递归比较子节点
+正常Diff两个树的时间复杂度是O(n^3)，但实际情况下我们很少会进行跨层级的移动DOM，所以Vue将Diff进行了优化，从O(n^3) -> O(n)，
+只有当新旧children都为多个子节点时才需要用核心的Diff算法进行同层级比较。
+
+Vue2的核心Diff算法采用了双端比较的算法，同时从新旧children的两端开始进行比较，借助key值找到可复用的节点，
+再进行相关操作。相比React的Diff算法，同样情况下可以减少移动节点次数，减少不必要的性能损耗，更加的优雅。
+
+Vue3.x借鉴了
+在创建VNode时就确定其类型，以及在 mount/patch 的过程中采用位运算来判断一个VNode的类型，
+在这个基础之上再配合核心的Diff算法，使得性能上较Vue2.x有了提升。(实际的实现可以结合Vue3.x源码看。)
+该算法中还运用了动态规划的思想求解最长递归子序列。
+
+十四、Vue的diff算法原理是什么?
+Vue的diff算法是平级比较，不考虑跨级比较的情况。内部采用深度递归的方式+双指针方式比较
+先比较两个节点是不是相同节点
+相同节点比较属性，复用老节点
+先比较儿子节点，考虑老节点和新节点儿子的情况
+优化比较：头头、尾尾、头尾、尾头
+比对查找，进行复用
+

@@ -204,7 +204,7 @@ border-box. border = 20, padding = 10, width = 100
  .square {
   width: 10%;
   padding-bottom: 10%; 
-  height: 0; // 防止内容撑开多余的高度
+  height: 0; // 防止内容撑开多余的高度 
   background: red;
  }
 

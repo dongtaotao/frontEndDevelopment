@@ -8,6 +8,9 @@ https://juejin.cn/post/6941546135827775525
 (中篇)中高级前端大厂面试秘籍，寒冬中为您保驾护航，直通大厂
 https://juejin.cn/post/6844903801153945608
 
+【最新】React移动端项目开发  ===================
+https://www.bilibili.com/video/BV1h3411y7dy?p=4
+
 前端React面试题总结
 https://zhuanlan.zhihu.com/p/441407315?utm_source=tuicool&utm_medium=referral
 
@@ -100,7 +103,6 @@ diff 算法中通过 tag 和 key 判断，是否是同一个节点
 减少渲染次数，提升渲染性能
 
  redux 中间件
-参考回答：
 中间件提供第三方插件的模式，自定义拦截 action -> reducer 的过程。变为 action ->
 middlewares -> reducer 。这种机制可以让我们改变数据流，实现如异步 action ，action 过
 滤，日志输出，异常报告等功能。
@@ -112,7 +114,6 @@ middlewares -> reducer 。这种机制可以让我们改变数据流，实现如
 2.当一个组件相关数据更新时，即使父组件不需要用到这个组件，父组件还是会重新
 render，可能会有效率影响，或者需要写复杂的 shouldComponentUpdate 进行判断。
  React 组件的划分业务组件技术组件？
-参考回答：
 根据组件的职责通常把组件分为 UI 组件和容器组件。UI 组件负责 UI 的呈现，容器组
 件负责管理数据和逻辑。两者通过
 
@@ -122,13 +123,13 @@ render，可能会有效率影响，或者需要写复杂的 shouldComponentUpda
 判断有无全局对象global和window
 
 Fiber 架构简析
-Fiber 是 React 16 对 React 核心算法的一次重写。你只需要 get
-到这一个点：Fiber 会使原本同步的渲染过程变成异步的。
+Fiber 是 React 16 对 React 核心算法的一次重写。
+Fiber 会使原本同步的渲染过程变成异步的。
 在 React 16 之前，每当我们触发一次组件的更新，React 都会构建一棵新
 的虚拟 DOM 树，通过与上一次的虚拟 DOM 树进行 diff，实现对 DOM 的定向
-更新。这个过程，是一个递归的过程。下面这张图形象地展示了这个过程的特征：
+更新。这个过程，是一个递归的过程。
 
-如图所示，同步渲染的递归调用栈是非常深的，只有最底层的调用
+同步渲染的递归调用栈是非常深的，只有最底层的调用
 返回了，整个渲染过程才会开始逐层返回。这个漫长且不可打断的更新过程，将会
 带来用户体验层面的巨大风险：同步渲染一旦开始，便会牢牢抓住主线程不放，直到递
 归彻底完成。在这个过程中，浏览器没有办法处理任何渲染之外的事情，会进入一种无法处
@@ -326,7 +327,6 @@ componentWillUpdate
 原文链接：https://blog.csdn.net/weixin_43392489/article/details/121438376
 
 其实该变动的原因，正是由于上述提到的 Fiber。首先，从上面我们知道 React 可以分成 reconciliation 与 commit 两个阶段，对应的生命周期如下:
-
 reconciliation:
 componentWillMount
 componentWillReceiveProps
@@ -347,28 +347,21 @@ class Component extends React.Component {
   // 初始化和 update 时被调用
   // 静态函数，无法使用 this
   static getDerivedStateFromProps(nextProps, prevState) {}
-  
   // 判断是否需要更新组件
   // 可以用于组件性能优化
   shouldComponentUpdate(nextProps, nextState) {}
-  
   // 组件被挂载后触发
   componentDidMount() {}
-  
   // 替换 componentWillUpdate
   // 可以在更新之前获取最新 dom 数据
   getSnapshotBeforeUpdate() {}
-  
   // 组件更新后调用
   componentDidUpdate() {}
-  
   // 组件即将销毁
   componentWillUnmount() {}
-  
   // 组件已销毁
   componentDidUnmount() {}
 }
-
 
 React 事件系统是如何工作的
 React 的事件系统沿袭了事件委托的思想。在 React 中，除了少数特殊的不可冒泡的事件（比如媒体类型的事件）无法被事件系统处理外，
@@ -383,19 +376,7 @@ React 的事件系统沿袭了事件委托的思想。在 React 中，除了少�
 
 React生命周期的变化和为Fiber架构的准备 **************************++++++++++++=
 https://juejin.cn/post/6959811685238620191
-Fiber 架构简析
-Fiber 是 React 16 对 React 核心算法的一次重写，我们先get一个点：
-Fiber 会使原本同步的渲染过程变成异步的。
-在 React 16 之前，每当我们触发一次组件的更新，React 都会构建一棵新的虚拟 DOM 树，通过与上一次的虚拟 DOM 树进行 diff，实现对 DOM 的定向更新。
-这个过程，是一个递归的过程。下面这张图形象地展示了这个过程的特征
-同步渲染的递归调用栈是非常深的，只有最底层的调用返回了，整个渲染过程才会开始逐层返回。这个漫长且不可打断的更新过程，
-将会带来用户体验层面的巨大风险：同步渲染一旦开始，便会牢牢抓住主线程不放，直到递归彻底完成。在这个过程中，浏览器没有办法处理任何渲染之外的事情，
-  会进入一种无法处理用户交互的状态。因此若渲染时间稍微长一点，页面就会面临卡顿甚至卡死的风险
-而 React 16 引入的 Fiber 架构，恰好能够解决掉这个风险：Fiber 会将一个大的更新任务拆解为许多个小任务。
-每当执行完一个小任务时，渲染线程都会把主线程交回去，看看有没有优先级更高的工作要处理，确保不会出现其他任务被“饿死”的情况，
-进而避免同步渲染带来的卡顿。在这个过程中，渲染线程不再“一去不回头”，而是可以被打断的，这就是所谓的“异步渲染”，它的执行过程如下图所示：
 链接：https://juejin.cn/post/6959811685238620191
-
 
 安装 react-loadable ,babel插件安装 syntax-dynamic-import. react-loadable是通过webpack的异步import实现的
 

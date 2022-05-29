@@ -1,6 +1,12 @@
 每个前端都必须要学会的Webpack优化手段
 https://juejin.cn/post/7083519723484708878
 
+抽离公共代码【Webpack面试题】🍒
+https://www.bilibili.com/video/BV1R54y1h7Xr?spm_id_from=333.999.0.0
+
+webpack 如何抽离公共代码和第三方库？
+https://blog.csdn.net/Celine921/article/details/124356195
+
 打包的3种hash值你知道吗？当年我校招时被这题难倒了！
 https://juejin.cn/post/7060688758370205733
 
@@ -49,7 +55,6 @@ https://juejin.cn/post/7068256695620730910#heading-20
 
 例如编写一个 copyright-webpack-plugin
 // copyright-webpack-plugin.js  我定义该文件位于根目录的 plugins 文件夹下
-​
 class CopyrightWebpackPlugin {
     constructor() {
         console.log('插件被使用了')
@@ -59,14 +64,10 @@ class CopyrightWebpackPlugin {
     
     }
 }
-​
 module.exports = CopyrightWebpackPlugin;
-
 // webpack.config.js
-​
 const path = require('path');
 const CopyRightWebpackPlugin = require('./plugins/copyright-webpack-plugin');
-​
 module.exports = {
     mode: 'development',
     entry: {
@@ -79,12 +80,10 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js'
     }
-} 
-
+}
 
 webpack详解&HMR
 https://juejin.cn/post/7084161722960838693
-
 
 Tree Shaking 指基于 ES Module 进行静态分析，通过 AST 将用不到的函数进行移除，从而减小打包体积。
 
@@ -225,3 +224,4 @@ https://segmentfault.com/a/1190000039231950
 组件库的按需加载 https://juejin.cn/post/6844904166586843149
 那怎么去通过按需加载去使用组件库，答案是通过babel插件：babel-plugin-component（element 通过fork ant-design库的 ）
 在babel转码的时候，把整个库element-ui的引用，变为element-ui/lib/button具体模块的引用。这样webpack收集依赖module就不是整个element-ui，而是里面的button
+ 

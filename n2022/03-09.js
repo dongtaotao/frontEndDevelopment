@@ -70,12 +70,9 @@ RN页面适配 =====================
 const designWidth = 750
 //手机屏幕的宽度
 export const width = Dimensions.get('window').width;
-
 //计算手机屏幕宽度对应设计图宽度的单位宽度
 export const unitWidth = width / designWidth
-
 width:unitWidth*375,
-
 
 「react进阶」年终送给react开发者的八条优化建议(篇幅较长，占用20-30分钟)
 https://juejin.cn/post/6908895801116721160?utm_source=gold_browser_extension 
@@ -169,7 +166,6 @@ exprot class app{
 this.child1.属性或方法
 
 //非父子组件之间通过服务来通讯，也可以用Localstorage/SessionStorage（h5新增的本地缓存技术）
- 
 
 组件生命周期钩子
 ngOnChanges() 当被绑定的输入属性的值发生变化时调用，首次调用一定会发生在 ngOnInit() 之前

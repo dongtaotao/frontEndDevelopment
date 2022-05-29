@@ -39,12 +39,11 @@ Ahead Of Time，指在代码执行前已经预先编译为机器码了）仍有�
 这在使用不同人写的控件嵌套时，手势冲突问题将会变得非常棘手。这就会导致，如果需要自定义原生
 渲染组件时，开发和维护成本过高。
 
-本章主要介绍了目前移动开发中三种跨平台技术，现在我们从框架角度对比一下它们，如表1-1所示：
-
-技术类型	            UI渲染方式	 性能	开发效率	动态化	框架代表
+本章主要介绍了目前移动开发中三种跨平台技术，现在我们从框架角度对比一下它们
+技术类型	             UI渲染方式	 性能	开发效率	动态化	框架代表
 H5 + 原生	            WebView渲染	一般	高	      支持	    Cordova、Ionic
-JavaScript + 原生渲染	原生控件渲染	好	中	        支持	RN、Weex
-自绘UI + 原生	        调用系统API渲染	好	Flutter高, Qt低	默认不支持	Qt、Flutter
+JavaScript + 原生渲染	 原生控件渲染	好	中	        支持	RN、Weex
+自绘UI + 原生	         调用系统API渲染	好	Flutter高, Qt低	默认不支持	Qt、Flutter
 
 Flutter 简介
 # 跨平台自绘引擎
@@ -176,7 +175,6 @@ Flutter 技术调研 https://fengs.online/2019/02/flutter-research/
 5.3 实践感想
 5.4 Flutter 混合开发
 六、公司项目可行性说明
-参考资料
 
 1、Flutter优点
 A、混合开发中，最接近原生开发的框架； 
@@ -213,7 +211,6 @@ dispose
 
 
 //===================
-
 Flutter 是 Google推出并开源的移动应用开发框架，主打跨平台、高保真、高性能。开发者可以通过 Dart语言开发 App，一套代码同时运行在 iOS 和 Android平台。 
 Flutter提供了丰富的组件、接口，开发者可以很快地为 Flutter添加 native扩展。
 Flutter还使用 Native引擎渲染视图，这无疑能为用户提供良好的体验。

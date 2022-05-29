@@ -50,7 +50,6 @@ https://juejin.cn/user/1556564164489389/posts
 面试必问：前端性能监控Performance
 https://juejin.cn/post/7031572366341701663?utm_source=gold_browser_extension
 
-
 微前端qiankun的实战
 https://www.bilibili.com/video/BV1CL4y1j7Zz?spm_id_from=333.337.search-card.all.click
 
@@ -60,7 +59,6 @@ https://www.bilibili.com/video/BV1CL4y1j7Zz?spm_id_from=333.337.search-card.all.
 
 什么是微前端架构？它有什么优缺点以及构建思路 
 https://blog.51cto.com/u_14785218/3007821
-
 
 应用间通信
 多个应用间通信，这里举个简单的例子：主应用中登录获取用户id，当加载微应用时，微应用需要根据不同的用户 id 展示不同的数据或者展示不同的页面。

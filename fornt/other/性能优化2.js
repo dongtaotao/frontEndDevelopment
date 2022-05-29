@@ -42,7 +42,7 @@ Webpack 打包的结果体积太大  优化产出代码—产品性能
 
 3.提取公共代码 CommonsChunkPlugin
 4.多进程代码压缩 （开启多进程压缩JS文件）
-5. 代码分割 SplitChunksPlugin  拆包 合理分包，不重复加载
+5.代码分割 SplitChunksPlugin  拆包 合理分包，不重复加载
 6.打包资源压缩
 7.按需加载 code-spliting: 代码分割技术，将代码分割成多份进行 懒加载 或 异步加载，避免打包成一份后导致体积过大，影响页面的首屏加载；
 8.开启模块热替换提高开发效率
@@ -58,7 +58,6 @@ Webpack 打包的结果体积太大  优化产出代码—产品性能
 2.bundle加hash
 
 利用cdn加速， 在构建过程中将引用的静态资源路径修改为CDN上对应的路径
-
 
 
 1.构建速度https://juejin.cn/post/7023242274876162084#heading-23 **********
@@ -83,7 +82,6 @@ Webpack 打包的结果体积太大  优化产出代码—产品性能
 2.5 Tree-shaking  Tree-shaking 作用是剔除没有使用的代码，以降低包的体积
 2.6 Scope Hoisting
     Scope Hoisting 即作用域提升，原理是将多个模块放在同一个作用域下，并重命名防止命名冲突，通过这种方式可以减少函数声明和内存开销。
-
     webpack 默认支持，在生产环境下默认开启
     只支持 es6 代码
 2.7 抽离css文件 ExtractTextPlugin 将 CSS 分离成单独的文件
@@ -102,17 +100,12 @@ Webpack 打包的结果体积太大  优化产出代码—产品性能
 预加载 preload
 preload和prefetch
 
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 preload资源在当前页面使用，会优先加载
 prefetch 资源在未来页面使用，空闲时加载
-
 <link rel="preload" href="https://fonts.gstatic.com/s/longcang/v5/LYjAdGP8kkgoTec8zkRgqHAtXN-dRp6ohF_hzzTtOcBgYoCKmPpHHEBiM6LIGv3EnKLjtw.119.woff2" as="font" crossorigin="anonymous"/> 
-
 链接：https://juejin.cn/post/6911472693405548557
 
-
 前端性能优化常见方法 https://juejin.cn/post/6931157334508961799
-
 
 Vue 项目性能优化 — 实践指南（网上最全 / 详细）
 https://juejin.cn/post/6844903913410314247
@@ -136,4 +129,6 @@ https://juejin.cn/post/6911472693405548557
 .cdn引入公共库
 <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 <script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
- 
+
+Vue项目性能优化实操,从50分到80分
+https://juejin.cn/post/7101560677688410125

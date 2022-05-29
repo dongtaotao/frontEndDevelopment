@@ -290,7 +290,6 @@ addTask(400,"4");
 800ms时，3任务执行完毕，输出3，任务4开始执行
 1000ms时，1任务执行完毕，输出1，此时只剩下4任务在执行
 1200ms时，4任务执行完毕，输出4
-
 class Scheduler {
   constructor(limit) {
     this.queue = [];
@@ -350,5 +349,5 @@ function render(template, data) {
     return data[key];
   });
   return computed;  
-}  
+}   
 

@@ -1,5 +1,8 @@
 跳槽面试技巧记录 很好的文章 https://juejin.cn/post/7090733245590929421 🔥🔥🔥🔥 
 
+【🐯初/中级前端面经】中小型公司面试时都会问些什么? 🔥🔥
+https://juejin.cn/post/7064740689178787871#heading-5
+
 // <!DOCTYPE html>
 // <html lang="en">
 // <head>
@@ -118,7 +121,6 @@ postcss-px2rem，插件
 }
 我们可以使用 css 伪类 + transform 来优化这一问题。即把默认的 1px 宽度给压缩 0.5 倍。
 
-
 拦截 URL SCHEME
 URL SCHEME是一种类似于url的链接，是为了方便app直接互相调用设计的，形式和普通的 url 近似，主要区别是 protocol 和 host 一般是自定义的，
 例如: qunarhy://hy/url?url=ymfe.tech，protocol 是 qunarhy，host 则是 hy。
@@ -139,7 +141,6 @@ const v = window.getVersion()
 
 方式2 - 劫持 url scheme
 一个 iframe 请求 url ，返回的是一个网页。天然支持异步。
-
 const iframe1 = document.getElementById('iframe1')
 iframe1.onload = () => {
   console.log(iframe1.contentWindow.document.body.innerHTML)
@@ -207,7 +208,7 @@ JavaScript 事件循环(EventLoop) —— 浏览器 & Node
 （2）主线程之外，还存在一个 "任务队列"（task queue）。只要 异步任务 有了运行结果，就在 "任务队列" 之中放置一个事件。
 （3）一旦 "执行栈" 中的 所有同步任务执行完毕，系统就会 读取 "任务队列" ，看看里面有哪些事件。那些对应的异步任务，于是结束等待状态，进入执行栈，开始执行。
 （4）主线程不断重复上面的第三步。
-主线程 "任务队列" 中读取事件，这个过程是循环不断的，所以整个的运行机制又被称为 事件循环(Event Loop)
+主线程从 "任务队列" 中读取事件，这个过程是循环不断的，所以整个的运行机制又被称为 事件循环(Event Loop)
 
 Node六个阶段
 timers (定时器)：本阶段执行已经被 setTimeout() 和 setInterval() 的调度回调函数。
@@ -280,7 +281,6 @@ https://juejin.cn/post/7063823914136256543
 
 vue动态权限路由
 https://juejin.cn/post/7094506830230978591
-
 
 prelode:资源在当前页面使用,会优先加载; prefetch:资源在未来页面使用,空闲时加载; https://juejin.cn/post/7094219863966613517
 prefetch 是资源的预获取;
@@ -400,9 +400,6 @@ var parAdd = partial(add,1,2,3);
 console.log(parAdd(2,1));
 console.log(parAdd(3,7));
 console.log(parAdd(4,8));
-
-【🐯初/中级前端面经】中小型公司面试时都会问些什么?
-https://juejin.cn/post/7064740689178787871#heading-5
 
 draw-page-structure 骨架屏
 
@@ -619,7 +616,6 @@ react fiber这种数据结构使得节点可以回溯到其父节点，只要保
 
 跨域chrome 插件 Allow CORS: Access-Control-Allow-Origin
 https://mybrowseraddon.com/access-control-allow-origin.html?v=0.1.7&type=install
-
 
 浅说虚拟列表的实现原理
 https://github.com/dwqs/blog/issues/70

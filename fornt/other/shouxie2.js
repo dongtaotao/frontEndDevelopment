@@ -16,7 +16,7 @@ https://juejin.cn/post/7079681931662589960
 
 
 编写一个函数计算多个数组的交集
-const intersection = function(...args) {
+const intersection = function(...args) { 
     if (args.length === 0) {
     return []
   }
@@ -107,7 +107,6 @@ let maxProfit = function(prices) {
 }
 
 买卖股票的最佳时机 II https://www.pzijun.cn/algorithms/algo/9.html#%E8%A7%A3%E6%B3%95%E4%B8%80%EF%BC%9A%E5%B3%B0%E5%BA%95%E4%B9%B0%E5%85%A5%EF%BC%8C%E5%B3%B0%E9%A1%B6%E5%8D%96%E5%87%BA
-
 let maxProfit = function(prices) {
     let profit = 0
     for (let i = 0; i < prices.length - 1; i++) {
@@ -286,7 +285,6 @@ class EventEmitter {    //https://juejin.cn/post/7031322059414175774
   constructor() {
     this.cache = {}
   }
-
   on(name, fn) {
     if (this.cache[name]) {
       this.cache[name].push(fn)
@@ -294,7 +292,6 @@ class EventEmitter {    //https://juejin.cn/post/7031322059414175774
       this.cache[name] = [fn]
     }
   }
-
   off(name, fn) {
     const tasks = this.cache[name]
     if (tasks) {
@@ -304,7 +301,6 @@ class EventEmitter {    //https://juejin.cn/post/7031322059414175774
       }
     }
   }
-
   emit(name, once = false) {
     if (this.cache[name]) {
       // 创建副本，如果回调函数内继续注册相同事件，会造成死循环
@@ -453,7 +449,6 @@ var trailingZeroes = function(n) {
 };
 
 链接：https://juejin.cn/post/7068940837274517535
-
 
 实现 dom to json
 React 把真实DOM转换成虚拟DOM

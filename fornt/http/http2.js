@@ -15,33 +15,33 @@ http 和 https 的区别，相比于 http,https 是基于 ssl 加密的 http 协
 //============================================================================
 6.20 http/https 协议总结
 1.0 协议缺陷:
-无法复用链接，完成即断开，重新慢启动和 TCP 3次握手
-head of line blocking: 线头阻塞，导致请求之间互相影响
+  无法复用链接，完成即断开，重新慢启动和 TCP 3次握手
+  head of line blocking: 线头阻塞，导致请求之间互相影响
 1.1 改进:
-长连接(默认 keep-alive)，复用
-host 字段指定对应的虚拟站点
-新增功能:
-断点续传
-身份认证
-状态管理
-cache 缓存
-Cache-Control
-Expires
-Last-Modified
-Etag
+  长连接(默认 keep-alive)，复用
+  host 字段指定对应的虚拟站点
+  新增功能:
+  断点续传
+  身份认证
+  状态管理
+  cache 缓存
+  Cache-Control
+  Expires
+  Last-Modified
+  Etag
 2.0:
-多路复用
-二进制分帧层: 应用层和传输层之间
-首部压缩
-服务端推送
+  多路复用
+  二进制分帧层: 应用层和传输层之间
+  首部压缩
+  服务端推送
 
 https: 较为安全的网络传输协议
-证书(公钥)
-SSL 加密
-端口 443
+  证书(公钥)
+  SSL 加密
+  端口 443
 TCP:
-三次握手
-四次挥手
+  三次握手
+  四次挥手
 滑动窗口: 流量控制
 拥塞处理
 慢开始
@@ -425,7 +425,6 @@ npm 向 registry 查询模块压缩包的网址
 链接：https://juejin.cn/post/6844903928442667015
 
 对于 cookie，我们还需要注意安全性
-
 属性	作用
 value	如果用于保存用户登录态，应该将该值加密，不能使用明文的用户标识
 http-only	不能通过 JS访问 Cookie，减少 XSS攻击

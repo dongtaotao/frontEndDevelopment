@@ -17,7 +17,7 @@ https://juejin.cn/post/7001718105336447007#heading-6
 最全的手写JS面试题
 https://juejin.cn/post/6968713283884974088#heading-26
 
-最新的前端大厂面经（详解答案）
+最新的前端大厂面经（详解答案） 
 https://juejin.cn/post/7004638318843412493
 
 42+JavaScript高频手写实现及详细答案，胖头鱼喊你一起学源码啦！
@@ -233,7 +233,6 @@ function render(template, data) {
         return eval(`data.${$1}`)
     })
 }
-
 const result = render(template, data); 
 // 嗨，张三您好，今天是星期三
 console.log(result)
@@ -589,7 +588,6 @@ var isValidBST = function(root) {
     }
     return isValidBST(root.left) && isValidBST(root.right)
   };
-
 二叉搜索树节点最小距离（题号783） https://juejin.cn/post/6966771186944442398#heading-5
 
 31. 栈的压入、弹出序列 https://juejin.cn/post/7068871997530308639

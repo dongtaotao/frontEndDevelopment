@@ -37,10 +37,8 @@ HTML文档head解析完毕。
         粗略的计算首屏时间: loadEventEnd - fetchStart/startTime 或者 domInteractive - fetchStart/startTime
     通过计算首屏区域内的所有图片加载时间，然后取其最大值
     利用 MutationObserver 接口，监听 document 对象的节点变化
-
     链接：https://juejin.cn/post/7035647196510814221 别再用performance计算首屏时间了！！
-    来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
     </script>
 </html>
 查看页面首屏时间、白屏时间

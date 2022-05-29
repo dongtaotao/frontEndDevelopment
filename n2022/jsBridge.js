@@ -13,7 +13,7 @@ https://www.cnblogs.com/jiang-xiao-yan/p/5345755.html
 h5 与原生 app 交互的原理--------------------
 https://segmentfault.com/a/1190000016759517
 h5 调用 app 的代码
-因为 h5 不能直接访问宿主 app，所以这种调用就相对复杂一点。
+因为 h5 不能直接访问宿主 app，所以这种调用就相对复杂一点。 
 
 这种调用常用有两种方式：
 由 app 向 h5 注入一个全局 js 对象，然后在 h5 直接访问这个对象
@@ -58,3 +58,19 @@ https://www.cnblogs.com/zhangnan35/p/14620825.html
 
 JsBridge的异步不执行的处理--promise异步变同步
 https://www.cnblogs.com/leiting/p/9897759.html  
+
+
+#JSBridge概述  http://know.shuerbuzuo.cn/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/JSBridge%E6%A6%82%E8%BF%B0.html#web-native
+
+对于Web, 发送URL请求的方法有这么几种:
+a标签
+location.href
+使用iframe.src
+发送ajax请求
+这些方法中, a标签需要用户操作, href可能会引起页面的丢失, ajax请求在安卓中没有相应的拦截方法, 所以使用iframe.src是比较常见的方案:
+
+安卓提供了shouldOverrideUrlLoading方法拦截
+UIWebView使用shouldStartLoadWithRequest, WKWebView则使用decidePolicyForNavigationAction
+这种方法从早期就存在了, 兼容性好. 缺点是基于URL, 长度受限, 并且不太直观.
+
+#

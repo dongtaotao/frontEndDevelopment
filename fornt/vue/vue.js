@@ -1,12 +1,19 @@
 vuex
 Vuex 集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以可预测的方式发生变化 
-
-核心概念
 state: 状态中心
 mutations: 更改状态
 actions: 异步更改状态
 getters: 获取状态
 modules: 将state分成多个modules，便于管理
+
+//https://www.bilibili.com/video/BV1oZ4y1V7tx?p=99
+this.$router.addRouters([
+  {
+    path: '/',
+    name: '222'
+  }
+])
+动态添加路由
 
 http://interview.poetries.top/docs/simply.html#_10-vue3%E5%B8%A6%E6%9D%A5%E7%9A%84%E6%96%B0%E7%89%B9%E6
 %80%A7-%E4%BA%AE%E7%82%B9
@@ -19,11 +26,10 @@ vue3带来的新特性/亮点
 5. Tree-shaking support
 6. Composition API
 7. 新增的三个组件Fragment、Teleport、Suspense
-8. Better TypeScript support
+8. TypeScript support
 
 你都做过哪些Vue的性能优化
 编码阶段
-
 尽量减少data中的数据，data中的数据都会增加getter和setter，会收集对应的watcher
 v-if和v-for不能连用
 如果需要使用v-for给每项元素绑定事件时使用事件代理
@@ -53,14 +59,7 @@ sourceMap优化
 PWA
 还可以使用缓存(客户端缓存、服务端缓存)优化、服务端开启gzip压缩等。
 
-80 vue中是如何检测数组变化的呢
-数组就是使用 object.defineProperty 重新定义数组的每一项，那能引起数组变化的方法我们都是知道的，
-pop 、 push 、 shift 、 unshift 、 splice 、 sort 、 reverse 这七种，只要这些方法执行改了数组内容，我就更新内容就好了，是不是很好理解
-
-是用函数劫持的方式，重写了数组方法，具体呢就是更改了数组的原型，更改成自己的，用户调数组的一些方法的时候，走的就是自己的方法，然后通知视图去更新
-数组里每一项可能是对象，那么我就是会对数组的每一项进行观测，（且只有数组里的对象才能进行观测，观测过的也不会进行观测）
 vue3：改用 proxy ，可直接监听对象数组的变化
-
 mapState, mapGetters, mapActions, mapMutations
 
 既然 Vue 通过数据劫持可以精准探测数据变化,为什么还需要虚拟 DOM 进行 diff 检测差异? 
@@ -145,11 +144,6 @@ defineProperty缺点
 无法监控到数组下标及数组长度的变化，当直接通过数组的下标给数组设置值或者改变数组长度时，不能实时响应
 性能问题，当data中数据比较多且层级很深的时候，因为要遍历data中所有的数据并给其设置成响应式的，会导致性能下降
 
-5.2 对比区别
-Object.defineProperty只能劫持对象的属性，对新增属性需要手动进行 Observe，而 Proxy 是直接代理对象
-为什么 Proxy 可以解决以上的痛点呢？ 本质的原因在于 Proxy 是一个内置了拦截器的对象，所有的外部访问都得先经过这一层拦截
-不管是先前就定义好的，还是新添加属性，访问时都会被拦截（proxy具体学习请看阮一峰老师的ES6教程 Proxy）
-
 在哪个生命周期内调用异步请求
 可以在钩子函数 created、beforeMount、mounted 中进行调用，因为在这三个钩子函数中，data 已经创建，
 可以将服务端端返回的数据进行赋值。但是本人推荐在 created 钩子函数中调用异步请求，因为在 created 钩子函数中调用异步请求有以下优点
@@ -170,7 +164,6 @@ Vue.set(vm.items, indexOfItem, newValue)
 vm.$set(vm.items, indexOfItem, newValue)
 // Array.prototype.splice
 vm.items.splice(indexOfItem, 1, newValue)
-
 为了解决第二个问题，Vue 提供了以下操作方法：
 // Array.prototype.splice
 vm.items.splice(newLength)
@@ -179,10 +172,6 @@ vm.items.splice(newLength)
 v-model 的原理？
 我们在 vue 项目中主要使用 v-model 指令在表单 input、textarea、select 等元素上创建双向数据绑定，我们知道 v-model 本质上不过是语法糖，
 v-model 在内部为不同的输入元素使用不同的属性并抛出不同的事件：
-
-text 和 textarea 元素使用 value 属性和 input 事件；
-checkbox 和 radio 使用 checked 属性和 change 事件；
-select 字段将 value 作为 prop 并将 change 作为事件。
 
 以 input 表单元素为例：
 <input v-model='something'>
@@ -205,14 +194,17 @@ methods: {
   },
 }
 链接：https://juejin.cn/post/7002886646840426527
-
 https://vue3js.cn/interview/vue/vue3_vue2.html#%E5%93%AA%E4%BA%9B%E5%8F%98%E5%8C%96 
-Vue3的新特性，如下：
-速度更快
-体积减少
-更易维护
-更接近原生
-更易使用
 
 vue长列表优化-虚拟滚动 
-https://juejin.cn/post/7063898544008069127  
+https://juejin.cn/post/7063898544008069127   
+
+
+React、Vue2、Vue3的三种Diff算法
+https://juejin.cn/post/6919376064833667080
+
+相同点：
+Vue和react的diff算法，都是不进行跨层级比较，只做同级比较。
+
+React 是从左向右遍历对比，Vue 是双端交叉对比。
+Vue3 Diff —— 最长递增子序列

@@ -116,4 +116,11 @@ UI设计规范
 
 
 前端性能优化方法与实战
-https://kaiwu.lagou.com/course/courseInfo.htm?courseId=638#/content?courseId=638&isShowSections=true
+https://kaiwu.lagou.com/course/courseInfo.htm?courseId=638#/content?courseId=638&isShowSections=true 
+
+
+Verdaccio 搭建 npm 私有仓库
+https://juejin.cn/post/7060327687851606047
+
+前端工程化：保姆级教学 Jenkins 部署前端项目
+https://juejin.cn/post/7102360505313918983

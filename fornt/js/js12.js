@@ -61,7 +61,7 @@ https://juejin.cn/post/6844903601416978439
 2、ajax请求造成跨域是因为 要读取接口地址的信息 并且在不同源的情况下
 
 6.lru算法 https://juejin.cn/post/6896810576778166280
-class LRU {
+class LRU { 
     constructor(max) {
         this.max = max
         this.cache = new Map()
@@ -87,7 +87,7 @@ class LRU {
 }
 
 阿里巴巴、今日头条、拼多多以及腾讯等一线互联网公司面试总结
-https://juejin.cn/post/690591390515206554
+https://juejin.cn/post/6905913905152065544
 
 上海莉莉丝、米哈游、B站、小红书、得物等互联网公司前端面试总结
 https://juejin.cn/post/6896810576778166280#heading-72
@@ -137,12 +137,9 @@ Promise.allSettled = function(promises) {
 Vue3纯前端如何实现Vue路由权限
 https://juejin.cn/post/7096393921034453006
 
-
 React.lazy 接受一个函数，这个函数需要动态调用 import()。它必须返回一个 Promise，该 Promise 需要 resolve 一个 default export 的 React 组件。
 import React, { Suspense } from 'react';
-
 const myComponent = React.lazy(() => import('./Component'));
-
 function MyComponent() {
   return (
     <div>
@@ -299,7 +296,6 @@ useParams,//路由参数信息
 useRouterMatch
 } from 'react-router-dom';
 
-
 {/* <Route path='/query' component={Query}/>
 <Link to={{ path : ' /query' , query : { name : 'sunny' }}}>
 this.props.history.push({pathname:"/query",query: { name : 'sunny' }});
@@ -352,7 +348,6 @@ SDK 小结
 为了方便记忆，提炼 3 个关键词：劫持、原始方法、gif！（如果你还记不住，那也别打我）
 从 ES 中获取数据非常简单，ES 底层是基于 Lucene 的搜索服务器的，它提供了一个分布式多用户能力的全文搜索引擎，基于 RESTful web 接口。
 所以我们前端开发只需要想平时开发业务调用接口一样去调用就可以了。
-
 
 从输入npm run xxx发生了什么？
 https://juejin.cn/post/7097097485696368676

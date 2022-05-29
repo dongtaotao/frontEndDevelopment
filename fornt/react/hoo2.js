@@ -21,13 +21,11 @@ React 开发性能监测插件-Why Did You Render http://www.javashuo.com/articl
 推荐几个 React 性能优化工具
 https://blog.csdn.net/qq_32281471/article/details/106893990
 
-
 阿里三面：灵魂拷问——有react fiber，为什么不需要vue fiber呢？
 https://juejin.cn/post/7077545184807878692
 react因为先天的不足——无法精确更新，所以需要react fiber把组件渲染工作切片；而vue基于数据劫持，更新粒度很小，没有这个压力；
 react fiber这种数据结构使得节点可以回溯到其父节点，只要保留下中断的节点索引，就可以恢复之前的工作进度；
 链接：https://juejin.cn/post/7077545184807878692
-
 
 「React」问：React事件机制
 React 事件合成的概念：React 应用中，元素绑定的事件并不是原生事件，而是React 合成的事件，比如 onClick 是由 click 合成，onChange 
@@ -48,6 +46,8 @@ Hooks 出现本质上原因是： https://juejin.cn/post/7090080837412061214
 1 让函数组件也能做类组件的事，有自己的状态，可以处理一些副作用，能获取 ref ，也能做数据缓存。
 2 解决逻辑复用难的问题。
 3 放弃面向对象编程，拥抱函数式编程。
+4.类组件过于复杂，逻辑太多，导致臃肿，
+5.this指向问题
 
 react hooks 下使用redux
 https://blog.csdn.net/weixin_41900457/article/details/107344055

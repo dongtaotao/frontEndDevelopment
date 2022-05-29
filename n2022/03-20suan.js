@@ -154,7 +154,6 @@ console.log(8);
 */
 
 
-
 JavaScript中对象属性的描述，可枚举，可配置
 https://www.bilibili.com/video/BV13h411z78E?spm_id_from=333.999.0.0
 
@@ -178,7 +177,6 @@ https://juejin.cn/post/6942264171870289956
 标记清除：垃圾收集器先给内存中所有对象加上标记，然后从根节点开始遍历，去掉被引用的对象和运行环境中对象的标记，剩下的被标记的对象就是无法访问的等待回收的对象。
 
 3. V8如何进行垃圾回收
-
 链接：https://juejin.cn/post/6844904116552990727
 
 3. 两数相加
@@ -263,7 +261,6 @@ var uniquePaths = function (m,n){
 
 什么是深/浅拷贝
 浅拷贝共用一个引用地址，深拷贝会创建新的内存地址。
-
   function deepClone(obj, cache = new WeakMap()) {
     if (obj === null || typeof obj !== 'object') return obj
     if (obj instanceof Date) return new Date(obj)
@@ -519,9 +516,7 @@ window.addEventListener(
   'unhandledrejection',
   function() { console.log(...arguments) }
 )
-作者：小蝉儿
 链接：https://juejin.cn/post/7065483941305647112
-
 
 100、为什么通常在发送数据埋点请求的时候使用的是 1x1 像素的透明 gif 图片？ https://juejin.cn/post/7065483941305647112
 可以发送get请求，且不需要获取和处理数据
@@ -529,7 +524,6 @@ window.addEventListener(
 执行过程无阻塞
 相比XMLHttpRequest，性能更好
 gif体积小
-
 
 区别
 深拷贝中既要拷贝基本数据类型也要拷贝引用类型的数据，也就是说拷贝一份完全一样的对象。

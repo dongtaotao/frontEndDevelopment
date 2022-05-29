@@ -272,7 +272,6 @@ function flattenObj(obj) {
   return result;
 }
 
-
 一级对象转换成多层嵌套对象 https://juejin.cn/post/7089816646277136421
 /*
 // 输入：
@@ -350,7 +349,6 @@ function summaryRanges (nums) {
   }
   return ans
 }
-
 
 一句话算法
 https://github.com/pwstrick/daily/blob/master/article/one/one.md
@@ -433,3 +431,60 @@ const permutate = (arr) => {
 }
 
 permutate([['A','B'], ['a','b'], [1, 2]])
+
+
+将js对象转化为树形结构  https://juejin.cn/post/6946136940164939813
+// 转换前：
+source = [{
+  id: 1,
+  pid: 0,
+  name: 'body'
+}, {
+  id: 2,
+  pid: 1,
+  name: 'title'
+}, {
+  id: 3,
+  pid: 2,
+  name: 'div'
+}]
+// 转换为: 
+tree = [{
+id: 1,
+pid: 0,
+name: 'body',
+children: [{
+  id: 2,
+  pid: 1,
+  name: 'title',
+  children: [{
+    id: 3,
+    pid: 1,
+    name: 'div'
+  }]
+}
+}]
+
+
+function jsonToTree(data) {
+  // 初始化结果数组，并判断输入数据的格式
+  let result = []
+  if(!Array.isArray(data)) {
+    return result
+  }
+  // 使用map，将当前对象的id与当前对象对应存储起来
+  let map = {};
+  data.forEach(item => {
+    map[item.id] = item;
+  });
+  // 
+  data.forEach(item => {
+    let parent = map[item.pid];
+    if(parent) {
+      (parent.children || (parent.children = [])).push(item);
+    } else {
+      result.push(item);
+    }
+  });
+  return result;
+}

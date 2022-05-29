@@ -26,12 +26,12 @@ yarn.lock 文件：yarn 安装项目依赖时记录实际依赖版本信息，�
 图片防盗链原理是什么==============================================
 请求头中的 refer 来判断是否屏蔽图片
 
-peerDependency 是为了解决什么问题:避免重复安装=============================
+peerDependency 是为了解决什么问题:避免重复安装============================= 
 
 如何处理白屏错误页的监控的？
 排查兼容性。大部分原因是因为低端机型/浏览器低版本 polyfill 的问题导致报错
 排查网络。js 是否下载成功 cdn 是否生效
-做 js 错误上报。分析是否存在代码缺陷
+做js错误上报。分析是否存在代码缺陷
 做重试逻辑/诱导用户重试
 Error Boundry 避免整页崩溃。限制在组件级别
 
@@ -50,10 +50,8 @@ Service Worker 实现缓存功能一般分为三个步骤：首先需要先注�
 基本用法:
 // 创建 worker
 const worker = new Worker('work.js');
-
 // 向主进程推送消息
 worker.postMessage('Hello World');
-
 // 监听主进程来的消息
 worker.onmessage = function (event) {
   console.log('Received message ' + event.data);
@@ -114,7 +112,6 @@ myPromise.prototype.then=function(onFullfilled,onRejected){
 }
 
 4、原型链和作用域链的区别
-复制代码
 （1）原型链
 当访问一个对象的某个属性时，会先在这个对象本身的属性上找，如果没有找到，会去这个属性的__proto__属性上找，即这个构造函数的prototype，如果还没找到，
 就会继续在__proto__上查找，

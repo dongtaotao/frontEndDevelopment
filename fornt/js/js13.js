@@ -161,9 +161,151 @@ B 页面正常关闭，如何通知 A 页面
 
 全网搜索了一下，发现我们可以利用 window 对象的 load 和 beforeunload 事件，通过心跳监控来获取 B 页面的崩溃
 
-
-vs code画流程图---draw.io integration
+vs code画流程图---draw.io integration  -----------
 https://www.bilibili.com/video/av586758774/
 
 前端八股文
 https://juejin.cn/column/7067422830543470599
+
+哪些情况会导致内存泄漏
+1、意外的全局变量：由于使用未声明的变量,而意外的创建了一个全局变量,而使这个变量一直留在内存中无法被回收
+2、被遗忘的计时器或回调函数：设置了 setInterval 定时器，而忘记取消它，如果循环函数有对外部变量的引用的话，那么这个变量会被一直留在内存中，而无法被回收。
+3、脱离 DOM 的引用：获取一个 DOM 元素的引用，而后面这个元素被删除，由于一直保留了对这个元素的引用，所以它也无法被回收。
+4、闭包：不合理的使用闭包，从而导致某些变量一直被留在内存当中。
+
+链接：https://juejin.cn/post/7073869980411887652
+
+
+做了一份前端面试复习计划，保熟～
+https://juejin.cn/post/7061588533214969892
+
+一文带你了解如何排查内存泄漏导致的页面卡顿现象
+https://juejin.cn/post/6947841638118998029
+
+
+HTTP请求头referer字段详解与图片防盗链实战
+https://juejin.cn/post/7101301631668453406
+referer的作用    request
+包含当前请求页面的来源页面的地址，即当前页面是通过此来源页面的链接进入的。
+实战 - 图片防盗链
+location ~ .*\.(jpg|jpeg|gif|png|js|css)$
+{
+    expires      30d;
+    access_log /dev/null;
+    valid_referers none blocked wangxiaokai.vip www.wangxiaokai.vip;
+    if ($invalid_referer){
+        return 404;
+    }
+}
+
+都2022年了，一个还不知道Lottie动画的前端已经OUT啦！
+https://juejin.cn/post/7101629986427109383
+
+如果页面卡顿
+先会检查是否是网络请求太多，导致数据返回较慢，可以适当做一些缓存
+也有可能是某块资源的bundle太大，可以考虑拆分一下
+然后排查一下js代码，是不是某处有过多循环导致占用主线程时间过长
+浏览器某帧渲染的东西太多，导致的卡顿
+在页面渲染过程中，可能有很多重复的重排重绘
+链接：https://juejin.cn/post/6947841638118998029
+
+
+最详细的前端二进制数据流
+https://juejin.cn/post/7100759219397197831
+
+前后端文件上传过程以及方法 ------ 
+https://zhuanlan.zhihu.com/p/120834588
+
+面试官：面向对象和函数式编程你有了解吗？
+https://juejin.cn/post/70767195356041052
+2、 函数式编程的特点
+函数是一等公民
+声明式编程
+纯函数
+数据不可变
+
+函数式编程的优缺点：
+代码简洁，易于理解
+并发速度快
+出错率少
+
+面向对象编程
+2、面向对象编程的特点
+封装  继承  多态
+
+Tree-Shaking深入解析
+https://juejin.cn/post/7073360158671241246
+
+前端性能优化 24 条建议
+https://juejin.cn/post/6892994632968306702
+
+js实现文件上传、文件预览、拖拽上传的方法 https://juejin.cn/post/7102292023386275876
+
+将base64图片以form-data格式上传到图片服务器
+https://juejin.cn/post/7102324958671405069
+
+Flutter屏幕适配方案  flutter_screenutil
+https://juejin.cn/post/7102060695490920462
+
+Github黑科技之GitHub1s
+https://juejin.cn/post/7056974964401897480
+
+从 0 构建自己的脚手架/CLI
+https://juejin.cn/post/7069280579245572104
+
+图片加载会阻塞dom渲染吗？⭐⭐⭐⭐⭐ https://blog.csdn.net/qq_33277654/article/details/122924692
+图片不会阻塞dom解析和渲染，但是如果网页中有很多图片的话，会消耗大量的资源（引擎吞吐量、请求数等等），并发请求数量是有限的，如果多个图片同时请求可能会造成请求拥堵，导致其他资源无法被及时请求到，所以图片最好做成懒加载。
+
+
+react跨域 https://www.bilibili.com/video/BV1h3411y7dy?p=2&spm_id_from=pageDriver
+const { createProxyMiddleware } = require("http-proxy-middleware");
+module.exports = function (app) {
+    app.use(
+        "/api",
+        createProxyMiddleware({
+            target: "https://www.ahsj.link/rambo",
+            changeOrigin: true,
+            pathRewrite: {
+                "/api": "",
+            },
+        })
+    );
+};
+
+小猪课堂  https://space.bilibili.com/493520625/video
+
+
+基于原生js和node实现文件上传和大文件切片上传
+https://www.bilibili.com/video/BV1zS4y1B7Eg?spm_id_from=333.999.0.0
+
+#JSBridge概述
+对于Web, 发送URL请求的方法有这么几种: http://know.shuerbuzuo.cn/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/JSBridge%E6%A6%82%E8%BF%B0.html#web-native
+a标签
+location.href
+使用iframe.src
+发送ajax请求
+这些方法中, a标签需要用户操作, href可能会引起页面的丢失, ajax请求在安卓中没有相应的拦截方法, 所以使用iframe.src是比较常见的方案:
+
+安卓提供了shouldOverrideUrlLoading方法拦截
+UIWebView使用shouldStartLoadWithRequest, WKWebView则使用decidePolicyForNavigationAction
+这种方法从早期就存在了, 兼容性好. 缺点是基于URL, 长度受限, 并且不太直观.
+
+#移动端前端技巧指南
+http://know.shuerbuzuo.cn/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%89%8D%E7%AB%AF%E6%8A%80%E5%B7%A7%E6%8C%87%E5%8D%97.html#html
+
+Mutation Observer API 用来监听DOM的变动事件
+http://know.shuerbuzuo.cn/%E6%B5%8F%E8%A7%88%E5%99%A8&HTML/%5BAPI%5DMutationObserver.html#%E5%8F%96%E4%BB%A3domcontentloaded%E4%BA%8B%E4%BB%B6
+IntersectionObserver API
+IntersectionObserver API可以自动的"观察"元素是否是可见的. 由于可见的本质是目标元素与视图产生一个交叉去, 所以这个API叫做 "交叉观察器".
+
+
+
+实战：使用nodejs的第三方插件nodemailer实现邮件发送
+https://blog.csdn.net/bertil/article/details/121345946
+https://www.yuque.com/baiyueguang-rfnbu/tr4d0i/vqxe0g
+
+讲一下变量提升 https://www.lingtiku.com/quiz/detail/5
+javaScript在执行之前会先进行预编译，主要做两个工作：
+1. 将全局作用域或者函数作用域内所有函数声明提前。
+2. 将全局作用域或者函数作用域内所有var声明的变量提前声明，并赋值为undefined。
+这就是变量提升。

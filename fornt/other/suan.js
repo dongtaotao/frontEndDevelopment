@@ -400,7 +400,6 @@ var maxProduct = function(nums) {
   return max;
 };
 
-
 阿里算法题：编写一个函数计算多个数组的交集 *********************************
 https://github.com/sisterAn/JavaScript-Algorithms/issues/10
 let intersection = (list , ...args) => list.filter( item => args.every( list => list.includes( item )))
@@ -417,7 +416,6 @@ function intersectAll(...arrs){
   })
 }
 合并之后就是
-
 function getIntersect(...arrs) {
   return arrs.reduce(function(prev,cur){
     return [...new Set(cur.filter((item)=>prev.includes(item)))]
@@ -484,7 +482,6 @@ MinStack.prototype.top = function() {
 MinStack.prototype.getMin = function() {
     return this.min
 };
-
 作者：前端瓶子君
 链接：https://juejin.cn/post/6844904138044604424
 

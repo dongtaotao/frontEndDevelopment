@@ -218,7 +218,7 @@ let curry = (fn, ...arr) => {  // arr 记录已有参数
   }
 }
 
-var sumPlus = curry(sum)
+var sumPlus = curry(sum) 
 sumPlus(1)(2)(3)(4)
 sumPlus(1, 2)(3)(4)
 sumPlus(1, 2, 3)(4)
@@ -268,7 +268,6 @@ addEventListener("resize", setRem)
 
 34 实现一个双向绑定
 defineProperty 版本
-
 // 数据
 const data = {
   text: 'default'
@@ -642,7 +641,6 @@ function getUrlParams(url){
 数字化金额 https://juejin.cn/post/6890357960040513550
 const num = String(1234567890);
 let result = '';
-
 for (let i = num.length - 1; i >= 0; i--) {
   if (i !== num.length - 1 && i % 3 === 0) {
     result = num[i] + ',' + result;

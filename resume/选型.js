@@ -18,4 +18,4 @@ https://blog.csdn.net/weixin_38318244/article/details/123878061
     使用场景：React配合Redux架构适合大规模多人协作复杂项目，Vue适合小快的项目
     开发风格：react推荐做法jsx + inline style把html和css都写在js了
  vue是采用webpack + vue-loader单文件组件格式，html, js, css同一个文件
-原文链接：https://blog.csdn.net/chngfg/article/details/122060647
+原文链接：https://blog.csdn.net/chngfg/article/details/122060647 

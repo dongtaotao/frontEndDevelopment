@@ -15,7 +15,7 @@ toLocaleUpperCase()   // 把字符串转换为大写。
 toLowerCase()   // 把字符串转换为小写。
 toUpperCase()   // 把字符串转换为大写。
 toString()   // 返回字符串。
-valueOf()   // 返回某个字符串对象的原始值。
+valueOf()   // 返回某个字符串对象的原始值。 
 
 array 方法
 https://www.cnblogs.com/lhh520/p/10373802.html 

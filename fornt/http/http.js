@@ -82,7 +82,6 @@ url以ws：或wss：开头。
 请求头和响应头的connection的值是upgrade，表示协议升级。
 请求头和响应头会有sec-websoket字段。
 
-
 前端如何进行异常/性能监控？ ==============================================================
 性能监控可以查看preformance或audis/lighthouse，在用户实时使用的过程中，监听到性能。
 异常捕获：
@@ -92,7 +91,6 @@ window.onerror：可以捕获到同步错误，无法捕获静态资源异常和
 window.addEventListener('error', error=> {...})：在事件捕获阶段进行错误捕捉
 unhandledrejection事件：捕获promise错误
 Vue.config.errorHandler = (err, vm, info) => {...}：vue异常
-作者：飞跃疯人院
 链接：https://juejin.cn/post/6945025017834897422
 
 1. http/https 协议
@@ -166,8 +164,8 @@ Etag 的优先级高于 Last-Modified
 500: 服务器错误
 作者：郭东东
 链接：https://juejin.cn/post/6844903776512393224
-25. 进程和线程的区别
 
+25. 进程和线程的区别
 进程：是并发执行的程序在执行过程中分配和管理资源的基本单位，是一个动态概念，竞争计算机系
 统资源的基本单位。
 线程：是进程的一个执行单元，是进程内科调度实体。比进程更小的独立运行的基本单位。线程也

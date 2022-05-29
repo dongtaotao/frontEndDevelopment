@@ -288,9 +288,7 @@ vue与react的区别你知道的有哪些
 在vue中,state对象不是必须的,数据由data属性在vue对象中管理；
 链接：https://juejin.cn/post/6976127117679394846
 
-
 要了解 Fiber，我们首先来看为什么需要它
-
 问题: 随着应用变得越来越庞大，整个更新渲染的过程开始变得吃力，大量的组件渲染会导致主进程长时间被占用，导致一些动画或高频操作出现卡顿和掉帧的
 情况。而关键点，便是 同步阻塞。在之前的调度算法中，React 需要实例化每个类组件，生成一颗组件树，使用 同步递归 的方式进行遍历渲染，而这个过程
 最大的问题就是无法 暂停和恢复。
@@ -350,7 +348,6 @@ class Parent extends Component {
     );
   }
 }
-
 class Child extends Component {
   getAlert() {
     alert('getAlert from Child');
@@ -380,7 +377,6 @@ setState 合并，在 合成事件 和 生命周期钩子 中多次连续调用�
 虚拟 DOM 的缺点在社区中主要有两点
 内存占用较高，因为需要模拟整个网页的真实 DOM
 高性能应用场景存在难以优化的情况，类似像 Google Earth 一类的高性能前端应用在技术选型上往往不会选择 React 
-
 
 16. 为什么使用jsx的组件中没有看到使用react却需要引入react？
 本质上来说JSX是React.createElement(component, props, ...children)方法的语法糖。在React 17之前，如果使用了JSX，

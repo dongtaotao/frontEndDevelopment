@@ -89,7 +89,7 @@ EnvironmentPlugin: 定义环境变量；
 
 通过 compiler 对象监听事件
 
-webpack编译优化
+webpack编译优化 
 1.删除不可能执行的代码；
    摇树优化 (Tree-shaking)原理: 由于是在编译时优化，因此最基本的前提就是语法的静态分析，ES6的模块机制 提供了这种可能性。
    不需要运行时，便可进行代码字面上的静态分析，确定相应的依赖关系。
@@ -169,7 +169,6 @@ https://juejin.cn/post/6844904079219490830
 https://juejin.cn/post/6844904084927938567
 带你深度解锁Webpack系列(优化篇)
 https://juejin.cn/post/6844904093463347208#heading-3
-
 
 
 plugin1可以派发事件让plugin2监听吗？ webpack的插件并行还是串行？ 

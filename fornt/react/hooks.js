@@ -13,8 +13,6 @@ https://www.jianshu.com/p/87802403c222
 React Fiber 原理介绍 🔥
 https://segmentfault.com/a/1190000018250127
 
-HOOK为什么只能用在React函数的最顶层
-
 我打破了 React Hook 必须按顺序、不能在条件语句中调用的枷锁
 https://zhuanlan.zhihu.com/p/357232384
 
@@ -90,7 +88,6 @@ window.onbeforeunload = (e) => {
   const state = store.getState();
   saveState(state);
 };
-
 2.何时清空
 解决就是，state需要有个版本管理，当和代码的版本不一致时，至少进行个清空操作。
 
@@ -107,13 +104,11 @@ async function fn1(next){
     next && await next()
     console.log('end fn1')
 }
-
 async function fn2(next){
     console.log('fn2')
     next && await next()
     console.log('end fn2')
 }
-
 fn1(() => fn2())
 
 fn1
@@ -146,8 +141,8 @@ react hooks 的原理是什么 https://q.shanyue.tech/fe/react/273.html
 组件的高度抽象化。
 
 虚拟 DOM 的缺点
-    首次渲染大量 DOM 时，由于多了一层虚拟 DOM 的计算，会比 innerHTML 插入慢。
-    虚拟 DOM 需要在内存中的维护一份 DOM 的副本(更上面一条其实也差不多，上面一条是从速度上，这条是空间上)。
+    1.首次渲染大量 DOM 时，由于多了一层虚拟 DOM 的计算，会比 innerHTML 插入慢。
+    2.虚拟 DOM 需要在内存中的维护一份 DOM 的副本(更上面一条其实也差不多，上面一条是从速度上，这条是空间上)。
     如果虚拟 DOM 大量更改，这是合适的。但是单一的，频繁的更新的话，虚拟 DOM 将会花费更多的时间处理计算的工作
 
 Immutable Data 就是一旦创建，就不能再被更改的数据。
@@ -312,7 +307,6 @@ useEffect为什么有时候会出现无限重复请求的问题
 解决：useCallback包一层，或者useMemo
 useEffect的依赖项里类数组根据什么来判断有没有值变化
 浅比较
-————————————————
 原文链接：https://blog.csdn.net/MichelleZhai/article/details/118392437  
 
 react 组件中新增属性可以用...解构对象直接放进去
@@ -404,7 +398,6 @@ https://juejin.cn/post/7030424680620097549
 
 自定义Hook
 可以很好的进行组件公共逻辑抽离。相比HOC优势：
-
 减少组件嵌套
 避免在组件间处理props透传
 
@@ -428,7 +421,6 @@ function useDialog () {
       switchStatus
     }
   }
-  
   // 组件中使用useDialog
   function App() {
     // 使用自定义hook，接收状态、操作函数
@@ -445,7 +437,6 @@ function useDialog () {
   
 链接：https://juejin.cn/post/7081475500241059870
 
-
 11. Hook 规则
 Hook 本质就是 JavaScript 函数，但是在使用它时需要遵循两条规则。我们提供了一个 linter 插件来强制执行这些规则：
 
@@ -458,9 +449,7 @@ Hook 本质就是 JavaScript 函数，但是在使用它时需要遵循两条规
 不要在普通的 JavaScript 函数中调用 Hook。 你可以：
 ✅ 在 React 的函数组件中调用 Hook
 ✅ 在自定义 Hook 中调用其他 Hook
-
 链接：https://juejin.cn/post/7061931724984287269
-
 
 （1）不要在循环，条件或嵌套函数中调用Hook，必须始终在 React函数的顶层使用Hook
 这是因为React需要利用调用顺序来正确更新相应的状态，以及调用相应的钩子函数。一旦在循环或条件分支语句中调用Hook，
@@ -560,7 +549,6 @@ function useReducer(reducer, initialState){
     return [lastState, dispatch];
 }
 
-
 说说 React 状态逻辑复用问题 ******************** 重要 https://juejin.cn/post/6899291168891207688
 
 https://fe.ecool.fun/topic/559aab33-1ef2-4fb1-bdba-2233423fb845?orderBy=updateTime&order=desc&tagId=13
@@ -584,7 +572,6 @@ This.setState({message: ‘Hello World’});
 setState通过一个队列机制来实现 state 更新。当执行 setState 的时候，会将需要更新的 state 合并后放入状态队列，
 而不会立刻更新 this.state。队列机制可以高效的批量更新 state，如果不通过 setState 而直接修改 this.state，
 那么该 state 将不会被放入状态队列中，当下次调用 setState 并对状态队列进行合并时，将会忽略之前被直接修改的 state，而造成无法预知的错误。
-
 
 hook缺点
 写useEffect、useMemo的依赖项比较考验心智

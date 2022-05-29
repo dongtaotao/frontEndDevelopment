@@ -1,4 +1,4 @@
-单例模式 
+单例模式  
 const Single = function (name, password) {  
     this.name = name;
     this.password = password;
@@ -307,4 +307,4 @@ const stop = mySetInterval(() => {
   console.log('test')
 }, 200);
 
-stop() // 停止 
+stop() // 停止  

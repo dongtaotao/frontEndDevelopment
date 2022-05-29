@@ -232,3 +232,7 @@ https://juejin.cn/post/6844904102447546382
 
 如何使用
 配置nginx.config
+
+
+使用nginx缓存服务器上的静态文件
+https://juejin.cn/post/6844903604034240525

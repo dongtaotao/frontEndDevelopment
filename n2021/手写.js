@@ -333,7 +333,6 @@ console.log(compareVersion('1.0', '1.0.0'))
 const compareMoreVersion = (versions) => {
   return versions.sort((a, b) => compareVersion(a, b))
 }
-
 console.log(compareMoreVersion(['1.0', '3.1', '1.01']))
 
 

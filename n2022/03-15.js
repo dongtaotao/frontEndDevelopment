@@ -34,7 +34,6 @@ sso认证中心引导用户至登录页面
 单点登录原理与简单实现 
 https://www.cnblogs.com/ywlaker/p/6113927.html
 
-
 https://www.cnblogs.com/ywlaker/p/6113927.html
 下面对上图简要描述
 

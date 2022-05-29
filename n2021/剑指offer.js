@@ -252,7 +252,7 @@ var getIntersectionNode = function(headA, headB) {
   let lB = headB;
   while(lA !== lB){
       lA = lA==null ? headB : lA.next;
-      lB = lB==null ?headA : lB.next;
+      lB = lB==null ? headA : lB.next;
   }
   return lA;
 };
@@ -774,4 +774,4 @@ function LastRemaining_Solution(n, m)
     }
     return result;
 }
-原文链接：https://blog.csdn.net/violet_seven/article/details/107042191  
+原文链接：https://blog.csdn.net/violet_seven/article/details/107042191   

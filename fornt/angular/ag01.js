@@ -96,7 +96,7 @@ export class GoodsListService {
 组件
 数据绑定
 组件交互
-生命周期  ngOnChanges  ngOnInit  ngDoCheck ngAfterContentInit ngOnDestroy
+生命周期  ngOnChanges  ngOnInit  ngDoCheck ngAfterContentInit ngOnDestroy 
 管道  过滤器
 服务
 HttpClient
@@ -107,7 +107,7 @@ HttpClient
 6、指令 (Directives)
 7、服务 (Services)
 8、依赖注入 (Dependency Injection)
-9.管道
+9 .管道
 
 
 Angular非父子组件之间通过服务通讯

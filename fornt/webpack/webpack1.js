@@ -24,7 +24,6 @@ https://juejin.cn/post/7100534685134454815
 输出资源：根据入口和模块依赖关系，组装成一个个chunk，加到输出列表
 输出完成：根据配置中的output，确定输出路径和文件名，把文件内容写入输出目录（默认是dist）
 
-
 2Webpack 的构建过程太花时间
 Webpack 打包的结果体积太大
 7.1 针对 Webpack 本身构建优化
@@ -48,7 +47,6 @@ Webpack 打包的结果体积太大
   webpack-chart
   webpack-analyse
 7.2.4 缓存
-
   cache-loader
   参考链接：cache-loader
 
@@ -56,30 +54,24 @@ Webpack 打包的结果体积太大
   再次构建如果文件没有发生变化则会直接拉取缓存。
   uglifyjs-webpack-plugin
   也可以解决缓存问题。
-
 7.2.5 多进程
     Happypack 可以将任务分解成多个子进程去并发执行，大大提升打包效率。
-
 7.2.6 抽离
   通过 DllPlugin 或者 Externals 进行静态依赖包的分离。
   由于 CommonsChunkPlugin 每次构建会重新构建一次 vendor，所以出于效率考虑，
   使用 DllPlugin 将第三方库单独打包到一个文件中，只有依赖自身发生版本变化时才会重新打包。
-
 7.2.7 多进程代码压缩
   SplitChunksPlugin
 
 7.2.9 打包资源压缩
-
   JS 压缩：UglifyJSPlugin
   HTML 压缩：HtmlWebpackPlugin
   提取公共资源：splitChunks.cacheGroups
   CSS 压缩：MiniCssExtractPlugin
   Gzip 压缩：不包括图片
-
 7.2.10 按需加载
   通过 Code-Splitting 来做 React 的按需加载.
   Code_Splitting 核心是 require-ensure。
-
 7.3 优化体验
   progress-bar-webpack-plugin：在终端底部，将会有一个构建的进度条，可以让你清晰的看见构建的执行进度。
   webpack-build-notifier：在构建完成时，能够像微信、Lark 这样的 APP 弹出消息的方式，提示构建已经完成。
@@ -358,6 +350,6 @@ Plugin
 链接：https://juejin.cn/post/7004638318843412493
 
 Webpack 的构建过程太花时间
-Webpack 打包的结果体积太大   
+Webpack 打包的结果体积太大    
 
 

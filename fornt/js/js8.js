@@ -97,7 +97,6 @@ ps:如果是vue项目，直接与v-html结合使用更爽哦~
 1.居中为什么要使用transform（为什么不使用marginLeft/Top）
 https://juejin.cn/post/7075590655581356045
 
-
 基于react的前端单元测试
 https://juejin.cn/post/7075590655581356045
 为什么需要单元测试
@@ -175,7 +174,6 @@ HTTP管线化是针对HTTP每次只能是请求一次回答一次的模式进行
 输入： [1,2,3,4,4,5]
 输出：False
 解释：无法切分出长度至少为3的子序列。
-
 
 跨域资源共享（CORS）
 CORS是一个W3C标准，全称是"跨域资源共享"（Cross-origin resource sharing）。
@@ -293,11 +291,9 @@ https://juejin.cn/post/6989231061238546468
 https://juejin.cn/post/7076490275278815239
 
 class LoginForm {
-
     constructor() {
       this.state = 'hide'
     }
-  
     static getInstance = (function(){
       let instance;
       return function() {
@@ -307,7 +303,6 @@ class LoginForm {
         return instance
       }
     })()
-  
     show() {
       if (this.state === 'show') {
         console.log('显示！！！');
@@ -326,15 +321,11 @@ class LoginForm {
       console.log('登录框已经隐藏');
     }
   }
-  
   let login_1 = LoginForm.getInstance()
   let login_2 =  LoginForm.getInstance()
-  
   login_1.show()
   login_2.hide()
-  
   console.log('login_1===login_2', login_1===login_2);
-  
 
 JavaScript 中queue队列相关算法 *************** JavaScript学习网站
   https://juejin.cn/post/7075962070139125791
