@@ -309,3 +309,28 @@ javaScript在执行之前会先进行预编译，主要做两个工作：
 1. 将全局作用域或者函数作用域内所有函数声明提前。
 2. 将全局作用域或者函数作用域内所有var声明的变量提前声明，并赋值为undefined。
 这就是变量提升。
+
+
+前端面试实录：5年大厂前端架构师，期望38k，很强，我无话可说！ 看
+https://www.bilibili.com/video/BV1jL4y1G7dz?spm_id_from=333.337.search-card.all.click
+
+ArrayBuffer实战-识别文件类型
+https://juejin.cn/post/7100499008279281677
+
+
+前端进阶学习指南
+https://juejin.cn/post/7068506779533410312
+2022金三银四前端面试笔记
+https://juejin.cn/post/7085609851720024072#heading-7
+
+Cookie、Session、Storage、Token、JWT、单点登录、OAuth第三方登录一次性弄懂
+https://juejin.cn/post/7044094195404898311
+
+前端文件的上传和下载
+https://juejin.cn/post/7074869887759286280
+
+mac抓包神器charles抓包详解
+https://juejin.cn/post/7076399416956944414
+
+监控上传和下载进度
+https://juejin.cn/post/7103188024887869476

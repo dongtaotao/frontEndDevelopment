@@ -136,4 +136,4 @@ Vuex使用vue中的reactive方法将state设置为响应式，这样组件就可
 链接：https://juejin.cn/post/6961222829979697165
 
 
-Vuex 原理 https://www.yuque.com/baiyueguang-rfnbu/tr4d0i/xos4ss#mdIpu
+Vuex 原理 https://www.yuque.com/baiyueguang-rfnbu/tr4d0i/xos4ss#mdIpu 

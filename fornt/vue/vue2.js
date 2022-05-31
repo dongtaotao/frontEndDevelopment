@@ -1,4 +1,4 @@
-【面试题解】vue-router有几种钩子函数？具体是什么及执行流程是怎样的？
+【面试题解】vue-router有几种钩子函数？具体是什么及执行流程是怎样的？ 
 https://juejin.cn/post/6987267852575195143#heading-11
 全局守卫、路由守卫、组件守卫。
 
@@ -14,6 +14,12 @@ https://jackniu81.github.io/2021/04/12/Vue-js-Interview-Questions-and-Answers-20
 
 【前端面试】使用过Vue的自定义指令吗？ https://www.bilibili.com/video/BV1FR4y1c7bt?spm_id_from=333.337.search-card.all.click
 https://zhuanlan.zhihu.com/p/484670867
+
+VUE源码解读之响应式系统及Watcher的调度实现
+https://mp.weixin.qq.com/s/zDv_IQ36o_rRD25xN9uyuw
+
+实现一个Vue自定义指令懒加载
+https://mp.weixin.qq.com/s/36oBZMd-m-2k5EKPghfG3A
 
 LRU（Least recently used） 算法根据数据的历史访问记录来进行淘汰数据，其核心思想是“如果数据最近被访问过，那么将来被访问的几率也更高”。
 (墨菲定律：越担心的事情越会发生)

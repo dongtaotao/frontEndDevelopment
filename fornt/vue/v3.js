@@ -43,6 +43,9 @@ https://www.bilibili.com/video/BV1mR4y1w7cU?spm_id_from=333.999.0.0
 22年4月最新vue手写vue源码【面试必备】
 https://www.bilibili.com/video/BV1o44y1G7bK?spm_id_from=333.999.0.0
 
+【初学者笔记】整理的一些Vue3知识点
+https://juejin.cn/post/6977004323742220319#heading-9
+
 vue3新特性 https://juejin.cn/post/6940454764421316644
 Composition Api 
 自定义hooks
@@ -407,7 +410,6 @@ diff算法说一下
 先判断一方有子节点一方没有子节点的情况(如果新的children没有子节点，将旧的子节点移除)
 比较都有子节点的情况(核心diff)
 递归比较子节点
-
 
 作用域插槽
 作用域插槽可以拿到子组件里面的属性。在子组件中传入属性然后渲染。

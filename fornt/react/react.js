@@ -14,6 +14,9 @@ https://www.bilibili.com/video/BV1h3411y7dy?p=4
 前端React面试题总结
 https://zhuanlan.zhihu.com/p/441407315?utm_source=tuicool&utm_medium=referral
 
+webpack4 的30个步骤打造优化到极致的 react 开发环境，如约而至
+https://juejin.cn/post/6844903862898262024
+
 1. React 事件机制
 React并不是将click事件绑定到了div的真实DOM上，而是在document处监听了所有的事件，
 当事件发生并且冒泡到document处的时候，React将事件内容封装并交由真正的处理函数运行。
@@ -384,3 +387,12 @@ React 中 setState 是一个宏任务还是微任务？https://www.modb.pro/db/1
 都不是
 setState
 就是一次同步行为，根本不存在面试官的问题。 
+
+
+超简单实用：用Suspence和React.lazy来做代码的切割
+https://juejin.cn/post/7102812486239256613
+
+可能是你需要的 React + TypeScript 50 条规范和经验
+https://juejin.cn/post/6844903849166110728
+三千字讲清TypeScript与React的实战技巧
+https://juejin.cn/post/6844903897790677005

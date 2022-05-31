@@ -2,13 +2,12 @@ React Native 框架构成  https://zhuanlan.zhihu.com/p/41920417
 React Native 原理与实践 https://juejin.cn/post/6916452544956858382
 React Native之原理浅析 http://blog.poetries.top/2019/10/02/rn-yuanli/
 
-React Native 框架内部已提供了很多的内置组件，如图 3-1 所示。如 View、Text 等基本组件，
+React Native 框架内部已提供了很多的内置组件，如 View、Text 等基本组件，
 用于一些功能布局的 Button、Picker 等，用于列表展示的各种 List 组件和对应 iOS 平台与 Android 
 平台的特定组件、API 等。
 同时也提供了供编写与原生平台交互的接口，在后续的章节我们会进行与原生平台的混合实战开发实战。 
 
 React Native 工作原理
-图 3-2 React Native 渲染 
 在 React 框架中，JSX 源码通过 React 
 框架最终渲染到了浏览器的真实 DOM 中，而在 React Native 框架中，
 JSX 源码通过 React Native 框架编译后，通过对应平台的 Bridge
@@ -134,7 +133,7 @@ JS Engine
 React Native 需要一个 JS 的运行环境，因为 React Native 会把应用的 JS 代码编译成一个 JS
 文件（x x.bundle），React Native 框架的目标就是解释运行这个 JS 脚本文件，如果是 Native
  拓展的 API，则直接通过 bridge 调用 Native 方法，最基础的比如绘制 UI 界面，映射 
-  Virtual DOM 到真实的 UI 组件中。
+  Virtual DOM 到真实的 UI 组件中。 
 
 (在 React Native 里所有 Native 和 JS 互调都是通过 Bridge 层的几个最基础的方法衔接的)
 

@@ -78,7 +78,7 @@ Node 的 Event Loop: 6个阶段
 4.poll: 等待回调
   执行回调
   执行定时器
-  如有到期的setTimeout / setInterval， 则返回 timer 阶段 
+  如有到期的setTimeout / setInterval， 则返回 timer 阶段  
   如有setImmediate，则前往 check 阶段
 5.check
   执行setImmediate
@@ -90,18 +90,15 @@ https://juejin.cn/post/7078607908920885278
 
 express 和 koa 有什么区别
 1. 语法区别
-
 experss 异步使用 回调
 koa1 异步使用 generator + yeild
 koa2 异步使用 await/async
 
 2. 中间件区别
-
 koa 采用洋葱模型，进行顺序执行，出去反向执行，支持 context 传递数据
 express 本身无洋葱模型，需要引入插件，不支持 context
 
 3. 集成度区别
-
 express 内置了很多中间件，集成度高，使用省心
 koa 轻量简洁，容易定制
 
@@ -110,8 +107,4 @@ ts 跟 js有什么区别，优点和缺点
 ts 是 js 的超集，即你可以在 ts 中使用原生 js 语法。
 ts 需要静态编译，它提供了强类型与更多面向对象的内容。
 ts 最终仍要编译为弱类型，基于对象的原生的 js，再运行。
-
-作者：一尾流莺
 链接：https://juejin.cn/post/7064740689178787871
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

@@ -29,7 +29,7 @@ setup 函数是一个新的Vue组件， 是Composition API 入口
 ref() 声明单一基础数据类型时使用
 Reactive() 声明单一对象时使用
 watchEffect() 监听props
-watch() 监听器   监听单个数据  监听多个数据
+watch() 监听器  监听单个数据  监听多个数据
 computed() 计算属性 可创建只读，和可读可写两种
 
 一、生命周期对比

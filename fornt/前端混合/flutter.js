@@ -216,7 +216,7 @@ Flutter提供了丰富的组件、接口，开发者可以很快地为 Flutter�
 Flutter还使用 Native引擎渲染视图，这无疑能为用户提供良好的体验。
 Flutter数据驱动模式参考React实现
 
-//=============================================================================
+//=============================================================================-==========
 为什么要用flutter
 1，跨平台自绘引擎：
 Flutter既不使用WebView，也不使用操作系统的原生控件(rn)，Flutter使用Skia作为其2D渲染引擎（相对而言耗费内存）。
@@ -236,9 +236,6 @@ RN： 支持，动态下发bundle文件
 业务开发的产物     编译成二进制文件集成到app安装包内             可动态下发的jsbundle和依赖的编译到app内装包内 原生代码
 性能             由于是编译后运行，且不用做跨语言通信 性能很好    大部分场景性能良好，但是在某些需要频繁做跨语言通信的场景，性能不够理想
 
-final和const，final修饰的变量只能被赋值一次，const修饰的变量是一个编译时常量，
-区别在于 final 定义的常量可以用变量来初始化，而且final是惰性，运行时才初始化
-
 
 包体积
 Flutter需要编译成二进制运行，占体积（致命的痛点）
@@ -249,26 +246,20 @@ flutter的编程方式，代码很不直观，没有好的布局模板，全是�
 没有模板语言
 
 
-final和const
-如果您从未打算更改一个变量，那么使用 final 或 const，不是var，也不是一个类型。
- 一个 final 变量只能被设置一次，两者区别在于：
- const 变量是一个编译时常量（编译时直接替换为常量值），final变量在第一次使用时被初始化
-
-
 变量声明•final和const•常量声明。
  一个final变量只能被设置一次，二者区别在于：
 const变量是一个编译时常量，final变量再第一次使用时被初始化。被final或const修饰的变量，变量类型可以省略
 用Dart语言开发，而不是JavaScript，它在release模式下是编译后运行，而不是像JS一样在JavaScriptCore里解释运行，因此暂时不支持热更新
+final和const，final修饰的变量只能被赋值一次，const修饰的变量是一个编译时常量，
+区别在于 final 定义的常量可以用变量来初始化，而且final是惰性，运行时才初始化
 
 
 Flutter ： Native调用flutter方法 https://blog.csdn.net/BunnyCoffer/article/details/114014126
 在实际的开发中通常需要 Flutter 调用 Native 的功能，或者 Native 调用 Flutter 的功能
 它们之间的通信主要是通过 Platform Channel 来实现的, 主要有 3 种 channel :
- 
 MethodChannel 用于传递方法调用
 EventChannel 用于数据流（event streams）的通信
 BasicMessageChannel 用于传递字符串和半结构化的信息
-
 链接：https://juejin.cn/post/6844903901649436679
 
 
@@ -336,12 +327,10 @@ channel.invokeMethod("native-invoke-flutter", "这是native 主动调用 flutter
      public void success(Object result) { // 调用dart中的方法，成功回调。 
           Log.d("=---==--==", "success: result = " + result.toString());
      }
-
      @Override
       public void error(String errorCode, String errorMessage, Object errorDetails) {
 
      }
-
      @Override
      public void notImplemented() {
 
@@ -424,5 +413,4 @@ final 编译时不确定，运行时确定值 final curTime=DateTime.now()
 const 编译时即明确的值 
 ~~const curTime=DateTime.now()~~   🙅
 fix： const curTime='2022-12-12' 🙆
-
 链接：https://juejin.cn/post/7095962296421204005

@@ -8,4 +8,4 @@ actions 支持同步和异步；
 没有模块嵌套，只有 store 的概念，store 之间可以自由使用，更好的代码分割；
 无需手动添加 store，store 一旦创建便会自动添加；
 
-链接：https://juejin.cn/post/7049196967770980389
+链接：https://juejin.cn/post/7049196967770980389 
