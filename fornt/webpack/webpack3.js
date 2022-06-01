@@ -10,6 +10,9 @@ https://blog.csdn.net/Celine921/article/details/124356195
 打包的3种hash值你知道吗？当年我校招时被这题难倒了！
 https://juejin.cn/post/7060688758370205733
 
+webpack5 loader和plugin原理解析
+https://juejin.cn/post/7103698199453368357
+
 webpack源码分析
 https://juejin.cn/column/7004269262806188069
 
