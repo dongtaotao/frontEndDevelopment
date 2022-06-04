@@ -46,7 +46,6 @@ https://blog.51cto.com/u_15485864/4905983
 
 前端性能优化 — 首屏时间和白屏时间 https://blog.csdn.net/qq_41914185/article/details/123715706
 
-
 白屏时间
 window.performence.timing.domLoading - window.performence.timing.fetchStart
 

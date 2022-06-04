@@ -13,11 +13,9 @@ interface SdkProp {
     product: string;
     url:string;
 }
-
 interface MySDKProp {
     currentProduct: string;
 }
-
 class MySDK {
     currentProduct: string;
     url:string;
@@ -28,23 +26,23 @@ class MySDK {
     } 
     //数据浏览器访问量
     pv() {
-        this.event('pv','');
+      this.event('pv','');
     }
     //发送数据
     private send(url, params: any = {}) {
-        params.product = this.currentProduct;
-        const paramsArr = [];
-        for (let key in params) {
-            const val = params[key];
-            paramsArr.push(`${key}-${val}`);
-        }
-        const newVal=`${url}?${paramsArr.join("&")}`;
-        const img=document.createElement('img');
-        img.src=newVal;
+      params.product = this.currentProduct;
+      const paramsArr = [];
+      for (let key in params) {
+          const val = params[key];
+          paramsArr.push(`${key}-${val}`);
+      }
+      const newVal=`${url}?${paramsArr.join("&")}`;
+      const img=document.createElement('img');
+      img.src=newVal;
     }
     //内部事件
     event(key,value) {
-        this.send(this.url,{key,value})
+      this.send(this.url,{key,value})
     }
 }
 
@@ -96,7 +94,6 @@ class BuildEndPlugin {
           process.exit(0)
         }, 1000)
       }
-  
       compiler.plugin('after-emit', afterEmit)
     }
   }

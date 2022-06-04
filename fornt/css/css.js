@@ -127,7 +127,6 @@ flex，flex-grow，flex-shrink，flex-basis 的简写
 align-self，覆盖容器的 align-items 属性
 链接：https://juejin.cn/post/7035540378811891749
 
-
 3. 什么是回流(重排)，什么情况下会触发回流
 当元素的尺寸或者位置发生了变化，就需要重新计算渲染树，这就是回流
 DOM元素的几何属性(width/height/padding/margin/border)发生变化时会触发回流

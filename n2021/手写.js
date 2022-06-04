@@ -335,7 +335,6 @@ const compareMoreVersion = (versions) => {
 }
 console.log(compareMoreVersion(['1.0', '3.1', '1.01']))
 
-
 简化版
 function deepCopy(obj) {
   var ret = {};
@@ -497,4 +496,4 @@ function flatten(obj) {
 
 // 测试
 console.log(flatten(obj)) 
-
+ 

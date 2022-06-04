@@ -44,7 +44,7 @@ https://blog.poetries.top/FE-Interview-Questions/excellent-docs/10-%E7%A7%BB%E5%
 解决方案: 解决同步阻塞的方法，通常有两种: 异步 与 任务分割。而 React Fiber 便是为了
 实现任务分割而诞生的。
 在 Fiber 中，reconciliation 阶段进行了任务分割，涉及到 暂停 和 重启，因此可能会导致
-reconciliation中的生命周期函数在一次更新渲染循环中被 多次调用 的情况，产生一些意外错误。
+reconciliation中的生命周期函数在一次更新渲染循环中被 多次调用 的情况，产生一些意外错误。 
 
 //===========================================================================
 Mobx和Redux区别浅析 https://juejin.cn/post/6924572729886638088
@@ -221,7 +221,6 @@ const debounce = (fn, delay) => {
     if(time) {
       clearTimeout(time)
     }
-
     time = setTimeout(() => {
       fn.apply(this, args)
     }, delay)
@@ -370,7 +369,6 @@ function quickSort(arr) {
       right.push(arr[i])
     }
   }
-
   return [...left, midd, ...right]
 }
 

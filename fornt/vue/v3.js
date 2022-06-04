@@ -46,6 +46,12 @@ https://www.bilibili.com/video/BV1o44y1G7bK?spm_id_from=333.999.0.0
 【初学者笔记】整理的一些Vue3知识点
 https://juejin.cn/post/6977004323742220319#heading-9
 
+千锋Echarts+Vue3.0数据可视化项目构建_入门必备前端项目实战教程
+https://www.bilibili.com/video/BV14u411D7qK?p=69
+
+记一次vue3.0技术分享会
+https://segmentfault.com/a/1190000022719461
+
 vue3新特性 https://juejin.cn/post/6940454764421316644
 Composition Api 
 自定义hooks
@@ -376,7 +382,6 @@ class Dep {
     })
   }
 }
-
 // 订阅者的类
 class Watcher {
   constructor(cb) {
@@ -416,7 +421,6 @@ diff算法说一下
 
 https://blog.gaogangsever.cn/vue/#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%B3%BB%E5%88%97
 Vue 文章目录
-
 
 404 问题  #Nginx常用配置
 http://know.shuerbuzuo.cn/Linux/Nginx%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE.html#_404-%E9%97%AE%E9%A2%98

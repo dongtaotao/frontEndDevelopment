@@ -214,4 +214,4 @@ window.addEventListener(‘unhandledrejection’)
 
 数据上报
 XMLHttpRequest 
-Image    
+Image     

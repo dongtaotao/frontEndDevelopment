@@ -1,4 +1,4 @@
-斐波那契数 
+斐波那契数  
 var fib = function(N) {
   if(N ===1 || N ===2) {
     return 1;
@@ -130,7 +130,6 @@ function numFormat(num){
     }
   }, '');
 }
-
 
 var a=1234567894532;
 var b=673439.4542;

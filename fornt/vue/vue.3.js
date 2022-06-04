@@ -110,5 +110,5 @@ https://fe.ecool.fun/topic/51699bda-02be-4433-b2bf-450c2655594f?orderBy=updateTi
 一、将方法挂载到 Vue.prototype 上面
 二、利用全局混入mixin
 三、使用Plugin方式
-四、任意 vue 文件中写全局函数
+四、任意 vue 文件中写全局函数 
 

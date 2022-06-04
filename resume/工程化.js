@@ -119,7 +119,7 @@ UI设计规范
 https://kaiwu.lagou.com/course/courseInfo.htm?courseId=638#/content?courseId=638&isShowSections=true 
 
 
-Verdaccio 搭建 npm 私有仓库
+Verdaccio 搭建 npm 私有仓库 
 https://juejin.cn/post/7060327687851606047
 
 前端工程化：保姆级教学 Jenkins 部署前端项目

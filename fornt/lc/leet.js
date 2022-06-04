@@ -726,7 +726,6 @@ var rob = function(nums) {
   return dp[dp.length - 1]
 };
 
-
 220. 存在重复元素 III
 给你一个整数数组 nums 和两个整数 k 和 t 。请你判断是否存在 两个不同下标 i 和 j，使得 abs(nums[i] - nums[j]) <= t ，同时又满足 abs(i - j) <= k 。
 如果存在则返回 true，不存在返回 false。
@@ -868,7 +867,6 @@ var removeDuplicates = function (nums) {
   });
   return ans;
 };
-
 
 1431. 拥有最多糖果的孩子
 给你一个数组 candies 和一个整数 extraCandies ，其中 candies[i] 代表第 i 个孩子拥有的糖果数目。

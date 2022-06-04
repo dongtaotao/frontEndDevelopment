@@ -1,4 +1,4 @@
-跳槽面试技巧记录 很好的文章 https://juejin.cn/post/7090733245590929421 🔥🔥🔥🔥 
+跳槽面试技巧记录 很好的文章 https://juejin.cn/post/7090733245590929421 🔥🔥🔥🔥  
 
 【🐯初/中级前端面经】中小型公司面试时都会问些什么? 🔥🔥
 https://juejin.cn/post/7064740689178787871#heading-5
@@ -293,7 +293,6 @@ preconnet:DNS 的预连接;
 {/* <link rel="dns-prefetch" href="https://www.baidu.com">
 <link ref="preconnet" href="https://www.baidu.com" corssorigin> */}
 
-
 短链接你真的了解吗？ https://juejin.cn/post/7056635909986320397 🔥🔥🔥
 发送短信的时候里面有个链接看到没？这就是短链接，然后我们把短链接复制到浏览器打开，发现跳转之后立马就换了个地址，而且链接还很长很长。先暂停一下，思考背后的原理是什么？
 // 原地址
@@ -474,7 +473,6 @@ function lazyload() {
 // 可以使用节流优化一下
 window.addEventListener('scroll', lazyload);
 
-
 🔥🔥🔥前端常见问题以及解决方案（ https://juejin.cn/post/7090926280127807501#heading-9
 一、跨域
 二、轮播图实现
@@ -574,7 +572,6 @@ promise构造函数是同步执行的，then方法是异步执行的
 短链系统 短链顾名思义是一种很短的地址，应用广泛  短链接 长链接
 https://juejin.cn/post/7090735092011794446
 
-
 从零开始搞监控系统（1）——SDK https://juejin.cn/post/7090741336294293540  🔥🔥🔥
 从零开始搞监控系统（2）——存储和分析 https://juejin.cn/post/7090742978045542436
 
@@ -600,7 +597,6 @@ https://cloud.tencent.com/developer/article/1784501
 
 react的usememo原理 https://www.1024sou.com/article/645783.html
 
-
 前端图片canvas，file，blob，DataURL等格式转换
 https://juejin.cn/post/6844903645687857166
 
@@ -617,7 +613,7 @@ react fiber这种数据结构使得节点可以回溯到其父节点，只要保
 跨域chrome 插件 Allow CORS: Access-Control-Allow-Origin
 https://mybrowseraddon.com/access-control-allow-origin.html?v=0.1.7&type=install
 
-浅说虚拟列表的实现原理
+浅说虚拟列表的实现原理 
 https://github.com/dwqs/blog/issues/70
 
 「前端进阶」高性能渲染十万条数据(虚拟列表)

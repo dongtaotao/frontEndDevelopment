@@ -23,7 +23,6 @@ https://www.jianshu.com/p/a47477e8126a
 【完整版】前端签名加密算法
 https://www.cnblogs.com/ivan5277/p/12003796.html
 
-
 // js 在 map 里面怎么写异步操作 百度
 js的.map() 里使用异步方法 https://www.dandelioncloud.cn/article/details/1507215218789928962
 .map()里的处理方法是同步的，若想做异步操作，可以这样写。
@@ -106,11 +105,10 @@ function debounce(fn, delay) {
   return function (...args) {
       clearTimeout(timer)
       timer = setTimeout(() => {
-          fn.apply(this, args)
+        fn.apply(this, args)
       }, delay)
   }
 }
-
 class LRU {
   constructor(max) {
       this.max = max
@@ -238,7 +236,6 @@ https://juejin.cn/post/6844904034411741191
 
 首先写一个函数把对象中的key排序，然后再转成字符串
 遍历数组利用Set将转为字符串后的对象去重
-
 
 flex属性详解0，1，auto  flex: 0 1 auto 的含义
 https://www.bilibili.com/video/BV1n54y1n7mC?spm_id_from=333.337.search-card.all.click

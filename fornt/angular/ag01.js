@@ -5,7 +5,7 @@ RxJS 是使用 Observables 的响应式编程的库，它使编写异步或基�
 ReactiveX 是一个通过使用可观察序列来合成异步和基于事件的程序的库。
 RxJS 是专门处理异步逻辑的 
 
-rx.js 响应式异步编程库，在vue中需引入vue-rx    
+rx.js 响应式异步编程库，在vue中需引入vue-rx     
 
 组件中内置指令
     NgClass
@@ -108,7 +108,6 @@ HttpClient
 7、服务 (Services)
 8、依赖注入 (Dependency Injection)
 9 .管道
-
 
 Angular非父子组件之间通过服务通讯
 https://juejin.cn/post/7029501425721802760

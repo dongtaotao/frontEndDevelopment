@@ -370,7 +370,6 @@ it.next()
 it.next() 
 // { value: undefined, done: true }
 
-
 10. async/await对比Promise的优势
 代码读起来更加同步，Promise虽然摆脱了回调地狱，但是then的链式调⽤也会带来额外的阅读负担
 Promise传递中间值⾮常麻烦，⽽async/await⼏乎是同步的写法，⾮常优雅
@@ -381,7 +380,7 @@ Promise传递中间值⾮常麻烦，⽽async/await⼏乎是同步的写法，�
 11. async/await 如何捕获异常
 async function fn(){
   try{
-      let a = await Promise.reject('error')
+    let a = await Promise.reject('error')
   }catch(error){
     console.log(error)
   }

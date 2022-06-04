@@ -615,7 +615,7 @@ React 只会匹配相同 class 的 component（这里面的class指的是组件�
 React 检查所有标记 dirty的 component重新绘制.
 选择性子树渲染。开发人员可以重写shouldComponentUpdate提高diff的性能
 
-//================================================================
+//=================================================================
 let createStore = (reducer) => {
     let state;
     //获取状态对象
@@ -876,4 +876,4 @@ const createStore = (reducer) => {
 };
 
 Vuex、Flux、Redux、Redux-saga、Dva、MobX
-https://zhuanlan.zhihu.com/p/53599723   
+https://zhuanlan.zhihu.com/p/53599723    

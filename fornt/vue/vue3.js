@@ -24,6 +24,25 @@ VUE进阶-从0到1搭建UI组件库  模仿element-ui封装vue组件库  https:/
 Vue封装组件并发布到npm仓库  https://juejin.cn/post/7054752084079411236
 小猪课堂  https://space.bilibili.com/493520625/video
 
+前端项目/前端面试/前端面试项目/vue项目实战/vue+element-ui/vue经典案例分享/紧贴实战的vue经典案例
+https://www.bilibili.com/video/BV1QU4y1E7qo?p=48&spm_id_from=pageDriver
+
+Vue3.2后台管理系统  好文章🔥
+https://www.bilibili.com/video/BV1pq4y1c7oy?p=5&spm_id_from=pageDriver
+3.代码格式化
+4.commit规范
+5.强制commit
+6.强制代码规范
+7.按需导入elementplus
+
+vue基础  https://www.yuque.com/yierya-hkfyu/sqyu4s
+
+Vue3  小满zs Vue3 （Vscode插件）
+https://blog.csdn.net/qq1195566313/category_11618172.html?spm=1001.2014.3001.5482
+
+小满Router（第十二章-动态路由）
+https://blog.csdn.net/qq1195566313/article/details/123783173
+
 Composition API 是什么
 setup 函数是一个新的Vue组件， 是Composition API 入口
 ref() 声明单一基础数据类型时使用
@@ -427,4 +446,4 @@ Vue会根据将模板编译成render函数，调用render函数生成虚拟dom�
 模板编译有三个步骤：
 1. 将模板解析为AST。（Abstract Syntax Tree，抽象语法树）。
 2. 遍历AST标记静态节点。
-3. 使用AST生成渲染函数。
+3. 使用AST生成渲染函数。 

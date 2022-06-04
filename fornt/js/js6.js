@@ -3,7 +3,6 @@ const Single = function (name, password) {
     this.name = name;
     this.password = password;
 };
-
 Single.prototype.login = (name, password) => {
     if (!this.only) {
         this.only = new Single(name, password);
@@ -34,7 +33,6 @@ class SingletonLogin {
 
 let obj1 = SingletonLogin.getInstance('jsliang', '123456')
 let obj2 = SingletonLogin.getInstance('zhazhaliang', '654321')
-
 console.log(obj1 === obj2)    // true
 console.log(obj1)           // SingletonLogin { name: 'jsliang', password: '123456' }
 console.log(obj2)           // SingletonLogin { name: 'jsliang', password: '123456' }
@@ -63,7 +61,7 @@ http://interview.poetries.top/docs/simply.html#_2-%E5%8F%91%E5%B8%83%E8%AE%A2%E9
 我们假定，存在一个"信号中心"，某个任务执行完成，就向信号中心"发布"(publish)一个信 号，其他任务可以向信号中心"订阅"(subscribe)这个信号，
 从而知道什么时候自己可以开始执 行。这就叫做"发布/订阅模式"(publish-subscribe pattern)
 
-. 观察者模式
+观察者模式
 观察者(订阅者) -- Watcher
 update():当事件发生时，具体要做的事情
 目标(发布者) -- Dep
@@ -71,7 +69,6 @@ subs 数组:存储所有的观察者
 addSub():添加观察者
 notify():当事件发生，调用所有观察者的 update() 方法
 没有事件中心
-
 // 目标(发布者) 
 // Dependency
 class Dep {
@@ -249,7 +246,6 @@ setTimeout(() => {
 取两个数字的最大长度
 用0去补齐长度
 使用 for 循环，如果有余数，则记录下来
-
 function add(a, b) {
   let maxLength = Math.max(a.length, b.length);
   a = a.padStart(maxLength, 0);

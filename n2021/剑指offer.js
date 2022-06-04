@@ -477,7 +477,7 @@ function PrintFromTopToBottom(root){
           queue.push(temp.left);
       }
       if (temp.right) {
-          queue.push(temp.right);
+          queue.push(temp.right); 
       }
   }
   return result;

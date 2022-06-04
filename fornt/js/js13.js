@@ -217,7 +217,7 @@ https://juejin.cn/post/7100759219397197831
 https://zhuanlan.zhihu.com/p/120834588
 
 面试官：面向对象和函数式编程你有了解吗？
-https://juejin.cn/post/70767195356041052
+https://juejin.cn/post/70767195356041052 
 2、 函数式编程的特点
 函数是一等公民
 声明式编程
@@ -254,7 +254,8 @@ https://juejin.cn/post/7056974964401897480
 https://juejin.cn/post/7069280579245572104
 
 图片加载会阻塞dom渲染吗？⭐⭐⭐⭐⭐ https://blog.csdn.net/qq_33277654/article/details/122924692
-图片不会阻塞dom解析和渲染，但是如果网页中有很多图片的话，会消耗大量的资源（引擎吞吐量、请求数等等），并发请求数量是有限的，如果多个图片同时请求可能会造成请求拥堵，导致其他资源无法被及时请求到，所以图片最好做成懒加载。
+图片不会阻塞dom解析和渲染，但是如果网页中有很多图片的话，会消耗大量的资源（引擎吞吐量、请求数等等），并发请求数量是有限的，
+如果多个图片同时请求可能会造成请求拥堵，导致其他资源无法被及时请求到，所以图片最好做成懒加载。
 
 
 react跨域 https://www.bilibili.com/video/BV1h3411y7dy?p=2&spm_id_from=pageDriver
@@ -337,3 +338,23 @@ https://juejin.cn/post/7103188024887869476
 
 大文件分段上传断点存续
 https://juejin.cn/post/7103799605623521294
+
+【VUE】后台管理中使用富文本编辑器
+https://juejin.cn/post/7005107384611766285
+
+worker和sharedworker
+https://blog.csdn.net/sinat_17775997/article/details/123701969
+
+react-router是否有vue-router中addRoutes这样的api
+https://segmentfault.com/q/1010000020777339
+最新的React-router也是以组件的形式来写，所以可以根据权限信息来决定渲染哪些路由，例如下面的方式：
+
+   {isDisplay?<Route path="/hello" component={Hello} />:null}
+或者
+
+<Route path="/hello"  render={props => {
+    return isDisplay
+        ? <Hello {...props} />
+        : <Redirect to="/login" />
+}} />
+：高阶组件就行了

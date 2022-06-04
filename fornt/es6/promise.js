@@ -1,5 +1,5 @@
 由浅入深，从掌握Promise的基本使用到手写Promise
-https://juejin.cn/post/7082311040318488583 
+https://juejin.cn/post/7082311040318488583  
 class Promise {
   constructor(executor) {
     // 默认状态是等待态

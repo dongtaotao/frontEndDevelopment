@@ -1,4 +1,4 @@
-3. fiber核心(react 16) 
+3. fiber核心(react 16)  
 旧: 浏览器渲染引擎单线程, 计算DOM树时锁住整个线程, 所有行为同步发生,
 有效率问题, 期间react会一直占用浏览器主线程，如果组件层级比较深，相应的堆栈也会很深， 
 长时间占用浏览器主线程, 任何其他的操作（包括用户的点击，鼠标移动等操作）都无法执行
@@ -437,5 +437,5 @@ https://www.cnblogs.com/wuguanglin/p/code-interview.html  JS版剑指offer
 https://www.nowcoder.com/company/home/code/665?codeType=1 字节
 
 https://blog.csdn.net/weixin_42148873/category_10794148.html 
-牛客题 
+牛客题  
 

@@ -200,4 +200,4 @@ Provider 的作用就是通过 Context API 把 Store 对象注入到 React 组�
 
 React hook 底层是基于链表实现，调用的条件是每次组件被render的时候都会顺序执行所有的hooks。
 
-useImperativeHandle	可以让你在使用 ref 时自定义暴露给父组件的实例值。
+useImperativeHandle	可以让你在使用 ref 时自定义暴露给父组件的实例值。 

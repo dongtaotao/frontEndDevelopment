@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="btn" class="controls" tabindex="0">
+        <button onckick="aa()">按钮1</button>
+    </div>
+</body>
+<script>
+    document.getElementById('btn').onclick = function() {
+        alert(2)
+        aa()
+    }
+    function aa(){
+        alert(0)
+            var worker = new Worker('work.js', { name : 'myWorker' })
+            worker.postMessage({name:'12321'})
+            worker.addEventListener('message', function (event) {
+                console.log('----123456----',event.data);
+            });
+        }
+</script>
+</html>

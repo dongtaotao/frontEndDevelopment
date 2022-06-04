@@ -87,7 +87,6 @@ function newArr(arr) {
     while(arr.some(Array.isArray)) {
         arr = [].concat(...arr)
     }
-
     arr = [...new Set(arr)].sort((a, b) => {
         return a-b
     })
@@ -364,5 +363,5 @@ var twoSum = function(nums, target) {
         }
         map.set(nums[i], i); 
     }
-    return []   
+    return []    
 }

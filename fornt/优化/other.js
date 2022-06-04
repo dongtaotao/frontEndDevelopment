@@ -1,4 +1,4 @@
-如何实现扫码登录功能？   
+如何实现扫码登录功能？    
 https://juejin.cn/post/7021515145335554079  
 访问PC端二维码生成页面，PC端请求服务端获取二维码ID
 服务端生成相应的二维码ID，设置二维码的过期时间，状态等。 
@@ -494,5 +494,5 @@ function TreeDepth(pRoot){
     return Math.max(left, right);
 }
 ————————————————
-原文链接：https://blog.csdn.net/qq_29652349/article/details/77911078   
+原文链接：https://blog.csdn.net/qq_29652349/article/details/77911078    
 

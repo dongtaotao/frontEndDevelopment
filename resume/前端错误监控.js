@@ -200,7 +200,6 @@ new Image().src = 'http://localhost:7001/monitor/error'+ '?info=xxxxxx
 Ajax上报：
 实际上我们也可以用ajax的方式上报错误，这和我们在业务程序中并没有什么区别
 
-
 https://www.tuicool.com/articles/ZFvqUzJ
 前端监控
 前端监控通常包括 行为监控 (PV/UV,埋点接口统计)、 异常监控 、 性能监控 。
@@ -494,3 +493,6 @@ gif体积小
 
 谈谈前端异常捕获 
 https://www.cnblogs.com/chenwenhao/p/12184733.html#_label1_5
+
+使用vue+node搭建前端异常监控系统
+https://juejin.cn/post/6844904080628776967

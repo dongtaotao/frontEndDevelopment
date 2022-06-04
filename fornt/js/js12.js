@@ -1,5 +1,5 @@
 前端面试必会网络系列面试题汇总 🔥🔥🔥
-https://juejin.cn/post/7095945284504518663
+https://juejin.cn/post/7095945284504518663 
 
 万字前端效率大提速系列 🚀 ：十、前端错误监控、数据监控专题
 https://juejin.cn/post/7086378709560590343
@@ -268,7 +268,6 @@ class Foo {
   yy() {}
 }
 
-
 如何获取url参数
 //获取url参数有很多种
 1、'原生方法'
@@ -290,10 +289,10 @@ console.log(params.id) // 2
 
 //利用hooks传参 🔥
 import {  
-useHistory,//路由跳转
-useLocation,//路由路径各种参数
-useParams,//路由参数信息
-useRouterMatch
+    useHistory,//路由跳转
+    useLocation,//路由路径各种参数
+    useParams,//路由参数信息
+    useRouterMatch
 } from 'react-router-dom';
 
 {/* <Route path='/query' component={Query}/>

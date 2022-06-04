@@ -35,11 +35,8 @@ class Promise {
   }
   then(onFulfilled, onRejected) {
     onFulfilled = typeof onFulfilled === "function" ? onFulfilled : (v) => v;
-
     onRejected = typeof onRejected === "function" ? onRejected : (r) => r;
-
     const self = this;
-
     return new Promise((resolve, reject) => {
       if (self.status === PENDING) {
         self.onFullfilledCallbacks.push(() => {
@@ -133,7 +130,6 @@ class Promise {
 
       for (let i = 0; i < promises.length; i++) {
         const promise = Promise.resolve(promises[i]);
-
         promise
           .then((res) => {
             result[i] = res;
@@ -263,4 +259,4 @@ Promise.allSettled = function(promises) {
             })
         })
     })
-}
+} 
