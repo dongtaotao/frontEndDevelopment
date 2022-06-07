@@ -119,8 +119,39 @@ UI设计规范
 https://kaiwu.lagou.com/course/courseInfo.htm?courseId=638#/content?courseId=638&isShowSections=true 
 
 
-Verdaccio 搭建 npm 私有仓库 
+Verdaccio 搭建 npm 私有仓库 -----------------------------------
 https://juejin.cn/post/7060327687851606047
+
+作为前端，你还不会搭建npm私库吗？ https://www.bilibili.com/video/BV15g411M7oJ?spm_id_from=333.999.0.0
+
+基于 Docker + Verdaccio 搭建 Npm 私有库，实现在私有库上发布、下载npm包
+https://juejin.cn/post/7055478418204262436
+
+前端搭建自己的脚手架(cli)，实现公司内部前端工程化
+https://juejin.cn/post/6844904158701551630
+
+前端工程化之用commintlint + husky实现git提交规范化
+https://juejin.cn/post/6844904168004517901
+
+基于 Docker 安装 Nginx 搭建静态服务器，并配置 SSL 证书开启 HTTPS 访问
+https://juejin.cn/post/7057403454473371661
+基于Docker+Nginx+Jenkins的前端自动化部署实践
+https://juejin.cn/post/6995588010934796302#heading-0
+基于 Docker 安装 Jenkins，并配置使用 Jenkins 打包 Node 前后端服务部署到远程服务器
+https://juejin.cn/post/7067790095767568397
 
 前端工程化：保姆级教学 Jenkins 部署前端项目
 https://juejin.cn/post/7102360505313918983
+
+Eslint + Prettier + Husky + Commitlint+ Lint-staged 规范前端工程代码规范
+https://juejin.cn/post/7038143752036155428
+
+前端面试题精讲1-node.js及项目工程化
+https://www.bilibili.com/video/BV164411b7Mu?p=2
+
+【建议收藏】全网最全的讲清eslint和prettier的npm包和vscode插件的文章
+https://juejin.cn/post/6990929456382607374
+https://www.bilibili.com/video/BV183411r7YK
+
+if 我是前端Leader，谈谈前端框架体系建设
+https://juejin.cn/post/6844904016200073223

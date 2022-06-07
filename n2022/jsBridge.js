@@ -1,6 +1,6 @@
-Hybrid App从概念到实战
+Hybrid App从概念到实战 
 https://www.cnblogs.com/chenwenhao/p/11218525.html 
-
+ 、
 JSBridge实战
 https://juejin.cn/post/6844903702721986568
 
@@ -72,5 +72,3 @@ location.href
 安卓提供了shouldOverrideUrlLoading方法拦截
 UIWebView使用shouldStartLoadWithRequest, WKWebView则使用decidePolicyForNavigationAction
 这种方法从早期就存在了, 兼容性好. 缺点是基于URL, 长度受限, 并且不太直观.
-
-#
