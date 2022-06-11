@@ -2,6 +2,18 @@
 https://juejin.cn/post/6987267852575195143#heading-11
 全局守卫、路由守卫、组件守卫。
 
+vue组件的v-model https://blog.csdn.net/weixin_47450807/article/details/122859115
+Vue3设计理念、手写实现和源码剖析  https://www.bilibili.com/video/BV1tf4y1h76o?p=3&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+【前端开发】Vue『UI组件库』开发实践 https://space.bilibili.com/492976859/channel/collectiondetail?sid=151058
+认识 vue.config.js 中的 publicPath【Vue小知识】
+https://www.bilibili.com/video/BV193411b72w?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+认识Vue.use()和install方法【Vue小知识】
+https://www.bilibili.com/video/BV1FS4y1d7q9?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+认识环境变量【Vue小知识】https://www.bilibili.com/video/BV1Fh41147vW?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+Vue 小技巧 https://www.bilibili.com/video/BV1SA411G7o6?vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a  🔥🔥  s
+🔥Vue中使用JSX语法【Vue小知识】 https://www.bilibili.com/video/BV1hM4y1F7SU?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+
 15 说一说keep-alive实现原理
 http://interview.poetries.top/docs/simply.html#_14-vue-%E6%B8%B2%E6%9F%93%E8%BF%87%E7%A8%8B
 keep-alive组件接受三个属性参数：include、exclude、max
@@ -36,8 +48,8 @@ LRU（Least recently used） 算法根据数据的历史访问记录来进行淘
 (墨菲定律：越担心的事情越会发生)
 https://leetcode-cn.com/problems/lru-cache/%EF%BC%8C%E8%80%83keep-alive%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%B6%E5%80%99%E5%96%9C%E6%AC%A2%E9%97%AE/
 实现 LRUCache 类：
- get(int key) 如果关键字 key 存在于缓存中，则返回关键字的值，否则返回 -1 。
-v put(int key, int value) 如果关键字 key 已经存在，则变更其数据值 value ；
+get(int key) 如果关键字 key 存在于缓存中，则返回关键字的值，否则返回 -1 。
+put(int key, int value) 如果关键字 key 已经存在，则变更其数据值 value ；
 如果不存在，则向缓存中插入该组 key-value 。如果插入操作导致关键字数量超过 capacity ，则应该 逐出 最久未使用的关键字。
 class LRU {
     constructor(max) {

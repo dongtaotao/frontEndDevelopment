@@ -10,6 +10,9 @@ https://www.bilibili.com/video/BV1v5411T7Ez
 NodeJS+Express+MongoDB实战项目，
 https://www.bilibili.com/video/BV1x7411v7s9?p=3&spm_id_from=pageDriver
 
+项目实战-Node+Koa2从零搭建通用API服务
+https://www.bilibili.com/video/BV13A411w79h?p=13&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
 const Koa = require('koa');
 const app = new Koa();
 

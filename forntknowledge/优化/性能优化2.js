@@ -9,8 +9,7 @@ react=====
 
 1.路由懒加载  react-loadable https://blog.csdn.net/homexs/article/details/115033308
 2.组件异步加载 延迟加载不是立即需要的组件 React.Lazy和React.Suspense
-3.使用shouldComponentUpdate ,PureComponent 和 React.memo , React.useMemo,  React.useCallback， immetable.js 助力性能调优
-  以避免不必要的render 调用
+3.使用shouldComponentUpdate ,PureComponent 和 React.memo , React.useMemo,  React.useCallback， immetable.js以避免不必要的render
 4.避免频繁地去setState，多个setState合并成一个 合并状态更新 避免重复渲染 
 5.虚拟列表 长列表优化  虚拟化长列表：只加载可视范围内的数据   react-virtualized  react-window
 6.如果页面图片比较多，使用react-lazyload插件 图片懒加载, 图片上云 cdn
@@ -84,7 +83,7 @@ Webpack 打包的结果体积太大  优化产出代码—产品性能
     Scope Hoisting 即作用域提升，原理是将多个模块放在同一个作用域下，并重命名防止命名冲突，通过这种方式可以减少函数声明和内存开销。
     webpack 默认支持，在生产环境下默认开启
     只支持 es6 代码
-2.7 抽离css文件 ExtractTextPlugin 将 CSS 分离成单独的文件
+2.7抽离css文件 ExtractTextPlugin 将 CSS 分离成单独的文件
 2.8在配置文件中区分 mode 配置开发环境与生产环境 （拆分配置和merge）   区分环境--减小生产环境代码体积
 2.9sourceMap提高调试体验 提供一种到构建后代码映射技术，如果构建后代码报错，可以通过映射追踪到源代码。
 
@@ -121,7 +120,6 @@ Nginx开启Gzip，进一步压缩资源（减小资源大小）
 合理设置：浏览器缓存 强缓存，协商缓存
 
 Web Worker
-
 
 聊一聊前端性能优化
 https://juejin.cn/post/6911472693405548557

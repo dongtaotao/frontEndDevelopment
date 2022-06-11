@@ -38,3 +38,10 @@ createStore(reducer, applyMiddleware(
 
 30张图全面剖析React Hooks
 https://juejin.cn/post/7064097257821306916   
+
+剖析react-redux原理以及手写实现
+https://juejin.cn/post/7010687960731353095
+
+
+Redux持久化插件-解决刷新页面数据丢失问题
+https://juejin.cn/post/6885907913265971208

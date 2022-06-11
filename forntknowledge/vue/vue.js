@@ -59,7 +59,7 @@ sourceMap优化
 PWA
 还可以使用缓存(客户端缓存、服务端缓存)优化、服务端开启gzip压缩等。
 
-vue3：改用 proxy ，可直接监听对象数组的变化
+vue3：改用 proxy，可直接监听对象数组的变化
 mapState, mapGetters, mapActions, mapMutations
 
 既然 Vue 通过数据劫持可以精准探测数据变化,为什么还需要虚拟 DOM 进行 diff 检测差异? 

@@ -155,3 +155,23 @@ https://www.bilibili.com/video/BV183411r7YK
 
 if 我是前端Leader，谈谈前端框架体系建设
 https://juejin.cn/post/6844904016200073223
+
+从 0 开始手把手带你搭建一套规范的 Vue3.x 项目工程环境
+https://juejin.cn/post/6951649464637636622
+架构搭建
+代码规范
+提交规范
+单元测试
+自动部署
+
+基于Vue的前端架构，我做了这15点
+https://juejin.cn/post/6901466994478940168
+
+如何从0开始搭建1个前端项目？（超详细！持续更新中...）
+https://juejin.cn/post/7101657948744581151
+
+前端工程化 - 开发规范 editorConfig+eslint+husky+lint-staged+jest
+https://juejin.cn/post/7107222018860744735
+
+如何从0开始搭建1个前端项目？第二章（超详细！持续更新中...）
+https://juejin.cn/post/7107072525661634597

@@ -59,7 +59,7 @@ react性能优化思路
 20.组件封装具有可复用性
 21.在合适的时机使用防抖节流debounce、throttle 优化频繁触发的回调
 22.在 Web 服务器上启用 gzip 压缩
-22. 使用 Web Workers 处理 CPU 密集任务 https://www.infoq.cn/article/kve8xtrs-upphptq5luz
+22.使用 Web Workers 处理 CPU 密集任务 https://www.infoq.cn/article/kve8xtrs-upphptq5luz
 
 // 1.避免频繁地去setState，多个setState合并成一个
 // 2.避免单次setState传递大量的数据
@@ -68,9 +68,9 @@ react性能优化思路
 webpack----------------------------------------
 ① include 或 exclude 限制 loader 范围。
 ② happypack多线程编译
-③缓存babel编译过的文件 babel-loader
-④tree Shaking 删除冗余代码
-⑤按需加载，按需引入。 
+③ 缓存babel编译过的文件 babel-loader
+④ tree Shaking 删除冗余代码
+⑤ 按需加载，按需引入。 
 
 Webpack 的优化瓶颈，主要是 2 个方面：
 https://juejin.cn/post/6903295387302526990
@@ -195,10 +195,10 @@ scope hoisting: 作用域提升，将分散的模块划分到同一个作用域�
     8.使用Scope Hosting
     9.sourceMap提高调试体验 提供一种到构建后代码映射技术，如果构建后代码报错，可以通过映射追踪到源代码。
     10.使用webpack-dev-server  修改代码自动刷新页面
-    11. 开启模块热替换HMR  模块热替换不刷新整个网页而只重新编译发生变化的模块，并用新模块替换老模块，所以预览反应更快，等待时间更少，
+    11.开启模块热替换HMR  模块热替换不刷新整个网页而只重新编译发生变化的模块，并用新模块替换老模块，所以预览反应更快，等待时间更少，
         同时不刷新页面能保留当前网页的运行状态
-    12. 区分环境--减小生产环境代码体积
-    13. 静态资源分离 通过 DllPlugin 或者 Externals 进行静态依赖包的分离。
+    12.区分环境--减小生产环境代码体积
+    13.静态资源分离 通过 DllPlugin 或者 Externals 进行静态依赖包的分离。
 //========
 
 

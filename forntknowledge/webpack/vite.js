@@ -1,6 +1,9 @@
 vite 学习笔记
 https://juejin.cn/post/6942018783007473695 
 
+Vite工作原理和手写实现「基本完结」
+https://www.bilibili.com/video/BV1dh411S7Vz?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
 Vite零基础快速入门 https://www.imooc.com/learn/1315 **************************************************
 
 vite简介、原理及简单实现 https://blog.csdn.net/qq_34425377/article/details/120906771 介绍一下 vite
@@ -72,3 +75,7 @@ https://kaiwu.lagou.com/course/courseInfo.htm?courseId=416#/detail/pc?id=4430
 无包构建的缺点
 浏览器网络请求数量剧增：
 浏览器的兼容性：
+
+
+vite工程创建和工程原理解析
+https://www.bilibili.com/video/BV1Wh411X7Xp?p=25&spm_id_from=pageDriver&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a

@@ -5,8 +5,30 @@ https://juejin.cn/post/7064368176846340132
 历时一个月，2.6W字！50+Vue经典面试题源码级详解，你值得收藏！
 https://juejin.cn/post/7097067108663558151
 
+从 0 开始手把手带你搭建一套规范的 Vue3.x 项目工程环境
+https://juejin.cn/post/6951649464637636622
+架构搭建
+代码规范
+提交规范
+单元测试
+自动部署
+
+杨村长
+推荐 7 个 Vue2、Vue3 源码解密分析的重磅开源项目 👍 https://juejin.cn/post/6942492146725290020
+Vue3+Typescript从整合到项目实战  https://www.bilibili.com/video/BV1no4y1k7kJ?vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+拿下vue3你要做好这些准备 https://juejin.cn/post/6866373381424414734#heading-13
+基于Vue的前端架构，我做了这15点
+https://juejin.cn/post/6901466994478940168
+备战2021：Vite2项目最佳实践
+https://juejin.cn/post/6924912613750996999
+
 Vue项目性能优化实操,从50分到80分
 https://juejin.cn/post/7101560677688410125
+
+Vue3教程：开发一个 Vue 3 + element-plus 的后台管理系统
+https://juejin.cn/post/6942251234191654949
+🎉🎉Vue 3 + Element Plus + Vite 2 的后台管理系统开源啦🎉🎉
+https://juejin.cn/post/6945072070132760590
 
 超全面总结Vue面试知识点，助力金三银四
 https://juejin.cn/post/7075130658820980772
@@ -27,6 +49,13 @@ Vue封装组件并发布到npm仓库  https://juejin.cn/post/7054752084079411236
 前端项目/前端面试/前端面试项目/vue项目实战/vue+element-ui/vue经典案例分享/紧贴实战的vue经典案例
 https://www.bilibili.com/video/BV1QU4y1E7qo?p=48&spm_id_from=pageDriver
 
+在vue中使用jsmind组织架构或思维导图
+https://blog.csdn.net/qq_38157825/article/details/117963824
+vue实现思维导图
+https://juejin.cn/post/7055194664214724615
+vue添加水印踩坑
+https://juejin.cn/post/7103835898345127943
+
 Vue3.2后台管理系统  好文章🔥
 https://www.bilibili.com/video/BV1pq4y1c7oy?p=5&spm_id_from=pageDriver
 3.代码格式化
@@ -36,12 +65,26 @@ https://www.bilibili.com/video/BV1pq4y1c7oy?p=5&spm_id_from=pageDriver
 7.按需导入elementplus
 
 vue基础  https://www.yuque.com/yierya-hkfyu/sqyu4s
+Vue前端开发规范 https://juejin.cn/post/6977004323742220319#heading-9
+
+axios封装 https://juejin.cn/post/6844903492948082702
 
 Vue3  小满zs Vue3 （Vscode插件）
 https://blog.csdn.net/qq1195566313/category_11618172.html?spm=1001.2014.3001.5482
 
 小满Router（第十二章-动态路由）
 https://blog.csdn.net/qq1195566313/article/details/123783173
+
+「自我检验」熬夜总结50个Vue知识点，全都会你就是神！！！
+https://juejin.cn/post/6984210440276410399
+
+做了一夜动画，就为让大家更好的理解Vue3的Composition Api
+https://juejin.cn/post/6890545920883032071
+
+【初学者笔记】整理的一些Vue3知识点  https://juejin.cn/post/6977004323742220319#heading-9
+
+又是一夜，这篇Composition-API实操还觉得短吗
+https://juejin.cn/post/6892017198450081800
 
 Composition API 是什么
 setup 函数是一个新的Vue组件， 是Composition API 入口
@@ -169,7 +212,7 @@ vue2.x中如何监测数组变化？
 使用了函数劫持的方式，重写了数组的方法，Vue将data中的数组进行了原型链重写，指向了自己定义的数组原型方法，当调用数组api时，可以通知依赖更新。
 如果数组中包含着引用类型，会对数组中的引用类型再次递归遍历进行监控。这样就实现了监测数组变化。
 
-监听器 Observer 、订阅器 Dep 、订阅者 Watcher 和解析器 ·的实现，模拟初始化一个 Vue 实例
+监听器 Observer 、订阅器 Dep 、订阅者 Watcher 和解析器的实现，模拟初始化一个 Vue 实例
 
 Vue的路由模式,实现方式？
 hash模式 和 history模式
@@ -447,3 +490,37 @@ Vue会根据将模板编译成render函数，调用render函数生成虚拟dom�
 1. 将模板解析为AST。（Abstract Syntax Tree，抽象语法树）。
 2. 遍历AST标记静态节点。
 3. 使用AST生成渲染函数。  
+
+
+
+我要怎么获取组件实例？ https://juejin.cn/post/6892017198450081800
+const { createApp } = Vue
+createApp({
+  data() {
+    return {
+      foo: 'foo'
+    }
+  },
+  setup() {
+    // 没有this，我该如何获取data中的foo和methods中的bar哪？
+    return { }
+  },
+  methods: {
+    bar() {
+      console.log('我是bar方法');
+    }
+  },
+}).mount('#app')
+但是setup里面this指向window，composition的文档中也没有提到怎么获取组件实例呀，这着实难住了不少小伙伴，
+方法自然是有的：咱们可以通过getCurrentInstance()这个接口获取组件实例：
+setup() {
+  // getCurrentInstance()可以获取组件实例
+  const instance = getCurrentInstance()
+  console.log(instance);
+  onMounted(()=>{
+    // 组件实例的上下文才是我们熟悉的this
+    console.log(instance.ctx.foo); // 'foo'
+    console.log(instance.ctx.bar()); // '我是bar方法'
+  })
+  return {}
+},
