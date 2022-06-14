@@ -187,3 +187,11 @@ https://juejin.cn/column/7052907027638517773
 
 利用Jenkins + nginx 实现前端项目自动构建与持续集成
 https://segmentfault.com/a/1190000019212628
+
+【Jenkins篇】向GitHub提交代码时触发Jenkins自动构建
+https://blog.csdn.net/Number_oneEngineer/article/details/123919515
+
+Jenkins自动化部署前端Vue项目
+https://juejin.cn/post/7106121588499546148
+Vue多项目部署如何实现？
+https://juejin.cn/post/7105421780914798599

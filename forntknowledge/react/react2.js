@@ -12,6 +12,13 @@ JSX是语法糖，通过babel转成React.createElement函数，在babel官网上
 
 链接：https://juejin.cn/post/6917451880901640200
 
+代码分割的原理
+分片打包的原理
+import动态加载的功能是webpack实现的，通过一些插件，在编译时候把动态import的模块单独打包，再在webpack运行时代码中将之拉取并执行。
+动态import实际是返回一个Promise，该Promise成功时候会resolve该模块。因此使用异步加载的模块都需要在.then方法中获取该模块后再使用。
+React.lazy是接受一个function，然后调用该function返回的一个Promise，在Promise的resolve中取到该组件进行渲染。
+React.Suspense应该是监测子组件树中通过React.lazy加载的异步组件，以决定渲染fallbak时机。 
+
 react-redux原理
 通过context，让每个子组件可以获取store，然后通过connect函数，将子组件外包一层组件，
 在这层组件中进行state的数据处理，在通过props的方式传递给子组件

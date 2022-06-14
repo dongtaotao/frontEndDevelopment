@@ -2,6 +2,12 @@
 https://juejin.cn/post/6987267852575195143#heading-11
 全局守卫、路由守卫、组件守卫。
 
+vue技术栈原理
+https://www.bilibili.com/video/BV1dP4y1j7sH?p=21&spm_id_from=pageDriver&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a秋
+
+Vue 插槽的使用
+https://juejin.cn/post/7104442927580971015
+
 vue组件的v-model https://blog.csdn.net/weixin_47450807/article/details/122859115
 Vue3设计理念、手写实现和源码剖析  https://www.bilibili.com/video/BV1tf4y1h76o?p=3&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 【前端开发】Vue『UI组件库』开发实践 https://space.bilibili.com/492976859/channel/collectiondetail?sid=151058
