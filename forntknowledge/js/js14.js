@@ -34,3 +34,22 @@ vue2 与 vue3 虚拟列表实现 https://juejin.cn/post/7081790864573333512
 
 前端取消请求与取消重复请求
 https://juejin.cn/post/7108359238598000671
+还不知道npm私服？一篇教会你搭建私服并发布vue3组件库到nexus
+https://juejin.cn/post/7109026865259479076 
+
+封装一个图片压缩方法
+https://juejin.cn/post/7109389978982940709
+
+自己实现一个大文件切片上传+断点续传
+https://juejin.cn/post/7110121072032219166
+基于原生js和node实现文件上传和大文件切片上传
+https://www.bilibili.com/video/BV1zS4y1B7Eg?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+渲染十万条数据就把你卡住了？不存在的
+https://juejin.cn/post/7110588879060598820
+
+你知道的提高前端安全的手段有哪些
+https://juejin.cn/post/7110607638806659102
+
+React 如何处理异常
+https://juejin.cn/post/7106811792290447396

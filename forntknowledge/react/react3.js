@@ -1,5 +1,9 @@
 「react进阶」年终送给react开发者的八条优化建议(篇幅较长，占用20-30分钟) https://juejin.cn/post/6908895801116721160
 
+React源码解析
+https://www.bilibili.com/video/BV1cE411B7by?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+https://github.com/mypanda/React-Source-Code/blob/main/01-createElement.html
+
 都 2022 年了，手动搭建 React 开发环境很难吗？ 🔥🔥=====================
 https://juejin.cn/post/7087811040591675428
 

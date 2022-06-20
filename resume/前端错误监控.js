@@ -496,3 +496,6 @@ https://www.cnblogs.com/chenwenhao/p/12184733.html#_label1_5
 
 使用vue+node搭建前端异常监控系统
 https://juejin.cn/post/6844904080628776967
+
+搭建前端监控，如何采集异常数据？
+https://mp.weixin.qq.com/s/-qA-1Yw4o3SEC2me69YO-Q

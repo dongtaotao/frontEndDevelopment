@@ -195,3 +195,8 @@ Jenkins自动化部署前端Vue项目
 https://juejin.cn/post/7106121588499546148
 Vue多项目部署如何实现？
 https://juejin.cn/post/7105421780914798599
+
+Jenkins + Github + Nginx 实现前端自动化
+https://juejin.cn/post/7110208075214094350
+使用 GitHub Actions 实现自动化部署
+https://juejin.cn/post/7110472489007841311

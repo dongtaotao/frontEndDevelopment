@@ -1,3 +1,6 @@
+尚硅谷2022版Webpack5入门到原理（面试开发一条龙）🔥
+https://www.bilibili.com/video/BV14T4y1z7sw?p=2&spm_id_from=pageDriver&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
 每个前端都必须要学会的Webpack优化手段
 https://juejin.cn/post/7083519723484708878
 

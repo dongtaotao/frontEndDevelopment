@@ -19,6 +19,25 @@ https://www.bilibili.com/video/BV1FS4y1d7q9?spm_id_from=333.999.0.0&vd_source=0c
 Vue 小技巧 https://www.bilibili.com/video/BV1SA411G7o6?vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a  🔥🔥  s
 🔥Vue中使用JSX语法【Vue小知识】 https://www.bilibili.com/video/BV1hM4y1F7SU?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 
+尚硅谷VUE项目实战，前端项目-尚品汇
+https://www.bilibili.com/video/BV1Vf4y1T7bw?p=5&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+Vue项目打包优化实践
+https://juejin.cn/post/7109762338953265160
+https://gitee.com/jch1011/shangpinhui_0415
+
+
+vue3.0从零实现知乎日报  H5
+https://www.bilibili.com/video/BV1a341137Ex?p=6&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+Vue2源码手写+小项目
+https://www.bilibili.com/video/BV1mR4y1w7cU?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+22年最强手写Vue3源码【从零实现】
+https://www.bilibili.com/video/BV1rZ4y1h7xZ?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+Vue3最新实战从零实现可视化搭建【手把手教学】  低代码
+https://www.bilibili.com/video/BV1wa411Y78R?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+22年4月最新vue手写vue源码【面试必备】
+https://www.bilibili.com/video/BV1o44y1G7bK?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 
 15 说一说keep-alive实现原理
 http://interview.poetries.top/docs/simply.html#_14-vue-%E6%B8%B2%E6%9F%93%E8%BF%87%E7%A8%8B
