@@ -63,6 +63,7 @@ https://www.bilibili.com/video/BV1pq4y1c7oy?p=5&spm_id_from=pageDriver
 5.强制commit
 6.强制代码规范
 7.按需导入elementplus
+国际化
 
 vue基础  https://www.yuque.com/yierya-hkfyu/sqyu4s
 Vue前端开发规范 https://juejin.cn/post/6977004323742220319#heading-9
@@ -490,7 +491,6 @@ Vue会根据将模板编译成render函数，调用render函数生成虚拟dom�
 1. 将模板解析为AST。（Abstract Syntax Tree，抽象语法树）。
 2. 遍历AST标记静态节点。
 3. 使用AST生成渲染函数。  
-
 
 
 我要怎么获取组件实例？ https://juejin.cn/post/6892017198450081800

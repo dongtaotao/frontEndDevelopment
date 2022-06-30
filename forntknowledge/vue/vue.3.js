@@ -47,6 +47,9 @@ https://juejin.cn/post/7102793656616091661
 
 https://v3.cn.vuejs.org/guide/introduction.html vue文档
 
+Vue封装组件并发布到npm仓库（保姆级教程）
+https://www.bilibili.com/video/BV1MS4y1L7QW?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
 
 vue3之setup函数与响应式API https://juejin.cn/post/7102808630860185630
 
@@ -105,7 +108,7 @@ Vue.use方法的使用 https://www.lingtiku.com/quiz/detail/5
 Vue中组件和插件有什么区别？
 https://fe.ecool.fun/topic/51699bda-02be-4433-b2bf-450c2655594f?orderBy=updateTime&order=desc&tagId=14
 
-怎么给 Vue 定义全局方法 https://juejin.cn/post/6899291168891207688
+怎么给 Vue 定义全局方法 https://juejin.cn/post/6899291168891207688 
 一、将方法挂载到 Vue.prototype 上面
 二、利用全局混入mixin
 三、使用Plugin方式

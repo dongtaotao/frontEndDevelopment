@@ -65,6 +65,9 @@ https://www.bilibili.com/video/BV14u411D7qK?p=69
 记一次vue3.0技术分享会
 https://segmentfault.com/a/1190000022719461
 
+十分钟学会快速搭建个人网站和技术博客  vitepress 部署
+https://www.bilibili.com/video/BV13g411P7WG/?spm_id_from=333.788&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
 vue3新特性 https://juejin.cn/post/6940454764421316644
 Composition Api 
 自定义hooks
@@ -73,6 +76,7 @@ Teleport
 suspence
 Fragment
 tree-Shaking
+
 
 五、Vue做权限管理
 接口权限：使用jwt，登录完拿到token，将token存起来，通过axios请求拦截器进行拦截，每次请求的时候头部携带token
@@ -413,7 +417,6 @@ const dep = new Dep();
 dep.addSub(w1);
 dep.addSub(w2);
 dep.notify() 
-
 
 学习Vue3 第三十章（编写Vue3插件）
 https://blog.csdn.net/qq1195566313/article/details/123300264

@@ -1,3 +1,5 @@
+VUE+Elementui+ECharts【vue项目实战】
+https://www.bilibili.com/video/BV1Eg41197sN?p=47&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 
 vuex
 Vuex 集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以可预测的方式发生变化 
@@ -212,3 +214,26 @@ Vue3 Diff —— 最长递增子序列
 
 Vue.use是干什么的？
 Vue.use是用来使用插件的。我们可以在插件中扩展全局组件、指令、原型方法等。 会调用install方法将Vue的构建函数默认传入，在插件中可以使用vue，无需依赖vue库
+
+Vue2和Vue3和React三者的diff算法有什么区别？
+https://juejin.cn/post/7109104086049357861
+总结
+
+diff 算法
+diff算法很早就有
+diff算法应用很广泛，例如提交github pr 或者（gitlab mr）
+如果要严格diff两棵树，时间复杂度是 O(n^3) ，算法不可用。
+
+tree diff优化
+之比较同一层级，不跨级比较
+tag 不同则删掉重建（不再去比较内部的细节）
+
+React diff 特点
+仅向右移动
+Vue2 diff 特点
+时从新旧 children 的两端开始进行比较，借助 key 可以复用的节点。
+定义四个指针(oldStartNode, oldEndNode, newStartNode, newEndNode),两两进行比较，之后每移动一次，都会进行一次比较，知道移动到中间的时候相遇了
+
+Vue3 diff 特点
+最长递增子序列
+链接：https://juejin.cn/post/7109104086049357861

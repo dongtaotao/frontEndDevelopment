@@ -26,7 +26,6 @@ Vue项目打包优化实践
 https://juejin.cn/post/7109762338953265160
 https://gitee.com/jch1011/shangpinhui_0415
 
-
 vue3.0从零实现知乎日报  H5
 https://www.bilibili.com/video/BV1a341137Ex?p=6&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 
@@ -67,7 +66,7 @@ https://www.bilibili.com/video/BV19S4y1D7M2?spm_id_from=333.337.search-card.all.
 vue中如何做样式穿透 https://www.bilibili.com/video/BV1WL4y1T7pU/?spm_id_from=333.788
 
 vue面试题 https://www.bilibili.com/video/BV1PU4y1d7qT/?spm_id_from=pageDriver  不错
-
+设置代理，
 
 LRU（Least recently used） 算法根据数据的历史访问记录来进行淘汰数据，其核心思想是“如果数据最近被访问过，那么将来被访问的几率也更高”。
 (墨菲定律：越担心的事情越会发生)

@@ -16,6 +16,12 @@ http://webpack.wuhaolin.cn/
 手把手教你在Webpack写一个Loader
 https://juejin.cn/post/7100534685134454815
 
+前端打包工具介绍和对比
+https://juejin.cn/post/7113803425145421832
+
+工程化之webpack打包过程
+https://juejin.cn/post/7114189481611100168
+
 初始化参数：取配置文件和shell脚本参数并合并
 开始编译：用上一步得到的参数初始化compiler对象，执行run方法开始编译
 确定入口：根据配置中的entry，确定入口文件

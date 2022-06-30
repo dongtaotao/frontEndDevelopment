@@ -53,3 +53,16 @@ https://juejin.cn/post/7110607638806659102
 
 React 如何处理异常
 https://juejin.cn/post/7106811792290447396
+
+nodejs 多进程
+https://juejin.cn/post/7107948258328051726
+Node.js 开启多进程
+答案
+可使用 child_process.fork 和 cluster.fork 开启子进程
+使用 send on 传递消息
+
+前端H5与客户端Native交互原理 - JSBridge双向通信机制的实现
+https://juejin.cn/post/7114282473164374029
+
+十分钟学会快速搭建个人网站和技术博客  vitepress
+https://www.bilibili.com/video/BV13g411P7WG/?spm_id_from=333.788&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
