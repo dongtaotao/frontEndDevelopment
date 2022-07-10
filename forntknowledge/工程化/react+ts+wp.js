@@ -1,5 +1,10 @@
 都 2022 年了，手动搭建 React 开发环境很难吗？ https://juejin.cn/post/7087811040591675428 
 
+React18 + React-Router v6 + TypeScript + Vite2 + Ant-Design 管理系统（开源啦🎉🎉） 🔥🔥🔥
+https://juejin.cn/post/7114555646820745253
+Vue3.2 + TypeScript + Pinia + Vite2 + Element-Plus 管理系统（开源啦🎉🎉）
+https://juejin.cn/post/7080820051422478366
+
 「超详细React项目搭建教程一」企业级前端开发规范如何搭建🛠 
 「超详细React项目搭建教程二」集成 Webpack5/React17
 「超详细React项目搭建教程三」集成 CSS/Less/Sass/Antd

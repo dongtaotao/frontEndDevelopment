@@ -499,3 +499,6 @@ https://juejin.cn/post/6844904080628776967
 
 搭建前端监控，如何采集异常数据？
 https://mp.weixin.qq.com/s/-qA-1Yw4o3SEC2me69YO-Q
+
+前端所有错误捕获方法和上报方案
+https://juejin.cn/post/7115318629020729352

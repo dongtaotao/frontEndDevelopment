@@ -261,8 +261,8 @@ function withSubscription(WrappedComponent, selectData) {
       return <WrappedComponent data={this.state.data} {...this.props} />;
     }
   };
+}
 
-// 使用
 const BlogPostWithSubscription = withSubscription(BlogPost,
   (DataSource, props) => DataSource.getBlogPost(props.id));
 复制代码
@@ -283,7 +283,7 @@ class DataProvider extends React.Components {
     name: 'Tom'
   }
 
-    render() {
+  render() {
     return (
         <div>
           <p>共享数据组件自己内部的渲染逻辑</p>

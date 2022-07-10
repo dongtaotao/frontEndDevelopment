@@ -68,6 +68,24 @@ vue中如何做样式穿透 https://www.bilibili.com/video/BV1WL4y1T7pU/?spm_id_
 vue面试题 https://www.bilibili.com/video/BV1PU4y1d7qT/?spm_id_from=pageDriver  不错
 设置代理，
 
+手写 Vue2.0 源码（一）-响应式数据原理
+手写 Vue2.0 源码（二）-模板编译原理
+手写 Vue2.0 源码（三）-初始渲染原理
+手写 Vue2.0 源码（四）-渲染更新原理
+手写 Vue2.0 源码（五）-异步更新原理 
+手写 Vue2.0 源码（六）-diff 算法原理
+手写 Vue2.0 源码（七）-Mixin 混入原理
+手写 Vue2.0 源码（八）-组件原理
+手写 Vue2.0 源码（九）-侦听属性原理
+手写 Vue2.0 源码（十）-计算属性原理
+手写 Vue2.0 源码（十一）-全局 api 原理
+最全的 Vue 面试题+详解答案
+手写 vue-router 源码
+手写 vuex 源码
+手写 vue3.0 源码
+链接：https://juejin.cn/post/6959016804349902884
+
+
 LRU（Least recently used） 算法根据数据的历史访问记录来进行淘汰数据，其核心思想是“如果数据最近被访问过，那么将来被访问的几率也更高”。
 (墨菲定律：越担心的事情越会发生)
 https://leetcode-cn.com/problems/lru-cache/%EF%BC%8C%E8%80%83keep-alive%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%B6%E5%80%99%E5%96%9C%E6%AC%A2%E9%97%AE/

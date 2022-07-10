@@ -69,9 +69,7 @@ const Test = () => {
       </div>
     )
 }
-
 export default Test
-
 
 基于 useState 的用法，我们尝试着自己实现一个 useState
 var _state; // 把 state 存储在外面
@@ -108,11 +106,11 @@ export default Example2;
 import React, { useContext} from 'react';
 import {CountContext} from './Example2'
 export function Counter() {
-    const {count,setCount} = useContext(CountContext)  //一句话就可以得到count
-    return (
-        <h2>{count}</h2>
-        <button onClick={() => { setCount(count + 1) }}>count</button>
-    )
+  const {count,setCount} = useContext(CountContext)  //一句话就可以得到count
+  return (
+    <h2>{count}</h2>
+    <button onClick={() => { setCount(count + 1) }}>count</button>
+  )
 }
 
 setCount useState 给相同的值，不会重渲染
@@ -152,7 +150,6 @@ Redirect，路由重定向
 Link，路由导航
 NavLink，带activeClass的路由导航
 链接：https://juejin.cn/post/7090758609876975624
-
 
 react测试框架
 jest react Testing Library

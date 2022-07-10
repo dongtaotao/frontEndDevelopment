@@ -33,7 +33,6 @@ https://juejin.cn/post/7114189481611100168
 2Webpack 的构建过程太花时间
 Webpack 打包的结果体积太大
 7.1 针对 Webpack 本身构建优化
-
 1 优化 resolve.modules 配置  直接指定项目根目录
 2 优化 resolve.extensions 配置
   在导入没带文件后缀的路径时，Webpack 会自动带上后缀去尝试询问文件是否存在，
@@ -68,7 +67,6 @@ Webpack 打包的结果体积太大
   使用 DllPlugin 将第三方库单独打包到一个文件中，只有依赖自身发生版本变化时才会重新打包。
 7.2.7 多进程代码压缩
   SplitChunksPlugin
-
 7.2.9 打包资源压缩
   JS 压缩：UglifyJSPlugin
   HTML 压缩：HtmlWebpackPlugin

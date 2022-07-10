@@ -17,5 +17,5 @@ Tapable 是一个类似于 Node.js 中的 EventEmitter的库，但更专注于�
 Tapable 中主要提供了同步与异步两种钩子。
 四、compiler和compilation
 compiler是编译器，控制webpack整个编译流程，compilation则是处理模块，包括调用loader编译模块，模块优化，生成hash，生成chunk等。
-除了模块的处理，webpack还有很多其他操作，compiler负责处理初始化，插件注册，输出文件，编译失败处理等等。 
+除了模块的处理，webpack还有很多其他操作，compiler负责处理初始化，插件注册，输出文件，编译失败处理等等。  
 

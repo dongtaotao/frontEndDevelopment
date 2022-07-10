@@ -200,3 +200,6 @@ Jenkins + Github + Nginx 实现前端自动化
 https://juejin.cn/post/7110208075214094350
 使用 GitHub Actions 实现自动化部署
 https://juejin.cn/post/7110472489007841311
+
+《Docker》Docker完整部署Web应用（Vue+Node+MongoDB）
+https://oliver.blog.csdn.net/article/details/121098382?spm=1001.2101.3001.6650.17&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-17-121098382-blog-123294948.pc_relevant_aa&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-17-121098382-blog-123294948.pc_relevant_aa&utm_relevant_index=25

@@ -248,7 +248,6 @@ const result = arr2.filter(function (v) {
 })
 console.log(result); // [{ name: 'name1', id: 1 },{ name: 'name2', id: 2 },{ name: 'name3', id: 3 },{ name: 'name5', id: 5 }]
 
-
 回收堆空间 https://www.pzijun.cn/algorithms/stack/1.html#js-%E5%86%85%E5%AD%98%E6%9C%BA%E5%88%B6%EF%BC%9A%E6%A0%88%EF%BC%88%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E3%80%81%E5%BC%95%E8%A8%80%E7%B1%BB%E5%9E%8B%E5%9C%B0%E5%9D%80%EF%BC%89%E4%B8%8E%E5%A0%86%EF%BC%88%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%EF%BC%89
 V8 中把堆分成新生代与老生代两个区域：
 

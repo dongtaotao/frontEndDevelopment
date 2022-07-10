@@ -1,5 +1,8 @@
 「react进阶」年终送给react开发者的八条优化建议(篇幅较长，占用20-30分钟) https://juejin.cn/post/6908895801116721160
 
+React18 + React-Router v6 + TypeScript + Vite2 + Ant-Design 管理系统（开源啦🎉🎉） 🔥🔥🔥
+https://juejin.cn/post/7114555646820745253
+
 React源码解析
 https://www.bilibili.com/video/BV1cE411B7by?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 https://github.com/mypanda/React-Source-Code/blob/main/01-createElement.html
@@ -364,4 +367,7 @@ MyComponent.jsexport default class MyComponent extends React.Component {
 resolve的模块的default属性就是组件MyComponent本身。
  
 Link 的本质也是a 标签。只不过在Link 中禁用了 a 标签的默认事件，改用了history对象提供的方法进行跳转。
-https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/135    
+https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/135     
+
+移动端小案例,最好有react基础
+https://www.bilibili.com/video/BV1uL4y1N7qn?p=7&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a

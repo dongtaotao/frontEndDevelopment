@@ -77,5 +77,8 @@ https://kaiwu.lagou.com/course/courseInfo.htm?courseId=416#/detail/pc?id=4430
 浏览器的兼容性：
 
 
-vite工程创建和工程原理解析
+vite工程创建和工程原理解析 
 https://www.bilibili.com/video/BV1Wh411X7Xp?p=25&spm_id_from=pageDriver&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+你要选 Vite 还是 Webpack ？
+https://juejin.cn/post/7106136866381889573

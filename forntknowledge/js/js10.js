@@ -87,18 +87,17 @@ webpack如何实现一个插件 https://juejin.cn/post/6844903682455109640#headi
 通过 compiler 对象监听事件
 比如你想实现一个编译结束退出命令的插件
 class BuildEndPlugin {
-    apply (compiler) {
-      const afterEmit = (compilation, cb) => {
-        cb()
-        setTimeout(function () {
-          process.exit(0)
-        }, 1000)
-      }
-      compiler.plugin('after-emit', afterEmit)
+  apply (compiler) {
+    const afterEmit = (compilation, cb) => {
+      cb()
+      setTimeout(function () {
+        process.exit(0)
+      }, 1000)
     }
+    compiler.plugin('after-emit', afterEmit)
   }
-  
-  module.exports = BuildEndPlugin
+}
+module.exports = BuildEndPlugin
 
 2022新年奖励自己一辆特斯拉😎（React Hooks + Redux 入门级全栈实战项目） ******************不错
 https://juejin.cn/post/7063088278576037901
@@ -129,23 +128,23 @@ webpack构建：
 1.利用 window 对象的 load 和 beforeunload 事件实现了网页崩溃的监控。
 不错的文章，推荐阅读：Logging Information on Browser Crashes。
 window.addEventListener('load', function () {
-    sessionStorage.setItem('good_exit', 'pending');
-    setInterval(function () {
-        sessionStorage.setItem('time_before_crash', new Date().toString());
-    }, 1000);
-  });
- 
-  window.addEventListener('beforeunload', function () {
-    sessionStorage.setItem('good_exit', 'true');
-  });
- 
-  if(sessionStorage.getItem('good_exit') &&
-    sessionStorage.getItem('good_exit') !== 'true') {
-    /*
-        insert crash logging code here
-    */
-    alert('Hey, welcome back from your crash, looks like you crashed on: ' + sessionStorage.getItem('time_before_crash'));
-  }
+  sessionStorage.setItem('good_exit', 'pending');
+  setInterval(function () {
+      sessionStorage.setItem('time_before_crash', new Date().toString());
+  }, 1000);
+});
+
+window.addEventListener('beforeunload', function () {
+  sessionStorage.setItem('good_exit', 'true');
+});
+
+if(sessionStorage.getItem('good_exit') &&
+  sessionStorage.getItem('good_exit') !== 'true') {
+  /*
+      insert crash logging code here
+  */
+  alert('Hey, welcome back from your crash, looks like you crashed on: ' + sessionStorage.getItem('time_before_crash'));
+}
 2.基于以下原因，我们可以使用 Service Worker 来实现网页崩溃的监控：
 Service Worker 有自己独立的工作线程，与网页区分开，网页崩溃了，Service Worker一般情况下不会崩溃
 Service Worker 生命周期一般要比网页还要长，可以用来监控网页的状态

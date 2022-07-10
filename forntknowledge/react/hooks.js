@@ -300,7 +300,6 @@ useMemo和useCallback可缓存函数的引用或值，useMemo缓存数据，useC
 1、要保持引用相等；对于组件内部用到的 object、array、函数等，
 2、用在了其他 Hook 的依赖数组中，或者作为 props 传递给了下游组件，应该使用 useMemo/useCallback）
 
-
 useEffect为什么有时候会出现无限重复请求的问题
 可能1 在effect里做数据请求未设置依赖参数，没有依赖项effect 会在每次渲染后执行一次，然后在 effect 中更新了状态引起渲染并再次触发 effect
 可能2 所设置的依赖项总是会变
@@ -358,7 +357,6 @@ let combineReducers=(renducers)=>{
     }
 }
 export {createStore,combineReducers};
-
 
 function fetchData(url, params) {
     return (dispatch, getState) => {
@@ -579,7 +577,6 @@ hook缺点
 
 不能在 if/循环语句中使用 React Hooks
 界面会出现报错。因为 React Hooks 的底层是通过有序链表实现的，如果放到 if/循环语句就可能导致执行顺序发生改变，从而导致意料之外的错误 ❎
-
 
 React-webpack ------基于antd-mobile等库的一套移动端完美脚手架配置
 https://github.com/JinJieTan/react-webpack
