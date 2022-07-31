@@ -41,3 +41,7 @@ https://juejin.cn/post/6966119324478079007#heading-11
 
 《前端那些事》从0到1开发简单脚手架
 https://juejin.cn/post/6844904137709060104
+
+
+半小时搞会 CentOS 入门必备基础知识
+https://juejin.cn/post/6844904080972709901

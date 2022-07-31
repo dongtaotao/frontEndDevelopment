@@ -502,3 +502,6 @@ https://mp.weixin.qq.com/s/-qA-1Yw4o3SEC2me69YO-Q
 
 前端所有错误捕获方法和上报方案
 https://juejin.cn/post/7115318629020729352
+
+搭建前端监控，采集用户行为的 N 种姿势
+https://juejin.cn/post/7122233800448278535
