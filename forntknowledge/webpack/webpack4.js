@@ -19,3 +19,32 @@ Tapable 中主要提供了同步与异步两种钩子。
 compiler是编译器，控制webpack整个编译流程，compilation则是处理模块，包括调用loader编译模块，模块优化，生成hash，生成chunk等。
 除了模块的处理，webpack还有很多其他操作，compiler负责处理初始化，插件注册，输出文件，编译失败处理等等。  
 
+
+1、初始化阶段 - webpack
+
+合并配置项
+创建 compiler
+注册插件
+
+2、编译阶段 - build
+
+读取入口文件
+从入口文件开始进行编译
+调用 loader 对源代码进行转换
+借助 babel 解析为 AST 收集依赖模块
+递归对依赖模块进行编译操作
+
+3、生成阶段 - seal
+
+创建 chunk 对象
+生成 assets 对象
+
+4、写入阶段 - emit
+
+作者：明里人
+链接：https://juejin.cn/post/7130999419582971912
+来源：稀土掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+13 个 Webpack 优化技巧 
+https://blog.51cto.com/u_15315508/5590112

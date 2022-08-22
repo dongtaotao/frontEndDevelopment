@@ -21,7 +21,7 @@ this.$router.addRouters([
 http://interview.poetries.top/docs/simply.html#_10-vue3%E5%B8%A6%E6%9D%A5%E7%9A%84%E6%96%B0%E7%89%B9%E6
 %80%A7-%E4%BA%AE%E7%82%B9
 
-vue3带来的新特性/亮点
+vue3带来的新特性/亮点 
 1. 压缩包体积更小
 2. Object.defineProperty -> Proxy
 3. Virtual DOM 重构

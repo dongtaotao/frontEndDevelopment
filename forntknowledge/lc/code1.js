@@ -234,7 +234,7 @@ var reverseKGroup = function(head, k) {
   [20,9],
   [15,7]
 ]
-var zigzagLevelOrder = function(root) {
+var zigzagLevelOrder = function(root) { 
    if(!root)return[];
    const q=[[root,0]];
    const res=[];

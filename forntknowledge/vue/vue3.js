@@ -5,6 +5,22 @@ https://juejin.cn/post/7064368176846340132
 历时一个月，2.6W字！50+Vue经典面试题源码级详解，你值得收藏！
 https://juejin.cn/post/7097067108663558151
 
+如何从0开发一个Vue组件库并发布到npm
+https://juejin.cn/post/7052200850801819684
+
+Vue3 + Vite + Typescript + Element_plus + Pinia
+https://www.bilibili.com/video/BV1fV4y1L7QD?spm_id_from=333.880.my_history.page.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a 
+一款基于Vue3 + Vite + TS的简历制作神器
+Vue3 + Vite + Typescript + Element_plus + Pinia
+开源项目地址
+GitHub：https://github.com/Hacker233/resume-design
+gitee：https://gitee.com/sharemore52/resume-design
+项目体验地址
+https://huajian.smallpig.site
+项目介绍文章
+https://juejin.cn/post/7121691642469285918
+
+
 从 0 开始手把手带你搭建一套规范的 Vue3.x 项目工程环境
 https://juejin.cn/post/6951649464637636622
 架构搭建
@@ -522,5 +538,5 @@ setup() {
     console.log(instance.ctx.foo); // 'foo'
     console.log(instance.ctx.bar()); // '我是bar方法'
   })
-  return {}
+  return {} 
 },

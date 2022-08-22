@@ -22,3 +22,14 @@ https://juejin.cn/post/6952066955868110879
 
 珠峰web前端架构师教程【一】【2022】
 https://www.bilibili.com/video/BV1NA4y1f7GU?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+
+Eslint + Prettier+ Lint-staged + Husky + Commitlint实现工程化规范前端代码
+https://juejin.cn/post/7130811005109551134
+
+
+大前端大工程
+https://www.bilibili.com/video/BV1ZB4y1471o?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+前端技术发展回顾和架构升级之路 30 讲
+https://www.bilibili.com/video/BV1ke4y1f7ze?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a

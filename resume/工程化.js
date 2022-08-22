@@ -178,3 +178,7 @@ https://juejin.cn/post/7107072525661634597
 
 现代化前端规范：工具+代码
 https://juejin.cn/post/7110089124341776392
+
+
+Eslint + Prettier+ Lint-staged + Husky + Commitlint实现工程化规范前端代码
+https://juejin.cn/post/7130811005109551134

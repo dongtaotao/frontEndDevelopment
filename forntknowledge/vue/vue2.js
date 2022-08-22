@@ -2,7 +2,7 @@
 https://juejin.cn/post/6987267852575195143#heading-11
 全局守卫、路由守卫、组件守卫。
 
-vue技术栈原理
+vue技术栈原理 
 https://www.bilibili.com/video/BV1dP4y1j7sH?p=21&spm_id_from=pageDriver&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a秋
 
 Vue 插槽的使用
