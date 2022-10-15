@@ -55,7 +55,6 @@ function quickSort(arr) {
   if(arr.length <=1) {
     return arr;
   }
-
   let mid = Math.floor(arr.length/2);
   let midItem = arr.splice(mid, 1)[0];
   let left = [];
@@ -247,5 +246,5 @@ function once(func) {
       func.apply(null, arguments);
       done = true;
     }
-  }
+  } 
 }

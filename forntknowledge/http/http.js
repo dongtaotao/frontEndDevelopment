@@ -1,5 +1,5 @@
 「2021」高频前端面试题汇总之计算机网络篇
-https://juejin.cn/post/6908327746473033741
+https://juejin.cn/post/69083627746473033741
 
 「2021」高频前端面试题汇总之浏览器原理篇
 https://juejin.cn/post/6916157109906341902 
@@ -278,7 +278,7 @@ Content-Type 字段来获知请求中的消息主体是用何种方式编码
 
 Content-Type: application/json ： json 字符串
 Content-Type: application/x-www-form-urlencoded ： & 将 key=value 进行拼接， jquery 默认使用这个
-Content-Type: multipart/form-data ： 常用于文件上传
+Content-Type: multipart/form-data ： 常用于文件上传 
 text/plain
 text/html
 

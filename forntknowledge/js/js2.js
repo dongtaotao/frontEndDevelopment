@@ -210,7 +210,7 @@ https://juejin.cn/post/7031876097390149645?utm_source=gold_browser_extension
 try…catch
 window.onerror
 window.addEventListener(‘error’)
-window.addEventListener(‘unhandledrejection’)    
+window.addEventListener(‘unhandledrejection’)     
 
 数据上报
 XMLHttpRequest  

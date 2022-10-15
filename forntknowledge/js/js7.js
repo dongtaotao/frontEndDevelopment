@@ -328,5 +328,5 @@ function lozyLoad(){
 			}
 		}
 	}
-  window.onscroll = lozyLoad(); 
+  window.onscroll = lozyLoad();  
 </script>

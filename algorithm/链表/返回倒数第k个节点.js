@@ -21,5 +21,5 @@ var kthToLast = function(head, k) {
     valArr.unshift(head.val)
     head =head.next
   }
-  return valArr[k-1] 
+  return valArr[k-1]  
 } 

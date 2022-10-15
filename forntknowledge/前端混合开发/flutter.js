@@ -139,7 +139,7 @@ Flutter 技术调研 https://fengs.online/2019/02/flutter-research/
 2.5 丰富的设计控件
 2.6 支持 Windows Mac 和 Linux
 三、Flutter 优缺点
-3.1 优点
+3.1 优点 
 3.1.1 跨平台性
 3.1.2 开发效率高
 3.1.3 热加载

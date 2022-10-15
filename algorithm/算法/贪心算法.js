@@ -15,7 +15,7 @@ function getMinCoin(coins,amount) {
         // 保存当前币值
         change.push(coin)
         // 继续累加
-        total += coin;
+        total += coin; 
       }
     }
     return change

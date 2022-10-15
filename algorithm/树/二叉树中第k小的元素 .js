@@ -13,5 +13,5 @@ var kthSmallest = function(root, k) {
     return arr[k-1]
  }; 
 
- https://juejin.cn/post/7077955225306267685  
+ https://juejin.cn/post/7077955225306267685   
  

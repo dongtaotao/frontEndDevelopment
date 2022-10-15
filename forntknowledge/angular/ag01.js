@@ -12,7 +12,7 @@ rx.js 响应式异步编程库，在vue中需引入vue-rx
     NgStyle
     NgModel
     NgFor
-    NgIf
+    NgIf 
     NgSwitch
 组件的事件绑定-方法和参数
 <button (click)="addCount($event)">当前数值加1</button>

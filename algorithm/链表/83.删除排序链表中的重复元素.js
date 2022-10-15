@@ -30,7 +30,7 @@ var deleteDuplicates = function (list) {
       while (p.next && p.next.val === cur) {
         p.next = p.next.next ? p.next.next : null;
       }
-    /* 节点值相同的全部删除 结束 */
+    /* 节点值相同的全部删除 结束 */ 
     } else {
       p = p.next;
     }

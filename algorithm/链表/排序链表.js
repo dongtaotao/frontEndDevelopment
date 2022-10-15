@@ -13,7 +13,7 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
- var sortList = function (head) {
+ var sortList = function (head) { 
   let list = new ListNode(0, head)
   let result = list
   let arr = []//用来存放所有的节点值

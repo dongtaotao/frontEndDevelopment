@@ -315,7 +315,6 @@ var maxProfit = function(prices) {
       return max;
 };
 
-
 括号生成（题号22）
 https://juejin.cn/post/6949709155007463454
 var generateParenthesis = function(n) {
@@ -361,11 +360,9 @@ var mySqrt = function(x) {
 
 152. 乘积最大子序列
 给你一个整数数组 nums ，请你找出数组中乘积最大的非空连续子数组（该子数组中至少包含一个数字），并返回该子数组所对应的乘积。
-
 测试用例的答案是一个 32-位 整数。
 
 示例 1:
-
 输入: nums = [2,3,-2,4]
 输出: 6
 解释: 子数组 [2,3] 有最大乘积 6。
@@ -456,27 +453,23 @@ var MinStack = function() {
     this.items = []
     this.min = null
 };
-
 // 进栈
 MinStack.prototype.push = function(x) {
     if(!this.items.length) this.min = x 
     this.min = Math.min(x, this.min)
     this.items.push(x) 
 };
-
 // 出栈
 MinStack.prototype.pop = function() {
     let num = this.items.pop() 
     this.min = Math.min(...this.items)
     return num
 };
-
 // 获取栈顶元素
 MinStack.prototype.top = function() {
     if(!this.items.length) return null
     return this.items[this.items.length -1] 
 };
-
 // 检索栈中的最小元素
 MinStack.prototype.getMin = function() {
     return this.min
@@ -600,11 +593,11 @@ var hasPathSum = function(root, sum) {
   if(!root) return false;
   let res = false;
   const dfs = (n, s) => {
-      if (!n.left && !n.right && s === sum) {
-        res = true;
-      }
-      if (n.left) dfs(n.left, s + n.left.val);
-      if (n.right) dfs(n.right, s + n.right.val);
+    if (!n.left && !n.right && s === sum) {
+      res = true;
+    }
+    if (n.left) dfs(n.left, s + n.left.val);
+    if (n.right) dfs(n.right, s + n.right.val);
   }
   dfs(root, root.val);
   return res;
@@ -619,9 +612,9 @@ var singleNumber = function(nums) {
   var res = []
   nums.forEach(item => {
     if(obj[item]){
-        delete obj[item]
+      delete obj[item]
     }else{
-        obj[item] = 1
+      obj[item] = 1
     }
   });
   for(let key in obj){
@@ -642,15 +635,13 @@ var pivotIndex = function(nums) {
   let sum = 0;
   for (let i = 0; i < nums.length; i++) {
     if (2 * sum + nums[i] === total) {
-        return i;
+      return i;
     }
     sum += nums[i];
   }
   return -1;
 };
-来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/find-pivot-index
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 896. 单调数列
 示例 1：
@@ -687,19 +678,15 @@ var isMonotonic = function(A) {
 给定由一些正数（代表长度）组成的数组 A，返回由其中三个长度组成的、面积不为零的三角形的最大周长。
 如果不能形成任何面积不为零的三角形，返回 0。
 示例 1：
-
 输入：[2,1,2]
 输出：5
 示例 2：
-
 输入：[1,2,1]
 输出：0
 示例 3：
-
 输入：[3,2,3,4]
 输出：10
 示例 4：
-
 输入：[3,6,2,3]
 输出：8
 var largestPerimeter = function(nums) {
@@ -709,9 +696,7 @@ var largestPerimeter = function(nums) {
   }
   return 0
 };
-来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/largest-perimeter-triangle
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 // 获取链接后面的参数
 function getParams(url) {

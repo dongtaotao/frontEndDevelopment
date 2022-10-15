@@ -38,5 +38,5 @@ var isBalanced = function (root) {
 遍历一个二叉树所有节点，返回它们的和
 function numSum(root) {
   if(!root) return 0;
-  return root.val + numSum(root.left) + numSum(root.right);
+  return root.val + numSum(root.left) + numSum(root.right); 
 }

@@ -82,7 +82,7 @@ var mergeTwoLists = function(list1, list2) {
 };
 var mergeKLists = function(lists) {
    let result = null
-   for(let i = 0;i < lists.length ; i++){
+   for(let i = 0;i < lists.length ; i++){ 
       result = mergeTwoLists(result , lists[i])
    }
    return result

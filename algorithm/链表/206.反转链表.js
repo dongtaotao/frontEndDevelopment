@@ -21,8 +21,6 @@ var reverseList = function (head) {
   return headNode; 
 };
 
-
-
 var reverseList2 = function(head) {
   let p1 = head;
   let p2 = null;
@@ -53,7 +51,7 @@ var reverseKGroup = function(head, k) {
       pre = cur;
       cur = next;
   }
-  head.next = reverseKGroup(cur,k);
+  head.next = reverseKGroup(cur,k); 
   return pre;
 };
 

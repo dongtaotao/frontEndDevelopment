@@ -47,13 +47,13 @@
 <script>
   var isSameTree = function(p, q) {
     if(p == null && q == null){
-        return true
+      return true
     }else if(p==null || q==null){
-        return false
+      return false
     }else if(p.val !== q.val){
-        return false
+      return false
     }else{
-        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
+      return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
     }
 };
 //https://leetcode-cn.com/problems/same-tree/solution/xiang-tong-de-shu-dfsjie-fa-shi-zhan-by-mi-le-qiu-/

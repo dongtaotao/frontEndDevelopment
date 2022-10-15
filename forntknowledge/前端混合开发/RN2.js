@@ -1,5 +1,5 @@
 
-RN系列：Android原生与RN如何交互通信 https://blog.csdn.net/sinat_17775997/article/details/106418224 
+RN系列：Android原生与RN如何交互通信 https://blog.csdn.net/sinat_17775997/article/details/106418224  
 
 页面跳转（RN与Android原生）
 RN页面跳转原生

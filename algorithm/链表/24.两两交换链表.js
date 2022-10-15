@@ -21,7 +21,7 @@ var swaPairs = function (head) {
   dummy.next = head;
   let current = dummy;
   while(current.next !== nullll && current.next.next !== null) {
-    let n1 = current.next;
+    let n1 = current.next; 
     let n2 = current.next.next;
     current.next = n2;
     n1.next = n2.next;

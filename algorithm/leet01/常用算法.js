@@ -213,7 +213,7 @@ function reverse(arr) {
   let len = arr.length
   for (let start = 0; start < Math.floor(len / 2); start++) {
     let end = len - start - 1;
-    [arr[start], arr[end]] = [arr[end], arr[start]]
+    [arr[start], arr[end]] = [arr[end], arr[start]] 
   }
   return arr
 }

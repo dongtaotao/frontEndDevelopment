@@ -495,5 +495,5 @@ function flatten(obj) {
 }
 
 // 测试
-console.log(flatten(obj)) 
+console.log(flatten(obj))  
  

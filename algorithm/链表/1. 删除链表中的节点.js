@@ -27,7 +27,7 @@ var intersection = function(nums1, nums2) {
   const res = [];
   nums2.forEach(n => {
     if(map.get(n)) {
-      res.push(n);
+      res.push(n); 
       map.delete(n)
     }
   })

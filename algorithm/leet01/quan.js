@@ -113,11 +113,8 @@ const maxArea = function(height) {
 
   return max
 };
-
 作者：童欧巴
 链接：https://juejin.cn/post/6937526265201033230
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 05 加一
 const plusOne = function (digits) {
@@ -426,9 +423,6 @@ var minAddToMakeValid = function (S) {
 
 作者：HearLing
 链接：https://juejin.cn/post/6906316759465197581
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 
 验证回文字符串II https://juejin.cn/post/7060868433285480478
 /**
@@ -482,5 +476,5 @@ var validPalindrome = function(s){
       left ++;
       right --;
   }
-  return true;
+  return true; 
 }

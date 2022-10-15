@@ -51,7 +51,7 @@ let res = json.reduce((pre,cur)=>{
   
 console.log(res)
 
-          遍历数据	是否可遍历对象	是否会遍历原型链上的东西	是否可与return,break,continue配合使用
+        遍历数据	是否可遍历对象	是否会遍历原型链上的东西	是否可与return,break,continue配合使用
 for...in	遍历键名	是	          是	                  否
 for...of	遍历键值	否	          否	                  是
 

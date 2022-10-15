@@ -20,7 +20,7 @@ const arr = [['a', 'b', 'c'], ['a', 'd'], ['d', 'e'], ['f', 'g'], ['h', 'g'], ['
 function transform(arr){
     let res = []
     arr = arr.map(el => el.sort()).sort()
-    const item = arr.reduce((pre, cur) => {
+    const item = arr.reduce((pre, cur) => { 
       if (cur.some(el => pre && pre.includes(el))) {
         pre = pre.concat(cur)
       } else {

@@ -92,7 +92,7 @@ const tree = {
   ],
 };
 const bds = (root) => {
-  const q = [root];
+  const q = [root]; 
   while(q.length > 0) {
     const n = q.shift();
     console.log(n.val);
@@ -388,12 +388,10 @@ function array2Tree(arr) {
     const parent = map[item.parentId];
     if(parent){
       (parent.children || (parent.children=[])).push(item);
-    }
-    else{
+    }else{
       roots.push(item);
     }
   })
-
   console.log(JSON.stringify(roots))
   return roots;
 }

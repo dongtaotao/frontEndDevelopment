@@ -47,5 +47,5 @@ Math.cos(x)
 Math.sin(x)
 返回x的正弦值
 
-Math.tan(x)
+Math.tan(x) 
 返回x的正切值 

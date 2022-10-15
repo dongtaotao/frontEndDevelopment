@@ -27,7 +27,7 @@ const pipe = function (...fns) {
 
 const pipe = (...fns) => param => fns.reduce((pre, fn) => fn(pre), param)
 
-简单讲解一下http2的多路复用
+简单讲解一下http2的多路复用 
 https://blog.csdn.net/qq_46299172/article/details/108586142
 
 requestAnimationFrame属于宏任务还是微任务
@@ -73,7 +73,6 @@ function flat(arr) {
 flat(arr)  // [1, 1, 2, 1, 2, 3]
 
 6. HTTP/1.0和HTTP/1.1有什么区别
-
 长连接： HTTP/1.1支持长连接和请求的流水线，在一个TCP连接上可以传
   送多个HTTP请求，避免了因为多次建立TCP连接的时间消耗和延时
 缓存处理： HTTP/1.1引入Entity tag，If-Unmodified-Since,
@@ -163,7 +162,6 @@ class SingletonLogin {
     return this.instance
   }
 }
-
 
 let obj1 = SingletonLogin.getInstance('CXK','123')
 let obj2 = SingletonLogin.getInstance('CXK','321')
@@ -289,12 +287,10 @@ function createStore(reducer) {
   function getState() {
       return state;
   }
-
   function dispatch(action) {
       state=reducer(state,action);
       listeners.forEach(l=>l());
   }
-
   function subscribe(listener) {
       listeners.push(listener);
       return function () {

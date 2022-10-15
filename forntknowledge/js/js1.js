@@ -229,7 +229,7 @@ const debounce = (fn, delay) => {
 
 数组去重
 let unqit = (args) =>[...new Set(arge)]
-// kelihua
+// kelihua 
 const curry = (fn, ...args) => {
   if(args.length > fn.length) {
     return fn(...args)

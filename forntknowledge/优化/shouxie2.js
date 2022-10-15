@@ -16,7 +16,7 @@ https://juejin.cn/post/7079681931662589960
 
 
 编写一个函数计算多个数组的交集
-const intersection = function(...args) { 
+const intersection = function(...args) {  
     if (args.length === 0) {
     return []
   }

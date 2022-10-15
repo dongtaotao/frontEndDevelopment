@@ -27,7 +27,7 @@ var middleNode = function (head) {
 
 利用双指针，快指针走两步，慢指针走一步，快指针走完，慢指针则为中间值
 var middleNode = function (head) {
-  if (!head) return []
+  if (!head) return [] 
   var fast = slow = head
   while (fast && fast.next) {
     slow = slow.next

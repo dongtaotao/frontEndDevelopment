@@ -86,7 +86,7 @@ function FindNumbersWithSum(array, sum) {
   return res;
 }
 module.exports = {
-    FindNumbersWithSum : FindNumbersWithSum
+  、FindNumbersWithSum : FindNumbersWithSum
 };
 //================================================================
 06.旋转数组的最小数字
@@ -277,16 +277,16 @@ function Power(base, exponent){
 20.定义栈的数据结构，请在该类型中实现一个能够得到栈最小元素的min函数。
 var stack = [];
 function push(node){
-    stack.push(node);
+  stack.push(node);
 }
 function pop(){
-    return stack.pop();
+  return stack.pop();
 }
 function top(){
-    return stack[stack.length - 1];
+  return stack[stack.length - 1];
 }
 function min(){
-    return Math.min.apply(null, stack);
+  return Math.min.apply(null, stack);
 }
 //===============================================================
 37.统计一个数字在排序数组中出现的次数。
@@ -774,4 +774,4 @@ function LastRemaining_Solution(n, m)
     }
     return result;
 }
-原文链接：https://blog.csdn.net/violet_seven/article/details/107042191   
+原文链接：https://blog.csdn.net/violet_seven/article/details/107042191    

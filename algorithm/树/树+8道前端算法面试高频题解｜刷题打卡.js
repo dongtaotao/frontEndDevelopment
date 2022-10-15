@@ -295,7 +295,7 @@ const invertTree = (root) => {
   const queue = [root];
   while (queue.length) {
     const cur = queue.shift();
-    [cur.left, cur.right] = [cur.right, cur.left];
+    [cur.left, cur.right] = [cur.right, cur.left]; 
     if (cur.left) queue.push(cur.left);
     if (cur.right) queue.push(cur.right);
   }

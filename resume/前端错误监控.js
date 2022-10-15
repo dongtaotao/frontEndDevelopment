@@ -505,3 +505,7 @@ https://juejin.cn/post/7115318629020729352
 
 搭建前端监控，采集用户行为的 N 种姿势
 https://juejin.cn/post/7122233800448278535
+
+
+前端监控要怎么做
+https://juejin.cn/post/7152798317892599844

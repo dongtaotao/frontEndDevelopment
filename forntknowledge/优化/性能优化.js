@@ -201,7 +201,6 @@ scope hoisting: 作用域提升，将分散的模块划分到同一个作用域�
     13.静态资源分离 通过 DllPlugin 或者 Externals 进行静态依赖包的分离。
 //========
 
-
 //================ 网络方面 
 使用CDN加速静态资源加载
     CND加速的原理
@@ -234,9 +233,7 @@ DNS 预解析
 可以通过预渲染将下载的文件预先在后台渲染，可以使用以下代码开启预渲染
 {/* <link rel="prerender" href="http://blog.poetries.top"> */}
 
-
 性能监测篇：Performance、LightHouse 与性能 API
-
 
 https://juejin.cn/post/6903295387302526990
 jsliang 求职系列 - 35 -Webpack 性能优化
@@ -303,7 +300,6 @@ https://interview2.poetries.top/excellent-docs/1-HTML%E6%A8%A1%E5%9D%97.html#_8-
 prefetch：其利用浏览器空闲时间来下载或预取用户在不久的将来可能访问的文档。<link href="/js/xx.js" rel="prefetch">
 preload : 可以指明哪些资源是在页面加载完成后即刻需要的，浏览器在主渲染机制介入前就进行预加载，这一机制使得资源可以更早的得到加载并可用，
 且更不易阻塞页面的初步渲染，进而提升性能。 <link href="/js/xxx.js" rel="preload" as="script">需要 as 指定资源类型目前可用的属性类型有如下：
-
 
 
 🐢11s到⚡1s，性能优化之首屏加载🚀

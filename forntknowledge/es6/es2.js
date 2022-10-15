@@ -393,8 +393,8 @@ ES6 Reflect 对象 上ES6位了操作对象而提供的心API https://www.bilibi
 2.修改某些object方法的返回结果，让其变得更合理
 3.Reflect一共有十三个静态方法
 
-了解学习 Proxy 的好朋友 - Reflect，为什么需要 Reflect
-https://juejin.cn/post/6970893008778559495
+了解学习 Proxy 的好朋友 - Reflect，为什么需要 Reflect 
+https://juejin.cn/post/6970893008778559495 
 
 
 第11题：

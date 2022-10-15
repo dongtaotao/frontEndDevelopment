@@ -216,7 +216,7 @@ border-box. border = 20, padding = 10, width = 100
 背景：background-size、background-origin、background-clip
 文本效果：text-shadow、word-wrap
 颜色：新增 RGBA，HSLA 模式
-渐变：线性渐变、径向渐变
+渐变：线性渐变、径向渐变  
 字体：@font-face
 2D/3D转换：transform、transform-origin
 过渡与动画：transition、@keyframes、animation

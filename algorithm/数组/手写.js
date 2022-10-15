@@ -130,11 +130,8 @@ const pipe = function (...fns) {
     }, param)
   }
 }
-
 作者：LinDaiDai_霖呆呆
 链接：https://juejin.im/post/6844904193619132423
-来源：掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 class EventEmitter{
   constructor(){
     this.events = {}
@@ -204,6 +201,6 @@ class EventEmitter {
       this.off(name, onceF)
     }
 
-    this.on(name, onceF)
+    this.on(name, onceF) 
   }
 } 

@@ -26,7 +26,7 @@ var subsets = function(nums) {
     };
     for(let i =0;i<=nums.length;i++){
         backtrack([],i,0)
-    }
+    } 
     return res
 };
 复制代码

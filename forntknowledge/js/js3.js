@@ -611,7 +611,7 @@ class EventEmitter {
   }
 }
 // 使用如下
-const event = new EventEmitter();
+const event = new EventEmitter(); 
 const handle = (...rest) => {
   console.log(rest);
 };

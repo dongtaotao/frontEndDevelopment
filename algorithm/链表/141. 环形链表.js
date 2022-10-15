@@ -12,7 +12,7 @@ var  hasCycle = function(head) {
 }
 
 var hasCycle = function(list) {
-  let p = list;
+  let p = list; 
   while(p) {
     if(p.flag) return true;
     p.flag = true;

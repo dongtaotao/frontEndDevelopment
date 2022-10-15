@@ -1,5 +1,5 @@
 
-JS 对象的深拷贝和浅拷贝 
+JS 对象的深拷贝和浅拷贝  
 浅拷贝：假设B复制了A，当修改A时，看B是否会发生变化，如果B也跟着变了，说明这是浅拷贝，A、B是指向一个地址的；
 深拷贝：创建一个新的和原始字段的内容相同的字段，是两个一样大的数据段；两个的地址是吧不一样的；
 
@@ -174,7 +174,6 @@ const cityData = [
     }
   ]
 }];
-  
 
 function getPathById(cityData, id){
     //定义变量保存当前结果路径
@@ -206,7 +205,6 @@ function getPathById(cityData, id){
   }
   getPathById(cityData.shift(), 'sdsd11')
 
-  
 千分位【阿里】https://juejin.cn/post/6899316658377555976
 // function format(str) {  //1，234，568
 //   // 校验、小数点、负数 先切掉
