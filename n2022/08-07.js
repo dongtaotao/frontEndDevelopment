@@ -75,3 +75,10 @@ https://blog.csdn.net/LuoMin2523/article/details/119215880
 https://juejin.cn/post/7153086294409609229
 
 【第20题】npm run xxx 的执行过程 https://juejin.cn/post/7153601063542521886
+
+
+使用SourceTree回滚  
+https://www.jianshu.com/p/5b28fe70469d?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
+
+sourceTree 代码回滚(git 和http)
+http://t.zoukankan.com/matengfei123-p-12376443.html
