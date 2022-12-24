@@ -8,3 +8,6 @@ https://blog.gaogangsever.cn/engine/%E4%BC%81%E4%B8%9A%E7%BA%A7%E5%BE%AE%E6%9C%8
 应用隔离100%
 
 qiankun的基本使用 https://www.bilibili.com/video/BV1G34y1x7Cm?spm_id_from=333.999.0.0
+
+微前端qiankun快速入门
+https://www.bilibili.com/video/BV16T4y1e7TC/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a

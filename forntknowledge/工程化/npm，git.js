@@ -62,3 +62,7 @@ https://mp.weixin.qq.com/s?__biz=Mzk0NTI2NDgxNQ==&mid=2247484342&idx=2&sn=12f331
 
 git操作与分支管理规范  
 https://juejin.cn/post/6892671601175691272
+
+
+上传自己的npm包
+https://www.bilibili.com/video/BV1Zg41117tS?p=10&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a

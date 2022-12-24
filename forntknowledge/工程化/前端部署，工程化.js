@@ -203,3 +203,18 @@ https://juejin.cn/post/7110472489007841311
 
 《Docker》Docker完整部署Web应用（Vue+Node+MongoDB）
 https://oliver.blog.csdn.net/article/details/121098382?spm=1001.2101.3001.6650.17&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-17-121098382-blog-123294948.pc_relevant_aa&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-17-121098382-blog-123294948.pc_relevant_aa&utm_relevant_index=25
+
+
+前端项目发布 与 持续集成
+前端项目发布
+本质是把前端代码放到服务器的根目录
+可以写shell脚本 scp命令
+借助其他工具
+持续集成
+nginx 配合git hooks
+docker 虚拟容器
+jekens java项目采用
+
+
+Web团队建设--自定义脚手架
+https://juejin.cn/post/7156961879837900830

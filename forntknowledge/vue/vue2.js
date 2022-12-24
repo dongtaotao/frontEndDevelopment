@@ -281,9 +281,9 @@ https://www.bilibili.com/video/BV1dV411a7mT/
 
 1。只比较同一层级，不跨级比较
 2.标签名不同，直接删除，不继续深度比较
-3.标签名相同，key相同，就认为是相同的节点，不继续深度比较
+3.标签名相同，key相同，就认为是相同的节点，不继续深度比较 
 
-【Vue知识】set方法的实现
+【Vue知识】set方法的实现     
 https://www.bilibili.com/video/BV1xv411472h?spm_id_from=333.999.0.0
 【Vue知识】provide和inject的原理
 https://www.bilibili.com/video/BV1rK4y1V7Wj?spm_id_from=333.999.0.0

@@ -59,6 +59,9 @@ https://www.bilibili.com/video/BV1o44y1G7bK?spm_id_from=333.999.0.0
 【初学者笔记】整理的一些Vue3知识点
 https://juejin.cn/post/6977004323742220319#heading-9
 
+总结vue知识体系之基础入门篇
+https://juejin.cn/post/6844904079164964871
+
 千锋Echarts+Vue3.0数据可视化项目构建_入门必备前端项目实战教程
 https://www.bilibili.com/video/BV14u411D7qK?p=69
 
@@ -76,7 +79,6 @@ Teleport
 suspence
 Fragment
 tree-Shaking
-
 
 五、Vue做权限管理
 接口权限：使用jwt，登录完拿到token，将token存起来，通过axios请求拦截器进行拦截，每次请求的时候头部携带token
@@ -451,3 +453,39 @@ server {
 Mutation Observer API 用来监听DOM的变动事件 
 IntersectionObserver API
 IntersectionObserver API可以自动的"观察"元素是否是可见的. 由于可见的本质是目标元素与视图产生一个交叉去, 所以这个API叫做 "交叉观察器". 
+
+
+4. attrs 和 listeners
+attrs 获取子传父中未在 props 定义的值
+// 父组件
+<home title="这是标题" width="80" height="80" imgUrl="imgUrl"/>
+// 子组件
+mounted() {
+  console.log(this.$attrs) //{title: "这是标题", width: "80", height: "80", imgUrl: "imgUrl"}
+}
+
+// 相对应的如果子组件定义了 props,打印的值就是剔除定义的属性
+props: {
+  width: {
+    type: String,
+    default: ''
+  }
+},
+mounted() {
+  console.log(this.$attrs) //{title: "这是标题", height: "80", imgUrl: "imgUrl"}
+}
+复制代码
+listeners:场景:子组件需要调用父组件的方法。
+解决:父组件的方法可以通过 v-on="listeners" 传入内部组件——在创建更高层次的组件时非常有用
+// 父组件
+<home @change="change"/>
+
+// 子组件
+mounted() {
+  console.log(this.$listeners) //即可拿到 change 事件
+}
+
+作者：lzg9527
+链接：https://juejin.cn/post/6844904079164964871
+来源：稀土掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
