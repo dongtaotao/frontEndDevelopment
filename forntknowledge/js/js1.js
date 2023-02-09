@@ -567,14 +567,14 @@ const tree = {
 // 深度优先的方式遍历 打印 name
 // ['root', 'c1','c11', 'c12', 'c2', 'c21', 'c22']
 function deepFirstSearch(node,nodeList) {
-    if (node) {
-        nodeList.push(node);
-        var children = node.children;
-        for (var i = 0; i < children.length; i++)
-        //每次递归的时候将 需要遍历的节点 和 节点所存储的数组传下去
-        deepFirstSearch(children[i],nodeList);
-    }
-    return nodeList;
+  if (node) {
+    nodeList.push(node);
+    var children = node.children;
+    for (var i = 0; i < children.length; i++)
+    //每次递归的时候将 需要遍历的节点 和 节点所存储的数组传下去
+    deepFirstSearch(children[i],nodeList);
+  }
+  return nodeList;
 }
 
 function deepFirstSearch(node) {
@@ -874,4 +874,4 @@ ES5的继承，实质是先创建了子类的实例对象 this, 然后再将 父
 ES6的继承是先将父类实例对象的属性和方法，加到 this 上面（所以必须先调用 super 方法），然后再用子类的构造函数修改 this。
 super
 作为函数调用，代表父类的构造函数
-作为对象调用，在普通方法中，指向父类的原型对象；在静态方法中，指向父类。   
+作为对象调用，在普通方法中，指向父类的原型对象；在静态方法中，指向父类。    

@@ -86,11 +86,11 @@ var lengthOfLongestSubstring = function (s) {
   let res = 0
   let n = s.length
   for (let j = 0; j < n; j++) {
-      if (map.has(s[j])) {
-          i = Math.max(i, map.get(s[j]))
-      }
-      res = Math.max(res, j - i)
-      map.set(s[j], j)
+    if (map.has(s[j])) {
+      i = Math.max(i, map.get(s[j]))
+    }
+    res = Math.max(res, j - i)
+    map.set(s[j], j)
   }
   return res
 };
@@ -145,7 +145,6 @@ function bigAdd(a, b) {
     result.unshift(value % 10)
     flag = parseInt(value / 10)
   }
-
   if (flag) {
     result.unshift(flag)
   }
@@ -339,14 +338,13 @@ console.log(compareMoreVersion(['1.0', '3.1', '1.01']))
 function deepCopy(obj) {
   var ret = {};
   for (var key in obj) {
-      if (obj.hasOwnProperty(key)) {
-          if (typeof obj[key] === 'object') {
-              ret[key] = deepCopy(obj[key]);
-          } else {
-              ret[key] = obj[key];
-          }    
-      }
-
+    if (obj.hasOwnProperty(key)) {
+      if (typeof obj[key] === 'object') {
+        ret[key] = deepCopy(obj[key]);
+      } else {
+        ret[key] = obj[key];
+      }    
+    }
   }
   return ret;
 }
@@ -381,7 +379,6 @@ for(var i =0; i<arr.length; i++){
 }
 console.log(result); // [{key: "01", value: "乐乐"},{key: "02", value: "博博"},{key: "03", value: "淘淘"},{key: "04", value: "哈哈"}]
 
-
 //  方法2：利用reduce方法遍历数组,reduce第一个参数是遍历需要执行的函数，第二个参数是item的初始值
 var obj = {};
 arr = arr.reduce(function(item, next) {
@@ -397,19 +394,19 @@ function parseParam(url) {
   let paramsObj = {};
   // 将 params 存到对象中
   paramsArr.forEach(param => {
-      if (/=/.test(param)) { // 处理有 value 的参数
-          let [key, val] = param.split('='); // 分割 key 和 value
-          val = decodeURIComponent(val); // 解码
-          val = /^\d+$/.test(val) ? parseFloat(val) : val; // 判断是否转为数字
-  
-          if (paramsObj.hasOwnProperty(key)) { // 如果对象有 key，则添加一个值
-              paramsObj[key] = [].concat(paramsObj[key], val);
-          } else { // 如果对象没有这个 key，创建 key 并设置值
-              paramsObj[key] = val;
-          }
-      } else { // 处理没有 value 的参数
-          paramsObj[param] = true;
+    if (/=/.test(param)) { // 处理有 value 的参数
+      let [key, val] = param.split('='); // 分割 key 和 value
+      val = decodeURIComponent(val); // 解码
+      val = /^\d+$/.test(val) ? parseFloat(val) : val; // 判断是否转为数字
+
+      if (paramsObj.hasOwnProperty(key)) { // 如果对象有 key，则添加一个值
+          paramsObj[key] = [].concat(paramsObj[key], val);
+      } else { // 如果对象没有这个 key，创建 key 并设置值
+          paramsObj[key] = val;
       }
+    } else { // 处理没有 value 的参数
+        paramsObj[param] = true;
+    }
   })
   return paramsObj; 
 }
@@ -496,4 +493,3 @@ function flatten(obj) {
 
 // 测试
 console.log(flatten(obj))  
- 

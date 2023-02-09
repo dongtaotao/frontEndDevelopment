@@ -282,7 +282,7 @@ Content-Type: multipart/form-data ： 常用于文件上传
 text/plain
 text/html
 
-链接：https://juejin.cn/post/6844904073737535496
+链接：https://juejin.cn/post/6844904073737535496 
  
 
 HTTP2的缺点

@@ -80,7 +80,7 @@ https://juejin.cn/post/7098575243240800286#heading-31
 Vue开发全局组件，你可能需要了解一下Vue.extend
 https://juejin.cn/post/7099632175728820255
 Vue hookEvent,原来可以这样监听组件生命周期
-https://juejin.cn/post/7099749055609176100
+https://juejin.cn/post/7099749055609176100 
 
 vue框架原理 https://www.lingtiku.com/quiz/detail/5
 new Vue()之后，Vue会从根组件开始，遍历整个组件树，对每个组件进行处理。

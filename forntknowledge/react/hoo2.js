@@ -31,7 +31,7 @@ react fiber这种数据结构使得节点可以回溯到其父节点，只要保
 React 事件合成的概念：React 应用中，元素绑定的事件并不是原生事件，而是React 合成的事件，比如 onClick 是由 click 合成，onChange 
 是由 blur ，change ，focus 等多个事件合成。
 React的事件和普通的HTML事件有什么不同？
-区别：
+区别： 
 对于事件名称命名方式，原生事件为全小写，react 事件采用小驼峰；
 对于事件函数处理语法，原生事件为字符串，react 事件为函数；
 react 事件不能采用 return false 的方式来阻止浏览器的默认行为，而必须要地明确地调用preventDefault()来阻止默认行为。

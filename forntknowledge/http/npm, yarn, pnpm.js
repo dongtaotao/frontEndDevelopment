@@ -11,7 +11,7 @@ pnpm 为何节省空间
 它解决了 npm/yarn 平铺 node_modules 带来的依赖项重复的问题 (doppelgangers)
 
 优势
-一、速度快
+一、速度快 
 二、高效利用磁盘空间
 三、支持monorepo
 四、安全        

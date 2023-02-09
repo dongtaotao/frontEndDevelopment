@@ -2,7 +2,7 @@
 HTTP
 http://interview.poetries.top/excellent-docs/14-HTTP%E6%A8%A1%E5%9D%97.html#_6-4-http%E4%B8%8Ehttps%E5%8C%BA%E5%88%AB
 
-TCP 和 UDP 的区别
+TCP 和 UDP 的区别 
 TCP 是面向连接的，udp 是无连接的即发送数据前不需要先建立链接
 TCP 提供可靠的服务。也就是说，通过 TCP 连接传送的数据，无差错，不丢失， 不重复，且按序到达;UDP 尽最大努力交付，
   即不保证可靠交付。 并且因为 tcp 可靠， 面向连接，不会丢失数据因此适合大数据量的交换

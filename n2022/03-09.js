@@ -152,7 +152,7 @@ exprot class son{
 <div>
     <app-son  (voted)="onVoted($event)"> </app-son>
 </div>
-exprot class app{
+exprot class app{ 
     agreed = 0;
     onVoted(agreed: boolean) {
        agreed ? this.agreed++ : agreed--;

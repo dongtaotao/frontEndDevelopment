@@ -286,7 +286,7 @@ https://www.bilibili.com/video/BV1dV411a7mT/
 【Vue知识】set方法的实现     
 https://www.bilibili.com/video/BV1xv411472h?spm_id_from=333.999.0.0
 【Vue知识】provide和inject的原理
-https://www.bilibili.com/video/BV1rK4y1V7Wj?spm_id_from=333.999.0.0
+https://www.bilibili.com/video/BV1rK4y1V7Wj?spm_id_from=333.999.0.0 
 Vue父组件使用scoped无法修改子组件样式
 https://blog.gaogangsever.cn/vue/Vue%E7%88%B6%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8scoped%E6%97%A0%E6%B3%95%E4%BF%AE%E6%94%B9%E5%AD%90%E7%BB%84%E4%BB%B6%E6%A0%B7%E5%BC%8F.html#sidebar-false
 

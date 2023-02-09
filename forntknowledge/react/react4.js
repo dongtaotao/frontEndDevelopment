@@ -1,7 +1,7 @@
 一步步写一个react组件库并打包发布到npm
 https://juejin.cn/post/7111717904374038536
 
-从零开始搭建react基础开发环境（基于webpack5）🐯
+从零开始搭建react基础开发环境（基于webpack5）🐯 
 https://juejin.cn/post/7135078555033010213
 https://github.com/handsomezyw/my-webpack
 
@@ -23,3 +23,5 @@ https://zhuanlan.zhihu.com/p/73605806
 https://juejin.cn/post/7007615666609979400
 
 如何在React项目中使用ECharts图表库 https://juejin.cn/post/6920424288122044424
+
+webpack5+react18+ts+antd5 https://juejin.cn/post/7184809135504883773

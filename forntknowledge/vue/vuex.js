@@ -6,7 +6,7 @@ Vuex是通过全局注入store对象，来实现组件间的状态共享。
 https://juejin.cn/post/7109648249887129630
 
 如何更好的使用module vuex？
-https://juejin.cn/post/6844903807285985294
+https://juejin.cn/post/6844903807285985294 
 
 Vuex的设计思想 https://www.cnblogs.com/lguow/p/13753900.html
 Vuex的设计思想，借鉴了Flux、Redux，将数据存放到全局的store，再将store挂载到每个vue实例组件中，利用Vue.js的细粒度数据响应机制来进行高效的状态更新。
@@ -118,7 +118,7 @@ Vuex使用vue中的reactive方法将state设置为响应式，原理和Vue组件
 // vuex/src/store-util.js
 import {reactive} from 'vue';
 
-store._state = reactive({
+store._state = reactive({ 
     data: state 
 });
 

@@ -151,4 +151,4 @@ https://juejin.cn/post/6844904168004517901
 
 
 使用nexus2.13.0搭建npm私服
-https://juejin.cn/post/7119392650674831367 
+https://juejin.cn/post/7119392650674831367  

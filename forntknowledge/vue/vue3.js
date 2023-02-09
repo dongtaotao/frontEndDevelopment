@@ -523,7 +523,7 @@ createApp({
   },
   methods: {
     bar() {
-      console.log('我是bar方法');
+      console.log('我是bar方法'); 
     }
   },
 }).mount('#app')

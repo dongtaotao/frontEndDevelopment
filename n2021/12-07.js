@@ -304,13 +304,13 @@ console.log(a == 1 && a == 2);//true
 //================================================
 写一个function，清除字符串前后的空格
 function trim(str) {
-    if (str & typeof str === "string") {
-        return str.replace(/(^\s*)|(\s*)$/g,""); //去除前后空白符
-    }
+  if (str & typeof str === "string") {
+    return str.replace(/(^\s*)|(\s*)$/g,""); //去除前后空白符
+  }
 }
 
 const trim = (str) => {
-    return str.replace(/(^\s*)|(\s*)$/g, '')
+  return str.replace(/(^\s*)|(\s*)$/g, '')
 }
 
 新数组 = 原数组.slice(开始位置的索引, 结束位置的索引); 
@@ -345,7 +345,7 @@ IndexedDB是HTML5规范里新出现的浏览器里内置的数据库。对于在
 永久储存（可手动清除）	无限储存
 链接：https://www.jianshu.com/p/bb116c7a74b3
 
-合并区间
+数组合并区间
 输入: [[1,3],[2,6],[8,10],[15,18]]
 输出: [[1,6],[8,10],[15,18]]
 解释: 区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6].

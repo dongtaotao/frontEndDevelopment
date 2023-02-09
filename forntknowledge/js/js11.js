@@ -311,10 +311,10 @@ https://u.10010.cn/qAPZU
 将数组转成树结构 (动态路由权限)(后端下发数据转换成动态路由) 🔥🔥🔥
 https://juejin.cn/post/7057288955145748494
 const data = [
-    { parentId: -1, id: 1, name: '首页', path: '/home', auth: 'home' },
-    { parentId: 1, id: 2, name: '列表', path: '/list', auth: 'list' },
-    { parentId: -1, id: 3, name: '推荐', path: '/rank', auth: 'rank' },
-    { parentId: -1, id: 4, name: '关于', path: '/about', auth: 'about' },
+  { parentId: -1, id: 1, name: '首页', path: '/home', auth: 'home' },
+  { parentId: 1, id: 2, name: '列表', path: '/list', auth: 'list' },
+  { parentId: -1, id: 3, name: '推荐', path: '/rank', auth: 'rank' },
+  { parentId: -1, id: 4, name: '关于', path: '/about', auth: 'about' },
 ]
 // 定义默认路由
 export let defaultRoutes = [
@@ -617,4 +617,4 @@ https://mybrowseraddon.com/access-control-allow-origin.html?v=0.1.7&type=install
 https://github.com/dwqs/blog/issues/70
 
 「前端进阶」高性能渲染十万条数据(虚拟列表)
-https://juejin.cn/post/6844903982742110216  
+https://juejin.cn/post/6844903982742110216   

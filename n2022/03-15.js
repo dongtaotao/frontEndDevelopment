@@ -129,8 +129,6 @@ sso 认证中心校验令牌，返回有效，注册系统 2
 
 作者：一只前端小菜鸟
 链接：https://juejin.cn/post/7095945284504518663
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 react-ant-admin后台管理系统，用于快速创建后台项目模板
 https://www.cnblogs.com/kongyijilafumi/p/14695044.html
@@ -327,4 +325,4 @@ flatten();
 https://juejin.cn/post/7004638318843412493
 
 最新的前端大厂面经（详解答案）
-https://juejin.cn/post/7004638318843412493    
+https://juejin.cn/post/7004638318843412493     

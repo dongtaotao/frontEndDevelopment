@@ -321,7 +321,7 @@ https://juejin.cn/post/7065483941305647112#heading-90
 可以发送get请求，且不需要获取和处理数据
 可以跨域
 执行过程无阻塞
-相比XMLHttpRequest，性能更好
+相比XMLHttpRequest，性能更好 
 gif体积小
 
 使用create-react-app加持typescript打造自己的组件库

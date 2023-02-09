@@ -85,7 +85,8 @@ localstorage 怎么存储图片⭐⭐⭐⭐
 https://blog.csdn.net/qq_33277654/article/details/122924692
 
 如何实现大文件上传？
-使用 input 接受大文件，使用file.slice进行分割分块上传（制定好一个块的大小，然后进行分割），等所有块上传完毕之后，promise.all(),运行成功回调
+使用 input 接受大文件，使用file.slice进行分割分块上传（制定好一个块的大小，然后进行分割），等所有块上传完毕之后，promise.all(),
+运行成功回调
 
 web worker是干什么的？
 js是单线程的，而web worker可以多创建一个子线程，多出来的这个子线程执行代码时不会阻塞主线程。它有几个限制，
@@ -314,7 +315,7 @@ require 引入的模块 webpack 能做 Tree Shaking 吗？
      <img src="loading.gif"  data-src="pic.png">
      <img src="loading.gif"  data-src="pic.png">
      <img src="loading.gif"  data-src="pic.png">
-     <img src="loading.gif"  data-src="pic.png">
+     <img src="loading.gif"  data-src="pic.png"> 
      <img src="loading.gif"  data-src="pic.png">
 </div>
 <script>

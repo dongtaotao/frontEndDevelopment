@@ -98,9 +98,9 @@ console.log(add(1)(2, 3));
 JavaScript实现千位分隔符 https://www.jianshu.com/p/928c68f92c0c
 function numFormat(num){
   var res=num.toString().replace(/\d+/, function(n){ // 先提取整数部分
-       return n.replace(/(\d)(?=(\d{3})+$)/g,function($1){
-          return $1+",";
-        });
+    return n.replace(/(\d)(?=(\d{3})+$)/g,function($1){
+      return $1+",";
+    });
   })
   return res;
 }
@@ -211,11 +211,11 @@ var hasPathSum = function(root, sum) {
   if(!root) return false;
   let res = false;
   const dfs = (n, s) => {
-      if (!n.left && !n.right && s === sum) {
-        res = true;
-      }
-      if (n.left) dfs(n.left, s + n.left.val);
-      if (n.right) dfs(n.right, s + n.right.val);
+    if (!n.left && !n.right && s === sum) {
+      res = true;
+    }
+    if (n.left) dfs(n.left, s + n.left.val);
+    if (n.right) dfs(n.right, s + n.right.val);
   }
   dfs(root, root.val);
   return res;
@@ -238,13 +238,13 @@ var maxProfit = function (prices){
   let minPrice = prices[0],
       maxProfit = 0;
   for (let i = 0; i < prices.length; i ++){
-      //判断当前的价格是否小于最小的价格
-      if(prices[i] < minPrice){
-          minPrice = prices[i];
-          // 当前价格减去最小价格 是否大于之前存储的最大利润
-      }else if ((prices[i] - minPrice) > maxPrice){
-          maxPrice = prices[i] -minPrice;
-      }
+    //判断当前的价格是否小于最小的价格
+    if(prices[i] < minPrice){
+      minPrice = prices[i];
+      // 当前价格减去最小价格 是否大于之前存储的最大利润
+    }else if ((prices[i] - minPrice) > maxPrice){
+      maxPrice = prices[i] -minPrice;
+    }
   }
   return maxProfit;
 }
@@ -268,7 +268,6 @@ var  isPalindrome = function (s) {
     }
     left++;
     right --;
-
   }
   // 如果没有返回false  那么后面也不用再去判断了 直接返回true 
   return true;

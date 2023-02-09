@@ -69,7 +69,6 @@ https://juejin.cn/post/6865451649817640968
 一个合格的中级前端工程师应该掌握的 20 个 Vue 技巧
 https://juejin.cn/post/6872128694639394830
 
-
 vue 引入 iconfont
 https://juejin.cn/search?query=vue%20%E5%BC%95%E5%85%A5%20iconfont
 
@@ -106,7 +105,8 @@ https://www.bilibili.com/video/BV1pb4y1n7J7/?spm_id_from=333.999.0.0&vd_source=0
 https://www.bilibili.com/video/BV1LT4y1w7v7/?spm_id_from=333.788.recommend_more_video.-1&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 
 .Sync的作用是什么？
-vue 修饰符 sync 的功能是：当父组件提供了一个数据，而子组件想要去更改这个数据，但是 Vue 的规则不能让子组件去修改父组件的数据，就需要通过 this.$emit 和 $event，来实现数据修改的目的。
+vue 修饰符 sync 的功能是：当父组件提供了一个数据，而子组件想要去更改这个数据，但是 Vue 的规则不能让子组件去修改父组件的数据，
+就需要通过 this.$emit 和 $event，来实现数据修改的目的。
 :money.sync="total" 
 // 等价于 
 :money="total" v-on:update:money="total = $event"
@@ -177,7 +177,7 @@ vue插件开发、文档书写、github发布、npm包发布一波流 https://ju
 构建项目，创建项目基本结构
 引入必要的插件：
 代码规范：prettier，eslint
-提交规范：husky，lint-staged`
+提交规范：husky，lint-staged
 其他常用：svg-loader，vueuse，nprogress
 常见目录结构
 
@@ -234,3 +234,7 @@ sync的作用
 
 <!-- 相当于多了一个事件监听，事件名是update:a, -->
 <!-- 回调函数中，会把接收到的值赋值给属性绑定的数据项中。 -->
+
+vue项目如何监听窗口变化，达到页面自适应？ https://segmentfault.com/a/1190000016512967
+vue+elementUI前端表格excel文件下载
+https://www.cnblogs.com/jerome92/p/14042784.html

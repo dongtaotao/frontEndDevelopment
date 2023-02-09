@@ -2,7 +2,7 @@
 https://www.cnblogs.com/ranyonsue/p/14700528.html
 
 手写ReactHook核心原理，再也不怕面试官问我ReactHook原理
-https://cloud.tencent.com/developer/article/1784501
+https://cloud.tencent.com/developer/article/1784501 
 
 react hooks 万字总结,带你夯实基础
 https://juejin.cn/post/6993139082054336548
@@ -165,11 +165,11 @@ import {useState, createContext, useContext} from 'react'
 const NumContext = createContext();
 // 子组件
 function Count(){
-    // 3、调用上下文内容
-    const num = useContext(NumContext)
-    return (
-        <h3>{num}</h3>
-    )
+  // 3、调用上下文内容
+  const num = useContext(NumContext)
+  return (
+      <h3>{num}</h3>
+  )
 }
 function App3(){
     const [num, setNum] = useState(0)
@@ -585,4 +585,4 @@ React构建组件/React 组件设计模式的方式有哪些-面试题
 https://juejin.cn/post/6952907248393781284
 
 面试官:React 中如何做性能优化? 我:😰 ?😰 ? 😰 ?
-https://juejin.cn/post/6953921338687881223#heading-10  
+https://juejin.cn/post/6953921338687881223#heading-10   

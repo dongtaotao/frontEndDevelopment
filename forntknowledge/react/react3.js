@@ -20,7 +20,7 @@ React移动端适配解决方案
 https://zhuanlan.zhihu.com/p/148529375
 
 webpack5 手动搭建前端项目（react+antd + ts）
-https://juejin.cn/post/7096802032782147592
+https://juejin.cn/post/7096802032782147592 
 
 react18 https://juejin.cn/post/7078601734716653604
 
@@ -370,4 +370,4 @@ Link 的本质也是a 标签。只不过在Link 中禁用了 a 标签的默认�
 https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/135     
 
 移动端小案例,最好有react基础
-https://www.bilibili.com/video/BV1uL4y1N7qn?p=7&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+https://www.bilibili.com/video/BV1uL4y1N7qn?p=7&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a 

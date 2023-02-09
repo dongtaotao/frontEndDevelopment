@@ -9,7 +9,7 @@ actions: 异步更改状态
 getters: 获取状态
 modules: 将state分成多个modules，便于管理 
 
-//https://www.bilibili.com/video/BV1oZ4y1V7tx?p=99
+//https://www.bilibili.com/video/BV1oZ4y1V7tx?p=99 
 this.$router.addRouters([
   {
     path: '/',
@@ -226,7 +226,7 @@ diff算法应用很广泛，例如提交github pr 或者（gitlab mr）
 
 tree diff优化
 之比较同一层级，不跨级比较
-tag 不同则删掉重建（不再去比较内部的细节）
+tag 不同则删掉重建（不再去比较内部的细节） 
 
 React diff 特点
 仅向右移动

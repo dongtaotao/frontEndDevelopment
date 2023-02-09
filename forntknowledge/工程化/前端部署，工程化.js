@@ -31,7 +31,7 @@ https://zhuanlan.zhihu.com/p/107285294
 react项目(windows本地)打包部署到服务器(阿里云ubuntu)
 https://www.jianshu.com/p/1d5e49a8387e
 
-vue/react/web前端项目部署到阿里云服务器_nginx_pm2流程及部署前的准备 **********
+vue/react/web前端项目部署到阿里云服务器_nginx_pm2流程及部署前的准备 ********** 
 https://blog.csdn.net/Charissa2017/article/details/105886521
 
 Vue项目打包部署到Nginx服务器步骤总结

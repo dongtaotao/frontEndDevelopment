@@ -129,4 +129,4 @@ https://juejin.cn/post/6911472693405548557
 <script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
 
 Vue项目性能优化实操,从50分到80分
-https://juejin.cn/post/7101560677688410125
+https://juejin.cn/post/7101560677688410125  

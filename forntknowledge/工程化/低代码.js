@@ -14,7 +14,15 @@ HTML5 drag & drop 拖拽与拖放
 https://www.html5iq.com/6115c37f3a5920292e6f9545.html
 低代码平台
 
-
 一个低代码平台的前端部分，靠拖拉拽生成页面。
 https://github.com/woai3c/visual-drag-demo?utm_source=gold_browser_extension
 一个低代码（可视话拖拽）教学项目
+
+开源 VUE3 低代码可视化大屏开发平台，拖拉拽！
+https://www.bilibili.com/video/BV1g14y1v7S9/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+Vue低代码动态生成H5
+https://www.bilibili.com/video/BV1Q24y117ve/?vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+vue实现一个低代码平台(下篇)
+https://www.bilibili.com/video/BV1bg41177de/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a

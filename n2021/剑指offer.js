@@ -9,7 +9,7 @@ https://blog.csdn.net/weixin_42235173/article/details/90897252
 https://blog.csdn.net/Damp_XUN/article/details/98502147
 剑指offer JavaScript版
 
-//================================================================
+//=================================================================
 剑指offer（5）用两个栈实现队列
 栈是先进后出，队列是先进先出，因此两个栈，一个用来push，一个用来pop
 ，同时注意下两个栈不为空的时候。
@@ -110,13 +110,13 @@ function MoreThanHalfNum_Solution(numbers) {
   var hashmap = {}
   var len = numbers.length / 2
   for (let i = 0; i < numbers.length; i++) {
-      let item = numbers[i]
-      if (hashmap[item]) {
-          hashmap[item]++
-      } else {
-          hashmap[item] = 1
-      }
-      if (hashmap[item] > len) return item
+    let item = numbers[i]
+    if (hashmap[item]) {
+      hashmap[item]++
+    } else {
+      hashmap[item] = 1
+    }
+    if (hashmap[item] > len) return item
   }
   return 0
 }
@@ -155,9 +155,9 @@ var constructArr = function(a) {
 var strStr = function (haystack, needle) {
   if (needle === "") return 0
   for (var i = 0; i < haystack.length; i++) {
-      if (haystack[i] === needle[0]) {
-        if (haystack.substring(i, i + needle.length) === needle) return i;
-      }
+    if (haystack[i] === needle[0]) {
+      if (haystack.substring(i, i + needle.length) === needle) return i;
+    }
   }
   return -1
 };
@@ -199,11 +199,11 @@ var strStr = function (haystack, needle) {
 var moveZeroes = function(nums) {
   let i = j = 0;
   while(i < nums.length) {
-      if(nums[i] !== 0){
-        [nums[i], nums[j]] = [nums[j], nums[i]]
-        j++
-      }
-      i++
+    if(nums[i] !== 0){
+      [nums[i], nums[j]] = [nums[j], nums[i]]
+      j++
+    }
+    i++
   }
   return nums
 };
@@ -211,10 +211,10 @@ var moveZeroes = function(nums) {
 var moveZeroes = function (nums) {
   let j = 0;
   for (let i = 0; i < nums.length; i++) {
-      if (nums[i] !== 0) {//遇到非0元素，让nums[j] = nums[i]，然后j++
-          nums[j] = nums[i];
-          j++;
-      }
+    if (nums[i] !== 0) {//遇到非0元素，让nums[j] = nums[i]，然后j++
+      nums[j] = nums[i];
+      j++;
+    }
   }
   for (let i = j; i < nums.length; i++) {//剩下的元素全是0
       nums[i] = 0;
@@ -292,9 +292,9 @@ function min(){
 37.统计一个数字在排序数组中出现的次数。
 链接：https://www.nowcoder.com/discuss/49349?from=zhnkw
 function GetNumberOfK(data, k){
-    return data.reduce(function(count, a){
-        return a === k ? count+1 : count;
-    }, 0);
+  return data.reduce(function(count, a){
+    return a === k ? count+1 : count;
+  }, 0);
 }
 //================================================================
 剑指offer（6）旋转数组中的最小数字
@@ -401,21 +401,21 @@ function FirstNotRepeatingChar(str) {
 function maxInWindows(num, size)
 {
   if(num.length < size) {
-      return []
+    return []
   }
   if(size === 0) {
-      return []
+    return []
   }
   let result = [];
   for (let i = 0; i <= num.length - size; i++) {
-      let item = Math.max(...num.slice(i, size + i))
-      result.push(item);
+    let item = Math.max(...num.slice(i, size + i))
+    result.push(item);
   }
   return result;
   // write code here
 }
 module.exports = {
-    maxInWindows : maxInWindows
+  maxInWindows : maxInWindows
 };
 //================================================================
 JZ71 跳台阶扩展问题
@@ -474,10 +474,10 @@ function PrintFromTopToBottom(root){
       var temp = queue.shift();
       result.push(temp.val);
       if (temp.left) {
-          queue.push(temp.left);
+        queue.push(temp.left);
       }
       if (temp.right) {
-          queue.push(temp.right); 
+        queue.push(temp.right); 
       }
   }
   return result;
@@ -486,9 +486,9 @@ function PrintFromTopToBottom(root){
 37.统计一个数字在排序数组中出现的次数。
 链接：https://www.nowcoder.com/discuss/49349
 function GetNumberOfK(data, k){
-    return data.reduce(function(count, a){
-        return a === k ? count+1 :count;
-    }, 0);
+  return data.reduce(function(count, a){
+    return a === k ? count+1 :count;
+  }, 0);
 }
 
 //================================================================
@@ -574,23 +574,23 @@ var uniquePaths = function (m,n){
   //在数组里面使用for循环 里面放空数组 就变成二维数组
   const memo = [];
   for(let i = 0;i<n;i++){
-      memo.push([]);
+    memo.push([]);
   }
   //第一行路径都是1  只有一条路径
   for(let row = 0; row <n; row ++){
-      memo[row][0] = 1;
+    memo[row][0] = 1;
   }
   // 这个是第一列
   for (let col = 0; col<m; col ++){
-      memo[0][col] = 1;
+    memo[0][col] = 1;
   }
   // 这个才是正式开始算后面格子的路径
   // 两层循环就是行列二维数组 
   for (let row = 1; row <n; row ++){
-      for (let col = 1; col <m ;col++){
-          // 最终路径等于他上面的格子的路径加左面格子的路径
-          memo[row][col]= memo[row-1][col]+memo[row][col-1];
-      }
+    for (let col = 1; col <m ;col++){
+      // 最终路径等于他上面的格子的路径加左面格子的路径
+      memo[row][col]= memo[row-1][col]+memo[row][col-1];
+    }
   }
   return  memo[n-1][m-1]; //最后终点的值是n-1，m-1  所以返回这
 }
@@ -748,17 +748,16 @@ module.exports = {
 //======== ==============================
 数组中只出现一次的数字
 一个整型数组里除了两个数字之外，其他的数字都出现了两次。请写程序找出这两个只出现一次的数字。
-function FindNumsAppearOnce(array)
-{
-    var res=[]
-    for(var i=0;i<array.length;i++){
-        if(array.lastIndexOf(array[i])==array.indexOf(array[i])){
-            res.push(array[i])
-        }
-        if(res.length==2){
-            return res
-        }
+function FindNumsAppearOnce(array){
+  var res=[]
+  for(var i=0;i<array.length;i++){
+    if(array.lastIndexOf(array[i])==array.indexOf(array[i])){
+      res.push(array[i])
     }
+    if(res.length==2){
+      return res
+    }
+  }
 }
 ————————————————
 原文链接：https://blog.csdn.net/violet_seven/article/details/107042191

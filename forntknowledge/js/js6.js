@@ -291,7 +291,7 @@ function mySetInterval(fn, delay) {
     timer = setTimeout(() => {
       loop();
       fn();
-    }, delay);
+    }, delay); 
   };
   loop();
   return () => {

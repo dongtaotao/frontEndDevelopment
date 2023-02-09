@@ -552,7 +552,7 @@ Egg.js是阿里旗下的一个基于nodejs和koa2的企业级应用框架，基�
 
 Proxy的优势如下:
 
-Proxy可以直接监听对象而非属性
+Proxy可以直接监听对象而非属性 
 Proxy可以直接监听数组的变化
 Proxy有多达13种拦截方法,不限于apply、ownKeys、deleteProperty、has等等是Object.defineProperty不具备的
 Proxy返回的是一个新对象,我们可以只操作新的对象达到目的,而Object.defineProperty只能遍历对象属性直接修改

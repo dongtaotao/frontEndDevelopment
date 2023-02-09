@@ -34,7 +34,6 @@ let results = await Promise.all(arr.map(async (item) => {
 }));
 js在数组map时使用异步 https://blog.csdn.net/kuilaurence/article/details/117931829
 
-
 react中异步加载利用import() 编写 asyncComponent.js  **************************************************************
 es6提供import()函数，它是运行时执行，也就是说，什么时候运行到这一句，就会加载指定的模块。
 import()返回一个 Promise 对象:
@@ -385,4 +384,4 @@ https://baijiahao.baidu.com/s?id=1627060039271152391&wfr=spider&for=pc
 
 为什么说你的数组乱序不够乱？
 https://juejin.cn/post/7066821556541849630
-arr.sort(() => Math.random() - 0.5) 
+arr.sort(() => Math.random() - 0.5)  
