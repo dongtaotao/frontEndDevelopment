@@ -213,5 +213,5 @@ window.addEventListener(‘error’)
 window.addEventListener(‘unhandledrejection’)     
 
 数据上报
-XMLHttpRequest  
+XMLHttpRequest   
 Image     

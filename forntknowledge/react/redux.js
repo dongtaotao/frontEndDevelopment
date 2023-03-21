@@ -7,7 +7,6 @@ https://juejin.cn/post/7099028351511167013
 Redux 技术分享
 https://juejin.cn/post/6978111642970259487
 
-
 开发 Redux 中间件
 开发中间件的模板代码：
 export default store => next => action => {}
@@ -36,12 +35,14 @@ createStore(reducer, applyMiddleware(
   
 链接：https://juejin.cn/post/7063073677520142366
 
-30张图全面剖析React Hooks
+30张图全面剖析React Hooks 🔥🔥🔥==========
 https://juejin.cn/post/7064097257821306916   
 
 剖析react-redux原理以及手写实现
 https://juejin.cn/post/7010687960731353095
 
-
 Redux持久化插件-解决刷新页面数据丢失问题  
 https://juejin.cn/post/6885907913265971208
+
+React全家桶之整合redux-persist
+https://www.jianshu.com/p/d627e8428e56

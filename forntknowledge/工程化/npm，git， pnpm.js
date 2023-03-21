@@ -40,7 +40,7 @@ npm -version(或者 node -v)
   yarn run/test 
   npm run/test 
 
-gitrevert 和 gitreset 的区别
+git revert 和 git reset 的区别
 git revert是用一次新的commit来回滚之前的commit，git reset是直接删除指定的commit。
 在回滚这一操作上看，效果差不多。但是在日后继续merge以前的老版本时有区别。因为git revert是用一次逆向的commit“中和”之前的提交，
 因此日后合并老的branch时，导致这部分改变不会再次出现，但是git reset是之间把某些commit在某个branch上删除，因而和老的branch再次merge时，
@@ -66,3 +66,51 @@ https://juejin.cn/post/6892671601175691272
 
 上传自己的npm包
 https://www.bilibili.com/video/BV1Zg41117tS?p=10&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+
+pnpm包管理工具
+pnpm add xxx
+pnpm remove xxx
+pnpm config get registry
+
+monorepo 一种多个项目之间共享代码的方式
+
+实际怎么用
+1.创建一个空项目
+2.在这个空项目中创建pnpm-workspace.yaml
+```
+package：
+   - "projects/**"
+```
+3.在projects目录下创建子项目
+4.pnpm add XXX
+
+1.PNPM：更快速，节省磁盘空间的包管理工具
+https://www.bilibili.com/video/BV1i34y1W7P5/?spm_id_from=333.788&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+----集中存储
+----monorepo
+----依赖隔离
+
+2.monorepo
+------解决重复代码的维护
+------解决了需要私服腹部和管理npm
+-------越来越收到钱盾啊的欢迎
+
+为Monorepo 项目配置 gitlab ci
+https://www.bilibili.com/video/BV1rP411u7Zn/?spm_id_from=333.788&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+三十分钟实战 pnpm monorepo ====== 🔥
+https://www.bilibili.com/video/BV1vf4y1Z753/?spm_id_from=333.788&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+
+秒懂pnpm monorepo的使用
+https://www.bilibili.com/video/BV1rA41197dt/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+超详细pnpm monorepo教程 🔥🔥
+https://www.bilibili.com/video/BV1e84y1B7s3/?spm_id_from=autoNext&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+尤大都在用的monorepo，你都还没有听过？
+https://www.bilibili.com/video/BV1i34y1W7P5/?spm_id_from=333.788.recommend_more_video.2&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+来聊一聊前端工程师会涉及的monorepo管理工具lerna
+https://www.bilibili.com/video/BV1DP41177nj/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a

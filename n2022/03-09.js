@@ -46,7 +46,7 @@ nextjs
 详解小程序工作原理和性能优化
 https://juejin.cn/post/7073121416605876237?utm_source=gold_browser_extension
 
-flutter 生命周期
+flutter 生命周期 
 StatefulWidget 里 Widget 这部分的功能是：
 
 创建 State
@@ -171,5 +171,5 @@ ngOnChanges() 当被绑定的输入属性的值发生变化时调用，首次调
 ngOnInit() 在第一轮 ngOnChanges() 完成之后调用，只调用一次
 ngOnDestroy() 在 Angular 销毁指令/组件之前调用
 
-通过http访问服务器  
+通过http访问服务器   
 

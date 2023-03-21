@@ -54,5 +54,4 @@ var reverseKGroup = function(head, k) {
   head.next = reverseKGroup(cur,k); 
   return pre;
 };
-
 https://juejin.cn/post/7018919184528572429 

@@ -28,4 +28,14 @@ https://www.bilibili.com/video/BV1LT41157ag?p=3&vd_source=0c743a1becd4c9f9a0c3fc
 11.移动端事件与事件对象
 12.touch与click
 13.点击穿透问题_解决方案1
-14.点击穿透问题_其他解决方案
+14.点击穿透问题_其他解决方案 
+
+
+Vue3 Vite Vant TS (Pinia/Vuex) rem 移动端框架方案
+https://juejin.cn/post/7078877401626705957
+
+实战技巧、vue+vant开发移动端
+https://juejin.cn/post/6924583125847080967#heading-1
+
+【从入门到提桶】vue3.2 + vite + vant + pinia + ts 移动端 h5 项目新手实践
+https://juejin.cn/post/7134610733962100750#heading-28

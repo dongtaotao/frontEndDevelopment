@@ -27,7 +27,7 @@ yarn.lock 文件：yarn 安装项目依赖时记录实际依赖版本信息，�
 请求头中的 refer 来判断是否屏蔽图片
 
 peerDependency 是为了解决什么问题:避免重复安装============================= 
-
+ 
 如何处理白屏错误页的监控的？
 排查兼容性。大部分原因是因为低端机型/浏览器低版本 polyfill 的问题导致报错 
 排查网络。js 是否下载成功 cdn 是否生效
@@ -324,7 +324,7 @@ log-symbols: 显示出 √ 或 × 等的图标
 手写Vue脚手架
 https://www.bilibili.com/video/BV1w54y1B7Tb/?spm_id_from=333.788.recommend_more_video.0
 
-前端请求后端数据，vue-cli用graphql的方法去请求
+前端请求后端数据，vue-cli用graphql的方法去请求 
 https://segmentfault.com/a/1190000019586579
 
 ES数据库Elasticsearch和MongoDB/Redis/Memcache一样，是非关系型数据库。

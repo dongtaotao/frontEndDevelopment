@@ -1,3 +1,16 @@
+前端要懂的持续集成与持续部署 CI CD Jenkins  🔥🔥🔥
+https://www.bilibili.com/video/BV12y4y1M7jU/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+前端项目自动化部署(Docker+Nginx+Jenkins)
+https://juejin.cn/post/6899002437614223368
+
+实战笔记：Jenkins打造强大的前端自动化工作流 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+https://juejin.cn/post/6844903591417757710
+
+手摸手教你docker+jenkins+gitlab部署你的vue前端项目 🔥🔥
+https://juejin.cn/post/6950280074876682276
+
+
 GitHub Actions自动化部署前端项目指南  视频  🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 https://zhuanlan.zhihu.com/p/433426848
 https://www.bilibili.com/video/BV1BP4y1G7NR?spm_id_from=333.337.search-card.all.click
@@ -149,7 +162,6 @@ React 中 setState 是一个宏任务还是微任务？https://juejin.cn/post/69
 
 Egg.js是阿里旗下的一个基于nodejs和koa2的企业级应用框架，基于es6，es7 和nodejs。 
 
-
 阿里云服务器ECS 购买域名搭建 ******** 
 https://www.bilibili.com/video/BV12b4y18725?p=4
 https://juejin.cn/post/7062263045342363679#heading-5
@@ -205,6 +217,12 @@ https://juejin.cn/post/7110472489007841311
 https://oliver.blog.csdn.net/article/details/121098382?spm=1001.2101.3001.6650.17&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-17-121098382-blog-123294948.pc_relevant_aa&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-17-121098382-blog-123294948.pc_relevant_aa&utm_relevant_index=25
 
 
+[GitHub Actions]-前端自动化部署Vue3+Vite-初探
+https://juejin.cn/post/7202127250643796024?
+
+GitHub Actions 入门教程
+https://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html
+
 前端项目发布 与 持续集成
 前端项目发布
 本质是把前端代码放到服务器的根目录
@@ -215,6 +233,43 @@ nginx 配合git hooks
 docker 虚拟容器
 jekens java项目采用
 
+github-action + docker + 腾讯云实现自动化部署
+https://zhuanlan.zhihu.com/p/575568938
 
-Web团队建设--自定义脚手架
-https://juejin.cn/post/7156961879837900830
+你知道，前端工程部署有哪些方式嘛？ https://juejin.cn/post/7187582297124634680?
+手动部署、命令工具部署、docker镜像部署、平台化部署。
+
+
+
+gitlab-cicd-保姆式讲解从零到一搭建部署流程
+https://www.bilibili.com/video/BV1YP411N7sT/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+nginx 部署前端项目
+https://www.bilibili.com/video/BV1fG4y1a7Sv/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+
+前端cicd B站
+
+CICD速成—3天Linux云计算之CICD持续集成训练营，从入门到精通（全套分享）
+https://www.bilibili.com/video/BV14e4y1x7Tg/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+【文章解读】使用nginx部署vue项目及常见问题
+https://www.bilibili.com/video/BV1x84y1k7qf/?spm_id_from=333.788.recommend_more_video.-1&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+在本地和CI/CD中支持npm免登录发布
+https://cloud.tencent.com/developer/article/2231256
+
+让你的项目部署由五档手动升级为全自动
+https://juejin.cn/post/7178668238744584250
+
+
+使用Docker+Nginx部署前端项目
+Docker 是一种容器化技术，能够方便地将应用程序和它们所依赖的组件打包到一个容器中，并在不同的环境中运行。
+Nginx 是一种高性能的 Web 服务器和反向代理服务器，常用于部署前端项目。
+https://juejin.cn/post/7210225864355954747
+
+正儿八经的前端项目部署流程
+https://juejin.cn/post/6897100462676246541
+
+❬前端❭ 优化实战（性能、安全、架构、算法、面试）
+https://juejin.cn/column/7001715712922222623

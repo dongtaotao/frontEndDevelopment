@@ -245,7 +245,7 @@ webpack是一个串行的过程，从启动到结束会依次执行以下流程
 开始编译：从上一步获得的参数初始化compiler对象，加载所有的插件，通过run方法执行编译。
 确定入口：根据配置文件的entry找出所有入口文件。
 编译模块：从入口文件开始，调用所有配置的loader对模块进行翻译成compliation，然后递归所有依赖的模块，然后重复编译。
-    得到每个模块翻译后的最终内容以及它们之间的依赖关系。
+  得到每个模块翻译后的最终内容以及它们之间的依赖关系。
 输出资源：根据入口和模块的依赖关系，组装成一个个包含多个模块的chunk，然后将chunk转换成一个单独的文件加入输出列表，这是可以修改输出内容的最后机会
 输出完成： 在确定好输出内容后，根据配置确定输出的路径和文件名，将文件的内容写入文件系统上。
 
@@ -436,6 +436,6 @@ https://www.cnblogs.com/wuguanglin/p/code-interview.html  JS版剑指offer
 
 https://www.nowcoder.com/company/home/code/665?codeType=1 字节
 
-https://blog.csdn.net/weixin_42148873/category_10794148.html 
+https://blog.csdn.net/weixin_42148873/category_10794148.html  
 牛客题  
 

@@ -47,8 +47,6 @@ Babel 配置
 生产环境配置
 为生产环境添加 NPM 脚本
 抽离 Webpack 的公共配置
-最后
-参考文档
 
 「超详细React项目搭建教程三」集成 CSS/Less/Sass/Antd  
 https://juejin.cn/post/6947875008840466463
@@ -85,8 +83,6 @@ React Router + Antd 实现侧边栏菜单
 常见问题
 手动刷新子页面出现 404
 不能在 if/循环语句中使用 React Hooks
-最后
-参考文章
 
 「超详细React项目搭建教程六」集成 Redux/Typescript
 安装依赖
@@ -105,3 +101,98 @@ https://juejin.cn/post/6950690579286065182
 
 
 从零搭建React项目全家桶 https://juejin.cn/post/7176810508857638970
+
+
+【脚手架】从0到1搭建React18+TS4.x+Webpack5项目（一）项目初始化
+https://juejin.cn/post/7203169721839042615?可能想要玩的技术栈：
+【脚手架】从0到1搭建React18+TS4.x+Webpack5项目（二）基础功能配置
+https://juejin.cn/post/7203621090052456485?
+【脚手架】从0到1搭建React18+TS4.x+Webpack5项目（三）代码质量和git提交规范
+https://juejin.cn/post/7207374216126922809?
+
+
+主技术栈：webpack5 + React18 + TS4.x + React-Router6.x
+代码风格和规范：eslint + prettier + stylelint + husky + pre-commmit + commitlint
+样式与处理器：
+CSS module：less、sass、stylus
+CSS-in-JS：styled-components、emotion
+Atom CSS：tailwind、windi
+
+状态管理：TanStack Query、RTK/RTK-Query、mobx、recoil、jotai、zustand......
+UI：Antd5.x、Arco design......
+按需加载
+dark theme
+I18n
+......
+
+静态资源：图片、fonts、Media、数据资源(JSON、csv、tsv、excel)......
+React-Admin、可视化大屏、响应式、代码生成、低代码
+权限：React-Admin(RBAC) + Go、React-Admin(RBAC) + Node
+接口 mock
+性能优化
+
+工具层面：热更新、资源压缩、代码分离（动态导入、懒加载、预加载等）、缓存……
+代码层面：大组件拆分、全局状态管理、组件封装、re-render
+
+单测：Jest、React testing library，Chai、Mocha、Enzyme's......
+CI/CD、nginx、jekins、Docker 部署
+
+链接：https://juejin.cn/post/7203169721839042615
+
+
+使用 React18 + Vite + TypeScript 完成公司项目经验总结，学到了很多
+https://juejin.cn/post/7205842390842458149?
+
+
+Vite2 + Vue3 + TypeScript + Pinia 搭建一套企业级的开发脚手架
+https://juejin.cn/post/7036745610954801166
+搭建前准备
+Vue2 与 Vue3 的区别
+介绍 vite
+使用 vite 快速创建脚手架
+约束代码风格
+Eslint 支持
+项目下新建 .eslintrc.js
+项目下新建 .eslintignore
+prettier 支持
+解决 eslint 和 prettier 冲突
+项目下新建 .prettier.js
+项目下新建 .prettierignore
+package.json 配置:
+配置 husky + lint-staged
+首先安装 mrm
+安装 lint-staged
+配置文件引用别名 alias
+配置 css 预处理器 scss
+安装
+配置全局 scss 样式文件
+组件中使用
+路由
+统一请求封装
+状态管理 pinia
+安装 pinia
+创建 store, mian.ts :
+getters 用法介绍
+actions
+环境变量配置
+使用组件库 Naive UI
+安装 Naive UI
+如何使用
+全局配置 Config Provider
+Vite 常用基础配置
+基础配置
+生产环境生成 .gz 文件
+最终 vite.config.ts
+常用插件
+
+手把手教你用 vite + vue3 + ts + pinia + vueuse 打造企业级前端项目
+https://juejin.cn/post/7079785777692934174
+
+Vite2+Vue3+TypeScript：搭建企业级轻量框架实践
+https://juejin.cn/post/7052593172613955614
+
+开发一个react+ ts+webpack的前端开发环境(一)------基础环境搭建
+开发一个react+ ts+webpack的前端开发环境(二)------配置eslint、prettier、husky等代码规范检查工具
+开发一个react+ ts+webpack的前端开发环境(三)------webpack配置优化
+https://juejin.cn/post/7179182554912981047
+https://juejin.cn/column/7179189032323121212

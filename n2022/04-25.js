@@ -93,7 +93,7 @@ https://blog.csdn.net/qq_44606064/article/details/122722445
 基于 qiankun 的微前端最佳实践（图文并茂） - 应用间通信篇
 https://juejin.cn/post/6844904151231496200#heading-8
 
-基于 qiankun 的微前端最佳实践（万字长文） - 从 0 到 1 篇
+基于 qiankun 的微前端最佳实践（万字长文） - 从 0 到 1 篇---------------
 https://juejin.cn/post/6844904158085021704
 
 万字长文+图文并茂+全面解析微前端框架 qiankun 源码 - qiankun 篇
@@ -147,7 +147,7 @@ https://juejin.cn/post/7055478418204262436
 
 
 前端工程化之用commintlint + husky实现git提交规范化
-https://juejin.cn/post/6844904168004517901
+https://juejin.cn/post/6844904168004517901 
 
 
 使用nexus2.13.0搭建npm私服

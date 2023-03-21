@@ -543,12 +543,12 @@ setup() {
 
 
 
-
-
-
 Vue中修饰符.sync与v-model的区别
 sync的作用
 
 .sync修饰符可以实现父子组件之间的双向绑定，并且可以实现子组件同步修改父组件的值，相比较与v-model来说,sync修饰符就简单很多了
 一个组件上可以有多个.sync修饰符
 https://interview2.poetries.top/docs/excellent-docs/7-Vue.html#v-model%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86
+
+基于Vite+AntDesignVue打造业务组件库
+https://juejin.cn/column/7140103979697963045

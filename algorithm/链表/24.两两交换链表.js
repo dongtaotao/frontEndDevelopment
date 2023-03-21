@@ -29,5 +29,5 @@ var swaPairs = function (head) {
     current = n1;
   }
 
-  return dummy.next;
+  return dummy.next; 
 }

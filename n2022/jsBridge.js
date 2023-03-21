@@ -45,7 +45,7 @@ Native 调用 JS 比较简单，只要 H5 将 JS 方法暴露在 Window 上给 N
 Native 调用 JavaScript，其实就是执行拼接 JavaScript 字符串，从外部调用 JavaScript 中的方法，因此 JavaScript
 的方法必须在全局的 window 上。（闭包里的方法，JavaScript 自己都调用不了，更不用想让 Native 去调用了） 
 
-
+ 
 聊一聊桥接（JSBridge）的原理 回调用
 https://www.cnblogs.com/songyao666/p/14540073.html 
 

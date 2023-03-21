@@ -87,19 +87,19 @@ n + m 是两条链表的长度
 空间复杂度：O(m + n)
 
 const mergeTwoLists = function (l1, l2) {
-    if (l1 === null) {
-        return l2;
-    }
-    if (l2 === null) {
-        return l1;
-    }
-    if (l1.val < l2.val) {
-        l1.next = mergeTwoLists(l1.next, l2);
-        return l1;
-    } else {
-        l2.next = mergeTwoLists(l1, l2.next);
-        return l2;
-    }
+  if (l1 === null) {
+      return l2;
+  }
+  if (l2 === null) {
+      return l1;
+  }
+  if (l1.val < l2.val) {
+      l1.next = mergeTwoLists(l1.next, l2);
+      return l1;
+  } else {
+      l2.next = mergeTwoLists(l1, l2.next);
+      return l2;
+  }
 }
 复制代码
 03 两两交换链表中的节点 *********************************************
@@ -167,17 +167,17 @@ const swapPairs = function (head) {
 如果有环，则一定会相遇。
 
 const hasCycle = function(head) {
-    if (!head || !head.next) return false;
-    let fast = head.next;
-    let slow = head;
-    while (fast !== slow) {
-        if (!fast || !fast.next) {
-            return false;
-        }
-        fast = fast.next.next;
-        slow = slow.next;
-    }
-    return true;
+  if (!head || !head.next) return false;
+  let fast = head.next;
+  let slow = head;
+  while (fast !== slow) {
+      if (!fast || !fast.next) {
+          return false;
+      }
+      fast = fast.next.next;
+      slow = slow.next;
+  }
+  return true;
 };
 复制代码
 
@@ -211,19 +211,19 @@ const hasCycle = function(head) {
 推进指针继续迭代，最后返回新的链表头节点 prev。
 
 const reverseList = function(head) {
-    let prev = null;
-    let curr = head;
-    while (curr !== null) {
-        // 记录 next 节点
-        let next = curr.next;
-        // 反转指针
-        curr.next = prev;
-        // 推进指针
-        prev = curr;
-        curr = next;
-    }
-    // 返回翻转后的头节点
-    return prev;
+  let prev = null;
+  let curr = head;
+  while (curr !== null) {
+    // 记录 next 节点
+    let next = curr.next;
+    // 反转指针
+    curr.next = prev;
+    // 推进指针
+    prev = curr;
+    curr = next;
+  }
+  // 返回翻转后的头节点
+  return prev;
 };
 复制代码
 
@@ -232,14 +232,14 @@ const reverseList = function(head) {
 
 递归
 const reverseList = function(head) {
-    if (!head || !head.next) return head;
-    // 记录当前节点的下一个节点
-    let next = head.next;
-    let reverseHead = reverseList(next);
-    // 操作指针进行反转
-    head.next = null;
-    next.next = head;
-    return reverseHead;
+  if (!head || !head.next) return head;
+  // 记录当前节点的下一个节点
+  let next = head.next;
+  let reverseHead = reverseList(next);
+  // 操作指针进行反转
+  head.next = null;
+  next.next = head;
+  return reverseHead;
 };
 复制代码
 

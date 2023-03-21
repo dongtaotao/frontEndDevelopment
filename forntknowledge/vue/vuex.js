@@ -1,6 +1,6 @@
 
 Vuex从使用到原理解析 https://zhuanlan.zhihu.com/p/78981485  
-Vuex是通过全局注入store对象，来实现组件间的状态共享。
+Vuex是通过全局注入store对象，来实现组件间的状态共享。 
 
 如果让你从零开始写一个vuex，说说你的思路
 https://juejin.cn/post/7109648249887129630

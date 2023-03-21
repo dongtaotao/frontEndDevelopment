@@ -130,3 +130,35 @@ https://juejin.cn/post/6911472693405548557
 
 Vue项目性能优化实操,从50分到80分
 https://juejin.cn/post/7101560677688410125  
+
+当面试官问我前端可以做的性能优化有哪些
+https://juejin.cn/post/7194400984490049573?
+前端优化大概可以有以下几个方向：
+
+网络优化
+页面渲染优化
+JS优化
+图片优化
+webpack打包优化
+React优化
+Vue优化
+
+关于首屏优化，我做了哪些
+https://juejin.cn/post/7117515006714839047
+
+
+前端面试相关：性能优化篇
+https://juejin.cn/post/7206540113571758136?
+1. 减少HTTP请求
+2. 使用浏览器缓存
+3. 使用LocalStorage
+4. 使用CDN
+CDN预解析（CDN Prefetching）
+5. 使用预加载和懒加载
+6. 使用防抖和节流
+7. 压缩和优化图片
+8. 使用Webpack和Babel
+9. 使用Web Workers
+10. 减少重排和重绘
+11. 使用Chrome DevTools进行性能优化
+12. 总结

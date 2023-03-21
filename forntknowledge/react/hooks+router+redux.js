@@ -350,7 +350,7 @@ https://juejin.cn/post/6940942549305524238
 谈谈react hooks的优缺点 **************************************
 https://www.cnblogs.com/ranyonsue/p/14700528.html
 
-这里主要讲述的是react-router-dom的常用API，主要是提供了一些组件：
+这里主要讲述的是react-router-dom的常用API，主要是提供了一些组件： 
 BrowserRouter、HashRouter
 Route
 Link、NavLink

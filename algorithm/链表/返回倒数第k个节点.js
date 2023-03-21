@@ -6,7 +6,6 @@ var kthToLast = function (head, k) {
     last = last.next;
     pos--;
   }
-
   while(last !== null) {
     last = last.next;
     pre = pre.next;

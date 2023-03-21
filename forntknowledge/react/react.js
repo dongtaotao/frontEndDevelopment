@@ -315,7 +315,6 @@ var component = (
   />
 );
 
-
 react
 // 触发更新的三种方式
 // 1. setState (作用: 修改state数据, 更新视图)
@@ -434,4 +433,4 @@ React整理 面试
 https://blog.csdn.net/MichelleZhai/article/details/118423494
 
 React项目实战，超越所仿网站，一学就会
-https://juejin.cn/post/7114138865702535199  
+https://juejin.cn/post/7114138865702535199   

@@ -491,7 +491,7 @@ function TreeDepth(pRoot){
     }
     var left = TreeDepth(pRoot.left)+1;
     var right = TreeDepth(pRoot.right)+1;
-    return Math.max(left, right);
+    return Math.max(left, right); 
 }
 ————————————————
 原文链接：https://blog.csdn.net/qq_29652349/article/details/77911078     

@@ -85,6 +85,8 @@ vue面试题 https://www.bilibili.com/video/BV1PU4y1d7qT/?spm_id_from=pageDriver
 手写 vue3.0 源码
 链接：https://juejin.cn/post/6959016804349902884
 
+30 道 Vue 面试题，内含详细讲解（涵盖入门到精通，自测 Vue 掌握程度）
+https://juejin.cn/post/6844903918753808398
 
 LRU（Least recently used） 算法根据数据的历史访问记录来进行淘汰数据，其核心思想是“如果数据最近被访问过，那么将来被访问的几率也更高”。
 (墨菲定律：越担心的事情越会发生)
@@ -159,7 +161,7 @@ Vue是pull+push的方式侦测变化的,在一开始就知道那个组件发生�
 Vue2（3）全家桶+TS
 https://juejin.cn/column/7054086173311893512
 
-watch可以监听computed中的属性
+watch可以监听computed中的属性 **********
 
 vue的nextTick原理
 nextTick理解

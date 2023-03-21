@@ -334,13 +334,13 @@ function showFPS(wait) {
   let prev = +new Date();
   let fps = 0;
   function loop() {
-      let now = +new Date();
-      if (now - prev >= wait) {
-          console.log(fps);
-      } else {
-          fps++;
-          window.requestAnimationFrame(loop)
-      }
+    let now = +new Date();
+    if (now - prev >= wait) {
+      console.log(fps);
+    } else {
+      fps++;
+      window.requestAnimationFrame(loop)
+    }
   }
   window.requestAnimationFrame(loop);
 }
@@ -963,10 +963,10 @@ function loopGetLevel(obj) {
 18、对象的扁平化 https://juejin.cn/post/7023906112843808804
 const obj = {
   a: {
-         b: 1,
-         c: 2,
-         d: {e: 5}
-     },
+        b: 1,
+        c: 2,
+        d: {e: 5}
+    },
   b: [1, 3, {a: 2, b: 3}],
   c: 3
  }
@@ -1099,4 +1099,4 @@ function transfrom(list, level) {
   }
 }
 
-transfrom(entries, level);  
+transfrom(entries, level);   

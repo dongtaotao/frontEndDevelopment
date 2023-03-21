@@ -189,3 +189,9 @@ https://juejin.cn/post/7130811005109551134
 
 探索前端工程化，快速实现组件库开发
 https://juejin.cn/column/7140103294965252109
+
+
+工程化面试题汇总https://juejin.cn/post/7206973995727765559
+
+前端架构概述
+https://juejin.cn/post/7205604505647202361

@@ -2,7 +2,7 @@ VUE+Elementui+ECharts【vue项目实战】
 https://www.bilibili.com/video/BV1Eg41197sN?p=47&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 
 vuex
-Vuex 集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以可预测的方式发生变化 
+Vuex 集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以可预测的方式发生变化  
 state: 状态中心
 mutations: 更改状态
 actions: 异步更改状态
@@ -180,7 +180,6 @@ v-model 在内部为不同的输入元素使用不同的属性并抛出不同的
 <input v-model='something'>
 相当于
 <input v-bind:value="something" v-on:input="something = $event.target.value">
-复制代码
 如果在自定义组件中，v-model 默认会利用名为 value 的 prop 和名为 input 的事件，如下所示：
 父组件：
 <ModelChild v-model="message"></ModelChild>

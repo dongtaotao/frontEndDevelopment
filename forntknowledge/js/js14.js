@@ -66,3 +66,26 @@ https://juejin.cn/post/7114282473164374029
 
 十分钟学会快速搭建个人网站和技术博客  vitepress  
 https://www.bilibili.com/video/BV13g411P7WG/?spm_id_from=333.788&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+实现双向数据绑定
+let obj = {}
+let input = document.getElementById('input')
+let span = document.getElementById('span')
+// 数据劫持
+Object.defineProperty(obj, 'text', {
+  configurable: true,
+  enumerable: true,
+  get() {
+    console.log('获取数据了')
+  },
+  set(newVal) {
+    console.log('数据更新了')
+    input.value = newVal
+    span.innerHTML = newVal
+  }
+})
+// 输入监听
+input.addEventListener('keyup', function(e) {
+  obj.text = e.target.value
+})
+ 
