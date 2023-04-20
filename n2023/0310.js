@@ -477,3 +477,6 @@ const targetId = '112';
 const path = findPath(list, targetId);
 console.log(path); // [ '1', '11', '112' ]
 以上就是查找JS复杂数组树中目标节点路径的方法实现。如需了解更多关于JS的知识，可以参考来源链接 1。
+
+
+234
