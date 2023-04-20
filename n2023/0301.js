@@ -10,6 +10,14 @@ https://www.bilibili.com/video/BV1LZ4y157Lm/?spm_id_from=333.337.search-card.all
 监控视频
 记录Vue结合萤石视频ezuikit.js的爬坑记录  https://www.cnblogs.com/synY/p/12700028.html
 
+Vue 项目中对接海康 RTSP 实现视频监控
+vue项目里对接海康rtsp
+https://juejin.cn/post/7217082232937939005?
+
+Vue中接入TRTC实现音视频通信
+移动端Web接入腾讯云TRTC实践（React+TS）
+https://juejin.cn/post/7217057805782220857?
+
 
 大数相加
 let a = "9007199254740991";
@@ -176,4 +184,117 @@ https://juejin.cn/post/7212270321622106170?
 https://juejin.cn/post/7160604665460031518
 
 优化实战 第 55 期 - 系统推荐缩放比例的适配方案
-https://juejin.cn/post/7169405211356692510
+https://juejin.cn/post/7169405211356692510 
+
+
+
+正在为您搜索：vue项目、海康rtsp   https://chat2.binjie.site:7777/#/chat/1680181106442
+在 Vue 项目中对接海康 RTSP 实现视频监控，可以使用第三方插件 vue-video-player 结合海康的 SDK 实现。具体步骤如下：
+
+安装 vue-video-player。
+bash
+npm install vue-video-player --save
+安装海康 SDK。
+下载并解压海康 SDK 后，在需要使用视频监控的页面引入 SDK 中的相关文件。
+
+html
+<!-- 引入海康 SDK -->
+<script type="text/javascript" src="/path/to/Hikvision/JS/hkws.js"></script>
+在 Vue 组件中添加视频播放器组件。
+html
+<template>
+  <div>
+    <!-- video-player 组件 -->
+    <video-player :options="options"></video-player>
+  </div>
+</template>
+
+<script>
+// 引入 vue-video-player 组件
+import VideoPlayer from 'vue-video-player'
+import 'video.js/dist/video-js.css'
+
+export default {
+  name: 'HkVideoPlayer',
+  components: {
+    // 注册 video-player 组件
+    VideoPlayer,
+  },
+  data() {
+    return {
+      options: {
+        // 设置海康 RTSP 地址
+        sources: [{
+          src: 'rtsp://用户名:密码@IP地址:554/cam/realmonitor?channel=1&subtype=0',
+          type: 'rtsp/flv'
+        }],
+        // 视频画面宽度和高度
+        width: '100%',
+        height: 480,
+        // 是否自动播放
+        autoplay: true,
+        controls: true,
+        muted: false,
+        loop: false,
+        aspectRatio: '16:9',
+        playbackRates: [0.7, 1.0, 1.5, 2.0],
+        // 是否显示海康视频
+        hk_ws: true,
+      }
+    }
+  },
+  mounted() {
+    // 进行海康视频控制初始化
+    const player = this.$refs.videoPlayer.player
+    this.initHkControl(player)
+  },
+  methods: {
+    // 初始化海康视频控制
+    initHkControl(player) {
+      if (typeof (player.realPlay) !== 'undefined') {
+        let cameraId = 1
+        const IPCType = 'hik_ipc'
+        const streamMode = 1 // 子码流（主码流：0，子码流：1，第三码流：2）
+
+        // 创建海康控件实例
+        this.hkControl = new HK_WS()
+
+        // 海康控件初始化
+        HK_user_login_init(this.hkControl).then(() => {
+          HK_real_play_init(cameraId, IPCType, streamMode, player, this.hkControl)
+        })
+      }
+    },
+  },
+}
+</script>
+在 mounted 钩子函数中进行海康视频控制的初始化。
+javascript
+mounted() {
+  // 进行海康视频控制初始化
+  const player = this.$refs.videoPlayer.player
+  this.initHkControl(player)
+},
+methods: {
+  // 初始化海康视频控制
+  initHkControl(player) {
+    if (typeof (player.realPlay) !== 'undefined') {
+      let cameraId = 1
+      const IPCType = 'hik_ipc'
+      const streamMode = 1 // 子码流（主码流：0，子码流：1，第三码流：2）
+
+      // 创建海康控件实例
+      this.hkControl = new HK_WS()
+
+      // 海康控件初始化
+      HK_user_login_init(this.hkControl).then(() => {
+        HK_real_play_init(cameraId, IPCType, streamMode, player, this.hkControl)
+      })
+    }
+  },
+},
+注意事项：
+
+需要确保 Vue 项目的打包配置可以访问海康 SDK 相关文件。
+在 RTSP 地址中需要替换用户名、密码和 IP 地址为实际的值。
+查看海康 RTSP 地址时，可以从海康设备的管理页面上找到。

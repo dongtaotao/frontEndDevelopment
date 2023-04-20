@@ -54,7 +54,7 @@ https://juejin.cn/post/7026249448233631752
 https://juejin.cn/post/6844903974437388295
 
 12 个 Vue 开发中的性能优化小技巧，看你用过几个
-https://juejin.cn/post/7021021063647592456
+https://juejin.cn/post/7021021063647592456 
 
 Vue3最新实战从零实现可视化搭建【手把手教学】
 https://www.bilibili.com/video/BV1wa411Y78R?share_source=copy_web
@@ -176,15 +176,15 @@ Vue 中的 computed 是如何实现缓存的
 只要依赖属性不更新，dirty 永远为 false，重复取值也不会再去执行求值函数，而是直接返回缓存结果，从而实现缓存。
 相反，依赖属性更新会将“计算属性 Watcher”的 dirty 设置为 true，在页面渲染对计算属性取值时，再次触发求值函数更新计算属性。
 Object.defineProperty(target, key, {
-    get() {
-        const watcher = this._computedWatchers && this._computedWatchers[key]
-        // 计算属性缓存
-        if (watcher.dirty) {  
-            // 计算属性求值
-            watcher.evaluate()  
-        }
-        return watcher.value
+  get() {
+    const watcher = this._computedWatchers && this._computedWatchers[key]
+    // 计算属性缓存
+    if (watcher.dirty) {  
+      // 计算属性求值
+      watcher.evaluate()  
     }
+    return watcher.value
+  }
 })
 链接：https://juejin.cn/post/6869908820353810445
 
@@ -203,7 +203,8 @@ vue-router 原理是更新视图而不重新请求页面。vue-router 共有3种
 hash模式
 hash 模式使用 hashchange 监听地址栏的 hash 值的变化，加载对应的页面。每次的 hash 值变化后依然会在浏览器留下历史记录，可以通过浏览器的前进后退按钮回到上一个页面。
 history模式
-history 模式基于History Api实现，使用 popstate 监听地址栏的变化。使用 pushState 和 replaceState 修改 url，而无需加载页面。但是在刷新页面时还是会向后端发起请求，需要后端配合将资源定向回前端，交由前端路由处理。
+history 模式基于History Api实现，使用 popstate 监听地址栏的变化。使用 pushState 和 replaceState 修改 url，而无需加载页面。但是在刷新页面时还是会向后端发起请求，
+需要后端配合将资源定向回前端，交由前端路由处理。
 abstract
 不涉及和浏览器地址的相关记录。通过数组维护模拟浏览器的历史记录栈。
 链接：https://juejin.cn/post/6869908820353810445
@@ -439,7 +440,6 @@ dep.notify()
 学习Vue3 第三十章（编写Vue3插件）
 https://blog.csdn.net/qq1195566313/article/details/123300264
 
-
 diff算法说一下
 同级比较，再比较子节点
 先判断一方有子节点一方没有子节点的情况(如果新的children没有子节点，将旧的子节点移除)
@@ -455,7 +455,6 @@ Vue 文章目录
 404 问题  #Nginx常用配置
 http://know.shuerbuzuo.cn/Linux/Nginx%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE.html#_404-%E9%97%AE%E9%A2%98
 在spa模式下, 会导致无法进入前端路由:
-
 server {
   listen  80;
   server_name  www.xxx.com;
@@ -469,7 +468,6 @@ server {
 Mutation Observer API 用来监听DOM的变动事件 
 IntersectionObserver API
 IntersectionObserver API可以自动的"观察"元素是否是可见的. 由于可见的本质是目标元素与视图产生一个交叉去, 所以这个API叫做 "交叉观察器". 
-
 
 4. attrs 和 listeners
 attrs 获取子传父中未在 props 定义的值
@@ -502,3 +500,22 @@ mounted() {
 }
 链接：https://juejin.cn/post/6844904079164964871
 
+10个常见的使用场景，助你从 Vue2 丝滑过渡到 Vue3 !
+https://juejin.cn/post/7151909645399883807
+场景一：父子组件数据传递
+父组件数据传递到子组件
+子组件数据传递到父组件
+父组件使用子组件数据
+场景二：组件之间双向绑定
+场景三：路由跳转，获取路由参数
+场景四：获取上下文对象
+场景五：插槽的使用
+场景六：缓存路由组件
+场景七：逻辑复用
+场景八：生命周期
+场景九：全局 API
+常见十：与 TypeScript 结合使用
+为 props 标注类型
+为 ref() 标注类型
+为 reactive() 标注类型
+小结 

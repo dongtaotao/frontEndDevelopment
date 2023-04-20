@@ -296,7 +296,7 @@ Promise.any = function (promises) {
   });
 };
 
-链接：https://juejin.cn/post/7079394322067488776
+链接：https://juejin.cn/post/7079394322067488776 
  
 
 

@@ -698,4 +698,4 @@ let testObj = {
       c: [0, {d: 1}]
   }
 } 
-console.log(transfor(testObj,[],{}))  
+console.log(transfor(testObj,[],{}))   

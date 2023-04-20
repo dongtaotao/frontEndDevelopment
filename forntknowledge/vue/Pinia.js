@@ -12,5 +12,12 @@ actions 支持同步和异步；
 
 pinia 的使用 https://juejin.cn/post/7083273352789360677  
 
-2022最新版！Pinia基础入门教程（保姆级）
+2022最新版！Pinia基础入门教程（保姆级） 
 https://www.bilibili.com/video/BV1rv4y1M7qo?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a 
+
+
+pinia(2.0.34) 最新使用指南与持久化缓存
+https://juejin.cn/post/7223415381788344376?
+四、数据持久化
+1. 安装插件
+yarn add pinia-plugin-persistedstate

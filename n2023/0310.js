@@ -1,6 +1,9 @@
 前端播放webrtc
 https://juejin.cn/post/7208736503520935995?
 
+面试官桀桀一笑：你没做过大文件上传功能？那你回去等通知吧！
+https://juejin.cn/post/7218113760857980985?
+
 JS 实现文件的切割与合并
 https://juejin.cn/post/7181420926074880058
 大文件上传之切片上传、断点续传、秒传  很不错
@@ -42,8 +45,9 @@ https://juejin.cn/post/7063111159372578829
 https://juejin.cn/post/7179203084512395319
 
 websocket心跳机制，断线重连机制
-websocket心跳机制：客户端和服务端通过websocket建立连接后,定期发送ping消息来检测连接是否还存活,这就是心跳机制。通过心跳机制可以及时发现连接是否中断,避免资源的浪费。
-断线重连机制：当客户端通过心跳机制检测到连接已断开时,需要重连。客户端会重新发起websocket连接请求,服务端收到请求后先关闭已断开的连接,然后建立一个新的连接。这样就实现了websocket的断线重连。
+websocket心跳机制：客户端和服务端通过websocket建立连接后,定期发送ping消息来检测连接是否还存活,这就是心跳机制。通过 心跳机制可以及时发现连接是否中断,避免资源的浪费。
+断线重连机制：当客户端通过心跳机制检测到连接已断开时,需要重连。客户端会重新发起websocket连接请求,服务端收到请求后先关闭已断开的连接,然后建立一个新的连接。
+这样就实现了websocket的断线重连。
 异步加载方式
 异步加载是webpack实现代码分割的一种手段。webpack通过import()动态导入语法来实现异步加载。使用import()语法，
 import('./module').then(module => { ... })
@@ -328,3 +332,148 @@ webpack监听源文件的变化
 不一致则通过ajax和jsonp获取最新的资源
 使用内存文件系统去替换有修改的内容实现局部更新
 链接：https://juejin.cn/post/6844904078288355341
+
+83. post的方法
+application/x-www-form-urlencoded （url传参数）
+multipart/form-data （上传文件）
+application/json （传json）
+text/xml
+
+84. http options预检请求
+正式跨域之前，会发起option请求，预检一下。检测发送的请求是否安全，同时发送请求地址，请求方法，服务器判断来源域名是否再许可名单内，请求方法支不支持，支持则允许请求
+复杂请求才会发送预检，以下为复杂请求
+
+put/delete/patch/post的其中一种
+发送json格式（content-type: application/json）
+请求中有自定义头部
+
+为什么要进行预检？
+复杂请求可能会对服务器产生副作用，数据修改等。所以要检测一下请求来源在不在许可名单上
+链接：https://juejin.cn/post/6844904078288355341
+
+前端面试常见的知识点（四处搜刮
+https://juejin.cn/post/6844904078288355341#heading-112
+
+Web 中高级前端面试题集合（200+）
+https://segmentfault.com/a/1190000021966814
+
+【大前端 nodejs】nginx面试真题
+https://juejin.cn/post/7213209438713987128?
+
+记一次 script error导致的线上白屏，手把手教你如何定位问题代码    vue
+https://juejin.cn/post/7215163152907714616?
+
+vue2.7 引入 UEditor 富文本组件 自定义图片视频上传
+https://juejin.cn/post/7215162370876457019?
+
+实现一个LRU缓存淘汰算法。
+class LRUCache {
+  constructor(capacity) {
+    this.capacity = capacity;
+    this.map = new Map();
+  }
+  get(key) {
+    if (!this.map.has(key)) {
+      return -1;
+    }
+    const value = this.map.get(key);
+    this.map.delete(key);
+    this.map.set(key, value);
+    return value;
+  }
+  put(key, value) {
+    if (this.map.has(key)) {
+      this.map.delete(key);
+    } else if (this.map.size >= this.capacity) {
+      this.map.delete(this.map.keys().next().value);
+    }
+    this.map.set(key, value);
+  }
+}
+
+
+chatGPT
+1.定义一个用于查找目标节点的递归函数
+function findNode(node, targetId, path) {
+  // 将当前节点id添加到路径中
+  path.push(node.id);
+  
+  // 如果当前节点是目标节点，直接返回路径
+  if (node.id === targetId) {
+    return path;
+  }
+  
+  // 遍历子节点
+  if (node.children && node.children.length > 0) {
+    for (let i = 0; i < node.children.length; i++) {
+      const result = findNode(node.children[i], targetId, path);
+      if (result) {
+        // 如果在子节点中找到了目标节点，直接返回路径
+        return result;
+      }
+    }
+  }
+  
+  // 如果在当前节点和子节点中都没有找到目标节点，将当前节点从路径中移除，返回 null
+  path.pop();
+  return null;
+}
+在这个函数中，我们首先将当前节点的id添加到路径中，然后判断当前节点是否为目标节点。
+如果是，直接返回路径；如果不是，继续遍历子节点。如果在子节点中找到了目标节点，
+直接返回路径；否则，在当前节点和子节点中均没有找到目标节点，将当前节点从路径中移除，返回 null。
+
+2.编写一个调用递归函数的方法，并返回路径
+function findPath(list, targetId) {
+  const path = [];
+  for (let i = 0; i < list.length; i++) {
+    const result = findNode(list[i], targetId, path);
+    if (result) {
+      return result;
+    }
+  }
+  return null;
+}
+在这个方法中，我们遍历整个列表，并调用递归函数查找目标节点。如果在其中某个节点的子节点或孙子节点中找到了目标节点，直接返回路径；否则返回 null。
+3.调用此方法并输出结果
+const list = [
+  {
+    id: '1',
+    name: 'test1',
+    children: [
+      {
+        id: '11',
+        name: 'test11',
+        children: [
+          {
+            id: '111',
+            name: 'test111'
+          },
+          {
+            id: '112',
+            name: 'test112'
+          }
+        ]
+
+      },
+      {
+        id: '12',
+        name: 'test12',
+        children: [
+          {
+            id: '121',
+            name: 'test121'
+          },
+          {
+            id: '122',
+            name: 'test122'
+          }
+        ]
+      }
+    ]
+  }
+];
+
+const targetId = '112';
+const path = findPath(list, targetId);
+console.log(path); // [ '1', '11', '112' ]
+以上就是查找JS复杂数组树中目标节点路径的方法实现。如需了解更多关于JS的知识，可以参考来源链接 1。

@@ -303,4 +303,4 @@ const stop = mySetInterval(() => {
   console.log('test')
 }, 200);
   
-stop() // 停止    
+stop() // 停止      

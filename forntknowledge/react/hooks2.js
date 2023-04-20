@@ -113,7 +113,7 @@ export function Counter() {
   )
 }
 
-setCount useState 给相同的值，不会重渲染
+setCount useState 给相同的值，不会重渲染 ----------------
 
 React18 新特性解读 & 完整版升级指南
 https://juejin.cn/post/7094037148088664078#heading-4
@@ -216,3 +216,7 @@ useEffect 在 React 的渲染过程中是被异步调用的，用于绝大多数
 
 【React】万字长文！100+个让你事半功倍的常用 React Hooks 和工具包 
 https://juejin.cn/post/7196943285381464101
+
+
+好想用Typescript+React hooks开发啊!（嘴对嘴解释）
+https://juejin.cn/post/6844904085024407566

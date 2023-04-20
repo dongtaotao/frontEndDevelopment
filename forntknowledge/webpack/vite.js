@@ -166,4 +166,37 @@ vite工程化实践，建议收藏
 https://juejin.cn/post/6910014283707318279
 
 十八.vite之插件实现篇
-https://juejin.cn/post/7210278786592292920?
+https://juejin.cn/post/7210278786592292920? 
+
+
+📢 面试官快问快答：webpack VS vite
+https://juejin.cn/post/7219567168316276796?
+目录
+1、核心理念 — bundle与否
+2、首屏、懒加载性能
+3、服务启动速度
+3、热更新速度
+4、prod环境打包区别
+5、生态成熟度
+总结
+混乱是进步的阶梯 —— ESM规范的崛起【上】
+如果能重来，你要选 Vite 还是 Webpack ？
+【打包工具】- Vite 和 webpack 原理、优缺点对比
+vite 相比webpack的优缺点
+Vite和Webpack 优缺点对比
+Vite 的好与坏
+Vite和Webpack综合对比
+
+链接：https://juejin.cn/post/7219567168316276796
+
+Vite 核心原理
+Vite其核心原理是利用浏览器现在已经支持ES6的import，碰见import就会发送一个HTTP请求去加载文件。
+Vite启动一个 koa 服务器拦截这些请求，并在后端进行相应的处理将项目中使用的文件通过简单的分解与整合，然后再以ESM格式返回给浏览器。
+Vite整个过程中没有对文件进行打包编译，做到了真正的按需加载，所以其运行速度比原始的webpack开发编译速度快出许多！
+
+它具有以下特点：
+
+快速的冷启动：采用No Bundle和esbuild预构建，速度远快于Webpack
+高效的热更新：基于ESM实现，同时利用HTTP头来加速整个页面的重新加载，增加缓存策略：源码模块使用协商缓存，依赖模块使用强缓；因此一旦被缓存它们将不需要再次请求。
+基于 Rollup 打包：生产环境下由于esbuild对css和代码分割并使用Rollup进行打包；
+链接：https://juejin.cn/post/7166446028266733581

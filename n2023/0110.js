@@ -32,8 +32,40 @@ try {
 console.log("下方代码");//下方代码
 
 如何使用react hooks实现生命周期函数
-答：通过useEffect, useEffect(() => {}) // componentDidMount+componentDidUpdate, useEffect(() => {} , []) //componentDidMount. useEffect(() => {return ...}) // componentWillUnmount
+答：通过useEffect, useEffect(() => {}) // componentDidMount+componentDidUpdate,
+ useEffect(() => {} , []) //componentDidMount. 
+ useEffect(() => {return ...}) // componentWillUnmount
 链接：https://juejin.cn/post/7194379710162272316
+import React, { useState, useEffect } from 'react';
+
+function LifecycleDemo() {
+  const [state, setState] = useState(0);
+
+  // componentDidMount
+  useEffect(() => {
+    console.log('componentDidMount');
+  }, []);
+
+  // componentDidUpdate
+  useEffect(() => {
+    console.log('componentDidUpdate');
+  });
+
+  // componentWillUnmount
+  useEffect(() => {
+    return () => console.log('componentWillUnmount');
+  }, []);
+
+  return (
+    <div>
+      <p>{state}</p>
+      <button onClick={() => setState(state + 1)}>Click</button>
+    </div>
+  );
+}
+
+export default LifecycleDemo;
+
 
 eCHarts 有没有做窗口变化适配
 监听屏幕尺寸变化，重绘图表即可
@@ -199,7 +231,6 @@ Vue-highlight 实现代码高亮 https://juejin.cn/post/6978643058808061982
 
 如何通过微信唤起 App https://juejin.cn/post/7139440408265752613
 
-
 Vue.config.errorHandler = function (err, vm, info) {
   let { 
       message, // 异常信息
@@ -342,7 +373,6 @@ https://juejin.cn/post/7201018760488468539?
 链接：https://juejin.cn/post/6977214179149086751
 来源：稀土掘金
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 
 
 2022金三银四前端面试笔记 🔥🔥

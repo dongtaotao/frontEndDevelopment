@@ -228,4 +228,4 @@ border-box. border = 20, padding = 10, width = 100
 硬件加速就是将浏览器的渲染过程交给GPU处理，而不是使用自带的比较慢的渲染器。这样就可以使得 animation 与 transition 更加顺畅。
 
 「2022」CSS最新高频面试题指南
-https://juejin.cn/post/7150840051453149197#heading-69
+https://juejin.cn/post/7150840051453149197#heading-69 

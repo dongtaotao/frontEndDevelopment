@@ -348,3 +348,22 @@ function render(template, data) {
   return computed;   
 }   
 
+
+LeetCode热题（JS版）- 67. 二进制求和
+js 二进制求和 chatdpt
+正在为您搜索：js、二进制、求和
+
+JavaScript可以使用parseInt()函数将二进制字符串转换成十进制数字，然后进行求和操作。具体代码如下：
+
+javascript
+let binaryString1 = '1101';   // 二进制字符串1
+let binaryString2 = '10101';  // 二进制字符串2
+
+let decimal1 = parseInt(binaryString1, 2);  // 将二进制字符串1转换为十进制数字
+let decimal2 = parseInt(binaryString2, 2);  // 将二进制字符串2转换为十进制数字
+
+let sum = decimal1 + decimal2;  // 计算十进制数的和
+
+let binarySum = sum.toString(2);  // 将十进制数转换为二进制字符串
+
+console.log(binarySum);  // 输出二进制数的和

@@ -306,5 +306,5 @@ RN调用react UI requireNativeComponent
 
 
 原生平台调用React Native组件 
-RN需要注册根组件  native运行注册过的根组件 
+RN需要注册根组件  native运行注册过的根组件  
 https://blog.csdn.net/kangguang/article/details/78307342   

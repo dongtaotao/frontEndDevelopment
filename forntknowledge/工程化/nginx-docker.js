@@ -274,4 +274,4 @@ docker run -p 4000:8080 -d vue-docker-nginx
 https://github.com/jialushen/vue-docker-nginx   🔥🔥
 
 0基础实现项目自动化部署
-https://juejin.cn/post/7207787191623647288?
+https://juejin.cn/post/7207787191623647288? 

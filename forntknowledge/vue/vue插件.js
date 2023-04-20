@@ -39,7 +39,7 @@ export default{
 //第二种：函数插件（vue会将函数当成install函数来执行）
 export default function(Vue, options) {
     console.log('执行插件install函数', options)
-   // 1.添加指令
+   // 1.添加指令 
     Vue.directive('my-directive', {
         bind (el, binding, vnode, oldVnode) {
         // 逻辑...
@@ -71,4 +71,7 @@ vue 自定义插件
 https://blog.csdn.net/weixin_43294560/article/details/104643340
 
 写给小白的 Vue 插件篇 很不错
-https://juejin.cn/post/7208046833330143292
+https://juejin.cn/post/7208046833330143292 
+
+vite+vue3+ts项目中使用eslint+prettier+StyleLint+husky规范代码
+https://juejin.cn/post/7222460499493584955?

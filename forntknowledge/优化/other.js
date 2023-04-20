@@ -6,7 +6,7 @@ PC获取二维码ID，生成相应的二维码。
 手机端扫描二维码，获取二维码ID。
 手机端将手机端token和二维码ID发送给服务端，确认登录。
 服务端校验手机端token，根据手机端token和二维码ID生成PC端token
-PC端通过轮询方式请求服务端，通过二维码ID获取二维码状态，如果已成功，返回PCtoken，登录成功。
+PC端通过轮询方式请求服务端，通过二维码ID获取二维码状态，如果已成功，返回PCtoken，登录成功。 
 链接：https://juejin.cn/post/7021515145335554079
 
 //===========================================================================
@@ -494,5 +494,5 @@ function TreeDepth(pRoot){
     return Math.max(left, right); 
 }
 ————————————————
-原文链接：https://blog.csdn.net/qq_29652349/article/details/77911078     
+原文链接：https://blog.csdn.net/qq_29652349/article/details/77911078      
 

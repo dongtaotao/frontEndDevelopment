@@ -153,3 +153,16 @@ https://juejin.cn/post/7212529038875443259
 七、原生组件栈
 八、移除私有导出
 九、启发式更新算法更新
+
+React懒加载原理
+React利用 React.lazy与import()实现动态加载 ，利用Suspense来处理异步加载资源时页面如何显示。
+
+8. React中hooks为什么不能用if判断
+可能会导致 hooks 的执行顺序发生改变，因为 React Hooks 内部是通过 hooks 的调用顺序来区分是哪个 hook
+以 useState 为例，在 react 内部，每个组件(Fiber)的 hooks 都是以链表的形式存在 memoizeState。
+update 阶段，每次调用 useState，链表就会执行 next 向后移动一步。如果将 useState 写在条件判断中，假设条件判断不成立，没有执行里面的 useState 方法，会导致接下来所有的 useState 的取值出现偏移，从而导致异常发生。
+链接：https://juejin.cn/post/7219097755737636901
+
+
+竟然可以在react中使用vue指令，快来看看吧。
+https://juejin.cn/post/7219862257644732473?

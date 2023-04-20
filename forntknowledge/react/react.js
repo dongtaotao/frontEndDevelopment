@@ -8,7 +8,7 @@ https://juejin.cn/post/6941546135827775525
 (中篇)中高级前端大厂面试秘籍，寒冬中为您保驾护航，直通大厂
 https://juejin.cn/post/6844903801153945608
 
-【最新】React移动端项目开发  ===================
+【最新】React移动端项目开发  =================== 
 https://www.bilibili.com/video/BV1h3411y7dy?p=4
 
 前端React面试题总结

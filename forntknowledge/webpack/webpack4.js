@@ -122,3 +122,19 @@ webpack监听源文件的变化
 不一致则通过ajax和jsonp获取最新的资源
 使用内存文件系统去替换有修改的内容实现局部更新
 链接：https://juejin.cn/post/6844904078288355341
+
+
+回顾webpack在vue.config.js中写loader和plugin
+https://juejin.cn/post/7208823936301826107#heading-21
+
+
+webpack 热更新机制
+热更新流程总结:
+启动本地server，让浏览器可以请求本地的静态资源
+页面首次打开后，服务端与客户端通过 websocket建立通信渠道，把下一次的 hash 返回前端
+客户端获取到hash，这个hash将作为下一次请求服务端 hot-update.js 和 hot-update.json的hash
+修改页面代码后，Webpack 监听到文件修改后，开始编译，编译完成后，发送 build 消息给客户端
+客户端获取到hash，成功后客户端构造hot-update.js script链接，然后插入主文档
+hot-update.js 插入成功后，执行hotAPI 的 createRecord 和 reload方法，获取到 Vue 组件的 render方法，重新 render 组件， 继而实现 UI 无刷新更新。
+
+链接：https://juejin.cn/post/6991724298197008421

@@ -1,5 +1,5 @@
 【算法面试】leetcode最常见的150道前端面试题 ---- 简单题上（44题
-https://juejin.cn/post/6987320619394138148   
+https://juejin.cn/post/6987320619394138148    
 
 春招腾讯50题计划
 https://juejin.cn/column/7070454142849777678
@@ -529,6 +529,6 @@ var lowestCommonAncestor = function(root, p, q) {
     if (x && y) {
         return root;
     } else {
-        return x || y;
+        return x || y; 
     }
 }; 

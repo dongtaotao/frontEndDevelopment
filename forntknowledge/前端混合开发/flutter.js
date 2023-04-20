@@ -1,7 +1,7 @@
 
 Flutter 生命周期 
 https://juejin.cn/post/7056646298073563166
-StatefulWidget 生命周期
+StatefulWidget 生命周期 
 
 createState：该函数为 StatefulWidget 中创建 State 的方法，当 StatefulWidget 被创建时会立即执行 createState。
    createState 函数执行完毕后表示当前组件已经在 Widget 树中，此时有一个非常重要的属性 mounted 被置为 true。

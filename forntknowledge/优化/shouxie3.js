@@ -169,6 +169,27 @@ function getId(value, id) {
 getId(list.shift(), '112')
 
 
+function fn(id, list) {    // gpt
+  for (let i = 0; i < list.length; i++) {
+    const node = list[i];
+    if (node.id === id) {
+      return [id];
+    } else if (node.children) {
+      const subResult = fn(id, node.children);
+      if (subResult) {
+        return [node.id, ...subResult];
+      }
+    }
+  }
+  return null;
+}
+
+const id = '112';
+const result = fn(id, list);
+console.log(result); // 输出 [1, 11, 112]
+
+
+
 获取页面所有的 tagname
 function getAllHTMLTags() {
   const tags = [...window.document.querySelectorAll("*")].map(
@@ -187,15 +208,15 @@ function getAllHTMLTags() {
   const s = n.toString()
   const arr = s.split('').reverse()
   return arr.reduce((prev, val, index) => {
-      if (index % 3 === 0) {
-          if (prev) {
-              return val + ',' + prev
-          } else {
-              return val
-          }
+    if (index % 3 === 0) {
+      if (prev) {
+        return val + ',' + prev
       } else {
-          return val + prev
+        return val
       }
+    } else {
+      return val + prev
+    }
   }, '')
 }
 
@@ -377,27 +398,27 @@ js连续最多的字符 https://segmentfault.com/a/1190000040827579
 JavaScript获取字符串中连续出现次数最多的字符
 var str = 'aaaabcc4aa4ddcfceeeeeeeggg';
 function getStrMaxCount1(str){
-    var resultStr = '';
-    var resultCount = 0;
-    var i = 0;
-    var j = 0;
-    while(i < str.length){
-        let strStart = str[i];
-        // 不相等则说明 strStart 不再连续了
-        if(strStart != str[++j]){
-            let count = j - i;
-            console.log(`字符：${strStart}出现了：${count}次！`);
-            if(count > resultCount){
-                resultCount = count;
-                resultStr = strStart;
-            }
-            i = j;
+  var resultStr = '';
+  var resultCount = 0;
+  var i = 0;
+  var j = 0;
+  while(i < str.length){
+    let strStart = str[i];
+    // 不相等则说明 strStart 不再连续了
+    if(strStart != str[++j]){
+        let count = j - i;
+        console.log(`字符：${strStart}出现了：${count}次！`);
+        if(count > resultCount){
+          resultCount = count;
+          resultStr = strStart;
         }
+        i = j;
     }
-    return {
-        count: resultCount,
-        str: resultStr
-    };
+  }
+  return {
+      count: resultCount,
+      str: resultStr
+  };
 }
 // {count: 7, str: 'e'}
 console.log(getStrMaxCount1(str)); 
@@ -426,6 +447,7 @@ const permutate = (arr) => {
 permutate([['A','B'], ['a','b'], [1, 2]])
 
 
+数组转树
 将js对象转化为树形结构  https://juejin.cn/post/6946136940164939813
 // 转换前：
 source = [{

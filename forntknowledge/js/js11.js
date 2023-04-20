@@ -382,8 +382,6 @@ url****到页面显示的过程，还有页面显示出来的时候发生了什�
 前端两年经验，历时一个月的面经和总结
 https://juejin.cn/post/7013953652578582558
 
-前端技术专家面试都问什么？（大家感受一下）  🔥不错
-https://juejin.cn/post/7089672110716485639
 
 偏函数： https://blog.csdn.net/qq_42129063/article/details/81874314
 所谓偏函数，就是固定一个函数的一个或者多个参数，返回一个新的函数，这个函数用于接受剩余的参数
@@ -617,4 +615,4 @@ https://mybrowseraddon.com/access-control-allow-origin.html?v=0.1.7&type=install
 https://github.com/dwqs/blog/issues/70
 
 「前端进阶」高性能渲染十万条数据(虚拟列表)
-https://juejin.cn/post/6844903982742110216    
+https://juejin.cn/post/6844903982742110216     

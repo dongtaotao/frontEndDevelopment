@@ -77,7 +77,8 @@ Vue.createApp({
 }).mount('#app')
 vue2中组件确实只能有一个根，但vue3中组件已经可以多根节点了。
 之所以需要这样是因为vdom是一颗单根树形结构，patch方法在遍历的时候从根节点开始遍历，它要求只有一个根节点。组件也会转换为一个vdom
-vue3中之所以可以写多个根节点，是因为引入了Fragment的概念，这是一个抽象的节点，如果发现组件是多根的，就创建一个Fragment节点，把多个根节点作为它的children。将来patch的时候，如果发现是一个Fragment节点，则直接遍历children创建或更新
+vue3中之所以可以写多个根节点，是因为引入了Fragment的概念，这是一个抽象的节点，如果发现组件是多根的，就创建一个Fragment节点，把多个根节点作为它的children。
+将来patch的时候，如果发现是一个Fragment节点，则直接遍历children创建或更新
 链接：https://juejin.cn/post/7204844328111358007
 
 Vue 修饰符有哪些 https://juejin.cn/post/7204844328111358007?
@@ -112,9 +113,13 @@ https://www.cnblogs.com/LylePark/p/16977781.html
 Vue事件绑定原理是什么？
 原生事件绑定是通过addEventListener绑定给真实元素的，组件事件绑定是通过Vue自定义的$on实现的。
 
+需求：vue v-html预防xss  第三方插件
+DOMPurify、Vue-html-secure 和 Sanitize-html 都是常用的用于预防 XSS 攻击的 Vue.js 插件，每个插件都有其特点和优势，在使用时需要根据实际需求选择合适的插件。
+
 21 Vue的事件绑定原理
 https://interview.poetries.top/docs/excellent-docs/7-Vue.html#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8
-原生事件绑定是通过 addEventListener 绑定给真实元素的，组件事件绑定是通过 Vue 自定义的$on 实现的。如果要在组件上使用原生事件，需要加.native 修饰符，这样就相当于在父组件中把子组件当做普通 html 标签，然后加上原生事件。
+原生事件绑定是通过 addEventListener 绑定给真实元素的，组件事件绑定是通过 Vue 自定义的$on 实现的。如果要在组件上使用原生事件，需要加.native 修饰符，
+这样就相当于在父组件中把子组件当做普通 html 标签，然后加上原生事件。
 
 Vue Test Utils/Jest单元测试
 https://juejin.cn/post/7074763876487102478
@@ -200,7 +205,6 @@ https://juejin.cn/post/7019253626602258469
 
 都说Composition API与React Hook很像，说说区别
 从React Hook的实现角度看，React Hook是根据useState调用的顺序来确定下一次重渲染时的state是来源于哪个useState，所以出现了以下限制
-
 不能在循环、条件、嵌套函数中调用Hook
 必须确保总是在你的React函数的顶层调用Hook
 useEffect、useMemo等函数必须手动确定依赖关系
@@ -219,3 +223,23 @@ useMemo等函数正确的捕获依赖变量，否则会由于依赖不正确使�
 
 如何使用 pnpm+vite+vue3 搭建组件库并发布到私有仓库（人人都能学会）
 https://juejin.cn/post/7212538330829996092?
+
+
+14、vue2 和vue 3的区别
+Vue 3 是 Vue.js 的最新版本，与 Vue 2 相比，Vue 3 有以下主要的区别：
+
+更快的渲染速度：Vue 3 引入了新的响应式系统，提高了性能，特别是在大型应用程序中。
+更小的体积：Vue 3 的体积比 Vue 2 更小，这得益于新的编译器和优化的 Tree-Shaking。
+更好的 TypeScript 支持：Vue 3 支持更好的 TypeScript 集成，提供了完整的类型定义文件，并改进了响应式 API，使其更好地适用于 TypeScript。
+Composition API：Vue 3 引入了 Composition API，可以更好地组织代码，解决了 Vue 2 中代码复用和逻辑复杂性的问题。
+Teleport 组件：Vue 3 引入了 Teleport 组件，可以方便地将组件插入到应用程序中的任何位置，而无需重构 DOM。
+Suspense 组件：Vue 3 引入了 Suspense 组件，可以更好地处理异步数据和代码分割。
+更好的自定义指令：Vue 3 改进了自定义指令的 API，使其更容易编写和测试自定义指令。
+更好的可访问性支持：Vue 3 增加了更多的可访问性支持，包括 ARIA 和无障碍键盘导航。
+
+总之，Vue 3 在性能、体积、可维护性和可访问性等方面都得到了显著的改进，同时也引入了一些新的特性和改进，为开发人员提供了更好的开发体验。不过，由于 Vue 3 的一些 API 与 Vue 2 不兼容，所以升级到 Vue 3 时需要进行相应的更新。
+链接：https://juejin.cn/post/7216319218504564791
+
+
+Webpack 5.0 从零开始搭建 Vue 开发环境 
+https://juejin.cn/post/7218098727608025144?

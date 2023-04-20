@@ -251,7 +251,7 @@ var zigzagLevelOrder = function(root) {
    return res.map((item, index) => {
         let it = item;
         if((index+1) % 2 ===0) {
-            it = item.reverse();
+            it = item.reverse(); 
         }
         return it
     })

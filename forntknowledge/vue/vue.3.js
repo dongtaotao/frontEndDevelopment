@@ -106,7 +106,7 @@ Vue.use方法的使用 https://www.lingtiku.com/quiz/detail/5
 Vue中组件和插件有什么区别？
 https://fe.ecool.fun/topic/51699bda-02be-4433-b2bf-450c2655594f?orderBy=updateTime&order=desc&tagId=14
 
-怎么给 Vue 定义全局方法 https://juejin.cn/post/6899291168891207688 
+怎么给 Vue 定义全局方法 https://juejin.cn/post/6899291168891207688  
 一、将方法挂载到 Vue.prototype 上面
 二、利用全局混入mixin
 三、使用Plugin方式

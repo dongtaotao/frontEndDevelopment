@@ -1,4 +1,4 @@
-网页开发渲染线程和脚本线程是互斥的，也是为什么长时间的脚本运行可能会导致页面失去响应  
+网页开发渲染线程和脚本线程是互斥的，也是为什么长时间的脚本运行可能会导致页面失去响应   
 小程序中，逻辑层和渲染层是分开的，双线程同时运行。渲染层的界面使用 WebView 进行渲染； 
 逻辑层采用 JSCore 运行 JavaScript 代码
 网页开发面对的主要是浏览器及移动端浏览器 WebView
@@ -88,4 +88,4 @@ https://developers.weixin.qq.com/community/develop/doc/000e46078b015804f6d6c2dc1
 详解：如何监控小程序异常及处理错误？
 https://cloud.tencent.com/developer/article/1683396
 小程序错误异常监控方案 
-https://www.wxapp-union.com/article-6184-1.html 
+https://www.wxapp-union.com/article-6184-1.html  

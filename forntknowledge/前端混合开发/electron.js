@@ -4,7 +4,7 @@ Electron 基于 Chromium 和 Node.js, 让你可以使用 HTML, CSS 和 JavaScrip
 
 基于node.js和chromium， 
 跨平台-兼容mac windows，linux 
-
+ 
 开发electron
 需要html，js， css基础
 深入浅出node.js

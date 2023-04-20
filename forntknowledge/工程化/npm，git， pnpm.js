@@ -114,3 +114,9 @@ https://www.bilibili.com/video/BV1i34y1W7P5/?spm_id_from=333.788.recommend_more_
 
 来聊一聊前端工程师会涉及的monorepo管理工具lerna
 https://www.bilibili.com/video/BV1DP41177nj/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+在一台电脑上使用多个Git账号
+https://juejin.cn/post/7214374960192962597?
+
+
+lerna 是一个管理工具，用于管理包含多个软件包（package）的 JavaScript 项目
