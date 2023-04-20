@@ -65,7 +65,7 @@ https://juejin.cn/post/7149765960704983076
 搭建npm私服，我为什么推荐Verdaccio？
 https://juejin.cn/post/7152508589385449479
 
-「万变不离其宗」10个高频场景题助力业务开发 🚀🚀🚀
+「万变不离其宗」10个高频场景题助力业务开发 🚀🚀🚀 
 https://juejin.cn/post/7152722756587978760
 
 bash和zsh的区别
@@ -76,9 +76,100 @@ https://juejin.cn/post/7153086294409609229
 
 【第20题】npm run xxx 的执行过程 https://juejin.cn/post/7153601063542521886
 
-
 使用SourceTree回滚  
 https://www.jianshu.com/p/5b28fe70469d?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
 
 sourceTree 代码回滚(git 和http)
 http://t.zoukankan.com/matengfei123-p-12376443.html
+
+阿里面试官：如何给所有的async函数添加try/catch？
+babel插件的实现思路
+1）借助AST抽象语法树，遍历查找代码中的await关键字
+2）找到await节点后，从父路径中查找声明的async函数，获取该函数的body（函数中包含的代码）
+3）创建try/catch语句，将原来async的body放入其中
+4）最后将async的body替换成创建的try/catch语句
+链接：https://juejin.cn/post/7155434131831128094
+
+
+将js对象转化为树形结构  https://juejin.cn/post/7155678722866020359
+// 转换前：
+source = [{
+    id: 1,
+    pid: 0,
+    name: 'body'
+  }, {
+    id: 2,
+    pid: 1,
+    name: 'title'
+  }, {
+    id: 3,
+    pid: 2,
+    name: 'div'
+  }]
+// 转换为: 
+tree = [{
+  id: 1,
+  pid: 0,
+  name: 'body',
+  children: [{
+    id: 2,
+    pid: 1,
+    name: 'title',
+    children: [{
+      id: 3,
+      pid: 1,
+      name: 'div'
+    }]
+  }
+}]
+
+
+function jsonToTree(data) {
+    // 初始化结果数组，并判断输入数据的格式
+    let result = []
+    if(!Array.isArray(data)) {
+      return result
+    }
+    // 使用map，将当前对象的id与当前对象对应存储起来
+    let map = {};
+    data.forEach(item => {
+      map[item.id] = item;
+    });
+    // 
+    data.forEach(item => {
+      let parent = map[item.pid];
+      if(parent) {
+        (parent.children || (parent.children = [])).push(item);
+      } else {
+        result.push(item);
+      }
+    });
+    return result;
+  }
+  
+
+在网页上添加水印 - react-watermark https://juejin.cn/post/7157982053013651470
+
+如果是你该如何实现前端数据上报？https://juejin.cn/post/7126726273254031368
+
+微信JSSDK https://www.bilibili.com/video/BV1pv411L7p6/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+vue接入-微信jssdk https:/n/www.bilibili.com/video/BV1Vy4y1y7qG/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+大文件分片上传，断点续传 node.js+axios+egg.js
+https://juejin.cn/post/7161749221061132302
+
+页面有多张图片，HTTP是怎样的加载表现？
+在HTTP 1下，浏览器对一个域名下最大TCP连接数为6，所以会请求多次。可以用多域名部署解决。这样可以提高同时请求的数目，加快页面图片的获取速度。
+在HTTP 2下，可以一瞬间加载出来很多资源，因为，HTTP2支持多路复用，可以在一个TCP连接中发送多个HTTP请求。
+链接：https://juejin.cn/post/7161194386028494885
+
+params和query的区别
+用法：query要用path来引入，params要用name来引入，接收参数都是类似的，分别是 this.$route.query.name 和 this.$route.params.name 。
+url地址显示：query更加类似于ajax中get传参，params则类似于post，说的再简单一点，前者在浏览器地址栏中显示参数，后者则不显示
+注意：query刷新不会丢失query里面的数据 params刷新会丢失 params里面的数据。
+链接：https://juejin.cn/post/7160474349177143304
+
+一篇解决内存泄漏问题 https://juejin.cn/post/7163152277056782350
+
+手写一个埋点SDK吧~ https://juejin.cn/post/7165159142867337247   
+

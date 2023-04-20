@@ -282,7 +282,7 @@ Content-Type: multipart/form-data ： 常用于文件上传
 text/plain
 text/html
 
-链接：https://juejin.cn/post/6844904073737535496
+链接：https://juejin.cn/post/6844904073737535496 
  
 
 HTTP2的缺点
@@ -291,4 +291,4 @@ TCP 以及 TCP+TLS建立连接的延时,HTTP/2使用TCP协议来传输的，而�
 TCP的队头阻塞并没有彻底解决。在HTTP/2中，多个请求是跑在一个TCP管道中的。但当HTTP/2出现丢包时，整个 TCP 都要开始等待重传，那么就会阻塞该TCP连接中的所有请求。  
 
 CSP白名单知道吗
-白名单就是Content Security Policy（内容安全策略）  
+白名单就是Content Security Policy（内容安全策略）   

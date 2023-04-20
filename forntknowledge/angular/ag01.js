@@ -2,24 +2,23 @@ angular 面试题
 https://juejin.cn/post/6864951052337168397
 用于 JavaScript 的 ReactiveX 库。
 RxJS 是使用 Observables 的响应式编程的库，它使编写异步或基于回调的代码更容易
-ReactiveX 是一个通过使用可观察序列来合成异步和基于事件的程序的库。
+ReactiveX 是一个通过使用可观察序列来合成异步和基于事件的程序的库。 
 RxJS 是专门处理异步逻辑的 
 
-rx.js 响应式异步编程库，在vue中需引入vue-rx     
+rx.js 响应式异步编程库，在vue中需引入vue-rx      
 
 组件中内置指令
-    NgClass
-    NgStyle
-    NgModel
-    NgFor
-    NgIf 
-    NgSwitch
+  NgClass
+  NgStyle
+  NgModel
+  NgFor
+  NgIf 
+  NgSwitch
 组件的事件绑定-方法和参数
 <button (click)="addCount($event)">当前数值加1</button>
 
 组件的父子组件传值 https://juejin.cn/post/7033690420899135519
 @Input() 和 @Output() 为子组件提供了一种与其父组件通信的方法。 @Input() 允许父组件更新子组件中的数据。相反，@Output() 允许子组件向父组件发送数
-
 
 父组件向子组件里传值是通过属性进行传值的
 

@@ -10,7 +10,7 @@ var deleteDuplicates = function(head) {
   return head;
 }
 
-练习：删除重复节点升级 
+练习：删除重复节点升级  
 function ListNode(val, next) {
   this.val = val;
   this.next = null;

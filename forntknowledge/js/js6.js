@@ -291,7 +291,7 @@ function mySetInterval(fn, delay) {
     timer = setTimeout(() => {
       loop();
       fn();
-    }, delay);
+    }, delay); 
   };
   loop();
   return () => {
@@ -302,5 +302,5 @@ function mySetInterval(fn, delay) {
 const stop = mySetInterval(() => {
   console.log('test')
 }, 200);
- 
-stop() // 停止   
+  
+stop() // 停止      

@@ -58,7 +58,7 @@ https://www.csdn.net/tags/MtTakg1sODExMjQtYmxvZwO0O0OO0O0O.html
 
 编译时是使用 babel-parser 将 Taro 代码解析成抽象语法树，然后通过 babel-types 
 对抽象语法树进行一系列修改、转换操作，最后再通过 babel-generate 生成对应的目标代码。
- 
+  
 🔥🔥🔥
 Taro 3 则可以大致理解为解释型架构（相对于 Taro 1/2 而言），主要通过在小程序端模拟实现 DOM、BOM API 来让前端框架直接运行在小程序环境中，
 从而达到小程序和 H5 统一的目的，而对于生命周期、组件库、API、路由等差异，依然可以通过定义统一标准，各端负责各自实现的方式来进行抹平。
@@ -68,4 +68,4 @@ Taro 3 则可以大致理解为解释型架构（相对于 Taro 1/2 而言），
 链接：https://juejin.cn/post/6989968343163731981
 
 Taro3跨端跨框架原理初探
-https://juejin.cn/post/6989968343163731981 
+https://juejin.cn/post/6989968343163731981  

@@ -21,7 +21,7 @@ React 开发性能监测插件-Why Did You Render http://www.javashuo.com/articl
 推荐几个 React 性能优化工具
 https://blog.csdn.net/qq_32281471/article/details/106893990
 
-阿里三面：灵魂拷问——有react fiber，为什么不需要vue fiber呢？
+阿里三面：灵魂拷问——有react fiber，为什么不需要vue fiber呢？ 
 https://juejin.cn/post/7077545184807878692
 react因为先天的不足——无法精确更新，所以需要react fiber把组件渲染工作切片；而vue基于数据劫持，更新粒度很小，没有这个压力；
 react fiber这种数据结构使得节点可以回溯到其父节点，只要保留下中断的节点索引，就可以恢复之前的工作进度；
@@ -31,7 +31,7 @@ react fiber这种数据结构使得节点可以回溯到其父节点，只要保
 React 事件合成的概念：React 应用中，元素绑定的事件并不是原生事件，而是React 合成的事件，比如 onClick 是由 click 合成，onChange 
 是由 blur ，change ，focus 等多个事件合成。
 React的事件和普通的HTML事件有什么不同？
-区别：
+区别： 
 对于事件名称命名方式，原生事件为全小写，react 事件采用小驼峰；
 对于事件函数处理语法，原生事件为字符串，react 事件为函数；
 react 事件不能采用 return false 的方式来阻止浏览器的默认行为，而必须要地明确地调用preventDefault()来阻止默认行为。
@@ -113,7 +113,7 @@ export function Counter() {
   )
 }
 
-setCount useState 给相同的值，不会重渲染
+setCount useState 给相同的值，不会重渲染 ----------------
 
 React18 新特性解读 & 完整版升级指南
 https://juejin.cn/post/7094037148088664078#heading-4
@@ -198,3 +198,25 @@ Provider 的作用就是通过 Context API 把 Store 对象注入到 React 组�
 React hook 底层是基于链表实现，调用的条件是每次组件被render的时候都会顺序执行所有的hooks。
 
 useImperativeHandle	可以让你在使用 ref 时自定义暴露给父组件的实例值。 
+
+
+Hooks https://www.yuque.com/alexwjj/cxh60c/rx2qyp
+实现原理
+● 底层依赖顺序链表，每次进行render时都需要按顺序查找更新
+
+React Hooks 解决了哪些问题？
+● 在组件之间复用状态逻辑很难
+● 复杂组件变得难以理解
+● 难以理解的 class
+
+useEffect 与 useLayoutEffect 的区别
+useEffect 在 React 的渲染过程中是被异步调用的，用于绝大多数场景；
+而 useLayoutEffect 会在所有的 DOM 变更之后同步调用，主要用于处理 DOM 操作、调整样式、避免页面闪烁等问题。
+也正因为是同步处理，所以需要避免在 useLayoutEffect 做计算量较大的耗时任务从而造成阻塞。
+
+【React】万字长文！100+个让你事半功倍的常用 React Hooks 和工具包 
+https://juejin.cn/post/7196943285381464101
+
+
+好想用Typescript+React hooks开发啊!（嘴对嘴解释）
+https://juejin.cn/post/6844904085024407566

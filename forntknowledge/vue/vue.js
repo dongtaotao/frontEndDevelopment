@@ -2,14 +2,14 @@ VUE+Elementui+ECharts【vue项目实战】
 https://www.bilibili.com/video/BV1Eg41197sN?p=47&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 
 vuex
-Vuex 集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以可预测的方式发生变化 
+Vuex 集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以可预测的方式发生变化  
 state: 状态中心
 mutations: 更改状态
 actions: 异步更改状态
 getters: 获取状态
 modules: 将state分成多个modules，便于管理 
 
-//https://www.bilibili.com/video/BV1oZ4y1V7tx?p=99
+//https://www.bilibili.com/video/BV1oZ4y1V7tx?p=99 
 this.$router.addRouters([
   {
     path: '/',
@@ -180,7 +180,6 @@ v-model 在内部为不同的输入元素使用不同的属性并抛出不同的
 <input v-model='something'>
 相当于
 <input v-bind:value="something" v-on:input="something = $event.target.value">
-复制代码
 如果在自定义组件中，v-model 默认会利用名为 value 的 prop 和名为 input 的事件，如下所示：
 父组件：
 <ModelChild v-model="message"></ModelChild>
@@ -201,7 +200,6 @@ https://vue3js.cn/interview/vue/vue3_vue2.html#%E5%93%AA%E4%BA%9B%E5%8F%98%E5%8C
 
 vue长列表优化-虚拟滚动 
 https://juejin.cn/post/7063898544008069127   
-
 
 React、Vue2、Vue3的三种Diff算法
 https://juejin.cn/post/6919376064833667080
@@ -226,7 +224,7 @@ diff算法应用很广泛，例如提交github pr 或者（gitlab mr）
 
 tree diff优化
 之比较同一层级，不跨级比较
-tag 不同则删掉重建（不再去比较内部的细节）
+tag 不同则删掉重建（不再去比较内部的细节） 
 
 React diff 特点
 仅向右移动
@@ -236,4 +234,4 @@ Vue2 diff 特点
 
 Vue3 diff 特点
 最长递增子序列
-链接：https://juejin.cn/post/7109104086049357861
+链接：https://juejin.cn/post/7109104086049357861  

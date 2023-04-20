@@ -6,6 +6,7 @@ Vue3.2 + TypeScript + Pinia + Vite2 + Element-Plus 管理系统（开源啦🎉�
 https://juejin.cn/post/7080820051422478366
 
 「超详细React项目搭建教程一」企业级前端开发规范如何搭建🛠 
+https://juejin.cn/post/6947874258324946952
 「超详细React项目搭建教程二」集成 Webpack5/React17
 「超详细React项目搭建教程三」集成 CSS/Less/Sass/Antd
 「超详细React项目搭建教程四」集成图片/字体
@@ -47,8 +48,6 @@ Babel 配置
 生产环境配置
 为生产环境添加 NPM 脚本
 抽离 Webpack 的公共配置
-最后
-参考文档
 
 「超详细React项目搭建教程三」集成 CSS/Less/Sass/Antd  
 https://juejin.cn/post/6947875008840466463
@@ -85,8 +84,6 @@ React Router + Antd 实现侧边栏菜单
 常见问题
 手动刷新子页面出现 404
 不能在 if/循环语句中使用 React Hooks
-最后
-参考文章
 
 「超详细React项目搭建教程六」集成 Redux/Typescript
 安装依赖
@@ -102,3 +99,165 @@ https://juejin.cn/post/6999985372440559624
 
 2021 年前端开发者需要知道的 JS/React 规范
 https://juejin.cn/post/6950690579286065182 
+
+
+从零搭建React项目全家桶 https://juejin.cn/post/7176810508857638970
+
+
+【脚手架】从0到1搭建React18+TS4.x+Webpack5项目（一）项目初始化
+https://juejin.cn/post/7203169721839042615?可能想要玩的技术栈：
+【脚手架】从0到1搭建React18+TS4.x+Webpack5项目（二）基础功能配置
+https://juejin.cn/post/7203621090052456485?
+【脚手架】从0到1搭建React18+TS4.x+Webpack5项目（三）代码质量和git提交规范
+https://juejin.cn/post/7207374216126922809?
+【脚手架】从0到1搭建React18+TS4.x+Webpack5项目（四）发布脚手架
+
+
+
+主技术栈：webpack5 + React18 + TS4.x + React-Router6.x
+代码风格和规范：eslint + prettier + stylelint + husky + pre-commmit + commitlint
+样式与处理器：
+CSS module：less、sass、stylus
+CSS-in-JS：styled-components、emotion
+Atom CSS：tailwind、windi
+
+状态管理：TanStack Query、RTK/RTK-Query、mobx、recoil、jotai、zustand......
+UI：Antd5.x、Arco design......
+按需加载
+dark theme
+I18n
+......
+
+静态资源：图片、fonts、Media、数据资源(JSON、csv、tsv、excel)......
+React-Admin、可视化大屏、响应式、代码生成、低代码
+权限：React-Admin(RBAC) + Go、React-Admin(RBAC) + Node
+接口 mock
+性能优化
+
+工具层面：热更新、资源压缩、代码分离（动态导入、懒加载、预加载等）、缓存……
+代码层面：大组件拆分、全局状态管理、组件封装、re-render
+
+单测：Jest、React testing library，Chai、Mocha、Enzyme's......
+CI/CD、nginx、jekins、Docker 部署
+
+链接：https://juejin.cn/post/7203169721839042615
+
+
+使用 React18 + Vite + TypeScript 完成公司项目经验总结，学到了很多
+https://juejin.cn/post/7205842390842458149?
+
+
+Vite2 + Vue3 + TypeScript + Pinia 搭建一套企业级的开发脚手架
+https://juejin.cn/post/7036745610954801166
+搭建前准备
+Vue2 与 Vue3 的区别
+介绍 vite
+使用 vite 快速创建脚手架
+约束代码风格
+Eslint 支持
+项目下新建 .eslintrc.js
+项目下新建 .eslintignore
+prettier 支持
+解决 eslint 和 prettier 冲突
+项目下新建 .prettier.js
+项目下新建 .prettierignore
+package.json 配置:
+配置 husky + lint-staged
+首先安装 mrm
+安装 lint-staged
+配置文件引用别名 alias
+配置 css 预处理器 scss
+安装
+配置全局 scss 样式文件
+组件中使用
+路由
+统一请求封装
+状态管理 pinia
+安装 pinia
+创建 store, mian.ts :
+getters 用法介绍
+actions
+环境变量配置
+使用组件库 Naive UI
+安装 Naive UI
+如何使用
+全局配置 Config Provider
+Vite 常用基础配置
+基础配置
+生产环境生成 .gz 文件
+最终 vite.config.ts
+常用插件
+
+手把手教你用 vite + vue3 + ts + pinia + vueuse 打造企业级前端项目
+https://juejin.cn/post/7079785777692934174
+
+
+从 0 开始手把手带你搭建一套规范的 Vue3.x 项目工程环境
+https://juejin.cn/post/6951649464637636622
+技术栈
+编程语言：TypeScript 4.x + JavaScript
+构建工具：Vite 2.x
+前端框架：Vue 3.x
+路由工具：Vue Router 4.x
+状态管理：Vuex 4.x
+UI 框架：Element Plus
+CSS 预编译：Stylus / Sass / Less
+HTTP 工具：Axios
+Git Hook 工具：husky + lint-staged
+代码规范：EditorConfig + Prettier + ESLint + Airbnb JavaScript Style Guide
+提交规范：Commitizen + Commitlint
+单元测试：vue-test-utils + jest + vue-jest + ts-jest
+自动部署：GitHub Actions
+链接：https://juejin.cn/post/6951649464637636622
+
+
+Vite2+Vue3+TypeScript：搭建企业级轻量框架实践
+https://juejin.cn/post/7052593172613955614
+
+
+Vite2 + Vue3 + TypeScript + Pinia 搭建一套企业级的开发脚手架【值得收藏】
+https://juejin.cn/post/7036745610954801166
+
+
+开发一个react+ ts+webpack的前端开发环境(一)------基础环境搭建
+开发一个react+ ts+webpack的前端开发环境(二)------配置eslint、prettier、husky等代码规范检查工具
+开发一个react+ ts+webpack的前端开发环境(三)------webpack配置优化
+https://juejin.cn/post/7179182554912981047
+https://juejin.cn/column/7179189032323121212
+
+
+从 0 搭建 Vite 3 + Vue 3 前端工程化项目
+⚡️ Vite 3 - 构建工具（就是快！）
+🖖 Vue 3 - 渐进式 JavaScript 框架
+🚦 Vue Router - 官方路由管理器
+📦 Pinia - 值得你喜欢的 Vue Store
+💻 TDesign - TDesign 适配桌面端的组件库
+🎨 Less - CSS 预处理器
+🔗 Axios - 一个基于 promise 的网络请求库，可以用于浏览器和 node.js
+🧰 Husky + Lint-Staged - Git Hook 工具
+🛡️ EditorConfig + ESLint + Prettier + Stylelint - 代码规范
+🔨 Commitizen + Commitlint - 提交规范
+💡 GitHub Actions - 自动部署
+链接：https://juejin.cn/post/7156957907890733063
+
+
+体验vite + vue3 + ts搭建项目的全过程 
+https://juejin.cn/post/6973288527802925092
+
+
+[2.7w字]我是这样搭建 React+Typescript项目环境的(上) 🔥🔥🔥🔥🔥🔥🔥🔥
+https://juejin.cn/post/6860129883398668296#heading-3
+🍋 项目中常用配置文件的作用及配置方式
+🍊 eslint、stylelint 及 prettier 的配置
+🍉 代码提交规范的第三方工具强制约束方式实现
+🍓 webpack 配置 react + typescript 开发与生产环境及优化
+🍑 rollup 构建组件打包环境并发布至 npm 的全流程
+🍏 利用 react-testing-library 对 react 组件进行测试
+🥝 持续集成（CI）、Github Actions
+
+作者：vortesnail
+链接：https://juejin.cn/post/6860129883398668296
+[2.7w字]我是这样搭建 React+Typescript项目环境的(下)
+https://juejin.cn/post/6860134655568871437
+
+仓库代码 https://github.com/vortesnail/react-ts-quick-starter 

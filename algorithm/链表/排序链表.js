@@ -28,5 +28,5 @@
     result.next.val = arr[i]
     result = result.next
   }
-  return list.next
+  return list.next 
 };  

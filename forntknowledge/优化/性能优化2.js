@@ -129,4 +129,94 @@ https://juejin.cn/post/6911472693405548557
 <script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
 
 Vue项目性能优化实操,从50分到80分
-https://juejin.cn/post/7101560677688410125
+https://juejin.cn/post/7101560677688410125  
+
+当面试官问我前端可以做的性能优化有哪些
+https://juejin.cn/post/7194400984490049573?
+前端优化大概可以有以下几个方向：
+
+网络优化
+页面渲染优化
+JS优化
+图片优化
+webpack打包优化
+React优化
+Vue优化
+
+关于首屏优化，我做了哪些
+https://juejin.cn/post/7117515006714839047
+
+
+前端面试相关：性能优化篇
+https://juejin.cn/post/7206540113571758136?
+1. 减少HTTP请求
+2. 使用浏览器缓存
+3. 使用LocalStorage
+4. 使用CDN
+CDN预解析（CDN Prefetching）
+5. 使用预加载和懒加载
+6. 使用防抖和节流
+7. 压缩和优化图片
+8. 使用Webpack和Babel
+9. 使用Web Workers
+10. 减少重排和重绘
+11. 使用Chrome DevTools进行性能优化
+12. 总结
+
+5000字总结面试常问前端项目优化究竟怎么来做？
+https://juejin.cn/post/7214880895093735479?
+
+前端性能实践总结-图片过大+视频加载缓慢
+https://juejin.cn/post/7221830072985976893?
+npm i yx-tiny -D 
+
+
+5 scope Hoisting
+scope Hoisting的作用是分析模块之前的依赖关系 ， 把打包之后的公共模块合到同一个函数中去。它会代码体积更小，因为函数申明语句会产生大量代码；代码在运行时因为创建的函数作用域更少了，内存开销也随之变小。
+const ModuleConcatenationPlugin = require('webpack/lib/optimize/ModuleConcatenationPlugin');
+
+module.exports = {
+ resolve: {
+   // 针对 Npm 中的第三方模块优先采用 jsnext:main 中指向的 ES6 模块化语法的文件
+   mainFields: ['jsnext:main', 'browser', 'main']
+ },
+ plugins: [
+   // 开启 Scope Hoisting
+   new ModuleConcatenationPlugin(),
+ ],
+};
+链接：https://juejin.cn/post/6871024909674364942
+
+
+前端性能优化知识梳理(29种优化方案+13种定位方式)
+https://juejin.cn/post/7222862599850557497?
+
+2023 前端性能优化清单
+https://juejin.cn/post/7214026775142760505
+前言 🎉
+一、页面渲染 🌈
+1. 减少页面重绘(repaint)和回流(reflow)
+2. 图片压缩，图片分割，精灵图
+3. 字体包压缩
+4. 懒加载/预加载资源
+二、打包优化 🌞
+1. webpack优化resolve.alias配置（vite同理）
+2. webpack优化resolve.extensions配置（vite同理）
+3. webpack缩小loader范围
+4. split chunks代码分包
+5. tree shaking
+6. vite关闭一些打包配置项()
+三、总体优化 🌻
+1. SSR服务端渲染
+2. 开启 gzip 压缩
+3. Brotli 算法压缩
+4. 缓存
+5. Ajax可缓存
+6. 组件按需引入
+7. 动态加载
+8. 组件异步加载
+9. 路由懒加载
+10. CDN内容分发
+11. 域名发散（域名收敛）
+12. DNS预解析
+13. web worker

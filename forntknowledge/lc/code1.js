@@ -251,9 +251,9 @@ var zigzagLevelOrder = function(root) {
    return res.map((item, index) => {
         let it = item;
         if((index+1) % 2 ===0) {
-            it = item.reverse();
+            it = item.reverse(); 
         }
         return it
     })
 };
-链接：https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal      
+链接：https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal       

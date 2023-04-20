@@ -27,33 +27,33 @@ https://juejin.cn/post/7020562888657993741
 
 20. 有效的括号
 var isValid = (s) => {
-    const map = {
-        '{':'}',
-        '(':')',
-        '[':']'
+  const map = {
+    '{':'}',
+    '(':')',
+    '[':']'
+  }
+  const stack = [];
+  for(let i of s) {
+    if(map[i]) {
+      stack.push(i)
+    } else {
+      if(map[stack[stack.length -1]] === i) {
+        stack.pop()
+      } else {
+        return false
+      }
     }
-    const stack = [];
-    for(let i of s) {
-        if(map[i]) {
-            stack.push(i)
-        } else {
-            if(map[stack[stack.length -1]] === i) {
-                stack.pop()
-            } else {
-                return false
-            }
-        }
-    }
+  }
 
-    return stack.length ===0 
+  return stack.length ===0 
 }
 
 3的幂
 var isPower = function(n) {
-    while(n>=3) {
-        n/= 3;
-    }
-    return n===1
+  while(n>=3) {
+    n/= 3;
+  }
+  return n===1
 }
 
 用setTimeout实现setInterval
@@ -80,10 +80,10 @@ setTimeout(() => {
 用setInterval实现setTimeout
 
 function mySetInterval(fn, delay) {
-    const timer = setInterval(() => {
-        fn()
-        clearInterval(timer)
-    }, delay)
+  const timer = setInterval(() => {
+    fn()
+    clearInterval(timer)
+  }, delay)
 }
 
 // 测试
@@ -94,36 +94,36 @@ promise.finally
 https://juejin.cn/post/7023906112843808804
 promise.any
 function any(promises) {
-    return new Promise((resolve, reject) => {
-        let count = 0
-        promises.forEach((promise) => {
-            promise.then(val => {
-                resolve(val)
-            }, err => {
-                count++
-                if (count === promises.length) {
-                    reject(new AggregateError('All promises were rejected'))
-                }
-            })
-        })
+  return new Promise((resolve, reject) => {
+    let count = 0
+    promises.forEach((promise) => {
+      promise.then(val => {
+          resolve(val)
+      }, err => {
+        count++
+        if (count === promises.length) {
+          reject(new AggregateError('All promises were rejected'))
+        }
+      })
     })
+  })
 }
 
 promise.race
 function race(promises) {
-    return new MyPromise((resolve, reject) => {
-        promises.forEach(promise => {
-            if (promise instanceof MyPromise) {
-                promise.then(res => {
-                    resolve(res)
-                }, err => {
-                    reject(err)
-                })
-            } else {
-                resolve(promise)
-            }
+  return new MyPromise((resolve, reject) => {
+    promises.forEach(promise => {
+      if (promise instanceof MyPromise) {
+        promise.then(res => {
+            resolve(res)
+        }, err => {
+            reject(err)
         })
+      } else {
+        resolve(promise)
+      }
     })
+  })
 }
 https://juejin.cn/post/7023906112843808804
 
@@ -192,27 +192,27 @@ function washCard2 (cards) {
   
 题目描述：给了很多的区间 要尽可能的去合并这些区间。最后产出合并后的区间
 合并区间 https://juejin.cn/post/7026672593285414948#heading-13
-[[1,3],[2,6]] ===== [[16]]
+[[1,3],[2,6]] ===== [[1,6]]
 
 var merge = function(interVals){
-    if(!interVals.length < 2) {
-        return interVals
+  if(!interVals.length < 2) {
+    return interVals
+  }
+  interVals.sort((a, b) => a[0] -b[0])
+  let curr = interVals[0];
+  let result = [];
+  for(let interval of interVals) {
+    if(curr[1] >= interval[0]) {
+      curr[1] = Math.max(curr[1], interval[1]);
+    } else {
+      result.push(curr);
+      curr = interval;
     }
-    interVals.sort((a, b) => a[0] -b[0])
-    let curr = interVals[0];
-    let result = [];
-    for(let interval of interVals) {
-        if(curr[1] >= interval[0]) {
-            curr[1] = Math.max(curr[1], interval[1]);
-        } else {
-            result.push(curr);
-            curr = interval;
-        }
-    }
-    if(curr.length !==0) {
-        result.push(curr)
-    }
-    return result;
+  }
+  if(curr.length !==0) {
+    result.push(curr)
+  }
+  return result;
 }
 
 简易模板引擎 https://juejin.cn/post/6989103878436290568
@@ -273,9 +273,9 @@ function intersectAll(...arrs){
 合并之后就是
 
 function getIntersect(...arrs) {
-    return arrs.reduce(function(prev,cur){
-	    return [...new Set(cur.filter((item)=>prev.includes(item)))]
-    })
+  return arrs.reduce(function(prev,cur){
+    return [...new Set(cur.filter((item)=>prev.includes(item)))]
+  })
 }
 
 冒泡
@@ -320,18 +320,18 @@ function selectionSort(arr) {
 
   去掉重复元素次数大于2次的 https://juejin.cn/post/6855129005415366670
   数组去重比较简单，有很多方案可以实现，本题是去掉重复次数2次以上的，删除最后一个。 比如：[1,1,1,2,2,5,5,5,5] 返回 [1,1,2,2,5,5]
-  function delRepeat2(arr){
-    var newArr = [];
-    var obj = {};
-    // 先对数组进行升序
-    arr.sort((a,b)=>a-b);
-    arr.map(item=>{
-      //通过obj来统计次数
-      obj[item]?obj[item] += 1:obj[item] = 1
-      //如果次数小于2，就保存到新数组
-      obj[item]<=2?newArr.push(item):''
-    })
-    return newArr;
+function delRepeat2(arr){
+  var newArr = [];
+  var obj = {};
+  // 先对数组进行升序
+  arr.sort((a,b)=>a-b);
+  arr.map(item=>{
+    //通过obj来统计次数
+    obj[item]?obj[item] += 1:obj[item] = 1
+    //如果次数小于2，就保存到新数组
+    obj[item]<=2?newArr.push(item):''
+  })
+  return newArr;
 }
 // 测试
 delRepeat2([3,3,1,2,1,6,6,1,8])
@@ -476,7 +476,7 @@ const Solution = (nums) => {
     return ary;
   };
 
-  模板引擎实现
+模板引擎实现
 let template = '我是{{name}}，年龄{{age}}，性别{{sex}}';
 let data = {
   name: '姓名',
@@ -649,6 +649,6 @@ console.log(randSort(arr));  // [6, 3, 5, 10, 8, 2, 1, 4, 7, 9]
 
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]   
 arr.sort(function () {
-    return Math.random() - 0.5
+    return Math.random() - 0.5 
 })
 console.log(arr);  // [6, 4, 8, 5, 1, 9, 2, 7, 10, 3]   

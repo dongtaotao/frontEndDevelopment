@@ -17,7 +17,6 @@ https://juejin.im/post/5c94fef7f265da60fd0c15e8
 使用 download-git-repo 下载仓库代码demo commander ：完整的 node.js 命令行解决方案。
 声明 program ，使用 .option() 方法来定义选项 Inquirer.js ：命令行用户界面的集合。
 
-
 搭建一个自己的脚手架
 https://www.bilibili.com/video/BV18b4y1J7YD?spm_id_from=333.999.0.0
 
@@ -38,9 +37,9 @@ https://juejin.cn/post/7087811040591675428
 
 从 0 构建自己的脚手架/CLI知识体系（万字） 🛠
 https://juejin.cn/post/6966119324478079007#heading-11
-
+ 
 《前端那些事》从0到1开发简单脚手架
-https://juejin.cn/post/6844904137709060104
+https://juejin.cn/post/6844904137709060104 
 
 
 半小时搞会 CentOS 入门必备基础知识

@@ -158,7 +158,7 @@ react-router里的<Link>标签和<a>标签有什么区别
 //================================================================
 react-redux将组件分成：
 容器组件：存在逻辑处理
-UI 组件：只负责现显示和交互，内部不处理逻辑，状态由外部控制
+UI组件：只负责现显示和交互，内部不处理逻辑，状态由外部控制
 
 通过redux将整个应用状态存储到store中，组件可以派发dispatch行为action给store
 其他组件通过订阅store中的状态state来更新自身的视图
@@ -350,7 +350,7 @@ https://juejin.cn/post/6940942549305524238
 谈谈react hooks的优缺点 **************************************
 https://www.cnblogs.com/ranyonsue/p/14700528.html
 
-这里主要讲述的是react-router-dom的常用API，主要是提供了一些组件：
+这里主要讲述的是react-router-dom的常用API，主要是提供了一些组件： 
 BrowserRouter、HashRouter
 Route
 Link、NavLink
@@ -361,4 +361,4 @@ hook的使用限制
 上面简介中我们说了，不可以在循环、条件或嵌套函数中调用 Hook，这是为什么呢？
 因为 Hooks 的设计是基于数组实现的。在调用时按顺序加入数组中，如果使用循环、条件或嵌套函数很有可能导致数组取值错位，
 执行错误的 Hook。当然，实质上 React 的源码里不是数组，是链表。
-链接：https://juejin.cn/post/7065674393803816967  
+链接：https://juejin.cn/post/7065674393803816967   

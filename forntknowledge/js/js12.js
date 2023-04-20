@@ -364,7 +364,7 @@ link.style.display = "none";
 link.href = url;
 
 前端对当前页面进行绘图，并下载。 https://juejin.cn/post/7097041366748200991
-npm install --save html2canvas
+npm install --save html2canvas 
 
 CDN静态库
 BootCDN : BootCDN - Bootstrap 中文网开源项目免费 CDN 加速服务
@@ -374,4 +374,4 @@ Staticfile CDN : Staticfile CDN
 链接：https://juejin.cn/post/7089818665616408606
 
 web性能检测工具。这里的性能检测工具我使用的是Chrome的Lighthouse。
-https://juejin.cn/post/7089363983475408933  
+https://juejin.cn/post/7089363983475408933     

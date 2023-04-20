@@ -76,3 +76,7 @@ https://kaiwu.lagou.com/course/courseInfo.htm?courseId=638#/detail/pc?id=6568
 
 当时我们就想，如果能在首屏渲染过程中，把各个资源的加载时间记录到日志中，后续再通过分析，确定某一个资源加载完的时间，
 就是首屏时间。而 MutationObserver 恰恰可以做到这些。
+
+
+手写前端监控+页面性能监控（附性能监控基础知识 + 代码 + 基础版本改进建议）
+https://juejin.cn/post/7219669812158414903?

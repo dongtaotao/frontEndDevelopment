@@ -311,10 +311,10 @@ https://u.10010.cn/qAPZU
 将数组转成树结构 (动态路由权限)(后端下发数据转换成动态路由) 🔥🔥🔥
 https://juejin.cn/post/7057288955145748494
 const data = [
-    { parentId: -1, id: 1, name: '首页', path: '/home', auth: 'home' },
-    { parentId: 1, id: 2, name: '列表', path: '/list', auth: 'list' },
-    { parentId: -1, id: 3, name: '推荐', path: '/rank', auth: 'rank' },
-    { parentId: -1, id: 4, name: '关于', path: '/about', auth: 'about' },
+  { parentId: -1, id: 1, name: '首页', path: '/home', auth: 'home' },
+  { parentId: 1, id: 2, name: '列表', path: '/list', auth: 'list' },
+  { parentId: -1, id: 3, name: '推荐', path: '/rank', auth: 'rank' },
+  { parentId: -1, id: 4, name: '关于', path: '/about', auth: 'about' },
 ]
 // 定义默认路由
 export let defaultRoutes = [
@@ -382,8 +382,6 @@ url****到页面显示的过程，还有页面显示出来的时候发生了什�
 前端两年经验，历时一个月的面经和总结
 https://juejin.cn/post/7013953652578582558
 
-前端技术专家面试都问什么？（大家感受一下）  🔥不错
-https://juejin.cn/post/7089672110716485639
 
 偏函数： https://blog.csdn.net/qq_42129063/article/details/81874314
 所谓偏函数，就是固定一个函数的一个或者多个参数，返回一个新的函数，这个函数用于接受剩余的参数
@@ -617,4 +615,4 @@ https://mybrowseraddon.com/access-control-allow-origin.html?v=0.1.7&type=install
 https://github.com/dwqs/blog/issues/70
 
 「前端进阶」高性能渲染十万条数据(虚拟列表)
-https://juejin.cn/post/6844903982742110216  
+https://juejin.cn/post/6844903982742110216     

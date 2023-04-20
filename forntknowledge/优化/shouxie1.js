@@ -1,4 +1,4 @@
-史上最全！熬夜整理56个JavaScript高级的手写知识点！！专业扫盲！ 
+史上最全！熬夜整理56个JavaScript高级的手写知识点！！专业扫盲！  
 https://juejin.cn/post/7023906112843808804
 
 「万字总结」熬夜总结50个JS的高级知识点，全都会你就是神！！！
@@ -697,5 +697,5 @@ let testObj = {
       b: 1,
       c: [0, {d: 1}]
   }
-}
-console.log(transfor(testObj,[],{}))  
+} 
+console.log(transfor(testObj,[],{}))   

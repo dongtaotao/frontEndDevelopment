@@ -460,7 +460,7 @@ function new_instance_of(leftVaule, rightVaule) {
 }
 
 总结
-简单来说，我们使用 typeof 来判断基本数据类型是 ok 的，
+简单来说，我们使用 typeof 来判断基本数据类型是 ok 的， 
 不过需要注意当用 typeof 来判断 null 类型时的问题，
 如果想要判断一个对象的具体类型可以考虑用 instanceof，但是 instanceof
 也可能判断不准确，比如一个数组，他可以被 instanceof 判断为 Object。
@@ -613,4 +613,4 @@ const throttle = (fn, time) => {
       flag = true
     }, time)
   } 
-}   
+}    

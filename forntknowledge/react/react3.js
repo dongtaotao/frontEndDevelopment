@@ -20,7 +20,7 @@ React移动端适配解决方案
 https://zhuanlan.zhihu.com/p/148529375
 
 webpack5 手动搭建前端项目（react+antd + ts）
-https://juejin.cn/post/7096802032782147592
+https://juejin.cn/post/7096802032782147592 
 
 react18 https://juejin.cn/post/7078601734716653604
 
@@ -267,6 +267,7 @@ export default class Thirty extends React.Component {
 
 React 开发必须知道的 34 个技巧【近1W字】
 https://juejin.cn/post/6844903993278201870#heading-52
+https://juejin.cn/post/7003610990331838478
 
 JavaScript 引擎和页面渲染引擎两个线程是互斥的，当其中一个线程执行时，另一个线程只能挂起等待。
 如果 JavaScript 线程长时间地占用了主线程，那么渲染层面的更新就不得不长时间地等待，界面长时间不更新，
@@ -370,4 +371,4 @@ Link 的本质也是a 标签。只不过在Link 中禁用了 a 标签的默认�
 https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/135     
 
 移动端小案例,最好有react基础
-https://www.bilibili.com/video/BV1uL4y1N7qn?p=7&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+https://www.bilibili.com/video/BV1uL4y1N7qn?p=7&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a  

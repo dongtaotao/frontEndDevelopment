@@ -431,6 +431,6 @@ var isValidBST = function(root) {
     if (root.right && root.right.val < root.val) {
       return false
     }
-    return isValidBST(root.left) && isValidBST(root.right)   
+    return isValidBST(root.left) && isValidBST(root.right)     
 };
 

@@ -14,13 +14,13 @@ xhr.open('get', url, true)
 xhr.send(null);
 // 4. 接受请求
 xhr.onreadystatechange = function(){
-    if(xhr.readyState == 4){
-        if(xhr.status == 200){
-          success(xhr.responseText);
-        } else { // fail
-          fail && fail(xhr.status);
-        }
+  if(xhr.readyState == 4){
+    if(xhr.status == 200){
+      success(xhr.responseText);
+    } else { // fail
+      fail && fail(xhr.status);
     }
+  }
 }
 //================================================================
 setTimeout(function fn(){
@@ -213,5 +213,5 @@ window.addEventListener(‘error’)
 window.addEventListener(‘unhandledrejection’)     
 
 数据上报
-XMLHttpRequest  
-Image     
+XMLHttpRequest   
+Image      

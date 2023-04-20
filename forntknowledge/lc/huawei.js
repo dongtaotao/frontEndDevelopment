@@ -5,4 +5,4 @@ https://www.nowcoder.com/ta/huawei
 牛客网华为
 
 牛客网华为机试在线训练JavaScript版解答
-https://www.daimajiaoliu.com/daima/47970fc3d9003f8         
+https://www.daimajiaoliu.com/daima/47970fc3d9003f8           

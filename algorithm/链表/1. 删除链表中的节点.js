@@ -23,7 +23,7 @@ var intersection = function(nums1, nums2) {
   nums1.forEach(n => {
     map.set(n, true)
   })
-
+ 
   const res = [];
   nums2.forEach(n => {
     if(map.get(n)) {

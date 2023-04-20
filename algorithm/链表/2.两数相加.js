@@ -36,6 +36,6 @@ var lengthOfLongSubstring = function(s) {
     res = Math.max(res, r - l +1);
     map.set(s[r], r)
   }
-  return res;
+  return res; 
 }
  

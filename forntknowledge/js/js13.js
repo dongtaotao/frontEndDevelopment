@@ -300,7 +300,6 @@ IntersectionObserver API
 IntersectionObserver API可以自动的"观察"元素是否是可见的. 由于可见的本质是目标元素与视图产生一个交叉去, 所以这个API叫做 "交叉观察器".
 
 
-
 实战：使用nodejs的第三方插件nodemailer实现邮件发送
 https://blog.csdn.net/bertil/article/details/121345946
 https://www.yuque.com/baiyueguang-rfnbu/tr4d0i/vqxe0g
@@ -363,7 +362,6 @@ https://segmentfault.com/q/1010000020777339
 【高频JS手写】20+高频JS手写题总结
 https://blog.csdn.net/weixin_44523860/article/details/108949531
 
-
 字符串常用的十个函数
 charAt()   // 返回在指定位置的字符。
 concat()   // 连接字符串。
@@ -416,4 +414,4 @@ Video.js 使用教程 - 手把手教你基于 Vue 搭建 HTML 5 视频播放器
 https://juejin.cn/post/7080220673812987940
 
 实现一个大文件切片上传+断点续传 
-https://www.tuicool.com/articles/aY7Vn2U 
+https://www.tuicool.com/articles/aY7Vn2U    

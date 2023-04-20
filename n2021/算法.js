@@ -98,9 +98,9 @@ console.log(add(1)(2, 3));
 JavaScript实现千位分隔符 https://www.jianshu.com/p/928c68f92c0c
 function numFormat(num){
   var res=num.toString().replace(/\d+/, function(n){ // 先提取整数部分
-       return n.replace(/(\d)(?=(\d{3})+$)/g,function($1){
-          return $1+",";
-        });
+    return n.replace(/(\d)(?=(\d{3})+$)/g,function($1){
+      return $1+",";
+    });
   })
   return res;
 }
@@ -197,7 +197,6 @@ console.log(2)
 714.买卖股票的最佳时机含手续费
 968.我要监控二叉树！
 贪心算法总结篇！
-
 链接：https://leetcode-cn.com/problems/jump-game/solution/dai-ma-sui-xiang-lu-dai-ni-xue-tou-tan-x-mjc9/
 
 //================================================================
@@ -211,11 +210,11 @@ var hasPathSum = function(root, sum) {
   if(!root) return false;
   let res = false;
   const dfs = (n, s) => {
-      if (!n.left && !n.right && s === sum) {
-        res = true;
-      }
-      if (n.left) dfs(n.left, s + n.left.val);
-      if (n.right) dfs(n.right, s + n.right.val);
+    if (!n.left && !n.right && s === sum) {
+      res = true;
+    }
+    if (n.left) dfs(n.left, s + n.left.val);
+    if (n.right) dfs(n.right, s + n.right.val);
   }
   dfs(root, root.val);
   return res;
@@ -238,13 +237,13 @@ var maxProfit = function (prices){
   let minPrice = prices[0],
       maxProfit = 0;
   for (let i = 0; i < prices.length; i ++){
-      //判断当前的价格是否小于最小的价格
-      if(prices[i] < minPrice){
-          minPrice = prices[i];
-          // 当前价格减去最小价格 是否大于之前存储的最大利润
-      }else if ((prices[i] - minPrice) > maxPrice){
-          maxPrice = prices[i] -minPrice;
-      }
+    //判断当前的价格是否小于最小的价格
+    if(prices[i] < minPrice){
+      minPrice = prices[i];
+      // 当前价格减去最小价格 是否大于之前存储的最大利润
+    }else if ((prices[i] - minPrice) > maxPrice){
+      maxPrice = prices[i] -minPrice;
+    }
   }
   return maxProfit;
 }
@@ -268,7 +267,6 @@ var  isPalindrome = function (s) {
     }
     left++;
     right --;
-
   }
   // 如果没有返回false  那么后面也不用再去判断了 直接返回true 
   return true;
@@ -350,3 +348,22 @@ function render(template, data) {
   return computed;   
 }   
 
+
+LeetCode热题（JS版）- 67. 二进制求和
+js 二进制求和 chatdpt
+正在为您搜索：js、二进制、求和
+
+JavaScript可以使用parseInt()函数将二进制字符串转换成十进制数字，然后进行求和操作。具体代码如下：
+
+javascript
+let binaryString1 = '1101';   // 二进制字符串1
+let binaryString2 = '10101';  // 二进制字符串2
+
+let decimal1 = parseInt(binaryString1, 2);  // 将二进制字符串1转换为十进制数字
+let decimal2 = parseInt(binaryString2, 2);  // 将二进制字符串2转换为十进制数字
+
+let sum = decimal1 + decimal2;  // 计算十进制数的和
+
+let binarySum = sum.toString(2);  // 将十进制数转换为二进制字符串
+
+console.log(binarySum);  // 输出二进制数的和

@@ -56,3 +56,85 @@ loader本质就是一个函数
 plugin是插件
 
 webpack中异步加载(懒加载)原理  https://juejin.cn/post/7152516872330543141#heading-1  🔥🔥
+
+
+
+webpack热更新原理
+什么是webpack热更新
+开发过程中，代码发生变动后，webpack会重新编译，编译后浏览器替换修改的模块，局部更新，无需刷新整个页面
+
+原理
+通过websocket实现，建立本地服务和浏览器的双向通信，当代码变化，重新编译后，通知浏览器请求更新的模块，替换原有的模块
+
+步骤
+通过webpack-dev-server开启server服务，本地server启动之后，再去启动websocket服务，建立本地服务器和浏览器双向通信
+webpack每次编译后，会生成一个hash值，hash代表每一次编译的表示，作为下一次热更新的表示
+webpack监听文件（通过文件的生成时间判断是否变化），当文件变化后，重新编译
+编译结束后，通知浏览器请求变化的资源，同时将新生成的hash值传给浏览器，用于下次热更新使用
+浏览器拿到更新的模块后，用新模块替换旧的模块，实现局部刷新
+链接：https://juejin.cn/post/7156512771348103181
+
+
+webpack环境变量在项目中的使用 https://juejin.cn/post/7189238123459510309
+
+自用前端工程化面试题 全
+https://juejin.cn/post/7198176378918830139
+
+
+Tree Shaking
+https://fe.ecool.fun/topic/a2580d1e-90e9-48bc-b93c-247425fb3e5f?orderBy=updateTime&order=desc&tagId=28
+Tree Shaking 是一个术语，在计算机中表示消除死代码，依赖于ES Module的静态语法分析（不执行任何的代码，可以明确知道模块的依赖关系）
+
+在webpack实现Trss shaking有两种不同的方案：
+
+usedExports：通过标记某些函数是否被使用，之后通过Terser来进行优化的
+sideEffects：跳过整个模块/文件，直接查看该文件是否有副作用
+
+
+说说webpack proxy工作原理？为什么能解决跨域?
+proxy工作原理实质上是利用http-proxy-middleware 这个http代理中间件，实现请求转发给其他服务器
+举个例子：
+在开发阶段，本地地址为http://localhost:3000，该浏览器发送一个前缀带有/api标识的请求到服务端获取数据，但响应这个请求的服务器只是将请求转发到另一台服务器中
+const express = require('express');
+const proxy = require('http-proxy-middleware');
+
+const app = express();
+
+app.use('/api', proxy({target: 'http://www.example.org', changeOrigin: true}));
+app.listen(3000);
+
+// http://localhost:3000/api/foo/bar -> http://www.example.org/api/foo/bar
+
+
+工程化面试题汇总https://juejin.cn/post/7206973995727765559
+
+62. webpack的热更新
+主要依赖webpack, express, websocket
+
+使用express启动本地服务，当浏览器访问的时候做出相应
+服务端和客户端使用websocket实现长连接
+webpack监听源文件的变化
+每次编译完成之后会生成hash值，已改动模块的json文件，已改动模块代码的js文件
+编译完成后通过socket向客户端推送当前编译的hash值
+
+客户端的websocket监听到有文件改动推送过来的hash值，会和上一次进行对比
+一致就走缓存
+不一致则通过ajax和jsonp获取最新的资源
+使用内存文件系统去替换有修改的内容实现局部更新
+链接：https://juejin.cn/post/6844904078288355341
+
+
+回顾webpack在vue.config.js中写loader和plugin
+https://juejin.cn/post/7208823936301826107#heading-21
+
+
+webpack 热更新机制
+热更新流程总结:
+启动本地server，让浏览器可以请求本地的静态资源
+页面首次打开后，服务端与客户端通过 websocket建立通信渠道，把下一次的 hash 返回前端
+客户端获取到hash，这个hash将作为下一次请求服务端 hot-update.js 和 hot-update.json的hash
+修改页面代码后，Webpack 监听到文件修改后，开始编译，编译完成后，发送 build 消息给客户端
+客户端获取到hash，成功后客户端构造hot-update.js script链接，然后插入主文档
+hot-update.js 插入成功后，执行hotAPI 的 createRecord 和 reload方法，获取到 Vue 组件的 render方法，重新 render 组件， 继而实现 UI 无刷新更新。
+
+链接：https://juejin.cn/post/6991724298197008421

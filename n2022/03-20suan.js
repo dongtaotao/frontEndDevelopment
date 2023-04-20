@@ -76,7 +76,7 @@ close callbacks: 执行close事件的callback，例如socket.on('close'[,fn])或
 
 
 process.nextTick(() => {}) // 同步之后，异步执行前调用
-
+ 
 -------------------------------------------------------------------------------------
 一次事件循环
 1.同步
@@ -89,7 +89,7 @@ process.nextTick(() => {}) // 同步之后，异步执行前调用
 https://www.bilibili.com/video/BV1Av411n77n/?spm_id_from=autoNext 🔥🔥🔥🔥
 
 setImmediat(() => {
-    console.log(1)
+  console.log(1)
 })
 process.nextTick(() => {
     console.log(2)
@@ -526,4 +526,4 @@ gif体积小
 
 区别
 深拷贝中既要拷贝基本数据类型也要拷贝引用类型的数据，也就是说拷贝一份完全一样的对象。
-浅拷贝中之拷贝基本数据类型，引用类型的数据只是拷贝了原来的引用，并没有把引用的数据也拷贝。 
+浅拷贝中之拷贝基本数据类型，引用类型的数据只是拷贝了原来的引用，并没有把引用的数据也拷贝。   

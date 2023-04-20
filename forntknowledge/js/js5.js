@@ -1,9 +1,9 @@
 //================================================================
 function json(src) { 
-    const script = document.createElement('script');  
-    script.src = src;
-    script.type = 'text/javascript';
-    document.body.appendChild(script)
+  const script = document.createElement('script');  
+  script.src = src;
+  script.type = 'text/javascript';
+  document.body.appendChild(script)
 }
 addScript("http://xxx.xxx.com/xxx.js?callback=handleRes");
 function handleRes(res) {
@@ -473,4 +473,4 @@ js中不同进制怎么转换
 两者都是订阅-通知的模式，区别在于：
 观察者模式：观察者和订阅者是互相知道彼此的，是一个紧耦合的设计
 发布-订阅：观察者和订阅者是不知道彼此的，因为他们中间是通过一个订阅中心来交互的，订阅中心存储了多个订阅者，当有新的发布的时候，就会告知订阅者  
- 
+    

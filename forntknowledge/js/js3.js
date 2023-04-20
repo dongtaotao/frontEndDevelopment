@@ -205,11 +205,11 @@ MyPromise.prototype.then = function (onFulfilled, onRejected) {
 
 单例模式
 var Singleton = function(name) {
-    this.name = name;
+  this.name = name;
 };
 
 Singleton.prototype.getName = function() {
-    alert(this.name);
+  alert(this.name);
 };
 
 Singleton.getInstance = (function(name) {
@@ -621,6 +621,6 @@ event.off("click", handle);
 event.emit("click", 1, 2);
 event.once("dbClick", () => {
   console.log(123456);
-});
+}); 
 event.emit("dbClick"); 
-event.emit("dbClick");       
+event.emit("dbClick");         
