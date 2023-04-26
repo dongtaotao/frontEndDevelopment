@@ -42,7 +42,7 @@ https://juejin.cn/post/7064097257821306916
 https://juejin.cn/post/7010687960731353095
 
 Redux持久化插件-解决刷新页面数据丢失问题  
-https://juejin.cn/post/6885907913265971208
+https://juejin.cn/post/6885907913265971208   redux-persist持久化插件
 
 React全家桶之整合redux-persist
 https://www.jianshu.com/p/d627e8428e56

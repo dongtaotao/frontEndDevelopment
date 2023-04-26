@@ -220,3 +220,18 @@ https://juejin.cn/post/7196943285381464101
 
 好想用Typescript+React hooks开发啊!（嘴对嘴解释）
 https://juejin.cn/post/6844904085024407566
+
+详解 React 自定义 Hook
+https://juejin.cn/post/7223972612741103675?utm_source=gold_browser_extension
+开源 React Hooks 库
+ahooks 一套由阿里巴巴开源的 React Hooks 库，封装了大量好用的 Hooks。
+react-use 一个必不可少的 React Hooks 集合。其包含了传感器、用户界面、动画效果、副作用、生命周期、状态这六大类的Hooks。
+useHooks 一组易于理解的 React Hook集合。
+react-recipes 一个包含流行的自定义 Hook 的 React Hooks 实用程序库。
+Rhooks  一组基本的 React 自定义Hooks。
+react-hanger 一组有用的 hooks，用于特定于某些基本类型的状态更改辅助函数。
+Beautiful React Hook 一组漂亮的（希望有用的）React hooks 来加速你的组件和 hooks 开发。
+Awesome React Hooks  一个很棒的 React Hooks 资源集合，该集合包含React Hooks教程、视频、工具，Hooks列表。其中Hooks列表中包含了众多实用的自定义Hooks。
+SWR 一个用于获取数据的 React Hooks 库。只需一个Hook，就可以显着简化项目中的数据获取逻辑。
+React Hook Form 一个用于表单状态管理和验证的 React Hooks (Web + React Native)。
+链接：https://juejin.cn/post/7223972612741103675

@@ -340,7 +340,6 @@ function promiseAll(promises) {
     }
   })
 }
-
 // test
 let p1 = new Promise(function (resolve, reject) {
     setTimeout(function () {
@@ -613,4 +612,4 @@ const throttle = (fn, time) => {
       flag = true
     }, time)
   } 
-}    
+}     

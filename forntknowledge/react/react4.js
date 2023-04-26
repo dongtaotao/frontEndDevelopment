@@ -16,7 +16,7 @@ https://juejin.cn/post/6930876951439605767
 
 Braft Editor，美观好用的React富文本编辑器 https://braft.margox.cn/
 
-如何从零开源一个React组件
+如何从零开源一个React组件          
 https://zhuanlan.zhihu.com/p/73605806
 
 从零开发一款轻量级滑动验证码插件
@@ -76,15 +76,9 @@ https://juejin.cn/post/7124486630483689485#heading-13
 React Hooks 实现原理 🔥🔥🔥
 
 原理？
-
 Hooks 主要是利用闭包来保存状态，使用链表保存一系列 Hooks，将链表中的第一个 Hook 与 Fiber 关联。
 在 Fiber 树更新时，就能从 Hooks 中计算出最终输出的状态和执行相关的副作用。
-
-作者：shanejix
 链接：https://juejin.cn/post/7085609851720024072
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 
 react-32-样式隔离-引入css方式-vue对比
 https://www.jianshu.com/p/8df30aed781e
@@ -128,6 +122,8 @@ https://juejin.cn/post/6950063294270930980
 React实战精讲(React_TS/API)
 https://mp.weixin.qq.com/s/HHN7b3kyJS5jeRDi-JdeAA
 
+ =============0421
+
 【从0-1实现组件系列（1）】实现一个 Tag 组件
 https://juejin.cn/post/7204285137046978620
 【从0-1实现一个组件库（2）】实现一个 Button
@@ -165,4 +161,13 @@ update 阶段，每次调用 useState，链表就会执行 next 向后移动一�
 
 
 竟然可以在react中使用vue指令，快来看看吧。
-https://juejin.cn/post/7219862257644732473?
+https://juejin.cn/post/7219862257644732473? 
+
+
+【React错误处理】超全指南来了
+https://juejin.cn/post/7225076114561253413?utm_source=gold_browser_extension
+方法汇总
+1. try...catch
+2. window.onerror
+3. addEventListener('error')
+4. addEventListener('unhandledrejection')

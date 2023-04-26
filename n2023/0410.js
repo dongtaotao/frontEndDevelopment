@@ -1,3 +1,9 @@
+
+最新前端学习资料整理
+https://juejin.cn/post/7064582610290212900#heading-14
+包含了Vue、React、Electron、服务端渲染、微前端、前端性能优化、前端工程化、前端面试、Js、CSS、Nodejs、网络安全、
+Http通信、浏览器原理、前端部署运维、Flutter、Web 3D和微信小程序等方面的知识
+
 巨石项目改造探究
 https://juejin.cn/post/7221408294236930109?
 
@@ -213,8 +219,58 @@ vh/vw
 
 nihao   q11
 
-2222
+聊一聊前端的大文件上传思路
+https://juejin.cn/post/7223938976158498872?utm_source=gold_browser_extension
 
-1
-2
-3
+
+执行了npm run xxx到底做了什么事情
+https://juejin.cn/post/7223993420401557561?utm_source=gold_browser_extension
+
+
+解决低版本系统白屏问题     vue项目
+https://juejin.cn/post/7224304954596737079?utm_source=gold_browser_extension
+
+webpack 可以实现按需加载，减小我们首屏需要加载的代码体积；
+@babel/plugin-syntax-dynamic-import 插件，允许使用动态导入语法来动态加载代码
+module.exports = {
+  // ...
+  module: {
+    rules: [
+      // ...
+      {
+        test: /.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            plugins: ['@babel/plugin-syntax-dynamic-import']
+          }
+        }
+      }
+    ]
+  }
+};
+
+// 动态加载一个模块
+import('./LazyComponent.vue').then(module => {
+   this.showLazyComponent = true;
+});
+
+https://juejin.cn/post/7224060318652039225?utm_source=gold_browser_extension
+
+
+监听浏览器切屏功能实现
+https://juejin.cn/post/7135355487955976223
+visibilitychange
+第二种采用的是监听 blur 和 focus 这两个事件去相互配合实现的。
+window.addEventListener('blur', leave);
+window.addEventListener('focus', enter);
+
+Canvas转图片下载功能实现
+https://juejin.cn/post/7134904246314467358
+
+关于前端实现上传文件这个功能，我只能说so easy！
+https://juejin.cn/post/7224402365452238906?utm_source=gold_browser_extension
+
+大文件上传的vue3+koa2实现
+https://juejin.cn/post/7224764099187474490?utm_source=gold_browser_extension

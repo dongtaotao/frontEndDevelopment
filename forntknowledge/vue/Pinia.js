@@ -21,3 +21,6 @@ https://juejin.cn/post/7223415381788344376?
 四、数据持久化
 1. 安装插件
 yarn add pinia-plugin-persistedstate
+
+安装 pinia-plugin-persistedstate 插件
+https://juejin.cn/post/7224426218928881725?utm_source=gold_browser_extension
