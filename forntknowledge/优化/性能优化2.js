@@ -220,32 +220,3 @@ https://juejin.cn/post/7214026775142760505
 11. 域名发散（域名收敛）
 12. DNS预解析
 13. web worker
-
-
-webpack 可以实现按需加载，减小我们首屏需要加载的代码体积；
-@babel/plugin-syntax-dynamic-import 插件，允许使用动态导入语法来动态加载代码
-module.exports = {
-  // ...
-  module: {
-    rules: [
-      // ...
-      {
-        test: /.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            plugins: ['@babel/plugin-syntax-dynamic-import']
-          }
-        }
-      }
-    ]
-  }
-};
-
-// 动态加载一个模块
-import('./LazyComponent.vue').then(module => {
-   this.showLazyComponent = true;
-});
-
-https://juejin.cn/post/7224060318652039225?utm_source=gold_browser_extension

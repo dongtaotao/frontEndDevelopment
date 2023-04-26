@@ -265,7 +265,7 @@ const cancel = simulateSetTimeout(() => {
 
 26. 版本比较的两种方式 https://juejin.cn/post/7018337760687685669
 
-// 比较版本号 
+// 比较版本号
 
 const compareVersion = function(version1, version2) {
   version1 = version1.split('.')
@@ -492,4 +492,4 @@ function flatten(obj) {
 }
 
 // 测试
-console.log(flatten(obj))    
+console.log(flatten(obj))   

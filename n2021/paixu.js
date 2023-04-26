@@ -65,5 +65,5 @@ function quickSort(arr) {
       right.push(arr[i])
     }
   }
-  return quickSort(left).concat([temp], quickSort(right))      
+  return quickSort(left).concat([temp], quickSort(right))     
 }   

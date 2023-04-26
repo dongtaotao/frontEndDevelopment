@@ -86,34 +86,3 @@ https://juejin.cn/post/6844904196244766728#heading-36
 
 从 0 构建自己的脚手架/CLI知识体系（万字） 🛠
 https://juejin.cn/post/6966119324478079007#heading-11
-
-手把手，如何搭建一个通用组件库？（文档+样式+按需打包）
-https://juejin.cn/post/7224051399256309821?utm_source=gold_browser_extension
-手把手，如何搭建一个通用组件库，并发布到npm？ 很不错🔥🔥
-https://juejin.cn/post/7223676609793376311
-
-
-保姆级教程带你创建 Vue3 项目模版
-开箱即用功能
-
-Vue3 - 更好的性能和开发体验，提供更多新的特性和改进的API
-Vite4 - 快速的Web开发构建工具，它基于ESM原生模块系统，支持快速的冷启动和热模块替换
-Vue Router - 可配置的、方便的路由管理
-Pinia - 新一代的全局状态管理
-TypeScript - JavaScript 超集，提供类型检查、更好的 IDE 支持和其他强大的特性
-VueUse - 提供了许多实用的、经过优化的自定义 Hooks 函数，简化应用程序开发
-Pnpm - 快速、高效、可靠且易于使用的包管理器
-Icones - 大量、精美的免费图标库
-Arco Design Vue - 完善、灵活的基于 Vue3 的 UI组件库
-Axios - 基于 Promise 的 HTTP 请求库
-Tailwind CSS - 高度可定制、实用的 CSS 框架
-Less - 实用、灵活、易于上手的CSS预处理器
-Eslint、Prettier - 保证团队代码的质量和可读性，减少语法错误和风格不一致
-husky、lint-staged、commitlint - 帮助团队规范 Git 提交规范和代码质量，避免错误和重构
-Airbnb Style - 代码风格
-@vitejs/plugin-vue-jsx - 支持 tsx/jsx 写法
-unplugin-vue-components - 自动按需引入Vue 组件
-unplugin-auto-import - 自动按需引入 Vue、Vue Router、Pinia 和 VueUse 中的 API
-unplugin-icons - 图标库自动按需引入
-vite-svg-loader - 以组件形式使用 SVG 图片
-链接：https://juejin.cn/post/7224509927913308218

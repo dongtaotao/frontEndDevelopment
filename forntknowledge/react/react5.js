@@ -45,4 +45,4 @@ React 18 版本可能会引入一些新的 DevTools 功能，使得开发者能�
 以上是目前已知的 React 18 版本的一些新特性和改进，具体情况还需要等待官方公布后再做出更详细的说明。
 
 使用 Next.js 创建 React 同构应用
-https://juejin.cn/post/6955461121234960421 
+https://juejin.cn/post/6955461121234960421
