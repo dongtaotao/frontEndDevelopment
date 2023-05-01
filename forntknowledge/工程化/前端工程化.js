@@ -86,3 +86,15 @@ https://juejin.cn/post/6844904196244766728#heading-36
 
 从 0 构建自己的脚手架/CLI知识体系（万字） 🛠
 https://juejin.cn/post/6966119324478079007#heading-11
+
+从零搭建属于你自己的前端规范+自动化部署
+https://juejin.cn/post/7207617774633107512?utm_source=gold_browser_extension
+🌈 eslint、prettier
+📦 husky
+🛡 git-cz
+⚙️ 基于 nginx 部署的docker
+🌍 在 pull request 时触发 CI/CD
+🎨 基于 vitest 的功能测试（还在完善中...）
+
+前端必备的nginx知识点  很不错
+https://juejin.cn/post/7210958340712316983?utm_source=gold_browser_extension

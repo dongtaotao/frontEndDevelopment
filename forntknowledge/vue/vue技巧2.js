@@ -97,3 +97,39 @@ https://juejin.cn/post/7038591120565075975
 
 【css作用域】scoped css和css module的区别
 https://juejin.cn/post/7036282734293024799
+
+Vue2 项目中一定要会的性能优化措施
+https://juejin.cn/post/7226387497566257212?utm_source=gold_browser_extension
+01 性能标准
+02 性能检测
+2.1 Chrome 性能面板
+12.2 Network 瀑布图
+2.3 Lighthouse
+2.4 webpack 包内容分析
+03 优化措施
+3.1 路由懒加载
+3.2 异步组件
+3.3 函数式组件
+3.4 Vue 内置指令的使用注意
+3.4.1 v-for 须为每一项设置唯一 key 属性
+3.4.2 v-for 与 v-if
+3.5 Vue 内置 API 的使用注意
+3.5.1 区分 computed 和 方法 的使用场景
+3.5.2 区分 computed 和 watch 的使用场景
+3.6 组件销毁时，需移除手动绑定的事件
+3.7 Object.freeze() 优化静态数据
+3.8 虚拟滚动技术
+3.9 图片懒加载
+3.10 生产环境打包禁止生成 Source Map
+3.11 生产环境打包移除 console 和 debugger
+3.12 分割大块代码
+3.13 提取公共代码（Vue CLI 4 无需配置）
+3.14 按需引入第三方库
+3.14.1 UI 框架组件的按需引入
+3.14.2 Moment.js 2.x 的优化
+3.14.3 Lodash 4.x 的按需引入
+3.14.4 ECharts 5.x 的按需引入
+3.15 使用 CDN 提升加载速度
+3.16 使用 Gzip 提升加载速度
+3.16.1 开启服务端 Gzip 功能
+3.16.2 开启静态压缩时，前端打包时需准备好 .gz 文件

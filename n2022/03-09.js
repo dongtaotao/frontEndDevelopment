@@ -18,6 +18,7 @@ https://juejin.cn/post/6844904111826010125
 
 给网站标签页设置小图标
 https://blog.csdn.net/qq_35081380/article/details/122463637
+{/* <link rel="shortcut icon" href="icon.png" type="image/x-icon"> */}
 
 关于浏览器标签页的Favicon图标
 https://www.ujcms.com/knowledge/543.html
@@ -172,4 +173,4 @@ ngOnInit() 在第一轮 ngOnChanges() 完成之后调用，只调用一次
 ngOnDestroy() 在 Angular 销毁指令/组件之前调用
 
 通过http访问服务器   
-
+ 

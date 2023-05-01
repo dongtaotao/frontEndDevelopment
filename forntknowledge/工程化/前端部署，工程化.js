@@ -307,3 +307,40 @@ https://juejin.cn/post/7208349474840739898
 
 🔥腾讯云服务器部署超详细教程来了
 https://juejin.cn/post/7221359467619205180?
+
+使用 GitHub Action 自动化
+GitHub Action是一种自动化工具，可以在GitHub仓库中设置脚本来管理代码库的构建、测试、部署等过程。使用GitHub Action可以简化开发流程，提高工作效率。以下是使用GitHub Action自动化的简单步骤：
+1.在GitHub仓库中创建.github/workflows目录。
+2.在workflows目录中创建一个新的YAML文件，命名为你的自动化任务名称，例如build.yaml或deploy.yaml，具体文件名根据任务的内容来定。
+3.编写YAML文件来描述你的工作流。在此过程中可以使用各种GitHub Action已经打包好的Action或者自己编写Action来完成特定操作。具体的操作可以查看官方文档和Action Marketplace。
+4.提交到GitHub仓库后，即可自动运行你的自动化工作流。
+例如，以下是一个示例build.yaml文件，可以在代码每次push到仓库时自动运行测试：
+name: Build and Test
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+在上面的YAML文件中，首先定义了任务名称为“Build and Test”，并且指定只有当代码push到主分支(main)时才会运行。
+另外，还定义了一个build-and-test作业，它运行在最新版的Ubuntu操作系统上，并指定需要使用Node.js版本14。steps部分包含了一系列运行在作业中的指令。
+第一个指令是actions/checkout@v2，它会将当前仓库的代码检出到运行作业的服务器上。
+第二个指令是actions/setup-node@v2，它将使用Node.js 14版本。with指定了它的参数，即Node.js版本。
+第三个指令是run npm install，它安装应用程序所需的所有依赖。
+最后一个指令是run npm test，它运行测试脚本。
+规定的所有步骤完成后，提交代码并推送到GitHub仓库即可触发自动化工作流程的运行。

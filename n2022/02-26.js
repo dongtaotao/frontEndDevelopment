@@ -191,11 +191,104 @@ https://juejin.cn/post/7071979844115890206#heading-0
 
 //========================
 手写-将虚拟 Dom 转化为真实 Dom
+function createRealElement(virtualElement) {
+  const { type, props, children } = virtualElement;
 
-peerDependencies作用 peerDependency 是为了解决什么问题:避免重复安装
+  // 创建真实的 DOM 元素
+  const element = document.createElement(type);
 
-虚拟dom转为真实dom
-将DOM转化成树结构对象
+  // 设置属性
+  for (let propName in props) {
+    element.setAttribute(propName, props[propName]);
+  }
+
+  // 递归创建子元素
+  children.forEach(child => {
+    const childElement = (child instanceof Element) 
+      ? createRealElement(child)
+      : document.createTextNode(child);
+    element.appendChild(childElement);
+  });
+
+  return element;
+}
+
+
+peerDependencies作用 peerDependency是为了解决什么问题:避免重复安装
+
+虚拟dom转为真实dom ----------------------------------------
+虚拟dom转为真实dom  js写个方法
+function createRealElement(virtualElement) {
+  if (typeof virtualElement === 'string') {
+    return document.createTextNode(virtualElement);
+  }
+
+  const { type, props, children } = virtualElement;
+
+  // 创建真实的 DOM 元素
+  const element = document.createElement(type);
+
+  // 设置属性
+  for (let propName in props) {
+    element.setAttribute(propName, props[propName]);
+  }
+
+  // 递归创建子元素
+  children.forEach(child => {
+    element.appendChild(createRealElement(child));
+  });
+
+  return element;
+}
+该函数接受一个虚拟 DOM 对象作为参数，然后创建一个真实 DOM 元素并返回。如果参数是一个字符串，则直接返回一个文本节点。如果参数是一个对象，则创建一个元素节点，并设置其属性和子元素。在创建子元素时，该函数会递归调用自身来创建子元素，并添加到当前元素中。最后，
+该函数返回创建的真实 DOM 元素。
+可以将该函数与虚拟 DOM 库结合使用，例如 React 或 Vue，将虚拟 DOM 对象转化为真实 DOM 元素，并将其插入到页面中。例如：
+const virtualElement = {
+  type: 'div',
+  props: {
+    class: 'container'
+  },
+  children: [
+    'Hello, world!',
+    {
+      type: 'button',
+      props: {
+        onclick: () => alert('Button clicked!')
+      },
+      children: 'Click me'
+    }
+  ]
+};
+
+const realElement = createRealElement(virtualElement);
+document.body.appendChild(realElement);
+该代码将一个虚拟 DOM 对象转化为真实 DOM 元素，并将其插入到页面中。在这个例子中，虚拟 DOM 对象表示一个包含一个文本节
+点和一个按钮的 div 元素。
+
+
+
+将DOM转化成树结构对象-------------------------------------------------
+可以使用递归的方式将 DOM 转化成树结构对象，下面是一个简单的示例代码：
+function getTree(node) {
+  const tree = {
+    tag: node.tagName.toLowerCase(),
+    children: []
+  };
+  for (let i = 0; i < node.children.length; i++) {
+    const child = node.children[i];
+    tree.children.push(getTree(child));
+  }
+  return tree;
+}
+const root = document.querySelector('#root');
+const tree = getTree(root);
+console.log(tree);
+这个函数接受一个 DOM 节点作为参数，返回一个树结构对象，其中包含节点的标签名和子节点。通过
+递归遍历节点的子节点，可以将整个 DOM 转化成树结构对象。在递归过程中，每个节点都会被转化成一个对象，其
+ tag 属性保存节点的标签名，children 属性保存子节点的数组。最后返回根节点的对象，就得到了整个 DOM 的树结构对象。
+需要注意的是，上面的代码只考虑了节点的标签名和子节点，其他属性（如节点的属性和文本内容）并没有被包
+含在树结构对象中。如果需要获取更多的信息，可以在递归过程中将需要的属性添加到对象中。
+
 
 字符串模板
 
@@ -329,4 +422,4 @@ https://segmentfault.com/a/1190000019586579
 
 ES数据库Elasticsearch和MongoDB/Redis/Memcache一样，是非关系型数据库。
 https://baijiahao.baidu.com/s?id=1663918132504029781&wfr=spider&for=pc
-Elasticsearch是一种分布式的海量数据搜索与分析的技术    
+Elasticsearch是一种分布式的海量数据搜索与分析的技术     
