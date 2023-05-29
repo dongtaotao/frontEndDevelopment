@@ -19,6 +19,16 @@ Vue中接入TRTC实现音视频通信
 https://juejin.cn/post/7217057805782220857?
 
 
+trtc-js-sdk是什么
+trtc-js-sdk 是腾讯实时音视频通信云（TRTC）推出的基于 WebRTC 技术实现的浏览器端音视频通信 SDK。它支持在 web 端进行多人视频会议、音视频直播等实时通信场景，提供了多种解决方案和 API 接口，便于开发者快速接入，实现实时音视频通信功能。
+trtc-js-sdk 的主要特点：
+基于 WebRTC 技术，支持跨平台、跨终端的音视频通信；
+支持多人视频会议、音视频直播、一对一视频通话等场景；
+提供多种解决方案，包括组件式交互 UI、直播 CDN 推流等；
+提供简单易用的 API 接口，便于开发者快速接入。
+开发者可以使用 trtc-js-sdk 实现多人视频会议、在线教育、远程医疗、直播等多种实时音视频通信场景，提升用户体验和交互性。
+
+
 大数相加
 let a = "9007199254740991";
 let b = "1234567899999999999";
@@ -92,10 +102,10 @@ https://juejin.cn/post/7206912311562174523?
 预加载可以在页面加载时提前加载一些资源，以便后续使用。懒加载可以在需要时动态加载资源，从而减少页面的初始加载时间。可以通过以下方式来使用预加载和懒加载：
 预加载示例代码：
 <!-- 预加载图片 -->
-<link rel="preload" href="image.jpg" as="image">
+{/* <link rel="preload" href="image.jpg" as="image"> */}
 
 <!-- 预加载CSS文件 -->
-<link rel="preload" href="styles.css" as="style">
+{/* <link rel="preload" href="styles.css" as="style">
 懒加载示例代码：
 // 使用Intersection Observer API实现图片懒加载
 const observer = new IntersectionObserver((entries, observer) => {
@@ -107,7 +117,7 @@ const observer = new IntersectionObserver((entries, observer) => {
       observer.unobserve(img);
     }
   });
-});
+}); */}
 const imgs = document.querySelectorAll('img[data-src]');
 imgs.forEach(img => observer.observe(img));
 链接：https://juejin.cn/post/7206540113571758136
@@ -297,4 +307,4 @@ methods: {
 
 需要确保 Vue 项目的打包配置可以访问海康 SDK 相关文件。
 在 RTSP 地址中需要替换用户名、密码和 IP 地址为实际的值。
-查看海康 RTSP 地址时，可以从海康设备的管理页面上找到。
+查看海康 RTSP 地址时，可以从海康设备的管理页面上找到。 

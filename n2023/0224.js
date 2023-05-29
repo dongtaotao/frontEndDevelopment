@@ -291,4 +291,4 @@ function add(x) {
     return tmp;
 }
 alert(add(1)(2)(3)(4)(5)) 
- 链接：https://juejin.cn/post/7079681931662589960
+ 链接：https://juejin.cn/post/7079681931662589960 

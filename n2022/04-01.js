@@ -153,15 +153,6 @@ UI设计规范
 2022金三银四前端面试笔记
 https://juejin.cn/post/7085609851720024072
 
-5年经验(专升本)入职B站分享
-https://juejin.cn/post/70766769336976670
-
-大厂面试中遇到的几十道 webpack 与 react 面试题
-https://www.mk2048.com/blog/blog_hjc1h22cbb20j.html
-
-疫情期间的面试心得 | 掘金技术征文
-https://juejin.cn/post/6844904135892926
-
 前端进阶学习指南
 https://juejin.cn/post/7068506779533410312
 
@@ -178,4 +169,6 @@ https://juejin.cn/post/6844903969110622222
 3.发现产品是否存在外在问题（如合规），可及时回滚至已旧版本
 
 一步一步搭建前端监控系统：如何记录用户行为？
-https://juejin.cn/post/6844903905394950158   
+https://juejin.cn/post/6844903905394950158     
+
+

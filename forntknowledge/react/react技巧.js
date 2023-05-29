@@ -30,3 +30,175 @@ https://juejin.cn/post/6886680584874934280
 
 离开页面前，如何防止表单数据丢失？
 https://juejin.cn/post/7226387497566535740?utm_source=gold_browser_extension
+
+react有类似于vue的keep-alive吗
+在React中，没有像Vue的keep-alive这样的内置组件，但可以通过其他方式实现类似的功能。以下是几种实现方式：
+使用React-Router的路由缓存
+React-Router可以通过Route组件的render属性或children属性来渲染组件，而不是像component属性一样每次都重新渲染。通过在Route组件上设置key属性，并且保证当前key不变，就可以实现路由组件的缓存。
+JSX
+复制
+<Route path="/home" key="home" render={() => <Home />} />
+<Route path="/about" key="about" render={() => <About />} />
+<Route path="/contact" key="contact" render={() => <Contact />} />
+当在组件切换的时候，Route组件不再是重新渲染，而是直接展示缓存的组件。
+使用React的React.memo和useMemo方法
+使用React.memo可以缓存组件的渲染结果，当组件的props和状态没有改变时，直接使用上一次的结果，不再重渲染组件。同时，可以使用useMemo来缓存组件的状态，保证在组件重新渲染时，状态的值不变。
+JSX
+复制
+import React, { useState, useMemo } from 'react';
+
+function Component(props) {
+  ...
+}
+
+export default React.memo(Component);
+JSX
+复制
+const cachedState = useMemo(() => ({ /* cached state */ }), []);
+使用第三方组件
+也可以使用第三方组件来实现缓存组件的功能，如react-keeper、react-cache-routing等。这些库都是基于React-Router实现的，可以通过缓存组件的方式来提高应用的性能。
+综上，虽然React没有像Vue的keep-alive这样的内置组件，但可以通过React-Router、React.memo和第三方库等方式来实现缓存组件的功能，提高应用的性能。
+
+
+
+react-keeper如何使用
+React-Keeper是React路由库，它与React-Router类似，但具有更好的性能和更多的功能。下面是React-Keeper的使用方法：
+安装react-keeper
+TXT
+复制
+npm install react-keeper --save
+在主文件中引入react-keeper
+JSX
+复制
+// index.js
+import React from 'react';
+import { render } from 'react-dom';
+import { BrowserRouter as Router, Route } from 'react-keeper';
+import App from './App';
+
+const root = document.getElementById('root');
+
+render((
+  <Router>
+    <Route path="/" component={App} />
+  </Router>
+), root);
+Router是整个应用的根组件，而Route组件则定义了每一个页面的路由。这里使用BrowserRouter作为基础路由器。
+定义页面模块
+在App组件中定义以路由为页面的组件:
+JSX
+复制
+// App.js
+import React from 'react';
+import { Route, Link } from 'react-keeper';
+
+const Home = (props) => {
+  return (
+    <div>
+      <h2>Welcome to Home!</h2>
+      <Link to="/about">About</Link>
+    </div>
+  );
+}
+
+const About = (props) => {
+  return (
+    <div>
+      <h2>Welcome to About!</h2>
+      <Link to="/">Home</Link>
+    </div>
+  );
+}
+
+const App = () => {
+  return (
+    <div>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+      </ul>
+      <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
+    </div>
+  );
+}
+
+export default App;
+每个页面都是一个组件，React-Keeper提供了一些自带的组件，如Route、Link、Keeper等，这些组件可以很方便地实现路由切换和组件缓存等功能。
+页面跳转
+可以使用Link组件实现路由跳转：
+JSX
+复制
+<Link to="/about">About</Link>
+此外，还可以使用keeper.go(path)方法实现编程式跳转：
+JSX
+复制
+import { keeper } from 'react-keeper';
+
+keeper.go('/about');
+设置页面缓存
+React-Keeper可以很方便的设置页面缓存，这个缓存是基于组件的，使用Keeper组件即可：
+JSX
+复制
+import React from 'react';
+import { Route, Link, Keeper } from 'react-keeper';
+
+const Home = (props) => {
+  return (
+    <div>
+      <h2>Welcome to Home!</h2>
+      <Link to="/about">About</Link>
+    </div>
+  );
+}
+
+const About = (props) => {
+  return (
+    <div>
+      <h2>Welcome to About!</h2>
+      <Link to="/">Home</Link>
+    </div>
+  );
+}
+
+const App = () => {
+  return (
+    <div>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+      </ul>
+      <Keeper>
+        <Route cache path="/" component={Home} />
+        <Route cache path="/about" component={About} />
+      </Keeper>
+    </div>
+  );
+}
+
+export default App;
+上面的例子中使用了Keeper组件将Route组件包裹，然后在Route组件上设置了cache属性，就可以实现组件的缓存。
+以上是React-Keeper的基本使用方法。除了以上提到的功能之外，React-Keeper还支持路由权限控制、路由参数传递等。
+
+
+react有类似于vue的keep-alive吗，可以缓存组件吗
+React没有类似于Vue的keep-alive组件，但是你可以使用第三方库实现类似的功能。
+其中一个比较流行的库是“react-keeper”，它提供了一个“Keeper”组件，可以缓存之前渲染过的组件，并在之后再次使用相同的组件时直接从缓存中读取，而不是重新渲染组件。
+另外还有一些其他的库如“react-cache”，“react-lazyload”，“react-loadable”等等，都可以用来实现类似的功能。
+需要注意的是，在实现缓存的过程中需要考虑到组件的状态管理，例如如果之前的组件状态已经改变，那么可能需要重新渲染。另一方面，缓存组件可能会使得应用程序的内存占用变得更高，因此需要权衡利弊。
+
+
+forwardRef https://juejin.cn/post/6950063294270930980
+官网对forwardRef的概念和用法很笼统，也没有给定一个具体的案例。很多同学不知道 forwardRef具体怎么用，
+下面我结合具体例子给大家讲解forwardRef应用场景。
+1 转发引入Ref
+
+这个场景实际很简单，比如父组件想获取孙组件，某一个dom元素。这种隔代ref获取引用，就需要forwardRef来助力。
+2 高阶组件转发Ref
+
+一文吃透hoc文章中讲到，由于属性代理的hoc，被包裹一层，所以如果是类组件，是通过ref拿不到原始组件的实例的，不过我们可以通过forWardRef转发ref。
+
+
+
+十分钟使用useContext实现简单的多语言切换
+https://juejin.cn/post/7237746910139498533?utm_source=gold_browser_extension

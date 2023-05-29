@@ -243,3 +243,23 @@ Suspense 组件：Vue 3 引入了 Suspense 组件，可以更好地处理异步�
 
 Webpack 5.0 从零开始搭建 Vue 开发环境 
 https://juejin.cn/post/7218098727608025144?
+
+
+基于 Vue3 + Vite4 + TypeScript + Element-Plus 从0到1搭建后台管理系统（前后端开源）
+https://juejin.cn/post/7228990409909108793?utm_source=gold_browser_extension
+
+vue项目nginx服务器部署
+https://juejin.cn/post/7233318571140661307?utm_source=gold_browser_extension
+
+
+【前端架构进阶课程】手写Vue3核心源码，从零搭建vue3-UI组件库
+https://www.bilibili.com/video/BV1VB4y137LF?p=10&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+VUE进阶-从0到1搭建UI组件库（1-3）
+https://www.bilibili.com/video/BV1nJ411V75n/?spm_id_from=333.788.recommend_more_video.1&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+Vue3+i18n多语言动态国际化设置步骤详解
+https://juejin.cn/post/7236028062872993852?utm_source=gold_browser_extension
+
+
+Vue打包后，及时更新版本的一种方法
+https://juejin.cn/post/7236263262073225274?utm_source=gold_browser_extension

@@ -7,8 +7,6 @@ https://blog.csdn.net/qq_42755530/article/details/115024437
 
 computed的实现原理
 
-
-
 forEach如何终止循环
 forEach专门用来循环数组，可以直接取到元素，同时也可以取到index值
 
@@ -40,17 +38,14 @@ import React, { useState, useEffect } from 'react';
 
 function LifecycleDemo() {
   const [state, setState] = useState(0);
-
   // componentDidMount
   useEffect(() => {
     console.log('componentDidMount');
   }, []);
-
   // componentDidUpdate
   useEffect(() => {
     console.log('componentDidUpdate');
   });
-
   // componentWillUnmount
   useEffect(() => {
     return () => console.log('componentWillUnmount');
@@ -63,11 +58,9 @@ function LifecycleDemo() {
     </div>
   );
 }
-
 export default LifecycleDemo;
 
-
-eCHarts 有没有做窗口变化适配
+ecHarts 有没有做窗口变化适配
 监听屏幕尺寸变化，重绘图表即可
 import echarts from "echarts";
     let option = {…… 图表配置 ……}
@@ -131,7 +124,6 @@ export function set (target: Array<any> | Object, key: any, val: any): any {
     ob.dep.notify()
     return val
   }
-
 
   让你写一个vue框架 该如何写 https://juejin.cn/post/7196859331696934967
   第一步 首先要分析vue是一个mvvm 的思想 m是数据模型 v视图模型 
@@ -342,7 +334,6 @@ Element UI / Plus中全局修改el-table默认样式
 https://juejin.cn/post/7201018760488468539?
 
 初级要：
-
 负责业务系统前端模块的设计与开发；
 负责产品的需求分析，开发，测试，维护等各项工作；
 承担PC端和移动端的前端HTML5的开发任务；
@@ -351,7 +342,6 @@ https://juejin.cn/post/7201018760488468539?
 能够理解后端架构，与后端工程师配合为项目提供最优化的技术解决方案。
 
 中级要：
-
 负责所在项目需求实现与开发；
 完成系统细节技术设计，完成核心代码的编写；
 确保需求实现，满足项目设计规范，软件编码规范以及性能要求；
@@ -373,7 +363,6 @@ https://juejin.cn/post/7201018760488468539?
 链接：https://juejin.cn/post/6977214179149086751
 来源：稀土掘金
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 
 2022金三银四前端面试笔记 🔥🔥
 https://juejin.cn/post/7085609851720024072#heading-7
@@ -489,6 +478,6 @@ https://juejin.cn/post/7202809170378031160?
 总结
 运行 npm run xxx的时候，npm 会先在当前目录的 node_modules/.bin 查找要执行的程序，如果找到则运行；
 没有找到则从全局的 node_modules/.bin 中查找，npm i -g xxx就是安装到到全局目录；
-如果全局目录还是没找到，那么就从 path 环境变量中查找有没有其他同名的可执行程序。
+如果全局目录还是没找到，那么就从 path 环境变量中查找有没有其他同名的可执行程序。 
 
-链接：https://juejin.cn/post/7078924628525056007
+链接：https://juejin.cn/post/7078924628525056007 

@@ -12,6 +12,7 @@ https://juejin.cn/post/7009595995960901645
 
 如何从零到一建立一套完整的 前端规范【前端Leader必看】
 https://juejin.cn/post/7094059147087314981
+https://blog.csdn.net/qq_36380426/article/details/127168378
 
 前端搞监控|Allan - 如何实现一套多端错误监控平台
 https://zhuanlan.zhihu.com/p/158079491
@@ -199,7 +200,16 @@ https://juejin.cn/post/7130811005109551134
 https://juejin.cn/column/7140103294965252109
 
 
-工程化面试题汇总https://juejin.cn/post/7206973995727765559
+工程化面试题汇总
+https://juejin.cn/post/7206973995727765559
 
 前端架构概述
 https://juejin.cn/post/7205604505647202361
+
+
+开篇：探索前端工程化、从零到一打造一个前端组件库！
+https://juejin.cn/post/7151961741776125989
+
+
+《蚂蚁前端研发最佳实践》文字稿
+https://zhuanlan.zhihu.com/p/94949118

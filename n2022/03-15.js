@@ -18,8 +18,7 @@ JS 对象的深拷贝和浅拷贝
 
 web2，由于web2也没有登录，所以这时候会跳转到sso，
 由于sso已经登录了，不需要输入账号密码进行验证，sso会直接生成ticket
-返回给web2， 从服务端向sso发送请求，验证ticket是否有效，
-，并且获取用户信息
+返回给web2， 从服务端向sso发送请求，验证ticket是否有效，，并且获取用户信息
 验证通过后，app系统会将用户信息写入session并且设置web域下的cookie，
 
 https://www.bilibili.com/video/BV12a411273W/?spm_id_from=333.788.recommend_more_video.1
@@ -324,4 +323,4 @@ flatten();
 
 
 最新的前端大厂面经（详解答案）
-https://juejin.cn/post/7004638318843412493      
+https://juejin.cn/post/7004638318843412493        

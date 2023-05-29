@@ -12,3 +12,8 @@ Fiber架构 https://juejin.cn/post/7132641618267471879
 否被打断这一标准，React v16 的生命周期被划分为了 render 和 commit 两个阶段（commit 又被细分为 pre-commit 和 commit）。
 
 链接：https://juejin.cn/post/7132641618267471879
+
+
+
+「前端工程化」从0-1搭建react，ts脚手架（1.2w字超详细教程）
+https://juejin.cn/post/6919308174151385096

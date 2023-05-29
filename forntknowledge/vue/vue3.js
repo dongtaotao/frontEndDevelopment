@@ -55,8 +55,11 @@ https://www.bilibili.com/video/BV1tL4y1z7Ws?spm_id_from=333.337.search-card.all.
 Vue 开发必须知道的 36 个技巧【近1W字】
 https://juejin.cn/post/6844903959266590728
 
-VUE进阶-从0到1搭建UI组件库（1-3） 🔥🔥🔥
+VUE进阶-从0到1搭建UI组件库（1-3） 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 https://www.bilibili.com/video/BV1nJ411V75n?spm_id_from=333.337.search-card.all.click
+https://github.com/weizhuren/one-ui
+本次课程将会从0基础开始带大家使vue技术封装一套自己的组件库，并且发布到npm上。
+
 
 VUE进阶-从0到1搭建UI组件库  模仿element-ui封装vue组件库  https://blog.csdn.net/weixiaowei_2016  很不错的视频 好文章🔥
 Vue封装组件并发布到npm仓库  https://juejin.cn/post/7054752084079411236
@@ -552,3 +555,7 @@ https://interview2.poetries.top/docs/excellent-docs/7-Vue.html#v-model%E5%AE%9E%
 
 基于Vite+AntDesignVue打造业务组件库
 https://juejin.cn/column/7140103979697963045 
+
+
+[保姆级] Vue3 开发文档
+https://juejin.cn/post/7220220100384407610

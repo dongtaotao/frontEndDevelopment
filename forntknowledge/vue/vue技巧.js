@@ -10,7 +10,7 @@ https://www.bilibili.com/video/BV1qG4y1z7Qg/?spm_id_from=pageDriver&vd_source=0c
 我在项目中是这样配置Vue的
 https://juejin.cn/post/6850037262441250829
 
-vue 项目开发，我遇到了这些问题 🔥
+vue 项目开发，我遇到了这些问题 🔥🔥🔥🔥
 https://juejin.cn/post/7119018849353072677
 
 

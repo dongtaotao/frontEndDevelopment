@@ -58,6 +58,10 @@ https://blog.csdn.net/petertanjinjie/article/details/106654785
 https://www.jianshu.com/p/13e11d1146c5
 https://blog.csdn.net/Carol246/article/details/118201278
 
+react-component-keepalive
+
+
+
 使用社区的轮子，当时选了GitHub 里的两个产品： React Keeper 和 react-router-cache-route
 现在 React 多页签方案有啥新进展吗 ************************
 https://juejin.cn/post/6941683774153293837
@@ -594,3 +598,20 @@ useLayoutEffect： 与useEffect基本一致，不同的地方时，useLayoutEffe
 如果是 useEffect 的话 ，useEffect 执行在浏览器绘制视图之后，如果在此时改变DOM，有可能会导致浏览器再次回流和重绘。
 除此之外useLayoutEffect的 callback 中代码执行会阻塞浏览器绘制
 链接：https://juejin.cn/post/7204307381689532474
+
+
+React Hooks 是 React 16.8 新增的一项重要功能，它让函数组件能够拥有类组件的一些状态管理能力，比如 state、生命周期函数、context 等，
+极大地简化了函数组件的编写方式，提高了函数组件的复用性和可读性。
+React Hooks 的实现原理主要是基于 React Fiber，其中最核心的是两个钩子函数 `useState` 和 `useEffect`。
+在使用 `useState` 时，React 会在 Fiber Node 上创建对应的 Hook 对象，并将对应的 state 值存储在 Hook 对象中。在组件渲染时，
+如果 Hook 对象不存在则创建它，如果存在则直接读取它。这就意味着，
+每个 Functional Component 会对应多个 Hook 对象，每个 Hook 对象各自维护自己的状态，并且 Hook 对象的顺序必须保持一致，否则会导致状态读取错误。
+在使用 `useEffect` 时，React 同样会在 Fiber Node 上创建对应的 Hook 对象，并将 effect 相关的函数存储在 Hook 对象中。在挂载或更新时，
+React 会依次执行 Hook 对象上的 effect 相关函数。而 useEffect 本身的实现则是基于多个标志位的设置和检查，根据标志位的不同，React 会决定
+是否执行 effect 相关的函数。
+除了 useState 和 useEffect，还有其他常用的 Hook，如 useContext、useReducer、useCallback、useMemo、useRef 等。它们的实现机制大同
+小异，都是基于 Hook 对象的创建、存储和读取。
+在组件渲染完成后，React 会根据顺序记录 Hook 的状态，并且在下一次激活组件时恢复它们的状态。这就是为什么需要保证 Hook 对象的顺序一致性的原
+因。同时，如果 Hook 对象已经不存在（比如组件卸载），React 也会在内部将其释放，以避免内存泄漏。
+综上所述，React Hooks 的基本原理是通过创建、存储和读取钩子对象来实现组件状态管理和副作用的控制。Hooks 的使用让函数组件可以享受类组件的一些
+能力，同时让函数组件更加简洁和易于复用。

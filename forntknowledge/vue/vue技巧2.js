@@ -133,3 +133,359 @@ https://juejin.cn/post/7226387497566257212?utm_source=gold_browser_extension
 3.16 使用 Gzip 提升加载速度
 3.16.1 开启服务端 Gzip 功能
 3.16.2 开启静态压缩时，前端打包时需准备好 .gz 文件
+
+巧用$options
+$options是一个记录当前Vue组件的初始化属性选项，当我们想把 data 里的某个值重置为初始值时，非常有用
+例如：
+this.value = this.$options.data().value;
+
+dialog 里重置表单
+// 弹框打开时
+initForm(){
+    this.$refs['form'] && this.$refs['form'].resetFields()
+    this.form = this.$options.data.call(this).form;
+}
+
+handleClose() {
+    this.resetForm();
+    this.dialogVisible = false;
+    this.$nextTick(() => {
+      this.$refs?.form?.clearValidate()
+    })
+  }
+
+  Vue在子组件中判断父组件是否传来事件
+  在做二次封装时，我们经常用到，v-bind="$attrs" 和 v-on="$listeners"进行多层组件监听,那么我们还可以利用 $listeners在子组件中判断父组件是否传来事件
+例如我们封装一个搜索组件，里面有重置按钮，当我们点击重置按钮时，默认操作是清空搜索栏的值并且刷新列表，而如果父组件传来事件，则以自定义事件为准，即我们想点击重置按钮做一些其他的自定义操作。
+resetFields() {
+  //...
+  if (this.$listeners.resetFields) {
+    // 自定义事件
+      this.$emit('resetFields')
+    } else {
+      // 默认刷新列表事件
+      this.loadList()
+    }
+}
+
+链接：https://juejin.cn/post/7119018849353072677
+
+
+vue element 多个 Form 表单同时验证
+<template>
+<el-form   ref="form1"></el-form>
+<el-form   ref="form2"></el-form>
+<el-form   ref="form3"></el-form>
+</template>
+<script>
+export default{
+    methods: {
+      onValidate() { // 保存操作
+      const formArr =['form1', 'form2','form3']//三个form表单的ref
+      const resultArr = [] //用来接受返回结果的数组
+      let _self = this
+      function checkForm(formName) { //封装验证表单的函数
+        let result = new Promise(function (resolve, reject) {
+          _self.$refs[formName].validate((valid) => {
+            if (valid) {
+              resolve();
+            } else { reject() }
+          })
+        })
+        resultArr.push(result) // 得到promise的结果
+      }
+      formArr.forEach(item => { // 根据表单的ref校验
+        checkForm(item)
+      })
+      Promise.all(resultArr).then(values => {
+         // 此时必填完成，做保存后的业务操作
+        //  ...
+        console.log('success');
+      }).catch(_ => {
+        console.log('err')
+      })
+    },
+    }
+}
+</script>
+
+Vue中的method赋值为高阶函数
+<script>
+  import { debounce } from "lodash";
+
+  export default {
+    methods: {
+      search: debounce(async function (keyword) {
+        // ... 请求逻辑
+      }, 500),
+    },
+  };
+</script>
+
+给 slot 插槽绑定事件
+https://juejin.cn/post/7119018849353072677
+
+在Vue子组件中，如果需要判断是否有$emit方法传入，可以使用以下代码：
+```
+if (this.$listeners["eventName"]) {
+  // do something
+}
+```
+其中，"eventName"是需要判断的事件名称，如果存在，则说明有相应的$emit方法传入。需要注意的是，$listeners只能用来访问父作用域中的监听器。
+
+
+在Vue子组件中，可以通过判断是否有对应的事件监听器来确定是否存在 $emit 方法传入。
+假设父组件中定义了一个名为 my-event 的事件：
+
+<template>
+  <div>
+    <my-component @my-event="handleMyEvent"></my-component>
+    <my-component></my-component>
+  </div>
+</template>
+
+<script>
+import MyComponent from './MyComponent.vue';
+
+export default {
+  components: {
+    MyComponent
+  },
+  methods: {
+    handleMyEvent() {
+      console.log('my-event has been emitted');
+    }
+  }
+}
+</script>
+可以通过 this.$listeners 访问所有在该组件上注册的事件监听器。如果存在 my-event 监听器，则说明该组件上可能存在 $emit 方法调用。因此可以在组件内部进行判断，在确保安全性的前提下尝试调用 $emit 方法：
+
+<template>
+  <button v-if="hasMyEvent" @click="$emit('my-event')">Click me</button>
+  <button v-else disabled>Nothing to emit</button>
+</template>
+
+<script>
+export default {
+  computed: {
+    hasMyEvent() {
+      return !!this.$listeners['my-event'];
+    }
+  }
+}
+</script>
+在这个例子中，computed 的 hasMyEvent 计算属性会检查当前组件是否存在 my-event 监听器。如果存在，则渲染按钮元素，并在点击时调用 $emit 方法触发事件；否则，会渲染另一个禁用状态的按钮，提示用户无法触发事件。
+
+
+
+
+vue2实现组件双向绑定有哪些方法 GPT
+在 Vue 2 中，实现自定义组件的双向绑定有以下几种方法：
+使用 v-model 指令：Vue 提供了 v-model 指令，可以在父组件和子组件之间实现双向绑定。使用 v-model 时，你需要在组件内部实现 value 和 input 事件的处理逻辑。例如：
+TXT
+复制
+Vue.component('custom-input', {
+  props: ['value'],
+  template: `
+    <input :value="value" @input="$emit('input', $event.target.value)">
+  `
+});
+在父组件中，你可以像这样使用 v-model 来进行绑定：
+TXT
+复制
+<custom-input v-model="message"></custom-input>
+如果在上述代码中使用 value，而不是 v-model 来进行数据绑定，那么就只能实现单向数据绑定了。
+使用 :value 和 @input 指令：如果你不想使用 v-model 指令，而是想使用显示地绑定数据和事件的方式，那么可以使用 :value 和 @input 指令来实现。例如：
+TXT
+复制
+Vue.component('custom-input', {
+  props: ['value'],
+  template: `
+    <input :value="value" @input="updateValue">
+  `,
+  methods: {
+    updateValue(event) {
+      this.$emit('input', event.target.value);
+    }
+  }
+});
+然后，在父组件中使用 :value 和 @input 来进行数据绑定：
+TXT
+复制
+<custom-input :value="message" @input="message = $event"></custom-input>
+使用 .sync 修饰符：Vue 2 中还支持 .sync 修饰符来简化组件的双向绑定。例如：
+TXT
+复制
+Vue.component('custom-input', {
+  props: ['value'],
+  template: `
+    <input :value="value" @input="$emit('update:value', $event.target.value)">
+  `
+});
+然后，在父组件中使用 .sync 修饰符来进行绑定：
+TXT
+复制
+<custom-input :value.sync="message"></custom-input>
+使用 .sync 修饰符时，Vue 实际上会自动将 value prop 和 update:value 事件关联起来，所以你只需要在子组件中触发 update:value 事件即可自动更新父组件的值。
+
+
+
+
+.sync 和 v-model 都是用来实现双向数据绑定的，但它们之间有一些异同：
+异同点：
+都可以在子组件中实现双向数据绑定；
+两者都接受一个参数，用于在父子组件之间共享数据；
+在父组件模板中使用时，都需要使用相应的语法糖（.sync 或 v-model）来触发双向绑定。
+不同点：
+.sync 可以绑定任何 prop，而 v-model 只能绑定组件中的 value 属性；
+使用 .sync 时，需要自行定义传递数据的自定义事件，而 v-model 则自动绑定了 input 事件，无需额外定义。
+使用 .sync 实现双向绑定的例子：
+VUE
+复制
+<!-- 父组件 -->
+<template>
+  <div>
+    <custom-component :prop-value.sync="parentValue"></custom-component>
+  </div>
+</template>
+
+<script>
+import CustomComponent from './CustomComponent.vue';
+
+export default {
+  components: { CustomComponent },
+  data() {
+    return {
+      parentValue: ''
+    }
+  }
+}
+</script>
+
+<!-- CustomComponent.vue -->
+<template>
+  <div>
+    <input :value="propValue" @input="updateValue($event.target.value)">
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    propValue: {
+      type: String,
+      default: ''
+    }
+  },
+  methods: {
+    updateValue(value) {
+      // 触发自定义事件，向父组件发送数据
+      this.$emit('update:propValue', value);
+    }
+  },
+}
+</script>
+使用 v-model 实现双向绑定的例子：
+VUE
+复制
+<!-- 父组件 -->
+<template>
+  <div>
+    <custom-component v-model="parentValue"></custom-component>
+  </div>
+</template>
+
+<script>
+import CustomComponent from './CustomComponent.vue';
+
+export default {
+  components: { CustomComponent },
+  data() {
+    return {
+      parentValue: ''
+    }
+  }
+}
+</script>
+
+<!-- CustomComponent.vue -->
+<template>
+  <div>
+    <input :value="value" @input="$emit('input', $event.target.value)">
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    value: {
+      type: String,
+      default: ''
+    }
+  },
+}
+</script>
+综上所述，.sync 可以绑定任何 prop，使用时需要手动定义传递数据的自定义事件；而 v-model 只能绑定组件中的 value 属性，但却自动绑定了 input 事件，方便使用。
+
+
+//================================================================
+在 Vue 3 中，通过 v-model 绑定组件的值已经有了一些改变。现在，可以通过 modelValue 和 update:modelValue 这两个 props 和 events 来实现。
+
+下面是一个简单的例子：
+
+html
+<template>
+  <div>
+    <h2>{{ modelValue }}</h2>
+    <button @click="increase">Increase</button>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    modelValue: {
+      type: Number,
+      default: 0
+    }
+  },
+  emits: ['update:modelValue'],
+  methods: {
+    increase() {
+      this.$emit('update:modelValue', this.modelValue + 1)
+    }
+  }
+}
+</script>
+在这个组件中，我们接收一个名为 modelValue 的 prop，它的默认值是 0 ，并且定义了一个名为 update:modelValue 的事件来触发父组件更新数据。
+
+在父组件中使用时，需要通过 v-bind 和 v-on 来将组件的 modelValue 和事件传递给父组件。
+
+html
+<template>
+  <div>
+    <CustomComponent v-bind:modelValue="value" v-on:update:modelValue="handleUpdate"/>
+    <!-- ... -->
+  </div>
+</template>
+
+<script>
+import CustomComponent from './CustomComponent.vue'
+
+export default {
+  components: {
+    CustomComponent,
+  },
+  data() {
+    return {
+      value: 1,
+    }
+  },
+  methods: {
+    handleUpdate(val) {
+      this.value = val
+    }
+  },
+}
+</script>
+当修改该自定义组件中的值时，就会通过 update:modelValue 事件触发 handleUpdate 函数，并将修改后的值赋给父组件的 value 属性。

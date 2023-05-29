@@ -138,3 +138,25 @@ webpack 热更新机制
 hot-update.js 插入成功后，执行hotAPI 的 createRecord 和 reload方法，获取到 Vue 组件的 render方法，重新 render 组件， 继而实现 UI 无刷新更新。
 
 链接：https://juejin.cn/post/6991724298197008421
+
+
+webpack性能优化方案(详细)
+https://juejin.cn/post/7233298696292040741?utm_source=gold_browser_extension
+
+3.去除多余的样式
+随着项目越来越大，书写的不注意，不自然的就会产生一些多余的css，小项目还好，一旦项目大了以后，多余的css会越来越多，导致包越来越大，从而影响项目运行性能，所以有必要在正式环境去除掉这些多余的css，这里推荐一个库purgecss，支持CLI、JavascriptApi、Webpack等多种方式使用，通过这个库，我们可以很容易的去除掉多余的css。
+javascript复制代码npm i glob-all purify-css purifycss-webpack --save-dev
+ 
+const PurifyCSS = require('purifycss-webpack')
+const glob = require('glob-all')
+plugins:[
+    // 清除无用 css
+    new PurifyCSS({
+      paths: glob.sync([
+        // 要做 CSS Tree Shaking 的路径文件
+        path.resolve(__dirname, './src/*.html'), // 请注意，我们同样需要对 html 文件进行 tree shaking
+        path.resolve(__dirname, './src/*.js')
+      ])
+    })
+]
+链接：https://juejin.cn/post/6844903949883932679
