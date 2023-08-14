@@ -126,6 +126,9 @@ lowcode-platform
 https://github.com/edagarli/lowcode-platform
 
 
+Mall-Cook 是一个SASS商城低代码可视化商城搭建平台，零基础可视化拖拽页面，支持构建H5、小程序多端商城应用
+体验地址：http://110.42.184.128:8000/#/login
+github地址：https://github.com/wangyuan389/mall-cook
 推荐一个商城低代码平台 H5 很好很好
 https://github.com/wangyuan389/mall-cook
 推荐一个低代码平台，通过该平台你能快速搭建出一个商城应用。该开源项目基于 Vue.js 是一个不错的练手项目。
@@ -189,3 +192,8 @@ https://juejin.cn/post/7165836431112273951
 
 低代码 yyds  项目  很多项目 h5
 https://juejin.cn/post/6984053870121091103
+
+
+
+浅谈低代码平台远程组件加载方案
+http://zoo.zhengcaiyun.cn/blog/article/low-code

@@ -1,4 +1,4 @@
-React 16版本新特性
+React 16版本新特性 
 
 1.Hooks: 允许在不编写类组件的情况下使用 React 的 state 和其他功能。
 2.Error Boundaries: 明确定义了组件内部错误的边界，从而使应用程序更加稳定。
@@ -23,30 +23,22 @@ React 17 没有依赖于底层引擎的特性或行为，因此它不包含任�
 
 
 React 18版本新特性
-
 React 18 版本是即将发布的版本，虽然目前官方还没有正式公布所有的新特性，但是我们可以了解到一些即将推出的改进。
 下面是可能会包含在 React 18 版本中的一些新特性：
-
 自适应渲染
 React 18 版本可能会引入自适应渲染（Adaptive Rendering）功能，这意味着组件可以根据不同设备或网络状况来自动调整渲染方式，以优化应用程序的性能和体验。
-
 生命周期和钩子
 React 18 版本可能会引入新的生命周期方法和钩子，使得开发者能够更好地控制组件的生命周期和行为。
-
 并发模式
 React 18 版本可能会进一步完善并发模式（Concurrent Mode），提高异步渲染的性能和稳定性。
-
 服务器端渲染改进
 React 18 版本可能会进一步改进服务器端渲染的性能和稳定性，并提供更多的工具来支持服务器端渲染。
-
 DevTools 改进
 React 18 版本可能会引入一些新的 DevTools 功能，使得开发者能够更加轻松地调试和优化应用程序。
-
 以上是目前已知的 React 18 版本的一些新特性和改进，具体情况还需要等待官方公布后再做出更详细的说明。
 
 使用 Next.js 创建 React 同构应用
 https://juejin.cn/post/6955461121234960421
-
 
 React+TypeScript积累实践
 https://juejin.cn/post/7229172559571484732?utm_source=gold_browser_extension
@@ -63,9 +55,14 @@ https://juejin.cn/post/7214546515611287611
 178.[React] useRef、ref、forwardsRef 的区别是什么?【web框架】
 在 React 中，ref 是一种用于访问 DOM 元素或组件实例的方法，useRef 和 forwardRef 是 ref 的两个相关 Hook 和高阶组件。
 
-ref：ref 是 React 中用于访问 DOM 元素或组件实例的方法。在函数组件中，可以使用 useRef Hook 来创建一个 ref 对象，然后将其传递给需要引用的元素或组件。在类组件中，可以直接在类中定义 ref 属性，并将其设置为元素或组件的实例。
-useRef：useRef 是 React 中的 Hook，用于创建一个 ref 对象，并在组件生命周期内保持其不变。useRef 可以用于访问 DOM 元素或组件实例，并且在每次渲染时都会返回同一个 ref 对象。通常情况下，useRef 更适合用于存储不需要触发重新渲染的值，例如定时器的 ID 或者其他副作用。
-forwardRef：forwardRef 是一个高阶组件，用于将 ref 属性转发给其子组件。通常情况下，如果一个组件本身并不需要使用 ref 属性，但是其子组件需要使用 ref 属性，那么可以使用 forwardRef 来传递 ref 属性。forwardRef 接受一个函数作为参数，并将 ref 对象作为第二个参数传递给该函数，然后返回一个新的组件，该组件接受 ref 属性并将其传递给子组件。
+ref：ref 是 React 中用于访问 DOM 元素或组件实例的方法。在函数组件中，可以使用 useRef Hook 来创建一个 ref 对象，然后将其传递给需要引用的元素或组件。
+在类组件中，可以直接在类中定义 ref 属性，并将其设置为元素或组件的实例。
+
+useRef：useRef 是 React 中的 Hook，用于创建一个 ref 对象，并在组件生命周期内保持其不变。useRef 可以用于访问 DOM 元素或组件实例，并且在每次渲染时都会
+返回同一个 ref 对象。通常情况下，useRef 更适合用于存储不需要触发重新渲染的值，例如定时器的 ID 或者其他副作用。
+
+forwardRef：forwardRef 是一个高阶组件，用于将 ref 属性转发给其子组件。通常情况下，如果一个组件本身并不需要使用 ref 属性，但是其子组件需要使用 ref 属
+性，那么可以使用 forwardRef 来传递 ref 属性。forwardRef 接受一个函数作为参数，并将 ref 对象作为第二个参数传递给该函数，然后返回一个新的组件，该组件接受 ref 属性并将其传递给子组件。
 
 简而言之，ref 是 React 中访问 DOM 元素或组件实例的方法，useRef 是一个 Hook，用于创建并保持一个不变的 ref 对象，forwardRef 是一个高阶组件，用于传递 ref 属性给子组件。
 链接：https://juejin.cn/post/7214699255508484157

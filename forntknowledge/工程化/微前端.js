@@ -79,7 +79,18 @@ https://juejin.cn/post/7212603829572911159
 
 
 
-
 黑马前端基于qiankun搭建微前端项目实战教程
 https://pan.baidu.com/s/18n1WgUJWD5Znfd8xloW9Dg?pwd=i8em
 https://www.bilibili.com/video/BV12T411q7dq/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+
+
+微前端架构初探以及我的前端技术盘点
+https://juejin.cn/post/6844904113445011469
+
+微前端知识梳理
+https://juejin.cn/post/7221046247262781499
+
+
+作为面试官，为什么我推荐微前端作为前端面试的亮点？
+https://juejin.cn/post/7252342216843296828?utm_source=gold_browser_extension

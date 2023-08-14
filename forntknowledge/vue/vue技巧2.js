@@ -1,4 +1,4 @@
-1.使用 async-computed 插件解决异步计算属性的问题。
+1.使用 async-computed 插件解决异步计算属性的问题。========================
 import AsyncComputed from 'vue-async-computed'
 
  Vue项目处理错误上报原来如此简单 
@@ -11,15 +11,6 @@ Vue 的 refs 可以用来获取组件或元素的引用，例如通过 $refs 访
 同时，Vue 提供了一些辅助函数（如 this.$nextTick()），方便开发者在组件、DOM 更新后执行相应的逻辑。
 相比之下，操作 DOM 则需要手动获取 DOM 元素，再通过原生 JS 方法或 jQuery 等框架的方法进行操作。在进行 DOM 操作的过程中，需要注意避免使用
 嵌套循环、频繁调用操作 DOM 的 API 等会导致性能问题的操作。
-
-参考资料：
-
-[1]Vue.js 官方文档 - Refs
-
-[2]Vue2.x 入门系列（2） Vue中的模板渲染机制
-
-[3]MDN 文档 - 操作文档
-
 
 
 玩转组件库搭建全流程
@@ -60,7 +51,7 @@ https://www.imooc.com/learn/1316
 
 
 让你的Vue代码 “学会” 自动按需引入
-https://juejin.cn/post/7062648728405934087
+https://juejin.cn/post/7062648728405934087 
 
 这不，最近学习到了几个全新的插件，整理成文分享出来。
 

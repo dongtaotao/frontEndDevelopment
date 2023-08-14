@@ -92,7 +92,13 @@ React.lazy不能单独使用，需要配合React.suspense，suspence是用来包
 2. React.lazy原理
 React.lazy使用import来懒加载组件，import在webpack中最终会调用require Ensure方法，动态插入script来请求js文件，类似jsonp的形式。
 
-使用getDerivedStateFromProps后, 以前的方法逻辑该在哪里调用?
+
+
+React hooks useState如何拿到更新后的值
+https://blog.csdn.net/sinat_17775997/article/details/123753653?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22123753653%22%2C%22source%22%3A%22sinat_17775997%22%7D
+
+
+使用getDerivedStateFromProps后, 以前的方法逻辑该在哪里调用? 问GPT
 https://cloud.tencent.com/developer/ask/131876
 https://www.jianshu.com/p/50fe3fb9f7c3
 https://segmentfault.com/q/1010000037551437
@@ -175,16 +181,46 @@ getSnapshotBeforeUpdate
 getSnapshotBeforeUpdate这个周期在Fiber架构中，只会调用一次。
 
 ******************
-react 中 复值同一个会周render吗？   会
-this.state = {
-  count : 1
+// react 中 复值同一个会周render吗？   会
+// this.state = {
+//   count : 1
+// }
+
+// onClick = {() => {
+//   this.setState({
+//       count: 1
+//   })
+// }}
+
+
+
+react 中 定一个一个state，这时候我点击按钮setState 同一个值，意思是值不变，页面会重新render吗？
+当调用setState时，React会比较新旧state值是否相同，如果不同，才会重新渲染页面。如果新旧state值相同，页面不会重新render。这是因为，在React的状态更新机制中，组件的props和state的变化是驱动重新渲染的必要条件之一。
+例如，如果在组件生命周期方法中或事件处理程序中调用setState来设置状态，可以看到在新状态与旧状态不同时渲染了组件：
+class Example extends React.Component {
+  state = {
+    count: 0
+  };
+
+  handleClick = () =&gt; {
+    const { count } = this.state;
+    this.setState({ count }); // 尝试更新相同的值
+  };
+
+  render() {
+    const { count } = this.state;
+    return (
+      &lt;div&gt;
+        &lt;p&gt;Count: {count}&lt;/p&gt;
+        &lt;button onClick={this.handleClick}&gt;Increment&lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
 }
 
-onClick = {() => {
-  this.setState({
-      count: 1
-  })
-}}
+在上面的代码中，当按钮被点击时，我们调用setState并尝试将count的值与旧值相同。由于这个值没有改变，因此组件不会重新渲染，仍然显示上一次渲染的结果。
+
+
 
 getDerivedStateFromProps
 shouldComponentUpdate
@@ -215,6 +251,7 @@ props覆盖
 Hoc、render props和hook都是为了解决代码复用的问题，但是hoc和render props都有特定的使用场景和明显的缺点。hook是react16.8更新的新的API，
 让组件逻辑复用更简洁明了，同时也解决了hoc和render props的一些缺点。
 链接：https://juejin.cn/post/6941546135827775525。
+
 
 HOC的优缺点
 优点∶ 逻辑服用、不影响被包裹组件的内部逻辑。
@@ -370,5 +407,5 @@ resolve的模块的default属性就是组件MyComponent本身。
 Link 的本质也是a 标签。只不过在Link 中禁用了 a 标签的默认事件，改用了history对象提供的方法进行跳转。
 https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/135     
 
-移动端小案例,最好有react基础
+移动端小案例,最好有react基础 
 https://www.bilibili.com/video/BV1uL4y1N7qn?p=7&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a  

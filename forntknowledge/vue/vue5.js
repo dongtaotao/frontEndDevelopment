@@ -2,7 +2,8 @@ vue的computed和watch的实现原理 https://www.lingtiku.com/quiz/detail/9
 讲一下vue的computed和watch的实现原理？computed是怎么收集依赖的？
 参考答案
 computed：
-computed是data属性的一个订阅者，它在初始化时候被data属性收集依赖，当computed依赖的data属性改变后，标记该computed为dirty，即数据更改过，当渲染使用到computed时候，再计算出computed的值从而得到最新的正确的值。
+computed是data属性的一个订阅者，它在初始化时候被data属性收集依赖，当computed依赖的data属性改变后，标记该computed为dirty，
+即数据更改过，当渲染使用到computed时候，再计算出computed的值从而得到最新的正确的值。
 watch：
 在组件初始化时候，遍历所有的watch，对每个watch创建订阅者，绑定依赖的data属性，当data属性改变后发布给订阅者，然后会执行相应地回调。
 
@@ -10,7 +11,8 @@ watch：
 vue3新特性：
 
 性能的提升
-Tree-shaking 支持（tree shaking的作用是把项目中没必要的代码全部抖落掉，消除被引用，删除没被调用的无用模块代码，该优化最终实现的是代码体积的减少，也属于项目性能优化的一部分。）
+Tree-shaking 支持（tree shaking的作用是把项目中没必要的代码全部抖落掉，消除被引用，删除没被调用的无用模块代码，
+该优化最终实现的是代码体积的减少，也属于项目性能优化的一部分。）
 Composition API
 更好的 TS 支持（ts和js的区别）点击链接查看区别+学习
 自定义渲染 API
@@ -262,4 +264,4 @@ https://juejin.cn/post/7236028062872993852?utm_source=gold_browser_extension
 
 
 Vue打包后，及时更新版本的一种方法
-https://juejin.cn/post/7236263262073225274?utm_source=gold_browser_extension
+https://juejin.cn/post/7236263262073225274?utm_source=gold_browser_extension 

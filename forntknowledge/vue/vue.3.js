@@ -45,7 +45,7 @@ https://fe.ecool.fun/topic/38c7340e-cb35-43e0-8ea0-20e75b2780a5?orderBy=updateTi
 一篇文章认识Vue3🎈🎈🎈🎈🎈🎈🎈🎈🎈 必看--------------------------------🔥
 https://juejin.cn/post/7102793656616091661 
 
-https://v3.cn.vuejs.org/guide/introduction.html vue文档
+https://v3.cn.vuejs.org/guide/introduction.html vue文档 
 
 Vue封装组件并发布到npm仓库（保姆级教程）
 https://www.bilibili.com/video/BV1MS4y1L7QW?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
@@ -62,7 +62,7 @@ https://juejin.cn/post/7079807948830015502
 面试官：能不能手写 Vue3 响应式（Vue3 原理解析之响应系统的实现）
 https://juejin.cn/post/7084915514434306078
 
-Pinia的使用以及数据持久化 https://juejin.cn/post/7101657189428756516
+Pinia的使用以及数据持久化 https://juejin.cn/post/7101657189428756516  yarn add pinia-plugin-persistedstate
 
 Vue和React对比学习之Hooks  很好的文章🎈🎈
 https://juejin.cn/post/7103010557736779789#heading-29
@@ -117,4 +117,4 @@ reactive 用来创建引用类型的响应式数据
 
 
 Vue3.3.1+TS 全新使用指南
-https://juejin.cn/post/7233057834287710267?utm_source=gold_browser_extension
+https://juejin.cn/post/7233057834287710267?utm_source=gold_browser_extension 

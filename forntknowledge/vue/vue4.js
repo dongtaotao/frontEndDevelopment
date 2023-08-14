@@ -86,7 +86,6 @@ https://juejin.cn/post/6844904087046062087
 如何将当前组件的所有属性快速传递给子组件？【Vue小知识】
 https://www.bilibili.com/video/BV1RP4y1n7XU/?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 
-
 vue动态组件怎么动态绑定一个或多个v-bind属性
 http://www.zuo11.com/blog/2020/8/component_vbind.html
 
@@ -167,8 +166,7 @@ views：用来放项目的页面文件
 
 链接：https://juejin.cn/post/7097067108663558151
 
-vue插件开发、文档书写、github发布、npm包发布一波流 https://juejin.cn/post/6844903679162581005
-
+vue插件开发、文档书写、github发布、npm包发布一波流 https://juejin.cn/post/6844903679162581005m
 
 从0到1自己构架一个vue项目，说说有哪些步骤、哪些重要插件、目录结构你会怎么组织 https://juejin.cn/post/7177543159080026167
 综合实践类题目，考查实战能力。没有什么绝对的正确答案，把平时工作的重点有条理的描述一下即可
@@ -180,7 +178,7 @@ vue插件开发、文档书写、github发布、npm包发布一波流 https://ju
 提交规范：husky，lint-staged
 其他常用：svg-loader，vueuse，nprogress
 常见目录结构
-
+ 
 回答范例
 
 从0创建一个项目我大致会做以下事情：项目构建、引入必要插件、代码规范、提交规范、常用库和组件
@@ -240,7 +238,8 @@ vue+elementUI前端表格excel文件下载
 https://www.cnblogs.com/jerome92/p/14042784.html
 
 使用.sync,更优雅的实现数据双向绑定
-在Vue中，props属性是单向数据传输的,父级的prop的更新会向下流动到子组件中，但是反过来不行。可是有些情况，我们需要对prop进行“双向绑定”。上文中，我们提到了使用v-model实
+在Vue中，props属性是单向数据传输的,父级的prop的更新会向下流动到子组件中，但是反过来不行。可是有些情况，我们需要对prop进行“双向绑定”。
+上文中，我们提到了使用v-model实
 现双向绑定。但有时候我们希望一个组件可以实现多个数据的“双向绑定”，而v-model一个组件只能有一个(Vue3.0可以有多个)，这时候就需要使用到.sync。
 .sync与v-model的异同
 相同点：
@@ -411,4 +410,4 @@ https://juejin.cn/post/7189065824504643621
 
 
 记一次用webpack搭建vue项目
-https://juejin.cn/post/6844904183150149639
+https://juejin.cn/post/6844904183150149639 

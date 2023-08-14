@@ -163,7 +163,14 @@ aPass软件工厂
 CodeWave 智能开发平台
 文档中心
 
-开源 VUE3 低代码可视化大屏开发平台，拖拉拽！
+开源 VUE3 低代码可视化大屏开发平台，拖拉拽！ 
 https://www.bilibili.com/video/BV1g14y1v7S9/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 Gitee: https://gitee.com/dromara/go-view
 Osrc: https://www.osrc.com/cpf/projects/project_816698930226806784
+
+
+前端页面可视化搭建工具业界的轮子
+https://juejin.cn/post/6858881797490098190
+
+讲讲我做低代码平台这一年
+https://juejin.cn/post/7254104833514618917?utm_source=gold_browser_extension

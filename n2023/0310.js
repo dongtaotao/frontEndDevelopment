@@ -474,7 +474,7 @@ const list = [
     ]
   }
 ];
-
+ 
 const targetId = '112';
 const path = findPath(list, targetId);
 console.log(path); // [ '1', '11', '112' ]

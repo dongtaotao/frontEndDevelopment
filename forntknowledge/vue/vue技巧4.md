@@ -246,7 +246,7 @@ inheritAttrs默认值为true，true的意思是将父组件中除了props外的�
 ```
 
 3.5 provide和inject
-https://juejin.cn/post/6844903959266590728
+https://juejin.cn/post/6844903959266590728 
 
 
 ![图 3](../../images/b1ef363ce48939532a40c42db37547863364bedc09442ce357480270987b4ad1.png)  

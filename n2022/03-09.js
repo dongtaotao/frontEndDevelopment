@@ -172,5 +172,5 @@ ngOnChanges() 当被绑定的输入属性的值发生变化时调用，首次调
 ngOnInit() 在第一轮 ngOnChanges() 完成之后调用，只调用一次
 ngOnDestroy() 在 Angular 销毁指令/组件之前调用
 
-通过http访问服务器   
+通过http访问服务器     
   

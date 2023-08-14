@@ -43,4 +43,9 @@ https://juejin.cn/post/6844904137709060104
 
 
 半小时搞会 CentOS 入门必备基础知识
-https://juejin.cn/post/6844904080972709901
+https://juejin.cn/post/6844904080972709901 
+
+
+
+📚必知必会：写给前端同学常用的linux命令大全
+https://juejin.cn/post/7257440669374382138?utm_source=gold_browser_extension

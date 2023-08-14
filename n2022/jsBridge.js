@@ -63,7 +63,7 @@ https://www.cnblogs.com/leiting/p/9897759.html
 #JSBridge概述  http://know.shuerbuzuo.cn/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/JSBridge%E6%A6%82%E8%BF%B0.html#web-native
 
 对于Web, 发送URL请求的方法有这么几种:
-a标签
+a标签 
 location.href
 使用iframe.src
 发送ajax请求

@@ -343,4 +343,37 @@ jobs:
 第二个指令是actions/setup-node@v2，它将使用Node.js 14版本。with指定了它的参数，即Node.js版本。
 第三个指令是run npm install，它安装应用程序所需的所有依赖。
 最后一个指令是run npm test，它运行测试脚本。
-规定的所有步骤完成后，提交代码并推送到GitHub仓库即可触发自动化工作流程的运行。
+规定的所有步骤完成后，提交代码并推送到GitHub仓库即可触发自动化工作流程的运行。 
+
+
+
+0基础实现项目自动化部署
+http://zoo.zhengcaiyun.cn/blog/article/automated-deployment
+
+
+快来看看如何手动搭建自动化部署系统
+https://www.bilibili.com/video/BV1Qy4y1L7Nj/?spm_id_from=333.851.header_right.fav_list.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+
+作为前端 leader，怎么快速搭建多环境CICD自动化部署？
+https://juejin.cn/post/7250083673189253176#heading-2
+1. 自己造轮子
+2. 阿里云效一键部署静态站点到OSS
+2.1 流水线与底层逻辑
+2.2 vitepress + oss 自动化部署
+2.3 多环境配置方式
+2.4 注意点
+3. 阿里云效一键部署Node接口服务到云服务器
+3.1 自动化部署接口服务
+3.2 多环境配置方式
+3.3 全新空服务器环境安装
+4. Github Actions自动将静态站点部署到云服务器
+4.1 actions 指定某个版本有push时自动执行部署
+4.2 什么是 ssh？
+4.3 github secrets 变量配置
+4.4 触发push，自动执行
+4.5 多环境配置方式
+5.结束语
+
+多环境CICD自动化部署(二) - GitLab
+https://juejin.cn/post/7261519520106774588?utm_source=gold_browser_extension

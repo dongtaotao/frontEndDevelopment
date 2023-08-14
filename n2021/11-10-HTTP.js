@@ -205,7 +205,7 @@ UDP 用户数据报协议 无连接 不可靠传输，不使用流量控制和�
 
 //===============================================================
 JSBridge通信原理 
-Native调用JS
+Native调用JS 
 webview 作为 H5 的宿主，Native 可以通过 webview 的 API直接执行 Js 代码，例如：
 ios可以通过webview的evaluateJavaScript:completionHandler方法来运行js的代码
 android可以通过webview的loadUrl()去调用js代码，也可以使用evaluateJavascript()来调用js代码

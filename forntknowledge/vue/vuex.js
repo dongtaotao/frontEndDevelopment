@@ -12,7 +12,7 @@ Vuex的设计思想 https://www.cnblogs.com/lguow/p/13753900.html
 Vuex的设计思想，借鉴了Flux、Redux，将数据存放到全局的store，再将store挂载到每个vue实例组件中，利用Vue.js的细粒度数据响应机制来进行高效的状态更新。
 看了Vuex设计思想，心里难免会有这样的疑问：
 
-疑问1：vuex的store是如何挂载注入到组件中呢
+疑问1：vuex的store是如何挂载注入到组件中呢 
 分析源码，我们知道了vuex是利用vue的mixin混入机制，在beforeCreate钩子前混入vuexInit方法，
 vuexInit方法实现了store注入vue组件实例，并注册了vuex store的引用属性$store。store注入过程如下图所示：
 
@@ -48,12 +48,14 @@ diff算法采用同级比较。
 
 const a = {}
 Object.defineProperty(a, 'nmae', {
-    configurable: true,
-    enumerable: true,
-    get() {
-    },
-    set(name) { 
-    }
+	configurable: true,
+	enumerable: true,
+	get() {
+		
+	},
+	set(name) { 
+
+	}
 })
 
 五、Vuex原理
@@ -104,7 +106,6 @@ Vue.mixin({
         if (this.$options && this.$options.store) {
             // 找到根组件 main 上面挂一个$store
             this.$store = this.$options.store;
-
         }
         else {
             // 非根组件指向其父组件的$store

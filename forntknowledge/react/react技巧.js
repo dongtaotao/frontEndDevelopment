@@ -4,7 +4,7 @@ https://juejin.cn/post/6844903890467454989
 React 性能优化 | 包括原理、技巧、Demo、工具使用
 https://juejin.cn/post/6935584878071119885
 
-懒渲染的实现中判断组件是否出现在可视区域内是通过 react-visibility-observer 进行监听
+懒渲染的实现中判断组件是否出现在可视区域内是通过 react-visibility-observer 进行监听 ==========================
 https://juejin.cn/post/6935584878071119885
 
 【万字】手把手搭建Webpack5 + React18 + TS脚手架
@@ -199,6 +199,36 @@ forwardRef https://juejin.cn/post/6950063294270930980
 一文吃透hoc文章中讲到，由于属性代理的hoc，被包裹一层，所以如果是类组件，是通过ref拿不到原始组件的实例的，不过我们可以通过forWardRef转发ref。
 
 
-
 十分钟使用useContext实现简单的多语言切换
 https://juejin.cn/post/7237746910139498533?utm_source=gold_browser_extension
+
+
+通俗易懂知React实现keep-alive原理，看不懂不要赞
+https://juejin.cn/post/7242969515344789565?utm_source=gold_browser_extension
+
+
+🤮是时候放弃useState了，🚀这么写React更丝滑🚀
+https://juejin.cn/post/7246777363257475129
+
+前端实现文件预览（pdf、excel、word、图片）
+https://juejin.cn/post/7246609845272395837
+
+React项目中最全面多语言解决方案
+https://juejin.cn/post/7248896036709204025?utm_source=gold_browser_extension
+
+
+
+Vue和React对比学习之路由拦截鉴权
+https://juejin.cn/post/7249794087075446842?utm_source=gold_browser_extension
+
+
+让你 React 组件水平暴增的 5 个技巧
+https://juejin.cn/post/7252589598151458877?utm_source=gold_browser_extension
+
+
+浅谈 React 中的 XSS 攻击
+http://zoo.zhengcaiyun.cn/blog/article/xss-in-react
+
+
+React&Vue 系列：vue 我有插槽，react 我也有插槽
+https://juejin.cn/post/7261909946299056187?utm_source=gold_browser_extension

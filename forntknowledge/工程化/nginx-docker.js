@@ -278,5 +278,12 @@ https://github.com/jialushen/vue-docker-nginx   🔥🔥
 https://juejin.cn/post/7207787191623647288? 
 
 
-🐳Docker概念，工作流和实践 - 入门必懂
+🐳Docker概念，工作流和实践 - 入门必懂 
 https://www.bilibili.com/video/BV1MR4y1Q738/?spm_id_from=333.337.search-card.all.click&vd_source=f180962fb6ac13c58e2bc143f0318c2a
+
+前端工程师也应该了解的docker
+https://juejin.cn/post/7250029395023544376
+
+
+Docker + Jenkins + Nginx 实战前端自动化部署
+https://juejin.cn/post/7265858419156353076?utm_source=gold_browser_extension

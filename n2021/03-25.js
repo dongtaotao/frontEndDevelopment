@@ -368,7 +368,7 @@ redux-saga 和 mobx 的比较
   mobx 是数据管理库，和 redux 一样。
 2）设计思想
   redux-sage 属于 flux 体系， 函数式编程思想。
-  mobx 不属于 flux 体系，面向对象编程和响应式编程。
+  mobx 不属于 flux 体系，面向对象编程和响应式编程。 
 3）主要特点
   redux-sage 因为是中间件，更关注异步处理的，通过 Generator 函数来将异步变为同步，
   使代码可读性高，结构清晰。action 也不是 action creator 而是 pure action，
@@ -613,4 +613,4 @@ const throttle = (fn, time) => {
       flag = true
     }, time)
   } 
-}    
+}     

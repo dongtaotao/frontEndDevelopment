@@ -220,3 +220,29 @@ https://juejin.cn/post/7214026775142760505
 11. 域名发散（域名收敛）
 12. DNS预解析
 13. web worker
+
+
+
+webpack 性能优化 
+https://juejin.cn/post/7252569524029227069?utm_source=gold_browser_extension
+前言
+构建时间优化
+缩小范围
+文件后缀
+别名
+缓存
+并行构建
+定向查找第三方模块
+构建结果优化
+压缩代码
+压缩 js
+压缩 css
+压缩 html
+压缩图片
+按需加载
+prload、prefetch
+代码分割
+tree shaking
+gzip
+作用域提升
+最后

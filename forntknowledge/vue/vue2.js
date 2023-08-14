@@ -276,7 +276,7 @@ vue面试题
 https://space.bilibili.com/1455620616/channel/collectiondetail?sid=237016
 https://www.bilibili.com/video/BV1h3411J7WF/?spm_id_from=333.788
 
-快速掌握Vue2响应式原理【Vue】
+快速掌握Vue2响应式原理【Vue】 
 https://www.bilibili.com/video/BV1VA411x76D?p=3
 快速掌握虚拟DOM和diff算法【Vue】🔥
 https://www.bilibili.com/video/BV1dV411a7mT/

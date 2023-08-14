@@ -69,3 +69,27 @@ Taro 3 则可以大致理解为解释型架构（相对于 Taro 1/2 而言），
 
 Taro3跨端跨框架原理初探
 https://juejin.cn/post/6989968343163731981  
+
+
+【小程序框架】Taro2/Taro3原理分析
+https://www.bilibili.com/video/BV1s34y1B7bv/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+《小程序架构设计》—— 小程序简介
+https://www.bilibili.com/video/BV1Y341147sr/?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+
+Taro2 和 Taro3 都是跨端开发框架，但两者之间有很多区别：
+
+语法不同：
+Taro2 使用的是 React 语法，而 Taro3 则使用了自己的语法（类似于 Vue3 和 React 的组合），并且对 TypeScript 支持更好。由于 Taro3 处理了大部分跨端问题，因此开发者在使用 Taro3 时会更加专注于业务逻辑的编写。
+
+构建过程不同：
+Taro2 采用了编译为 React Native 组件的方式来实现跨端。而 Taro3 则使用了不同的构建方式，即通过编译源代码生成对应平台的原生代码，从而显著提升跨端性能表现。
+
+功能不同：
+Taro3 的基础组件库要比 Taro2 更加全面和丰富，例如 Functional Component、Suspense、Error Boundary 等，使得开发者在开发上更加高效。
+
+可扩展性不同：
+Taro2 的扩展性并不是太好，一些底层机制是有一定限制的。而 Taro3 的底层实现和结构更加模块化和灵活，更倾向于让开发者通过插件和组件库实现自己的需求。
+
+在跨端技术和生态方面，Taro2 已经非常成熟，而 Taro3 则在不断探索更加前沿的方案，尝试解决跨端开发中的各种问题和痛点。相比之下，Taro3 更适合追求性能和开发体验的开发者。

@@ -1,5 +1,4 @@
-react组件库搭建
-
+react组件库搭建=======================
 
 从零开始搭建 React 组件库
 https://juejin.cn/post/7039897798614974478
@@ -19,7 +18,7 @@ https://juejin.cn/post/7085671300802281479
 从零到一搭建一个完整React组件库
 https://juejin.cn/post/7160905679799058469
 
-Vite + storybook 搭建自己的 React 组件库
+Vite + storybook 搭建自己的 React 组件库 
 https://juejin.cn/post/7183265085884104763
 
 
@@ -77,3 +76,13 @@ https://juejin.cn/post/7235547967112806437?utm_source=gold_browser_extension
 脱离第三方 UI 组件库用 react + typescript 封装 UI 组件
 https://juejin.cn/post/7221454820423090237
 
+
+从零搭建React全家桶框架教程 react15
+https://github.com/brickspert/blog/issues/1
+
+2021 年 TypeScript + React 工程化指南
+https://zhuanlan.zhihu.com/p/403970666?utm_source=wechat_session&utm_medium=social&utm_oi=56197411504128
+
+
+一文搞定前端自动化测试（React 实战）
+https://mp.weixin.qq.com/s?__biz=MzA4ODUzNTE2Nw==&mid=2451052221&idx=1&sn=7d9bb47a8c945cc902c47318888c7ab3&chksm=87c40fadb0b386bbe9b5f60fe5d439262623f10fcc771a87780212ccdfbf13c8de0ab855ae7d&mpshare=1&scene=1&srcid=1224Vu9efzYz2i49Di6aLq1n&sharer_sharetime=1608765396875&sharer_shareid=778ad5bf3b27e0078eb105d7277263f6&key=3544abb8932ba3507f9d241ccf26c18fb0e1adfe5417f8a23568454cb3ba8651763ee67d0fe9bd24c11eab807e9f91e33b7ecb4c2d893af92b070858ccecea8e5a76ca5452e0355ce7f3982b187cfaff1fc915a508526980cbc2acc997ad35b2591e9be374f905106aea6e6990144100f456f0d64c29106df7e9154fced60078&ascene=1&uin=MTA0NTY0NDM2MQ%3D%3D&devicetype=Windows+10+x64&version=6300002f&lang=zh_CN&exportkey=AcREarzVp4BNnJ0nVAHrQ%2FE%3D&pass_ticket=J2WTHwIBT%2FJbeW7JkzLq0631o0mfN%2FqbP77GajCs5BGOPgD7rmOGeIBuggO%2FztSy&wx_header=0

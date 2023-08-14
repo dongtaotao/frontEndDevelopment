@@ -19,7 +19,7 @@ Vue项目性能优化实操,从50分到80分
 https://juejin.cn/post/7101560677688410125
 
 第10题：  https://fe.ecool.fun/topic/89eda79c-6cfb-4593-86d3-69d9ce9eb43d?orderBy=updateTime&order=desc&tagId=28
-面试官：说说Loader和Plugin的区别？编写Loader，Plugin的思路？
+面试官：说说Loader和Plugin的区别？编写Loader，Plugin的思路？ 
 实现plugin的模板如下：
 
 class MyPlugin {

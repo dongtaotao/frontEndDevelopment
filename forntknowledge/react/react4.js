@@ -79,11 +79,7 @@ React Hooks 实现原理 🔥🔥🔥
 
 Hooks 主要是利用闭包来保存状态，使用链表保存一系列 Hooks，将链表中的第一个 Hook 与 Fiber 关联。
 在 Fiber 树更新时，就能从 Hooks 中计算出最终输出的状态和执行相关的副作用。
-
-作者：shanejix
 链接：https://juejin.cn/post/7085609851720024072
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 
 react-32-样式隔离-引入css方式-vue对比
@@ -136,7 +132,6 @@ https://juejin.cn/post/7205092873326247973
 
 React 时间切片是一种通过将任务分割成小的时间片然后分批次处理任务以提高应用程序性能的技术。除了优化应用程序性能，时间切片还可以更好地控制渲染过程，以便用户可以快速看到应用程序的变化。
 要实现时间切片，React 提供了 Scheduler API 作为一组工具和算法来管理任务并将它们排入队列。开发者可以使用 Scheduler API 来实现任务的优先级和任务的调度，来提高应用程序的性能和用户体验。
-
 链接：https://juejin.cn/post/7211064454574014521
 
 
@@ -160,7 +155,8 @@ React利用 React.lazy与import()实现动态加载 ，利用Suspense来处理�
 8. React中hooks为什么不能用if判断
 可能会导致 hooks 的执行顺序发生改变，因为 React Hooks 内部是通过 hooks 的调用顺序来区分是哪个 hook
 以 useState 为例，在 react 内部，每个组件(Fiber)的 hooks 都是以链表的形式存在 memoizeState。
-update 阶段，每次调用 useState，链表就会执行 next 向后移动一步。如果将 useState 写在条件判断中，假设条件判断不成立，没有执行里面的 useState 方法，会导致接下来所有的 useState 的取值出现偏移，从而导致异常发生。
+update 阶段，每次调用 useState，链表就会执行 next 向后移动一步。如果将 useState 写在条件判断中，假设条件判断不成立，
+没有执行里面的 useState 方法，会导致接下来所有的 useState 的取值出现偏移，从而导致异常发生。
 链接：https://juejin.cn/post/7219097755737636901
 
 

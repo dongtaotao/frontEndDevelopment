@@ -288,7 +288,7 @@ http://www.javashuo.com/article/p-cwdjwivv-cs.html
 https://www.jianshu.com/p/ee8c0aa0e232
 
 最好的RN分包方案仍是facebook官方提供的metro bundle，
-使用metro bundle进行差分包进行热更新。 
+使用metro bundle进行差分包进行热更新。  
 
 RN 基于Metro 拆包实战
 https://juejin.cn/post/7106028240438820871  

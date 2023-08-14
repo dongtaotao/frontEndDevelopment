@@ -1,5 +1,5 @@
 「2021」高频前端面试题汇总之手写代码篇 
-https://juejin.cn/post/6946136940164939813 
+https://juejin.cn/post/6946136940164939813  
 
 盘点那些 JS 手写题
 https://juejin.cn/post/7082027102706335780
@@ -492,4 +492,4 @@ function flatten(obj) {
 }
 
 // 测试
-console.log(flatten(obj))   
+console.log(flatten(obj))    

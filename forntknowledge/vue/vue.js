@@ -1,5 +1,5 @@
 VUE+Elementui+ECharts【vue项目实战】
-https://www.bilibili.com/video/BV1Eg41197sN?p=47&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+https://www.bilibili.com/video/BV1Eg41197sN?p=47&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a 
 
 vuex
 Vuex 集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以可预测的方式发生变化  
@@ -234,4 +234,4 @@ Vue2 diff 特点
 
 Vue3 diff 特点
 最长递增子序列
-链接：https://juejin.cn/post/7109104086049357861  
+链接：https://juejin.cn/post/7109104086049357861   

@@ -39,5 +39,8 @@ https://juejin.cn/post/7085183478517465118
 https://juejin.cn/post/6931708519976534029
 从0到1开发可视化数据大屏（下）
 https://juejin.cn/post/6959834710788800542
+ 
 
-policyServiceObjectMag
+
+高效开发大屏可视化项目：公共组件封装指南
+https://juejin.cn/post/7248242431659966522?utm_source=gold_browser_extension

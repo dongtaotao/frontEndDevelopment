@@ -52,11 +52,7 @@ data() {
     }
   },
 // {{ user.lastName }}是默认数据  v-slot:todo 当父页面没有(="slotProps")
-
-作者：火狼1
 链接：https://juejin.cn/post/6844903959266590728
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 
 5 属性事件传递
@@ -127,11 +123,7 @@ xml复制代码<template>
 </template>
 如果子组件位于其父组件的根目录，则默认情况下它将获得这些组件，因此不需要使用这个小技巧。
 
-作者：杭州程序员张张
 链接：https://juejin.cn/post/6844904120499830792
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 
 10个Vue开发技巧助力成为更好的工程师(二)
 https://juejin.cn/post/6854573214371151886
@@ -157,7 +149,7 @@ https://juejin.cn/post/6844903616101220365
 <div v-for="(value,key) in obj">
     <input type="text" v-model="model[key]">
 </div>
-  // input就跟数据绑定在一起了，那两个默认数据也会在input中显示
+// input就跟数据绑定在一起了，那两个默认数据也会在input中显示
 
 
 Vue 实用开发技巧
@@ -216,10 +208,7 @@ files.keys().forEach(key => {
 })
 components: modules
 
-作者：lzg9527
 链接：https://juejin.cn/post/6844904080960126989
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 基于VUE自定义指令实现按钮级权限控制
 https://juejin.cn/post/6844903609151258631
@@ -227,7 +216,7 @@ https://juejin.cn/post/6844903609151258631
 https://juejin.cn/post/6844903478880370701
 
 
-全局样式
+全局样式======================================
 全局样式 目录：@/styles
 variable.scss: 全局变量管理
 mixins.scss: 全局 Mixins 管理
@@ -281,7 +270,6 @@ scss复制代码@mixin vh($height: 100vh) {
 }
 
 之后就是哪里不会点哪里
-
 链接：https://juejin.cn/post/6901466994478940168
 
 
@@ -369,3 +357,24 @@ app.component('test',{
 const vm = app.mount('#root')
 
 
+Vue和React权限控制的那些事
+https://juejin.cn/post/7242677017034915899?utm_source=gold_browser_extension
+
+
+如何将组件所有的props传递给子组件
+$props
+<children v-bind="$props"/>
+
+
+题目25. Vue2，Vue3，React的diff算法有什么区别
+答：传统的diff算法是遍历全部dom树来找到不同，时间复杂度为O(n^3),是不可用算法，vue和react都对diff算法做了优化，只进行同层比较，不进行跨级比较，
+tag不同时删掉重建，子节点通过key区分,使得时间复杂度降到了O(n)。
+Vue2，采用了双端比较法
+Vue3，采用了最长递增子序列比较
+React，采用了仅右移比较
+无论是哪种比较，它们有一个共同的目的，就是尽量减少DOM操作，能不动就不动，能移动DOM就不删除重建DOM
+链接：https://juejin.cn/post/7240817505710112829 
+
+
+Vue项目处理错误上报原来如此简单
+https://juejin.cn/post/7143144999515865118 
