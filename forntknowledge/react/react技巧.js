@@ -232,3 +232,56 @@ http://zoo.zhengcaiyun.cn/blog/article/xss-in-react
 
 React&Vue 系列：vue 我有插槽，react 我也有插槽
 https://juejin.cn/post/7261909946299056187?utm_source=gold_browser_extension
+
+简单实现React KeepAlive不依赖第三方库(附源码)
+https://juejin.cn/post/7273434821807636515?utm_source=gold_browser_extension
+
+
+
+React 中的状态自动保存（KeepAlive）
+https://juejin.cn/post/6844903942522929160
+
+React-Route6实现keep-alive效果
+https://juejin.cn/post/7112316129645133838
+
+React实现组件KeepAlive的方法
+https://juejin.cn/post/7114320931945873421
+
+
+react 如何修改ant-design的样式
+https://www.jianshu.com/p/4882884d2894
+<div className={styles.tabs}>
+<Tabs  
+        onChange={(key) => this.onChange(key,'leftNavSource')}
+        activeKey={'0'}
+        type="editable-card"
+        onEdit={(targetKey, action) => this.onEdit('leftNavSource', targetKey, action)}
+        hideAdd 
+      >
+        {panes.map(pane => <TabPane
+          tab={pane.title === '---' ? this.handleGetMenuNameByPath(pane.key, leftNavSource) : pane.title}
+          key={pane.key}
+          closable={panes.length !== 1}
+        >{pane.content}</TabPane>)}
+      </Tabs>
+</div>
+
+样式代码--加上 :global即可
+
+.tabs {
+  flex: 1;
+  height: 3.2em;
+  line-height: 2.5em;
+  color: @light-text-color;
+  padding: 0 16px;
+  position: relative;
+  .ellipsis; 
+  
+  :global(.ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active){
+      background-color: #1B98E0;
+      color:#fff;
+  }
+  :global(.ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active.ant-tabs-tab .ant-tabs-close-x){
+    color: #fff;
+  }  
+} 

@@ -613,4 +613,4 @@ const throttle = (fn, time) => {
       flag = true
     }, time)
   } 
-}     
+}      

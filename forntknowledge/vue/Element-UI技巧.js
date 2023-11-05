@@ -48,7 +48,7 @@ el-dialog 的 destroy-on-close 属性设置无效
 el-table 表格内容超出省略
 
 Element-UI 技巧
-https://juejin.cn/post/7041320033884045326
+https://juejin.cn/post/7041320033884045326 
 
 lement select 组件虚拟滚动优化 https://juejin.cn/post/7219869424550608952?
 npm i vue-virtual-scroll-list

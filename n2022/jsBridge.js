@@ -71,4 +71,8 @@ location.href
 
 安卓提供了shouldOverrideUrlLoading方法拦截
 UIWebView使用shouldStartLoadWithRequest, WKWebView则使用decidePolicyForNavigationAction
-这种方法从早期就存在了, 兼容性好. 缺点是基于URL, 长度受限, 并且不太直观.    
+这种方法从早期就存在了, 兼容性好. 缺点是基于URL, 长度受限, 并且不太直观.     
+
+
+H5与App的通讯方式
+https://juejin.cn/post/6844904020201455624

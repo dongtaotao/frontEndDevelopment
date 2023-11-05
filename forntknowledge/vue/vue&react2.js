@@ -75,4 +75,4 @@ ReactDOM.render(&lt;MyComponent /&gt;, document.getElementById("root"));
 我们将这个 ref 引用作为 div 元素的 ref 属性传入。
 在组件渲染完成后，我们通过 this.myRef.current 访问 div 元素的引用，并将其文本内容修改为 “Hello, world.”。这个渲染过程中，
 我们并没有直接访问 DOM 元素，而是通过 JSX 元素和 React 控制的过程访问 ref 的引用来间接修改元素内容。
-综上，React 中的 ref 和 Vue 中的 ref 类似，都是用来访问组件实例或元素节点的引用，但是它们的使用方式和实现机制略有不同。
+综上，React 中的 ref 和 Vue 中的 ref 类似，都是用来访问组件实例或元素节点的引用，但是它们的使用方式和实现机制略有不同。 

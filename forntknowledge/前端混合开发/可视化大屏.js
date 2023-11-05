@@ -44,3 +44,15 @@ https://juejin.cn/post/6959834710788800542
 
 高效开发大屏可视化项目：公共组件封装指南
 https://juejin.cn/post/7248242431659966522?utm_source=gold_browser_extension
+
+
+数据大屏最简单适配方案    很不错
+https://juejin.cn/post/7202598910337138748?
+
+大屏适配
+https://github.com/Alfred-Skyblue/v-scale-screen
+npm install v-scale-screen
+# or
+yarn add v-scale-screennpm install v-scale-screen
+# or
+yarn add v-scale-screen 

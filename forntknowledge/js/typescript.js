@@ -201,4 +201,4 @@ unknown 类型只能被赋值给 any 类型和 unknown 类型本身 https://juej
 unknown 和 any 的主要区别是 unknown 类型会更加严格：在对 unknown 类型的值执行大多数操作之前，我们必须进行某种形式的检查。
 而在对 any 类型的值执行操作之前，我们不必进行任何检查。
 
-tsconfig.json 文件是用于描述将 TypeScript 转为 JavaScript 代码的配置文件。     
+tsconfig.json 文件是用于描述将 TypeScript 转为 JavaScript 代码的配置文件。      

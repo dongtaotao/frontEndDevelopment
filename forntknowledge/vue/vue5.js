@@ -239,7 +239,8 @@ Suspense 组件：Vue 3 引入了 Suspense 组件，可以更好地处理异步�
 更好的自定义指令：Vue 3 改进了自定义指令的 API，使其更容易编写和测试自定义指令。
 更好的可访问性支持：Vue 3 增加了更多的可访问性支持，包括 ARIA 和无障碍键盘导航。
 
-总之，Vue 3 在性能、体积、可维护性和可访问性等方面都得到了显著的改进，同时也引入了一些新的特性和改进，为开发人员提供了更好的开发体验。不过，由于 Vue 3 的一些 API 与 Vue 2 不兼容，所以升级到 Vue 3 时需要进行相应的更新。
+总之，Vue 3 在性能、体积、可维护性和可访问性等方面都得到了显著的改进，同时也引入了一些新的特性和改进，为开发人员提供了更好的开发体验。
+不过，由于 Vue 3 的一些 API 与 Vue 2 不兼容，所以升级到 Vue 3 时需要进行相应的更新。
 链接：https://juejin.cn/post/7216319218504564791
 
 
@@ -264,4 +265,4 @@ https://juejin.cn/post/7236028062872993852?utm_source=gold_browser_extension
 
 
 Vue打包后，及时更新版本的一种方法
-https://juejin.cn/post/7236263262073225274?utm_source=gold_browser_extension 
+https://juejin.cn/post/7236263262073225274?utm_source=gold_browser_extension  

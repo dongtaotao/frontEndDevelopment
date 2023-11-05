@@ -12,7 +12,8 @@ https://juejin.cn/post/7242942636247711799
 https://juejin.cn/post/7242140832379584567
 
 题目25. Vue2，Vue3，React的diff算法有什么区别
-答：传统的diff算法是遍历全部dom树来找到不同，时间复杂度为O(n^3),是不可用算法，vue和react都对diff算法做了优化，只进行同层比较，不进行跨级比较，tag不同时删掉重建，子节点通过key区分,使得时间复杂度降到了O(n)。
+答：传统的diff算法是遍历全部dom树来找到不同，时间复杂度为O(n^3),是不可用算法，vue和react都对diff算法做了优化，只进行同层比较，
+不进行跨级比较，tag不同时删掉重建，子节点通过key区分,使得时间复杂度降到了O(n)。
 Vue2，采用了双端比较法
 Vue3，采用了最长递增子序列比较
 React，采用了仅右移比较
@@ -68,5 +69,5 @@ vue实现大文件切片断点续传https://juejin.cn/post/7248648979042058299?u
 
 前端面试题 - 97. React hook如何模拟class组件的功能 https://juejin.cn/post/7248624601659097148?utm_source=gold_browser_extension
 
-nginx部署多个前端项目 https://juejin.cn/post/7248648256284393533?utm_source=gold_browser_extension
+nginx部署多个前端项目 https://juejin.cn/post/7248648256284393533?utm_source=gold_browser_extension 
 

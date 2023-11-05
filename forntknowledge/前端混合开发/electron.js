@@ -21,7 +21,7 @@ Electron是有github开发，用html，css和js来构建跨平台桌面应用程
 并将其打包为Mac，window和linux系统下的应用来实现着一目的
 
 
-Electron两小时轻松实现桌面应用_结合react和vue，免费实战开发视频前端web教程
+Electron两小时轻松实现桌面应用_结合react和vue，免费实战开发视频前端web教程 
 https://www.bilibili.com/video/BV1Wo4y1X7cg?spm_id_from=333.337.search-card.all.click 
 
 Electron-HTML+CSS+JS构建跨平台桌面应用程序教程
@@ -37,7 +37,6 @@ https://juejin.cn/post/7201195953691983927?
 
 
 
-
 Electron是一款基于Chromium和Node.js的跨平台桌面应用框架，能够使用Web前端技术（HTML、CSS、JavaScript）构建原生桌面应用程序。以下是Electron的原理和一个简单的使用demo详细：
 
 原理
@@ -48,6 +47,8 @@ Electron的设计基于分层架构，分为主进程和渲染进程两部分：
 整个框架的核心是Node.js和Chromium，Node.js提供了对原生操作系统的底层访问以及文件和网络I/O的支持，在主进程中运行；而Chromium则提供了浏览器页面的渲染，支持直接调用DOM接口、Web API和各种CSS样式和HTML标签。
 
 
-
 electron-vite | 新一代electron开发构建工具
 https://juejin.cn/post/7084126780390375461
+
+electron-vue3开发桌面应用
+https://www.bilibili.com/video/BV1so4y1X7ny?p=3&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a

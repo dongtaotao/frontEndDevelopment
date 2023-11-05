@@ -91,4 +91,19 @@ https://cloud.tencent.com/developer/article/1683396
 https://www.wxapp-union.com/article-6184-1.html  
 
 
+//==================微信JS-SDK====================
 
+微信JS-SDK使用教程
+https://www.bilibili.com/video/BV1WX4y1U7gN?p=12&spm_id_from=pageDriver&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+微信公众号开发
+https://www.bilibili.com/video/BV1Lr4y157gQ?p=17&spm_id_from=pageDriver&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+最新 微信公众号开发教程全开源（强烈推荐）👌👌👌 🔥
+https://www.bilibili.com/video/BV1pf4y1Q7ER/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+黑马程序员前端微信小程序开发教程，微信小程序从基础到发布全流程_企业级商城实战(含uni-app项目多端部署)
+https://www.bilibili.com/video/BV1834y1676P?p=80&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a 
+
+千锋教育_最新版微信公众号开发技术教程（小白也能学）
+https://www.bilibili.com/video/BV1ag4y1v7CA/?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a

@@ -6,7 +6,7 @@ ReactiveX 是一个通过使用可观察序列来合成异步和基于事件的�
 RxJS 是专门处理异步逻辑的 
 
 rx.js 响应式异步编程库，在vue中需引入vue-rx      
-
+ 
 组件中内置指令
   NgClass
   NgStyle
@@ -148,4 +148,4 @@ headerModeService.missionConfirmed$.subscribe(
 https://juejin.cn/post/7055686432962281509
 
 Angular教程
-https://www.bilibili.com/video/BV19q4y1q7jT/?spm_id_from=333.788
+https://www.bilibili.com/video/BV19q4y1q7jT/?spm_id_from=333.788 

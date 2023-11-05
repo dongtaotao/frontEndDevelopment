@@ -180,4 +180,4 @@ export default connect(mapStateToProps, mapDispatchToProps)(Counter);
 
 
 面试官：熟悉 redux 是吧？要不手写一个？
-https://juejin.cn/post/7241487780464001061?utm_source=gold_browser_extension
+https://juejin.cn/post/7241487780464001061?utm_source=gold_browser_extension 

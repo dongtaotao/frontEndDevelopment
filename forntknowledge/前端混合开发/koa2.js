@@ -56,3 +56,12 @@ axios.post('http://localhost:3000/api/save-json', { json: JSON.stringify(jsonDat
 当Vue端调用该接口时，Koa服务器将获取JSON字符串并将其写入名为data.json的文件中。确保您在Koa项目的根目录下创建一个空的data.json文件用于存储数据。
 
 这是一个简单的示例，说明如何使用Koa 2编写接口并让Vue调用该接口传递JSON字符串，并将其写入JSON文件。根据您的实际需求，您可能需要添加错误处理、路由验证、身份验证等其他功能。
+
+
+【千锋教育】前端实战项目_Koa+MongoDB打造简书后台管理系统
+https://www.bilibili.com/video/BV1v5411T7Ez?p=39&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+
+Vue2.x+Koa2实战移动电商(共61集)
+https://jspang.com/article/61#top
+https://www.bilibili.com/video/BV1JE411q7qr?p=2&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a 

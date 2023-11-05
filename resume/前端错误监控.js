@@ -526,3 +526,7 @@ https://juejin.cn/post/7152798317892599844
  
 web前端性能监控实现 🔥🔥 
 https://juejin.cn/post/7226539719856291901
+
+
+APM前端监控系统实践
+https://juejin.cn/post/7282994347988582459?utm_source=gold_browser_extension

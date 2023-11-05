@@ -200,3 +200,29 @@ Vite整个过程中没有对文件进行打包编译，做到了真正的按需�
 高效的热更新：基于ESM实现，同时利用HTTP头来加速整个页面的重新加载，增加缓存策略：源码模块使用协商缓存，依赖模块使用强缓；因此一旦被缓存它们将不需要再次请求。
 基于 Rollup 打包：生产环境下由于esbuild对css和代码分割并使用Rollup进行打包；
 链接：https://juejin.cn/post/7166446028266733581 
+
+
+千锋教育陆神最新前端Vite学习指南，基于腾讯云的项目教程全网首发
+https://www.bilibili.com/video/BV1BS4y1P7mU/?p=2&spm_id_from=pageDriver&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+
+Vite 工具优化包体积和性能（附项目配置及解释）
+https://juejin.cn/post/7287914129565270073?utm_source=gold_browser_extension
+产物分析报告
+Gzip 压缩
+图片压缩
+资源打包目录
+产物拆包
+Treeshaking
+去除debugger 和 console
+CDN 加速
+路由懒加载
+开启HTTP2
+vite环境基本配置
+Vite 常用配置解释
+
+
+Vite的实现思想：通过浏览器运行时发送的http请求来实现文件的按需加载
+
+"Vite" 为什么比 "Webpack" 快? 他们之间的差距在什么地方？
+https://juejin.cn/post/7296771770098024448?utm_source=gold_browser_extension

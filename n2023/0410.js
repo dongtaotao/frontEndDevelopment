@@ -206,7 +206,7 @@ https://juejin.cn/post/7223200148862746684?
 https://juejin.cn/post/7199800513742389305
 
 
-关于大屏适配我所知道的 https://juejin.cn/post/7210615486710726715
+关于大屏适配我所知道的 https://juejin.cn/post/7210615486710726715 
 目录
 transform：scale (value)
 媒体查询 @media

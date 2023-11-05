@@ -24,4 +24,4 @@ yarn add pinia-plugin-persistedstate
 
 
 pinia-plugin-persistedstate 中文翻译来了~
-https://juejin.cn/post/7193150492338290744 
+https://juejin.cn/post/7193150492338290744  

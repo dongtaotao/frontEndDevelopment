@@ -240,6 +240,74 @@ console.log(result)
 前端模拟并发请求
 已知当前有100个请求，每次只能同时调用5个，设计一个并发函数。
 https://juejin.cn/post/6989103878436290568
+gpt
+要实现前端的并发请求控制，你可以使用JavaScript中的Promise和async/await来管理并发请求。以下是一个示例函数，它可以实现在给定的100个请求中，每次只允许同时发起5个请求：
+async function concurrentRequests(requests, concurrencyLimit) {
+  const results = [];
+  const inProgress = [];
+  let currentIndex = 0;
+
+  async function sendRequest(request) {
+    try {
+      const response = await fetch(request.url, request.options);
+      const data = await response.json();
+      results.push(data);
+    } catch (error) {
+      console.error('Request failed:', error);
+    } finally {
+      // 请求完成，从inProgress中移除
+      const index = inProgress.indexOf(request);
+      if (index !== -1) {
+        inProgress.splice(index, 1);
+      }
+
+      // 如果还有未处理的请求，继续发送
+      if (currentIndex &lt; requests.length) {
+        sendRequest(requests[currentIndex]);
+        currentIndex++;
+      }
+    }
+  }
+
+  // 初始化并发请求数量
+  for (let i = 0; i &lt; concurrencyLimit; i++) {
+    if (currentIndex &lt; requests.length) {
+      const request = requests[currentIndex];
+      sendRequest(request);
+      inProgress.push(request);
+      currentIndex++;
+    }
+  }
+
+  // 等待所有请求完成
+  await Promise.all(inProgress.map(request =&gt; request.promise));
+
+  return results;
+}
+
+使用示例：
+// 定义100个请求，每个请求是一个包含url和options的对象
+const requests = [
+  { url: 'https://api.example.com/1', options: {} },
+  // 添加更多请求...
+];
+
+// 设置并发请求的限制为5
+const concurrencyLimit = 5;
+
+// 调用并发请求函数
+concurrentRequests(requests, concurrencyLimit)
+  .then(results =&gt; {
+    // 处理请求结果
+    console.log('All requests completed:', results);
+  })
+  .catch(error =&gt; {
+    console.error('Error:', error);
+  });
+
+在上述示例中，concurrentRequests函数接受一个请求数组和并发限制作为参数。它会初始化一定数量的并发请求，然后当请求完成时继续发送新的请求，以保持在限制内。最后，它会等待所有请求完成，并返回所有请求的结果。
+请根据你的具体需求和请求配置来修改示例中的请求数组和并发限制。此外，确保适当处理错误和结果。
+
 
 
 编写一个函数计算多个数组的交集
@@ -652,4 +720,4 @@ arr.sort(function () {
     return Math.random() - 0.5 
 })
 console.log(arr);  // [6, 4, 8, 5, 1, 9, 2, 7, 10, 3]   
- 
+  

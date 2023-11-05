@@ -870,7 +870,7 @@ const createStore = (reducer) => {
     }
   }; 
 
-  dispatch({});
+  dispatch({}); 
 
   return { getState, dispatch, subscribe };
 };

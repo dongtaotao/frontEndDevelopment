@@ -15,7 +15,7 @@
       // 必要的img样式
     }
   </style>
-</head>
+</head> 
 <body>
   <div class="container">
     <div class="img">

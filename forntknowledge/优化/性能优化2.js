@@ -246,3 +246,8 @@ tree shaking
 gzip
 作用域提升
 最后
+
+
+
+低代码的前端性能优化
+https://juejin.cn/post/7268173090915549238?utm_source=gold_browser_extension

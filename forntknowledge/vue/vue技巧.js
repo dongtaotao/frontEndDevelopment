@@ -82,7 +82,6 @@ resetFields() {
   }
 }
 
-
 vue element 多个 Form 表单同时验证
 给 slot 插槽绑定事件
 https://juejin.cn/post/7119018849353072677
@@ -425,4 +424,8 @@ Vue.js实现大屏数字滚动翻转效果
 https://juejin.cn/post/6860882844533653517
 
 面试官问我按钮级别权限怎么控制，我说v-if，面试官说再见
-https://juejin.cn/post/7209648356530896953  
+https://juejin.cn/post/7209648356530896953   
+
+
+【vue】项目环境变量配置及其思考
+https://juejin.cn/post/7292958028307251215?utm_source=gold_browser_extension

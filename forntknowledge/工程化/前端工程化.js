@@ -226,12 +226,7 @@ eslint+lint-staged检测代码
 配置commitizen方便添加commit辅助备注信息
 stylelint规范样式和保存自动修复
 总结
-
-作者：Ausra无忧
 链接：https://juejin.cn/post/7101596844181962788
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 
 前端react基建
 https://juejin.cn/post/7256393626682163237?utm_source=gold_browser_extension

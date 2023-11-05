@@ -89,4 +89,14 @@ function ParentComponent() {
 }
 在上面的代码中，当 valueA 或 valueB 发生更改时，ExpensiveComponent 会重新计算 expensiveValue 的值。但是，由于 expensiveValue 是使用 useMemo() 缓存的，所以只有当 valueA 或 valueB 发生更改时，才会重新计算 expensiveValue 的值。这大大减少了计算开销，提高了性能。
 
-综上所述，使用 React.memo()、useCallback() 和 useMemo() 可以实现按需更新组件，提高 React 应用的性能。
+综上所述，使用 React.memo()、useCallback() 和 useMemo() 可以实现按需更新组件，提高 React 应用的性能。 
+
+
+
+美丽的公主和它的27个React 自定义 Hook
+https://juejin.cn/post/7292601783725424681?utm_source=gold_browser_extension#heading-19
+
+
+
+React 面试题: 不一定最全但绝对值得收藏！！(11 ~ 20)（万字总结）
+https://juejin.cn/post/7292584449526071305?utm_source=gold_browser_extension

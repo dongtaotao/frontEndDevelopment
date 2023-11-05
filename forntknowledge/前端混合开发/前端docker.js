@@ -69,4 +69,4 @@ docker run -d --name my-frontend-container -p 80:80 my-frontend-app
 
 以上是一个简单的前端项目在 Docker 中部署的步骤。当然，在实际应用中，你还需要考虑更多的细节问题，比如如何将环境变量传递到容器中、如何使用 Docker Compose 管理多个容器等等。如果你想了解更多关于在 Docker 中部署前端项目的知识，建议参考相关的文档和资料。
  
-[1] 
+[1]  

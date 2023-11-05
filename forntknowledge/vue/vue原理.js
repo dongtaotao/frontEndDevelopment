@@ -15,4 +15,4 @@ vuex`的核心原理，通过全局混入`beforeCreate`，将`store`实例注入
 第一步是将 模板字符串 转换成 element ASTs（解析器）
 第二步是对 AST 进行静态节点标记，主要用来做虚拟DOM的渲染优化（优化器）
 第三步是 使用 element ASTs 生成 render 函数代码字符串（代码生成器）
-链接：https://juejin.cn/post/7207637337572196407 
+链接：https://juejin.cn/post/7207637337572196407  

@@ -117,4 +117,4 @@ function parseTreePath(tree, id, path = "") {
     }
   }
 };
-console.log(parseTreePath(treeData, 5)); 
+console.log(parseTreePath(treeData, 5));  

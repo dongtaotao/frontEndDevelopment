@@ -38,4 +38,10 @@ https://juejin.cn/post/7078877401626705957
 https://juejin.cn/post/6924583125847080967#heading-1
 
 【从入门到提桶】vue3.2 + vite + vant + pinia + ts 移动端 h5 项目新手实践
-https://juejin.cn/post/7134610733962100750#heading-28  
+https://juejin.cn/post/7134610733962100750#heading-28   
+
+
+react+vite3+unocss+typescript+antd-mobile+react-routerv6 搭建h5项目,欢迎评论
+https://juejin.cn/post/7187959109575000121
+
+https://github.com/weizheng1992/react-h5/tree/main
