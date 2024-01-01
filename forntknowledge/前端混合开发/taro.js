@@ -193,6 +193,6 @@ https://juejin.cn/post/6936814903021797389?utm_source=gold_browser_extension
 Taro 采用了定制一套运行时标准来抹平不同平台之间的差异。
 这一套标准主要以三个部分组成，包括标准运行时框架、标准基础组件库、标准端能力 API，其中运行时 
 框架和 API 对应 @taro/taro，组件库对应 @tarojs/components，通过在不同端实现这些标准，从  
-而达到去差异化的目的...     
- 
+而达到去差异化的目的...      
+  
 

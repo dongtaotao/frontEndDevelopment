@@ -175,6 +175,7 @@ Vue.prototype.$http = () => {}
 const app = createApp({})
 app.config.globalProperties.$http = () => {}
 
+
 方法二 Provide / Inject
 vue3新的 provide/inject 功能可以穿透多层组件，实现数据从父组件传递到子组件。
 
@@ -265,4 +266,4 @@ https://juejin.cn/post/7236028062872993852?utm_source=gold_browser_extension
 
 
 Vue打包后，及时更新版本的一种方法
-https://juejin.cn/post/7236263262073225274?utm_source=gold_browser_extension  
+https://juejin.cn/post/7236263262073225274?utm_source=gold_browser_extension   

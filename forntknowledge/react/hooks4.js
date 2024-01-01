@@ -6,13 +6,13 @@ import { useState, useEffect } from 'react';
 function useErrorBoundary() {
   const [hasError, setHasError] = useState(false);
 
-  useEffect(() =&gt; {
+  useEffect(() => {
     function errorHandler(error) {
       console.error(error);
       setHasError(true);
     }
     window.addEventListener('error', errorHandler);
-    return () =&gt; {
+    return () => {
       window.removeEventListener('error', errorHandler);
     };
   }, []);
@@ -38,4 +38,4 @@ function MyComponent() {
 
 
 【React】万字长文！100+个让你事半功倍的常用 React Hooks 和工具包
-https://juejin.cn/post/7196943285381464101#heading-29 
+https://juejin.cn/post/7196943285381464101#heading-29  

@@ -37,4 +37,4 @@ var deleteDuplicates = function (list) {
   }
   return head.next;
 };
-https://juejin.cn/post/6945771148663586823
+https://juejin.cn/post/6945771148663586823 

@@ -248,4 +248,4 @@ export default {
 } 
 </script>
 在这个例子中，我们在子组件中使用 $emit 方法触发自定义事件。通过 props 接收父组件传递过来的 onCustomEvent 对象，其中包含了自定义事件的类型和数据。
-在点击事件中，使用 $emit 方法触发自定义事件时，将 type 和 payload 分别作为 $emit 方法的两个参数传递进去。
+在点击事件中，使用 $emit 方法触发自定义事件时，将 type 和 payload 分别作为 $emit 方法的两个参数传递进去。 

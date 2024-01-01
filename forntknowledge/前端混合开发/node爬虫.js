@@ -1,6 +1,6 @@
 了却我的爬虫心结 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥（掘金爬虫）
 https://juejin.cn/post/7235137314401157180?utm_source=gold_browser_extension 
-
+  
 
 帮我写一个node的爬虫，可以抓取点赞高的文章   gpt
 好的，以下是一个简单的 Node.js 爬虫代码，可以抓取掘金点赞数高于 1000 的文章：
@@ -156,7 +156,6 @@ node index.js
 
 
 
-
 用node写一个爬虫，超简单！
 https://juejin.cn/post/7224873698981494821
 
@@ -168,3 +167,8 @@ https://juejin.cn/post/7237425753612435511?utm_source=gold_browser_extension
 由于XX竟然开启了防盗链，我连夜写个爬虫🕷️导出博客所有内容
 
 https://juejin.cn/post/7260852622885896249?utm_source=gold_browser_extension
+
+
+
+10分钟快速上手爬虫之Puppeteer
+https://www.bilibili.com/video/BV13Z4y137Kt/?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a

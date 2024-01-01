@@ -13,13 +13,10 @@ const requireComponent = require.context('./components', true, /[A-Za-z0-9-_,\s]
 
 requireComponent.keys().forEach(fileName => {
   const componentConfig = requireComponent(fileName)
-  
   // 获取组件文件夹的名称
   const folderName = fileName.split('/')[1]
-  
   // 获取组件的 PascalCase 命名
   const componentName = folderName
-  
   // 全局注册组件
   Vue.component(componentName, componentConfig.default || componentConfig)
 })
@@ -33,7 +30,6 @@ new Vue({
 }).$mount('#app')
 确保你的组件文件夹的路径与上述代码中定义的路径相匹配，并且组件文件的命名使用 PascalCase 格式，并且与文件夹的名称相同。
 console.log('====================================');
-
 
 console.log('====================================');
 Vue如何 加载远程组件
@@ -106,6 +102,9 @@ https://juejin.cn/post/7124835773873913893
 // 1、JS文件中，直接使用 @
 import chartItem from "@/components/report";
 
+
+
+
 // 2、css(scss等预处理)文件中，使用 ~@ 开头
 @import '~@/assets/css/global.less';
 background-image: url("~@/assets/img/login/user.png");
@@ -113,3 +112,56 @@ background-image: url("~@/assets/img/login/user.png");
 // 3、template模板中，@、~@ 均可
 <img src="@/assets/img/login/logo.png"> 
 
+
+Vue3实现详情页返回列表页时保持表格滚动条的位置
+https://juejin.cn/post/7304234672895819813?utm_source=gold_browser_extension
+
+
+
+4种方案带你探索 Vue.js 代码复用的前世今生
+在Vue.js中我们可通过以下4种方案来实现代码逻辑复用：
+https://juejin.cn/post/7238604002354987064
+mixin
+高阶组件
+作用域插槽（scoped slots）
+Composition API 组合式函数
+
+
+
+Vue2和Vue3怎样挂载全局属性
+在Vue2中，可以通过将一些公共属性挂载到Vue的原型上，实现各个组件的共享，在组件中可以通过this来访问。
+js复制代码Vue.prototype.a = 'a'
+
+在Vue3中，不再导出Vue构造函数了，并且在composition API中无法使用this，因此如果我们想挂载全局属性，应该使用这种方法：
+js复制代码// 添加
+import { createApp } from 'vue'
+import App from './App.vue'
+
+const app = createApp(App)
+
+app.config.globalProperties.a = 'a'
+
+app.mount('#app')
+
+// 使用
+import { getCurrentInstance } from 'vue'
+const { a } = getCurrentInstance().appContext.config.globalProperties
+
+作者：LeeHi
+链接：https://juejin.cn/post/7317926149120196643
+来源：稀土掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+在Vue2中，diff算法采用的是双指针进行头头相比、尾尾相比、头尾相比，最终通过映射关系来确认可复用的节点，进行更新。
+在Vue3中，diff算法分为有key和无key和快速diff三种方式，快速diff通过静态标记，对一些文本、空节点进行快速更新，无key方式简单粗暴对比每一项，判断是否可以复用节点，有key的方式依旧采用双指针，但是只进行头头相比、尾尾相比，最终会根据求取无序列表的最长递增子序列的方式，对能复用的节点进行patch，需要移动的节点进行移动节点，最终完成diff更新。
+链接：https://juejin.cn/post/7317926149120196643
+
+
+
+
+第26题：Vue项目如何进行部署？是否有遇到部署服务器后刷新404问题？
+https://fe.ecool.fun/topic/252525e4-0c4c-4e41-9279-41bc59f06f85?orderBy=updateTime&order=desc&tagId=14
+
+
+第53题：Vue项目中如何解决跨域问题？
+https://fe.ecool.fun/topic/38c7340e-cb35-43e0-8ea0-20e75b2780a5?orderBy=updateTime&order=desc&tagId=14

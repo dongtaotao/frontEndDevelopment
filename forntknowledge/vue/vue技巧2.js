@@ -479,4 +479,4 @@ export default {
   },
 }
 </script>
-当修改该自定义组件中的值时，就会通过 update:modelValue 事件触发 handleUpdate 函数，并将修改后的值赋给父组件的 value 属性。 
+当修改该自定义组件中的值时，就会通过 update:modelValue 事件触发 handleUpdate 函数，并将修改后的值赋给父组件的 value 属性。  

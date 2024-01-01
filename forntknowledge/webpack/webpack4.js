@@ -164,4 +164,11 @@ plugins:[
 
 
 常用的webpack10个优化技巧
-https://juejin.cn/post/7288990479512748072?utm_source=gold_browser_extension
+https://juejin.cn/post/7288990479512748072?utm_source=gold_browser_extension 
+
+
+最新总结，7k字一篇搞懂webpack plugin插件机制的来龙去脉，webpack再也不是我的软肋了！
+https://juejin.cn/post/7290417906840141882
+
+学习webpack loader，这一篇文章足够了。从原因、原理、用法、自定义loader等方面解析，讲的明明白白！
+https://juejin.cn/post/7283768998777061435

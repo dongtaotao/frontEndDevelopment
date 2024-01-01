@@ -41,8 +41,8 @@
  * @return {number}
  */
  var maxDepth = function(root) {
-   let res=0;
-   const dfs=(n,l)=>{
+  let res=0;
+  const dfs=(n,l)=>{
        if(!n)return
        if(!n.left&&!n.right){
            res=Math.max(res,l)
@@ -432,5 +432,5 @@ var isValidBST = function(root) {
       return false
     }
     return isValidBST(root.left) && isValidBST(root.right)     
-};
+}; 
 

@@ -212,5 +212,5 @@ transform：scale (value)
 媒体查询 @media
 vh/vw
 
-React+TS+IntersectionObserver实现视频懒加载和自动播放！ 
-https://juejin.cn/post/7226187878321471549?utm_source=gold_browser_extension 
+React+TS+IntersectionObserver实现视频懒加载和自动播放！  
+https://juejin.cn/post/7226187878321471549?utm_source=gold_browser_extension  

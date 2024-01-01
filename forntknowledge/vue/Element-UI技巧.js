@@ -51,8 +51,8 @@ Element-UI 技巧
 https://juejin.cn/post/7041320033884045326 
 
 lement select 组件虚拟滚动优化 https://juejin.cn/post/7219869424550608952?
-npm i vue-virtual-scroll-list
+npm i vue-virtual-scroll-list 
 
 
 优化用户体验："解决 el-tree 刷新自动展开节点"
-https://juejin.cn/post/7221391787126358073? 
+https://juejin.cn/post/7221391787126358073?  

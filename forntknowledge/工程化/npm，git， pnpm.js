@@ -159,5 +159,15 @@ https://www.bilibili.com/video/BV1C3411x7Nq/?spm_id_from=333.999.0.0&vd_source=0
 https://juejin.cn/post/7241480662137552957?utm_source=gold_browser_extension
 
 
-前端私服verdaccio的介绍和用法
+前端私服verdaccio的介绍和用法 
 https://juejin.cn/post/7229634082883665980 
+
+
+
+pnpm 为何节省空间
+https://q.shanyue.tech/engineering/e751
+它解决了 npm/yarn 平铺 node_modules 带来的依赖项重复的问题 (doppelgangers)
+
+
+为什么 pnpm 安装速度快，节省磁盘空间？
+https://juejin.cn/post/7307838693145870370  

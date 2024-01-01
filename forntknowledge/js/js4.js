@@ -440,7 +440,6 @@ class Promise {
 
 //================================================================
 Object.create 的基本实现原理
-复制
 // 思路：将传入的对象作为原型
 function create(obj) {
   function F() {}
@@ -876,4 +875,4 @@ const createStore = (reducer) => {
 };
 
 Vuex、Flux、Redux、Redux-saga、Dva、MobX
-https://zhuanlan.zhihu.com/p/53599723        
+https://zhuanlan.zhihu.com/p/53599723         

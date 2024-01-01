@@ -12,7 +12,7 @@ Nginx 是开源、高性能、高可靠的 Web 和反向代理服务器
 
 https://juejin.cn/post/6954604160327090212
 Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从 Apache2.0 协议开源。
-Docker是什么
+Docker是什么 🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯
 https://www.bilibili.com/video/BV1tE41177BV/?spm_id_from=333.788.recommend_more_video.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 ==》Docker是一个开源的应用容器引擎
 ==》Docker,其实就是可以打包程序和运行环境，把环境和程序一起发布给容器，当你需要发布程序时，你可以使用Docker
@@ -281,9 +281,27 @@ https://juejin.cn/post/7207787191623647288?
 🐳Docker概念，工作流和实践 - 入门必懂 
 https://www.bilibili.com/video/BV1MR4y1Q738/?spm_id_from=333.337.search-card.all.click&vd_source=f180962fb6ac13c58e2bc143f0318c2a
 
-前端工程师也应该了解的docker
+前端工程师也应该了解的docker 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 https://juejin.cn/post/7250029395023544376
+前端工程师也应该了解的docker
+https://www.bilibili.com/video/BV1Xw411C76Z/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 
 
 Docker + Jenkins + Nginx 实战前端自动化部署
 https://juejin.cn/post/7265858419156353076?utm_source=gold_browser_extension 
+
+
+
+黑马程序员Docker快速入门到项目部署
+https://www.bilibili.com/video/BV1HP4118797/?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+
+web前端有必要学docker吗？0基础-45分钟带你学会！包含笔记案例源代码
+https://www.bilibili.com/video/BV1Z84y1a7nM/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+
+
+写给前端同学的Nginx配置指南https://juejin.cn/post/7267003603095879714
+
+🐟前端同学也能搞定 Docker：快速入门指南
+https://juejin.cn/post/7256721204299972666

@@ -20,7 +20,6 @@ https://juejin.cn/post/7121381989864701982
 从0搭建Vue3组件库(一): 开篇
 从0搭建Vue3组件库(二):Monorepo项目搭建
 从0搭建Vue3组件库(三): 组件库的环境配置
-从0搭建Vue3组件库(三): 组件库的环境配置
 从0搭建Vue3组件库(四): 如何开发一个组件
 从0搭建Vue3组件库(五): 如何使用Vite打包组件库
 从0搭建Vue3组件库(十):如何搭建一个 Cli 脚手架
@@ -255,6 +254,7 @@ provide / inject
 
 最全的 Vue3 快速上手指南【值得收藏】
 https://blog.csdn.net/qq_31967569/article/details/123548456?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-123548456-blog-123382023.pc_relevant_paycolumn_v3&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-123548456-blog-123382023.pc_relevant_paycolumn_v3&utm_relevant_index=1
+
 
 Vue3 Composition API 快速上手
 https://juejin.cn/post/7057725927739883551#heading-36
@@ -518,4 +518,11 @@ https://juejin.cn/post/7151909645399883807
 为 props 标注类型
 为 ref() 标注类型
 为 reactive() 标注类型
-小结   
+小结     
+
+
+
+ref 为什么需要 .value
+https://juejin.cn/post/7298978479399583755
+Vue3 中为什么需要 ref？
+https://juejin.cn/post/7298179365040635930

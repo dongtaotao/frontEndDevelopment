@@ -42,7 +42,7 @@ Vue3+Typescript从整合到项目实战  https://www.bilibili.com/video/BV1no4y1
 基于Vue的前端架构，我做了这15点
 https://juejin.cn/post/6901466994478940168
 备战2021：Vite2项目最佳实践
-https://juejin.cn/post/6924912613750996999
+https://juejin.cn/post/6924912613750996999        
 
 Vue项目性能优化实操,从50分到80分
 https://juejin.cn/post/7101560677688410125
@@ -565,3 +565,39 @@ https://juejin.cn/column/7140103979697963045
 
 [保姆级] Vue3 开发文档
 https://juejin.cn/post/7220220100384407610  
+
+
+Vue3基础
+https://juejin.cn/post/7308434339859005466?utm_source=gold_browser_extension
+1. 基础语法与指令
+v-show vs v-if
+v-for vs v-if
+Vue 侦听响应式数组变更
+:key 的作用
+2. 组件的使用(组件复用主要是构建模块)
+2.1 组件注册实例
+2.2 组件的 Props 传递实例 （defineProps 定义）
+2.3 组件事件实例(defineEmits)
+2.4 v-model 自定义修饰符
+2.5 v-model 在自定义组件工作(实现双向绑定)
+2.6 Attributes 的透传
+2.7 插槽 Slots
+2.8 依赖注入
+2.9 异步组件
+3. 逻辑的复用
+3.1 组合式函数（复用主要是有状态的逻辑封装）
+3.2 自定义指令（重用涉及普通元素的底层 DOM 访问的逻辑）
+定义格式(各个方法参数通简格式一致)：
+简写格式：
+节流函数指令（防止表单重复提交）
+3.3 插件
+4. 内置组件
+4.1 <Transition>组件
+组件class
+组件钩子函数
+组件应用(css版本)
+组件应用 mode="out-in"
+4.2 内置组件 <TransitionGroup>组件
+4.3 内置组件 <KeepAlive>组件
+4.4 内置组件 <Teleport>组件
+相关推荐

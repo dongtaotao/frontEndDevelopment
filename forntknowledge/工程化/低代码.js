@@ -1,3 +1,22 @@
+
+《保姆级》低代码知识点详解（一）🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯
+https://juejin.cn/post/7291133485834272827
+demo体验地址
+https://dbfu.github.io/lowcode-demo/
+
+低代码事件绑定和组件联动——低代码知识点详解（二）
+https://juejin.cn/post/7292354382909374476
+
+《保姆级》低代码知识点详解（一）
+低代码事件绑定和组件联动——低代码知识点详解（二）
+低代码动态属性和在线执行脚本——低代码知识点详解（三）
+低代码在线加载远程组件——低代码知识点详解（四）
+低代码可视化逻辑编排——低代码知识点详解（五） 
+使用低代码实战开发页面（上）——低代码知识点详解（六）
+https://juejin.cn/post/7294907512443994175?utm_source=gold_browser_extension
+
+
+
 https://www.bilibili.com/video/BV1wa411Y78R?share_source=copy_web
 Vue3最新实战从零实现可视化搭建【手把手教学】  
 
@@ -177,18 +196,14 @@ https://juejin.cn/post/7254104833514618917?utm_source=gold_browser_extension
 
 
 
-《保姆级》低代码知识点详解（一）🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯
-https://juejin.cn/post/7291133485834272827
-demo体验地址
-https://dbfu.github.io/lowcode-demo/
 
-低代码事件绑定和组件联动——低代码知识点详解（二）
-https://juejin.cn/post/7292354382909374476
+低代码平台的架构思路  🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥
 
-《保姆级》低代码知识点详解（一）
-低代码事件绑定和组件联动——低代码知识点详解（二）
-低代码动态属性和在线执行脚本——低代码知识点详解（三）
-低代码在线加载远程组件——低代码知识点详解（四）
-低代码可视化逻辑编排——低代码知识点详解（五）
-使用低代码实战开发页面（上）——低代码知识点详解（六）
-https://juejin.cn/post/7294907512443994175?utm_source=gold_browser_extension
+低代码平台的架构思路（上）
+低代码平台的架构思路（下）
+https://www.bilibili.com/video/BV1jp4y1A73v/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+
+
+前端低代码怎样用到项目中才能在面试中更胜一筹   🔥🔥
+https://www.bilibili.com/video/BV1Ug4y1R7qX?p=9&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a

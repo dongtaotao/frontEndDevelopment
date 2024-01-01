@@ -97,5 +97,10 @@ Taro3 的基础组件库要比 Taro2 更加全面和丰富，例如 Functional C
 Taro2 的扩展性并不是太好，一些底层机制是有一定限制的。而 Taro3 的底层实现和结构更加模块化和灵活，
 更倾向于让开发者通过插件和组件库实现自己的需求。
 
-在跨端技术和生态方面，Taro2 已经非常成熟，而 Taro3 则在不断探索更加前沿的方案，尝试解决跨端开发中的各种问题和痛点。
-相比之下，Taro3 更适合追求性能和开发体验的开发者。
+在跨端技术和生态方面，Taro2 已经非常成熟，而 Taro3 则在不断探索更加前沿的方案，尝试解决跨端开发中的各种问题和痛点。 
+相比之下，Taro3 更适合追求性能和开发体验的开发者。 
+
+
+
+【小程序框架】Taro2/Taro3原理分析
+https://www.bilibili.com/video/BV1s34y1B7bv/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a 

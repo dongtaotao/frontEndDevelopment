@@ -27,5 +27,5 @@ Vue组件库开发 https://juejin.cn/column/7230308610080686136
 【保姆级教程】使用vue2从零搭建自己的私有组件库 
 https://juejin.cn/post/7229238405406343226
  
-从0到1搭建自己的组件库，详解附源码
+从0到1搭建自己的组件库，详解附源码 
 https://juejin.cn/post/7241514309717639228?utm_source=gold_browser_extension

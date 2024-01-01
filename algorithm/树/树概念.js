@@ -39,4 +39,4 @@ var isBalanced = function (root) {
 function numSum(root) {
   if(!root) return 0;
   return root.val + numSum(root.left) + numSum(root.right); 
-}
+} 

@@ -69,7 +69,7 @@ class MyComponent extends React.Component {
     return null;
   }
 
-  myMethod = (props) =&gt; {
+  myMethod = (props) => {
     // 在这里可以调用任何方法处理props变化
     console.log('Props changed:', props);
   }
@@ -80,7 +80,6 @@ class MyComponent extends React.Component {
     )
   }
 }
-
 在上面的示例代码中，我们直接在getDerivedStateFromProps方法中调用了myMethod方法，而不使用MyComponent.prototype.myMethod.call的方式。
 这种方式更加简洁、易读，也是React官方推荐的做法。
 
@@ -129,7 +128,7 @@ class MyComponent extends Component {
     derivedValue: null
   };
 
-  myMethod = (props) =&gt; {
+  myMethod = (props) => {
     console.log('Props changed:', props);
   }
 
@@ -153,4 +152,4 @@ class MyComponent extends Component {
 
 在上面的示例中，我们将myMethod方法定义为一个箭头函数，并在getDerivedStateFromProps中实例化一个MyComponent对象来调用它。
 由于箭头函数绑定了组件类的上下文，因此可以在函数内部使用this来引用组件实例。
-希望这可以解释上述问题，感谢您指出我的错误。
+希望这可以解释上述问题，感谢您指出我的错误。 

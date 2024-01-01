@@ -238,4 +238,4 @@ var mergeTrees = function(t1, t2) {
       t1.right = mergeTrees(t1.right,t2.right);
   }
   return t1 || t2; 
-}; 
+};  

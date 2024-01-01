@@ -259,4 +259,4 @@ css module 中： @import "~@/style/theme.less"
 css 属性中： background: url("~@/assets/xxx.jpg")
 html 标签中： <img src="~@/assets/xxx.jpg">
 链接：https://juejin.cn/post/6844903953969184775
-vue全家桶开发的一些小技巧和注意事项
+vue全家桶开发的一些小技巧和注意事项 

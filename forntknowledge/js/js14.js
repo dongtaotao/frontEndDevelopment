@@ -211,4 +211,4 @@ function treeData(data){
   })
 }
  
-var newTree = treeData(newArr) 
+var newTree = treeData(newArr)  

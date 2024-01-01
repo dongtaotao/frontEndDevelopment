@@ -23,5 +23,5 @@ var maxSlidingWindow = function (nums, k) {
       let item = Math.max(...nums.slice(i, k + i))
       result.push(item);
   }
-  return result;  
+  return result;   
 }; 

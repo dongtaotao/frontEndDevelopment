@@ -189,7 +189,6 @@ const result = fn(id, list);
 console.log(result); // 输出 [1, 11, 112]
 
 
-
 获取页面所有的 tagname
 function getAllHTMLTags() {
   const tags = [...window.document.querySelectorAll("*")].map(
@@ -502,4 +501,4 @@ function jsonToTree(data) {
     }
   });
   return result;
-} 
+}  

@@ -41,7 +41,7 @@ https://juejin.cn/post/7064097257821306916
 剖析react-redux原理以及手写实现
 https://juejin.cn/post/7010687960731353095
 
-Redux持久化插件-解决刷新页面数据丢失问题  
+Redux持久化插件-解决刷新页面数据丢失问题        redux-persist持久化插件
 https://juejin.cn/post/6885907913265971208
 
 React全家桶之整合redux-persist
@@ -180,4 +180,4 @@ export default connect(mapStateToProps, mapDispatchToProps)(Counter);
 
 
 面试官：熟悉 redux 是吧？要不手写一个？
-https://juejin.cn/post/7241487780464001061?utm_source=gold_browser_extension 
+https://juejin.cn/post/7241487780464001061?utm_source=gold_browser_extension  

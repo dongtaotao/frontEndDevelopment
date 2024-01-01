@@ -3,7 +3,7 @@ https://mp.weixin.qq.com/s/XsIdNmEkbHEUucEKiO5Ieg
 https://www.npmjs.com/package/autofit.js
 https://juejin.cn/post/7224015103481118757
 
-autofit.js 问答和食用指南
+autofit.js 问答和食用指南=======================================================
 https://juejin.cn/post/7231089453694009404
 
 
@@ -18,10 +18,10 @@ https://juejin.cn/post/7165480221930422303
 
 
 一次搞懂数据大屏适配方案 (vw vh、rem、scale)
-https://juejin.cn/post/7163932925955112996
+https://juejin.cn/post/7163932925955112996 
 
 可视化大屏适配方案
-https://juejin.cn/post/7226257236187971643
+https://juejin.cn/post/7226257236187971643 
 
 VUE大屏可视化适配方案
 https://juejin.cn/post/6940790455701356552
@@ -31,7 +31,6 @@ https://juejin.cn/post/7090726996136853540
 
 vue大屏可视化适配方案
 https://juejin.cn/post/7085183478517465118
-
 
 
 
@@ -46,7 +45,7 @@ https://juejin.cn/post/6959834710788800542
 https://juejin.cn/post/7248242431659966522?utm_source=gold_browser_extension
 
 
-数据大屏最简单适配方案    很不错
+数据大屏最简单适配方案    很不错 
 https://juejin.cn/post/7202598910337138748?
 
 大屏适配
@@ -55,4 +54,5 @@ npm install v-scale-screen
 # or
 yarn add v-scale-screennpm install v-scale-screen
 # or
-yarn add v-scale-screen 
+yarn add v-scale-screen
+ 

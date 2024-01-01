@@ -342,10 +342,10 @@ Vue中的背景图片可以使用懒加载技术来实现。常见的背景图�
 在Intersection Observer实例中，对于每个被观察的元素，定义一个回调函数。当元素进入视口时，就将元素的data-bg-src属性的值赋给元素的background-image属性，从而实现背景图片的懒加载。
 
 示例代码如下：
-&lt;div class="lazy-bg" data-bg-src="path/to/image.png"&gt;&lt;/div&gt;
+<div class="lazy-bg" data-bg-src="path/to/image.png"></div>
 
 // 创建Intersection Observer实例
-const observer = new IntersectionObserver(entries =&gt; {
+const observer = new IntersectionObserver(entries => {
   for (let entry of entries) {
     const el = entry.target
     if (entry.isIntersecting) {
@@ -359,7 +359,7 @@ const observer = new IntersectionObserver(entries =&gt; {
 
 // 对需要懒加载的元素进行观察
 const lazyBgElements = document.querySelectorAll('.lazy-bg')
-lazyBgElements.forEach(el =&gt; observer.observe(el))
+lazyBgElements.forEach(el => observer.observe(el))
 
 使用Vue插件懒加载背景图片的流程：
 
@@ -372,7 +372,7 @@ const LazyBgPlugin = {
   install(Vue) {
     Vue.directive('lazy-bg', {
       inserted(el, binding) {
-        const observer = new IntersectionObserver(entries =&gt; {
+        const observer = new IntersectionObserver(entries => {
           for (let entry of entries) {
             if (entry.isIntersecting) {
               el.style.backgroundImage = `url(${binding.value})`
@@ -388,9 +388,9 @@ const LazyBgPlugin = {
 Vue.use(LazyBgPlugin) // 使用Vue插件
 
 // 在组件中使用v-lazy-bg指令
-&lt;template&gt;
-  &lt;div class="lazy-bg" v-lazy-bg="path/to/image.png"&gt;&lt;/div&gt;
-&lt;/template&gt;
+<template>
+  <div class="lazy-bg" v-lazy-bg="path/to/image.png"></div>
+</template>
 
 以上两种方式都可以懒加载Vue中的背景图片，具体采用哪种方式取决于个人喜好和项目要求。
 
@@ -407,13 +407,13 @@ Vue项目使用图片懒加载可以提高页面加载速度和性能，减少�
 
 在需要使用图片懒加载的地方，将 src 属性替换为 v-lazy，例如：
 
-   &lt;img v-lazy="imgUrl"&gt;
+   <img v-lazy="imgUrl">
 
 其中 imgUrl 为需要懒加载的图片的URL地址。
 
 可以使用 loading 和 error 属性来设置在图片加载完成之前和加载失败时显示的占位符图片和错误提示图片，例如：
 
-   &lt;img v-lazy="imgUrl" :loading="loadingImg" :error="errorImg"&gt;
+   <img v-lazy="imgUrl" :loading="loadingImg" :error="errorImg">
 
 
 通过设置 lazy 属性，可以配置何时加载图片。例如，可以设置只有在用户滚动到图片底部时才加载图片：
@@ -436,7 +436,7 @@ Vue项目里面添加koa2项目操作文件 ====================================
 Vue全局注册的组件可以懒加载吗============================================
 是的，Vue全局注册的组件也可以使用懒加载，以提高应用程序的性能，特别是当应用程序包含大量组件，或者某些组件的代码较为庞大时。
 懒加载是一种将组件延迟加载到组件实际使用时才进行加载的技术。在Vue中，可以使用Vue异步组件实现懒加载。使用异步组件时，可以在全局注册组件时，将组件包装在一个函数中，并通过函数返回一个import()方法，以实现延迟加载。例如：
-Vue.component('my-component', () =&gt; import('./MyComponent.vue'))
+Vue.component('my-component', () => import('./MyComponent.vue'))
 上述代码中，MyComponent.vue将会在组件实际使用时，才会被加载。
 需要注意的是，懒加载的组件不能是动态组件，因为动态组件本身就是延迟加载的方式实现的。另外，如果使用Webpack作为打包工具，并且在Webpack配置中启用了代码分离（code splitting），则懒加载的组件会自动进行代码分离，以使得每个懒加载的组件都是单独的打包文件，减少了首屏加载时间。
 总之，Vue全局注册的组件也可以懒加载，以提高应用程序性能。
@@ -450,10 +450,10 @@ Vue中的背景图片可以使用懒加载技术来实现。常见的背景图�
 在Intersection Observer实例中，对于每个被观察的元素，定义一个回调函数。当元素进入视口时，就将元素的data-bg-src属性的值赋给元素的background-image属性，从而实现背景图片的懒加载。
 
 示例代码如下：
-&lt;div class="lazy-bg" data-bg-src="path/to/image.png"&gt;&lt;/div&gt;
+<div class="lazy-bg" data-bg-src="path/to/image.png"></div>
 
 // 创建Intersection Observer实例
-const observer = new IntersectionObserver(entries =&gt; {
+const observer = new IntersectionObserver(entries => {
   for (let entry of entries) {
     const el = entry.target
 
@@ -469,7 +469,7 @@ const observer = new IntersectionObserver(entries =&gt; {
 
 // 对需要懒加载的元素进行观察
 const lazyBgElements = document.querySelectorAll('.lazy-bg')
-lazyBgElements.forEach(el =&gt; observer.observe(el))
+lazyBgElements.forEach(el => observer.observe(el))
 
 使用Vue插件懒加载背景图片的流程：
 
@@ -482,7 +482,7 @@ const LazyBgPlugin = {
   install(Vue) {
     Vue.directive('lazy-bg', {
       inserted(el, binding) {
-        const observer = new IntersectionObserver(entries =&gt; {
+        const observer = new IntersectionObserver(entries => {
           for (let entry of entries) {
             if (entry.isIntersecting) {
               el.style.backgroundImage = `url(${binding.value})`
@@ -498,12 +498,17 @@ const LazyBgPlugin = {
 Vue.use(LazyBgPlugin) // 使用Vue插件
 
 // 在组件中使用v-lazy-bg指令
-&lt;template&gt;
-  &lt;div class="lazy-bg" v-lazy-bg="path/to/image.png"&gt;&lt;/div&gt;
-&lt;/template&gt;
+<template>
+  <div class="lazy-bg" v-lazy-bg="path/to/image.png"></div>
+</template>
 
 以上两种方式都可以懒加载Vue中的背景图片，具体采用哪种方式取决于个人喜好和项目要求。
 
 
 面试官：vue要做权限管理该怎么做？如果控制到按钮级别的权限怎么做？ 
-https://vue3js.cn/interview/vue/permission.html#%E4%B8%80%E3%80%81%E6%98%AF%E4%BB%80%E4%B9%88  
+https://vue3js.cn/interview/vue/permission.html#%E4%B8%80%E3%80%81%E6%98%AF%E4%BB%80%E4%B9%88   
+
+
+
+vue中前进刷新、后退缓存用户浏览数据和浏览位置的实践
+https://juejin.cn/post/6844903624099758094

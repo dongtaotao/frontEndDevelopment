@@ -61,7 +61,7 @@ axios.post('http://localhost:3000/api/save-json', { json: JSON.stringify(jsonDat
 【千锋教育】前端实战项目_Koa+MongoDB打造简书后台管理系统
 https://www.bilibili.com/video/BV1v5411T7Ez?p=39&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 
-
-Vue2.x+Koa2实战移动电商(共61集)
+ 
+Vue2.x+Koa2实战移动电商(共61集)  
 https://jspang.com/article/61#top
 https://www.bilibili.com/video/BV1JE411q7qr?p=2&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a 

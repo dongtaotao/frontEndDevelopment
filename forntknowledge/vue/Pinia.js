@@ -1,4 +1,5 @@
-Pinia.js 是新一代的状态管理器，由 Vue.js团队中成员所开发的，因此也被认为是下一代的 Vuex，即 Vuex5.x，在 Vue3.0 的项目中使用也是备受推崇。
+Pinia.js 是新一代的状态管理器，由 Vue.js团队中成员所开发的，因此也被认为是下一代的 Vuex，即 Vuex5.x，
+在 Vue3.0 的项目中使用也是备受推崇。
 Pinia.js 有如下特点：
 
 完整的 typescript 的支持；
@@ -24,4 +25,4 @@ yarn add pinia-plugin-persistedstate
 
 
 pinia-plugin-persistedstate 中文翻译来了~
-https://juejin.cn/post/7193150492338290744  
+https://juejin.cn/post/7193150492338290744    

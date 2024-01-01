@@ -83,7 +83,6 @@ HTTP升级HTTPS全过程，Nginx配置平滑升级
 https://juejin.cn/post/6898997803872174087
 
 
-
 线上紧急Bug：80%前端会遇到的数据精度问题     🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯解决精度丢失
 https://juejin.cn/post/7280436213902901289?searchId=20231023141534C9326A30265B92410052
 
@@ -128,13 +127,13 @@ https://juejin.cn/post/7194784363177836600?searchId=20231026094254636A51CFE17E9D
 前端重新部署如何通知用户刷新网页 ，发微信、飞书通知？推荐使用 version-rocket
 
 
-解决前端部署之后，通知用户系统有新版本【version-polling】
+解决前端部署之后，通知用户系统有新版本【version-polling】  🔥🔥🔥  🔥🔥🔥  🔥🔥🔥  🔥🔥🔥  🔥🔥🔥  🔥🔥🔥  🔥🔥🔥  🔥🔥🔥  🔥🔥🔥  🔥🔥🔥
 https://juejin.cn/post/7291496777688023040?searchId=202310260947573932CBFB80F776405E5C
 
-前端页面自动检测更新解决方案 【version-polling】
+前端页面自动检测更新解决方案 【version-polling】  🔥🔥🔥
 https://juejin.cn/post/7209698674904924221?searchId=202310260947573932CBFB80F776405E5C
 
-ersion-polling 是一个轻量级的 JavaScript 库，它可以实时检测 web 应用的 index.html 文件内容是否有变化。
+version-polling 是一个轻量级的 JavaScript 库，它可以实时检测 web 应用的 index.html 文件内容是否有变化。
 当服务端发布新版本后，前端会自动弹出更新提示，让用户刷新页面，以加载最新的资源和功能。
 这样可以提高用户体验和数据准确性。
 
@@ -144,15 +143,12 @@ ersion-polling 是一个轻量级的 JavaScript 库，它可以实时检测 web 
 如果etag值不一致，说明有更新，则弹出更新提示，并引导用户手动刷新页面（例如弹窗提示），完成应用更新。
 当页面不可见时（例如切换标签页或最小化窗口），停止实时检测任务；再次可见时（例如切换回标签页或还原窗口），恢复实时检测任务。
 
-作者：Joeshu
 链接：https://juejin.cn/post/7209698674904924221
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 
 plugin-web-update-notification
 https://github.com/GreatAuk/plugin-web-update-notification/blob/master/README.zh-CN.md
 检测网页更新并通知用户刷新，支持 vite、umijs 和 webpack 插件
+
 
 前端线上部署，如何通知用户有新版本？？？ 🔥🔥🔥🔥🔥🔥🔥🔥
 https://mp.weixin.qq.com/s/hhrCgCDPmzm_CHLHEYh7bw
@@ -175,7 +171,7 @@ https://juejin.cn/post/7294425916549152783?utm_source=gold_browser_extension
 
 
 Vue3+node.js实现webScoket双向通信
-https://juejin.cn/post/7294260754915885065?utm_source=gold_browser_extension
+https://juejin.cn/post/7294260754915885065?utm_source=gold_browser_extension 
 
 实现骨架屏加载效果（含Vanilla React Vue3版本）
-https://juejin.cn/post/7293765765126733859?utm_source=gold_browser_extension
+https://juejin.cn/post/7293765765126733859?utm_source=gold_browser_extension   

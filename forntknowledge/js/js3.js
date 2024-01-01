@@ -10,7 +10,7 @@ const debounce = (fn, delay) => {
       fn.apply(this, args)
     }, delay)
   }
-}
+} 
 
 3. 统计网页中出现的标签
 new Set([...document.querySelectorAll('*')].map(ele => ele.tagName)).size 
@@ -621,6 +621,6 @@ event.off("click", handle);
 event.emit("click", 1, 2);
 event.once("dbClick", () => {
   console.log(123456);
-}); 
+});  
 event.emit("dbClick"); 
 event.emit("dbClick");          

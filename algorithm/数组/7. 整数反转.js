@@ -24,7 +24,7 @@ var reverse = function(x) {
     const result = (x > 0 ? 1 : -1) * String(x).split('').filter(x => x !== '-').reverse().join('')
     return result > max || result < min ? 0 : result 
 };
-
+ 
 var reverse = function (x) {
     let y = parseInt(x.toString().split("").reverse().join(""));
     if (x < 0)

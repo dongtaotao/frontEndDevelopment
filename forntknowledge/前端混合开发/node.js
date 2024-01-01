@@ -124,7 +124,8 @@ nest： 大型团队
 
 
 Nest.js https://blog.csdn.net/xgangzai/article/details/121600881
-Nest.js 是“Angular 的服务端实现”，基于装饰器。Nest.js 与其他前端服务框架或库的设计思路完全不同。我们通过查看请求生命周期中的几个节点的用法来体验下 Nest.js 的设计方式。
+Nest.js 是“Angular 的服务端实现”，基于装饰器。
+Nest.js 与其他前端服务框架或库的设计思路完全不同。我们通过查看请求生命周期中的几个节点的用法来体验下 Nest.js 的设计方式。
 先来看下 Nest.js 完整的的生命周期：
 收到请求
 中间件
@@ -177,5 +178,62 @@ Apifox 是 API 文档、API 调试、API Mock、API 自动化测试一体化协�
 使用进程间的 TCP 通信：可以使用 Node.js 的 net 模块建立 TCP 服务器和客户端，从而在不同的进程之间进行通信。
 
 需要注意的是，不同的进程之间通信可能会导致一些并发问题，例如竞态条件和死锁。因此，在设计进程间通信方案时，需要仔细考虑并发问题，并采取相应的措施来保证并发安全。
-链接：https://juejin.cn/post/7214532871658340407 
- 
+链接：https://juejin.cn/post/7214532871658340407  
+
+
+比 nvm 更好用的 node 版本管理工具
+https://juejin.cn/post/7275608678828916755?utm_source=gold_browser_extension
+Volta
+
+
+//P111
+111_express框架_防盗链介绍
+https://www.bilibili.com/video/BV1gM411W7ex?p=112&spm_id_from=pageDriver&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+请求头  referer
+
+
+尚硅谷2023版Node.js零基础视频教程，nodejs新手到高手
+https://www.bilibili.com/video/BV1gM411W7ex?p=112&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+
+
+简单快速撸懂MySQL+Koa2
+https://www.bilibili.com/video/BV1gV411B7AU/?p=2&spm_id_from=pageDriver&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+01-项目创建
+02-入口文件编写
+03-洋葱模型
+04-路由中间件
+05-前端接口请求
+06-router迁移
+07-router拆分
+08-路由重定向
+09-连接mysql
+10-数据库创建查询与删除
+11-创建、查询表格
+12-插入数据
+13-node插入多条数据
+14-更新数据
+15-subject表格数据录入
+16-node读取文件
+17-readFile封装
+18-article数据封装
+19-zixun与article两张表录入
+20-后端允许跨域
+21-读取静态资源文件
+22-编写banner接口
+23-图片地址改造
+24-登录页
+25-bodyParser
+26-数据库查询前端传值账号
+27-无账号直接注册
+28-返回数据给前端
+29-登录注册完成
+
+
+
+node服务开发和服务器部署（node.js+koa2+pm2+nginx）教程（带视频） 
+node开发和部署，从零到用域名访问系列教程（node+koa2+pm2+nginx+Linux） 
+https://juejin.cn/post/6844904080414867469
+https://www.bilibili.com/video/BV1TE411E7uD?p=2&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+

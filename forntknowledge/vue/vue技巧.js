@@ -137,45 +137,39 @@ function initMixin (Vue) {
       vm.$mount(vm.$options.el); //这里也是重点，下面需要用到
    }
  }
-​
+
 总结
-​
+
 所以，从上面的函数看来，new vue所做的事情，就像一个流程图一样展开了，分别是
-​
--   合并配置
--   初始化生命周期
--   初始化事件
--   初始化渲染
--   调用 `beforeCreate` 钩子函数
--   init injections and reactivity（这个阶段属性都已注入绑定，而且被 `$watch` 变成reactivity，但是 `$el` 还是没有生成，也就是DOM没有生成）
--   初始化state状态（初始化了data、props、computed、watcher）
--   调用created钩子函数。
-​
+
+-  合并配置
+-  初始化生命周期
+-  初始化事件
+-  初始化渲染
+-  调用 `beforeCreate` 钩子函数
+-  init injections and reactivity（这个阶段属性都已注入绑定，而且被 `$watch` 变成reactivity，但是 `$el` 还是没有生成，也就是DOM没有生成）
+-  初始化state状态（初始化了data、props、computed、watcher）
+-  调用created钩子函数。
+
 在初始化的最后，检测到如果有 el 属性，则调用 vm.$mount 方法挂载 vm，挂载的目标就是把模板渲染成最终的 DOM。
 
 
 18.Vue3初始化的一个大概流程
 - 初始化的一个大概流程
-​
+
 createApp() => mount() => render() => patch() => processComponent() => mountComponent()
-​
+
 - 简易版流程编写
-​
+
 1.Vue.createApp() 实际执行的是renderer的createApp()
-​
 2.renderer是createRenderer这个方法创建
-​
 3.renderer的createApp()是createAppAPI()返回的
-​
 4.createAppApi接受到render之后，创建一个app实例，定义mount方法
-​
 5.mount会调用render函数。将vnode转换为真实dom
-​
 createRenderer() => renderer => renderer.createApp() <= createAppApi()
-​
-​
+
 <div id="app"></div>
-​
+
 <script>
     // 3.createAppAPI
     const createAppAPI = render => {
@@ -369,7 +363,6 @@ https://www.bilibili.com/video/BV1o14y1x7zL/?spm_id_from=333.788&vd_source=0c743
 有关于前端框架原理的面试问题汇总 很不错
 https://juejin.cn/post/7207637337572196407
 
-
 Vue中$attrs、$listeners的使用
 https://juejin.cn/post/7155013276890300430
 
@@ -427,5 +420,7 @@ https://juejin.cn/post/6860882844533653517
 https://juejin.cn/post/7209648356530896953   
 
 
-【vue】项目环境变量配置及其思考
+【vue】项目环境变量配置及其思考 
 https://juejin.cn/post/7292958028307251215?utm_source=gold_browser_extension
+
+

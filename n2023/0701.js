@@ -2,7 +2,7 @@
 https://juejin.cn/post/7175719428774969400
 
 h5页面如何与原生交互 
-https://juejin.cn/post/7253664416788594743?utm_source=gold_browser_extension
+https://juejin.cn/post/7253664416788594743?utm_source=gold_browser_extension 
 
 
 前端文件流、切片下载和上传：优化文件传输效率与用户体验
@@ -109,14 +109,14 @@ Vue 加载远程组件的解决方案
 https://juejin.cn/post/7258850748149219384?utm_source=gold_browser_extension
 
 
-
 URL长链接转短链接：为什么成为现代社会中必不可少的技术？
 https://juejin.cn/post/7241510305368391717?searchId=20230725104609B2A3554DE75EEC40A44D
 
 如何生成从长链接生成短链接？
 https://juejin.cn/post/7258810540939247674?searchId=20230726143744A52FF57C079131170E95
 
-在前端中，可以使用一些算法和服务来生成从长链接到短链接的转换。以下是一种常见的方法，使用基于哈希的算法和一个短链接生成服务（如短链接服务 Bit.ly、TinyURL 等）：
+在前端中，可以使用一些算法和服务来生成从长链接到短链接的转换。以下是一种常见的方法，使用基于哈希的算法和一个短链接生成服务
+（如短链接服务 Bit.ly、TinyURL 等）：
 1.安装请求库（比如 axios）：首先在项目中安装适用的请求库，例如 axios。
 2.请求短链接服务：通过发送 HTTP 请求到短链接服务的 API，将长链接发送给服务进行转换。API 可能会要求你创建帐号并获取 API 密钥。
 3.解析 API 响应：从短链接服务的 API 响应中提取生成的短链接。
@@ -165,4 +165,4 @@ getShortLink(longURL)
 
 
 浏览器渲染15M文本导致崩溃怎么办
-https://juejin.cn/post/7261231729523965989?utm_source=gold_browser_extension 
+https://juejin.cn/post/7261231729523965989?utm_source=gold_browser_extension   

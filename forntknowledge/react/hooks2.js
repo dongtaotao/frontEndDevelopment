@@ -295,7 +295,7 @@ function Example() {
 Q: useMemo，useCallback 的区别，你是如何看待这两个 api 的意义，在什么场景下会使用它
 A: useMemo 缓存值，useCallback 缓存函数。两个函数的用法很像
 
-Q: 为什么 useState 不能在判断语句中声明？
+Q: 为什么 useState 不能在判断语句中声明？ 
 A：官网里写了只在最顶层使用 Hooks。不要在循环，条件或嵌套函数中调用 Hook，确保总是在你的 React 函数的最顶层以及任何 return 之前调用他们。
 state 是以链表的数据结构存在，多个 state 之间同构 next 进行关联。假设有 3 个 state，A、B、C。如果 B 在判断语句中，那么就会出现 A，B
 的状态能够及时更新，但是 C 不会更新。因为调用 2 次 useState，只会更新两次 state，在 state 的链表中，A.next ->B，B.next -> C

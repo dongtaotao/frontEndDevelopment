@@ -32,7 +32,8 @@ requestAnimationFrame：告诉浏览器在下一次绘制之前执行
 requestIdleCallback：在浏览器空闲的事件执行
 
 CSRF
-csrf：跨站请求伪造(Cross—Site Request Forgery) 攻击者利用 HTTP 请求会自动携带 cookie 的特定，利用用户的登陆状态发送恶意请求。 方法：自动发起 get/post 请求；诱导点击
+csrf：跨站请求伪造(Cross—Site Request Forgery) 攻击者利用 HTTP 请求会自动携带 cookie 的特定，利用用户的登陆状态发送恶意请求
+。 方法：自动发起 get/post 请求；诱导点击
 
 CSRF 的过程：
 
@@ -417,4 +418,5 @@ Loader：Webpack 的 Loader 用于处理各种文件类型，例如 JavaScript�
 https://juejin.cn/post/7217704608034406460
 
 前端业务开发如何使用好统计监控
-https://juejin.cn/post/7220762847553568824? 
+https://juejin.cn/post/7220762847553568824?  
+ 

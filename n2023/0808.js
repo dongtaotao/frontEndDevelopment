@@ -3,10 +3,10 @@
 我会前端文件下载呢，你不知道吗？
 https://juejin.cn/post/7263341982407737400?utm_source=gold_browser_extension
 
-关闭/刷新浏览器时继续发送请求的方法
+关闭/刷新浏览器时继续发送请求的方法 
 https://juejin.cn/post/7264213254049857573?utm_source=gold_browser_extension
 
-手把手教你实现一个图片压缩工具（Vue与Node的完美配合）
+手把手教你实现一个图片压缩工具（Vue与Node的完美配合） 
 https://cloud.tencent.com/developer/article/1908353?areaSource=102001.18&traceId=1YGUDDxCRkoSn_EnBve_E
 
 
@@ -41,11 +41,7 @@ defer：立即下载（异步，不会阻碍文档解析），延迟执行，在
 preload：提前下载，需要的时候立即执行，无需再下载
 prefetch：提前下载，在未来的某个页面可能会执行，节省下载时间
 
-作者：不浪brown
 链接：https://juejin.cn/post/7117142442926686215
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 
 
 低代码的前端性能优化
@@ -82,5 +78,5 @@ https://juejin.cn/post/7268530145208451124?utm_source=gold_browser_extension
 简单实现React KeepAlive不依赖第三方库(附源码)
 https://juejin.cn/post/7273434821807636515?utm_source=gold_browser_extension
 
-Vue2项目使用高德地图
-https://juejin.cn/post/7231070518224912444?searchId=20230901144720D2B67310B64CE2B04970
+Vue2项目使用高德地图 
+https://juejin.cn/post/7231070518224912444?searchId=20230901144720D2B67310B64CE2B04970 

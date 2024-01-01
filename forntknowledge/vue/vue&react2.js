@@ -62,14 +62,14 @@ class MyComponent extends React.Component {
 
   render() {
     return (
-      &lt;div ref={this.myRef}&gt;
+      <div ref={this.myRef}></div>
         This is a div element.
-      &lt;/div&gt;
+      </div>
     );
   }
 }
 
-ReactDOM.render(&lt;MyComponent /&gt;, document.getElementById("root"));
+ReactDOM.render(<MyComponent />, document.getElementById("root"));
 
 在这里我们利用 React.createRef() 方法来创建一个 ref 引用，并将其赋值给组件实例的内部变量 myRef 中。在组件 render 方法中，
 我们将这个 ref 引用作为 div 元素的 ref 属性传入。

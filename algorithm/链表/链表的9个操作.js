@@ -580,7 +580,7 @@ function FindFirstCommonNode(pHead1, pHead2)
             return pHead2
         }
         pHead2=pHead2.next
-    }
+    } 
 }
 ————————————————
 版权声明：本文为CSDN博主「violet_seven」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。

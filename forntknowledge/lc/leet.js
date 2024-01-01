@@ -11,7 +11,6 @@ https://blog.csdn.net/weixin_34803977/article/details/114524607?utm_medium=distr
 https://blog.csdn.net/qq_25481047/article/details/104543214?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
 
 牛客网华为机试在线训练JavaScript版解答
-
 https://www.daimajiaoliu.com/daima/47970fc3d9003f8
 
 【算法面试】leetcode最常见的150道前端面试题 --- 简单题上（44题）
@@ -908,4 +907,4 @@ var removeDuplicates = function (nums) {
   let max = Math.max(...candies);
   return candies.map(item => item + extraCandies >= max);
 };
-链接：https://leetcode-cn.com/problems/kids-with-the-greatest-number-of-candies      
+链接：https://leetcode-cn.com/problems/kids-with-the-greatest-number-of-candies       

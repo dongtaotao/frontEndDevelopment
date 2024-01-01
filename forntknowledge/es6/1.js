@@ -259,5 +259,5 @@ Promise.allSettled = function(promises) {
             })
         }) 
     }) 
-}  
+}   
    

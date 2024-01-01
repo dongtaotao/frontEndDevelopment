@@ -16,7 +16,7 @@ const twoSum = function (nums, target) {
           // 如果没有，则存入键名为差值，键值为下标
           hash[target - num] = i
       }
-  }
+  } 
 }
 //================================================================
 No.2 从尾到头打印链表
@@ -446,4 +446,4 @@ var oddEvenList = function (head) {
 
   odd.next = evenHead;
   return head;
-};  
+};   

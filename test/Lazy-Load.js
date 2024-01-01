@@ -76,7 +76,7 @@
         }
     }
     // 监听Scroll事件
-    window.addEventListener('scroll', lazyload, false);
+    window.addEventListener('scroll', lazyload, false); 
 </script>
 
 https://juejin.cn/book/6844733750048210957/section/6844733750119514126  图片懒加载

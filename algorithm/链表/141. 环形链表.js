@@ -17,7 +17,7 @@ var hasCycle = function(list) {
     if(p.flag) return true;
     p.flag = true;
     p = p.next;
-  }
+  } 
   return false 
 }
 // 判断链表中是否有环，其实有点像四处游玩，怎么知道你走过一个圈，其实只要你第二次走到走过的地方，就说明走过一个圈了。

@@ -291,9 +291,6 @@ location.href
 UIWebView使用shouldStartLoadWithRequest, WKWebView则使用decidePolicyForNavigationAction
 这种方法从早期就存在了, 兼容性好. 缺点是基于URL, 长度受限, 并且不太直观.
 
-#移动端前端技巧指南
-http://know.shuerbuzuo.cn/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%89%8D%E7%AB%AF%E6%8A%80%E5%B7%A7%E6%8C%87%E5%8D%97.html#html
-
 Mutation Observer API 用来监听DOM的变动事件
 http://know.shuerbuzuo.cn/%E6%B5%8F%E8%A7%88%E5%99%A8&HTML/%5BAPI%5DMutationObserver.html#%E5%8F%96%E4%BB%A3domcontentloaded%E4%BA%8B%E4%BB%B6
 IntersectionObserver API
@@ -414,4 +411,4 @@ Video.js 使用教程 - 手把手教你基于 Vue 搭建 HTML 5 视频播放器
 https://juejin.cn/post/7080220673812987940
 
 实现一个大文件切片上传+断点续传 
-https://www.tuicool.com/articles/aY7Vn2U     
+https://www.tuicool.com/articles/aY7Vn2U      

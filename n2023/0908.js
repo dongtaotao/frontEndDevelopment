@@ -2,7 +2,6 @@
 https://juejin.cn/post/7274883755478564922?utm_source=gold_browser_extension#heading-119
 
 
-
 成为Vue高手，必须掌握的37个知识点 🔥
 https://juejin.cn/post/7124835773873913893 
 
@@ -28,7 +27,7 @@ https://www.bilibili.com/video/BV1nb4y1i7bR/?spm_id_from=333.337.search-card.all
 Vue实现大文件分片上传，包括断点续传以及上传进度条
 https://juejin.cn/post/7282758586107166720?utm_source=gold_browser_extension
 
-前端文件上传的多种方案详解
+前端文件上传的多种方案详解 
 https://juejin.cn/post/7282698569849405440?utm_source=gold_browser_extension#heading-3
 1. 传统表单上传
 2. XMLHttpRequest
@@ -40,4 +39,4 @@ https://juejin.cn/post/7282698569849405440?utm_source=gold_browser_extension#hea
 
 
 Vue项目处理错误上报原来如此简单      分装成插件了
-https://juejin.cn/post/7143144999515865118  
+https://juejin.cn/post/7143144999515865118   

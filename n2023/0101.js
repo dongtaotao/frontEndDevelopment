@@ -98,6 +98,22 @@ var summaryRanges = function(nums) {
 
 前端白屏的检测方案，让你知道自己的页面白了 https://juejin.cn/post/7176206226903007292
 
+import webSee from 'web-see';
+
+Vue.use(webSee, {
+  dsn: 'http://localhost:8083/reportData', // 上报的地址
+  apikey: 'project1', // 项目唯一的id
+  userId: '89757', // 用户id
+  silentWhiteScreen: true, // 开启白屏检测
+  skeletonProject: true, // 项目是否有骨架屏
+  whiteBoxElements: ['html', 'body', '#app', '#root'] // 白屏检测的容器列表
+});
+
+作者：海阔_天空
+链接：https://juejin.cn/post/7176206226903007292
+来源：稀土掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
 大文件分片上传 https://juejin.cn/post/7185015074024030245
 
 前端重新部署如何通知用户刷新网页？https://juejin.cn/post/7185451392994115645  🔥
@@ -249,7 +265,7 @@ setTimeout(() => {
 }, 0)
 
 
-热点面试题：什么是粘包/半包问题，该如何解决？
+热点面试题：什么是粘包/半包问题，该如何解决？ 
 https://mp.weixin.qq.com/s/SORAN1c0_Pntajvjl-jK4g
-热点面试题：常见的http code 及含义？ 
+热点面试题：常见的http code 及含义？  
 https://juejin.cn/post/7196131493448630329   

@@ -193,7 +193,6 @@ getSnapshotBeforeUpdate这个周期在Fiber架构中，只会调用一次。
 // }}
 
 
-
 react 中 定一个一个state，这时候我点击按钮setState 同一个值，意思是值不变，页面会重新render吗？
 当调用setState时，React会比较新旧state值是否相同，如果不同，才会重新渲染页面。如果新旧state值相同，页面不会重新render。这是因为，在React的状态更新机制中，组件的props和state的变化是驱动重新渲染的必要条件之一。
 例如，如果在组件生命周期方法中或事件处理程序中调用setState来设置状态，可以看到在新状态与旧状态不同时渲染了组件：
@@ -202,7 +201,7 @@ class Example extends React.Component {
     count: 0
   };
 
-  handleClick = () =&gt; {
+  handleClick = () => {
     const { count } = this.state;
     this.setState({ count }); // 尝试更新相同的值
   };
@@ -210,16 +209,15 @@ class Example extends React.Component {
   render() {
     const { count } = this.state;
     return (
-      &lt;div&gt;
-        &lt;p&gt;Count: {count}&lt;/p&gt;
-        &lt;button onClick={this.handleClick}&gt;Increment&lt;/button&gt;
-      &lt;/div&gt;
+      <div>
+        <p>Count: {count}</p>
+        <button onClick={this.handleClick}>Increment</button>
+      </div>
     );
   }
 }
 
 在上面的代码中，当按钮被点击时，我们调用setState并尝试将count的值与旧值相同。由于这个值没有改变，因此组件不会重新渲染，仍然显示上一次渲染的结果。
-
 
 
 getDerivedStateFromProps
@@ -407,5 +405,5 @@ resolve的模块的default属性就是组件MyComponent本身。
 Link 的本质也是a 标签。只不过在Link 中禁用了 a 标签的默认事件，改用了history对象提供的方法进行跳转。
 https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/135     
 
-移动端小案例,最好有react基础 
+移动端小案例,最好有react基础  
 https://www.bilibili.com/video/BV1uL4y1N7qn?p=7&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a   

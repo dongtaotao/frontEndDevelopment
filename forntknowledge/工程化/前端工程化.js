@@ -72,8 +72,6 @@ https://juejin.cn/post/7222460499493584955?
 链接：https://juejin.cn/post/7038967786051207175
 
 
-
-
 2023 最新最细 vite+vue3+ts 多页面项目架构，建议收藏备用！
 https://juejin.cn/post/7223286759630127159?
 vite + vue3 + ts + esint + prettier + stylelint + husky + lint-stage + commitlint 搭建一套多页面项目。
@@ -169,7 +167,6 @@ https://juejin.cn/post/6901466994478940168
 https://juejin.cn/post/7101657948744581151
 
 
-
 我是如何带领团队从零到一建立前端规范的？🎉🎉🎉
 https://juejin.cn/post/7085257325165936648
 开发者需要建立和遵守的规范
@@ -241,7 +238,15 @@ https://juejin.cn/post/7257922419329957948?utm_source=gold_browser_extension
 
 从0到1实践ESLint+Prettier+Stylelint+Commitlint+husky提交拦截、保存后自动fix
 https://juejin.cn/post/7249297734866812983
-
+ 
 
 前端之道：规范指南与工具推荐
 https://juejin.cn/post/7261626714287095864?utm_source=gold_browser_extension#heading-56
+
+
+前端工程化三十八讲
+https://www.bilibili.com/video/BV18T4y1R72R/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+山月行
+https://shanyue.tech/op/
+https://q.shanyue.tech/engineering
+ 
