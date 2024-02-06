@@ -416,7 +416,7 @@ log-symbols: 显示出 √ 或 × 等的图标
 手写Vue脚手架
 https://www.bilibili.com/video/BV1w54y1B7Tb/?spm_id_from=333.788.recommend_more_video.0
 
-前端请求后端数据，vue-cli用graphql的方法去请求    
+前端请求后端数据，vue-cli用graphql的方法去请求     
 https://segmentfault.com/a/1190000019586579
 
 ES数据库Elasticsearch和MongoDB/Redis/Memcache一样，是非关系型数据库。

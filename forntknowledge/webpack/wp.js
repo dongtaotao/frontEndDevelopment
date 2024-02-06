@@ -31,6 +31,6 @@ class MyPlugin {
         console.log(compilation);
         
         // do something...
-    })
+    }) 
   }
 }     

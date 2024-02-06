@@ -29,7 +29,7 @@ var reverse = function (x) {
     let y = parseInt(x.toString().split("").reverse().join(""));
     if (x < 0)
         y = - y;
-    return y > 2147483647 || y < -2147483648 ? 0 : y;
+    return y > 2147483647 || y < -2147483648 ? 0 : y; 
 };
 链接：https://leetcode-cn.com/problems/reverse-integer/solution/javascript-shu-zu-fan-zhuan-by-zowiegong/
 

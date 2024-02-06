@@ -489,9 +489,11 @@ Vite和Webpack的优缺点
 https://juejin.cn/post/7254199067185823801
 1. 原理对比
 Vite
-Vite是一种基于ES模块的构建工具，它利用浏览器原生的ES模块加载能力来实现快速的开发环境。Vite在开发过程中使用原生ES模块的方式加载模块，而不需要将所有代码打包成一个或多个bundle。这种方式使得在开发环境下，只需要按需加载所需的模块，从而提供了更快的冷启动和热更新速度。
+Vite是一种基于ES模块的构建工具，它利用浏览器原生的ES模块加载能力来实现快速的开发环境。Vite在开发过程中使用原生ES模块的方式加载模块，
+而不需要将所有代码打包成一个或多个bundle。这种方式使得在开发环境下，只需要按需加载所需的模块，从而提供了更快的冷启动和热更新速度。
 Webpack
-Webpack是一种静态模块打包工具，它通过分析模块之间的依赖关系，将多个模块打包成一个或多个bundle。Webpack在打包过程中会将所有的模块转换成静态资源，例如JavaScript、CSS、图片等，以便在浏览器中加载和执行。
+Webpack是一种静态模块打包工具，它通过分析模块之间的依赖关系，将多个模块打包成一个或多个bundle。Webpack在打包过程中会将所有的模块转换成静态资源，
+例如JavaScript、CSS、图片等，以便在浏览器中加载和执行。
 2. 优缺点对比
 3. 打包流程对比
 链接：https://juejin.cn/post/7254199067185823801
@@ -549,10 +551,6 @@ npm install xlsx@0.17.1-alpha.3 react@18 react-dom@18 --save
 
 
 
-
-
-
-
 变换风格：前端换肤的完整指南
 https://juejin.cn/post/7315246744158355506?utm_source=gold_browser_extension
 引言
@@ -596,19 +594,7 @@ https://juejin.cn/post/7304946949941608475?utm_source=gold_browser_extension
 因此 Vue 的转发机制 proxyTable 实际上是将请求发给自己的服务器，再由服务器转发给后台服务器，
 做了一层代理。Vue的proxyTable 用的是 http-proxy-middleware 中间件, 因此不会出现跨域问题。
 
-作者：前端掘金者H
 链接：https://juejin.cn/post/7208466455879221285
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
-
-
-
-
-
-
-
-
 
 
 1213
@@ -716,5 +702,5 @@ https://cloud.tencent.com/developer/article/1983792
 前端面试汇总🐯
 算法🐯
 flutter🐯
-android🐯
+android🐯 
 鸿蒙🐯

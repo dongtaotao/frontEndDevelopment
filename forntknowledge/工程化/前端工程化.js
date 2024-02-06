@@ -178,9 +178,6 @@ git commit规范
 项目文件结构规范
 UI设计规范
 
-非大厂的我们，如何去卷一套标准的前端团队规范？
-https://juejin.cn/post/7151983972828839943
-
 
 非大厂的我们，如何去卷一套标准的前端团队规范？https://juejin.cn/post/7151983972828839943  🔥🔥
 非大厂的我们，要如何去搞前端基建？ https://juejin.cn/post/7144881028661723167
@@ -202,7 +199,6 @@ https://juejin.cn/post/7101596844181962788
 
 【前端工程化】使用dumi2搭建React组件库和函数库详细教程和最佳实践
 https://juejin.cn/post/7222804347830206525 
-
 
 
 前端工程化之脚本世界
@@ -228,7 +224,6 @@ stylelint规范样式和保存自动修复
 前端react基建
 https://juejin.cn/post/7256393626682163237?utm_source=gold_browser_extension
 
-
 【前端规范全攻略】开启高效开发之旅！ESLint + Prettier + husky + lint-staged+Commitizen
 https://juejin.cn/post/7257441221761040444?utm_source=gold_browser_extension
 
@@ -248,5 +243,5 @@ https://juejin.cn/post/7261626714287095864?utm_source=gold_browser_extension#hea
 https://www.bilibili.com/video/BV18T4y1R72R/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 山月行
 https://shanyue.tech/op/
-https://q.shanyue.tech/engineering
+https://q.shanyue.tech/engineering 
  

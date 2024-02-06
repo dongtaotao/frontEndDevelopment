@@ -3,7 +3,7 @@
 剑指offer--JavaScript版 https://www.cnblogs.com/chuncode/p/13772632.html 
 
 字节跳动
-https://leetcode-cn.com/explore/interview/card/bytedance/242/string/
+https://leetcode-cn.com/explore/interview/card/bytedance/242/string/ 
 
 字节跳动 牛客网
 https://www.nowcoder.com/company/home/code/665?codeType=1
@@ -872,4 +872,4 @@ ES5的继承，实质是先创建了子类的实例对象 this, 然后再将 父
 ES6的继承是先将父类实例对象的属性和方法，加到 this 上面（所以必须先调用 super 方法），然后再用子类的构造函数修改 this。
 super
 作为函数调用，代表父类的构造函数
-作为对象调用，在普通方法中，指向父类的原型对象；在静态方法中，指向父类。        
+作为对象调用，在普通方法中，指向父类的原型对象；在静态方法中，指向父类。         

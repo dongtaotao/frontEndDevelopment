@@ -21,4 +21,4 @@ var kthToLast = function(head, k) {
     head =head.next
   }
   return valArr[k-1]  
-}  
+}   

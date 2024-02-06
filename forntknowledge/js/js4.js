@@ -875,4 +875,4 @@ const createStore = (reducer) => {
 };
 
 Vuex、Flux、Redux、Redux-saga、Dva、MobX
-https://zhuanlan.zhihu.com/p/53599723         
+https://zhuanlan.zhihu.com/p/53599723          

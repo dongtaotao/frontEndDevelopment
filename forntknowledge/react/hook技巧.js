@@ -39,7 +39,8 @@ Hooks 实现生命周期函数功能
 
 
 props 的变动，是否会引起 state hook 中数据的变动？
-React 组件的 props 变动，会让组件重新执行，但并不会引起 state 的值的变动。state 值的变动，只能由 setState() 来触发。因此若想在 props 变动时，重置 state 的数据，需要监听 props 的变动，如：
+React 组件的 props 变动，会让组件重新执行，但并不会引起 state 的值的变动。state 值的变动，只能由 setState() 来触发。
+因此若想在 props 变动时，重置 state 的数据，需要监听 props 的变动，如：
 const App = props => {
   const [count, setCount] = useState(0);
 
@@ -56,7 +57,6 @@ const App = props => {
 useImperativeHandle
 useImperativeHandle 可以配合 forwardRef自定义暴露给父组件的实例值。这个很有用，我们知道，对于子组件，如果是class类组件，
 我们可以通过ref获取类组件的实例，但是在子组件是函数组件的情况，如果我们不能直接通过ref的，那么此时useImperativeHandle和 forwardRef配合就能达到效果。
-
 
 
 
@@ -181,7 +181,6 @@ export default ParentComponent;
 
 
 
-
 React hooks实现生命周期函数
 https://juejin.cn/post/7310151273005383691
 React hooks实现生命周期函数
@@ -203,4 +202,4 @@ React.memo
 useMemo
 用途：用于记忆化计算结果，避免在每次渲染时都重新计算。
 useCallback
-用途：用于记忆化回调函数，避免在每次渲染时都重新创建回调。
+用途：用于记忆化回调函数，避免在每次渲染时都重新创建回调。 

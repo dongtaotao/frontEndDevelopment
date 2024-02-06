@@ -55,7 +55,7 @@ function loader(source) {
     document.head.appendChild(style)`;
   return style;
 }
-module.exports = loader;
+module.exports = loader; 
 
 
 

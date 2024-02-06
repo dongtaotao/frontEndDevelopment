@@ -12,7 +12,7 @@ const twoSum = function (nums, target) {
       // 如果有，代表条件满足，返回
       if (num in hash) {
           return [i, hash[num]]
-      } else {
+      } else { 
           // 如果没有，则存入键名为差值，键值为下标
           hash[target - num] = i
       }
@@ -445,5 +445,5 @@ var oddEvenList = function (head) {
   }
 
   odd.next = evenHead;
-  return head;
+  return head; 
 };   

@@ -21,7 +21,7 @@ pinia(2.0.34) 最新使用指南与持久化缓存
 https://juejin.cn/post/7223415381788344376?
 四、数据持久化
 1. 安装插件
-yarn add pinia-plugin-persistedstate
+yarn add pinia-plugin-persistedstate 
 
 
 pinia-plugin-persistedstate 中文翻译来了~

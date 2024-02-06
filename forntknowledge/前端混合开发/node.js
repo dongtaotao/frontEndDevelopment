@@ -227,7 +227,7 @@ https://www.bilibili.com/video/BV1gV411B7AU/?p=2&spm_id_from=pageDriver&vd_sourc
 26-数据库查询前端传值账号
 27-无账号直接注册
 28-返回数据给前端
-29-登录注册完成
+29-登录注册完成 
 
 
 

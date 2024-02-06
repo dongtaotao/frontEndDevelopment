@@ -13,10 +13,7 @@ https://juejin.cn/post/6943092291561062436
 你会动态规划吗？
 https://juejin.cn/post/6917773373141417992
 
-/**
-* @param {number} n
-* @return {number}
-*/
+
 const climbStairs = function(n) {
   // 初始化状态数组
   const f = [];
@@ -32,11 +29,7 @@ const climbStairs = function(n) {
 };
 
 2. LeetCode 路径问题
-/**
- * @param {number} m
- * @param {number} n
- * @return {number}
- */
+
  var uniquePaths = function(m, n) {
   const dp = new Array(m).fill(0).map(() => new Array(n).fill(0))
 
@@ -90,4 +83,4 @@ var rob = function(nums) {
 };
 
 
-leetcode 875. 爱吃香蕉的珂珂   
+leetcode 875. 爱吃香蕉的珂珂    

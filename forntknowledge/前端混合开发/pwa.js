@@ -9,4 +9,4 @@ PWA全称Progressive Web App，即渐进式WEB应用
 它解决了上述提到的问题，这些特性将使得 Web 应用渐进式接近原生 App。    
 
 PWA渐进式webAPP 
-https://www.bilibili.com/video/BV13E411e7kh?spm_id_from=333.337.search-card.all.click    
+https://www.bilibili.com/video/BV13E411e7kh?spm_id_from=333.337.search-card.all.click     

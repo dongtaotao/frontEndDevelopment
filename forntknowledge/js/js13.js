@@ -411,4 +411,4 @@ Video.js 使用教程 - 手把手教你基于 Vue 搭建 HTML 5 视频播放器
 https://juejin.cn/post/7080220673812987940
 
 实现一个大文件切片上传+断点续传 
-https://www.tuicool.com/articles/aY7Vn2U      
+https://www.tuicool.com/articles/aY7Vn2U       

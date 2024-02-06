@@ -7,7 +7,7 @@ var deleteDuplicates = function(head) {
       p = p.next;
     }
   }
-  return head;
+  return head; 
 }
 
 练习：删除重复节点升级  

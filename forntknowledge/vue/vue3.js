@@ -599,5 +599,5 @@ Vue 侦听响应式数组变更
 组件应用 mode="out-in"
 4.2 内置组件 <TransitionGroup>组件
 4.3 内置组件 <KeepAlive>组件
-4.4 内置组件 <Teleport>组件
-相关推荐
+4.4 内置组件 <Teleport>组件 
+相关推荐 

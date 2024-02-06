@@ -32,4 +32,4 @@ var oddEvenList = function(head) {
   }
   odd.next = evenHead
   return head
-};  
+};   

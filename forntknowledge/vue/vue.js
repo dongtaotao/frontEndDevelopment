@@ -222,7 +222,7 @@ diff算法很早就有
 diff算法应用很广泛，例如提交github pr 或者（gitlab mr）
 如果要严格diff两棵树，时间复杂度是 O(n^3) ，算法不可用。
 
-tree diff优化
+tree diff优化 
 之比较同一层级，不跨级比较
 tag 不同则删掉重建（不再去比较内部的细节） 
 
@@ -234,4 +234,4 @@ Vue2 diff 特点
 
 Vue3 diff 特点
 最长递增子序列
-链接：https://juejin.cn/post/7109104086049357861    
+链接：https://juejin.cn/post/7109104086049357861     

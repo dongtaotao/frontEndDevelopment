@@ -8,7 +8,7 @@ export default {
       const loadTime = timing.loadEventEnd - timing.navigationStart;
 
       console.log(`Page loaded in ${loadTime}ms`);
-      // 发送到服务器或其他处理方式
+      // 发送到服务器 或其他处理方式
     });
 
     // 监听每个组件的渲染性能

@@ -366,7 +366,7 @@ link.href = url;
 前端对当前页面进行绘图，并下载。 https://juejin.cn/post/7097041366748200991
 npm install --save html2canvas 
 
-CDN静态库
+CDN静态库 
 BootCDN : BootCDN - Bootstrap 中文网开源项目免费 CDN 加速服务
 Staticfile CDN : Staticfile CDN
 360 前端静态资源库 : 静态资源托管库 (baomitu.com)

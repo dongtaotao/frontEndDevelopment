@@ -52,7 +52,7 @@ websocket心跳机制：客户端和服务端通过websocket建立连接后,定�
 异步加载方式
 异步加载是webpack实现代码分割的一种手段。webpack通过import()动态导入语法来实现异步加载。使用import()语法，
 import('./module').then(module => { ... })
-复制代码
+
 可以在运行时,异步地加载某个模块。webpack会自动把通过import()语法导入的模块,单独打包成一个JS文件。当代码执行到import()时,会自动加载这个JS文件,
 然后执行 .then()里的回调函数。 通过import()可以很好地实现代码的按需加载,提高页面加载速度。这也是webpack实现懒加载的方式之一。
 
@@ -479,5 +479,5 @@ const targetId = '112';
 const path = findPath(list, targetId);
 console.log(path); // [ '1', '11', '112' ]
 以上就是查找JS复杂数组树中目标节点路径的方法实现。如需了解更多关于JS的知识，可以参考来源链接 1。     
-
+ 
 

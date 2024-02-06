@@ -76,4 +76,4 @@ const source = {
 source.source = source
 const newObj = deepCopy(source)
 console.log(newObj.meta.ary[2] === source.meta.ary[2]); // false
-console.log(newObj.meta.birth === source.meta.birth); // false   
+console.log(newObj.meta.birth === source.meta.birth); // false    

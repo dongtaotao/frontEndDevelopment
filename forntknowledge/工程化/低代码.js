@@ -16,6 +16,23 @@ https://juejin.cn/post/7292354382909374476
 https://juejin.cn/post/7294907512443994175?utm_source=gold_browser_extension
 
 
+https://www.yuque.com/xiumubai/fe/ednbtng6l0wgbb9r
+手把手带你开发一个低代码可视化平台（一）硬核架构教程，全程开源同步开发    🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯🐯
+https://juejin.cn/post/7044432832965378061#heading-8
+【无代码平台】基于Vue实现商城可视化搭建平台 Mall-Cook
+https://juejin.cn/post/7040993073437868063
+https://github.com/wangyuan389/mall-cook
+
+
+低代码扫盲：Vite+vue3实现C端活动配置
+https://juejin.cn/post/7319297259643715618?utm_source=gold_browser_extension
+
+
+实现一个低代码平台
+https://www.yuque.com/xiumubai/fe/ednbtng6l0wgbb9r
+● 预览地址：https://woai3c.github.io/visual-drag-demo/
+● github：https://github.com/xiumubai/low-code-demo
+
 
 https://www.bilibili.com/video/BV1wa411Y78R?share_source=copy_web
 Vue3最新实战从零实现可视化搭建【手把手教学】  
@@ -205,5 +222,5 @@ https://www.bilibili.com/video/BV1jp4y1A73v/?spm_id_from=333.337.search-card.all
 
 
 
-前端低代码怎样用到项目中才能在面试中更胜一筹   🔥🔥
+前端低代码怎样用到项目中才能在面试中更胜一筹   🔥🔥  
 https://www.bilibili.com/video/BV1Ug4y1R7qX?p=9&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a

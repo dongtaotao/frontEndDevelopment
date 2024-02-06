@@ -69,5 +69,5 @@ vue实现大文件切片断点续传https://juejin.cn/post/7248648979042058299?u
 
 前端面试题 - 97. React hook如何模拟class组件的功能 https://juejin.cn/post/7248624601659097148?utm_source=gold_browser_extension
 
-nginx部署多个前端项目 https://juejin.cn/post/7248648256284393533?utm_source=gold_browser_extension   
+nginx部署多个前端项目 https://juejin.cn/post/7248648256284393533?utm_source=gold_browser_extension    
 

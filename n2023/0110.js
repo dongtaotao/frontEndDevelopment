@@ -440,7 +440,6 @@ vuex 和 vue-router 的插件注册方法 install 判断如果系统存在实例
 4.观察者模式 (响应式数据原理)
 5.装饰模式: (@装饰器的用法)
 
-作者：前端鲨鱼哥
 链接：https://juejin.cn/post/7004638318843412493
 
 Object.prototype.__proto__; //null
@@ -469,7 +468,7 @@ vue项目版本更新后文件存在缓存问题解决方案(vue-cli2.0&vue-cli3
 https://www.cnblogs.com/konglingxi/p/14348940.html
 
 H5全屏API与视频全屏
-https://juejin.cn/post/7202809170378031160?
+https://juejin.cn/post/7202809170378031160? 
 
 三面面试官：运行 npm run xxx 的时候发生了什么？
 总结

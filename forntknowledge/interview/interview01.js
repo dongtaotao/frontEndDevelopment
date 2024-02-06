@@ -525,13 +525,7 @@ key 数组记录目前缓存的组件 key 值，如果组件没有指定 key 值
 cache 对象以 key 值为键，vnode 为值，用于缓存组件对应的虚拟 DOM
 在 keep-alive 的渲染函数中，其基本逻辑是判断当前渲染的 vnode 是否有对应的缓存，如果有，从缓存中读取到对应的组件实例；如果没有则将其缓存。
 当缓存数量超过 max 数值时，keep-alive 会移除掉 key 数组的第一个元素。
-
-作者：法医
 链接：https://juejin.cn/post/7208005892313579576
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
-
 
 29. 说一下你知道的 vue 修饰符都有哪些？
 参考答案：
@@ -593,12 +587,7 @@ div{
   border-right-color: transparent;
   }
   
-  作者：法医
   链接：https://juejin.cn/post/7098689890933538853
-  来源：稀土掘金
-  著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
-
 
   柯里化
   柯里化，英语：Currying，是把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。
@@ -631,14 +620,14 @@ https://www.yuque.com/baiyueguang-rfnbu/tr4d0i/tgc3uo#wTfix
 代码分割的原理
 
 1.  分片打包的原理
-import动态加载的功能是webpack实现的，通过一些插件，在编译时候把动态import的模块单独打包，再在webpack运行时代码中将之拉取并执行。动态import实际是返回一个Promise，该Promise成功时候会resolve该模块。因此使用异步加载的模块都需要在.then方法中获取该模块后再使用。
+import动态加载的功能是webpack实现的，通过一些插件，在编译时候把动态import的模块单独打包，再在webpack运行时代码中将之拉取并执行。
+  动态import实际是返回一个Promise，该Promise成功时候会resolve该模块。因此使用异步加载的模块都需要在.then方法中获取该模块后再使用。
 React.lazy是接受一个function，然后调用该function返回的一个Promise，在Promise的resolve中取到该组件进行渲染。
 
 
 
 前端预渲染
 https://www.yuque.com/baiyueguang-rfnbu/tr4d0i/vm2zk8
-
 
 
 redux-persist

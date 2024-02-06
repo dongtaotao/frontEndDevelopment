@@ -26,4 +26,4 @@ var intersection = function(...args) {
   return [...new Set(args.reduce((result, arg) => {
     return result.filter(item => arg.includes(item))
   }))] 
-};  
+};   

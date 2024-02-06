@@ -11,7 +11,7 @@ const arr = [2, 3, 4, 7, 8, 9, 10, 13, 15]
 
 const merge = (arr) => {
   const lens = arr.length;
-  if (lens == 1) return [arr[0]];
+  if (lens == 1) return [arr[0]]; 
   const result = []
   let prev = 0, next = 1;
   while (prev < lens) {

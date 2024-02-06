@@ -256,4 +256,4 @@ var zigzagLevelOrder = function(root) {
         return it
     })
 }; 
-链接：https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal        
+链接：https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal         

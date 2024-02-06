@@ -198,7 +198,7 @@ class doubleLinkNode {
 输入：1->2->4, 1->3->4
 输出：1->1->2->3->4->4
 复制代码
-非递归思路:
+非递归思路: 
 
 模拟题+链表
 思路当然简单，重要的是模拟过程，在算法程度上，这种题目可以较为模拟题，模拟你思考的过程，每次比较两个l1.val 与l2.val的大小，取小的值，同时更新小的值指向下一个节点
@@ -584,4 +584,4 @@ function FindFirstCommonNode(pHead1, pHead2)
 }
 ————————————————
 版权声明：本文为CSDN博主「violet_seven」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/violet_seven/article/details/107042191  
+原文链接：https://blog.csdn.net/violet_seven/article/details/107042191   

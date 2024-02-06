@@ -43,3 +43,54 @@ P1
 6.4-1 部署到公网（上）
 6.4-2 部署到公网（下）
 6.4-3 部署到公网（补充
+
+
+腾讯 trtc-js-sdk  官网
+https://web.sdk.qcloud.com/trtc/webrtc/doc/zh-cn/tutorial-10-basic-get-started-with-demo.html
+
+demo
+https://gitee.com/LiteAVSDK/TRTC_Web
+
+https://github.com/LiteAVSDK/TRTC_Web
+https://cloud.tencent.com/document/product/647/32398
+快速入门
+快速跑通Demo【
+https://console.cloud.tencent.com/trtc/quickstart
+
+https://web.sdk.qcloud.com/trtc/webrtc/doc/zh-cn/tutorial-10-basic-get-started-with-demo.html
+vue接入腾讯实时音视频trtc-js-sdk（web版）
+https://blog.csdn.net/u010716530/article/details/104372884
+
+
+Web & H5 (Vue2/Vue3)
+https://cloud.tencent.com/document/product/647/78731
+实时音视频Web & H5 (Vue2/Vue3)-含UI 集成方案-文档中心
+
+移动端Web接入腾讯云TRTC实践（React+TS）
+https://blog.csdn.net/YIDBoy/article/details/129905316
+
+
+Vue实现视频通话的两种方式
+https://www.nxrte.com/jishu/yinshipin/37884.html
+
+
+腾讯 trtc-js-sdk 
+https://cloud.tencent.com/document/product/647/38958
+
+
+Vue中实现视频播放功能
+https://juejin.cn/post/7194748136584118332
+npm install vue-video-player --save
+
+HTML5实现一对一视频聊天
+https://juejin.cn/post/6900832429339213837
+
+
+
+WebRTC-H5视频通话
+https://zhuanlan.zhihu.com/p/673083196
+
+HTML5实现一对一视频聊天
+https://zhuanlan.zhihu.com/p/349832854
+
+https://app.nihaoshijie.com.cn/webrtc/index.html

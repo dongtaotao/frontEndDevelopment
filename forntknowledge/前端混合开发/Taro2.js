@@ -79,7 +79,7 @@ https://www.bilibili.com/video/BV1s34y1B7bv/?spm_id_from=333.337.search-card.all
 https://www.bilibili.com/video/BV1Y341147sr/?spm_id_from=333.999.0.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 
 
-Taro2 和 Taro3 都是跨端开发框架，但两者之间有很多区别：
+Taro2 和 Taro3 都是跨端开发框架，但两者之间有很多区别： 
 
 语法不同：
 Taro2 使用的是 React 语法，而 Taro3 则使用了自己的语法（类似于 Vue3 和 React 的组合），并且对 TypeScript 支持更好。

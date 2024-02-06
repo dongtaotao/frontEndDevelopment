@@ -24,4 +24,4 @@ var maxSlidingWindow = function (nums, k) {
       result.push(item);
   }
   return result;   
-}; 
+};  

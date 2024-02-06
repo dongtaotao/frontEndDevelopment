@@ -92,7 +92,6 @@ https://blog.csdn.net/qq1195566313/category_11727192.html
 https://github.com/linwu-hi/code-interview/issues/23
 📚前言
 总结一下我工作常用的linux命令，当做备忘录了，比如pwd,mv,history，用好这些命令，工作就轻松多了
-
 ⭐️1. ls - 列出目录内容
 列出当前目录中的文件和子目录。
 
@@ -493,4 +492,4 @@ zip -r archive_name.zip file_or_directory
 ⭐️100. unzip - 解压缩 .zip 文件
 解压缩 .zip 压缩文件。
 
-unzip archive_name.zip
+unzip archive_name.zip 

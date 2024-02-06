@@ -9,7 +9,7 @@ rx.js 响应式异步编程库，在vue中需引入vue-rx
  
 组件中内置指令
   NgClass
-  NgStyle
+  NgStyle 
   NgModel
   NgFor
   NgIf 

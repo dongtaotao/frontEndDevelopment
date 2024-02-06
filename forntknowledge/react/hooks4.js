@@ -1,5 +1,6 @@
 react hooks有类组件的ErrorBoundary捕获错误吗 ================== gpt
-React Hooks 本身不包含类似于类组件的 ErrorBoundary 的功能，但是我们可以将它们与一些其他的 React Hooks 结合使用，以类似于 ErrorBoundary 的方式捕获错误并处理错误。
+React Hooks 本身不包含类似于类组件的 ErrorBoundary 的功能，但是我们可以将它们与一些其他的 React Hooks 结合使用，
+以类似于 ErrorBoundary 的方式捕获错误并处理错误。
 一种常用的捕获错误的技术是使用 useErrorBoundary 自定义 Hook。下面是一个示例：
 import { useState, useEffect } from 'react';
 
@@ -38,4 +39,4 @@ function MyComponent() {
 
 
 【React】万字长文！100+个让你事半功倍的常用 React Hooks 和工具包
-https://juejin.cn/post/7196943285381464101#heading-29  
+https://juejin.cn/post/7196943285381464101#heading-29   

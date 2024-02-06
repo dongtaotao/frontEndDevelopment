@@ -300,3 +300,4 @@ function searchRange(nums: number[], target: number): number[] {
   return [arr[0], arr[arr.length - 1]];
 } 
 
+ 

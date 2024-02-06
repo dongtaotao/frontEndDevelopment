@@ -1,4 +1,4 @@
-React 16版本新特性 
+React 16版本新特性  
 
 1.Hooks: 允许在不编写类组件的情况下使用 React 的 state 和其他功能。
 2.Error Boundaries: 明确定义了组件内部错误的边界，从而使应用程序更加稳定。
@@ -119,4 +119,4 @@ useId
 提供给第三方库的 Hook
 useSyncExternalStore
 useInsertionEffect
-参考  
+参考   

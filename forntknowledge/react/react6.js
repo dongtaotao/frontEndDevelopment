@@ -145,7 +145,7 @@ class MyComponent extends Component {
 
   render() {
     return (
-      <div>{this.state.derivedValue}</div>
+      <div>{this.state.derivedValue}</div> 
     );
   }
 }

@@ -302,7 +302,4 @@ const invertTree = (root) => {
   return root;
 }
 
-作者：童欧巴
 链接：https://juejin.cn/post/6938385018267893767
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

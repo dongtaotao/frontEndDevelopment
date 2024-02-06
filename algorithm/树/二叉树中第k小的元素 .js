@@ -11,7 +11,7 @@ var kthSmallest = function(root, k) {
     }
     dfs(root)
     return arr[k-1]
- }; 
+ };  
 
  https://juejin.cn/post/7077955225306267685    
  

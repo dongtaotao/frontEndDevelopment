@@ -113,7 +113,6 @@ const maxArea = function(height) {
 
   return max
 };
-作者：童欧巴
 链接：https://juejin.cn/post/6937526265201033230
 
 05 加一
@@ -147,8 +146,7 @@ const plusOne = function (digits) {
 
 作者：童欧巴
 链接：https://juejin.cn/post/6937526265201033230
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
 const moveZeroes = function (nums) {
   let i = 0, j = 0;
   while (i < nums.length) {
@@ -193,10 +191,7 @@ var divingBoard = function (shorter, longer, k) {
   return res;
 };
 
-来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/diving-board-lcci
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
-
 
 前端JS算法之素数
 在看代码之前，我们先梳理一下逻辑，什么是素数，百度百科上写到，素数又称质数，质数是指在大于1的自然数中，除了1和它本身以外不再有其他因数的自然数。那我们可以理解为只能被1和它本身整除的数就是素数。
@@ -208,11 +203,7 @@ var divingBoard = function (shorter, longer, k) {
 5、声明一个变量num，记录余数为0的次数
 6、根据步骤3，判断num(余数为0的次数)是否大于2，如果大于2，则说明这个整数不是质数，反之，这个数就是质数。因为质数只能被1和它本身整除，也就是余数为0的次数只能2次。
 
-作者：Memories
 链接：https://juejin.cn/post/6901200044691554312
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 function primeNum(val) {
   let n = val && parseInt(val);
   // 声明变量，记录余数为0的次数
@@ -477,4 +468,4 @@ var validPalindrome = function(s){
       right --;
   }
   return true; 
-}
+} 

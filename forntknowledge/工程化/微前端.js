@@ -1,3 +1,44 @@
+MicroApp
+https://micro-zoe.github.io/micro-app/
+极致简洁的微前端框架-京东MicroApp开源了🎉
+https://zhuanlan.zhihu.com/p/393533835?utm_source=wechat_session&utm_medium=social&utm_oi=1082717161058770944&utm_campaign=shareopn
+
+iframe
+single-SPA
+qiankun  基于single-SPA
+MicroApp
+无界
+EMP方案
+
+微前端（无界） https://juejin.cn/post/7212603829572911159?searchId=20240108145611057AC017F2C679214972
+微前端
+https://www.bilibili.com/video/BV1tg4y1x75Q/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+
+微前端概念
+微前端特性
+场景演示
+微前端方案
+iframe 方案
+qiankun 方案
+micro-app 方案
+EMP 方案
+无界微前端 方案
+前置知识了解webComponents
+前置知识2 monorepo架构
+无界入门
+wujie-vue3 原理
+wujie 预加载和原理
+原理解析
+无界传参
+模块联邦技术
+
+
+
+前端技术圈有那么多微前端框架，到底选择那个才是最优的
+https://www.bilibili.com/video/BV1fG4y1e7Rn/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+
 什么是微前端？
 多个小型前端应用合并为一个应用。并做到项目分离和运营聚合。
 https://blog.gaogangsever.cn/engine/%E4%BC%81%E4%B8%9A%E7%BA%A7%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%96%B9%E6%A1%88.html#%E4%B8%80%E3%80%81spa-%E5%BC%80%E5%8F%91%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98
@@ -10,6 +51,15 @@ https://blog.gaogangsever.cn/engine/%E4%BC%81%E4%B8%9A%E7%BA%A7%E5%BE%AE%E6%9C%8
 qiankun的基本使用 https://www.bilibili.com/video/BV1G34y1x7Cm?spm_id_from=333.999.0.0
 
 微前端qiankun快速入门 
+qiankun概述
+2搭建环境
+3主应用中挂载子应用
+4解决静态资源不显示的问题
+5主应用和子应用之间通信
+6qiankun接入vue3
+7.react子应用接入路由
+8vue3子应用接入路由
+9课程中的npm插件
 https://www.bilibili.com/video/BV16T4y1e7TC/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 
 谈谈微前端 https://febook.hzfe.org/awesome-interview/book4/engineer-mfa
@@ -105,3 +155,8 @@ https://juejin.cn/post/7308583491934994470#heading-3
 
 🥇🥇🥇一网打尽主流的微前端框架生命周期/路由/资源系统：原理篇
 https://juejin.cn/post/7311907901047324722?utm_source=gold_browser_extension
+
+
+
+micro-app微前端快速入门
+https://www.bilibili.com/video/BV1W34y1v7dQ/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a

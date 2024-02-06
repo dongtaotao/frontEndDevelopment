@@ -179,11 +179,7 @@ require.context(directory,useSubdirectories,regExp)
 directory：说明需要检索的目录
 useSubdirectories：是否检索子目录
 regExp: 匹配文件的正则表达式,一般是文件名
-
-作者：火狼1
 链接：https://juejin.cn/post/6844903959266590728
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 ```
 
 
@@ -259,4 +255,4 @@ css module 中： @import "~@/style/theme.less"
 css 属性中： background: url("~@/assets/xxx.jpg")
 html 标签中： <img src="~@/assets/xxx.jpg">
 链接：https://juejin.cn/post/6844903953969184775
-vue全家桶开发的一些小技巧和注意事项 
+vue全家桶开发的一些小技巧和注意事项  

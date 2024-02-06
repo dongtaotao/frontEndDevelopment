@@ -109,10 +109,8 @@ Vue.use(webSee, {
   whiteBoxElements: ['html', 'body', '#app', '#root'] // 白屏检测的容器列表
 });
 
-作者：海阔_天空
 链接：https://juejin.cn/post/7176206226903007292
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
 
 大文件分片上传 https://juejin.cn/post/7185015074024030245
 
@@ -268,4 +266,4 @@ setTimeout(() => {
 热点面试题：什么是粘包/半包问题，该如何解决？ 
 https://mp.weixin.qq.com/s/SORAN1c0_Pntajvjl-jK4g
 热点面试题：常见的http code 及含义？  
-https://juejin.cn/post/7196131493448630329   
+https://juejin.cn/post/7196131493448630329    

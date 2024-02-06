@@ -7,7 +7,7 @@ const ErrorTrackingPlugin = {
       // sendErrorToMonitoringPlatform(error);
       return true;
     };
-
+ 
     // 捕获异步错误和 Promise 错误
     window.addEventListener('unhandledrejection', event => {
       const { reason, promise } = event;

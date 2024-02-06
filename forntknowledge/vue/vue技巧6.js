@@ -146,22 +146,16 @@ app.mount('#app')
 // 使用
 import { getCurrentInstance } from 'vue'
 const { a } = getCurrentInstance().appContext.config.globalProperties
-
-作者：LeeHi
 链接：https://juejin.cn/post/7317926149120196643
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 在Vue2中，diff算法采用的是双指针进行头头相比、尾尾相比、头尾相比，最终通过映射关系来确认可复用的节点，进行更新。
 在Vue3中，diff算法分为有key和无key和快速diff三种方式，快速diff通过静态标记，对一些文本、空节点进行快速更新，无key方式简单粗暴对比每一项，判断是否可以复用节点，有key的方式依旧采用双指针，但是只进行头头相比、尾尾相比，最终会根据求取无序列表的最长递增子序列的方式，对能复用的节点进行patch，需要移动的节点进行移动节点，最终完成diff更新。
 链接：https://juejin.cn/post/7317926149120196643
 
 
-
-
 第26题：Vue项目如何进行部署？是否有遇到部署服务器后刷新404问题？
 https://fe.ecool.fun/topic/252525e4-0c4c-4e41-9279-41bc59f06f85?orderBy=updateTime&order=desc&tagId=14
 
 
-第53题：Vue项目中如何解决跨域问题？
+第53题：Vue项目中如何解决跨域问题？ 
 https://fe.ecool.fun/topic/38c7340e-cb35-43e0-8ea0-20e75b2780a5?orderBy=updateTime&order=desc&tagId=14

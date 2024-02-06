@@ -80,4 +80,4 @@ https://www.bilibili.com/video/BV1QB4y1F722/?vd_source=0c743a1becd4c9f9a0c3fcf9b
 20-电子生成书章节列表
 21-获取图片解析到书籍里
 22-解析epub的css内容渲染到书籍里
-23-修改中文不能搜索bug和打包成软件
+23-修改中文不能搜索bug和打包成软件 

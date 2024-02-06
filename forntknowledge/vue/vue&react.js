@@ -20,7 +20,6 @@ Redux 中间件会拦截这个 action，处理完后再提交到 reducer 中。
 
 
 Vuex具体原理，详细。数据怎么流转的
-2023/5/14 19:32:28
 Vuex 的工作流程可以分为以下几个步骤：
 
 定义 Store： 在 Vuex 应用程序中，我们使用 Store 来存储所有组件的状态。一个 Vuex Store 是一个包含着应用程序中所有组件共享状态的容器。
@@ -74,7 +73,6 @@ new Vue({
 修改数据： 在组件中，我们可以通过 $store.state 来访问 Store 中的状态，在需要修改数据时，我们可以通过 dispatch 触发一个 action，
 然后再通过 commit 提交一个 mutation，mutation 中修改 state 中的数据，并通知所有订阅者更新。
 javascript
-Copy Code
 // counter.vue
 <template>
   <div>
@@ -136,7 +134,6 @@ Redux Store 更新当前的状态，所有订阅该 store 的组件都重新渲�
 下面是 Redux 核心代码中 Store 和 Reducer 的实现：
 
 javascript
-Copy Code
 // Store
 
 function createStore(reducer, initialState) {
@@ -233,8 +230,6 @@ export default ParentComponent;
 
 //===============================React怎么实现双向绑定======================================================
 React怎么实现双向绑定
-
-2023/5/14 19:05:19
 在 React 中实现双向数据绑定，常见的方法有两种：使用受控组件和使用第三方库。
 
 受控组件方法：
@@ -666,4 +661,4 @@ export default {
 }
 </script>
 在这个例子中，我们在子组件中使用 $emit 方法触发自定义事件。通过 props 接收父组件传递过来的 onCustomEvent 对象，其中包含了自定义事件的类型和数据。在点击事件中，
-使用 $emit 方法触发自定义事件时，将 type 和 payload 分别作为 $emit 方法的两个参数传递进去。   
+使用 $emit 方法触发自定义事件时，将 type 和 payload 分别作为 $emit 方法的两个参数传递进去。     

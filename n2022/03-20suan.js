@@ -507,7 +507,7 @@ try {
     console.log(error); 
     // 这里是不会执行的 
 } 
-window.onerror = function() { 
+window.onerror = function() {  
     console.log(...arguments) 
 }
 对于异步函数-微任务，js 有专门捕获没有写 catch 的 promise，如下：

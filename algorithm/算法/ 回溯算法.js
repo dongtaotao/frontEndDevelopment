@@ -66,12 +66,8 @@ var permute = function (nums) {
   来源：力扣（LeetCode） 
   链接：https://leetcode-cn.com/problems/subsets
   
-  作者：飞跃疯人院
   链接：https://juejin.cn/post/6903152293114281997
-  来源：稀土掘金
-  著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
-
+ 
 回溯算法伪代码模板 https://juejin.cn/post/6954707861452619813
 const function backtracking(参数){
     if(终止条件){

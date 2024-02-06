@@ -147,7 +147,6 @@ CI 编译完成后，SSH 登录 VPS，删掉现有容器，用新镜像创建一
 而这样做的好处是：
 不必再手动 FTP 上传文件
 不必手动维护服务器的 Nodejs 运行环境
-
 链接：https://juejin.cn/post/6844903946234904583
 
 SSH 登录命令
@@ -157,8 +156,6 @@ SSH 登录命令
 # 回车输入密码即可登录
 ssh root@192.168.14.147 -p 22
 
-React 中 setState 是一个宏任务还是微任务？https://juejin.cn/post/6992006476558499853?utm_source=gold_browser_extension
-都不是
 
 Egg.js是阿里旗下的一个基于nodejs和koa2的企业级应用框架，基于es6，es7 和nodejs。 
 
@@ -181,7 +178,6 @@ CD-持续交付、持续部署
 代码通过评审以后，自动部署到生产环境
 
 持续部署的前提是能自动化完成测试，构建，部署等步骤
-
 链接：https://juejin.cn/post/7083508488759934989
 
 快来看看如何手动搭建自动化部署系统
@@ -382,7 +378,7 @@ https://juejin.cn/post/7261519520106774588?utm_source=gold_browser_extension
 
 Jenkins实现自动化构建与部署（超详细）
 https://juejin.cn/post/7196195051226710071
-
+ 
 
 
 解放双手，本地项目一键部署

@@ -7,7 +7,6 @@ Kubernetes是一个用于大规模部署你分布式应用的平台
 它管理者一系例的主机或者服务器
 
 
-
 Docker 10分钟快速入门 🔥🔥🔥🔥🔥🔥🔥🔥🔥
 https://www.bilibili.com/video/BV1s54y1n7Ev/?spm_id_from=333.788.recommend_more_video.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 
@@ -46,3 +45,16 @@ k8s 经常与 Docker 进行搭配使用，但是也可以使用其他容器，�
 选 k8s。2019年底Docker Enterprise已经出售给Mirantis，Mirantis声明要逐步淘汰Docker Swarm，后续会将 k8s 作为默认编排工具。
 
 链接：https://juejin.cn/post/6913568633813729294
+
+
+
+3分钟搞懂docker+k8s原理和构造
+https://www.bilibili.com/video/BV12X4y177Dp/?spm_id_from=333.788.recommend_more_video.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a】
+
+
+什么是容器，Docker是什么，K8s是什么，架构师第一步
+https://www.bilibili.com/video/BV1rh411U7FR/?spm_id_from=333.788.recommend_more_video.0&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+
+
+ 

@@ -542,8 +542,6 @@ function Sum_Solution(n){
     // write code here
   n&&Sum_Solution(n-1)+n
 }
-————————————————
-版权声明：本文为CSDN博主「Damp_XUN」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/Damp_XUN/article/details/99193788
 //================================================================
 链表中环的入口节点
@@ -759,7 +757,6 @@ function FindNumsAppearOnce(array){
     }
   }
 }
-————————————————
 原文链接：https://blog.csdn.net/violet_seven/article/details/107042191
 
 47、孩子们的游戏（圆圈中最后剩下的数）
@@ -770,7 +767,7 @@ function LastRemaining_Solution(n, m)
     var result = 0;//最后一轮只剩一个人，他最后的编号肯定是0
     for(var i=2;i<=n;i++){
        result = (result + m) % i; //一轮一轮往上还原
-    }
+    } 
     return result;
 }
 原文链接：https://blog.csdn.net/violet_seven/article/details/107042191        

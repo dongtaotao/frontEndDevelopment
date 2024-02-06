@@ -265,5 +265,5 @@ Vue3+i18n多语言动态国际化设置步骤详解
 https://juejin.cn/post/7236028062872993852?utm_source=gold_browser_extension
 
 
-Vue打包后，及时更新版本的一种方法
-https://juejin.cn/post/7236263262073225274?utm_source=gold_browser_extension   
+Vue打包后，及时更新版本的一种方法 
+https://juejin.cn/post/7236263262073225274?utm_source=gold_browser_extension    

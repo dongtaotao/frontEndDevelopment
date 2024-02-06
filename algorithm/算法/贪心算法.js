@@ -25,4 +25,4 @@ function getMinCoin(coins,amount) {
   getMinCoin([2,1,5,10],35)  
   
   // 返回
-  // [10, 10, 10, 5]
+  // [10, 10, 10, 5] 

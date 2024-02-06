@@ -1,5 +1,5 @@
 前端跨端哪些事之Hybrid 
-https://juejin.cn/post/7248888621364953147?utm_source=gold_browser_extension 
+https://juejin.cn/post/7248888621364953147?utm_source=gold_browser_extension  
 
 
 APP与H5通信-JsBridge 
@@ -125,5 +125,5 @@ Universal Links 是苹果公司提供的一种机制，允许你通过网页链�
 
 
 
-jsBridge 以及 Web 和 APP 交互通信方式 
+jsBridge 以及 Web 和 APP 交互通信方式  
 https://juejin.cn/post/7287768247889510459

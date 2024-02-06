@@ -129,7 +129,8 @@ React 18 新特性 https://www.bilibili.com/video/BV1US4y1P7CC?spm_id_from=333.3
 四、关于卸载组件时的更新状态警告
 五、关于 React 组件的返回值
   在 React 17 中，如果你需要返回一个空组件，React只允许返回null。如果你显式的返回了 undefined，控制台则会在运行时抛出一个错误。
-  在 React 18 中，不再检查因返回 undefined 而导致崩溃。既能返回 null，也能返回 undefined（但是 React 18 的dts文件还是会检查，只允许返回 null，你可以忽略这个类型错误）。
+  在 React 18 中，不再检查因返回 undefined 而导致崩溃。既能返回 null，也能返回 undefined（但是 React 18 的dts文件还是会检查，
+  只允许返回 null，你可以忽略这个类型错误）。
 六、Strict Mode
 
 七、 Suspense 不再需要 fallback 来捕获

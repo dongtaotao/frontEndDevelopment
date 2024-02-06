@@ -827,9 +827,7 @@ function isPerfectSquare(num) {
   }
   return false;
 };
-来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/valid-perfect-square
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 26. 删除有序数组中的重复项
 给你一个有序数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。
@@ -907,4 +905,4 @@ var removeDuplicates = function (nums) {
   let max = Math.max(...candies);
   return candies.map(item => item + extraCandies >= max);
 };
-链接：https://leetcode-cn.com/problems/kids-with-the-greatest-number-of-candies       
+链接：https://leetcode-cn.com/problems/kids-with-the-greatest-number-of-candies        

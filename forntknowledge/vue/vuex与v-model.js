@@ -10,7 +10,7 @@ Vue 的双向绑定和 Vuex 并不直接冲突，而是可以一起使用的。�
     <button @click="updateMessage">更新消息</button>
   </div>
 </template>
-
+ 
 <script>
 import { mapState, mapMutations } from 'vuex';
 

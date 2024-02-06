@@ -61,3 +61,60 @@ https://www.bilibili.com/video/BV1og4y1q7M4/?spm_id_from=333.337.search-card.all
  
 Docker详解，7分钟学会 不错
 https://www.bilibili.com/video/BV1Yh4y1K7ka/?spm_id_from=333.788.recommend_more_video.9&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+
+
+
+Docker-部署前端Vue项目  好好好
+https://www.bilibili.com/video/BV1ad4y1B7BH/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+
+Docker 快速入门
+https://docker.easydoc.net/doc/81170005/cCewZWoN/lTKfePfP
+Docker 1小时快速上手教程，无废话纯干货
+https://www.bilibili.com/video/BV19N4y1R735/?p=2&spm_id_from=pageDriver&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+
+
+前端工程师也应该了解的docker 好文章、1. 前言
+2. 什么是 docker？
+3. Docker 的组成
+3.1 docker 的感性理解
+3.2 docker 使用流程
+3.3 docker 常用指令
+4. 部署前端项目
+4.1 准备前端项目源码
+4.2 添加 nginx.conf
+4.3 添加 Dockfile
+4.4 构建镜像
+4.5 启动容器
+4.6 自动化部署流程
+4.7 小结
+5. 部署 Node.js 应用
+5.1 准备后端服务源码
+5.2 添加 .dockerignore 和 Dockfile
+5.3 构建镜像 + 启动容器
+5.4 进入容器
+6. 镜像推送
+6.1 docker 登录
+6.2 tag 标签设置
+6.3 推送到镜像仓库
+7. 总结
+https://juejin.cn/post/7250029395023544376?searchId=2024010810125472897ECB1B3E5F18584A
+
+
+🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+https://www.bilibili.com/video/BV1MR4y1Q738/?spm_id_from=333.337.search-card.all.click&vd_source=f180962fb6ac13c58e2bc143f0318c2a 
+容器Container
+镜像Image
+定制镜像文件DockerFile
+
+
+
+
+下载镜像 ->通过镜像创建容器 ->启动运行容器
+
+
+
+Docker-现代化应用部署的利器🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+https://juejin.cn/post/7332027975862616073?utm_source=gold_browser_extension

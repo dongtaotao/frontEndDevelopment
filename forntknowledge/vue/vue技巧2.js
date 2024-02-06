@@ -269,7 +269,6 @@ export default {
 
 
 
-
 vue2实现组件双向绑定有哪些方法 GPT
 在 Vue 2 中，实现自定义组件的双向绑定有以下几种方法：
 使用 v-model 指令：Vue 提供了 v-model 指令，可以在父组件和子组件之间实现双向绑定。使用 v-model 时，你需要在组件内部实现 value 和 input 事件的处理逻辑。例如：
@@ -479,4 +478,4 @@ export default {
   },
 }
 </script>
-当修改该自定义组件中的值时，就会通过 update:modelValue 事件触发 handleUpdate 函数，并将修改后的值赋给父组件的 value 属性。  
+当修改该自定义组件中的值时，就会通过 update:modelValue 事件触发 handleUpdate 函数，并将修改后的值赋给父组件的 value 属性。   
