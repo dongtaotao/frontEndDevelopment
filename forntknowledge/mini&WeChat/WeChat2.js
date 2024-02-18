@@ -79,3 +79,7 @@ https://www.bilibili.com/video/BV1WX4y1U7gN/?p=12&spm_id_from=pageDriver&vd_sour
 
 微信JSSDK https://www.bilibili.com/video/BV1pv411L7p6/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 vue接入-微信jssdk https:/n/www.bilibili.com/video/BV1Vy4y1y7qG/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
+
+
+微信小程序 WebView 支持 WebRTC
+https://juejin.cn/post/7332734911232229385?utm_source=gold_browser_extension

@@ -259,3 +259,177 @@ preconnect DNS预连接
 
 React 中 setState 是一个宏任务还是微任务？https://juejin.cn/post/6992006476558499853?utm_source=gold_browser_extension
 都不是
+
+
+106. 什么是点击劫持？如何防范点击劫持？
+点击劫持是一种视觉欺骗的攻击手段，攻击者将需要攻击的网站通过 iframe 嵌套的方式嵌入自己的网页中，并将 iframe 设置为透明，在页面中透出一个按钮诱导用户点击。
+我们可以在 http 相应头中设置 X-FRAME-OPTIONS 来防御用 iframe 嵌套的点击劫持攻击。通过不同的值，可以规定页面在特定的一些情况才能作为 iframe 来使用。
+链接：https://juejin.cn/post/7334755783752220708
+
+157. 开发中常用的几种 Content-Type ？
+（1）application/x-www-form-urlencoded
+浏览器的原生 form 表单，如果不设置 enctype 属性，那么最终就会以 application/x-www-form-urlencoded 方式提交数据。该种方式提交的数据放在 body 里面，数据按照 key1=val1&key2=val2 的方式进行编码，key 和 val 都进行了 URL
+转码。
+（2）multipart/form-data
+该种方式也是一个常见的 POST 提交方式，通常表单上传文件时使用该种方式。
+（3）application/json
+告诉服务器消息主体是序列化后的 JSON 字符串。
+（4）text/xml
+该种方式主要用来提交 XML 格式的数据。
+链接：https://juejin.cn/post/7334755783752220708
+
+
+.怎么实现在上传文件的时候预览图片？
+1·通过input.files[0]获取到确认选择的图片信息 f=document.getElementById('file').files[0];
+2·使用URL.createObjectURL将获取到的图片信息转为可临时访问的URL url=URL.createObjectURL(f)
+3·把获取到临时url地址，放在预览图片的img标签的scr上就完成预览了
+
+原文链接：https://blog.csdn.net/weixin_61578719/article/details/134284587
+2023年 前端面试题干货汇总（超详细）
+https://blog.csdn.net/weixin_61578719/article/details/134284587
+
+
+vue中的diff算法是在哪些生命周期执行的？
+Vue 中的 Virtual DOM 和 diff 算法是在组件更新的过程中执行的，而组件更新过程涉及到 Vue 组件的生命周期钩子函数。
+diff 算法的执行可以大致分为以下几个步骤：
+
+1.数据变化触发更新：当 Vue 组件的数据发生变化时，Vue 会调用组件实例的 update 方法来触发组件的更新过程。
+2.Virtual DOM 重建：在更新过程中，Vue 会重新构建组件的 Virtual DOM 树。这个过程会在组件的 beforeUpdate 生命周期钩子函数中执行。在这个阶段，Vue 会创建新的 Virtual DOM 树，然后与旧的 Virtual DOM 树进行比较，找出需要更新的部分。
+3.diff 算法执行：在 Virtual DOM 重建完成后，Vue 会执行 diff 算法来比较新旧 Virtual DOM 树的差异。这个过程会在组件的 update 生命周期钩子函数中执行。
+4.更新真实 DOM：diff 算法执行完毕后，Vue 会根据 diff 的结果来更新真实 DOM。这个过程会在组件的 updated 生命周期钩子函数中执行。在这个阶段，Vue 会根据 diff 的结果，对需要更新的部分进行 DOM 操作，从而实现页面的更新。
+
+综上所述，Vue 中的 diff 算法是在组件的更新过程中执行的，具体来说是在组件的 update 生命周期钩子函数中。在这个阶段，Vue 会执行 diff 算法来比较新旧 Virtual DOM 树的差异，并根据比较的结果来更新真实 DOM。
+
+
+function FYShuffle (arr) {
+  let len = arr.length;
+  
+  while (len > 1) {
+      let rand = Math.floor(Math.random() * len);
+      len--;
+      [arr[len], arr[rand]] = [arr[rand], arr[len]] // 采用的数组的结构赋值
+  }
+
+  return arr;
+}
+console.log(FYShuffle([1,2,3,4,5,6]))
+
+
+做过大文件上传吗？你是如何做上传优化的？
+大文件上传的解决方案是对文件进行切片，将切片传输给服务器。
+
+处理大文件上传的一个关键是：如何处理断点续传。有两种方案：
+
+前端解决方案：前端使用localStorge记录已上传的切片hash，弊端是清除缓存，就会丢失记录
+服务端方案：服务端保存已经上传的切片hash，前端每次上传前向服务器获取已上传的切片
+其中hash的计算：通过文件的内容计算生成，考虑到计算非常耗时，使用web-worker在worker线程中计算。
+
+
+你解决过紧急的线上事故吗？
+遇到过的线上事故：
+
+【事故描述】：
+印象中比较深刻的有一次，周末客服群反馈，用户的页面一直弹弹窗，影响用户筹款。
+
+【事故排查】：
+接到通知，就赶紧排查，复现问题后，发现一直弹的弹窗，是其他用户的评论留言，留言里写了alert相关的 javascript 代码，因为提交了多次留言，就导致在留言展现页不断滴弹alert弹框，影响用户筹款。
+
+【事故处理】：
+给这次事故评为P0事故。通知整个技术部，一起排查，发现了问题后，考虑到解决方案：
+最快的就是让后端在数据库，对这几个提交的js代码进行处理：删掉，或者转义。先解决问题，毕竟每一分钟就会影响到公司的账户进账。
+
+然后前端对所有的提交输入框的特殊字符都进行了转义上线，然后再提交，到展现的时候，特殊字符已经被转义了，就不会执行alert弹窗。前端在根源上避免了通过输入框进行 javascript 代码注入。
+
+【事故分析】：
+其实这次事故就是XSS攻击，是我们的网站安全性薄弱，被钻了空子。
+
+
+
+useEffect和useLayoutEffect区别
+
+useEffect:回调在组件渲染完成之后的一个延迟函数中执行，不会阻塞视图渲染
+useLayoutEffect:在render之后执行，执行时机相当于componentDidMount和componentDidUpdate，会同步触发组件重新render，会阻塞视图渲染
+
+作者：攻城师不浪
+链接：https://juejin.cn/post/7117142442926686215
+来源：稀土掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+
+const promiseAll = (promises) => {
+  let res = []
+  let count = 0
+  return new Promise((resolve, reject) => {
+      for (let i = 0; i < promises.length; i++) {
+          Promise.resolve(promises[i]).then((data) => {
+              count++
+              // 重点，向对应下标塞数据，保证顺序
+              res[i] = data
+              if (count === promises.length) {
+                  resolve(res)
+              }
+          }).catch(err => {
+              reject(err)
+          })
+      }
+  })
+}
+
+
+const throttle = (fn, delay) => {
+  let timer = null
+  let startTime = 0
+  return (...args) => {
+      timer && clearTimeout(timer)
+      const now = Date.now()
+      if (now - startTime > delay) {
+          fn.apply(this, args)
+          startTime = now
+      } else {
+          timer = setTimeout(() => {
+              fn.apply(this, args)
+          }, delay)
+      }
+  }
+}
+
+
+const debounce = (fn, delay) => {
+  let timer = null
+  return (...args) => {
+      timer && clearTimeout(timer)
+      timer = setTimeout(() => {
+          fn.apply(this, args)
+      }, delay)
+  }
+}
+
+
+现在有个父子组件，我希望在父级中给子组件绑定一个原生click事件，这个事件会被触发吗？
+<div id='app'>
+  <my-button @click='change'></my-button>
+</div>
+<script>
+ export default {
+  methods: {
+    change() {
+      alert(1)
+    }
+  }
+ }
+</script>
+
+答：不能，绑定的该click事件会被当做组件上的一个普通属性看待，如果想要使click事件生效，可以使用 @click.native='change' 的方式来实现。
+
+
+setState 是同步的还是异步的
+有时表现出同步，有时表现出异步
+
+setState 只有在 React 自身的合成事件和钩子函数中是异步的，在原生事件和 setTimeout 中都是同步的
+setState 的异步并不是说内部由异步代码实现，其实本身执行的过程和代码都是同步的，只是合成事件和钩子函数中没法立马拿到更新后的值，形成了所谓的异步。当然可以通过 setState 的第二个参数中的 callback 拿到更新后的结果
+setState 的批量更新优化也是建立在异步（合成事件、钩子函数）之上的，在原生事件和 setTimeout 中不会批量更新，在异步中如果对同一个值进行多次 setState，setState 的批量更新策略会对其进行覆盖，去最后一次的执行，如果是同时 setState 多个不同的值，在更新时会对其进行合并批量更新
+合成事件中是异步
+钩子函数中的是异步
+原生事件中是同步
+setTimeout中是同步
+#
