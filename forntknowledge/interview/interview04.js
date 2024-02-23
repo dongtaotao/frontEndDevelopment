@@ -138,3 +138,41 @@ function jsonToTree(data) {
   });
   return result;
 }
+
+
+18. $nextTick 原理及作用
+https://www.yuque.com/cuggz/interview/hswu8g#cc32fdc61aae46b482a76474f21bf2c1
+Vue 的 nextTick 其本质是对 JavaScript 执行原理 EventLoop 的一种应用。
+
+nextTick 的核心是利用了如 Promise 、MutationObserver、setImmediate、setTimeout的原生 JavaScript 方法来模拟对应的微/宏任务的实现，本质是为了利用 JavaScript 的这些异步回调任务队列来实现 Vue 框架中自己的异步回调队列。
+
+
+
+第43题：Vue是怎么把template模版编译成render函数的？
+https://fe.ecool.fun/topic/926774f3-32a9-453c-84e4-0c873323b3ee?orderBy=updateTime&order=desc&tagId=14
+
+第58题：React 中怎么实现状态自动保存（KeepAlive）？
+https://fe.ecool.fun/topic/321f6c36-eff4-4fc4-8a86-c989bb1a2779?orderBy=updateTime&order=desc&tagId=13
+重写 <Route> 组件，可参考 react-live-route。重写可以实现我们想要的功能，但成本也比较高，需要注意对原始 <Route> 功能的保存，以及多个 react-router 版本的兼容
+重写路由库，可参考 react-keeper 。重写路由库成本是一般开发者无法承受的，且完全替换掉路由方案是一个风险较大的事情，需要较为慎重地考虑。
+基于 <Route> 组件现有行为做拓展，可参考 react-router-cache-route 。在阅读了 <Route> 的源码后发现，如果使用 component 或者 render 属性，都无法避免路由在不匹配时被卸载掉的命运。但将 children 属性当作方法来使用，我们就有手动控制渲染的行为的可能。
+
+
+JavaScript 实现对上传图片的压缩？
+答：读取用户上传的 File 对象，读写到画布（canvas）上，利用 Canvas 的 API 进行压缩，完成压缩之后再转成 File（Blob） 对象，
+上传到远程图片服务器；不过有时候我们也需要将一个 base64 字符串压缩之后再变为 base64 字符串传入到远程数据库或者再转成 File（Blob） 对象。
+
+思路就是 File + Canvas 的 drawImage
+
+
+webpack 原理简述
+#1.1 核心概念
+JavaScript 的 模块打包工具 (module bundler)。通过分析模块之间的依赖，最终将所有模块打包成一份或者多份代码包 (bundler)，供 HTML 直接引用。实质上，Webpack 仅仅提供了 打包功能 和一套 文件处理机制，然后通过生态中的各种 Loader 和 Plugin 对代码进行预编译和打包。因此 Webpack 具有高度的可拓展性，能更好的发挥社区生态的力量。
+
+Entry: 入口文件，Webpack 会从该文件开始进行分析与编译；
+Output: 出口路径，打包后创建 bundler 的文件路径以及文件名；
+Module: 模块，在 Webpack 中任何文件都可以作为一个模块，会根据配置的不同的 Loader 进行加载和打包；
+Chunk: 代码块，可以根据配置，将所有模块代码合并成一个或多个代码块，以便按需加载，提高性能；
+Loader: 模块加载器，进行各种文件类型的加载与转换；
+Plugin: 拓展插件，可以通过 Webpack 相应的事件钩子，介入到打包过程中的任意环节，从而对代码按需修改；
+#

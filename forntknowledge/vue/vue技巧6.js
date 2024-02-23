@@ -159,3 +159,7 @@ https://fe.ecool.fun/topic/252525e4-0c4c-4e41-9279-41bc59f06f85?orderBy=updateTi
 
 第53题：Vue项目中如何解决跨域问题？ 
 https://fe.ecool.fun/topic/38c7340e-cb35-43e0-8ea0-20e75b2780a5?orderBy=updateTime&order=desc&tagId=14
+
+
+vant项目使用postcss-pxtorem和amfe-flexible 进行移动端适配
+https://wangziqi.tech/pages/b275f3/#%E6%AD%A5%E9%AA%A4
