@@ -157,3 +157,11 @@ vue  ⭐️
 react⭐️
 leet⭐️
 android⭐️
+
+
+网页长按保存及识别二维码
+https://fe.azhubaby.com/WebApp/%E7%BD%91%E9%A1%B5%E9%95%BF%E6%8C%89%E4%BF%9D%E5%AD%98%E5%9B%BE%E7%89%87%E5%8F%8A%E8%AF%86%E5%88%AB%E4%BA%8C%E7%BB%B4%E7%A0%81.html
+此项目主要用到三个库
+html2canvas：将HTML 转换为 canvas
+canvas2image：将 canvas 转换为图片
+qrcodejs2：生成二维码

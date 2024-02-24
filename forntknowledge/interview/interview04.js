@@ -201,3 +201,21 @@ Vue 实现双向绑定最常用的是通过 v-model 指令，它是一个语法�
 工作机制：响应式系统通过劫持数据属性的访问器方法或使用 Proxy 监听数据的变化，来自动触发视图更新。双向绑定则在响应式系统的基础上，通过特定指令（如 v-model）实现了视图到数据和数据到视图的自动同步。
 实现原理：响应式系统的实现依赖于 JavaScript 的高级特性，如 Object.defineProperty 或 Proxy，而双向绑定则是通过指令系统和事件监听器等实现的。
 总结来说，Vue 的响应式系统为数据和视图的单向绑定提供了基础，而双向绑定是在此基础上，通过 v-model 等语法糖，为特定场景（如表单输入）提供了便利的数据双向同步机制。
+
+
+说一下 Webpack 的热更新原理吧
+(敲黑板，这道题必考)
+Webpack 的热更新又称热替换（Hot Module Replacement），缩写为 HMR。这个机制可以做到不用刷新浏览器而将新变更的模块替换掉旧的模块。
+HMR的核心就是客户端从服务端拉去更新后的文件，准确的说是 chunk diff (chunk 需要更新的部分)，实际上 WDS 与浏览器之间维护了一个 Websocket，当本地资源发生变化时，WDS 会向浏览器推送更新，并带上构建时的 hash，让客户端与上一次资源进行对比。客户端对比出差异后会向 WDS 发起 Ajax 请求来获取更改内容(文件列表、hash)，这样客户端就可以再借助这些信息继续向 WDS 发起 jsonp 请求获取该chunk的增量更新。
+后续的部分(拿到增量更新之后如何处理？哪些状态该保留？哪些又需要更新？)由 HotModulePlugin 来完成，提供了相关 API 以供开发者针对自身场景进行处理，像react-hot-loader 和 vue-loader 都是借助这些 API 实现 HMR。
+
+
+说下 React hooks 实现原理
+https://www.iqiyi.com/v_2arn88w4gls.html?vfrm=pcw_dianying&vfrmblk=711219_dianying_fyb&vfrmrst=711219_dianying_fyb_float_video_area2
+
+A：闭包、Fiber、链表
+
+Hooks 主要是利用闭包来保存状态，使用链表保存一系列 Hooks，将链表中的第一个 Hook 与 Fiber 关联。在 Fiber 树更新时，就能从 Hooks 中计算出最终输出的状态和执行相关的副作用
+
+考虑过 React 、 Vue 这类的框架为什么要用 Virtual DOM 机制吗？
+A：为了减少不必要的 DOM 渲染、跨平台、为函数式的 UI 编程打开了大门
