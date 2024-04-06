@@ -470,10 +470,10 @@ https://www.cnblogs.com/konglingxi/p/14348940.html
 H5全屏API与视频全屏
 https://juejin.cn/post/7202809170378031160? 
 
-三面面试官：运行 npm run xxx 的时候发生了什么？
+三面面试官：运行 npm run xxx 的时候发生了什么？ 
 总结
 运行 npm run xxx的时候，npm 会先在当前目录的 node_modules/.bin 查找要执行的程序，如果找到则运行；
 没有找到则从全局的 node_modules/.bin 中查找，npm i -g xxx就是安装到到全局目录；
 如果全局目录还是没找到，那么就从 path 环境变量中查找有没有其他同名的可执行程序。 
-链接：https://juejin.cn/post/7078924628525056007  
+链接：https://juejin.cn/post/7078924628525056007   
   

@@ -401,5 +401,5 @@ https://www.jianshu.com/p/382bb7ecd70f
 axios 请求中断和请求重试
 https://juejin.cn/post/7328112725601927218?utm_source=gold_browser_extension
 
-2种纯前端检测版本更新提示 
+2种纯前端检测版本更新提示  
 https://juejin.cn/post/7328670028605784076?utm_source=gold_browser_extension

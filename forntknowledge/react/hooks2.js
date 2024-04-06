@@ -259,7 +259,8 @@ const Demo = () => {
 Q：说下 React hooks 实现原理
 A：闭包、Fiber、链表
 
-Hooks 主要是利用闭包来保存状态，使用链表保存一系列 Hooks，将链表中的第一个 Hook 与 Fiber 关联。在 Fiber 树更新时，就能从 Hooks 中计算出最终输出的状态和执行相关的副作用
+Hooks 主要是利用闭包来保存状态，使用链表保存一系列 Hooks，将链表中的第一个 Hook 与 Fiber 关联。
+在 Fiber 树更新时，就能从 Hooks 中计算出最终输出的状态和执行相关的副作用
 
 
 useEffect(fn, []) 和 componentDidMount 有什么差异

@@ -165,3 +165,23 @@ https://fe.azhubaby.com/WebApp/%E7%BD%91%E9%A1%B5%E9%95%BF%E6%8C%89%E4%BF%9D%E5%
 html2canvas：将HTML 转换为 canvas
 canvas2image：将 canvas 转换为图片
 qrcodejs2：生成二维码
+
+
+记一次页面截图需求
+https://juejin.cn/post/7339671825646338057?utm_source=gold_browser_extension
+后端方案
+前端方案
+html2canvas
+dom-to-image
+dom-to-image-more
+html-to-image
+modern-screenshot
+
+前端面试：前端如何无感刷新token；token还没有刷新完成时，发送了其他请求需要如何处理
+https://juejin.cn/post/7339741848078139430?utm_source=gold_browser_extension
+
+
+react
+vue3
+Node
+android 

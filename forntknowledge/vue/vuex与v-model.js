@@ -63,7 +63,7 @@ export default {
   methods: {
     ...mapMutations(['updateMessage']),
   },
-};
+}; 
 </script>
 
 在这个示例中，localMessage 是一个计算属性，通过 v-model 与输入框的值双向绑定。当输入框的值变化时，localMessage 会通过 set 方法将变化同步到 Vuex 中的 message。

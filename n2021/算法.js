@@ -366,4 +366,4 @@ let sum = decimal1 + decimal2;  // 计算十进制数的和
 
 let binarySum = sum.toString(2);  // 将十进制数转换为二进制字符串
 
-console.log(binarySum);  // 输出二进制数的和    
+console.log(binarySum);  // 输出二进制数的和     

@@ -6,7 +6,6 @@ react合成事件再执行
 document上挂载的事件最后执行
 
 
-
 8 Webpack Proxy工作原理？为什么能解决跨域
 https://interview.html5.wiki/advance.html#_6-%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%B8%8B-tree-shaking
 1. 是什么
@@ -37,9 +36,7 @@ function MinCoinChange(coins) {
 }
 
 MinCoinChange([1,2,5,10])(20)
-
 返回：10,10
-
 
 36 大数相加
 let a = "9007199254740991";
@@ -349,12 +346,7 @@ useEffect和useLayoutEffect区别
 
 useEffect:回调在组件渲染完成之后的一个延迟函数中执行，不会阻塞视图渲染
 useLayoutEffect:在render之后执行，执行时机相当于componentDidMount和componentDidUpdate，会同步触发组件重新render，会阻塞视图渲染
-
-作者：攻城师不浪
 链接：https://juejin.cn/post/7117142442926686215
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 
 const promiseAll = (promises) => {
   let res = []
@@ -442,4 +434,4 @@ Vue.js 中的双向数据绑定原理是基于数据劫持和发布-订阅模式
 2.发布-订阅模式（Publish-Subscribe Pattern）：Vue.js 中有一个发布者-订阅者模式的实现，当数据发生变化时，会通知所有依赖这个数据的地方进行更新。这种机制保证了数据和视图的一致性。
 
 具体来说，Vue.js 将 data 中的属性通过 Object.defineProperty() 方法转化为 getter 和 setter，当数据被访问或者修改时，会触发对应的 getter 和 setter 方法。在 Vue 实例初始化时，会创建一个依赖收集器，用来收集所有依赖于数据的 Watcher，当数据发生变化时，会通知所有的 Watcher 执行更新操作，进而更新视图。
-这种双向绑定的机制使得开发者可以在视图层面直接操作数据，而无需手动更新 DOM，极大地提高了开发效率和代码可维护性。
+这种双向绑定的机制使得开发者可以在视图层面直接操作数据，而无需手动更新 DOM，极大地提高了开发效率和代码可维护性。 

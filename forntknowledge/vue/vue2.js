@@ -161,7 +161,7 @@ Vue是pull+push的方式侦测变化的,在一开始就知道那个组件发生�
 Vue2（3）全家桶+TS
 https://juejin.cn/column/7054086173311893512
 
-watch可以监听computed中的属性 **********
+watch可以监听computed中的属性 **********--------
 
 vue的nextTick原理
 nextTick理解
@@ -281,13 +281,13 @@ https://www.bilibili.com/video/BV1VA411x76D?p=3
 快速掌握虚拟DOM和diff算法【Vue】🔥
 https://www.bilibili.com/video/BV1dV411a7mT/
 
-1。只比较同一层级，不跨级比较
-2.标签名不同，直接删除，不继续深度比较
-3.标签名相同，key相同，就认为是相同的节点，不继续深度比较 
+1只比较同一层级，不跨级比较
+2标签名不同，直接删除，不继续深度比较
+3标签名相同，key相同，就认为是相同的节点，不继续深度比较 
 
 【Vue知识】set方法的实现      
 https://www.bilibili.com/video/BV1xv411472h?spm_id_from=333.999.0.0
-【Vue知识】provide和inject的原理 
+【Vue知识】provide和inject的原理  
 https://www.bilibili.com/video/BV1rK4y1V7Wj?spm_id_from=333.999.0.0  
 Vue父组件使用scoped无法修改子组件样式  
 https://blog.gaogangsever.cn/vue/Vue%E7%88%B6%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8scoped%E6%97%A0%E6%B3%95%E4%BF%AE%E6%94%B9%E5%AD%90%E7%BB%84%E4%BB%B6%E6%A0%B7%E5%BC%8F.html#sidebar-false

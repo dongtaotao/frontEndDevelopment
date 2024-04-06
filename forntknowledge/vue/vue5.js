@@ -221,8 +221,7 @@ useMemo等函数正确的捕获依赖变量，否则会由于依赖不正确使�
 虽然Compositon API看起来比React Hook好用，但是其设计思想也是借鉴React Hook的。
 
 链接：https://juejin.cn/post/7210596158934614077
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
 
 如何使用 pnpm+vite+vue3 搭建组件库并发布到私有仓库（人人都能学会）
 https://juejin.cn/post/7212538330829996092?
@@ -265,5 +264,5 @@ Vue3+i18n多语言动态国际化设置步骤详解
 https://juejin.cn/post/7236028062872993852?utm_source=gold_browser_extension
 
 
-Vue打包后，及时更新版本的一种方法 
+Vue打包后，及时更新版本的一种方法  
 https://juejin.cn/post/7236263262073225274?utm_source=gold_browser_extension    

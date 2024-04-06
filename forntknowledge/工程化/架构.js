@@ -79,7 +79,7 @@ Vuex 状态管理：在大型应用中，组件之间的状态管理可能变得
 
 
 
-【架构师（ 终结篇）】前端架构师课程总结   
+【架构师（ 终结篇）】前端架构师课程总结    
 https://juejin.cn/post/7246955696091529273?utm_source=gold_browser_extension 
 
 

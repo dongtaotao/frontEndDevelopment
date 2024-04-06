@@ -405,5 +405,5 @@ resolve的模块的default属性就是组件MyComponent本身。
 Link 的本质也是a 标签。只不过在Link 中禁用了 a 标签的默认事件，改用了history对象提供的方法进行跳转。
 https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/135     
 
-移动端小案例,最好有react基础   
+移动端小案例,最好有react基础    
 https://www.bilibili.com/video/BV1uL4y1N7qn?p=7&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a   

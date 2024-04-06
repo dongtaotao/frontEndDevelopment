@@ -579,4 +579,4 @@ Redux使用的是不可变数据，而Vuex的数据是可变的。Redux每次都
 Redux在检测数据变化的时候，是通过diff的方式比较差异的，而Vuex其实和Vue的原理一样，是通过 getter/setter来比较的(如果看Vuex源码会知道，其实他
 内部直接创建一个Vue实例用来跟踪数据变化)
 
-`MySQL`是传统的关系型数据库，`MongoDB`则是非关系型数据库         
+`MySQL`是传统的关系型数据库，`MongoDB`则是非关系型数据库          

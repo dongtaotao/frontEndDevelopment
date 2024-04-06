@@ -60,4 +60,46 @@ https://wangziqi.tech/pages/4283fd/#%E9%94%99%E8%AF%AF%E7%9A%84%E6%96%B9%E5%BC%8
 <div classNames={[styles.className1,styles.className2].join(' ')}></div>
 
 react中如何修改antd 样式而不影响全局
-https://juejin.cn/post/7239226304398950437
+https://juejin.cn/post/7239226304398950437 
+
+
+
+//================================================================
+class YourComponent extends React.Component {
+  // 定义一个方法，用于调用接口并更新组件状态
+  fetchDataAndUpdateState = async (props) => {
+    try {
+      // 调用接口，假设 fetchSomeData 是一个异步函数
+      const newData = await fetchSomeData(props);
+      // 更新组件状态
+      this.setState({ data: newData });
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    // 返回 null 表示不对 state 进行更新
+    return null;
+  }
+
+  componentDidUpdate(prevProps) {
+    // 在 componentDidUpdate 中判断 props 是否发生变化
+    if (prevProps.someValue !== this.props.someValue) {
+      // 调用异步方法更新组件状态
+      this.fetchDataAndUpdateState(this.props);
+    }
+  }
+
+  // 初始化 state
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: null // 初始状态为 null
+    };
+  }
+
+  render() {
+    // 渲染逻辑
+  }
+}

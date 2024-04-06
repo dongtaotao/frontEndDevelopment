@@ -400,7 +400,7 @@ https://juejin.cn/post/6844903849166110728
 三千字讲清TypeScript与React的实战技巧
 https://juejin.cn/post/6844903897790677005 
 
-.useImperativeHandle 穿透 Ref
+useImperativeHandle 穿透 Ref
 通过 useImperativeHandle 用于让父组件获取子组件内的索引
 
 React新的生命周期，为什么 getDrivedStatefromProps 是静态的？
@@ -432,4 +432,4 @@ React整理 面试
 https://blog.csdn.net/MichelleZhai/article/details/118423494
 
 React项目实战，超越所仿网站，一学就会
-https://juejin.cn/post/7114138865702535199       
+https://juejin.cn/post/7114138865702535199        

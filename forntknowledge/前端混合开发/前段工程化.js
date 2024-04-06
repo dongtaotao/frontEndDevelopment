@@ -20,7 +20,7 @@ https://juejin.cn/post/7151961741776125989
 
 
 15天带你精通现代前端工具链生态 
-https://juejin.cn/column/7287224080172302336  
+https://juejin.cn/column/7287224080172302336   
 
 
 前端工程化 → 深入SDK架构设计

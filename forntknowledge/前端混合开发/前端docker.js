@@ -67,7 +67,7 @@ docker build -t my-frontend-app .
 docker run -d --name my-frontend-container -p 80:80 my-frontend-app
 其中，my-frontend-container 是自定义的容器名称，80:80 表示将容器内部的 80 端口映射到主机的 80 端口，my-frontend-app 是之前构建的 Docker 镜像名称。
 
-现在，可以使用浏览器访问 http://localhost 来查看部署后的前端应用了。 
+现在，可以使用浏览器访问 http://localhost 来查看部署后的前端应用了。  
 
 以上是一个简单的前端项目在 Docker 中部署的步骤。当然，在实际应用中，你还需要考虑更多的细节问题，比如如何将环境变量传递到容器中、
 如何使用 Docker Compose 管理多个容器等等。如果你想了解更多关于在 Docker 中部署前端项目的知识，建议参考相关的文档和资料。

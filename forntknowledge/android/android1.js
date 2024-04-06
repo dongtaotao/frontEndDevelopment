@@ -409,4 +409,4 @@ Android开发笔记（一百八十二）使用CameraX录像
 原文链接：https://blog.csdn.net/aqi00/article/details/50012511
 
 《Android Studio开发实战 从零基础到App上线(第2版)》出版后记
-https://blog.csdn.net/aqi00/article/details/84332240
+https://blog.csdn.net/aqi00/article/details/84332240 

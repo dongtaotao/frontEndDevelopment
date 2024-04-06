@@ -161,5 +161,24 @@ https://fe.ecool.fun/topic/252525e4-0c4c-4e41-9279-41bc59f06f85?orderBy=updateTi
 https://fe.ecool.fun/topic/38c7340e-cb35-43e0-8ea0-20e75b2780a5?orderBy=updateTime&order=desc&tagId=14
 
 
-vant项目使用postcss-pxtorem和amfe-flexible 进行移动端适配
+vant项目使用postcss-pxtorem和amfe-flexible 进行移动端适配 
 https://wangziqi.tech/pages/b275f3/#%E6%AD%A5%E9%AA%A4
+
+
+
+//父组件:
+provide: { //provide 是一个对象,提供一个属性或方法
+  foo: '这是 foo',
+  fooMethod:()=>{
+    console.log('父组件 fooMethod 被调用')
+  }
+},
+
+// 子或者孙子组件
+inject: ['foo','fooMethod'], //数组或者对象,注入到子组件
+mounted() {
+  this.fooMethod()
+  console.log(this.foo)
+}
+//在父组件下面所有的子组件都可以利用inject
+https://juejin.cn/post/6844903959266590728 

@@ -64,22 +64,14 @@ JavaScript 文件相互引用，通常指的是模块之间的循环依赖（cir
 
 一个很大的json文件，前端读取如何优化
 对于大量的 JSON 数据，前端需要进行相应的优化以提高性能：
-
 分页读取：如果服务器端支持，你可以一次性只查询一小部分数据，而不是一次性获取所有数据。这可以通过为 API 添加分页参数（例如 limit 和 offset 或 page 和 pageSize）来实现。同时，前端也可以通过"懒加载"（滚动到底部再加载更多数据）或者"分页加载"（每页只加载一定数量的数据）来逐步显示数据。
-
 流处理：对于非常大的 JSON 文件，一次性读取和解析可能会消耗大量的内存甚至导致浏览器崩溃。一种解决方案是使用Streaming JSON Parser，如 Oboe.js 或 JSONStream。这类库允许你一边下载一边解析 JSON，无需等待完整的 JSON 文件被下载。
-
 选择性读取：如果你仅需要 JSON 中的某部分数据，而且服务端支持 GraphQL 或者类似的 API，那么你可以只获取需要的数据。这样可以减少网络传输的数据量，也减轻了解析和处理 JSON 的负担。
-
 在 Web Worker 中解析 JSON： 如果 JSON 文件非常大，主线程中的 JSON 解析可能会阻塞 UI，导致页面卡顿。使用 Web Worker 可以在后台线程中进行解析，这样就不会影响 UI 的流畅性。
-
 压缩和解压缩：如果可以的话，服务器应该压缩 JSON 响应，在浏览器端使用 gzip 或者 brotli 等解压，这样可以显著降低数据的传输量。
-
 对数据进行索引：如果你需要对大量数据进行搜索或过滤，那么在数据上创建索引可能会很有用。虽然创建索引需要额外的内存和一些处理时间，但是对于复杂的查询，这可能会大大提高性能。
-
 使用适合的数据结构和算法：对于大量的 JSON 数据，选择合适的数据结构和算法进行处理也非常重要，能够有效提高数据处理的性能。
 总之，前端处理大 JSON 文件的最佳策略取决于具体的应用场景和需求，可能需要试验不同的优化策略来找出最适合自己的方案。
-
 
 
 js   tree-shaking的操作是文件级别还是函数级别的
@@ -140,13 +132,11 @@ https://sentry.io
 https://www.open-open.com/lib/view/open1414631044559.html
 
 
-
 前端错误监控 -【Vue】与【Sentry】的结合
 https://juejin.cn/post/6844903831256432648
 
 记一次Sentry部署过程
 https://juejin.cn/post/6844903826793709581
-
 
 
 Vue React diff
@@ -193,7 +183,6 @@ vuex原理
 3）vuexInit方法实现将vuex store注册到当前组件的$store属性上
 4）vuex的state作为一个隐藏的vue组件的data，定义在state上面的变量，相当于这个vue实例的data属性，凡是定义在data上的数据都是响应式的
 5）当页面中使用了vuex state中的数据，就是依赖收集的过程，当vuex中state中的数据发生变化，就通过调用对应属性的dep对象的notify方法，去修改视图变化
-
 链接：https://juejin.cn/post/7146996646394462239
 
 介绍下中间人攻击
@@ -287,7 +276,6 @@ webpack proxy，即webpack提供的代理服务
 基本行为就是接收客户端发送的请求后转发给其他服务器
 
 
-
 Vue3的v-if 和v-for优先级详解
 https://juejin.cn/post/7128328827981266980
 结论
@@ -344,9 +332,7 @@ Vue.createApp({
     }
   }
 }).mount('#app')
- 
-        @程序员poetry: 代码已经复制到剪贴板
-    
+   
 vue2中组件确实只能有一个根，但vue3中组件已经可以多根节点了。
 之所以需要这样是因为vdom是一颗单根树形结构，patch方法在遍历的时候从根节点开始遍历，它要求只有一个根节点。组件也会转换为一个vdom
 vue3中之所以可以写多个根节点，是因为引入了Fragment的概念，这是一个抽象的节点，如果发现组件是多根的，就创建一个Fragment节点，把多个根节点作为它的children。
@@ -418,5 +404,5 @@ https://fe.ecool.fun/topic/38c7340e-cb35-43e0-8ea0-20e75b2780a5?orderBy=updateTi
 
 
 
-React 中怎么实现状态自动保存（KeepAlive）？
+React 中怎么实现状态自动保存（KeepAlive）？ 
 https://fe.ecool.fun/topic/321f6c36-eff4-4fc4-8a86-c989bb1a2779?orderBy=updateTime&order=desc&tagId=13

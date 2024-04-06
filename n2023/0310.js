@@ -240,7 +240,8 @@ https://juejin.cn/post/7211088034179366973?
 实现文件分片上传 🔥🔥🔥
 https://juejin.cn/post/7211401380770627643?
 实现文件分片上传
-在大文件上传的过程中，文件分片上传是一种非常实用的解决方案。通过将文件分成多个较小的片段，我们可以提高上传速度、减少失败率，以及实现断点续传。本文将介绍如何使用React和Koa2实现文件分片上传功能，包括前端分片处理、后端合并分片、为每个文件分配唯一标识符、实现断点续传和上传进度显示（console打印下得了--！）。
+在大文件上传的过程中，文件分片上传是一种非常实用的解决方案。通过将文件分成多个较小的片段，我们可以提高上传速度、减少失败率，以及实现断点续传。
+本文将介绍如何使用React和Koa2实现文件分片上传功能，包括前端分片处理、后端合并分片、为每个文件分配唯一标识符、实现断点续传和上传进度显示（console打印下得了--！）。
 链接：https://juejin.cn/post/7211401380770627643
 
 快速实现上传进度条功能
@@ -479,5 +480,18 @@ const targetId = '112';
 const path = findPath(list, targetId);
 console.log(path); // [ '1', '11', '112' ]
 以上就是查找JS复杂数组树中目标节点路径的方法实现。如需了解更多关于JS的知识，可以参考来源链接 1。     
- 
+  
+
+
+React错误边界：原理、实现与应用
+https://juejin.cn/post/7350970626267611162?utm_source=gold_browser_extension
+
+web-worker的基本用法并进行大文件切片上传（附带简易node后端）
+https://juejin.cn/post/7351300892572745764?utm_source=gold_browser_extension
+
+
+html2canvas 图片跨域问题的解决方案及其原理
+https://juejin.cn/post/7351321244125364234?utm_source=gold_browser_extension
+
+
 

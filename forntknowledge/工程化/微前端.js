@@ -34,7 +34,6 @@ wujie 预加载和原理
 模块联邦技术
 
 
-
 前端技术圈有那么多微前端框架，到底选择那个才是最优的
 https://www.bilibili.com/video/BV1fG4y1e7Rn/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 
@@ -57,7 +56,7 @@ qiankun概述
 4解决静态资源不显示的问题
 5主应用和子应用之间通信
 6qiankun接入vue3
-7.react子应用接入路由
+7react子应用接入路由
 8vue3子应用接入路由
 9课程中的npm插件
 https://www.bilibili.com/video/BV16T4y1e7TC/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
@@ -158,5 +157,5 @@ https://juejin.cn/post/7311907901047324722?utm_source=gold_browser_extension
 
 
 
-micro-app微前端快速入门
+micro-app微前端快速入门 
 https://www.bilibili.com/video/BV1W34y1v7dQ/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a

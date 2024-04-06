@@ -1,8 +1,6 @@
 【算法面试】leetcode最常见的150道前端面试题 ---- 简单题上（44题
 https://juejin.cn/post/6987320619394138148    
 
-春招腾讯50题计划
-https://juejin.cn/column/7070454142849777678
 
 验证回文字符串|| https://juejin.cn/post/7031151977904275463
 描述：给定一个非空字符串 最多删除一个字符 判断是否能成为回文字符串 
@@ -532,4 +530,4 @@ var lowestCommonAncestor = function(root, p, q) {
         return x || y; 
     }
 }; 
-  
+   

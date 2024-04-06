@@ -51,7 +51,8 @@ https://www.jianshu.com/p/d627e8428e56
 react-redux 是如何集成到 UI 的？
 react-redux 提供了两个主要的组件 Provider 和 connect，它们用于将 Redux 状态管理与 React 组件相结合。
 首先，使用 Provider 组件将 Redux store 传递给整个应用程序。可以将 <Provider> 组件作为最高层的组件，这样在应用程序中的所有组件中都可以访问到 Redux store。
-下一步，使用 connect 函数连接 Redux store 和组件。connect 函数是一个高阶函数，它接收两个参数：mapStateToProps 和 mapDispatchToProps，并返回另一个函数，
+下一步，使用 connect 函数连接 Redux store 和组件。connect 函数是一个高阶函数，它接收两个参数：mapStateToProps 和 mapDispatchToProps，
+并返回另一个函数，
 这个函数接受一个组件作为参数，并返回一个增强版的组件。
 mapStateToProps 函数用于从 Redux store 中获取需要的 state 数据，并将其映射到组件的 props 上。mapDispatchToProps 函数用于将 action creator 映射到组件的 
 props 上，这样组件就可以直接调用 action creator 发起 action，而不需要手动分发 dispatch。
@@ -171,13 +172,7 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);
-
-作者：yanlele
 链接：https://juejin.cn/post/7217436082144395321
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 
-
-
 
 面试官：熟悉 redux 是吧？要不手写一个？
 https://juejin.cn/post/7241487780464001061?utm_source=gold_browser_extension   

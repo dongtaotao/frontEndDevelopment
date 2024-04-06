@@ -307,7 +307,9 @@ function Example() {
     </div>
   );
 }
-在这个示例中，我们使用了一个名为countRef的ref对象来存储计数器count的值。当组件重新渲染时，countRef的值不会改变。然后，在handleClick函数中，我们使用countRef.current来访问和增加计数器count的值，并使用setCount来通知React更新UI。这种方式避免了闭包问题，同时也保证了计数器的状态在重新渲染时正确更新。
+在这个示例中，我们使用了一个名为countRef的ref对象来存储计数器count的值。当组件重新渲染时，countRef的值不会改变。
+然后，在handleClick函数中，我们使用countRef.current来访问和增加计数器count的值，并使用setCount来通知React更新UI。
+这种方式避免了闭包问题，同时也保证了计数器的状态在重新渲染时正确更新。
 
 前端接口请求下发的zip包，怎么下载
 如果前端接口请求下发的是Zip包，可以使用浏览器自带的下载功能进行下载。
@@ -388,7 +390,7 @@ https://juejin.cn/post/7232947178691444794?utm_source=gold_browser_extension
 WebRTC视频通话过程中如何禁止或者启用自动调整分辨率 
 https://juejin.cn/post/7232872175647473722?utm_source=gold_browser_extension
 
-多个同时打开的页面之间如何通信，请看这里
+多个同时打开的页面之间如何通信，请看这里 
 https://juejin.cn/post/7232637596945514554?utm_source=gold_browser_extension
 
 从前端到后端如何实现大文件上传？

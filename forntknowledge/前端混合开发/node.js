@@ -231,7 +231,7 @@ https://www.bilibili.com/video/BV1gV411B7AU/?p=2&spm_id_from=pageDriver&vd_sourc
 
 
 
-node服务开发和服务器部署（node.js+koa2+pm2+nginx）教程（带视频） 
+node服务开发和服务器部署（node.js+koa2+pm2+nginx）教程（带视频）  
 node开发和部署，从零到用域名访问系列教程（node+koa2+pm2+nginx+Linux） 
 https://juejin.cn/post/6844904080414867469
 https://www.bilibili.com/video/BV1TE411E7uD?p=2&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a

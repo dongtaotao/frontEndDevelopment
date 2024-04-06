@@ -1,4 +1,3 @@
-
 vue3怎么定义全局变量，vue2可以挂在Vue.prototype
 
 在Vue 3中，定义全局变量和Vue 2有一些不同。Vue 2中常用的方式是通过Vue.prototype添加全局变量，但在Vue 3中，
@@ -57,7 +56,7 @@ vue3怎么定义全局变量，vue2可以挂在Vue.prototype
 https://www.bilibili.com/video/BV1qG4y1z7Qg/?spm_id_from=333.788&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 
 
-vite + vue3 关于项目性能优化
+vite + vue3 关于项目性能优化 
 https://juejin.cn/post/7306329426282348582?utm_source=gold_browser_extension
 
 

@@ -905,4 +905,4 @@ var removeDuplicates = function (nums) {
   let max = Math.max(...candies);
   return candies.map(item => item + extraCandies >= max);
 };
-链接：https://leetcode-cn.com/problems/kids-with-the-greatest-number-of-candies        
+链接：https://leetcode-cn.com/problems/kids-with-the-greatest-number-of-candies         

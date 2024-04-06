@@ -291,7 +291,7 @@ RN调用原生
     },
   });
   
-  AppRegistry.registerComponent('reactNative', () => reactNative);
+  AppRegistry.registerComponent('reactNative', () => reactNative); 
   
 
 

@@ -130,7 +130,7 @@ function jsonToTree(data) {
   // 
   data.forEach(item => {
     let parent = map[item.pid];
-    if(parent) {
+    if(parent) { 
       (parent.children || (parent.children = [])).push(item);
     } else {
       result.push(item);
@@ -144,7 +144,8 @@ function jsonToTree(data) {
 https://www.yuque.com/cuggz/interview/hswu8g#cc32fdc61aae46b482a76474f21bf2c1
 Vue 的 nextTick 其本质是对 JavaScript 执行原理 EventLoop 的一种应用。
 
-nextTick 的核心是利用了如 Promise 、MutationObserver、setImmediate、setTimeout的原生 JavaScript 方法来模拟对应的微/宏任务的实现，本质是为了利用 JavaScript 的这些异步回调任务队列来实现 Vue 框架中自己的异步回调队列。
+nextTick 的核心是利用了如 Promise 、MutationObserver、setImmediate、setTimeout的原生 JavaScript 方法来模拟对应的微/宏任务的实现，
+本质是为了利用 JavaScript 的这些异步回调任务队列来实现 Vue 框架中自己的异步回调队列。
 
 
 
@@ -215,7 +216,330 @@ https://www.iqiyi.com/v_2arn88w4gls.html?vfrm=pcw_dianying&vfrmblk=711219_dianyi
 
 A：闭包、Fiber、链表
 
-Hooks 主要是利用闭包来保存状态，使用链表保存一系列 Hooks，将链表中的第一个 Hook 与 Fiber 关联。在 Fiber 树更新时，就能从 Hooks 中计算出最终输出的状态和执行相关的副作用
+Hooks 主要是利用闭包来保存状态，使用链表保存一系列 Hooks，将链表中的第一个 Hook 与 Fiber 关联。在 Fiber 树更新时，
+就能从 Hooks 中计算出最终输出的状态和执行相关的副作用
 
 考虑过 React 、 Vue 这类的框架为什么要用 Virtual DOM 机制吗？
 A：为了减少不必要的 DOM 渲染、跨平台、为函数式的 UI 编程打开了大门
+
+
+3. 无重复字符的最长子串
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLongestSubstring = function(s) {
+  let l = 0; // 左指针的初始位置
+  let res = 0; // 长度初始值为0
+  const map = new Map();
+  for(let r = 0; r < s.length; r++) {
+      if(map.has(s[r]) && map.get(s[r]) >= l ) {
+          l = map.get(s[r]) + 1;
+      }
+      res = Math.max(res, r - l + 1);
+      map.set(s[r], r);
+  }
+  return res;
+};
+
+
+111. 二叉树的最小深度
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var minDepth = function(root) {
+  if (!root) {
+          return 0;
+      }
+      const q = [[root,1]]
+      while(q.length) {
+           const [n,l] = q.shift();
+           if(!n.left && !n.right) {
+               return l;
+           }
+           if(n.left) q.push([n.left, l+ 1])
+           if(n.right) q.push([n.right, l+ 1])
+      } 
+};
+102. 二叉树的层序遍历
+https://juejin.cn/post/6973941162952687653#heading-8
+/**
+ * @param {TreeNode} root
+ * @return {number[][]}
+ */
+var levelOrder = function(root) {
+  if(!root) {return [];}
+  const q = [[root,0]];
+  let res = [];
+  while(q.length) {
+      const [n,leave] = q.shift();
+      if(!res[leave]) { // 层级为0 的时候，根节点入队
+          res.push([n.val])
+      }else {
+          res[leave].push(n.val) // 根据层级添加对应的val值
+      }
+      console.log(n.val,leave)
+      if(n.left) q.push([n.left,leave+1]);
+      if(n.right) q.push([n.right,leave+1]);
+  }
+  return res;
+};
+
+
+2.8 二叉树的最大深度
+var maxDepth = function (root) {
+  if (!root) return 0
+  return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1
+};
+
+
+function add(a ,b){
+  //取两个数字的最大长度
+  let maxLength = Math.max(a.length, b.length);
+  //用0去补齐长度
+  a = a.padStart(maxLength , 0);//"0009007199254740991"
+  b = b.padStart(maxLength , 0);//"1234567899999999999"
+  //定义加法过程中需要用到的变量
+  let t = 0;
+  let f = 0;   //"进位"
+  let sum = "";
+  for(let i=maxLength-1 ; i>=0 ; i--){
+     t = parseInt(a[i]) + parseInt(b[i]) + f;
+     f = Math.floor(t/10);
+     sum = t%10 + sum;
+  }
+  if(f!==0){
+     sum = '' + f + sum;
+  }
+  return sum;
+}   
+
+
+pm2
+PM2 是一个流行的进程管理器，用于 Node.js 应用程序。它支持应用程序的负载均衡、自动重启、日志管理、监控以及多环境管理等功能。
+PM2让开发者能够以守护进程的方式运行和管理 Node.js 应用，即使在应用崩溃或服务器重启后也能自动重启应用。
+这使得 PM2非常适合在生产环境中部署 Node.js 应用。除此之外，PM2还支持应用的零停机更新，以及对 Docker 容器的支持。
+
+链接：https://juejin.cn/post/7338691767435100195
+
+什么是合成事件，与原生事件有什么区别？
+React 中所有触发的事件，都是自己在其内部封装了一套事件机制。目的是为了实现全浏览器的一致性，抹平不同浏览器之间的差异性。
+
+在 React17 之前，React 是把事件委托在 document 上的，React17 及以后版本不再把事件委托在 document 上，而是委托在挂载的容器上。React 合成事件采用的是事件冒泡机制，当在某具体元素上触发事件时，等冒泡到顶部被挂载事件的那个元素时，才会真正地执行事件。
+
+而原生事件，当某具体元素触发事件时，会立刻执行该事件。因此若要比较事件触发的先后时机时，原生事件会先执行，React 合成事件会后执行。
+
+
+贪心算法(找零)
+商店老板有1、2、5、10面额的纸币，小伙买东西给了100花了80，计算如何找零是最佳（阿里面试题）
+function MinCoinChange(coins) {
+  return function(amount) {
+    let total = 0, change = []
+    for(let i= coins.length; i>=0; i--) {
+      let coin = coins[i]
+      while(total + coin <= amount) {
+        change.push(coin)
+        total += coin
+      }
+    }
+    return change
+  }
+}
+
+MinCoinChange([1,2,5,10])(20)
+
+返回：10,10
+
+
+两数相加
+var addTwoNumbers = function (l1, l2)
+{
+    const l3 = new ListNode(0)
+    let p1 = l1
+    let p2 = l2
+    let p3 = l3
+    let carry = 0;
+    while(p1 || p2){
+        const v1 = p1 ? p1.val :0
+        const v2 = p2 ? p2.val :0
+        const val = v1 + v2 + carry;
+        carry = Math.floor(val / 10)
+        p3.next = new ListNode(val % 10);
+        if(p1) p1 = p1.next
+        if(p2) p2 = p2.next
+        p3 = p3.next
+    }
+    if(carry){
+        p3.next = new ListNode(carry)
+    }
+    return l3.next
+};
+
+
+合并二叉树
+var mergeTrees = function(t1, t2) {
+  if(t1 && t2){
+      t1.val += t2.val;
+      t1.left = mergeTrees(t1.left,t2.left);
+      t1.right = mergeTrees(t1.right,t2.right);
+  }
+  return t1 || t2;
+};
+
+
+两数相加
+var addTwoNumbers = function (l1, l2)
+{
+    const l3 = new ListNode(0)
+    let p1 = l1
+    let p2 = l2
+    let p3 = l3
+    let carry = 0;
+    while(p1 || p2){
+        const v1 = p1 ? p1.val :0
+        const v2 = p2 ? p2.val :0
+        const val = v1 + v2 + carry;
+        carry = Math.floor(val / 10)
+        p3.next = new ListNode(val % 10);
+        if(p1) p1 = p1.next
+        if(p2) p2 = p2.next
+        p3 = p3.next
+    }
+    if(carry){
+        p3.next = new ListNode(carry)
+    }
+    return l3.next
+}; 
+
+
+React Hooks 实现原理
+https://febook.hzfe.org/awesome-interview/book1/frame-vue-computed-watch
+相关问题
+React Hooks 是什么
+React Hooks 是怎么实现的
+使用 React Hooks 需要注意什么
+回答关键点
+闭包 Fiber 链表
+
+Hooks 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
+
+Hooks 主要是利用闭包来保存状态，使用链表保存一系列 Hooks，将链表中的第一个 Hook 与 Fiber 关联。在 Fiber 树更新时，就能从 Hooks 中计算出最终输出的状态和执行相关的副作用。
+
+使用 Hooks 的注意事项：
+
+不要在循环，条件或嵌套函数中调用 Hooks。
+只在 React 函数中调用 Hooks。
+
+
+Vue 的 computed 和 watch 的区别
+相关问题
+computed 和 watch 的实现原理
+computed 和 watch 的适用场景 
+https://febook.hzfe.org/awesome-interview/book1/frame-vue-computed-watch
+
+
+webpack如何实现懒加载
+
+import()
+结合Vue React异步组件
+结合Vue-router``React-router异步加载路由
+
+
+为什么 Vite 启动这么快
+Webpack 会先打包，然后启动开发服务器，请求服务器时直接给予打包结果。
+而 Vite 是直接启动开发服务器，请求哪个模块再对该模块进行实时编译。
+Vite 将开发环境下的模块文件，就作为浏览器要执行的文件，而不是像 Webpack 那样进行打包合并。
+由于 Vite 在启动的时候是通过esbuild方式进行EsModel原生引入浏览器且按需更新。也就意味着不需要分析模块的依赖、不需要编译。因此启动速度非常快。当浏览器请求某个模块时，再根据需要对模块内容进行编译。
+链接：https://juejin.cn/post/6991724298197008421
+
+如何监控网页崩溃？**崩溃和卡顿有何差别？**监控错误
+Service Worker 有自己独立的工作线程，与网页区分开，网页崩溃了，Service Worker 一般情况下不会崩溃；
+Service Worker 生命周期一般要比网页还要长，可以用来监控网页的状态；
+卡顿：加载中，渲染遇到阻塞
+链接：https://juejin.cn/post/6991724298197008421
+
+
+http 中的 keep-alive 有什么作用
+响应头中设置 keep-alive 可以在一个 TCP 连接上发送多个 http 请求
+
+避免CSS全局污染
+1.scoped 属性
+2.css in js
+
+js复制代码const styles = {
+  bar: {
+    backgroundColor: '#000'
+  }
+}
+const example = (props)=>{
+  <div style={styles.bar} />
+}
+
+
+3.CSS Modules
+4.使用less，尽量少使用全局对选择器
+
+js复制代码// 选择器上＞要记得写，免得污染所有ul下面的li
+ul｛
+  ＞li｛
+    color：red；
+  }
+}
+
+链接：https://juejin.cn/post/6991724298197008421
+
+
+  // 防抖
+  function debounce(fn) {
+  let timeout = null; 
+  return function () {
+    // 如果事件再次触发就清除定时器，重新计时
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      fn.apply(this, arguments);
+    }, 500);
+  };
+}
+
+// 节流
+function throttle(fn) {
+  let flag = null; // 通过闭包保存一个标记
+  return function () {
+    if (flag) return; // 当定时器没有执行的时候标记永远是null
+    flag = setTimeout(() => {
+      fn.apply(this, arguments);
+        // 最后在setTimeout执行完毕后再把标记设置为null(关键)
+        // 表示可以执行下一次循环了。
+      flag = null;
+    }, 500);
+  };
+}
+
+
+
+6.lru算法 https://juejin.cn/post/6896810576778166280
+class LRU { 
+    constructor(max) {
+        this.max = max
+        this.cache = new Map()
+    }
+    get(key) {
+        const { cache } = this
+        const value = cache.get(key)
+        if (!value) return -1
+        cache.delete(key)
+        cache.set(key, value)
+        return value
+    }
+    set(key, value) {
+        const { cache, max } = this
+        if (cache.has(key)) {
+            cache.delete(key)
+        }
+        if (cache.size === max) {
+            cache.delete(cache.keys().next().value)
+        }
+        cache.set(key, value)
+    }
+}

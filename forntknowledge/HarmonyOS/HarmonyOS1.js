@@ -15,5 +15,5 @@ https://www.bilibili.com/video/BV1pb4y1g75m/?spm_id_from=333.788.recommend_more_
 
 https://mayw-teaching.feishu.cn/docx/Wt8hd2Jj3ordp0xTYe7cmiiqnwg
 
-【鸿蒙开发教程】2024年全网首发HarmonyOS4.0开发教程，零基础入门到项目实战（全教程600集）
+【鸿蒙开发教程】2024年全网首发HarmonyOS4.0开发教程，零基础入门到项目实战（全教程600集） 
 https://www.bilibili.com/video/BV14C4y1N74Y/?spm_id_from=333.337.search-card.all.click&vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a

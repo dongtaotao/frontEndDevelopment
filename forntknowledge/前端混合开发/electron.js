@@ -55,7 +55,7 @@ https://www.bilibili.com/video/BV1so4y1X7ny?p=3&vd_source=0c743a1becd4c9f9a0c3fc
 
 
 
-Electron超详细实战开发教程
+Electron超详细实战开发教程 
 https://www.bilibili.com/video/BV1QB4y1F722/?vd_source=0c743a1becd4c9f9a0c3fcf9b6579f8a
 00-最新Electron课程介绍
 01-electron介绍与第一个应用

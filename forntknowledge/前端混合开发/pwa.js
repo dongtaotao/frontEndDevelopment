@@ -7,6 +7,6 @@ PWA全称Progressive Web App，即渐进式WEB应用
 实现离线缓存功能，即使用户手机没有网络，依然可以使用一些离线功能
 实现了消息推送
 它解决了上述提到的问题，这些特性将使得 Web 应用渐进式接近原生 App。    
-
+ 
 PWA渐进式webAPP 
 https://www.bilibili.com/video/BV13E411e7kh?spm_id_from=333.337.search-card.all.click     

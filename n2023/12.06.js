@@ -347,14 +347,11 @@ https://q.shanyue.tech/engineering/e751
 https://juejin.cn/post/7313242064196141065?utm_source=gold_browser_extension
 
 
-
 面试官：你知道websocket的心跳机制吗？
 前端实现WebSocket心跳机制的方式主要有两种：
 使用setInterval定时发送心跳包。
 在前端监听到WebSocket的onclose()事件时，重新创建WebSocket连接。
 https://juejin.cn/post/7290005438153867283
-
-
 
 
 面试官：你之前的工作发布过npm包吗？
@@ -703,4 +700,4 @@ https://cloud.tencent.com/developer/article/1983792
 算法🐯
 flutter🐯
 android🐯 
-鸿蒙🐯
+鸿蒙🐯 

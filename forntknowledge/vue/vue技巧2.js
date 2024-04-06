@@ -125,7 +125,7 @@ https://juejin.cn/post/7226387497566257212?utm_source=gold_browser_extension
 3.16.1 开启服务端 Gzip 功能
 3.16.2 开启静态压缩时，前端打包时需准备好 .gz 文件
 
-巧用$options
+巧用$options========================
 $options是一个记录当前Vue组件的初始化属性选项，当我们想把 data 里的某个值重置为初始值时，非常有用
 例如：
 this.value = this.$options.data().value;
@@ -476,6 +476,6 @@ export default {
       this.value = val
     }
   },
-}
+} 
 </script>
 当修改该自定义组件中的值时，就会通过 update:modelValue 事件触发 handleUpdate 函数，并将修改后的值赋给父组件的 value 属性。   

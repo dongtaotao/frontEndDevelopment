@@ -152,4 +152,4 @@ class MyComponent extends Component {
 
 在上面的示例中，我们将myMethod方法定义为一个箭头函数，并在getDerivedStateFromProps中实例化一个MyComponent对象来调用它。
 由于箭头函数绑定了组件类的上下文，因此可以在函数内部使用this来引用组件实例。
-希望这可以解释上述问题，感谢您指出我的错误。 
+希望这可以解释上述问题，感谢您指出我的错误。  
