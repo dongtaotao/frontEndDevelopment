@@ -87,3 +87,7 @@ https://juejin.cn/post/7332734911232229385?utm_source=gold_browser_extension
  
 微信网页开发之 JS-SDK
 https://fe.azhubaby.com/WebApp/WeChat/%E5%BE%AE%E4%BF%A1%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E4%B9%8BJS-SDK.html
+
+
+微信内置H5支付
+https://juejin.cn/post/7358403202612772915?utm_source=gold_browser_extension

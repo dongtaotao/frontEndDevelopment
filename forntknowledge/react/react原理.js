@@ -35,3 +35,71 @@ https://juejin.cn/post/7071914394799570975
 
 
 缓存页面 React-keepalive-router 
+
+
+
+
+React错误边界：原理、实现与应用
+https://juejin.cn/post/7350970626267611162
+import React, { Component } from 'react';  
+  
+class ErrorBoundary extends Component {  
+  constructor(props) {  
+    super(props);  
+    this.state = { hasError: false };  
+  }  
+  
+  static getDerivedStateFromError(error) {  
+    // 当子组件树中发生错误时，更新状态  
+    return { hasError: true };  
+  }  
+  
+  componentDidCatch(error, errorInfo) {  
+    // 你可以在这里记录错误信息、执行清理操作等等 
+    console.error("抓到错误了:", error, errorInfo);  
+  }  
+  
+  render() {  
+    if (this.state.hasError) {  
+      // 渲染降级后的UI  
+      return <h1>兄弟别搞啊，有错误了。</h1>;  
+    }  
+  
+    // 正常渲染子组件  
+    return this.props.children;  
+  }  
+}  
+  
+export default ErrorBoundary;
+
+
+import React, { useState, useEffect } from 'react';  
+  
+const ErrorBoundary = ({ children }) => {  
+  const [hasError, setHasError] = useState(false);  
+  
+  useEffect(() => {  
+    if (hasError) {  
+      // 清理操作（如果有的话）  
+    }  
+  }, [hasError]);  
+  
+  if (hasError) {  
+    // 渲染降级后的UI  
+    return <h1>兄弟别搞啊，有错误了。</h1>;  
+  }  
+  
+  try {  
+    // 尝试渲染子组件，如果发生错误则捕获  
+    return children;  
+  } catch (error) {  
+    console.error("抓到错误了:", error);  
+    setHasError(true);  
+    // 注意：这里我们不应该重新抛出错误，因为这会导致React无法处理它  
+    // throw error; // 不应该重新抛出错误  
+    return null; // 或者返回一个备用的UI元素  
+  }  
+};  
+  
+export default ErrorBoundary;
+

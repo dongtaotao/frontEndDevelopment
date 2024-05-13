@@ -52,4 +52,4 @@ const ErrorTrackingPlugin = {
   }
 };
 
-export default ErrorTrackingPlugin;
+export default ErrorTrackingPlugin; 
