@@ -22,3 +22,7 @@ react项目中配置代理
 https://juejin.cn/post/7315304715809472512?utm_source=gold_browser_extension
 使用 create-react-app 创建的react项目； react V18.2.0
 http-proxy-middleware V2.0.6 
+
+
+React 19 总览
+https://juejin.cn/post/7379416139975721023?utm_source=gold_browser_extension

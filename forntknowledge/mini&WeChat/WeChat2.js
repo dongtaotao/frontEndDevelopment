@@ -91,3 +91,7 @@ https://fe.azhubaby.com/WebApp/WeChat/%E5%BE%AE%E4%BF%A1%E7%BD%91%E9%A1%B5%E5%BC
 
 微信内置H5支付
 https://juejin.cn/post/7358403202612772915?utm_source=gold_browser_extension
+
+
+uni-app上下级页面数据双向通信
+https://juejin.cn/post/7379416139975688255?utm_source=gold_browser_extension
