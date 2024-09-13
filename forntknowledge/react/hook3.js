@@ -96,3 +96,35 @@ https://juejin.cn/post/7292601783725424681?utm_source=gold_browser_extension#hea
 
 React 面试题: 不一定最全但绝对值得收藏！！(11 ~ 20)（万字总结）
 https://juejin.cn/post/7292584449526071305?utm_source=gold_browser_extension 
+
+
+
+
+react生命周期
+React组件的生命周期可以被分为三个阶段：
+
+初始化阶段：当组件实例被创建并挂载到DOM中时，会执行这些生命周期方法。
+
+constructor()
+
+static getDerivedStateFromProps()
+
+render()
+
+componentDidMount()
+
+更新阶段：当组件的props或state发生变化时，会执行这些生命周期方法。
+
+static getDerivedStateFromProps()
+
+shouldComponentUpdate()
+
+render()
+
+getSnapshotBeforeUpdate()
+
+componentDidUpdate()
+
+卸载阶段：当组件从DOM中卸载时，会执行这个生命周期方法。
+
+componentWillUnmount() 
