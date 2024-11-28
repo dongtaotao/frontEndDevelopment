@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>vue-crawler</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        axios.get('http://localhost:3000/scrape')
+            .then(response => {
+                const data = response.data;
+                const resultDiv = document.getElementById('result');
+                if (data && data.length > 0) {
+                    const topArticle = data[0];
+                    resultDiv.innerHTML = `
+                        <h2>Top Vue.js Article:</h2>
+                        <p>Title: ${topArticle.title}</p>
+                        <p>Likes: ${topArticle.like}</p>
+                        <p>Link: ${topArticle.href}</p>
+                    `;
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                document.getElementById('result').innerHTML = 'Error fetching data';
+            });
+    </script>
+</body>
+</html>
