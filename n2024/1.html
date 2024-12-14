@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>九九乘法表</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 20px;
+        }
+        td {
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table id="multiTable"></table>
+
+    <script>
+        window.onload = function() {
+            const table = document.getElementById('multiTable');
+            
+            for(let i = 1; i <= 9; i++) {
+                const tr = document.createElement('tr');
+                
+                for(let j = 1; j <= i; j++) {
+                    const td = document.createElement('td');
+                    td.innerText = `${j}×${i}=${i*j}`;
+                    tr.appendChild(td);
+                }
+                
+                table.appendChild(tr);
+            }
+        }
+    </script>
+</body>
+</html>
+
