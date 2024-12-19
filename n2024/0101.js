@@ -403,3 +403,5 @@ https://juejin.cn/post/7328112725601927218?utm_source=gold_browser_extension
 
 2种纯前端检测版本更新提示  
 https://juejin.cn/post/7328670028605784076?utm_source=gold_browser_extension
+
+2
