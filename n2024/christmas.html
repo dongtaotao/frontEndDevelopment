@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>圣诞快乐</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        canvas {
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <canvas id="christmasTree"></canvas>
+    <script>
+        class ChristmasTree {
+            constructor() {
+                this.canvas = document.getElementById('christmasTree');
+                this.ctx = this.canvas.getContext('2d');
+                this.resize();
+                this.init();
+                this.animate();
+                
+                window.addEventListener('resize', () => this.resize());
+            }
+            
+            resize() {
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+            }
+            
+            init() {
+                this.time = 0;
+                this.snowflakes = [];
+                this.decorations = [];
+                this.lights = [];
+                
+                // 创建雪花
+                for(let i = 0; i < 200; i++) {
+                    this.snowflakes.push({
+                        x: Math.random() * this.canvas.width,
+                        y: Math.random() * this.canvas.height,
+                        radius: Math.random() * 3 + 1,
+                        speed: Math.random() * 3 + 1
+                    });
+                }
+                
+                // 创建装饰球
+                const colors = ['#ff0000', '#ffff00', '#00ff00', '#0000ff', '#ff00ff'];
+                for(let i = 0; i < 50; i++) {
+                    this.decorations.push({
+                        x: Math.random() * 200 - 100,
+                        y: Math.random() * 300,
+                        radius: 5 + Math.random() * 8,
+                        color: colors[Math.floor(Math.random() * colors.length)],
+                        phase: Math.random() * Math.PI * 2,
+                        amplitude: Math.random() * 2
+                    });
+                }
+                
+                // 创建灯光
+                for(let i = 0; i < 100; i++) {
+                    this.lights.push({
+                        x: Math.random() * 200 - 100,
+                        y: Math.random() * 300,
+                        radius: 2 + Math.random() * 2,
+                        hue: Math.random() * 360,
+                        phase: Math.random() * Math.PI * 2
+                    });
+                }
+            }
+            
+            drawTree() {
+                const ctx = this.ctx;
+                const centerX = this.canvas.width / 2;
+                const bottomY = this.canvas.height * 0.8;
+                
+                // 树干
+                const gradient = ctx.createLinearGradient(0, 0, 0, this.canvas.height);
+                gradient.addColorStop(0, '#4d2600');
+                gradient.addColorStop(1, '#663300');
+                ctx.fillStyle = gradient;
+                ctx.fillRect(centerX - 20, bottomY - 50, 40, 100);
+                
+                // 树叶
+                const treeGradient = ctx.createLinearGradient(0, bottomY - 350, 0, bottomY);
+                treeGradient.addColorStop(0, '#006400');
+                treeGradient.addColorStop(1, '#008000');
+                
+                ctx.fillStyle = treeGradient;
+                for(let i = 0; i < 4; i++) {
+                    ctx.beginPath();
+                    ctx.moveTo(centerX, bottomY - 100 - (i * 80));
+                    ctx.lineTo(centerX - 150 + (i * 30), bottomY - 20 - (i * 80));
+                    ctx.lineTo(centerX + 150 - (i * 30), bottomY - 20 - (i * 80));
+                    ctx.closePath();
+                    ctx.fill();
+                }
+            }
+            
+            drawSnow() {
+                const ctx = this.ctx;
+                ctx.fillStyle = '#ffffff';
+                
+                this.snowflakes.forEach(snow => {
+                    ctx.beginPath();
+                    ctx.arc(snow.x, snow.y, snow.radius, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    snow.y += snow.speed;
+                    if(snow.y > this.canvas.height) {
+                        snow.y = -10;
+                        snow.x = Math.random() * this.canvas.width;
+                    }
+                });
+            }
+            
+            drawDecorations() {
+                const ctx = this.ctx;
+                const centerX = this.canvas.width / 2;
+                const bottomY = this.canvas.height * 0.8;
+                
+                // 装饰球
+                this.decorations.forEach(dec => {
+                    ctx.beginPath();
+                    const x = centerX + dec.x + Math.sin(this.time + dec.phase) * dec.amplitude;
+                    const y = bottomY - 350 + dec.y;
+                    
+                    const gradient = ctx.createRadialGradient(x, y, 0, x, y, dec.radius);
+                    gradient.addColorStop(0, '#ffffff');
+                    gradient.addColorStop(0.3, dec.color);
+                    gradient.addColorStop(1, dec.color);
+                    
+                    ctx.fillStyle = gradient;
+                    ctx.arc(x, y, dec.radius, 0, Math.PI * 2);
+                    ctx.fill();
+                });
+                
+                // 闪烁的灯
+                this.lights.forEach(light => {
+                    ctx.beginPath();
+                    const x = centerX + light.x;
+                    const y = bottomY - 350 + light.y;
+                    const intensity = (Math.sin(this.time * 3 + light.phase) + 1) / 2;
+                    
+                    ctx.fillStyle = `hsla(${light.hue}, 100%, ${50 + intensity * 50}%, ${0.3 + intensity * 0.7})`;
+                    ctx.arc(x, y, light.radius * (1 + intensity * 0.5), 0, Math.PI * 2);
+                    ctx.fill();
+                });
+                
+                // 顶部星星
+                this.drawStar(centerX, bottomY - 380, 20);
+            }
+            
+            drawStar(x, y, radius) {
+                const ctx = this.ctx;
+                ctx.save();
+                ctx.translate(x, y);
+                ctx.rotate(this.time * 0.3);
+                
+                const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, radius);
+                gradient.addColorStop(0, '#ffffff');
+                gradient.addColorStop(0.5, '#ffff00');
+                gradient.addColorStop(1, '#ffa500');
+                
+                ctx.fillStyle = gradient;
+                ctx.beginPath();
+                for(let i = 0; i < 5; i++) {
+                    ctx.lineTo(
+                        Math.cos((i * 4 * Math.PI) / 5 - Math.PI/2) * radius,
+                        Math.sin((i * 4 * Math.PI) / 5 - Math.PI/2) * radius
+                    );
+                }
+                ctx.closePath();
+                ctx.fill();
+                
+                ctx.restore();
+            }
+            
+            animate() {
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                this.time += 0.02;
+                
+                this.drawSnow();
+                this.drawTree();
+                this.drawDecorations();
+                
+                requestAnimationFrame(() => this.animate());
+            }
+        }
+
+        // 创建圣诞树实例
+        new ChristmasTree();
+    </script>
+</body>
+</html> 

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html translate="no" lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>版本更新</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .update-modal {
+            width: 280px;
+            position: relative;
+            padding: 24px 20px;
+            padding-top: 50px;
+            background-color: white;
+            border-radius: 12px;
+        }
+
+        .rocket {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .rocket::before {
+            content: '';
+            width: 32px;
+            height: 32px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.13 22.19l-1.63-3.83c1.57-.58 3.04-1.36 4.4-2.27l-2.77 6.1M5.64 12.5l-3.83-1.63 6.1-2.77c-.91 1.36-1.69 2.83-2.27 4.4M21.61 2.39C21.61 2.39 16.66.69 11 5.3c-2.78 2.27-4.85 5.28-5.97 8.6-0.47 1.38-.75 2.87-.77 4.45 0 .55.45 1 1 1h.03c.54-.02 1-.43 1.01-.97.02-1.27.25-2.47.63-3.58 2.04-1.31 4.75-.99 6.5.77 1.76 1.76 2.08 4.47.77 6.5-1.11.38-2.31.61-3.58.63-.55.02-.97.47-.97 1.01v.03c0 .55.45 1 1 1 1.58-.02 3.07-.3 4.45-.77 3.32-1.12 6.33-3.19 8.6-5.97 4.61-5.66 2.91-10.61 2.91-10.61z" fill="%234e6ef2"/></svg>') center/contain no-repeat;
+        }
+
+        .dots {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background-color: #4e6ef2;
+            border-radius: 50%;
+            opacity: 0.2;
+        }
+
+        .dots:nth-child(1) { top: 15px; left: 15px; }
+        .dots:nth-child(2) { top: 30px; right: 25px; }
+        .dots:nth-child(3) { bottom: 25px; left: 30px; }
+        .dots:nth-child(4) { bottom: 15px; right: 15px; }
+
+        .version {
+            display: inline-block;
+            padding: 3px 8px;
+            background-color: rgba(78, 110, 242, 0.1);
+            color: #4e6ef2;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        .update-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .update-list li {
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .update-button {
+            width: 100%;
+            padding: 12px 0;
+            background-color: #4e6ef2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .cloud-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            border-radius: 12px;
+            z-index: -1;
+        }
+
+        .cloud-bg::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .cloud-bg::after {
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-75%);
+            width: 24px;
+            height: 24px;
+            background-color: white;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="update-modal" lang="zh-CN">
+        <div class="cloud-bg"></div>
+        <div class="rocket"></div>
+        <div class="dots"></div>
+        <div class="dots"></div>
+        <div class="dots"></div>
+        <div class="dots"></div>
+        
+        <span class="version">V.1.0.773</span>
+        <ul class="update-list">
+            <li>1.新增私信功能，升级即可体验；</li>
+            <li>2.修复已知bug，运行更顺畅；</li>
+            <li>3.界面设计视觉优化，交互更友好；</li>
+        </ul>
+        <button class="update-button">立即升级</button>
+    </div>
+</body>
+</html> 
